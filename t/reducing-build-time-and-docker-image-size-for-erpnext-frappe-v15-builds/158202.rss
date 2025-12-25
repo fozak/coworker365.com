@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Reducing build time and Docker image size for ERPNext / Frappe v15 builds</title>
-    <link>https://discuss.frappe.io/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202</link>
+    <link>https://discuss.coworker365.com/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202</link>
     <description>I’m running an ERPNext / Frappe **v15** setup with the following `apps.json`:
 
 ```
@@ -30,30 +30,30 @@ I’m looking for **community-recommended best practices** to:
     
     <lastBuildDate>Wed, 24 Dec 2025 16:25:57 +0000</lastBuildDate>
     <category>ERPNext</category>
-    <atom:link href="https://discuss.frappe.io/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202.rss" rel="self" type="application/rss+xml" />
+    <atom:link href="https://discuss.coworker365.com/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202.rss" rel="self" type="application/rss+xml" />
       <item>
         <title>Reducing build time and Docker image size for ERPNext / Frappe v15 builds</title>
         <dc:creator><![CDATA[asieftejani]]></dc:creator>
         <description><![CDATA[
-            <p>Great to hear… all credit goes to ChatGPT <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=14" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
-          <p><a href="https://discuss.frappe.io/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202/4">Read full topic</a></p>
+            <p>Great to hear… all credit goes to ChatGPT <img src="https://discuss.coworker365.com/images/emoji/twitter/slight_smile.png?v=14" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://discuss.coworker365.com/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202/4">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202/4</link>
+        <link>https://discuss.coworker365.com/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202/4</link>
         <pubDate>Wed, 24 Dec 2025 16:25:57 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-158202-4</guid>
-        <source url="https://discuss.frappe.io/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202.rss">Reducing build time and Docker image size for ERPNext / Frappe v15 builds</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-158202-4</guid>
+        <source url="https://discuss.coworker365.com/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202.rss">Reducing build time and Docker image size for ERPNext / Frappe v15 builds</source>
       </item>
       <item>
         <title>Reducing build time and Docker image size for ERPNext / Frappe v15 builds</title>
         <dc:creator><![CDATA[cherrycharan]]></dc:creator>
         <description><![CDATA[
-            <p><a class="mention" href="https://discuss.frappe.io/u/asieftejani">@asieftejani</a> This worked and reduced the build time from 15-20 mins to 4-6 mins.</p>
-          <p><a href="https://discuss.frappe.io/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202/3">Read full topic</a></p>
+            <p><a class="mention" href="https://discuss.coworker365.com/u/asieftejani">@asieftejani</a> This worked and reduced the build time from 15-20 mins to 4-6 mins.</p>
+          <p><a href="https://discuss.coworker365.com/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202/3">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202/3</link>
+        <link>https://discuss.coworker365.com/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202/3</link>
         <pubDate>Tue, 23 Dec 2025 05:36:06 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-158202-3</guid>
-        <source url="https://discuss.frappe.io/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202.rss">Reducing build time and Docker image size for ERPNext / Frappe v15 builds</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-158202-3</guid>
+        <source url="https://discuss.coworker365.com/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202.rss">Reducing build time and Docker image size for ERPNext / Frappe v15 builds</source>
       </item>
       <item>
         <title>Reducing build time and Docker image size for ERPNext / Frappe v15 builds</title>
@@ -62,12 +62,12 @@ I’m looking for **community-recommended best practices** to:
             <p>with my little limited knowledge of docker i suggest you build a docker base image which is fixed (if you dont want the latest changes in frappe ecosystem)<br>
 If you want the latest maybe automate the build once every week to pick up the latest version updates<br>
 that should hopefully get you massive gains</p>
-          <p><a href="https://discuss.frappe.io/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202/2">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202/2">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202/2</link>
+        <link>https://discuss.coworker365.com/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202/2</link>
         <pubDate>Mon, 22 Dec 2025 13:24:42 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-158202-2</guid>
-        <source url="https://discuss.frappe.io/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202.rss">Reducing build time and Docker image size for ERPNext / Frappe v15 builds</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-158202-2</guid>
+        <source url="https://discuss.coworker365.com/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202.rss">Reducing build time and Docker image size for ERPNext / Frappe v15 builds</source>
       </item>
       <item>
         <title>Reducing build time and Docker image size for ERPNext / Frappe v15 builds</title>
@@ -98,12 +98,12 @@ Most builds are triggered by frequent changes in the private custom app, not in 
 <p>Improve <strong>cache efficiency</strong> for Frappe/ERPNext Docker builds</p>
 </li>
 </ul>
-          <p><a href="https://discuss.frappe.io/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202/1">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202/1">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202/1</link>
+        <link>https://discuss.coworker365.com/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202/1</link>
         <pubDate>Mon, 22 Dec 2025 07:00:34 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-158202-1</guid>
-        <source url="https://discuss.frappe.io/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202.rss">Reducing build time and Docker image size for ERPNext / Frappe v15 builds</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-158202-1</guid>
+        <source url="https://discuss.coworker365.com/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202.rss">Reducing build time and Docker image size for ERPNext / Frappe v15 builds</source>
       </item>
   </channel>
 </rss>

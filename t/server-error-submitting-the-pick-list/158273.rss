@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Server Error submitting the pick list</title>
-    <link>https://discuss.frappe.io/t/server-error-submitting-the-pick-list/158273</link>
+    <link>https://discuss.coworker365.com/t/server-error-submitting-the-pick-list/158273</link>
     <description>Hello, 
 
 I am still learning the ERPNext, studying now the WO process. when I submit the WO and try to submit the pick list, i get the following error: MySQLdb.OperationalError: (1054, &quot;Unknown column &#39;tabDelivery Note.pick_list&#39; in &#39;WHERE&#39;&quot;):
@@ -107,18 +107,18 @@ Igor.</description>
     
     <lastBuildDate>Thu, 25 Dec 2025 11:46:04 +0000</lastBuildDate>
     <category>ERPNext</category>
-    <atom:link href="https://discuss.frappe.io/t/server-error-submitting-the-pick-list/158273.rss" rel="self" type="application/rss+xml" />
+    <atom:link href="https://discuss.coworker365.com/t/server-error-submitting-the-pick-list/158273.rss" rel="self" type="application/rss+xml" />
       <item>
         <title>Server Error submitting the pick list</title>
         <dc:creator><![CDATA[igor-k]]></dc:creator>
         <description><![CDATA[
             <p>Solved it by upgrading to latest version.</p>
-          <p><a href="https://discuss.frappe.io/t/server-error-submitting-the-pick-list/158273/2">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/server-error-submitting-the-pick-list/158273/2">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/server-error-submitting-the-pick-list/158273/2</link>
+        <link>https://discuss.coworker365.com/t/server-error-submitting-the-pick-list/158273/2</link>
         <pubDate>Thu, 25 Dec 2025 11:46:04 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-158273-2</guid>
-        <source url="https://discuss.frappe.io/t/server-error-submitting-the-pick-list/158273.rss">Server Error submitting the pick list</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-158273-2</guid>
+        <source url="https://discuss.coworker365.com/t/server-error-submitting-the-pick-list/158273.rss">Server Error submitting the pick list</source>
       </item>
       <item>
         <title>Server Error submitting the pick list</title>
@@ -132,10 +132,10 @@ Igor.</description>
 	"erpnext": "16.0.0-dev"
 }
 </code></pre>
-<h3><a name="p-489443-route-1" class="anchor" href="https://discuss.frappe.io#p-489443-route-1"></a>Route</h3>
+<h3><a name="p-489443-route-1" class="anchor" href="https://discuss.coworker365.com#p-489443-route-1"></a>Route</h3>
 <pre><code class="lang-auto">Form/Pick List/STO-PICK-2025-00001
 </code></pre>
-<h3><a name="p-489443-traceback-2" class="anchor" href="https://discuss.frappe.io#p-489443-traceback-2"></a>Traceback</h3>
+<h3><a name="p-489443-traceback-2" class="anchor" href="https://discuss.coworker365.com#p-489443-traceback-2"></a>Traceback</h3>
 <pre><code class="lang-auto">Traceback (most recent call last):
   File "apps/frappe/frappe/app.py", line 121, in application
     response = frappe.api.handle(request)
@@ -182,7 +182,7 @@ Igor.</description>
 MySQLdb.OperationalError: (1054, "Unknown column 'tabDelivery Note.pick_list' in 'WHERE'")
 
 </code></pre>
-<h3><a name="p-489443-request-data-3" class="anchor" href="https://discuss.frappe.io#p-489443-request-data-3"></a>Request Data</h3>
+<h3><a name="p-489443-request-data-3" class="anchor" href="https://discuss.coworker365.com#p-489443-request-data-3"></a>Request Data</h3>
 <pre><code class="lang-auto">{
 	"type": "GET",
 	"args": {
@@ -196,7 +196,7 @@ MySQLdb.OperationalError: (1054, "Unknown column 'tabDelivery Note.pick_list' in
 	"request_id": null
 }
 </code></pre>
-<h3><a name="p-489443-response-data-4" class="anchor" href="https://discuss.frappe.io#p-489443-response-data-4"></a>Response Data</h3>
+<h3><a name="p-489443-response-data-4" class="anchor" href="https://discuss.coworker365.com#p-489443-response-data-4"></a>Response Data</h3>
 <pre><code class="lang-auto">{
 	"exception": "MySQLdb.OperationalError: (1054, \"Unknown column 'tabDelivery Note.pick_list' in 'WHERE'\")",
 	"exc_type": "OperationalError"
@@ -205,12 +205,12 @@ MySQLdb.OperationalError: (1054, "Unknown column 'tabDelivery Note.pick_list' in
 <p>Please advise, what is wrong?</p>
 <p>Thank you in advance,</p>
 <p>Igor.</p>
-          <p><a href="https://discuss.frappe.io/t/server-error-submitting-the-pick-list/158273/1">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/server-error-submitting-the-pick-list/158273/1">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/server-error-submitting-the-pick-list/158273/1</link>
+        <link>https://discuss.coworker365.com/t/server-error-submitting-the-pick-list/158273/1</link>
         <pubDate>Tue, 23 Dec 2025 15:34:56 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-158273-1</guid>
-        <source url="https://discuss.frappe.io/t/server-error-submitting-the-pick-list/158273.rss">Server Error submitting the pick list</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-158273-1</guid>
+        <source url="https://discuss.coworker365.com/t/server-error-submitting-the-pick-list/158273.rss">Server Error submitting the pick list</source>
       </item>
   </channel>
 </rss>

@@ -8,53 +8,53 @@ I’m trying to integrate Outlook email (Microsoft 365) into Frappe using OAuth 
 Error Traceback: 
 Traceback with va&amp;hellip;">
     <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
-<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
-<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<link rel="icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
 <meta name="theme-color" media="all" content="#fff">
 
 <meta name="color-scheme" content="light">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-<link rel="canonical" href="https://discuss.frappe.io/t/outlook-imap-oauth-in-frappe-fails-with-authenticate-failed-when-fetching-emails/149328" />
+<link rel="canonical" href="https://discuss.coworker365.com/t/outlook-imap-oauth-in-frappe-fails-with-authenticate-failed-when-fetching-emails/149328" />
 
-<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.coworker365.com/opensearch.xml" title="Frappe Forum Search">
 
-    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
 
-<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common"  />
 
-  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop"  />
 
 
 
-    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
-    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
-    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
-    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
-    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
-    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
-    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
-    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
-    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
-    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
-    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
-    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
-    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
-    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll_desktop"  />
 
-  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
-    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
 
     
     
-        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Outlook IMAP OAuth in Frappe fails with &quot;AUTHENTICATE failed&quot; when fetching emails&#39;" href="https://discuss.frappe.io/t/outlook-imap-oauth-in-frappe-fails-with-authenticate-failed-when-fetching-emails/149328.rss" />
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Outlook IMAP OAuth in Frappe fails with &quot;AUTHENTICATE failed&quot; when fetching emails&#39;" href="https://discuss.coworker365.com/t/outlook-imap-oauth-in-frappe-fails-with-authenticate-failed-when-fetching-emails/149328.rss" />
     <meta property="og:site_name" content="Frappe Forum" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/7/9/79d822ae155a323a691d5357cfa5d150048ff861_2_1024x549.jpeg" />
-<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/7/9/79d822ae155a323a691d5357cfa5d150048ff861_2_1024x549.jpeg" />
-<meta property="og:url" content="https://discuss.frappe.io/t/outlook-imap-oauth-in-frappe-fails-with-authenticate-failed-when-fetching-emails/149328" />
-<meta name="twitter:url" content="https://discuss.frappe.io/t/outlook-imap-oauth-in-frappe-fails-with-authenticate-failed-when-fetching-emails/149328" />
+<meta name="twitter:image" content="https://discuss.coworker365.com/uploads/default/optimized/3X/7/9/79d822ae155a323a691d5357cfa5d150048ff861_2_1024x549.jpeg" />
+<meta property="og:image" content="https://discuss.coworker365.com/uploads/default/optimized/3X/7/9/79d822ae155a323a691d5357cfa5d150048ff861_2_1024x549.jpeg" />
+<meta property="og:url" content="https://discuss.coworker365.com/t/outlook-imap-oauth-in-frappe-fails-with-authenticate-failed-when-fetching-emails/149328" />
+<meta name="twitter:url" content="https://discuss.coworker365.com/t/outlook-imap-oauth-in-frappe-fails-with-authenticate-failed-when-fetching-emails/149328" />
 <meta property="og:title" content="Outlook IMAP OAuth in Frappe fails with &quot;AUTHENTICATE failed&quot; when fetching emails" />
 <meta name="twitter:title" content="Outlook IMAP OAuth in Frappe fails with &quot;AUTHENTICATE failed&quot; when fetching emails" />
 <meta property="og:description" content="Hi all,  I’m trying to integrate Outlook email (Microsoft 365) into Frappe using OAuth 2.0, but I’m consistently getting an AUTHENTICATE failed error when it tries to connect to IMAP.  Error Traceback:  Traceback with variables (most recent call last):   File &quot;apps/frappe/frappe/email/oauth.py&quot;, line 43, in connect     self._connect_imap()       self = &lt;frappe.email.oauth.Oauth object at 0x7637f575c8b0&gt;   File &quot;apps/frappe/frappe/email/oauth.py&quot;, line 71, in _connect_imap     self._conn.authenti..." />
@@ -68,14 +68,14 @@ Traceback with va&amp;hellip;">
 <meta property="og:ignore_canonical" content="true" />
 
 
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Outlook IMAP OAuth in Frappe fails with \"AUTHENTICATE failed\" when fetching emails","mainEntity":{"@type":"Question","name":"Outlook IMAP OAuth in Frappe fails with \"AUTHENTICATE failed\" when fetching emails","text":"Hi all,\n\nI’m trying to integrate Outlook email (Microsoft 365) into Frappe using OAuth 2.0, but I’m consistently getting an AUTHENTICATE failed error when it tries to connect to IMAP.\n\nError Traceback:\n\nTraceback with variables (most recent call last):\n\nFile &quot;apps/frappe/frappe/email/oauth.py&quot;, lin&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-07-03T06:49:18.434Z","author":{"@type":"Person","name":"PON_SAKTHIVEL","url":"https://discuss.frappe.io/u/PON_SAKTHIVEL"}}}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Outlook IMAP OAuth in Frappe fails with \"AUTHENTICATE failed\" when fetching emails","mainEntity":{"@type":"Question","name":"Outlook IMAP OAuth in Frappe fails with \"AUTHENTICATE failed\" when fetching emails","text":"Hi all,\n\nI’m trying to integrate Outlook email (Microsoft 365) into Frappe using OAuth 2.0, but I’m consistently getting an AUTHENTICATE failed error when it tries to connect to IMAP.\n\nError Traceback:\n\nTraceback with variables (most recent call last):\n\nFile &quot;apps/frappe/frappe/email/oauth.py&quot;, lin&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-07-03T06:49:18.434Z","author":{"@type":"Person","name":"PON_SAKTHIVEL","url":"https://discuss.coworker365.com/u/PON_SAKTHIVEL"}}}</script>
   </head>
   <body class="crawler ">
     <div class="erpnext-header">
-    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://coworker365.com" target="_blank">coworker365.com</a>
     <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
-    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
-    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://docs.coworker365.com/" target="_blank">Documentation</a>
+    <a href="https://coworker365.com/partners" target="_blank">Partners</a>
     <a href="https://frappe.school" target="_blank">Frappe School</a>
     <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
     <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
@@ -105,9 +105,9 @@ Traceback with va&amp;hellip;">
 
       <div class="topic-category">
         <div class='discourse-tags list-tags'>
-            <a href='https://discuss.frappe.io/tag/email' class='discourse-tag' rel="tag">email</a>, 
-            <a href='https://discuss.frappe.io/tag/email-accounts' class='discourse-tag' rel="tag">email-accounts</a>, 
-            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>
+            <a href='https://discuss.coworker365.com/tag/email' class='discourse-tag' rel="tag">email</a>, 
+            <a href='https://discuss.coworker365.com/tag/email-accounts' class='discourse-tag' rel="tag">email-accounts</a>, 
+            <a href='https://discuss.coworker365.com/tag/frappe' class='discourse-tag' rel="tag">frappe</a>
         </div>
       </div>
   </div>
@@ -116,14 +116,14 @@ Traceback with va&amp;hellip;">
 
     <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
       <meta itemprop='headline' content='Outlook IMAP OAuth in Frappe fails with &quot;AUTHENTICATE failed&quot; when fetching emails'>
-      <link itemprop='url' href='https://discuss.frappe.io/t/outlook-imap-oauth-in-frappe-fails-with-authenticate-failed-when-fetching-emails/149328'>
+      <link itemprop='url' href='https://discuss.coworker365.com/t/outlook-imap-oauth-in-frappe-fails-with-authenticate-failed-when-fetching-emails/149328'>
       <meta itemprop='datePublished' content='2025-07-03T06:49:18Z'>
         <meta itemprop='articleSection' content='Integration'>
       <meta itemprop='keywords' content='email, email-accounts, frappe'>
       <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
         <meta itemprop='name' content='Frappe'>
           <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
-            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+            <meta itemprop='url' content='https://discuss.coworker365.com/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
           </div>
       </div>
 
@@ -131,13 +131,13 @@ Traceback with va&amp;hellip;">
           <div id='post_1'  class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/PON_SAKTHIVEL'><span itemprop='name'>PON_SAKTHIVEL</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/PON_SAKTHIVEL'><span itemprop='name'>PON_SAKTHIVEL</span></a>
                 
               </span>
 
-                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/outlook-imap-oauth-in-frappe-fails-with-authenticate-failed-when-fetching-emails/149328">
+                <link itemprop="mainEntityOfPage" href="https://discuss.coworker365.com/t/outlook-imap-oauth-in-frappe-fails-with-authenticate-failed-when-fetching-emails/149328">
 
-                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/7/9/79d822ae155a323a691d5357cfa5d150048ff861.jpeg">
+                <link itemprop="image" href="https://discuss.coworker365.com/uploads/default/original/3X/7/9/79d822ae155a323a691d5357cfa5d150048ff861.jpeg">
 
               <span class="crawler-post-infos">
                   <time  datetime='2025-07-03T06:49:18Z' class='post-time'>
@@ -207,10 +207,10 @@ Password: Not used (OAuth token used instead)</p>
 <li>OAuth method: Microsoft (Connected App in Social Login Key)</li>
 </ul>
 <p>Screenshots:<br>
-<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/9/79d822ae155a323a691d5357cfa5d150048ff861.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/79d822ae155a323a691d5357cfa5d150048ff861" title="e5898907-14d0-4ad9-b8e8-9181f1b86fda"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/9/79d822ae155a323a691d5357cfa5d150048ff861_2_690x370.jpeg" alt="e5898907-14d0-4ad9-b8e8-9181f1b86fda" data-base62-sha1="hnSQcLt0ZbsQrl9MQvIu5Xo3W93" width="690" height="370" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/9/79d822ae155a323a691d5357cfa5d150048ff861_2_690x370.jpeg, https://discuss.frappe.io/uploads/default/optimized/3X/7/9/79d822ae155a323a691d5357cfa5d150048ff861_2_1035x555.jpeg 1.5x, https://discuss.frappe.io/uploads/default/original/3X/7/9/79d822ae155a323a691d5357cfa5d150048ff861.jpeg 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">e5898907-14d0-4ad9-b8e8-9181f1b86fda</span><span class="informations">1337×717 68.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
-<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/3/93b1b38fd8a177d2c112c9f2a1d7a3eb6523abcf.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/93b1b38fd8a177d2c112c9f2a1d7a3eb6523abcf" title="47285e9a-2714-414e-abea-88a275543707"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/9/3/93b1b38fd8a177d2c112c9f2a1d7a3eb6523abcf_2_690x399.jpeg" alt="47285e9a-2714-414e-abea-88a275543707" data-base62-sha1="l4yUwuC1Bf6P5CzSmRw5Vibl6Kb" width="690" height="399" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/9/3/93b1b38fd8a177d2c112c9f2a1d7a3eb6523abcf_2_690x399.jpeg, https://discuss.frappe.io/uploads/default/optimized/3X/9/3/93b1b38fd8a177d2c112c9f2a1d7a3eb6523abcf_2_1035x598.jpeg 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/9/3/93b1b38fd8a177d2c112c9f2a1d7a3eb6523abcf_2_1380x798.jpeg 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">47285e9a-2714-414e-abea-88a275543707</span><span class="informations">1409×815 63.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/7/9/79d822ae155a323a691d5357cfa5d150048ff861.jpeg" data-download-href="https://discuss.coworker365.com/uploads/default/79d822ae155a323a691d5357cfa5d150048ff861" title="e5898907-14d0-4ad9-b8e8-9181f1b86fda"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/7/9/79d822ae155a323a691d5357cfa5d150048ff861_2_690x370.jpeg" alt="e5898907-14d0-4ad9-b8e8-9181f1b86fda" data-base62-sha1="hnSQcLt0ZbsQrl9MQvIu5Xo3W93" width="690" height="370" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/7/9/79d822ae155a323a691d5357cfa5d150048ff861_2_690x370.jpeg, https://discuss.coworker365.com/uploads/default/optimized/3X/7/9/79d822ae155a323a691d5357cfa5d150048ff861_2_1035x555.jpeg 1.5x, https://discuss.coworker365.com/uploads/default/original/3X/7/9/79d822ae155a323a691d5357cfa5d150048ff861.jpeg 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">e5898907-14d0-4ad9-b8e8-9181f1b86fda</span><span class="informations">1337×717 68.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/9/3/93b1b38fd8a177d2c112c9f2a1d7a3eb6523abcf.jpeg" data-download-href="https://discuss.coworker365.com/uploads/default/93b1b38fd8a177d2c112c9f2a1d7a3eb6523abcf" title="47285e9a-2714-414e-abea-88a275543707"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/9/3/93b1b38fd8a177d2c112c9f2a1d7a3eb6523abcf_2_690x399.jpeg" alt="47285e9a-2714-414e-abea-88a275543707" data-base62-sha1="l4yUwuC1Bf6P5CzSmRw5Vibl6Kb" width="690" height="399" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/9/3/93b1b38fd8a177d2c112c9f2a1d7a3eb6523abcf_2_690x399.jpeg, https://discuss.coworker365.com/uploads/default/optimized/3X/9/3/93b1b38fd8a177d2c112c9f2a1d7a3eb6523abcf_2_1035x598.jpeg 1.5x, https://discuss.coworker365.com/uploads/default/optimized/3X/9/3/93b1b38fd8a177d2c112c9f2a1d7a3eb6523abcf_2_1380x798.jpeg 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">47285e9a-2714-414e-abea-88a275543707</span><span class="informations">1409×815 63.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
 Email Account config:<br>
-<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/3/73889ec7f82bf2acb1441ff52a95a2a0cb72a276.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/73889ec7f82bf2acb1441ff52a95a2a0cb72a276" title="805a15b5-9c88-408e-95ce-267597e40f44"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/3/73889ec7f82bf2acb1441ff52a95a2a0cb72a276_2_690x288.jpeg" alt="805a15b5-9c88-408e-95ce-267597e40f44" data-base62-sha1="gu3CegdhzxOYfH6FtnkNANSdPGC" width="690" height="288" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/3/73889ec7f82bf2acb1441ff52a95a2a0cb72a276_2_690x288.jpeg, https://discuss.frappe.io/uploads/default/optimized/3X/7/3/73889ec7f82bf2acb1441ff52a95a2a0cb72a276_2_1035x432.jpeg 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/7/3/73889ec7f82bf2acb1441ff52a95a2a0cb72a276_2_1380x576.jpeg 2x" data-dominant-color="696969"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">805a15b5-9c88-408e-95ce-267597e40f44</span><span class="informations">1600×670 38.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/7/3/73889ec7f82bf2acb1441ff52a95a2a0cb72a276.jpeg" data-download-href="https://discuss.coworker365.com/uploads/default/73889ec7f82bf2acb1441ff52a95a2a0cb72a276" title="805a15b5-9c88-408e-95ce-267597e40f44"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/7/3/73889ec7f82bf2acb1441ff52a95a2a0cb72a276_2_690x288.jpeg" alt="805a15b5-9c88-408e-95ce-267597e40f44" data-base62-sha1="gu3CegdhzxOYfH6FtnkNANSdPGC" width="690" height="288" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/7/3/73889ec7f82bf2acb1441ff52a95a2a0cb72a276_2_690x288.jpeg, https://discuss.coworker365.com/uploads/default/optimized/3X/7/3/73889ec7f82bf2acb1441ff52a95a2a0cb72a276_2_1035x432.jpeg 1.5x, https://discuss.coworker365.com/uploads/default/optimized/3X/7/3/73889ec7f82bf2acb1441ff52a95a2a0cb72a276_2_1380x576.jpeg 2x" data-dominant-color="696969"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">805a15b5-9c88-408e-95ce-267597e40f44</span><span class="informations">1600×670 38.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
 <h3><a name="looking-for-3" class="anchor" href="#looking-for-3"></a><strong>Looking For:</strong></h3>
 <ul>
 <li>Has anyone successfully integrated Outlook with OAuth in Frappe v15?</li>
@@ -229,7 +229,7 @@ Email Account config:<br>
           <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Owaishk08'><span itemprop='name'>Owaishk08</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/Owaishk08'><span itemprop='name'>Owaishk08</span></a>
                 
               </span>
 
@@ -298,7 +298,7 @@ Are you find any solution ?</p>
 </footer>
 
     <div class="erpnext-footer">
-    <a href="https://frappe.io">Frappe</a>
+    <a href="https://coworker365.com">Frappe</a>
 </div>
     
   </body>

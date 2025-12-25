@@ -6,53 +6,53 @@
     <meta name="description" content="Overview: 
 I am customizing the default job application web form using Frappe, which includes an attachment field for uploading resumes. The form is supposed to allow both logged-in and non-logged-in users to upload file&amp;hellip;">
     <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
-<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
-<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<link rel="icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
 <meta name="theme-color" media="all" content="#fff">
 
 <meta name="color-scheme" content="light">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-<link rel="canonical" href="https://discuss.frappe.io/t/unable-to-upload-attachments-in-public-job-application-web-forms-for-non-logged-in-users/124570" />
+<link rel="canonical" href="https://discuss.coworker365.com/t/unable-to-upload-attachments-in-public-job-application-web-forms-for-non-logged-in-users/124570" />
 
-<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.coworker365.com/opensearch.xml" title="Frappe Forum Search">
 
-    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
 
-<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common"  />
 
-  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop"  />
 
 
 
-    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
-    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
-    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
-    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
-    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
-    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
-    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
-    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
-    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
-    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
-    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
-    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
-    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
-    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll_desktop"  />
 
-  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
-    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
 
     
     
-        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Unable to Upload Attachments in Public Job Application Web Forms for Non-Logged-In Users&#39;" href="https://discuss.frappe.io/t/unable-to-upload-attachments-in-public-job-application-web-forms-for-non-logged-in-users/124570.rss" />
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Unable to Upload Attachments in Public Job Application Web Forms for Non-Logged-In Users&#39;" href="https://discuss.coworker365.com/t/unable-to-upload-attachments-in-public-job-application-web-forms-for-non-logged-in-users/124570.rss" />
     <meta property="og:site_name" content="Frappe Forum" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/f/5/f5681baa1839293b3095076534d022def3f5c5f7_2_1024x471.png" />
-<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/f/5/f5681baa1839293b3095076534d022def3f5c5f7_2_1024x471.png" />
-<meta property="og:url" content="https://discuss.frappe.io/t/unable-to-upload-attachments-in-public-job-application-web-forms-for-non-logged-in-users/124570" />
-<meta name="twitter:url" content="https://discuss.frappe.io/t/unable-to-upload-attachments-in-public-job-application-web-forms-for-non-logged-in-users/124570" />
+<meta name="twitter:image" content="https://discuss.coworker365.com/uploads/default/optimized/3X/f/5/f5681baa1839293b3095076534d022def3f5c5f7_2_1024x471.png" />
+<meta property="og:image" content="https://discuss.coworker365.com/uploads/default/optimized/3X/f/5/f5681baa1839293b3095076534d022def3f5c5f7_2_1024x471.png" />
+<meta property="og:url" content="https://discuss.coworker365.com/t/unable-to-upload-attachments-in-public-job-application-web-forms-for-non-logged-in-users/124570" />
+<meta name="twitter:url" content="https://discuss.coworker365.com/t/unable-to-upload-attachments-in-public-job-application-web-forms-for-non-logged-in-users/124570" />
 <meta property="og:title" content="Unable to Upload Attachments in Public Job Application Web Forms for Non-Logged-In Users" />
 <meta name="twitter:title" content="Unable to Upload Attachments in Public Job Application Web Forms for Non-Logged-In Users" />
 <meta property="og:description" content="Overview:  I am customizing the default job application web form using Frappe, which includes an attachment field for uploading resumes. The form is supposed to allow both logged-in and non-logged-in users to upload files. However, non-logged-in users are unable to upload attachments, encountering a “Not Permitted” error, despite the attachment button being visible and interactive. Conversely, logged-in users can upload files without any issues.  Expected Behavior:  The attachment upload should ..." />
@@ -70,14 +70,14 @@ I am customizing the default job application web form using Frappe, which includ
 <meta property="og:ignore_canonical" content="true" />
 
 
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Unable to Upload Attachments in Public Job Application Web Forms for Non-Logged-In Users","mainEntity":{"@type":"Question","name":"Unable to Upload Attachments in Public Job Application Web Forms for Non-Logged-In Users","text":"Overview:\n\nI am customizing the default job application web form using Frappe, which includes an attachment field for uploading resumes. The form is supposed to allow both logged-in and non-logged-in users to upload files. However, non-logged-in users are unable to upload attachments, encountering a&hellip;","upvoteCount":1,"answerCount":1,"datePublished":"2024-06-03T09:57:26.096Z","author":{"@type":"Person","name":"Vijayan_R","url":"https://discuss.frappe.io/u/Vijayan_R"},"acceptedAnswer":{"@type":"Answer","text":"Actually I got the solution that i didnt check the system settings in there is option to guest user can upload files so now it is working like i need","upvoteCount":2,"datePublished":"2024-06-03T10:26:38.879Z","url":"https://discuss.frappe.io/t/unable-to-upload-attachments-in-public-job-application-web-forms-for-non-logged-in-users/124570/2","author":{"@type":"Person","name":"Vijayan_R","url":"https://discuss.frappe.io/u/Vijayan_R"}}}}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Unable to Upload Attachments in Public Job Application Web Forms for Non-Logged-In Users","mainEntity":{"@type":"Question","name":"Unable to Upload Attachments in Public Job Application Web Forms for Non-Logged-In Users","text":"Overview:\n\nI am customizing the default job application web form using Frappe, which includes an attachment field for uploading resumes. The form is supposed to allow both logged-in and non-logged-in users to upload files. However, non-logged-in users are unable to upload attachments, encountering a&hellip;","upvoteCount":1,"answerCount":1,"datePublished":"2024-06-03T09:57:26.096Z","author":{"@type":"Person","name":"Vijayan_R","url":"https://discuss.coworker365.com/u/Vijayan_R"},"acceptedAnswer":{"@type":"Answer","text":"Actually I got the solution that i didnt check the system settings in there is option to guest user can upload files so now it is working like i need","upvoteCount":2,"datePublished":"2024-06-03T10:26:38.879Z","url":"https://discuss.coworker365.com/t/unable-to-upload-attachments-in-public-job-application-web-forms-for-non-logged-in-users/124570/2","author":{"@type":"Person","name":"Vijayan_R","url":"https://discuss.coworker365.com/u/Vijayan_R"}}}}</script>
   </head>
   <body class="crawler ">
     <div class="erpnext-header">
-    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://coworker365.com" target="_blank">coworker365.com</a>
     <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
-    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
-    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://docs.coworker365.com/" target="_blank">Documentation</a>
+    <a href="https://coworker365.com/partners" target="_blank">Partners</a>
     <a href="https://frappe.school" target="_blank">Frappe School</a>
     <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
     <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
@@ -107,9 +107,9 @@ I am customizing the default job application web form using Frappe, which includ
 
       <div class="topic-category">
         <div class='discourse-tags list-tags'>
-            <a href='https://discuss.frappe.io/tag/installation_problem' class='discourse-tag' rel="tag">installation_problem</a>, 
-            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
-            <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag' rel="tag">customization</a>
+            <a href='https://discuss.coworker365.com/tag/installation_problem' class='discourse-tag' rel="tag">installation_problem</a>, 
+            <a href='https://discuss.coworker365.com/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
+            <a href='https://discuss.coworker365.com/tag/customization' class='discourse-tag' rel="tag">customization</a>
         </div>
       </div>
   </div>
@@ -118,14 +118,14 @@ I am customizing the default job application web form using Frappe, which includ
 
     <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
       <meta itemprop='headline' content='Unable to Upload Attachments in Public Job Application Web Forms for Non-Logged-In Users'>
-      <link itemprop='url' href='https://discuss.frappe.io/t/unable-to-upload-attachments-in-public-job-application-web-forms-for-non-logged-in-users/124570'>
+      <link itemprop='url' href='https://discuss.coworker365.com/t/unable-to-upload-attachments-in-public-job-application-web-forms-for-non-logged-in-users/124570'>
       <meta itemprop='datePublished' content='2024-06-03T09:57:26Z'>
         <meta itemprop='articleSection' content='Frappe HR'>
       <meta itemprop='keywords' content='installation_problem, frappe, customization'>
       <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
         <meta itemprop='name' content='Frappe'>
           <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
-            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+            <meta itemprop='url' content='https://discuss.coworker365.com/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
           </div>
       </div>
 
@@ -133,13 +133,13 @@ I am customizing the default job application web form using Frappe, which includ
           <div id='post_1'  class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Vijayan_R'><span itemprop='name'>Vijayan_R</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/Vijayan_R'><span itemprop='name'>Vijayan_R</span></a>
                 
               </span>
 
-                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/unable-to-upload-attachments-in-public-job-application-web-forms-for-non-logged-in-users/124570">
+                <link itemprop="mainEntityOfPage" href="https://discuss.coworker365.com/t/unable-to-upload-attachments-in-public-job-application-web-forms-for-non-logged-in-users/124570">
 
-                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/f/5/f5681baa1839293b3095076534d022def3f5c5f7.png">
+                <link itemprop="image" href="https://discuss.coworker365.com/uploads/default/original/3X/f/5/f5681baa1839293b3095076534d022def3f5c5f7.png">
 
               <span class="crawler-post-infos">
                   <time  datetime='2024-06-03T09:57:26Z' class='post-time'>
@@ -159,8 +159,8 @@ When attempting to upload an attachment as a non-logged-in user, the system deni
 <p><strong>Impact:</strong><br>
 This issue significantly affects the usability of the job application process on our website, as potential applicants without user accounts cannot complete their applications because i will certain number of users.</p>
 <p><strong>Screenshots/Logs:</strong><br>
-<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/5/f5681baa1839293b3095076534d022def3f5c5f7.png" data-download-href="https://discuss.frappe.io/uploads/default/f5681baa1839293b3095076534d022def3f5c5f7" title="Screenshot (72)"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/f/5/f5681baa1839293b3095076534d022def3f5c5f7_2_690x317.png" alt="Screenshot (72)" data-base62-sha1="z0Y1UeGZL7dlTHjuW2REPEvKSN1" width="690" height="317" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/f/5/f5681baa1839293b3095076534d022def3f5c5f7_2_690x317.png, https://discuss.frappe.io/uploads/default/optimized/3X/f/5/f5681baa1839293b3095076534d022def3f5c5f7_2_1035x475.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/f/5/f5681baa1839293b3095076534d022def3f5c5f7_2_1380x634.png 2x" data-dominant-color="505050"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot (72)</span><span class="informations">1920×884 30.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
-<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/b/0bc4175eca5627fbd36c860a383e22cb8f148b92.png" data-download-href="https://discuss.frappe.io/uploads/default/0bc4175eca5627fbd36c860a383e22cb8f148b92" title="Screenshot (73)"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/b/0bc4175eca5627fbd36c860a383e22cb8f148b92_2_690x325.png" alt="Screenshot (73)" data-base62-sha1="1G5niFY9NsOHPPTzrJVsvgIqg2C" width="690" height="325" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/b/0bc4175eca5627fbd36c860a383e22cb8f148b92_2_690x325.png, https://discuss.frappe.io/uploads/default/optimized/3X/0/b/0bc4175eca5627fbd36c860a383e22cb8f148b92_2_1035x487.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/0/b/0bc4175eca5627fbd36c860a383e22cb8f148b92_2_1380x650.png 2x" data-dominant-color="1D1F20"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot (73)</span><span class="informations">1920×906 92.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/f/5/f5681baa1839293b3095076534d022def3f5c5f7.png" data-download-href="https://discuss.coworker365.com/uploads/default/f5681baa1839293b3095076534d022def3f5c5f7" title="Screenshot (72)"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/f/5/f5681baa1839293b3095076534d022def3f5c5f7_2_690x317.png" alt="Screenshot (72)" data-base62-sha1="z0Y1UeGZL7dlTHjuW2REPEvKSN1" width="690" height="317" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/f/5/f5681baa1839293b3095076534d022def3f5c5f7_2_690x317.png, https://discuss.coworker365.com/uploads/default/optimized/3X/f/5/f5681baa1839293b3095076534d022def3f5c5f7_2_1035x475.png 1.5x, https://discuss.coworker365.com/uploads/default/optimized/3X/f/5/f5681baa1839293b3095076534d022def3f5c5f7_2_1380x634.png 2x" data-dominant-color="505050"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot (72)</span><span class="informations">1920×884 30.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/0/b/0bc4175eca5627fbd36c860a383e22cb8f148b92.png" data-download-href="https://discuss.coworker365.com/uploads/default/0bc4175eca5627fbd36c860a383e22cb8f148b92" title="Screenshot (73)"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/0/b/0bc4175eca5627fbd36c860a383e22cb8f148b92_2_690x325.png" alt="Screenshot (73)" data-base62-sha1="1G5niFY9NsOHPPTzrJVsvgIqg2C" width="690" height="325" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/0/b/0bc4175eca5627fbd36c860a383e22cb8f148b92_2_690x325.png, https://discuss.coworker365.com/uploads/default/optimized/3X/0/b/0bc4175eca5627fbd36c860a383e22cb8f148b92_2_1035x487.png 1.5x, https://discuss.coworker365.com/uploads/default/optimized/3X/0/b/0bc4175eca5627fbd36c860a383e22cb8f148b92_2_1380x650.png 2x" data-dominant-color="1D1F20"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot (73)</span><span class="informations">1920×906 92.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
 <p>I am looking for guidance on resolving this issue or any suggestions on alternative approaches that could be implemented to allow file uploads for non-logged-in users.</p>
             </div>
 
@@ -174,7 +174,7 @@ This issue significantly affects the usability of the job application process on
           <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Vijayan_R'><span itemprop='name'>Vijayan_R</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/Vijayan_R'><span itemprop='name'>Vijayan_R</span></a>
                 
               </span>
 
@@ -202,7 +202,7 @@ This issue significantly affects the usability of the job application process on
           <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abubakr'><span itemprop='name'>Abubakr</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/Abubakr'><span itemprop='name'>Abubakr</span></a>
                 
               </span>
 
@@ -231,7 +231,7 @@ Where can I find the “Guest” option?</p>
           <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Bizimungu_Pascal'><span itemprop='name'>Bizimungu_Pascal</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/Bizimungu_Pascal'><span itemprop='name'>Bizimungu_Pascal</span></a>
                 
               </span>
 
@@ -259,12 +259,12 @@ Where can I find the “Guest” option?</p>
           <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Vipul_Kumar'><span itemprop='name'>Vipul_Kumar</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/Vipul_Kumar'><span itemprop='name'>Vipul_Kumar</span></a>
                 
               </span>
 
 
-                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/b/2/b283d0f8ae5a75e531bcb2bdefe947c717289ca1.png">
+                <link itemprop="image" href="https://discuss.coworker365.com/uploads/default/original/3X/b/2/b283d0f8ae5a75e531bcb2bdefe947c717289ca1.png">
 
               <span class="crawler-post-infos">
                   <time itemprop='datePublished' datetime='2025-08-07T11:22:33Z' class='post-time'>
@@ -275,7 +275,7 @@ Where can I find the “Guest” option?</p>
               </span>
             </div>
             <div class='post' itemprop='text'>
-              <p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/b/2/b283d0f8ae5a75e531bcb2bdefe947c717289ca1.png" data-download-href="https://discuss.frappe.io/uploads/default/b283d0f8ae5a75e531bcb2bdefe947c717289ca1" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/b/2/b283d0f8ae5a75e531bcb2bdefe947c717289ca1_2_690x200.png" alt="image" data-base62-sha1="ptdp6eKsvVkWNmg0dTjSqAYKIM1" width="690" height="200" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/b/2/b283d0f8ae5a75e531bcb2bdefe947c717289ca1_2_690x200.png, https://discuss.frappe.io/uploads/default/optimized/3X/b/2/b283d0f8ae5a75e531bcb2bdefe947c717289ca1_2_1035x300.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/b/2/b283d0f8ae5a75e531bcb2bdefe947c717289ca1_2_1380x400.png 2x" data-dominant-color="F6F8F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1886×549 66.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+              <p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/b/2/b283d0f8ae5a75e531bcb2bdefe947c717289ca1.png" data-download-href="https://discuss.coworker365.com/uploads/default/b283d0f8ae5a75e531bcb2bdefe947c717289ca1" title="image"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/b/2/b283d0f8ae5a75e531bcb2bdefe947c717289ca1_2_690x200.png" alt="image" data-base62-sha1="ptdp6eKsvVkWNmg0dTjSqAYKIM1" width="690" height="200" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/b/2/b283d0f8ae5a75e531bcb2bdefe947c717289ca1_2_690x200.png, https://discuss.coworker365.com/uploads/default/optimized/3X/b/2/b283d0f8ae5a75e531bcb2bdefe947c717289ca1_2_1035x300.png 1.5x, https://discuss.coworker365.com/uploads/default/optimized/3X/b/2/b283d0f8ae5a75e531bcb2bdefe947c717289ca1_2_1380x400.png 2x" data-dominant-color="F6F8F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1886×549 66.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
 <p>Go to System Setting → File → Allow Guests to Upload Files</p>
             </div>
 
@@ -289,12 +289,12 @@ Where can I find the “Guest” option?</p>
           <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/knimer'><span itemprop='name'>knimer</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/knimer'><span itemprop='name'>knimer</span></a>
                 
               </span>
 
 
-                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/9/1/91eca16ed6068c6226fb9dca2f78db3b4ad101fb.png">
+                <link itemprop="image" href="https://discuss.coworker365.com/uploads/default/original/3X/9/1/91eca16ed6068c6226fb9dca2f78db3b4ad101fb.png">
 
               <span class="crawler-post-infos">
                   <time itemprop='datePublished' datetime='2025-08-07T11:24:08Z' class='post-time'>
@@ -305,7 +305,7 @@ Where can I find the “Guest” option?</p>
               </span>
             </div>
             <div class='post' itemprop='text'>
-              <p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/1/91eca16ed6068c6226fb9dca2f78db3b4ad101fb.png" data-download-href="https://discuss.frappe.io/uploads/default/91eca16ed6068c6226fb9dca2f78db3b4ad101fb" title="Screenshot From 2025-08-07 14-20-56"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/9/1/91eca16ed6068c6226fb9dca2f78db3b4ad101fb_2_690x207.png" alt="Screenshot From 2025-08-07 14-20-56" data-base62-sha1="kOUd8Fl1oTFuQGKIPiO24Hz24ll" width="690" height="207" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/9/1/91eca16ed6068c6226fb9dca2f78db3b4ad101fb_2_690x207.png, https://discuss.frappe.io/uploads/default/optimized/3X/9/1/91eca16ed6068c6226fb9dca2f78db3b4ad101fb_2_1035x310.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/9/1/91eca16ed6068c6226fb9dca2f78db3b4ad101fb_2_1380x414.png 2x" data-dominant-color="F9F8F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot From 2025-08-07 14-20-56</span><span class="informations">1838×553 67.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+              <p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/9/1/91eca16ed6068c6226fb9dca2f78db3b4ad101fb.png" data-download-href="https://discuss.coworker365.com/uploads/default/91eca16ed6068c6226fb9dca2f78db3b4ad101fb" title="Screenshot From 2025-08-07 14-20-56"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/9/1/91eca16ed6068c6226fb9dca2f78db3b4ad101fb_2_690x207.png" alt="Screenshot From 2025-08-07 14-20-56" data-base62-sha1="kOUd8Fl1oTFuQGKIPiO24Hz24ll" width="690" height="207" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/9/1/91eca16ed6068c6226fb9dca2f78db3b4ad101fb_2_690x207.png, https://discuss.coworker365.com/uploads/default/optimized/3X/9/1/91eca16ed6068c6226fb9dca2f78db3b4ad101fb_2_1035x310.png 1.5x, https://discuss.coworker365.com/uploads/default/optimized/3X/9/1/91eca16ed6068c6226fb9dca2f78db3b4ad101fb_2_1380x414.png 2x" data-dominant-color="F9F8F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot From 2025-08-07 14-20-56</span><span class="informations">1838×553 67.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
 <p>Check this setting. Let us know if it works.</p>
             </div>
 
@@ -317,7 +317,7 @@ Where can I find the “Guest” option?</p>
 
                 <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
                       <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
-                        <a itemprop='url' href="https://discuss.frappe.io/t/ad-attachments-in-public-job-application-web-forms-for-non-logged-in-users/151783/2">ad Attachments in Public Job Application Web Forms for Non-Logged-In Users</a>
+                        <a itemprop='url' href="https://discuss.coworker365.com/t/ad-attachments-in-public-job-application-web-forms-for-non-logged-in-users/151783/2">ad Attachments in Public Job Application Web Forms for Non-Logged-In Users</a>
                         <meta itemprop='position' content='1'>
                       </div>
                 </div>
@@ -325,7 +325,7 @@ Where can I find the “Guest” option?</p>
           <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Bizimungu_Pascal'><span itemprop='name'>Bizimungu_Pascal</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/Bizimungu_Pascal'><span itemprop='name'>Bizimungu_Pascal</span></a>
                 
               </span>
 
@@ -353,7 +353,7 @@ Where can I find the “Guest” option?</p>
           <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Owaishk08'><span itemprop='name'>Owaishk08</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/Owaishk08'><span itemprop='name'>Owaishk08</span></a>
                 
               </span>
 
@@ -421,7 +421,7 @@ Where can I find the “Guest” option?</p>
 </footer>
 
     <div class="erpnext-footer">
-    <a href="https://frappe.io">Frappe</a>
+    <a href="https://coworker365.com">Frappe</a>
 </div>
     
   </body>

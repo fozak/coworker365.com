@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Integrating FCRM and Lending and getting a unique error bug</title>
-    <link>https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282</link>
+    <link>https://discuss.coworker365.com/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282</link>
     <description>Hi there,
 
 I’m currently working on an integration involving ERPNext, Frappe CRM, and Lending. In older versions of Frappe, we were able to switch between apps directly from the sidebar. However, in the newer versions, this behavior seems to have changed — instead of app switching, the desk now shows icons based on modules (as I understand it).
@@ -119,7 +119,7 @@ Heshan K</description>
     
     <lastBuildDate>Wed, 24 Dec 2025 06:40:47 +0000</lastBuildDate>
     <category>Frappe CRM</category>
-    <atom:link href="https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282.rss" rel="self" type="application/rss+xml" />
+    <atom:link href="https://discuss.coworker365.com/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282.rss" rel="self" type="application/rss+xml" />
       <item>
         <title>Integrating FCRM and Lending and getting a unique error bug</title>
         <dc:creator><![CDATA[Heshan_Karunaratne]]></dc:creator>
@@ -134,7 +134,7 @@ a configuration issue on my side, or<br>
 a known bug on the Frappe/Lending side.</strong></em></p>
 <p>Any guidance on how to properly handle app switching in this setup, or how to resolve this error, would be greatly appreciated.</p>
 <p>Error Message:</p>
-<h3><a name="p-489460-app-versions-1" class="anchor" href="https://discuss.frappe.io#p-489460-app-versions-1"></a>App Versions</h3>
+<h3><a name="p-489460-app-versions-1" class="anchor" href="https://discuss.coworker365.com#p-489460-app-versions-1"></a>App Versions</h3>
 <pre><code class="lang-auto">{
 	"frappe": "16.0.0-dev",
 	"crm": "2.0.0-dev",
@@ -143,10 +143,10 @@ a known bug on the Frappe/Lending side.</strong></em></p>
 	"dreamlink": "0.0.1"
 }
 </code></pre>
-<h3><a name="p-489460-route-2" class="anchor" href="https://discuss.frappe.io#p-489460-route-2"></a>Route</h3>
+<h3><a name="p-489460-route-2" class="anchor" href="https://discuss.coworker365.com#p-489460-route-2"></a>Route</h3>
 <pre><code class="lang-auto">Workspaces/Lending
 </code></pre>
-<h3><a name="p-489460-traceback-3" class="anchor" href="https://discuss.frappe.io#p-489460-traceback-3"></a>Traceback</h3>
+<h3><a name="p-489460-traceback-3" class="anchor" href="https://discuss.coworker365.com#p-489460-traceback-3"></a>Traceback</h3>
 <pre><code class="lang-auto">Traceback (most recent call last):
   File "apps/frappe/frappe/app.py", line 121, in application
     response = frappe.api.handle(request)
@@ -184,7 +184,7 @@ a known bug on the Frappe/Lending side.</strong></em></p>
     raise ValueError(f"Unknown filter format: {filter}")
 ValueError: Unknown filter format: ['Loan', 'docstatus', '=', '1', False]
 </code></pre>
-<h3><a name="p-489460-request-data-4" class="anchor" href="https://discuss.frappe.io#p-489460-request-data-4"></a>Request Data</h3>
+<h3><a name="p-489460-request-data-4" class="anchor" href="https://discuss.coworker365.com#p-489460-request-data-4"></a>Request Data</h3>
 <pre><code class="lang-auto">{
 	"type": "POST",
 	"args": {
@@ -202,22 +202,22 @@ ValueError: Unknown filter format: ['Loan', 'docstatus', '=', '1', False]
 	"request_id": null
 }
 </code></pre>
-<h3><a name="p-489460-response-data-5" class="anchor" href="https://discuss.frappe.io#p-489460-response-data-5"></a>Response Data</h3>
+<h3><a name="p-489460-response-data-5" class="anchor" href="https://discuss.coworker365.com#p-489460-response-data-5"></a>Response Data</h3>
 <pre><code class="lang-auto">{
 	"exception": "ValueError: Unknown filter format: ['Loan', 'docstatus', '=', '1', False]",
 	"exc_type": "ValueError"
 }
 </code></pre>
-<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88.png" data-download-href="https://discuss.frappe.io/uploads/default/e755448edd84ac3af562aa65822c9db778495d88" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_690x388.png" alt="image" data-base62-sha1="x0sYPmo4aKmwAUaSdd89W2pMpGE" width="690" height="388" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_690x388.png, https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_1035x582.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_1380x776.png 2x" data-dominant-color="121212"></a></div><p></p>
-<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d.png" data-download-href="https://discuss.frappe.io/uploads/default/2d39c77dde336fa6de681d082dd83916e268da3d" title="image (1)"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_690x388.png" alt="image (1)" data-base62-sha1="6s5hdnhDBQOg3ReGESdEq32AcNf" width="690" height="388" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_690x388.png, https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_1035x582.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_1380x776.png 2x" data-dominant-color="222222"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88.png" data-download-href="https://discuss.coworker365.com/uploads/default/e755448edd84ac3af562aa65822c9db778495d88" title="image"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_690x388.png" alt="image" data-base62-sha1="x0sYPmo4aKmwAUaSdd89W2pMpGE" width="690" height="388" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_690x388.png, https://discuss.coworker365.com/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_1035x582.png 1.5x, https://discuss.coworker365.com/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_1380x776.png 2x" data-dominant-color="121212"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d.png" data-download-href="https://discuss.coworker365.com/uploads/default/2d39c77dde336fa6de681d082dd83916e268da3d" title="image (1)"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_690x388.png" alt="image (1)" data-base62-sha1="6s5hdnhDBQOg3ReGESdEq32AcNf" width="690" height="388" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_690x388.png, https://discuss.coworker365.com/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_1035x582.png 1.5x, https://discuss.coworker365.com/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_1380x776.png 2x" data-dominant-color="222222"></a></div><p></p>
 <p>Thank you</p>
 <p>Heshan K</p>
-          <p><a href="https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282/1">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282/1">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282/1</link>
+        <link>https://discuss.coworker365.com/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282/1</link>
         <pubDate>Wed, 24 Dec 2025 06:40:47 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-158282-1</guid>
-        <source url="https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282.rss">Integrating FCRM and Lending and getting a unique error bug</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-158282-1</guid>
+        <source url="https://discuss.coworker365.com/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282.rss">Integrating FCRM and Lending and getting a unique error bug</source>
       </item>
   </channel>
 </rss>

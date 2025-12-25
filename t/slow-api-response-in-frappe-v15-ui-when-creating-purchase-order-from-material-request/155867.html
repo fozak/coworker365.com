@@ -7,53 +7,53 @@
 I’m currently facing a performance issue on Frappe version 15. 
 When I create a Purchase Order from a Material Request that contains around 150 items, the UI becomes very slow — many API calls are made and &amp;hellip;">
     <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
-<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
-<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<link rel="icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
 <meta name="theme-color" media="all" content="#fff">
 
 <meta name="color-scheme" content="light">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-<link rel="canonical" href="https://discuss.frappe.io/t/slow-api-response-in-frappe-v15-ui-when-creating-purchase-order-from-material-request/155867" />
+<link rel="canonical" href="https://discuss.coworker365.com/t/slow-api-response-in-frappe-v15-ui-when-creating-purchase-order-from-material-request/155867" />
 
-<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.coworker365.com/opensearch.xml" title="Frappe Forum Search">
 
-    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
 
-<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common"  />
 
-  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop"  />
 
 
 
-    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
-    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
-    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
-    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
-    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
-    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
-    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
-    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
-    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
-    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
-    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
-    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
-    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
-    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll_desktop"  />
 
-  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
-    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
 
     
     
-        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Slow API response in Frappe v15 UI when creating Purchase Order from Material Request&#39;" href="https://discuss.frappe.io/t/slow-api-response-in-frappe-v15-ui-when-creating-purchase-order-from-material-request/155867.rss" />
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Slow API response in Frappe v15 UI when creating Purchase Order from Material Request&#39;" href="https://discuss.coworker365.com/t/slow-api-response-in-frappe-v15-ui-when-creating-purchase-order-from-material-request/155867.rss" />
     <meta property="og:site_name" content="Frappe Forum" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/d/2/d2f56dabfbfe14d67437884135072bef00c0b5ec_2_1024x313.png" />
-<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/d/2/d2f56dabfbfe14d67437884135072bef00c0b5ec_2_1024x313.png" />
-<meta property="og:url" content="https://discuss.frappe.io/t/slow-api-response-in-frappe-v15-ui-when-creating-purchase-order-from-material-request/155867" />
-<meta name="twitter:url" content="https://discuss.frappe.io/t/slow-api-response-in-frappe-v15-ui-when-creating-purchase-order-from-material-request/155867" />
+<meta name="twitter:image" content="https://discuss.coworker365.com/uploads/default/optimized/3X/d/2/d2f56dabfbfe14d67437884135072bef00c0b5ec_2_1024x313.png" />
+<meta property="og:image" content="https://discuss.coworker365.com/uploads/default/optimized/3X/d/2/d2f56dabfbfe14d67437884135072bef00c0b5ec_2_1024x313.png" />
+<meta property="og:url" content="https://discuss.coworker365.com/t/slow-api-response-in-frappe-v15-ui-when-creating-purchase-order-from-material-request/155867" />
+<meta name="twitter:url" content="https://discuss.coworker365.com/t/slow-api-response-in-frappe-v15-ui-when-creating-purchase-order-from-material-request/155867" />
 <meta property="og:title" content="Slow API response in Frappe v15 UI when creating Purchase Order from Material Request" />
 <meta name="twitter:title" content="Slow API response in Frappe v15 UI when creating Purchase Order from Material Request" />
 <meta property="og:description" content="Hi everyone,  I’m currently facing a performance issue on Frappe version 15.  When I create a Purchase Order from a Material Request that contains around 150 items, the UI becomes very slow — many API calls are made and stay in the pending state for quite a long time.  In particular, I noticed that the apply_price_list API takes less than 2 seconds when I call it directly via Postman, but in the Frappe UI, the same API takes over 10 seconds to return a response, along with several other API call..." />
@@ -66,14 +66,14 @@ When I create a Purchase Order from a Material Request that contains around 150 
 <meta property="og:ignore_canonical" content="true" />
 
 
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Slow API response in Frappe v15 UI when creating Purchase Order from Material Request","mainEntity":{"@type":"Question","name":"Slow API response in Frappe v15 UI when creating Purchase Order from Material Request","text":"Hi everyone,\n\nI’m currently facing a performance issue on Frappe version 15.\n\nWhen I create a Purchase Order from a Material Request that contains around 150 items, the UI becomes very slow — many API calls are made and stay in the pending state for quite a long time.\n\nIn particular, I noticed that &hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-10-23T05:43:53.297Z","author":{"@type":"Person","name":"ntn97ntn","url":"https://discuss.frappe.io/u/ntn97ntn"}}}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Slow API response in Frappe v15 UI when creating Purchase Order from Material Request","mainEntity":{"@type":"Question","name":"Slow API response in Frappe v15 UI when creating Purchase Order from Material Request","text":"Hi everyone,\n\nI’m currently facing a performance issue on Frappe version 15.\n\nWhen I create a Purchase Order from a Material Request that contains around 150 items, the UI becomes very slow — many API calls are made and stay in the pending state for quite a long time.\n\nIn particular, I noticed that &hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-10-23T05:43:53.297Z","author":{"@type":"Person","name":"ntn97ntn","url":"https://discuss.coworker365.com/u/ntn97ntn"}}}</script>
   </head>
   <body class="crawler ">
     <div class="erpnext-header">
-    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://coworker365.com" target="_blank">coworker365.com</a>
     <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
-    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
-    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://docs.coworker365.com/" target="_blank">Documentation</a>
+    <a href="https://coworker365.com/partners" target="_blank">Partners</a>
     <a href="https://frappe.school" target="_blank">Frappe School</a>
     <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
     <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
@@ -116,14 +116,14 @@ When I create a Purchase Order from a Material Request that contains around 150 
 
     <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
       <meta itemprop='headline' content='Slow API response in Frappe v15 UI when creating Purchase Order from Material Request'>
-      <link itemprop='url' href='https://discuss.frappe.io/t/slow-api-response-in-frappe-v15-ui-when-creating-purchase-order-from-material-request/155867'>
+      <link itemprop='url' href='https://discuss.coworker365.com/t/slow-api-response-in-frappe-v15-ui-when-creating-purchase-order-from-material-request/155867'>
       <meta itemprop='datePublished' content='2025-10-23T05:43:53Z'>
         <meta itemprop='articleSection' content='Manufacturing'>
       <meta itemprop='keywords' content=''>
       <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
         <meta itemprop='name' content='Frappe'>
           <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
-            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+            <meta itemprop='url' content='https://discuss.coworker365.com/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
           </div>
       </div>
 
@@ -131,13 +131,13 @@ When I create a Purchase Order from a Material Request that contains around 150 
           <div id='post_1'  class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ntn97ntn'><span itemprop='name'>ntn97ntn</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/ntn97ntn'><span itemprop='name'>ntn97ntn</span></a>
                 
               </span>
 
-                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/slow-api-response-in-frappe-v15-ui-when-creating-purchase-order-from-material-request/155867">
+                <link itemprop="mainEntityOfPage" href="https://discuss.coworker365.com/t/slow-api-response-in-frappe-v15-ui-when-creating-purchase-order-from-material-request/155867">
 
-                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/d/2/d2f56dabfbfe14d67437884135072bef00c0b5ec.png">
+                <link itemprop="image" href="https://discuss.coworker365.com/uploads/default/original/3X/d/2/d2f56dabfbfe14d67437884135072bef00c0b5ec.png">
 
               <span class="crawler-post-infos">
                   <time  datetime='2025-10-23T05:43:53Z' class='post-time'>
@@ -155,8 +155,8 @@ When I create a <strong>Purchase Order</strong> from a <strong>Material Request<
 <p>Has anyone encountered a similar issue and found the root cause or a solution for this?<br>
 Any advice or insights would be greatly appreciated.</p>
 <p>Thanks in advance!</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/2/d2f56dabfbfe14d67437884135072bef00c0b5ec.png" data-download-href="https://discuss.frappe.io/uploads/default/d2f56dabfbfe14d67437884135072bef00c0b5ec" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/2/d2f56dabfbfe14d67437884135072bef00c0b5ec_2_690x210.png" alt="image" data-base62-sha1="u6e5ZP02vCQQ4bXP53GeZCj2AYQ" width="690" height="210" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/2/d2f56dabfbfe14d67437884135072bef00c0b5ec_2_690x210.png, https://discuss.frappe.io/uploads/default/optimized/3X/d/2/d2f56dabfbfe14d67437884135072bef00c0b5ec_2_1035x315.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/d/2/d2f56dabfbfe14d67437884135072bef00c0b5ec_2_1380x420.png 2x" data-dominant-color="F0F0F6"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1809×553 57.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/4/3/433d286c401c81c269d127b74547035cd0c1a064.png" data-download-href="https://discuss.frappe.io/uploads/default/433d286c401c81c269d127b74547035cd0c1a064" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/4/3/433d286c401c81c269d127b74547035cd0c1a064_2_690x340.png" alt="image" data-base62-sha1="9AP1hEeua726iRdh0WHNQUz8tXS" width="690" height="340" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/4/3/433d286c401c81c269d127b74547035cd0c1a064_2_690x340.png, https://discuss.frappe.io/uploads/default/optimized/3X/4/3/433d286c401c81c269d127b74547035cd0c1a064_2_1035x510.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/4/3/433d286c401c81c269d127b74547035cd0c1a064_2_1380x680.png 2x" data-dominant-color="F2F2F6"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1909×942 112 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/d/2/d2f56dabfbfe14d67437884135072bef00c0b5ec.png" data-download-href="https://discuss.coworker365.com/uploads/default/d2f56dabfbfe14d67437884135072bef00c0b5ec" title="image"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/d/2/d2f56dabfbfe14d67437884135072bef00c0b5ec_2_690x210.png" alt="image" data-base62-sha1="u6e5ZP02vCQQ4bXP53GeZCj2AYQ" width="690" height="210" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/d/2/d2f56dabfbfe14d67437884135072bef00c0b5ec_2_690x210.png, https://discuss.coworker365.com/uploads/default/optimized/3X/d/2/d2f56dabfbfe14d67437884135072bef00c0b5ec_2_1035x315.png 1.5x, https://discuss.coworker365.com/uploads/default/optimized/3X/d/2/d2f56dabfbfe14d67437884135072bef00c0b5ec_2_1380x420.png 2x" data-dominant-color="F0F0F6"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1809×553 57.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/4/3/433d286c401c81c269d127b74547035cd0c1a064.png" data-download-href="https://discuss.coworker365.com/uploads/default/433d286c401c81c269d127b74547035cd0c1a064" title="image"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/4/3/433d286c401c81c269d127b74547035cd0c1a064_2_690x340.png" alt="image" data-base62-sha1="9AP1hEeua726iRdh0WHNQUz8tXS" width="690" height="340" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/4/3/433d286c401c81c269d127b74547035cd0c1a064_2_690x340.png, https://discuss.coworker365.com/uploads/default/optimized/3X/4/3/433d286c401c81c269d127b74547035cd0c1a064_2_1035x510.png 1.5x, https://discuss.coworker365.com/uploads/default/optimized/3X/4/3/433d286c401c81c269d127b74547035cd0c1a064_2_1380x680.png 2x" data-dominant-color="F2F2F6"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1909×942 112 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
             </div>
 
             <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
@@ -169,7 +169,7 @@ Any advice or insights would be greatly appreciated.</p>
           <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/asieftejani'><span itemprop='name'>asieftejani</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/asieftejani'><span itemprop='name'>asieftejani</span></a>
                 
               </span>
 
@@ -188,7 +188,7 @@ Any advice or insights would be greatly appreciated.</p>
 <p>Yes — this is a known performance bottleneck scenario in Frappe/ERPNext (v15 especially), and what you’re describing has been observed by several developers when dealing with <strong>Purchase Orders or Sales Invoices generated from Material Requests or Quotations with many items</strong>.</p>
 <p>Here’s a breakdown of what’s going on and what you can do about it:</p>
 <hr>
-<h2><a name="p-484658-root-causes-1" class="anchor" href="#p-484658-root-causes-1"></a><img src="https://discuss.frappe.io/images/emoji/twitter/magnifying_glass_tilted_left.png?v=14" title=":magnifying_glass_tilted_left:" class="emoji" alt=":magnifying_glass_tilted_left:" loading="lazy" width="20" height="20"> Root Causes</h2>
+<h2><a name="p-484658-root-causes-1" class="anchor" href="#p-484658-root-causes-1"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/magnifying_glass_tilted_left.png?v=14" title=":magnifying_glass_tilted_left:" class="emoji" alt=":magnifying_glass_tilted_left:" loading="lazy" width="20" height="20"> Root Causes</h2>
 <h3><a name="p-484658-h-1-client-side-bottleneck-too-many-triggers-per-row-2" class="anchor" href="#p-484658-h-1-client-side-bottleneck-too-many-triggers-per-row-2"></a>1. <strong>Client-side bottleneck (too many triggers per row)</strong></h3>
 <p>When a large document (e.g. 150 items) loads or is updated in the UI, Frappe’s form engine runs multiple event triggers (<code>onchange</code>, <code>refresh_field</code>, <code>apply_price_list</code>, <code>calculate_taxes_and_totals</code>, etc.) <strong>per row</strong>.<br>
 Each of these can:</p>
@@ -212,8 +212,8 @@ When multiplied by 150 items, it floods the queue and the browser thread, causin
 <h3><a name="p-484658-h-4-form-autosave-dirty-state-sync-5" class="anchor" href="#p-484658-h-4-form-autosave-dirty-state-sync-5"></a>4. <strong>Form autosave / dirty state sync</strong></h3>
 <p>In v15, autosave and <code>frm.dirty</code> sync logic got more aggressive to prevent data loss. This can cause extra saves or validations while you’re still loading data, compounding the issue.</p>
 <hr>
-<h2><a name="p-484658-recommended-fixes-mitigations-6" class="anchor" href="#p-484658-recommended-fixes-mitigations-6"></a><img src="https://discuss.frappe.io/images/emoji/twitter/brain.png?v=14" title=":brain:" class="emoji" alt=":brain:" loading="lazy" width="20" height="20"> Recommended Fixes / Mitigations</h2>
-<h3><a name="p-484658-h-1-disable-automatic-price-list-application-when-loading-7" class="anchor" href="#p-484658-h-1-disable-automatic-price-list-application-when-loading-7"></a><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> <strong>1. Disable automatic price list application when loading</strong></h3>
+<h2><a name="p-484658-recommended-fixes-mitigations-6" class="anchor" href="#p-484658-recommended-fixes-mitigations-6"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/brain.png?v=14" title=":brain:" class="emoji" alt=":brain:" loading="lazy" width="20" height="20"> Recommended Fixes / Mitigations</h2>
+<h3><a name="p-484658-h-1-disable-automatic-price-list-application-when-loading-7" class="anchor" href="#p-484658-h-1-disable-automatic-price-list-application-when-loading-7"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> <strong>1. Disable automatic price list application when loading</strong></h3>
 <p>You can stop the UI from repeatedly running <code>apply_price_list</code> during load and only trigger it once after all items are added:</p>
 <p><strong>Custom Script (Purchase Order / Purchase Order Item):</strong></p>
 <pre><code class="lang-auto">frappe.ui.form.on('Purchase Order', {
@@ -240,11 +240,11 @@ frappe.ui.form.on('Purchase Order Item', {
 </code></pre>
 <p><em>(Adjust according to your specific triggers — this prevents it from firing per-row during massive document creation.)</em></p>
 <hr>
-<h3><a name="p-484658-h-2-batch-insert-items-server-side-8" class="anchor" href="#p-484658-h-2-batch-insert-items-server-side-8"></a><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> <strong>2. Batch insert items server-side</strong></h3>
+<h3><a name="p-484658-h-2-batch-insert-items-server-side-8" class="anchor" href="#p-484658-h-2-batch-insert-items-server-side-8"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> <strong>2. Batch insert items server-side</strong></h3>
 <p>When converting from Material Request → Purchase Order, use a <strong>server-side script</strong> (custom button or patched function) that copies all 150 items in one go without the frontend needing to render them one-by-one.</p>
 <p>This avoids the 150 <code>frappe.model.add_child()</code> and <code>refresh_field()</code> calls that bog down the browser.</p>
 <hr>
-<h3><a name="p-484658-h-3-profile-network-reduce-link-fetching-9" class="anchor" href="#p-484658-h-3-profile-network-reduce-link-fetching-9"></a><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> <strong>3. Profile network &amp; reduce link fetching</strong></h3>
+<h3><a name="p-484658-h-3-profile-network-reduce-link-fetching-9" class="anchor" href="#p-484658-h-3-profile-network-reduce-link-fetching-9"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> <strong>3. Profile network &amp; reduce link fetching</strong></h3>
 <p>Use DevTools → “Network” tab → filter for <code>/api/method/frappe.desk.form.utils.get_link_title</code>.<br>
 If there are hundreds of these, you can cache them client-side or batch-fetch them.</p>
 <p>For testing, you can disable automatic link title fetching with:</p>
@@ -253,7 +253,7 @@ If there are hundreds of these, you can cache them client-side or batch-fetch th
 </code></pre>
 <p>or override <code>frappe.desk.form.utils.get_link_title</code> temporarily to return cached values.</p>
 <hr>
-<h3><a name="p-484658-h-4-optimize-redis-workers-10" class="anchor" href="#p-484658-h-4-optimize-redis-workers-10"></a><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> <strong>4. Optimize Redis / workers</strong></h3>
+<h3><a name="p-484658-h-4-optimize-redis-workers-10" class="anchor" href="#p-484658-h-4-optimize-redis-workers-10"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> <strong>4. Optimize Redis / workers</strong></h3>
 <p>In production:</p>
 <pre><code class="lang-auto">bench set-config worker.timeout 600
 bench set-config redis_socket_timeout 600
@@ -262,7 +262,7 @@ bench restart
 </code></pre>
 <p>Ensure you have enough worker processes (<code>bench worker</code> or via Supervisor) so background API calls don’t queue up.</p>
 <hr>
-<h3><a name="p-484658-h-5-use-fast-form-customization-11" class="anchor" href="#p-484658-h-5-use-fast-form-customization-11"></a><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> <strong>5. Use “fast form” customization</strong></h3>
+<h3><a name="p-484658-h-5-use-fast-form-customization-11" class="anchor" href="#p-484658-h-5-use-fast-form-customization-11"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> <strong>5. Use “fast form” customization</strong></h3>
 <p>In Frappe 15, there’s a hidden option you can leverage:</p>
 <pre><code class="lang-auto">frm.make_fast();
 
@@ -270,7 +270,7 @@ bench restart
 <p>This disables some heavy watchers and autosave behaviors on complex forms.<br>
 Use it cautiously (it’s meant for large doctypes with hundreds of rows).</p>
 <hr>
-<h3><a name="p-484658-h-6-use-console-timing-to-isolate-slow-frontend-operations-12" class="anchor" href="#p-484658-h-6-use-console-timing-to-isolate-slow-frontend-operations-12"></a><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> <strong>6. Use console timing to isolate slow frontend operations</strong></h3>
+<h3><a name="p-484658-h-6-use-console-timing-to-isolate-slow-frontend-operations-12" class="anchor" href="#p-484658-h-6-use-console-timing-to-isolate-slow-frontend-operations-12"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> <strong>6. Use console timing to isolate slow frontend operations</strong></h3>
 <p>You can instrument:</p>
 <pre><code class="lang-auto">console.time("apply_price_list")
 frappe.call({ method: ... }).then(() =&gt; console.timeEnd("apply_price_list"))
@@ -278,7 +278,7 @@ frappe.call({ method: ... }).then(() =&gt; console.timeEnd("apply_price_list"))
 </code></pre>
 <p>and repeat for other triggers (like <code>calculate_taxes_and_totals</code>) to see which part eats the 10 s.</p>
 <hr>
-<h2><a name="p-484658-short-term-workaround-13" class="anchor" href="#p-484658-short-term-workaround-13"></a><img src="https://discuss.frappe.io/images/emoji/twitter/high_voltage.png?v=14" title=":high_voltage:" class="emoji" alt=":high_voltage:" loading="lazy" width="20" height="20"> Short-Term Workaround</h2>
+<h2><a name="p-484658-short-term-workaround-13" class="anchor" href="#p-484658-short-term-workaround-13"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/high_voltage.png?v=14" title=":high_voltage:" class="emoji" alt=":high_voltage:" loading="lazy" width="20" height="20"> Short-Term Workaround</h2>
 <p>When creating large Purchase Orders:</p>
 <ol>
 <li>
@@ -293,7 +293,7 @@ frappe.call({ method: ... }).then(() =&gt; console.timeEnd("apply_price_list"))
 </ol>
 <p>This avoids the UI storm of API calls.</p>
 <hr>
-<h2><a name="p-484658-longer-term-fix-for-maintainers-core-team-14" class="anchor" href="#p-484658-longer-term-fix-for-maintainers-core-team-14"></a><img src="https://discuss.frappe.io/images/emoji/twitter/puzzle_piece.png?v=14" title=":puzzle_piece:" class="emoji" alt=":puzzle_piece:" loading="lazy" width="20" height="20"> Longer-Term Fix (for maintainers / core team)</h2>
+<h2><a name="p-484658-longer-term-fix-for-maintainers-core-team-14" class="anchor" href="#p-484658-longer-term-fix-for-maintainers-core-team-14"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/puzzle_piece.png?v=14" title=":puzzle_piece:" class="emoji" alt=":puzzle_piece:" loading="lazy" width="20" height="20"> Longer-Term Fix (for maintainers / core team)</h2>
 <p>There’s a known upstream issue:<br>
 <strong>“Performance degradation on forms with many child rows due to redundant field refreshes”</strong> — discussed on <a href="https://github.com/frappe/frappe/issues?q=is%3Aissue+slow+large+form+refresh+v15" rel="noopener nofollow ugc">Frappe GitHub issues</a>.<br>
 If you’re comfortable, you can patch:</p>
@@ -371,7 +371,7 @@ If you’re comfortable, you can patch:</p>
 </footer>
 
     <div class="erpnext-footer">
-    <a href="https://frappe.io">Frappe</a>
+    <a href="https://coworker365.com">Frappe</a>
 </div>
     
   </body>

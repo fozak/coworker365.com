@@ -6,53 +6,53 @@
     <meta name="description" content="Hello community, 
 We’ve spent the last few months containerizing ERPNext and scaling it up to its full potential. What we got out of it are the current Docker Images and Swarm support. Since then, we’ve been working h&amp;hellip;">
     <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
-<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
-<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<link rel="icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
 <meta name="theme-color" media="all" content="#fff">
 
 <meta name="color-scheme" content="light">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-<link rel="canonical" href="https://discuss.frappe.io/t/official-erpnext-on-kubernetes/61607" />
+<link rel="canonical" href="https://discuss.coworker365.com/t/official-erpnext-on-kubernetes/61607" />
 
-<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.coworker365.com/opensearch.xml" title="Frappe Forum Search">
 
-    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
 
-<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common"  />
 
-  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop"  />
 
 
 
-    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
-    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
-    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
-    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
-    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
-    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
-    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
-    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
-    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
-    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
-    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
-    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
-    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
-    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll_desktop"  />
 
-  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
-    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
 
     
     
-        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Official ERPNext on Kubernetes&#39;" href="https://discuss.frappe.io/t/official-erpnext-on-kubernetes/61607.rss" />
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Official ERPNext on Kubernetes&#39;" href="https://discuss.coworker365.com/t/official-erpnext-on-kubernetes/61607.rss" />
     <meta property="og:site_name" content="Frappe Forum" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png" />
-<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png" />
-<meta property="og:url" content="https://discuss.frappe.io/t/official-erpnext-on-kubernetes/61607" />
-<meta name="twitter:url" content="https://discuss.frappe.io/t/official-erpnext-on-kubernetes/61607" />
+<meta name="twitter:image" content="https://discuss.coworker365.com/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png" />
+<meta property="og:image" content="https://discuss.coworker365.com/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png" />
+<meta property="og:url" content="https://discuss.coworker365.com/t/official-erpnext-on-kubernetes/61607" />
+<meta name="twitter:url" content="https://discuss.coworker365.com/t/official-erpnext-on-kubernetes/61607" />
 <meta property="og:title" content="Official ERPNext on Kubernetes" />
 <meta name="twitter:title" content="Official ERPNext on Kubernetes" />
 <meta property="og:description" content="Hello community,  We’ve spent the last few months containerizing ERPNext and scaling it up to its full potential. What we got out of it are the current Docker Images and Swarm support. Since then, we’ve been working hard to step it up a notch by adding enterprise-grade orchestration.  Today, we’re excited to announce Kubernetes for ERPNext!  With this, you will now be able to infinitely scale and orchestrate your ERPNext instance by setting up a Kubernetes cluster on a provider of your choice..." />
@@ -68,14 +68,14 @@ We’ve spent the last few months containerizing ERPNext and scaling it up to it
 <meta property="og:ignore_canonical" content="true" />
 
 
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Official ERPNext on Kubernetes","mainEntity":{"@type":"Question","name":"Official ERPNext on Kubernetes","text":"<a class=\"lightbox\" href=\"https://discuss.frappe.io/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png\" data-download-href=\"https://discuss.frappe.io/uploads/default/3a7b70007b9f3f28cd49727519bad68462867803\" title=\"1%20white\">[1%20white]<\/a>\n\nHello community,\n\nWe’ve spent the last few months <a href=\"https://discuss.frappe.io/t/official-docker-updates-2020/59224\">containerizing ERPNext<\/a> and scaling it up to its full potential. What we got out of it are the current <a href=\"https://github.com/frappe/frappe_docker\">Docker Images<\/a> and <a href=\"https://github.com/frappe/frappe_docker/wiki/Docker-Swarm\">Swarm support<\/a>. Since then, we’ve been working hard to step it up a notch by adding enterprise-grade orchestration.\n\nT&hellip;","upvoteCount":66,"answerCount":0,"datePublished":"2020-05-14T12:46:43.410Z","author":{"@type":"Person","name":"chinmaypai","url":"https://discuss.frappe.io/u/chinmaypai"}}}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Official ERPNext on Kubernetes","mainEntity":{"@type":"Question","name":"Official ERPNext on Kubernetes","text":"<a class=\"lightbox\" href=\"https://discuss.coworker365.com/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png\" data-download-href=\"https://discuss.coworker365.com/uploads/default/3a7b70007b9f3f28cd49727519bad68462867803\" title=\"1%20white\">[1%20white]<\/a>\n\nHello community,\n\nWe’ve spent the last few months <a href=\"https://discuss.coworker365.com/t/official-docker-updates-2020/59224\">containerizing ERPNext<\/a> and scaling it up to its full potential. What we got out of it are the current <a href=\"https://github.com/frappe/frappe_docker\">Docker Images<\/a> and <a href=\"https://github.com/frappe/frappe_docker/wiki/Docker-Swarm\">Swarm support<\/a>. Since then, we’ve been working hard to step it up a notch by adding enterprise-grade orchestration.\n\nT&hellip;","upvoteCount":66,"answerCount":0,"datePublished":"2020-05-14T12:46:43.410Z","author":{"@type":"Person","name":"chinmaypai","url":"https://discuss.coworker365.com/u/chinmaypai"}}}</script>
   </head>
   <body class="crawler ">
     <div class="erpnext-header">
-    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://coworker365.com" target="_blank">coworker365.com</a>
     <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
-    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
-    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://docs.coworker365.com/" target="_blank">Documentation</a>
+    <a href="https://coworker365.com/partners" target="_blank">Partners</a>
     <a href="https://frappe.school" target="_blank">Frappe School</a>
     <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
     <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
@@ -105,7 +105,7 @@ We’ve spent the last few months containerizing ERPNext and scaling it up to it
 
       <div class="topic-category">
         <div class='discourse-tags list-tags'>
-            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>
+            <a href='https://discuss.coworker365.com/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>
         </div>
       </div>
   </div>
@@ -114,14 +114,14 @@ We’ve spent the last few months containerizing ERPNext and scaling it up to it
 
     <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
       <meta itemprop='headline' content='Official ERPNext on Kubernetes'>
-      <link itemprop='url' href='https://discuss.frappe.io/t/official-erpnext-on-kubernetes/61607'>
+      <link itemprop='url' href='https://discuss.coworker365.com/t/official-erpnext-on-kubernetes/61607'>
       <meta itemprop='datePublished' content='2020-05-14T12:46:43Z'>
         <meta itemprop='articleSection' content='Announcements'>
       <meta itemprop='keywords' content='erpnext'>
       <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
         <meta itemprop='name' content='Frappe'>
           <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
-            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+            <meta itemprop='url' content='https://discuss.coworker365.com/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
           </div>
       </div>
 
@@ -129,13 +129,13 @@ We’ve spent the last few months containerizing ERPNext and scaling it up to it
           <div id='post_1'  class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/chinmaypai'><span itemprop='name'>chinmaypai</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/chinmaypai'><span itemprop='name'>chinmaypai</span></a>
                 
               </span>
 
-                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/official-erpnext-on-kubernetes/61607">
+                <link itemprop="mainEntityOfPage" href="https://discuss.coworker365.com/t/official-erpnext-on-kubernetes/61607">
 
-                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png">
+                <link itemprop="image" href="https://discuss.coworker365.com/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png">
 
               <span class="crawler-post-infos">
                   <time  datetime='2020-05-14T12:46:43Z' class='post-time'>
@@ -146,11 +146,11 @@ We’ve spent the last few months containerizing ERPNext and scaling it up to it
               </span>
             </div>
             <div class='post' itemprop='text'>
-              <p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png" data-download-href="https://discuss.frappe.io/uploads/default/3a7b70007b9f3f28cd49727519bad68462867803" title="1%20white"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803_2_690x332.png" alt="1%20white" data-base62-sha1="8lm9JdPESeaQhCejZChLCJvLjfZ" width="690" height="332" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803_2_690x332.png, https://discuss.frappe.io/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png 2x" data-dominant-color="F5F6F8"><div class="meta">
+              <p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png" data-download-href="https://discuss.coworker365.com/uploads/default/3a7b70007b9f3f28cd49727519bad68462867803" title="1%20white"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803_2_690x332.png" alt="1%20white" data-base62-sha1="8lm9JdPESeaQhCejZChLCJvLjfZ" width="690" height="332" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803_2_690x332.png, https://discuss.coworker365.com/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png 1.5x, https://discuss.coworker365.com/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png 2x" data-dominant-color="F5F6F8"><div class="meta">
 <svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">1%20white</span><span class="informations">877×423 13.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
 </div></a></div><br>
 Hello community,</p>
-<p>We’ve spent the last few months <a href="https://discuss.frappe.io/t/official-docker-updates-2020/59224">containerizing ERPNext</a> and scaling it up to its full potential. What we got out of it are the current <a href="https://github.com/frappe/frappe_docker">Docker Images</a> and <a href="https://github.com/frappe/frappe_docker/wiki/Docker-Swarm">Swarm support</a>. Since then, we’ve been working hard to step it up a notch by adding enterprise-grade orchestration.</p>
+<p>We’ve spent the last few months <a href="https://discuss.coworker365.com/t/official-docker-updates-2020/59224">containerizing ERPNext</a> and scaling it up to its full potential. What we got out of it are the current <a href="https://github.com/frappe/frappe_docker">Docker Images</a> and <a href="https://github.com/frappe/frappe_docker/wiki/Docker-Swarm">Swarm support</a>. Since then, we’ve been working hard to step it up a notch by adding enterprise-grade orchestration.</p>
 <p>Today, we’re excited to announce Kubernetes for ERPNext!</p>
 <p>With this, you will now be able to infinitely scale and orchestrate your ERPNext instance by setting up a Kubernetes cluster on a provider of your choice.</p>
 <p>This installation is an alternative to the bench setup and requires you to be familiar with Kubernetes and Helm. We’ve also replaced the bench and its core functionalities with Kubernetes Jobs.</p>
@@ -179,7 +179,7 @@ Hello community,</p>
           <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vrms'><span itemprop='name'>vrms</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/vrms'><span itemprop='name'>vrms</span></a>
                 
               </span>
 
@@ -199,7 +199,7 @@ Hello community,</p>
 <aside class="quote no-group" data-username="chinmaypai" data-post="1" data-topic="61607">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/chinmaypai/48/19944_2.png" class="avatar"> chinmaypai:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/chinmaypai/48/19944_2.png" class="avatar"> chinmaypai:</div>
 <blockquote>
 <p>As of now, we <strong>only offer the latest stable version</strong> of ERPNext. There are <strong>no plans to add support for the older versions, or the development branch.</strong></p>
 </blockquote>
@@ -217,7 +217,7 @@ Hello community,</p>
           <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/alkuhlani'><span itemprop='name'>alkuhlani</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/alkuhlani'><span itemprop='name'>alkuhlani</span></a>
                 
               </span>
 
@@ -245,7 +245,7 @@ Hello community,</p>
           <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Vinob_chander_Ramasw'><span itemprop='name'>Vinob_chander_Ramasw</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/Vinob_chander_Ramasw'><span itemprop='name'>Vinob_chander_Ramasw</span></a>
                 
               </span>
 
@@ -273,7 +273,7 @@ Hello community,</p>
           <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ajit.pendse'><span itemprop='name'>ajit.pendse</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/ajit.pendse'><span itemprop='name'>ajit.pendse</span></a>
                 
               </span>
 
@@ -305,7 +305,7 @@ Hello community,</p>
           <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nikhildx'><span itemprop='name'>nikhildx</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/nikhildx'><span itemprop='name'>nikhildx</span></a>
                 
               </span>
 
@@ -335,7 +335,7 @@ Hello community,</p>
           <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/chinmaypai'><span itemprop='name'>chinmaypai</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/chinmaypai'><span itemprop='name'>chinmaypai</span></a>
                 
               </span>
 
@@ -353,7 +353,7 @@ Hello community,</p>
               <aside class="quote no-group" data-username="vrms" data-post="3" data-topic="61607">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/vrms/48/8666_2.png" class="avatar"> vrms:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/vrms/48/8666_2.png" class="avatar"> vrms:</div>
 <blockquote>
 <p>I don’t quite understand this as the ability to spin up any version of ERPNext in an exact same way would be super useful. This feels a bit like turning around just one meter below the peak after a very long climb.</p>
 </blockquote>
@@ -371,7 +371,7 @@ Hello community,</p>
           <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/revant_one'><span itemprop='name'>revant_one</span></a>
                 
               </span>
 
@@ -417,7 +417,7 @@ Hello community,</p>
 </ul>
 <h3>
 <a name="why-make-it-official-vs-keeping-it-third-party-3" class="anchor" href="#why-make-it-official-vs-keeping-it-third-party-3"></a>Why make it official vs keeping it third party?</h3>
-<p>I had my set of docker images and helm charts being built in CI pipeline. Shared <a href="https://discuss.frappe.io/t/kubernetes-decoupled-frappe-erpnext-docker-images/54884">here</a> before.</p>
+<p>I had my set of docker images and helm charts being built in CI pipeline. Shared <a href="https://discuss.coworker365.com/t/kubernetes-decoupled-frappe-erpnext-docker-images/54884">here</a> before.</p>
 <p>Keeping it open but not on upstream is not beneficial for improvement of code and features.</p>
 <p>Many more community members will review official PRs / git repositories over any third party code repositories.</p>
 <p>Contribution to core will be used and improved by many people. Improvements are beneficial to everyone including me. Check the repositories, there are PRs and reviews by community contributors.</p>
@@ -434,7 +434,7 @@ Hello community,</p>
           <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vrms'><span itemprop='name'>vrms</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/vrms'><span itemprop='name'>vrms</span></a>
                 
               </span>
 
@@ -452,7 +452,7 @@ Hello community,</p>
               <aside class="quote no-group" data-username="chinmaypai" data-post="8" data-topic="61607">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/chinmaypai/48/19944_2.png" class="avatar"> chinmaypai:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/chinmaypai/48/19944_2.png" class="avatar"> chinmaypai:</div>
 <blockquote>
 <p>We’d eventually want to get there, but it’s not in our plans right now.</p>
 </blockquote>
@@ -470,7 +470,7 @@ Hello community,</p>
           <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kevinpthorne'><span itemprop='name'>kevinpthorne</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/kevinpthorne'><span itemprop='name'>kevinpthorne</span></a>
                 
               </span>
 
@@ -499,7 +499,7 @@ Hello community,</p>
           <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/revant_one'><span itemprop='name'>revant_one</span></a>
                 
               </span>
 
@@ -530,7 +530,7 @@ Hello community,</p>
           <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Obinna_Ukwueze'><span itemprop='name'>Obinna_Ukwueze</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/Obinna_Ukwueze'><span itemprop='name'>Obinna_Ukwueze</span></a>
                 
               </span>
 
@@ -558,7 +558,7 @@ Hello community,</p>
           <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/revant_one'><span itemprop='name'>revant_one</span></a>
                 
               </span>
 
@@ -587,7 +587,7 @@ Hello community,</p>
           <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mnoureldin'><span itemprop='name'>mnoureldin</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/mnoureldin'><span itemprop='name'>mnoureldin</span></a>
                 
               </span>
 
@@ -616,7 +616,7 @@ Hello community,</p>
           <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/revant_one'><span itemprop='name'>revant_one</span></a>
                 
               </span>
 
@@ -645,7 +645,7 @@ Hello community,</p>
           <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mergerlabs-services'><span itemprop='name'>mergerlabs-services</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/mergerlabs-services'><span itemprop='name'>mergerlabs-services</span></a>
                 
               </span>
 
@@ -663,7 +663,7 @@ Hello community,</p>
               <p>I’m struggling terribly to get this working, any help please…<br>
 Here is my post explaining my situation the best I can:</p>
 <ul>
-<li><a href="https://discuss.frappe.io/t/stuck-at-login-for-administrative-user-e-logo/98917" class="inline-onebox">Stuck at login for Administrative User (E Logo)</a></li>
+<li><a href="https://discuss.coworker365.com/t/stuck-at-login-for-administrative-user-e-logo/98917" class="inline-onebox">Stuck at login for Administrative User (E Logo)</a></li>
 </ul>
             </div>
 
@@ -677,7 +677,7 @@ Here is my post explaining my situation the best I can:</p>
           <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mtssantos18'><span itemprop='name'>mtssantos18</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/mtssantos18'><span itemprop='name'>mtssantos18</span></a>
                 
               </span>
 
@@ -708,7 +708,7 @@ Here is my post explaining my situation the best I can:</p>
           <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jakoguta'><span itemprop='name'>jakoguta</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/jakoguta'><span itemprop='name'>jakoguta</span></a>
                 
               </span>
 
@@ -776,7 +776,7 @@ Here is my post explaining my situation the best I can:</p>
 </footer>
 
     <div class="erpnext-footer">
-    <a href="https://frappe.io">Frappe</a>
+    <a href="https://coworker365.com">Frappe</a>
 </div>
     
   </body>

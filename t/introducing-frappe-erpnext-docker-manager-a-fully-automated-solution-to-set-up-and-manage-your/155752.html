@@ -8,53 +8,53 @@
 :jigsaw: What It Does
 This project automates the entire process of installing, configuring, and managing Frappe/ERPNext using Docker — with a single, int&amp;hellip;">
     <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
-<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
-<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<link rel="icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
 <meta name="theme-color" media="all" content="#fff">
 
 <meta name="color-scheme" content="light">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-<link rel="canonical" href="https://discuss.frappe.io/t/introducing-frappe-erpnext-docker-manager-a-fully-automated-solution-to-set-up-and-manage-your/155752" />
+<link rel="canonical" href="https://discuss.coworker365.com/t/introducing-frappe-erpnext-docker-manager-a-fully-automated-solution-to-set-up-and-manage-your/155752" />
 
-<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.coworker365.com/opensearch.xml" title="Frappe Forum Search">
 
-    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
 
-<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common"  />
 
-  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop"  />
 
 
 
-    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
-    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
-    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
-    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
-    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
-    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
-    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
-    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
-    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
-    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
-    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
-    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
-    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
-    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll_desktop"  />
 
-  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
-    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
 
     
     
-        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;🚀 Introducing Frappe/ERPNext Docker Manager – a fully automated solution to set up and manage your &#39;" href="https://discuss.frappe.io/t/introducing-frappe-erpnext-docker-manager-a-fully-automated-solution-to-set-up-and-manage-your/155752.rss" />
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;🚀 Introducing Frappe/ERPNext Docker Manager – a fully automated solution to set up and manage your &#39;" href="https://discuss.coworker365.com/t/introducing-frappe-erpnext-docker-manager-a-fully-automated-solution-to-set-up-and-manage-your/155752.rss" />
     <meta property="og:site_name" content="Frappe Forum" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
-<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
-<meta property="og:url" content="https://discuss.frappe.io/t/introducing-frappe-erpnext-docker-manager-a-fully-automated-solution-to-set-up-and-manage-your/155752" />
-<meta name="twitter:url" content="https://discuss.frappe.io/t/introducing-frappe-erpnext-docker-manager-a-fully-automated-solution-to-set-up-and-manage-your/155752" />
+<meta name="twitter:image" content="https://discuss.coworker365.com/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.coworker365.com/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.coworker365.com/t/introducing-frappe-erpnext-docker-manager-a-fully-automated-solution-to-set-up-and-manage-your/155752" />
+<meta name="twitter:url" content="https://discuss.coworker365.com/t/introducing-frappe-erpnext-docker-manager-a-fully-automated-solution-to-set-up-and-manage-your/155752" />
 <meta property="og:title" content="🚀 Introducing Frappe/ERPNext Docker Manager – a fully automated solution to set up and manage your " />
 <meta name="twitter:title" content="🚀 Introducing Frappe/ERPNext Docker Manager – a fully automated solution to set up and manage your " />
 <meta property="og:description" content="🔗 GitHub: GitHub - devinvento/frappe-erpnext-docker-manager   🧩 What It Does This project automates the entire process of installing, configuring, and managing Frappe/ERPNext using Docker — with a single, interactive script.  No more manual setup or long commands — just run it, and your stack is ready!  ⚙ Key Features  🐋 Fully Automated Setup: Installs Docker, Bench, and dependencies automatically. 💡 Simple Commands: Start, stop, restart, or update containers easily. ..." />
@@ -74,14 +74,14 @@ This project automates the entire process of installing, configuring, and managi
 <meta property="og:ignore_canonical" content="true" />
 
 
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"🚀 Introducing Frappe/ERPNext Docker Manager – a fully automated solution to set up and manage your ","mainEntity":{"@type":"Question","name":"🚀 Introducing Frappe/ERPNext Docker Manager – a fully automated solution to set up and manage your ","text":":link: GitHub: <a href=\"https://github.com/devinvento/frappe-erpnext-docker-manager\" class=\"inline-onebox\" rel=\"noopener nofollow ugc\">GitHub - devinvento/frappe-erpnext-docker-manager<\/a>\n\n<a name=\"p-484392-what-it-does-1\" class=\"anchor\" href=\"#p-484392-what-it-does-1\"><\/a>:jigsaw: What It Does\n\nThis project automates the entire process of installing, configuring, and managing Frappe/ERPNext using Docker — with a single, interactive script.\n\nNo more manual setup or long commands — just run it, and your &hellip;","upvoteCount":2,"answerCount":0,"datePublished":"2025-10-19T02:22:14.819Z","author":{"@type":"Person","name":"devinvento","url":"https://discuss.frappe.io/u/devinvento"}}}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"🚀 Introducing Frappe/ERPNext Docker Manager – a fully automated solution to set up and manage your ","mainEntity":{"@type":"Question","name":"🚀 Introducing Frappe/ERPNext Docker Manager – a fully automated solution to set up and manage your ","text":":link: GitHub: <a href=\"https://github.com/devinvento/frappe-erpnext-docker-manager\" class=\"inline-onebox\" rel=\"noopener nofollow ugc\">GitHub - devinvento/frappe-erpnext-docker-manager<\/a>\n\n<a name=\"p-484392-what-it-does-1\" class=\"anchor\" href=\"#p-484392-what-it-does-1\"><\/a>:jigsaw: What It Does\n\nThis project automates the entire process of installing, configuring, and managing Frappe/ERPNext using Docker — with a single, interactive script.\n\nNo more manual setup or long commands — just run it, and your &hellip;","upvoteCount":2,"answerCount":0,"datePublished":"2025-10-19T02:22:14.819Z","author":{"@type":"Person","name":"devinvento","url":"https://discuss.coworker365.com/u/devinvento"}}}</script>
   </head>
   <body class="crawler ">
     <div class="erpnext-header">
-    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://coworker365.com" target="_blank">coworker365.com</a>
     <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
-    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
-    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://docs.coworker365.com/" target="_blank">Documentation</a>
+    <a href="https://coworker365.com/partners" target="_blank">Partners</a>
     <a href="https://frappe.school" target="_blank">Frappe School</a>
     <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
     <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
@@ -120,9 +120,9 @@ This project automates the entire process of installing, configuring, and managi
 
       <div class="topic-category">
         <div class='discourse-tags list-tags'>
-            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
-            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
-            <a href='https://discuss.frappe.io/tag/docker' class='discourse-tag' rel="tag">docker</a>
+            <a href='https://discuss.coworker365.com/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.coworker365.com/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
+            <a href='https://discuss.coworker365.com/tag/docker' class='discourse-tag' rel="tag">docker</a>
         </div>
       </div>
   </div>
@@ -131,14 +131,14 @@ This project automates the entire process of installing, configuring, and managi
 
     <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
       <meta itemprop='headline' content='🚀 Introducing Frappe/ERPNext Docker Manager – a fully automated solution to set up and manage your '>
-      <link itemprop='url' href='https://discuss.frappe.io/t/introducing-frappe-erpnext-docker-manager-a-fully-automated-solution-to-set-up-and-manage-your/155752'>
+      <link itemprop='url' href='https://discuss.coworker365.com/t/introducing-frappe-erpnext-docker-manager-a-fully-automated-solution-to-set-up-and-manage-your/155752'>
       <meta itemprop='datePublished' content='2025-10-19T02:22:14Z'>
         <meta itemprop='articleSection' content='User Forum'>
       <meta itemprop='keywords' content='erpnext, frappe, docker'>
       <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
         <meta itemprop='name' content='Frappe'>
           <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
-            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+            <meta itemprop='url' content='https://discuss.coworker365.com/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
           </div>
       </div>
 
@@ -146,11 +146,11 @@ This project automates the entire process of installing, configuring, and managi
           <div id='post_1'  class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/devinvento'><span itemprop='name'>devinvento</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/devinvento'><span itemprop='name'>devinvento</span></a>
                 
               </span>
 
-                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/introducing-frappe-erpnext-docker-manager-a-fully-automated-solution-to-set-up-and-manage-your/155752">
+                <link itemprop="mainEntityOfPage" href="https://discuss.coworker365.com/t/introducing-frappe-erpnext-docker-manager-a-fully-automated-solution-to-set-up-and-manage-your/155752">
 
 
               <span class="crawler-post-infos">
@@ -162,27 +162,27 @@ This project automates the entire process of installing, configuring, and managi
               </span>
             </div>
             <div class='post' itemprop='text'>
-              <p><img src="https://discuss.frappe.io/images/emoji/twitter/link.png?v=12" title=":link:" class="emoji" alt=":link:" loading="lazy" width="20" height="20"> <strong>GitHub:</strong> <a href="https://github.com/devinvento/frappe-erpnext-docker-manager" class="inline-onebox" rel="noopener nofollow ugc">GitHub - devinvento/frappe-erpnext-docker-manager</a></p>
+              <p><img src="https://discuss.coworker365.com/images/emoji/twitter/link.png?v=12" title=":link:" class="emoji" alt=":link:" loading="lazy" width="20" height="20"> <strong>GitHub:</strong> <a href="https://github.com/devinvento/frappe-erpnext-docker-manager" class="inline-onebox" rel="noopener nofollow ugc">GitHub - devinvento/frappe-erpnext-docker-manager</a></p>
 <hr>
-<h3><a name="p-484392-what-it-does-1" class="anchor" href="#p-484392-what-it-does-1"></a><img src="https://discuss.frappe.io/images/emoji/twitter/jigsaw.png?v=12" title=":jigsaw:" class="emoji" alt=":jigsaw:" loading="lazy" width="20" height="20"> What It Does</h3>
+<h3><a name="p-484392-what-it-does-1" class="anchor" href="#p-484392-what-it-does-1"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/jigsaw.png?v=12" title=":jigsaw:" class="emoji" alt=":jigsaw:" loading="lazy" width="20" height="20"> What It Does</h3>
 <p>This project automates the entire process of installing, configuring, and managing <strong>Frappe/ERPNext using Docker</strong> — with a single, interactive script.<br>
 No more manual setup or long commands — just run it, and your stack is ready!</p>
-<h3><a name="p-484392-key-features-2" class="anchor" href="#p-484392-key-features-2"></a><img src="https://discuss.frappe.io/images/emoji/twitter/gear.png?v=12" title=":gear:" class="emoji" alt=":gear:" loading="lazy" width="20" height="20"> Key Features</h3>
+<h3><a name="p-484392-key-features-2" class="anchor" href="#p-484392-key-features-2"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/gear.png?v=12" title=":gear:" class="emoji" alt=":gear:" loading="lazy" width="20" height="20"> Key Features</h3>
 <ul>
-<li><img src="https://discuss.frappe.io/images/emoji/twitter/whale.png?v=12" title=":whale:" class="emoji" alt=":whale:" loading="lazy" width="20" height="20"> <strong>Fully Automated Setup:</strong> Installs Docker, Bench, and dependencies automatically.</li>
-<li><img src="https://discuss.frappe.io/images/emoji/twitter/bulb.png?v=12" title=":bulb:" class="emoji" alt=":bulb:" loading="lazy" width="20" height="20"> <strong>Simple Commands:</strong> Start, stop, restart, or update containers easily.</li>
-<li><img src="https://discuss.frappe.io/images/emoji/twitter/building_construction.png?v=12" title=":building_construction:" class="emoji" alt=":building_construction:" loading="lazy" width="20" height="20"> <strong>Multi-Site &amp; App Support:</strong> Create multiple sites and install custom apps in seconds.</li>
-<li><img src="https://discuss.frappe.io/images/emoji/twitter/closed_lock_with_key.png?v=12" title=":closed_lock_with_key:" class="emoji" alt=":closed_lock_with_key:" loading="lazy" width="20" height="20"> <strong>Environment Isolation:</strong> Keeps your ERPNext instance stable and clean.</li>
-<li><img src="https://discuss.frappe.io/images/emoji/twitter/toolbox.png?v=12" title=":toolbox:" class="emoji" alt=":toolbox:" loading="lazy" width="20" height="20"> <strong>Backup &amp; Restore Tools:</strong> Easy data safety options included.</li>
+<li><img src="https://discuss.coworker365.com/images/emoji/twitter/whale.png?v=12" title=":whale:" class="emoji" alt=":whale:" loading="lazy" width="20" height="20"> <strong>Fully Automated Setup:</strong> Installs Docker, Bench, and dependencies automatically.</li>
+<li><img src="https://discuss.coworker365.com/images/emoji/twitter/bulb.png?v=12" title=":bulb:" class="emoji" alt=":bulb:" loading="lazy" width="20" height="20"> <strong>Simple Commands:</strong> Start, stop, restart, or update containers easily.</li>
+<li><img src="https://discuss.coworker365.com/images/emoji/twitter/building_construction.png?v=12" title=":building_construction:" class="emoji" alt=":building_construction:" loading="lazy" width="20" height="20"> <strong>Multi-Site &amp; App Support:</strong> Create multiple sites and install custom apps in seconds.</li>
+<li><img src="https://discuss.coworker365.com/images/emoji/twitter/closed_lock_with_key.png?v=12" title=":closed_lock_with_key:" class="emoji" alt=":closed_lock_with_key:" loading="lazy" width="20" height="20"> <strong>Environment Isolation:</strong> Keeps your ERPNext instance stable and clean.</li>
+<li><img src="https://discuss.coworker365.com/images/emoji/twitter/toolbox.png?v=12" title=":toolbox:" class="emoji" alt=":toolbox:" loading="lazy" width="20" height="20"> <strong>Backup &amp; Restore Tools:</strong> Easy data safety options included.</li>
 </ul>
-<h3><a name="p-484392-perfect-for-3" class="anchor" href="#p-484392-perfect-for-3"></a><img src="https://discuss.frappe.io/images/emoji/twitter/computer.png?v=12" title=":computer:" class="emoji" alt=":computer:" loading="lazy" width="20" height="20"> Perfect For</h3>
+<h3><a name="p-484392-perfect-for-3" class="anchor" href="#p-484392-perfect-for-3"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/computer.png?v=12" title=":computer:" class="emoji" alt=":computer:" loading="lazy" width="20" height="20"> Perfect For</h3>
 <p>Developers, DevOps engineers, and ERPNext administrators who want:</p>
 <ul>
 <li>Faster deployment on any server (Ubuntu-based)</li>
 <li>Hassle-free updates and maintenance</li>
 <li>A reliable, repeatable installation experience</li>
 </ul>
-<h3><a name="p-484392-open-source-actively-developed-4" class="anchor" href="#p-484392-open-source-actively-developed-4"></a><img src="https://discuss.frappe.io/images/emoji/twitter/earth_africa.png?v=12" title=":earth_africa:" class="emoji" alt=":earth_africa:" loading="lazy" width="20" height="20"> Open Source &amp; Actively Developed</h3>
+<h3><a name="p-484392-open-source-actively-developed-4" class="anchor" href="#p-484392-open-source-actively-developed-4"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/earth_africa.png?v=12" title=":earth_africa:" class="emoji" alt=":earth_africa:" loading="lazy" width="20" height="20"> Open Source &amp; Actively Developed</h3>
 <p>I’m continuously improving the project — feedback, issues, and contributions are very welcome!</p>
             </div>
 
@@ -236,7 +236,7 @@ No more manual setup or long commands — just run it, and your stack is ready!<
 </footer>
 
     <div class="erpnext-footer">
-    <a href="https://frappe.io">Frappe</a>
+    <a href="https://coworker365.com">Frappe</a>
 </div>
     
   </body>

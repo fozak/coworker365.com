@@ -6,53 +6,53 @@
     <meta name="description" content="Hi everyone, Am trying to print page number in all pages with header. How to do it? 
 Thanks">
     <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
-<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
-<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<link rel="icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
 <meta name="theme-color" media="all" content="#fff">
 
 <meta name="color-scheme" content="light">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-<link rel="canonical" href="https://discuss.frappe.io/t/print-page-number-in-custom-print-format/72803" />
+<link rel="canonical" href="https://discuss.coworker365.com/t/print-page-number-in-custom-print-format/72803" />
 
-<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.coworker365.com/opensearch.xml" title="Frappe Forum Search">
 
-    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
 
-<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common"  />
 
-  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop"  />
 
 
 
-    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
-    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
-    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
-    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
-    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
-    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
-    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
-    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
-    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
-    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
-    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
-    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
-    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
-    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll_desktop"  />
 
-  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
-    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
 
     
     
-        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Print Page number in custom print format&#39;" href="https://discuss.frappe.io/t/print-page-number-in-custom-print-format/72803.rss" />
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Print Page number in custom print format&#39;" href="https://discuss.coworker365.com/t/print-page-number-in-custom-print-format/72803.rss" />
     <meta property="og:site_name" content="Frappe Forum" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
-<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
-<meta property="og:url" content="https://discuss.frappe.io/t/print-page-number-in-custom-print-format/72803" />
-<meta name="twitter:url" content="https://discuss.frappe.io/t/print-page-number-in-custom-print-format/72803" />
+<meta name="twitter:image" content="https://discuss.coworker365.com/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.coworker365.com/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.coworker365.com/t/print-page-number-in-custom-print-format/72803" />
+<meta name="twitter:url" content="https://discuss.coworker365.com/t/print-page-number-in-custom-print-format/72803" />
 <meta property="og:title" content="Print Page number in custom print format" />
 <meta name="twitter:title" content="Print Page number in custom print format" />
 <meta property="og:description" content="Hi everyone, Am trying to print page number in all pages with header. How to do it?  Thanks" />
@@ -66,14 +66,14 @@ Thanks">
 <meta property="og:ignore_canonical" content="true" />
 
 
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Print Page number in custom print format","mainEntity":{"@type":"Question","name":"Print Page number in custom print format","text":"Hi everyone, Am trying to print page number in all pages with header. How to do it?\n\nThanks","upvoteCount":0,"answerCount":0,"datePublished":"2021-03-19T08:42:07.383Z","author":{"@type":"Person","name":"arokia","url":"https://discuss.frappe.io/u/arokia"}}}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Print Page number in custom print format","mainEntity":{"@type":"Question","name":"Print Page number in custom print format","text":"Hi everyone, Am trying to print page number in all pages with header. How to do it?\n\nThanks","upvoteCount":0,"answerCount":0,"datePublished":"2021-03-19T08:42:07.383Z","author":{"@type":"Person","name":"arokia","url":"https://discuss.coworker365.com/u/arokia"}}}</script>
   </head>
   <body class="crawler ">
     <div class="erpnext-header">
-    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://coworker365.com" target="_blank">coworker365.com</a>
     <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
-    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
-    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://docs.coworker365.com/" target="_blank">Documentation</a>
+    <a href="https://coworker365.com/partners" target="_blank">Partners</a>
     <a href="https://frappe.school" target="_blank">Frappe School</a>
     <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
     <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
@@ -112,7 +112,7 @@ Thanks">
 
       <div class="topic-category">
         <div class='discourse-tags list-tags'>
-            <a href='https://discuss.frappe.io/tag/developer' class='discourse-tag' rel="tag">developer</a>
+            <a href='https://discuss.coworker365.com/tag/developer' class='discourse-tag' rel="tag">developer</a>
         </div>
       </div>
   </div>
@@ -121,14 +121,14 @@ Thanks">
 
     <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
       <meta itemprop='headline' content='Print Page number in custom print format'>
-      <link itemprop='url' href='https://discuss.frappe.io/t/print-page-number-in-custom-print-format/72803'>
+      <link itemprop='url' href='https://discuss.coworker365.com/t/print-page-number-in-custom-print-format/72803'>
       <meta itemprop='datePublished' content='2021-03-19T08:42:07Z'>
         <meta itemprop='articleSection' content='Customize ERPNext'>
       <meta itemprop='keywords' content='developer'>
       <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
         <meta itemprop='name' content='Frappe'>
           <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
-            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+            <meta itemprop='url' content='https://discuss.coworker365.com/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
           </div>
       </div>
 
@@ -136,11 +136,11 @@ Thanks">
           <div id='post_1'  class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/arokia'><span itemprop='name'>arokia</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/arokia'><span itemprop='name'>arokia</span></a>
                 
               </span>
 
-                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/print-page-number-in-custom-print-format/72803">
+                <link itemprop="mainEntityOfPage" href="https://discuss.coworker365.com/t/print-page-number-in-custom-print-format/72803">
 
 
               <span class="crawler-post-infos">
@@ -166,7 +166,7 @@ Thanks">
           <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kevingee'><span itemprop='name'>kevingee</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/kevingee'><span itemprop='name'>kevingee</span></a>
                 
               </span>
 
@@ -184,8 +184,8 @@ Thanks">
               <p>Check this thread</p><aside class="quote" data-post="1" data-topic="18962">
   <div class="title">
     <div class="quote-controls"></div>
-    <img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/varna/48/5135_2.png" class="avatar">
-    <a href="https://discuss.frappe.io/t/can-we-print-header-on-all-pages-with-page-number-in-print-format/18962">Can we print header on all pages with page number in print format</a> <a class="badge-category__wrapper " href="/c/erpnext/6"><span data-category-id="6" style="--category-badge-color: #BF1E2E; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category "><span class="badge-category__name">ERPNext</span></span></a>
+    <img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/varna/48/5135_2.png" class="avatar">
+    <a href="https://discuss.coworker365.com/t/can-we-print-header-on-all-pages-with-page-number-in-print-format/18962">Can we print header on all pages with page number in print format</a> <a class="badge-category__wrapper " href="/c/erpnext/6"><span data-category-id="6" style="--category-badge-color: #BF1E2E; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category "><span class="badge-category__name">ERPNext</span></span></a>
   </div>
   <blockquote>
     I want to print header on all pages in my new custom print format with page numbers. 
@@ -206,7 +206,7 @@ So is it possible ?
           <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/arokia'><span itemprop='name'>arokia</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/arokia'><span itemprop='name'>arokia</span></a>
                 
               </span>
 
@@ -234,7 +234,7 @@ So is it possible ?
           <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/moe01325'><span itemprop='name'>moe01325</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/moe01325'><span itemprop='name'>moe01325</span></a>
                 
               </span>
 
@@ -267,7 +267,7 @@ we have this in our print formats:</p>
           <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/arokia'><span itemprop='name'>arokia</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/arokia'><span itemprop='name'>arokia</span></a>
                 
               </span>
 
@@ -285,7 +285,7 @@ we have this in our print formats:</p>
               <aside class="quote no-group quote-modified" data-username="moe01325" data-post="4" data-topic="72803">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/moe01325/48/36583_2.png" class="avatar"> moe01325:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/moe01325/48/36583_2.png" class="avatar"> moe01325:</div>
 <blockquote>
 <div> <p><strong>{{ _("Page {0} of {1}").format('<span></span>', '<span></span>') }}</strong> </p>
 </div></blockquote>
@@ -303,7 +303,7 @@ we have this in our print formats:</p>
           <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/moe01325'><span itemprop='name'>moe01325</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/moe01325'><span itemprop='name'>moe01325</span></a>
                 
               </span>
 
@@ -331,7 +331,7 @@ we have this in our print formats:</p>
           <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/arokia'><span itemprop='name'>arokia</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/arokia'><span itemprop='name'>arokia</span></a>
                 
               </span>
 
@@ -359,12 +359,12 @@ we have this in our print formats:</p>
           <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/moe01325'><span itemprop='name'>moe01325</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/moe01325'><span itemprop='name'>moe01325</span></a>
                 
               </span>
 
 
-                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/6/d/6d3c511440b6e505268c4f8fce3772c47e224c7a.png">
+                <link itemprop="image" href="https://discuss.coworker365.com/uploads/default/original/3X/6/d/6d3c511440b6e505268c4f8fce3772c47e224c7a.png">
 
               <span class="crawler-post-infos">
                   <time itemprop='datePublished' datetime='2021-04-21T13:24:05Z' class='post-time'>
@@ -377,7 +377,7 @@ we have this in our print formats:</p>
             <div class='post' itemprop='text'>
               <p>It may help and lead to easier support you, if you invest a bit more time in providing explanations and descriptions of you problem.</p>
 <p>In the PFD view, I get the following result when using the code provided earlier:<br>
-<img src="https://discuss.frappe.io/uploads/default/original/3X/6/d/6d3c511440b6e505268c4f8fce3772c47e224c7a.png" alt="image" data-base62-sha1="fAlgSvId26T0TZCCW2yYAh0a67w" width="160" height="74"></p>
+<img src="https://discuss.coworker365.com/uploads/default/original/3X/6/d/6d3c511440b6e505268c4f8fce3772c47e224c7a.png" alt="image" data-base62-sha1="fAlgSvId26T0TZCCW2yYAh0a67w" width="160" height="74"></p>
 <p>In the preview I dont get the actual numbers. I dont think that this is actually expected in the preview.</p>
             </div>
 
@@ -391,7 +391,7 @@ we have this in our print formats:</p>
           <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/arokia'><span itemprop='name'>arokia</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/arokia'><span itemprop='name'>arokia</span></a>
                 
               </span>
 
@@ -420,7 +420,7 @@ we have this in our print formats:</p>
           <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Sarah'><span itemprop='name'>Sarah</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/Sarah'><span itemprop='name'>Sarah</span></a>
                 
               </span>
 
@@ -448,7 +448,7 @@ we have this in our print formats:</p>
           <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/neocode'><span itemprop='name'>neocode</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/neocode'><span itemprop='name'>neocode</span></a>
                 
               </span>
 
@@ -481,7 +481,7 @@ we have this in our print formats:</p>
           <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Sarah'><span itemprop='name'>Sarah</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/Sarah'><span itemprop='name'>Sarah</span></a>
                 
               </span>
 
@@ -514,7 +514,7 @@ this issue is still pending from 2 years for me and 5+ years for others</p>
           <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SUDHAN'><span itemprop='name'>SUDHAN</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/SUDHAN'><span itemprop='name'>SUDHAN</span></a>
                 
               </span>
 
@@ -566,7 +566,7 @@ this issue is still pending from 2 years for me and 5+ years for others</p>
           <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/neocode'><span itemprop='name'>neocode</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/neocode'><span itemprop='name'>neocode</span></a>
                 
               </span>
 
@@ -634,7 +634,7 @@ this issue is still pending from 2 years for me and 5+ years for others</p>
 </footer>
 
     <div class="erpnext-footer">
-    <a href="https://frappe.io">Frappe</a>
+    <a href="https://coworker365.com">Frappe</a>
 </div>
     
   </body>
