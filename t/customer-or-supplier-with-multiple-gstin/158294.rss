@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Customer or Supplier with multiple GSTIN</title>
-    <link>https://discuss.frappe.io/t/customer-or-supplier-with-multiple-gstin/158294</link>
+    <link>https://discuss.coworker365.com/t/customer-or-supplier-with-multiple-gstin/158294</link>
     <description>if the supplier or client having multiple GSTIN with respect to warehouse or branch , then what is the standard rule to differentiate them as multiple customer/supplier  ,  or a single person with multiple address having different GSTIN.</description>
     
     <lastBuildDate>Wed, 24 Dec 2025 12:16:54 +0000</lastBuildDate>
     <category>India Compliance</category>
-    <atom:link href="https://discuss.frappe.io/t/customer-or-supplier-with-multiple-gstin/158294.rss" rel="self" type="application/rss+xml" />
+    <atom:link href="https://discuss.coworker365.com/t/customer-or-supplier-with-multiple-gstin/158294.rss" rel="self" type="application/rss+xml" />
       <item>
         <title>Customer or Supplier with multiple GSTIN</title>
         <dc:creator><![CDATA[akhilkp]]></dc:creator>
         <description><![CDATA[
             <p>Yes, I am using the India compliance app.In my scenario the some customer and supplier have this issue.<br>
 I am ERPNext developer. So my client is migrating to ERPNext. I need to address the issue in data import. Client couldn’t give me a proper feed back. They doesn’t know what will be the effect on the GSTR -1 and GSTR-3B in both scenarios.</p>
-          <p><a href="https://discuss.frappe.io/t/customer-or-supplier-with-multiple-gstin/158294/4">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/customer-or-supplier-with-multiple-gstin/158294/4">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/customer-or-supplier-with-multiple-gstin/158294/4</link>
+        <link>https://discuss.coworker365.com/t/customer-or-supplier-with-multiple-gstin/158294/4</link>
         <pubDate>Wed, 24 Dec 2025 12:10:44 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-158294-4</guid>
-        <source url="https://discuss.frappe.io/t/customer-or-supplier-with-multiple-gstin/158294.rss">Customer or Supplier with multiple GSTIN</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-158294-4</guid>
+        <source url="https://discuss.coworker365.com/t/customer-or-supplier-with-multiple-gstin/158294.rss">Customer or Supplier with multiple GSTIN</source>
       </item>
       <item>
         <title>Customer or Supplier with multiple GSTIN</title>
@@ -29,18 +29,18 @@ I am ERPNext developer. So my client is migrating to ERPNext. I need to address 
 <p>This can depend on how you transact with the supplier.</p>
 <ul>
 <li>
-<p>Workflow suggested by <a class="mention" href="https://discuss.frappe.io/u/nikkothari22">@nikkothari22</a> is good where you make advance payments or payments along with the purchase. Most of the transactions that require online payments for the services. This is how we as well set things up.</p>
+<p>Workflow suggested by <a class="mention" href="https://discuss.coworker365.com/u/nikkothari22">@nikkothari22</a> is good where you make advance payments or payments along with the purchase. Most of the transactions that require online payments for the services. This is how we as well set things up.</p>
 </li>
 <li>
 <p>In some cases, different GSTIN could mean a different billing dept. This means you may need to maintain separate ledgers, and in such cases it could be still useful to have different suppliers.</p>
 </li>
 </ul>
-          <p><a href="https://discuss.frappe.io/t/customer-or-supplier-with-multiple-gstin/158294/3">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/customer-or-supplier-with-multiple-gstin/158294/3">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/customer-or-supplier-with-multiple-gstin/158294/3</link>
+        <link>https://discuss.coworker365.com/t/customer-or-supplier-with-multiple-gstin/158294/3</link>
         <pubDate>Wed, 24 Dec 2025 11:04:22 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-158294-3</guid>
-        <source url="https://discuss.frappe.io/t/customer-or-supplier-with-multiple-gstin/158294.rss">Customer or Supplier with multiple GSTIN</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-158294-3</guid>
+        <source url="https://discuss.coworker365.com/t/customer-or-supplier-with-multiple-gstin/158294.rss">Customer or Supplier with multiple GSTIN</source>
       </item>
       <item>
         <title>Customer or Supplier with multiple GSTIN</title>
@@ -48,24 +48,24 @@ I am ERPNext developer. So my client is migrating to ERPNext. I need to address 
         <description><![CDATA[
             <p>Earlier I used to create multiple suppliers - for example - Indigo Airlines (Maharashtra), Indigo Airlines (Telangana) and so on. This created issues when reconciling payments to invoices since it was split against multiple suppliers for the same payment.</p>
 <p>A better way is to add addresses to the same supplier and customer. Assuming that you’re using the India Compliance app, the address popup also has a field to enter a GST. Then, when creating invoices, select the correct billing address based on the state. This is much easier to manage and I wish I had started off like this.</p>
-          <p><a href="https://discuss.frappe.io/t/customer-or-supplier-with-multiple-gstin/158294/2">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/customer-or-supplier-with-multiple-gstin/158294/2">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/customer-or-supplier-with-multiple-gstin/158294/2</link>
+        <link>https://discuss.coworker365.com/t/customer-or-supplier-with-multiple-gstin/158294/2</link>
         <pubDate>Wed, 24 Dec 2025 10:43:58 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-158294-2</guid>
-        <source url="https://discuss.frappe.io/t/customer-or-supplier-with-multiple-gstin/158294.rss">Customer or Supplier with multiple GSTIN</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-158294-2</guid>
+        <source url="https://discuss.coworker365.com/t/customer-or-supplier-with-multiple-gstin/158294.rss">Customer or Supplier with multiple GSTIN</source>
       </item>
       <item>
         <title>Customer or Supplier with multiple GSTIN</title>
         <dc:creator><![CDATA[akhilkp]]></dc:creator>
         <description><![CDATA[
             <p>if the supplier or client having multiple GSTIN with respect to warehouse or branch , then what is the standard rule to differentiate them as multiple customer/supplier  ,  or a single person with multiple address having different GSTIN.</p>
-          <p><a href="https://discuss.frappe.io/t/customer-or-supplier-with-multiple-gstin/158294/1">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/customer-or-supplier-with-multiple-gstin/158294/1">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/customer-or-supplier-with-multiple-gstin/158294/1</link>
+        <link>https://discuss.coworker365.com/t/customer-or-supplier-with-multiple-gstin/158294/1</link>
         <pubDate>Wed, 24 Dec 2025 10:20:28 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-158294-1</guid>
-        <source url="https://discuss.frappe.io/t/customer-or-supplier-with-multiple-gstin/158294.rss">Customer or Supplier with multiple GSTIN</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-158294-1</guid>
+        <source url="https://discuss.coworker365.com/t/customer-or-supplier-with-multiple-gstin/158294.rss">Customer or Supplier with multiple GSTIN</source>
       </item>
   </channel>
 </rss>

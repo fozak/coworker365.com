@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Help on Sales Order for Services Items</title>
-    <link>https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501</link>
+    <link>https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501</link>
     <description>Hello Guys,
 Context:
 We have a software development company and do not have stock. We have start using ERPNext.
@@ -14,7 +14,7 @@ The Sale Order have an &quot;Overdue&quot; status, so i read that i have to crea
 
 My Atempts to solve it:
 First i saw this topic
-https://discuss.frappe.io/t/when-a-sales-invoice-is-paid-linked-sales-order-does-not-change-status-to-completed/62562
+https://discuss.coworker365.com/t/when-a-sales-invoice-is-paid-linked-sales-order-does-not-change-status-to-completed/62562
 But it didn&#39;t help, because the first one was what i made, and the second one has the same problem.
 Second i saw this article:
 https://docs.erpnext.com/docs/v13/user/manual/en/selling/articles/erpnext-for-services-organization
@@ -25,14 +25,14 @@ Thanks</description>
     
     <lastBuildDate>Wed, 24 Dec 2025 14:52:22 +0000</lastBuildDate>
     <category>Stock/Inventory</category>
-    <atom:link href="https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501.rss" rel="self" type="application/rss+xml" />
+    <atom:link href="https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501.rss" rel="self" type="application/rss+xml" />
       <item>
         <title>Help on Sales Order for Services Items</title>
         <dc:creator><![CDATA[volkswagner]]></dc:creator>
         <description><![CDATA[
             <p>I operate mostly as a service company but also include tangible goods. I don’t maintain inventory (considered mostly cash basis business vs accrual).</p>
 <p>I have the desire to use sales orders when I know the customer won’t pay within the calendar year (tax period when the work was performed).</p>
-<p>This is not tax advice nor a guarantee of a bug-free process <img src="https://discuss.frappe.io/images/emoji/twitter/wink.png?v=14" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20"></p>
+<p>This is not tax advice nor a guarantee of a bug-free process <img src="https://discuss.coworker365.com/images/emoji/twitter/wink.png?v=14" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20"></p>
 <p>Use at your own risk:</p>
 <p>With the help of ChatGPT I create a server script and client script that adds a button to submitted sales orders that will allow me to set the delivery date and mark as 100% delivered. This should not have negative impact in my system as ALL of my items have “maintain stock = no”. I also default sales orders and sales invoices “update stock = no” (again, I don’t maintain any inventory).</p>
 <p>Perhaps others may be in a similar situation and find these scripts useful. I was tired of going into the databse backend and manually changing these values.</p>
@@ -108,13 +108,13 @@ except Exception as e:
     frappe.response["message"] = {"error": str(e)}
 
 </code></pre>
-<p>EDIT: This does not update <code>tabSales Order Item</code> table with the delivery date for the items, not sure I care <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=14" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
-          <p><a href="https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501/11">Read full topic</a></p>
+<p>EDIT: This does not update <code>tabSales Order Item</code> table with the delivery date for the items, not sure I care <img src="https://discuss.coworker365.com/images/emoji/twitter/slight_smile.png?v=14" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501/11">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501/11</link>
+        <link>https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501/11</link>
         <pubDate>Wed, 24 Dec 2025 14:46:09 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-84501-11</guid>
-        <source url="https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501.rss">Help on Sales Order for Services Items</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-84501-11</guid>
+        <source url="https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501.rss">Help on Sales Order for Services Items</source>
       </item>
       <item>
         <title>Help on Sales Order for Services Items</title>
@@ -123,12 +123,12 @@ except Exception as e:
             <p>The problem is that it asks me to associate a warehouse and an account. But we don’t have warehouses, and we don’t have inventory accounting accounts.</p>
 <p>For now the temporary solution was to create a warehouse and an account.<br>
 From what I see, making a delivery note does not generate an accounting entry.</p>
-          <p><a href="https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501/10">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501/10">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501/10</link>
+        <link>https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501/10</link>
         <pubDate>Wed, 12 Jan 2022 18:57:26 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-84501-10</guid>
-        <source url="https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501.rss">Help on Sales Order for Services Items</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-84501-10</guid>
+        <source url="https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501.rss">Help on Sales Order for Services Items</source>
       </item>
       <item>
         <title>Help on Sales Order for Services Items</title>
@@ -137,19 +137,19 @@ From what I see, making a delivery note does not generate an accounting entry.</
             <aside class="quote no-group" data-username="marduh" data-post="1" data-topic="84501">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/letter_avatar_proxy/v4/letter/m/8baadc/48.png" class="avatar"> marduh:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/letter_avatar_proxy/v4/letter/m/8baadc/48.png" class="avatar"> marduh:</div>
 <blockquote>
 <p>But the problem is that the Delivery Note ask me to move stock (wich i don’t have).</p>
 </blockquote>
 </aside>
 <p>Can you be more specific about what’s happening here? Delivery Notes work for non-stock items too, so if you’re being asked to move stock something’s off.</p>
 <p>There are a few different ways to bypass delivery notes, but it looks like there’s a problem with how your sales orders are getting set up that is probably worth fixing first.</p>
-          <p><a href="https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501/9">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501/9">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501/9</link>
+        <link>https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501/9</link>
         <pubDate>Mon, 10 Jan 2022 19:28:58 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-84501-9</guid>
-        <source url="https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501.rss">Help on Sales Order for Services Items</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-84501-9</guid>
+        <source url="https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501.rss">Help on Sales Order for Services Items</source>
       </item>
       <item>
         <title>Help on Sales Order for Services Items</title>
@@ -157,54 +157,54 @@ From what I see, making a delivery note does not generate an accounting entry.</
         <description><![CDATA[
             <p>Simply in OUR experience, the example you mention does not work.</p>
 <p>With the OV we can manage better if the payment comes before the invoice, leave the quotation in the right state (converted), even if the invoice takes 15 days to be done, it allows us to associate it to the project, fundamental in the software industry, among other things.</p>
-          <p><a href="https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501/8">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501/8">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501/8</link>
+        <link>https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501/8</link>
         <pubDate>Mon, 10 Jan 2022 18:20:08 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-84501-8</guid>
-        <source url="https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501.rss">Help on Sales Order for Services Items</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-84501-8</guid>
+        <source url="https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501.rss">Help on Sales Order for Services Items</source>
       </item>
       <item>
         <title>Help on Sales Order for Services Items</title>
         <dc:creator><![CDATA[msalim79]]></dc:creator>
         <description><![CDATA[
-            <p>ERPNext does support service industry <img src="https://discuss.frappe.io/images/emoji/twitter/smile.png?v=12" title=":smile:" class="emoji" alt=":smile:" loading="lazy" width="20" height="20"><br>
+            <p>ERPNext does support service industry <img src="https://discuss.coworker365.com/images/emoji/twitter/smile.png?v=12" title=":smile:" class="emoji" alt=":smile:" loading="lazy" width="20" height="20"><br>
 For our service items its just quotes and sales invoices.<br>
 You will need to see what works for your software company.</p>
-          <p><a href="https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501/7">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501/7">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501/7</link>
+        <link>https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501/7</link>
         <pubDate>Mon, 10 Jan 2022 17:25:51 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-84501-7</guid>
-        <source url="https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501.rss">Help on Sales Order for Services Items</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-84501-7</guid>
+        <source url="https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501.rss">Help on Sales Order for Services Items</source>
       </item>
       <item>
         <title>Help on Sales Order for Services Items</title>
         <dc:creator><![CDATA[federico_calvo]]></dc:creator>
         <description><![CDATA[
-            <p><a class="mention" href="https://discuss.frappe.io/u/msalim79">@msalim79</a> that is not the solution.</p>
+            <p><a class="mention" href="https://discuss.coworker365.com/u/msalim79">@msalim79</a> that is not the solution.</p>
 <p>The issue you mention is something that has been discussed several times in ERPNext.</p>
 <p>The solution is that if you do not have the stock checkbox, it does not force you to create a delivery note, so it does not apply the Overdue status.</p>
 <p>In addition, it also applies to an intangible, the theory that when you confirm the quotation, it is like an order, this is a Sales Order in the ERP, leaving to the accounting team the invoicing and payment in the order they want.</p>
-<p><a class="mention" href="https://discuss.frappe.io/u/marduh">@marduh</a> In our case that we are also a software company, what we do is to close the sales order (Close button) once the invoice is done and you do not need to make any delivery of goods</p>
-          <p><a href="https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501/6">Read full topic</a></p>
+<p><a class="mention" href="https://discuss.coworker365.com/u/marduh">@marduh</a> In our case that we are also a software company, what we do is to close the sales order (Close button) once the invoice is done and you do not need to make any delivery of goods</p>
+          <p><a href="https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501/6">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501/6</link>
+        <link>https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501/6</link>
         <pubDate>Mon, 10 Jan 2022 15:32:28 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-84501-6</guid>
-        <source url="https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501.rss">Help on Sales Order for Services Items</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-84501-6</guid>
+        <source url="https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501.rss">Help on Sales Order for Services Items</source>
       </item>
       <item>
         <title>Help on Sales Order for Services Items</title>
         <dc:creator><![CDATA[marduh]]></dc:creator>
         <description><![CDATA[
             <p>Hello msalim79, please don’t take this the wrong way, but I find it hard to believe that ERPNext does not support Sales Orders for the service industry. There has to be a way to use them.</p>
-          <p><a href="https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501/5">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501/5">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501/5</link>
+        <link>https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501/5</link>
         <pubDate>Mon, 10 Jan 2022 12:38:37 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-84501-5</guid>
-        <source url="https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501.rss">Help on Sales Order for Services Items</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-84501-5</guid>
+        <source url="https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501.rss">Help on Sales Order for Services Items</source>
       </item>
       <item>
         <title>Help on Sales Order for Services Items</title>
@@ -213,12 +213,12 @@ You will need to see what works for your software company.</p>
             <p>Hi msalim79, thanks for asking,<br>
 Because I’m using the ERPNext sales process and it says that after a Quotation you have to create a Sale Order.<br>
 <a href="https://docs.erpnext.com/docs/v13/user/manual/en/selling/quotation" class="onebox" target="_blank" rel="noopener nofollow ugc">https://docs.erpnext.com/docs/v13/user/manual/en/selling/quotation</a></p>
-          <p><a href="https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501/3">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501/3">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501/3</link>
+        <link>https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501/3</link>
         <pubDate>Fri, 07 Jan 2022 12:12:00 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-84501-3</guid>
-        <source url="https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501.rss">Help on Sales Order for Services Items</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-84501-3</guid>
+        <source url="https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501.rss">Help on Sales Order for Services Items</source>
       </item>
       <item>
         <title>Help on Sales Order for Services Items</title>
@@ -235,8 +235,8 @@ The Sale Order have an “Overdue” status, so i read that i have to create a D
 First i saw this topic</p><aside class="quote" data-post="1" data-topic="62562">
   <div class="title">
     <div class="quote-controls"></div>
-    <img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/jaime_stuardo/48/18475_2.png" class="avatar">
-    <a href="https://discuss.frappe.io/t/when-a-sales-invoice-is-paid-linked-sales-order-does-not-change-status-to-completed/62562">When a sales invoice is paid, linked sales order does not change status to "completed"</a> <a class="badge-category__wrapper " href="https://discuss.frappe.io/c/erpnext/6"><span data-category-id="6" style="--category-badge-color: #BF1E2E; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category "><span class="badge-category__name">ERPNext</span></span></a>
+    <img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/jaime_stuardo/48/18475_2.png" class="avatar">
+    <a href="https://discuss.coworker365.com/t/when-a-sales-invoice-is-paid-linked-sales-order-does-not-change-status-to-completed/62562">When a sales invoice is paid, linked sales order does not change status to "completed"</a> <a class="badge-category__wrapper " href="https://discuss.coworker365.com/c/erpnext/6"><span data-category-id="6" style="--category-badge-color: #BF1E2E; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category "><span class="badge-category__name">ERPNext</span></span></a>
   </div>
   <blockquote>
     Hello, 
@@ -253,12 +253,12 @@ Second i saw this article:<br>
 So, i create a new Sales Order but Maintenance type, and create a Maintenance Visit, but the Sales Order status continues on “Overdue”.</p>
 <p>Any idea to solve this?<br>
 Thanks</p>
-          <p><a href="https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501/1">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501/1">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501/1</link>
+        <link>https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501/1</link>
         <pubDate>Thu, 06 Jan 2022 16:10:33 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-84501-1</guid>
-        <source url="https://discuss.frappe.io/t/help-on-sales-order-for-services-items/84501.rss">Help on Sales Order for Services Items</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-84501-1</guid>
+        <source url="https://discuss.coworker365.com/t/help-on-sales-order-for-services-items/84501.rss">Help on Sales Order for Services Items</source>
       </item>
   </channel>
 </rss>

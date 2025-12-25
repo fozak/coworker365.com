@@ -6,53 +6,53 @@
     <meta name="description" content="All these days we were using frappe docker 2022 single server setup. My existing 2022 instance all work fine till date. Thanks to the frappe docker community. 
 I noticed 2023 upgrade in frappe docker which sounded to me &amp;hellip;">
     <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
-<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
-<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<link rel="icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
 <meta name="theme-color" media="all" content="#fff">
 
 <meta name="color-scheme" content="light">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-<link rel="canonical" href="https://discuss.frappe.io/t/frappe-docker-2023-production-setup-password-reset-email-link-added-with-port-8000/101844" />
+<link rel="canonical" href="https://discuss.coworker365.com/t/frappe-docker-2023-production-setup-password-reset-email-link-added-with-port-8000/101844" />
 
-<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.coworker365.com/opensearch.xml" title="Frappe Forum Search">
 
-    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
 
-<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common"  />
 
-  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop"  />
 
 
 
-    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
-    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
-    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
-    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
-    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
-    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
-    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
-    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
-    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
-    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
-    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
-    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
-    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
-    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll_desktop"  />
 
-  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
-    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
 
     
     
-        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Frappe Docker 2023 Production setup: Password reset email link added with port 8000&#39;" href="https://discuss.frappe.io/t/frappe-docker-2023-production-setup-password-reset-email-link-added-with-port-8000/101844.rss" />
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Frappe Docker 2023 Production setup: Password reset email link added with port 8000&#39;" href="https://discuss.coworker365.com/t/frappe-docker-2023-production-setup-password-reset-email-link-added-with-port-8000/101844.rss" />
     <meta property="og:site_name" content="Frappe Forum" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
-<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
-<meta property="og:url" content="https://discuss.frappe.io/t/frappe-docker-2023-production-setup-password-reset-email-link-added-with-port-8000/101844" />
-<meta name="twitter:url" content="https://discuss.frappe.io/t/frappe-docker-2023-production-setup-password-reset-email-link-added-with-port-8000/101844" />
+<meta name="twitter:image" content="https://discuss.coworker365.com/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.coworker365.com/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.coworker365.com/t/frappe-docker-2023-production-setup-password-reset-email-link-added-with-port-8000/101844" />
+<meta name="twitter:url" content="https://discuss.coworker365.com/t/frappe-docker-2023-production-setup-password-reset-email-link-added-with-port-8000/101844" />
 <meta property="og:title" content="Frappe Docker 2023 Production setup: Password reset email link added with port 8000" />
 <meta name="twitter:title" content="Frappe Docker 2023 Production setup: Password reset email link added with port 8000" />
 <meta property="og:description" content="All these days we were using frappe docker 2022 single server setup. My existing 2022 instance all work fine till date. Thanks to the frappe docker community.  I noticed 2023 upgrade in frappe docker which sounded to me more flexible in terms of upgrades in future especially the assets.  We setup a new production instance based on the new changes outlined in Single server Example  Everything works like a charm except for the two issues.   All the links in emails such as password reset, unsubscri..." />
@@ -68,14 +68,14 @@ I noticed 2023 upgrade in frappe docker which sounded to me &amp;hellip;">
 <meta property="og:ignore_canonical" content="true" />
 
 
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Frappe Docker 2023 Production setup: Password reset email link added with port 8000","mainEntity":{"@type":"Question","name":"Frappe Docker 2023 Production setup: Password reset email link added with port 8000","text":"All these days we were using frappe docker 2022 single server setup. My existing 2022 instance all work fine till date. Thanks to the frappe docker community.\n\nI noticed 2023 upgrade in frappe docker which sounded to me more flexible in terms of upgrades in future especially the assets.\n\nWe setup a &hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2023-03-02T05:43:24.420Z","author":{"@type":"Person","name":"gsarunk","url":"https://discuss.frappe.io/u/gsarunk"}}}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Frappe Docker 2023 Production setup: Password reset email link added with port 8000","mainEntity":{"@type":"Question","name":"Frappe Docker 2023 Production setup: Password reset email link added with port 8000","text":"All these days we were using frappe docker 2022 single server setup. My existing 2022 instance all work fine till date. Thanks to the frappe docker community.\n\nI noticed 2023 upgrade in frappe docker which sounded to me more flexible in terms of upgrades in future especially the assets.\n\nWe setup a &hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2023-03-02T05:43:24.420Z","author":{"@type":"Person","name":"gsarunk","url":"https://discuss.coworker365.com/u/gsarunk"}}}</script>
   </head>
   <body class="crawler ">
     <div class="erpnext-header">
-    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://coworker365.com" target="_blank">coworker365.com</a>
     <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
-    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
-    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://docs.coworker365.com/" target="_blank">Documentation</a>
+    <a href="https://coworker365.com/partners" target="_blank">Partners</a>
     <a href="https://frappe.school" target="_blank">Frappe School</a>
     <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
     <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
@@ -105,7 +105,7 @@ I noticed 2023 upgrade in frappe docker which sounded to me &amp;hellip;">
 
       <div class="topic-category">
         <div class='discourse-tags list-tags'>
-            <a href='https://discuss.frappe.io/tag/docker' class='discourse-tag' rel="tag">docker</a>
+            <a href='https://discuss.coworker365.com/tag/docker' class='discourse-tag' rel="tag">docker</a>
         </div>
       </div>
   </div>
@@ -114,14 +114,14 @@ I noticed 2023 upgrade in frappe docker which sounded to me &amp;hellip;">
 
     <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
       <meta itemprop='headline' content='Frappe Docker 2023 Production setup: Password reset email link added with port 8000'>
-      <link itemprop='url' href='https://discuss.frappe.io/t/frappe-docker-2023-production-setup-password-reset-email-link-added-with-port-8000/101844'>
+      <link itemprop='url' href='https://discuss.coworker365.com/t/frappe-docker-2023-production-setup-password-reset-email-link-added-with-port-8000/101844'>
       <meta itemprop='datePublished' content='2023-03-02T05:43:24Z'>
         <meta itemprop='articleSection' content='ERPNext'>
       <meta itemprop='keywords' content='docker'>
       <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
         <meta itemprop='name' content='Frappe'>
           <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
-            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+            <meta itemprop='url' content='https://discuss.coworker365.com/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
           </div>
       </div>
 
@@ -129,11 +129,11 @@ I noticed 2023 upgrade in frappe docker which sounded to me &amp;hellip;">
           <div id='post_1'  class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/gsarunk'><span itemprop='name'>gsarunk</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/gsarunk'><span itemprop='name'>gsarunk</span></a>
                 
               </span>
 
-                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/frappe-docker-2023-production-setup-password-reset-email-link-added-with-port-8000/101844">
+                <link itemprop="mainEntityOfPage" href="https://discuss.coworker365.com/t/frappe-docker-2023-production-setup-password-reset-email-link-added-with-port-8000/101844">
 
 
               <span class="crawler-post-infos">
@@ -172,11 +172,11 @@ Arun</p>
 
                 <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
                       <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
-                        <a itemprop='url' href="https://discuss.frappe.io/t/wkhtmltopdf-error-creating-pdf/101926/8">Wkhtmltopdf error creating PDF</a>
+                        <a itemprop='url' href="https://discuss.coworker365.com/t/wkhtmltopdf-error-creating-pdf/101926/8">Wkhtmltopdf error creating PDF</a>
                         <meta itemprop='position' content='3'>
                       </div>
                       <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
-                        <a itemprop='url' href="https://discuss.frappe.io/t/cannot-send-email-from-sales-order/102478/14">Cannot send email from Sales order</a>
+                        <a itemprop='url' href="https://discuss.coworker365.com/t/cannot-send-email-from-sales-order/102478/14">Cannot send email from Sales order</a>
                         <meta itemprop='position' content='4'>
                       </div>
                 </div>
@@ -184,7 +184,7 @@ Arun</p>
           <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/revant_one'><span itemprop='name'>revant_one</span></a>
                 
               </span>
 
@@ -210,7 +210,7 @@ Arun</p>
 
                 <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
                       <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
-                        <a itemprop='url' href="https://discuss.frappe.io/t/frappe-docker-oserror-wkhtmltopdf-reported-an-error-network-error-hostnotfounderror/101823/6">Frappe Docker OSError: wkhtmltopdf reported an error: network error: HostNotFoundError</a>
+                        <a itemprop='url' href="https://discuss.coworker365.com/t/frappe-docker-oserror-wkhtmltopdf-reported-an-error-network-error-hostnotfounderror/101823/6">Frappe Docker OSError: wkhtmltopdf reported an error: network error: HostNotFoundError</a>
                         <meta itemprop='position' content='1'>
                       </div>
                 </div>
@@ -218,7 +218,7 @@ Arun</p>
           <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/gsarunk'><span itemprop='name'>gsarunk</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/gsarunk'><span itemprop='name'>gsarunk</span></a>
                 
               </span>
 
@@ -252,12 +252,12 @@ Arun</p>
           <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/gsarunk'><span itemprop='name'>gsarunk</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/gsarunk'><span itemprop='name'>gsarunk</span></a>
                 
               </span>
 
 
-                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/7/1/71a2cf7dc1c71a027817109dda9ea5ab1521e847.png">
+                <link itemprop="image" href="https://discuss.coworker365.com/uploads/default/original/3X/7/1/71a2cf7dc1c71a027817109dda9ea5ab1521e847.png">
 
               <span class="crawler-post-infos">
                   <time itemprop='datePublished' datetime='2023-03-02T06:28:26Z' class='post-time'>
@@ -270,7 +270,7 @@ Arun</p>
             <div class='post' itemprop='text'>
               <p><a class="mention" href="/u/revant_one">@revant_one</a> no luck after adding host_name to site_config.json</p>
 <p>the site config now looks like this.</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/1/71a2cf7dc1c71a027817109dda9ea5ab1521e847.png" data-download-href="https://discuss.frappe.io/uploads/default/71a2cf7dc1c71a027817109dda9ea5ab1521e847" title="image"><img src="https://discuss.frappe.io/uploads/default/original/3X/7/1/71a2cf7dc1c71a027817109dda9ea5ab1521e847.png" alt="image" data-base62-sha1="gdgLZxPuXygGseBe5xBhnTzGyDd" width="690" height="139" data-dominant-color="2E2E2E"><div class="meta">
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/7/1/71a2cf7dc1c71a027817109dda9ea5ab1521e847.png" data-download-href="https://discuss.coworker365.com/uploads/default/71a2cf7dc1c71a027817109dda9ea5ab1521e847" title="image"><img src="https://discuss.coworker365.com/uploads/default/original/3X/7/1/71a2cf7dc1c71a027817109dda9ea5ab1521e847.png" alt="image" data-base62-sha1="gdgLZxPuXygGseBe5xBhnTzGyDd" width="690" height="139" data-dominant-color="2E2E2E"><div class="meta">
 <svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">780×158 7.69 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
 </div></a></div></p>
             </div>
@@ -285,7 +285,7 @@ Arun</p>
           <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/revant_one'><span itemprop='name'>revant_one</span></a>
                 
               </span>
 
@@ -368,7 +368,7 @@ Arun</p>
           <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/gsarunk'><span itemprop='name'>gsarunk</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/gsarunk'><span itemprop='name'>gsarunk</span></a>
                 
               </span>
 
@@ -442,7 +442,7 @@ Arun</p>
           <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/revant_one'><span itemprop='name'>revant_one</span></a>
                 
               </span>
 
@@ -473,7 +473,7 @@ Arun</p>
           <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/gsarunk'><span itemprop='name'>gsarunk</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/gsarunk'><span itemprop='name'>gsarunk</span></a>
                 
               </span>
 
@@ -496,7 +496,7 @@ I updated these two params to true and left others as it is.<br>
 <p>However I will refer to pwd as well.<br>
 But is this a global issue or only happened to me</p>
 <p>What is the impact on making these two params true?. Can we root cause?</p>
-<p>Anyways, all the time as usual, <a class="mention" href="/u/revant_one">@revant_one</a> is coming for rescue <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> . Most important thing is the direction you give. Commendable.</p>
+<p>Anyways, all the time as usual, <a class="mention" href="/u/revant_one">@revant_one</a> is coming for rescue <img src="https://discuss.coworker365.com/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> . Most important thing is the direction you give. Commendable.</p>
 <p>Kind Regards,<br>
 Arun</p>
             </div>
@@ -511,7 +511,7 @@ Arun</p>
           <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/revant_one'><span itemprop='name'>revant_one</span></a>
                 
               </span>
 
@@ -529,7 +529,7 @@ Arun</p>
               <aside class="quote no-group" data-username="gsarunk" data-post="8" data-topic="101844">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/gsarunk/48/56791_2.png" class="avatar"> gsarunk:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/gsarunk/48/56791_2.png" class="avatar"> gsarunk:</div>
 <blockquote>
 <p>What is the impact on making these two params true?</p>
 </blockquote>
@@ -547,7 +547,7 @@ Arun</p>
           <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/gsarunk'><span itemprop='name'>gsarunk</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/gsarunk'><span itemprop='name'>gsarunk</span></a>
                 
               </span>
 
@@ -575,7 +575,7 @@ Arun</p>
           <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/revant_one'><span itemprop='name'>revant_one</span></a>
                 
               </span>
 
@@ -634,7 +634,7 @@ Arun</p>
 
                 <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
                       <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
-                        <a itemprop='url' href="https://discuss.frappe.io/t/email-not-delivered-automatically/102344/6">Email not delivered automatically</a>
+                        <a itemprop='url' href="https://discuss.coworker365.com/t/email-not-delivered-automatically/102344/6">Email not delivered automatically</a>
                         <meta itemprop='position' content='2'>
                       </div>
                 </div>
@@ -642,7 +642,7 @@ Arun</p>
           <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/gsarunk'><span itemprop='name'>gsarunk</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/gsarunk'><span itemprop='name'>gsarunk</span></a>
                 
               </span>
 
@@ -670,7 +670,7 @@ Arun</p>
           <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/revant_one'><span itemprop='name'>revant_one</span></a>
                 
               </span>
 
@@ -735,7 +735,7 @@ Arun</p>
 </div>
 
   <div class="github-row">
-    <p class="github-body-container">reported here https://discuss.frappe.io/t/frappe-docker-2023-production-setup-pa<span class="show-more-container"><a href="https://github.com/frappe/frappe_docker/pull/1088" target="_blank" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden">ssword-reset-email-link-added-with-port-8000/101844</span></p>
+    <p class="github-body-container">reported here https://discuss.coworker365.com/t/frappe-docker-2023-production-setup-pa<span class="show-more-container"><a href="https://github.com/frappe/frappe_docker/pull/1088" target="_blank" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden">ssword-reset-email-link-added-with-port-8000/101844</span></p>
   </div>
 
   </article>
@@ -760,7 +760,7 @@ Arun</p>
           <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/gsarunk'><span itemprop='name'>gsarunk</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/gsarunk'><span itemprop='name'>gsarunk</span></a>
                 
               </span>
 
@@ -780,7 +780,7 @@ Arun</p>
 <p>at this point just echo <code>{}</code> into common_site_config.json</p>
 </blockquote>
 <p>I was under impression to make the two field defaulted to true. Looking into your change, now i understood.</p>
-<p>Anyways thanks for doing it yourself and sorry for not sending a PR <img src="https://discuss.frappe.io/images/emoji/twitter/frowning.png?v=12" title=":frowning:" class="emoji" alt=":frowning:" loading="lazy" width="20" height="20"></p>
+<p>Anyways thanks for doing it yourself and sorry for not sending a PR <img src="https://discuss.coworker365.com/images/emoji/twitter/frowning.png?v=12" title=":frowning:" class="emoji" alt=":frowning:" loading="lazy" width="20" height="20"></p>
             </div>
 
             <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
@@ -793,7 +793,7 @@ Arun</p>
           <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/cmubeenali'><span itemprop='name'>cmubeenali</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/cmubeenali'><span itemprop='name'>cmubeenali</span></a>
                 
               </span>
 
@@ -861,7 +861,7 @@ Arun</p>
 </footer>
 
     <div class="erpnext-footer">
-    <a href="https://frappe.io">Frappe</a>
+    <a href="https://coworker365.com">Frappe</a>
 </div>
     
   </body>

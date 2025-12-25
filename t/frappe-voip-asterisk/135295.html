@@ -7,53 +7,53 @@
 Many people have been asking about Frappe VoIP integration, with other platforms next to Twilio and Exotel. 
 In this post i will talk about my plans for custom development of a global VoIP integrati&amp;hellip;">
     <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
-<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
-<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<link rel="icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
 <meta name="theme-color" media="all" content="#fff">
 
 <meta name="color-scheme" content="light">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-<link rel="canonical" href="https://discuss.frappe.io/t/frappe-voip-asterisk/135295" />
+<link rel="canonical" href="https://discuss.coworker365.com/t/frappe-voip-asterisk/135295" />
 
-<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.coworker365.com/opensearch.xml" title="Frappe Forum Search">
 
-    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
 
-<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common"  />
 
-  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop"  />
 
 
 
-    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
-    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
-    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
-    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
-    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
-    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
-    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
-    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
-    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
-    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
-    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
-    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
-    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
-    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll_desktop"  />
 
-  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
-    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
 
     
     
-        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Frappe VoIP (Asterisk)&#39;" href="https://discuss.frappe.io/t/frappe-voip-asterisk/135295.rss" />
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Frappe VoIP (Asterisk)&#39;" href="https://discuss.coworker365.com/t/frappe-voip-asterisk/135295.rss" />
     <meta property="og:site_name" content="Frappe Forum" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
-<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
-<meta property="og:url" content="https://discuss.frappe.io/t/frappe-voip-asterisk/135295" />
-<meta name="twitter:url" content="https://discuss.frappe.io/t/frappe-voip-asterisk/135295" />
+<meta name="twitter:image" content="https://discuss.coworker365.com/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.coworker365.com/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.coworker365.com/t/frappe-voip-asterisk/135295" />
+<meta name="twitter:url" content="https://discuss.coworker365.com/t/frappe-voip-asterisk/135295" />
 <meta property="og:title" content="Frappe VoIP (Asterisk)" />
 <meta name="twitter:title" content="Frappe VoIP (Asterisk)" />
 <meta property="og:description" content="What’s up everybody!  Many people have been asking about Frappe VoIP integration, with other platforms next to Twilio and Exotel.  In this post i will talk about my plans for custom development of a global VoIP integration (with Asterisk first of all, maybe some other providers later) we can use to call with from every Frappe app (Like HRMS and CRM).  My name is Reinhard Mengelberg and i am en experienced ERP and software developer from the Netherlands. My company works with Odoo, but we want to..." />
@@ -70,14 +70,14 @@ In this post i will talk about my plans for custom development of a global VoIP 
 <meta property="og:ignore_canonical" content="true" />
 
 
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Frappe VoIP (Asterisk)","mainEntity":{"@type":"Question","name":"Frappe VoIP (Asterisk)","text":"What’s up everybody!\n\nMany people have been asking about Frappe VoIP integration, with other platforms next to Twilio and Exotel.\n\nIn this post i will talk about my plans for custom development of a global VoIP integration (with Asterisk first of all, maybe some other providers later) we can use to &hellip;","upvoteCount":9,"answerCount":0,"datePublished":"2024-10-13T15:32:25.102Z","author":{"@type":"Person","name":"ReinMengelberg","url":"https://discuss.frappe.io/u/ReinMengelberg"}}}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Frappe VoIP (Asterisk)","mainEntity":{"@type":"Question","name":"Frappe VoIP (Asterisk)","text":"What’s up everybody!\n\nMany people have been asking about Frappe VoIP integration, with other platforms next to Twilio and Exotel.\n\nIn this post i will talk about my plans for custom development of a global VoIP integration (with Asterisk first of all, maybe some other providers later) we can use to &hellip;","upvoteCount":9,"answerCount":0,"datePublished":"2024-10-13T15:32:25.102Z","author":{"@type":"Person","name":"ReinMengelberg","url":"https://discuss.coworker365.com/u/ReinMengelberg"}}}</script>
   </head>
   <body class="crawler ">
     <div class="erpnext-header">
-    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://coworker365.com" target="_blank">coworker365.com</a>
     <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
-    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
-    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://docs.coworker365.com/" target="_blank">Documentation</a>
+    <a href="https://coworker365.com/partners" target="_blank">Partners</a>
     <a href="https://frappe.school" target="_blank">Frappe School</a>
     <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
     <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
@@ -120,14 +120,14 @@ In this post i will talk about my plans for custom development of a global VoIP 
 
     <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
       <meta itemprop='headline' content='Frappe VoIP (Asterisk)'>
-      <link itemprop='url' href='https://discuss.frappe.io/t/frappe-voip-asterisk/135295'>
+      <link itemprop='url' href='https://discuss.coworker365.com/t/frappe-voip-asterisk/135295'>
       <meta itemprop='datePublished' content='2024-10-13T15:32:25Z'>
         <meta itemprop='articleSection' content='App Development'>
       <meta itemprop='keywords' content=''>
       <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
         <meta itemprop='name' content='Frappe'>
           <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
-            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+            <meta itemprop='url' content='https://discuss.coworker365.com/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
           </div>
       </div>
 
@@ -135,11 +135,11 @@ In this post i will talk about my plans for custom development of a global VoIP 
           <div id='post_1'  class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ReinMengelberg'><span itemprop='name'>ReinMengelberg</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/ReinMengelberg'><span itemprop='name'>ReinMengelberg</span></a>
                 
               </span>
 
-                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/frappe-voip-asterisk/135295">
+                <link itemprop="mainEntityOfPage" href="https://discuss.coworker365.com/t/frappe-voip-asterisk/135295">
 
 
               <span class="crawler-post-infos">
@@ -184,7 +184,7 @@ In this post i will talk about my plans for custom development of a global VoIP 
 
                 <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
                       <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
-                        <a itemprop='url' href="https://discuss.frappe.io/t/voip-integration-asterisk/69687/6">VOIP Integration (Asterisk)</a>
+                        <a itemprop='url' href="https://discuss.coworker365.com/t/voip-integration-asterisk/69687/6">VOIP Integration (Asterisk)</a>
                         <meta itemprop='position' content='1'>
                       </div>
                 </div>
@@ -192,7 +192,7 @@ In this post i will talk about my plans for custom development of a global VoIP 
           <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ReinMengelberg'><span itemprop='name'>ReinMengelberg</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/ReinMengelberg'><span itemprop='name'>ReinMengelberg</span></a>
                 
               </span>
 
@@ -247,7 +247,7 @@ In this post i will talk about my plans for custom development of a global VoIP 
           <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ahassoun'><span itemprop='name'>ahassoun</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/ahassoun'><span itemprop='name'>ahassoun</span></a>
                 
               </span>
 
@@ -275,7 +275,7 @@ In this post i will talk about my plans for custom development of a global VoIP 
           <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ReinMengelberg'><span itemprop='name'>ReinMengelberg</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/ReinMengelberg'><span itemprop='name'>ReinMengelberg</span></a>
                 
               </span>
 
@@ -446,7 +446,7 @@ In this post i will talk about my plans for custom development of a global VoIP 
           <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/neocode'><span itemprop='name'>neocode</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/neocode'><span itemprop='name'>neocode</span></a>
                 
               </span>
 
@@ -462,7 +462,7 @@ In this post i will talk about my plans for custom development of a global VoIP 
             </div>
             <div class='post' itemprop='text'>
               <p>Hey <a class="mention" href="/u/reinmengelberg">@ReinMengelberg</a><br>
-I like your project <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20">  - however, it seems like the discord link is invalid (at least I got this error)</p>
+I like your project <img src="https://discuss.coworker365.com/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20">  - however, it seems like the discord link is invalid (at least I got this error)</p>
             </div>
 
             <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
@@ -475,7 +475,7 @@ I like your project <img src="https://discuss.frappe.io/images/emoji/twitter/sli
           <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ejaaz'><span itemprop='name'>ejaaz</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/ejaaz'><span itemprop='name'>ejaaz</span></a>
                 
               </span>
 
@@ -528,7 +528,7 @@ I like your project <img src="https://discuss.frappe.io/images/emoji/twitter/sli
           <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/asoral'><span itemprop='name'>asoral</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/asoral'><span itemprop='name'>asoral</span></a>
                 
               </span>
 
@@ -556,7 +556,7 @@ I like your project <img src="https://discuss.frappe.io/images/emoji/twitter/sli
           <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/LogicLinks'><span itemprop='name'>LogicLinks</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/LogicLinks'><span itemprop='name'>LogicLinks</span></a>
                 
               </span>
 
@@ -584,7 +584,7 @@ I like your project <img src="https://discuss.frappe.io/images/emoji/twitter/sli
           <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/gugpat'><span itemprop='name'>gugpat</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/gugpat'><span itemprop='name'>gugpat</span></a>
                 
               </span>
 
@@ -613,7 +613,7 @@ Discord link is outdated.</p>
           <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/hra'><span itemprop='name'>hra</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/hra'><span itemprop='name'>hra</span></a>
                 
               </span>
 
@@ -641,7 +641,7 @@ Discord link is outdated.</p>
           <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Venkatesan'><span itemprop='name'>Venkatesan</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/Venkatesan'><span itemprop='name'>Venkatesan</span></a>
                 
               </span>
 
@@ -671,7 +671,7 @@ Is there any demo available …</p>
           <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/anandk'><span itemprop='name'>anandk</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/anandk'><span itemprop='name'>anandk</span></a>
                 
               </span>
 
@@ -699,7 +699,7 @@ Is there any demo available …</p>
           <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/neocode'><span itemprop='name'>neocode</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/neocode'><span itemprop='name'>neocode</span></a>
                 
               </span>
 
@@ -729,7 +729,7 @@ Sorry, but as far as I can see, there’s no progress here. The GitHub repo is i
           <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ingjgomez01-blip'><span itemprop='name'>ingjgomez01-blip</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/ingjgomez01-blip'><span itemprop='name'>ingjgomez01-blip</span></a>
                 
               </span>
 
@@ -757,7 +757,7 @@ Sorry, but as far as I can see, there’s no progress here. The GitHub repo is i
           <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/asoral'><span itemprop='name'>asoral</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/asoral'><span itemprop='name'>asoral</span></a>
                 
               </span>
 
@@ -825,7 +825,7 @@ Sorry, but as far as I can see, there’s no progress here. The GitHub repo is i
 </footer>
 
     <div class="erpnext-footer">
-    <a href="https://frappe.io">Frappe</a>
+    <a href="https://coworker365.com">Frappe</a>
 </div>
     
   </body>

@@ -5,53 +5,53 @@
     <title>ERPNext hosted on Docker not triggering Webhooks - ERPNext - Frappe Forum</title>
     <meta name="description" content="I’m currently setting up a custom Docker deployment of ERPNext with the HR module enabled. I’ve configured a webhook to trigger when an application status is set to “Accepted.” The webhook is configured to trigger on the&amp;hellip;">
     <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
-<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
-<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<link rel="icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
 <meta name="theme-color" media="all" content="#fff">
 
 <meta name="color-scheme" content="light">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-<link rel="canonical" href="https://discuss.frappe.io/t/erpnext-hosted-on-docker-not-triggering-webhooks/134884" />
+<link rel="canonical" href="https://discuss.coworker365.com/t/erpnext-hosted-on-docker-not-triggering-webhooks/134884" />
 
-<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.coworker365.com/opensearch.xml" title="Frappe Forum Search">
 
-    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
 
-<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common"  />
 
-  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop"  />
 
 
 
-    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
-    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
-    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
-    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
-    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
-    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
-    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
-    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
-    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
-    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
-    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
-    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
-    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
-    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll_desktop"  />
 
-  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
-    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
 
     
     
-        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;ERPNext hosted on Docker not triggering Webhooks&#39;" href="https://discuss.frappe.io/t/erpnext-hosted-on-docker-not-triggering-webhooks/134884.rss" />
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;ERPNext hosted on Docker not triggering Webhooks&#39;" href="https://discuss.coworker365.com/t/erpnext-hosted-on-docker-not-triggering-webhooks/134884.rss" />
     <meta property="og:site_name" content="Frappe Forum" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/a/a/aaca950995c50bf8b31274941e86eb88827c2616_2_1024x106.png" />
-<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/a/a/aaca950995c50bf8b31274941e86eb88827c2616_2_1024x106.png" />
-<meta property="og:url" content="https://discuss.frappe.io/t/erpnext-hosted-on-docker-not-triggering-webhooks/134884" />
-<meta name="twitter:url" content="https://discuss.frappe.io/t/erpnext-hosted-on-docker-not-triggering-webhooks/134884" />
+<meta name="twitter:image" content="https://discuss.coworker365.com/uploads/default/optimized/3X/a/a/aaca950995c50bf8b31274941e86eb88827c2616_2_1024x106.png" />
+<meta property="og:image" content="https://discuss.coworker365.com/uploads/default/optimized/3X/a/a/aaca950995c50bf8b31274941e86eb88827c2616_2_1024x106.png" />
+<meta property="og:url" content="https://discuss.coworker365.com/t/erpnext-hosted-on-docker-not-triggering-webhooks/134884" />
+<meta name="twitter:url" content="https://discuss.coworker365.com/t/erpnext-hosted-on-docker-not-triggering-webhooks/134884" />
 <meta property="og:title" content="ERPNext hosted on Docker not triggering Webhooks" />
 <meta name="twitter:title" content="ERPNext hosted on Docker not triggering Webhooks" />
 <meta property="og:description" content="I’m currently setting up a custom Docker deployment of ERPNext with the HR module enabled. I’ve configured a webhook to trigger when an application status is set to “Accepted.” The webhook is configured to trigger on the on_update event, and in the preview, it shows that when the document status is “Accepted,” it meets the condition. However, the webhook isn’t being triggered when I actually update the status to “Accepted.”  I’ve tried testing with:  •	No conditions •	All available trigger optio..." />
@@ -64,14 +64,14 @@
 <meta property="og:ignore_canonical" content="true" />
 
 
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"ERPNext hosted on Docker not triggering Webhooks","mainEntity":{"@type":"Question","name":"ERPNext hosted on Docker not triggering Webhooks","text":"I’m currently setting up a custom Docker deployment of ERPNext with the HR module enabled. I’ve configured a webhook to trigger when an application status is set to “Accepted.” The webhook is configured to trigger on the on_update event, and in the preview, it shows that when the document status is &hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2024-10-07T09:52:08.707Z","author":{"@type":"Person","name":"M4xiGitHub","url":"https://discuss.frappe.io/u/M4xiGitHub"}}}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"ERPNext hosted on Docker not triggering Webhooks","mainEntity":{"@type":"Question","name":"ERPNext hosted on Docker not triggering Webhooks","text":"I’m currently setting up a custom Docker deployment of ERPNext with the HR module enabled. I’ve configured a webhook to trigger when an application status is set to “Accepted.” The webhook is configured to trigger on the on_update event, and in the preview, it shows that when the document status is &hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2024-10-07T09:52:08.707Z","author":{"@type":"Person","name":"M4xiGitHub","url":"https://discuss.coworker365.com/u/M4xiGitHub"}}}</script>
   </head>
   <body class="crawler ">
     <div class="erpnext-header">
-    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://coworker365.com" target="_blank">coworker365.com</a>
     <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
-    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
-    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://docs.coworker365.com/" target="_blank">Documentation</a>
+    <a href="https://coworker365.com/partners" target="_blank">Partners</a>
     <a href="https://frappe.school" target="_blank">Frappe School</a>
     <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
     <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
@@ -101,8 +101,8 @@
 
       <div class="topic-category">
         <div class='discourse-tags list-tags'>
-            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
-            <a href='https://discuss.frappe.io/tag/docker' class='discourse-tag' rel="tag">docker</a>
+            <a href='https://discuss.coworker365.com/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.coworker365.com/tag/docker' class='discourse-tag' rel="tag">docker</a>
         </div>
       </div>
   </div>
@@ -111,14 +111,14 @@
 
     <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
       <meta itemprop='headline' content='ERPNext hosted on Docker not triggering Webhooks'>
-      <link itemprop='url' href='https://discuss.frappe.io/t/erpnext-hosted-on-docker-not-triggering-webhooks/134884'>
+      <link itemprop='url' href='https://discuss.coworker365.com/t/erpnext-hosted-on-docker-not-triggering-webhooks/134884'>
       <meta itemprop='datePublished' content='2024-10-07T09:52:08Z'>
         <meta itemprop='articleSection' content='ERPNext'>
       <meta itemprop='keywords' content='erpnext, docker'>
       <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
         <meta itemprop='name' content='Frappe'>
           <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
-            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+            <meta itemprop='url' content='https://discuss.coworker365.com/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
           </div>
       </div>
 
@@ -126,13 +126,13 @@
           <div id='post_1'  class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/M4xiGitHub'><span itemprop='name'>M4xiGitHub</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/M4xiGitHub'><span itemprop='name'>M4xiGitHub</span></a>
                 
               </span>
 
-                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/erpnext-hosted-on-docker-not-triggering-webhooks/134884">
+                <link itemprop="mainEntityOfPage" href="https://discuss.coworker365.com/t/erpnext-hosted-on-docker-not-triggering-webhooks/134884">
 
-                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/a/a/aaca950995c50bf8b31274941e86eb88827c2616.png">
+                <link itemprop="image" href="https://discuss.coworker365.com/uploads/default/original/3X/a/a/aaca950995c50bf8b31274941e86eb88827c2616.png">
 
               <span class="crawler-post-infos">
                   <time  datetime='2024-10-07T09:52:08Z' class='post-time'>
@@ -150,9 +150,9 @@
 •	Multiple document types
 </code></pre>
 <p>Yet, the webhook still doesn’t activate. Any insights into what might be causing this issue would be greatly appreciated!</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/a/a/aaca950995c50bf8b31274941e86eb88827c2616.png" data-download-href="https://discuss.frappe.io/uploads/default/aaca950995c50bf8b31274941e86eb88827c2616" title="Bildschirmfoto 2024-10-07 um 11.50.08"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/a/a/aaca950995c50bf8b31274941e86eb88827c2616_2_690x71.png" alt="Bildschirmfoto 2024-10-07 um 11.50.08" data-base62-sha1="omTcpUH96fwA6rmR8GwhIn7IIrI" width="690" height="71" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/a/a/aaca950995c50bf8b31274941e86eb88827c2616_2_690x71.png, https://discuss.frappe.io/uploads/default/optimized/3X/a/a/aaca950995c50bf8b31274941e86eb88827c2616_2_1035x106.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/a/a/aaca950995c50bf8b31274941e86eb88827c2616_2_1380x142.png 2x" data-dominant-color="585A65"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Bildschirmfoto 2024-10-07 um 11.50.08</span><span class="informations">3330×346 75.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
-<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/6/5/658208b1637f9b3429aef4e34d1a85631b15610b.png" data-download-href="https://discuss.frappe.io/uploads/default/658208b1637f9b3429aef4e34d1a85631b15610b" title="Bildschirmfoto 2024-10-07 um 11.51.12"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/6/5/658208b1637f9b3429aef4e34d1a85631b15610b_2_690x289.png" alt="Bildschirmfoto 2024-10-07 um 11.51.12" data-base62-sha1="etYOTRbx924TXqYRYrdpMmXDZEL" width="690" height="289" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/6/5/658208b1637f9b3429aef4e34d1a85631b15610b_2_690x289.png, https://discuss.frappe.io/uploads/default/optimized/3X/6/5/658208b1637f9b3429aef4e34d1a85631b15610b_2_1035x433.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/6/5/658208b1637f9b3429aef4e34d1a85631b15610b_2_1380x578.png 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Bildschirmfoto 2024-10-07 um 11.51.12</span><span class="informations">2722×1144 194 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
-<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/f/0fdb268d23a5dccca72bbe0f1ee0a5958d027078.png" data-download-href="https://discuss.frappe.io/uploads/default/0fdb268d23a5dccca72bbe0f1ee0a5958d027078" title="Bildschirmfoto 2024-10-07 um 11.51.25"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/f/0fdb268d23a5dccca72bbe0f1ee0a5958d027078_2_690x350.png" alt="Bildschirmfoto 2024-10-07 um 11.51.25" data-base62-sha1="2ggGMu7SBChiB8VR9lxcZzVkNok" width="690" height="350" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/f/0fdb268d23a5dccca72bbe0f1ee0a5958d027078_2_690x350.png, https://discuss.frappe.io/uploads/default/optimized/3X/0/f/0fdb268d23a5dccca72bbe0f1ee0a5958d027078_2_1035x525.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/0/f/0fdb268d23a5dccca72bbe0f1ee0a5958d027078_2_1380x700.png 2x" data-dominant-color="FDFDFD"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Bildschirmfoto 2024-10-07 um 11.51.25</span><span class="informations">2918×1482 206 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/a/a/aaca950995c50bf8b31274941e86eb88827c2616.png" data-download-href="https://discuss.coworker365.com/uploads/default/aaca950995c50bf8b31274941e86eb88827c2616" title="Bildschirmfoto 2024-10-07 um 11.50.08"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/a/a/aaca950995c50bf8b31274941e86eb88827c2616_2_690x71.png" alt="Bildschirmfoto 2024-10-07 um 11.50.08" data-base62-sha1="omTcpUH96fwA6rmR8GwhIn7IIrI" width="690" height="71" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/a/a/aaca950995c50bf8b31274941e86eb88827c2616_2_690x71.png, https://discuss.coworker365.com/uploads/default/optimized/3X/a/a/aaca950995c50bf8b31274941e86eb88827c2616_2_1035x106.png 1.5x, https://discuss.coworker365.com/uploads/default/optimized/3X/a/a/aaca950995c50bf8b31274941e86eb88827c2616_2_1380x142.png 2x" data-dominant-color="585A65"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Bildschirmfoto 2024-10-07 um 11.50.08</span><span class="informations">3330×346 75.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/6/5/658208b1637f9b3429aef4e34d1a85631b15610b.png" data-download-href="https://discuss.coworker365.com/uploads/default/658208b1637f9b3429aef4e34d1a85631b15610b" title="Bildschirmfoto 2024-10-07 um 11.51.12"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/6/5/658208b1637f9b3429aef4e34d1a85631b15610b_2_690x289.png" alt="Bildschirmfoto 2024-10-07 um 11.51.12" data-base62-sha1="etYOTRbx924TXqYRYrdpMmXDZEL" width="690" height="289" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/6/5/658208b1637f9b3429aef4e34d1a85631b15610b_2_690x289.png, https://discuss.coworker365.com/uploads/default/optimized/3X/6/5/658208b1637f9b3429aef4e34d1a85631b15610b_2_1035x433.png 1.5x, https://discuss.coworker365.com/uploads/default/optimized/3X/6/5/658208b1637f9b3429aef4e34d1a85631b15610b_2_1380x578.png 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Bildschirmfoto 2024-10-07 um 11.51.12</span><span class="informations">2722×1144 194 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/0/f/0fdb268d23a5dccca72bbe0f1ee0a5958d027078.png" data-download-href="https://discuss.coworker365.com/uploads/default/0fdb268d23a5dccca72bbe0f1ee0a5958d027078" title="Bildschirmfoto 2024-10-07 um 11.51.25"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/0/f/0fdb268d23a5dccca72bbe0f1ee0a5958d027078_2_690x350.png" alt="Bildschirmfoto 2024-10-07 um 11.51.25" data-base62-sha1="2ggGMu7SBChiB8VR9lxcZzVkNok" width="690" height="350" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/0/f/0fdb268d23a5dccca72bbe0f1ee0a5958d027078_2_690x350.png, https://discuss.coworker365.com/uploads/default/optimized/3X/0/f/0fdb268d23a5dccca72bbe0f1ee0a5958d027078_2_1035x525.png 1.5x, https://discuss.coworker365.com/uploads/default/optimized/3X/0/f/0fdb268d23a5dccca72bbe0f1ee0a5958d027078_2_1380x700.png 2x" data-dominant-color="FDFDFD"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Bildschirmfoto 2024-10-07 um 11.51.25</span><span class="informations">2918×1482 206 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
             </div>
 
             <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
@@ -165,7 +165,7 @@
           <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/revant_one'><span itemprop='name'>revant_one</span></a>
                 
               </span>
 
@@ -193,7 +193,7 @@
           <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/raghavendra'><span itemprop='name'>raghavendra</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/raghavendra'><span itemprop='name'>raghavendra</span></a>
                 
               </span>
 
@@ -221,7 +221,7 @@
           <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/asieftejani'><span itemprop='name'>asieftejani</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/asieftejani'><span itemprop='name'>asieftejani</span></a>
                 
               </span>
 
@@ -240,7 +240,7 @@
 <p>Good — that’s a situation that comes up fairly often in <strong>custom ERPNext deployments</strong>, especially when you’re using webhooks that depend on a document’s status change.<br>
 Let’s troubleshoot this <strong>step by step</strong>, with ERPNext v15 and Docker context in mind.</p>
 <hr>
-<h2><a name="p-485930-h-1-verify-the-webhooks-event-configuration-1" class="anchor" href="#p-485930-h-1-verify-the-webhooks-event-configuration-1"></a><img src="https://discuss.frappe.io/images/emoji/twitter/puzzle_piece.png?v=14" title=":puzzle_piece:" class="emoji" alt=":puzzle_piece:" loading="lazy" width="20" height="20"> 1. Verify the Webhook’s Event Configuration</h2>
+<h2><a name="p-485930-h-1-verify-the-webhooks-event-configuration-1" class="anchor" href="#p-485930-h-1-verify-the-webhooks-event-configuration-1"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/puzzle_piece.png?v=14" title=":puzzle_piece:" class="emoji" alt=":puzzle_piece:" loading="lazy" width="20" height="20"> 1. Verify the Webhook’s Event Configuration</h2>
 <p>You said:</p>
 <blockquote>
 <p>The webhook is configured for <code>on_update</code> and fires when status = “Accepted”.</p>
@@ -271,7 +271,7 @@ So we must confirm that the correct event (<code>on_update</code>) actually runs
 <li>If you’re updating <strong>Application Status</strong> through a workflow or UI, the method triggered might not be <code>on_update</code>, but rather <code>on_change</code> or even <code>validate</code> (depending on how that Doctype saves status transitions).</li>
 </ul>
 <hr>
-<h2><a name="p-485930-h-2-how-erpnext-handles-status-change-updates-2" class="anchor" href="#p-485930-h-2-how-erpnext-handles-status-change-updates-2"></a><img src="https://discuss.frappe.io/images/emoji/twitter/gear.png?v=14" title=":gear:" class="emoji" alt=":gear:" loading="lazy" width="20" height="20"> 2. How ERPNext Handles “Status Change” Updates</h2>
+<h2><a name="p-485930-h-2-how-erpnext-handles-status-change-updates-2" class="anchor" href="#p-485930-h-2-how-erpnext-handles-status-change-updates-2"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/gear.png?v=14" title=":gear:" class="emoji" alt=":gear:" loading="lazy" width="20" height="20"> 2. How ERPNext Handles “Status Change” Updates</h2>
 <p>In Doctypes like <strong>Job Applicant</strong> or <strong>Job Application</strong>, changing the status to “Accepted” usually triggers code in the <strong>HR module’s Python controller</strong>, not a direct <code>on_update</code>.</p>
 <ul>
 <li>
@@ -281,7 +281,7 @@ So we must confirm that the correct event (<code>on_update</code>) actually runs
 <p>In such cases, <code>on_update</code> might not fire because Frappe doesn’t re-save the document.</p>
 </li>
 </ul>
-<p><img src="https://discuss.frappe.io/images/emoji/twitter/brain.png?v=14" title=":brain:" class="emoji" alt=":brain:" loading="lazy" width="20" height="20"> <strong>Test</strong>:</p>
+<p><img src="https://discuss.coworker365.com/images/emoji/twitter/brain.png?v=14" title=":brain:" class="emoji" alt=":brain:" loading="lazy" width="20" height="20"> <strong>Test</strong>:</p>
 <ol>
 <li>
 <p>Open the console:</p>
@@ -301,7 +301,7 @@ doc.save()
 </ol>
 <p>If it fires here, then the issue is <strong>workflow or UI update path not triggering <code>on_update</code></strong>.</p>
 <hr>
-<h2><a name="p-485930-h-3-check-logs-for-webhook-activity-3" class="anchor" href="#p-485930-h-3-check-logs-for-webhook-activity-3"></a><img src="https://discuss.frappe.io/images/emoji/twitter/feather.png?v=14" title=":feather:" class="emoji" alt=":feather:" loading="lazy" width="20" height="20"> 3. Check Logs for Webhook Activity</h2>
+<h2><a name="p-485930-h-3-check-logs-for-webhook-activity-3" class="anchor" href="#p-485930-h-3-check-logs-for-webhook-activity-3"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/feather.png?v=14" title=":feather:" class="emoji" alt=":feather:" loading="lazy" width="20" height="20"> 3. Check Logs for Webhook Activity</h2>
 <p>Inside your backend container:</p>
 <pre><code class="lang-auto">docker compose logs -f backend | grep webhook
 
@@ -313,7 +313,7 @@ doc.save()
 <p>If the webhook doesn’t even appear there, it means the event never reached the trigger function.</p>
 <p>If you see something like “Error while firing webhook,” it’s a different issue (e.g., request failure).</p>
 <hr>
-<h2><a name="p-485930-h-4-verify-the-condition-expression-4" class="anchor" href="#p-485930-h-4-verify-the-condition-expression-4"></a><img src="https://discuss.frappe.io/images/emoji/twitter/brain.png?v=14" title=":brain:" class="emoji" alt=":brain:" loading="lazy" width="20" height="20"> 4. Verify the Condition Expression</h2>
+<h2><a name="p-485930-h-4-verify-the-condition-expression-4" class="anchor" href="#p-485930-h-4-verify-the-condition-expression-4"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/brain.png?v=14" title=":brain:" class="emoji" alt=":brain:" loading="lazy" width="20" height="20"> 4. Verify the Condition Expression</h2>
 <p>In the Webhook configuration, make sure:</p>
 <ul>
 <li>
@@ -335,7 +335,7 @@ eval('doc.status == "Accepted"', {}, {"doc": doc})
 </ul>
 <p>If that returns <code>True</code>, condition is valid.</p>
 <hr>
-<h2><a name="p-485930-h-5-alternative-more-reliable-hook-event-after_save-5" class="anchor" href="#p-485930-h-5-alternative-more-reliable-hook-event-after_save-5"></a><img src="https://discuss.frappe.io/images/emoji/twitter/toolbox.png?v=14" title=":toolbox:" class="emoji" alt=":toolbox:" loading="lazy" width="20" height="20"> 5. Alternative (More Reliable) Hook Event: <code>after_save</code></h2>
+<h2><a name="p-485930-h-5-alternative-more-reliable-hook-event-after_save-5" class="anchor" href="#p-485930-h-5-alternative-more-reliable-hook-event-after_save-5"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/toolbox.png?v=14" title=":toolbox:" class="emoji" alt=":toolbox:" loading="lazy" width="20" height="20"> 5. Alternative (More Reliable) Hook Event: <code>after_save</code></h2>
 <p>Try changing the webhook event from <strong>on_update</strong> to <strong>after_save</strong>.<br>
 This fires consistently after any save (even workflow-triggered ones).</p>
 <p>You can test it by:</p>
@@ -352,7 +352,7 @@ This fires consistently after any save (even workflow-triggered ones).</p>
 </ol>
 <p><code>after_save</code> is safer for workflow-driven status changes.</p>
 <hr>
-<h2><a name="p-485930-h-6-confirm-webhook-is-enabled-6" class="anchor" href="#p-485930-h-6-confirm-webhook-is-enabled-6"></a><img src="https://discuss.frappe.io/images/emoji/twitter/receipt.png?v=14" title=":receipt:" class="emoji" alt=":receipt:" loading="lazy" width="20" height="20"> 6. Confirm Webhook is Enabled</h2>
+<h2><a name="p-485930-h-6-confirm-webhook-is-enabled-6" class="anchor" href="#p-485930-h-6-confirm-webhook-is-enabled-6"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/receipt.png?v=14" title=":receipt:" class="emoji" alt=":receipt:" loading="lazy" width="20" height="20"> 6. Confirm Webhook is Enabled</h2>
 <p>Obvious but often missed:</p>
 <ul>
 <li>
@@ -363,7 +363,7 @@ This fires consistently after any save (even workflow-triggered ones).</p>
 </li>
 </ul>
 <hr>
-<h2><a name="p-485930-h-7-double-check-docker-networking-7" class="anchor" href="#p-485930-h-7-double-check-docker-networking-7"></a><img src="https://discuss.frappe.io/images/emoji/twitter/brick.png?v=14" title=":brick:" class="emoji" alt=":brick:" loading="lazy" width="20" height="20"> 7. Double Check: Docker Networking</h2>
+<h2><a name="p-485930-h-7-double-check-docker-networking-7" class="anchor" href="#p-485930-h-7-double-check-docker-networking-7"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/brick.png?v=14" title=":brick:" class="emoji" alt=":brick:" loading="lazy" width="20" height="20"> 7. Double Check: Docker Networking</h2>
 <p>If your webhook points to an external URL:</p>
 <ul>
 <li>
@@ -378,7 +378,7 @@ This fires consistently after any save (even workflow-triggered ones).</p>
 </li>
 </ul>
 <hr>
-<h2><a name="p-485930-tldr-likely-cause-and-fix-8" class="anchor" href="#p-485930-tldr-likely-cause-and-fix-8"></a><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> TL;DR: Likely Cause and Fix</h2>
+<h2><a name="p-485930-tldr-likely-cause-and-fix-8" class="anchor" href="#p-485930-tldr-likely-cause-and-fix-8"></a><img src="https://discuss.coworker365.com/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> TL;DR: Likely Cause and Fix</h2>
 <div class="md-table">
 <table>
 <thead>
@@ -479,7 +479,7 @@ This fires consistently after any save (even workflow-triggered ones).</p>
 </footer>
 
     <div class="erpnext-footer">
-    <a href="https://frappe.io">Frappe</a>
+    <a href="https://coworker365.com">Frappe</a>
 </div>
     
   </body>

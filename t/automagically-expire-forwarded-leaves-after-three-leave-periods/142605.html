@@ -6,53 +6,53 @@
     <meta name="description" content="Hello friends, 
 I have been trying to create a leave type with carry forward selected. I wanted to make sure that any forwarded leaves from the back three leave periods expire and are not to be added to available leaves.&amp;hellip;">
     <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
-<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
-<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<link rel="icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
 <meta name="theme-color" media="all" content="#fff">
 
 <meta name="color-scheme" content="light">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-<link rel="canonical" href="https://discuss.frappe.io/t/automagically-expire-forwarded-leaves-after-three-leave-periods/142605" />
+<link rel="canonical" href="https://discuss.coworker365.com/t/automagically-expire-forwarded-leaves-after-three-leave-periods/142605" />
 
-<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.coworker365.com/opensearch.xml" title="Frappe Forum Search">
 
-    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
 
-<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common"  />
 
-  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop"  />
 
 
 
-    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
-    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
-    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
-    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
-    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
-    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
-    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
-    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
-    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
-    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
-    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
-    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
-    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
-    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll_desktop"  />
 
-  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
-    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
 
     
     
-        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Automagically expire forwarded leaves after three leave periods&#39;" href="https://discuss.frappe.io/t/automagically-expire-forwarded-leaves-after-three-leave-periods/142605.rss" />
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Automagically expire forwarded leaves after three leave periods&#39;" href="https://discuss.coworker365.com/t/automagically-expire-forwarded-leaves-after-three-leave-periods/142605.rss" />
     <meta property="og:site_name" content="Frappe Forum" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
-<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
-<meta property="og:url" content="https://discuss.frappe.io/t/automagically-expire-forwarded-leaves-after-three-leave-periods/142605" />
-<meta name="twitter:url" content="https://discuss.frappe.io/t/automagically-expire-forwarded-leaves-after-three-leave-periods/142605" />
+<meta name="twitter:image" content="https://discuss.coworker365.com/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.coworker365.com/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.coworker365.com/t/automagically-expire-forwarded-leaves-after-three-leave-periods/142605" />
+<meta name="twitter:url" content="https://discuss.coworker365.com/t/automagically-expire-forwarded-leaves-after-three-leave-periods/142605" />
 <meta property="og:title" content="Automagically expire forwarded leaves after three leave periods" />
 <meta name="twitter:title" content="Automagically expire forwarded leaves after three leave periods" />
 <meta property="og:description" content="Hello friends,  I have been trying to create a leave type with carry forward selected. I wanted to make sure that any forwarded leaves from the back three leave periods expire and are not to be added to available leaves. I have prepared the leave period with one year (Jan to Dec).  Tried to use Expire Carry Forwarded Leaves (Days) but it is not clear how it works and is not included in the documentation.  Can someone please suggest me a better solution to achieve this?" />
@@ -64,14 +64,14 @@ I have been trying to create a leave type with carry forward selected. I wanted 
 <meta property="og:ignore_canonical" content="true" />
 
 
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Automagically expire forwarded leaves after three leave periods","mainEntity":{"@type":"Question","name":"Automagically expire forwarded leaves after three leave periods","text":"Hello friends,\n\nI have been trying to create a leave type with carry forward selected. I wanted to make sure that any forwarded leaves from the back three leave periods expire and are not to be added to available leaves. I have prepared the leave period with one year (Jan to Dec).\n\nTried to use Expi&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-02-18T17:03:01.028Z","author":{"@type":"Person","name":"elhananjair","url":"https://discuss.frappe.io/u/elhananjair"}}}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Automagically expire forwarded leaves after three leave periods","mainEntity":{"@type":"Question","name":"Automagically expire forwarded leaves after three leave periods","text":"Hello friends,\n\nI have been trying to create a leave type with carry forward selected. I wanted to make sure that any forwarded leaves from the back three leave periods expire and are not to be added to available leaves. I have prepared the leave period with one year (Jan to Dec).\n\nTried to use Expi&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-02-18T17:03:01.028Z","author":{"@type":"Person","name":"elhananjair","url":"https://discuss.coworker365.com/u/elhananjair"}}}</script>
   </head>
   <body class="crawler ">
     <div class="erpnext-header">
-    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://coworker365.com" target="_blank">coworker365.com</a>
     <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
-    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
-    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://docs.coworker365.com/" target="_blank">Documentation</a>
+    <a href="https://coworker365.com/partners" target="_blank">Partners</a>
     <a href="https://frappe.school" target="_blank">Frappe School</a>
     <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
     <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
@@ -101,7 +101,7 @@ I have been trying to create a leave type with carry forward selected. I wanted 
 
       <div class="topic-category">
         <div class='discourse-tags list-tags'>
-            <a href='https://discuss.frappe.io/tag/documentation' class='discourse-tag' rel="tag">documentation</a>
+            <a href='https://discuss.coworker365.com/tag/documentation' class='discourse-tag' rel="tag">documentation</a>
         </div>
       </div>
   </div>
@@ -110,14 +110,14 @@ I have been trying to create a leave type with carry forward selected. I wanted 
 
     <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
       <meta itemprop='headline' content='Automagically expire forwarded leaves after three leave periods'>
-      <link itemprop='url' href='https://discuss.frappe.io/t/automagically-expire-forwarded-leaves-after-three-leave-periods/142605'>
+      <link itemprop='url' href='https://discuss.coworker365.com/t/automagically-expire-forwarded-leaves-after-three-leave-periods/142605'>
       <meta itemprop='datePublished' content='2025-02-18T17:03:01Z'>
         <meta itemprop='articleSection' content='Frappe HR'>
       <meta itemprop='keywords' content='documentation'>
       <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
         <meta itemprop='name' content='Frappe'>
           <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
-            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+            <meta itemprop='url' content='https://discuss.coworker365.com/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
           </div>
       </div>
 
@@ -125,11 +125,11 @@ I have been trying to create a leave type with carry forward selected. I wanted 
           <div id='post_1'  class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/elhananjair'><span itemprop='name'>elhananjair</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/elhananjair'><span itemprop='name'>elhananjair</span></a>
                 
               </span>
 
-                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/automagically-expire-forwarded-leaves-after-three-leave-periods/142605">
+                <link itemprop="mainEntityOfPage" href="https://discuss.coworker365.com/t/automagically-expire-forwarded-leaves-after-three-leave-periods/142605">
 
 
               <span class="crawler-post-infos">
@@ -143,7 +143,7 @@ I have been trying to create a leave type with carry forward selected. I wanted 
             <div class='post' itemprop='text'>
               <p>Hello friends,<br>
 I have been trying to create a leave type with <strong>carry forward</strong> selected. I wanted to make sure that any forwarded leaves from the back three leave periods expire and are not to be added to available leaves. I have prepared the leave period with one year (Jan to Dec).</p>
-<p>Tried to use <strong>Expire Carry Forwarded Leaves (Days)</strong> but it is not clear how it works and is not included in the <a href="https://docs.frappe.io/hr/leave-type" rel="noopener nofollow ugc">documentation</a>.<br>
+<p>Tried to use <strong>Expire Carry Forwarded Leaves (Days)</strong> but it is not clear how it works and is not included in the <a href="https://docs.coworker365.com/hr/leave-type" rel="noopener nofollow ugc">documentation</a>.<br>
 Can someone please suggest me a better solution to achieve this?</p>
             </div>
 
@@ -157,7 +157,7 @@ Can someone please suggest me a better solution to achieve this?</p>
           <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/elhananjair'><span itemprop='name'>elhananjair</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/elhananjair'><span itemprop='name'>elhananjair</span></a>
                 
               </span>
 
@@ -172,7 +172,7 @@ Can someone please suggest me a better solution to achieve this?</p>
               </span>
             </div>
             <div class='post' itemprop='text'>
-              <p>Since I haven’t received any response on this, I just limited the maximum forwarded leaves so that an employee can not get any excess leaves, which should expire after a certain leave period. <img src="https://discuss.frappe.io/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+              <p>Since I haven’t received any response on this, I just limited the maximum forwarded leaves so that an employee can not get any excess leaves, which should expire after a certain leave period. <img src="https://discuss.coworker365.com/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
             </div>
 
             <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
@@ -185,7 +185,7 @@ Can someone please suggest me a better solution to achieve this?</p>
           <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/elhananjair'><span itemprop='name'>elhananjair</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/elhananjair'><span itemprop='name'>elhananjair</span></a>
                 
               </span>
 
@@ -219,7 +219,7 @@ Therefore, I want to expire 12 days, which are carried forward from the 22-23 le
           <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/elhananjair'><span itemprop='name'>elhananjair</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/elhananjair'><span itemprop='name'>elhananjair</span></a>
                 
               </span>
 
@@ -287,7 +287,7 @@ Therefore, I want to expire 12 days, which are carried forward from the 22-23 le
 </footer>
 
     <div class="erpnext-footer">
-    <a href="https://frappe.io">Frappe</a>
+    <a href="https://coworker365.com">Frappe</a>
 </div>
     
   </body>

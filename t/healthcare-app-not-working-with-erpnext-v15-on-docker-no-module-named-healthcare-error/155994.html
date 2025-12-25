@@ -7,53 +7,53 @@
 I’m trying to install the Healthcare app alongside ERPNext v15 (using the official Docker setup), but it’s not working correctly. 
 The setup completes without visible errors, yet when I open t&amp;hellip;">
     <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
-<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
-<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<link rel="icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
 <meta name="theme-color" media="all" content="#fff">
 
 <meta name="color-scheme" content="light">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-<link rel="canonical" href="https://discuss.frappe.io/t/healthcare-app-not-working-with-erpnext-v15-on-docker-no-module-named-healthcare-error/155994" />
+<link rel="canonical" href="https://discuss.coworker365.com/t/healthcare-app-not-working-with-erpnext-v15-on-docker-no-module-named-healthcare-error/155994" />
 
-<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.coworker365.com/opensearch.xml" title="Frappe Forum Search">
 
-    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
 
-<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common"  />
 
-  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop"  />
 
 
 
-    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
-    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
-    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
-    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
-    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
-    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
-    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
-    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
-    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
-    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
-    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
-    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
-    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
-    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll_desktop"  />
 
-  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
-    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
 
     
     
-        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Healthcare app not working with ERPNext v15 on Docker — “No module named healthcare” error&#39;" href="https://discuss.frappe.io/t/healthcare-app-not-working-with-erpnext-v15-on-docker-no-module-named-healthcare-error/155994.rss" />
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Healthcare app not working with ERPNext v15 on Docker — “No module named healthcare” error&#39;" href="https://discuss.coworker365.com/t/healthcare-app-not-working-with-erpnext-v15-on-docker-no-module-named-healthcare-error/155994.rss" />
     <meta property="og:site_name" content="Frappe Forum" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
-<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
-<meta property="og:url" content="https://discuss.frappe.io/t/healthcare-app-not-working-with-erpnext-v15-on-docker-no-module-named-healthcare-error/155994" />
-<meta name="twitter:url" content="https://discuss.frappe.io/t/healthcare-app-not-working-with-erpnext-v15-on-docker-no-module-named-healthcare-error/155994" />
+<meta name="twitter:image" content="https://discuss.coworker365.com/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.coworker365.com/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.coworker365.com/t/healthcare-app-not-working-with-erpnext-v15-on-docker-no-module-named-healthcare-error/155994" />
+<meta name="twitter:url" content="https://discuss.coworker365.com/t/healthcare-app-not-working-with-erpnext-v15-on-docker-no-module-named-healthcare-error/155994" />
 <meta property="og:title" content="Healthcare app not working with ERPNext v15 on Docker — “No module named healthcare” error" />
 <meta name="twitter:title" content="Healthcare app not working with ERPNext v15 on Docker — “No module named healthcare” error" />
 <meta property="og:description" content="Hey everyone 👋  I’m trying to install the Healthcare app alongside ERPNext v15 (using the official Docker setup), but it’s not working correctly.  The setup completes without visible errors, yet when I open the site or run bench build, I keep getting this error:  ModuleNotFoundError: No module named &#39;healthcare&#39;  Even though the app is cloned correctly under /home/frappe/frappe-bench/apps/healthcare, it doesn’t load and the site breaks.   What I’ve already tried:   Rebuilt custom ima..." />
@@ -71,14 +71,14 @@ The setup completes without visible errors, yet when I open t&amp;hellip;">
 <meta property="og:ignore_canonical" content="true" />
 
 
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Healthcare app not working with ERPNext v15 on Docker — “No module named healthcare” error","mainEntity":{"@type":"Question","name":"Healthcare app not working with ERPNext v15 on Docker — “No module named healthcare” error","text":"Hey everyone :waving_hand:\n\nI’m trying to install the Healthcare app alongside ERPNext v15 (using the official Docker setup), but it’s not working correctly.\n\nThe setup completes without visible errors, yet when I open the site or run bench build, I keep getting this error:\n\nModuleNotFoundError: No &hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-10-25T10:57:07.107Z","author":{"@type":"Person","name":"sureshkhichi","url":"https://discuss.frappe.io/u/sureshkhichi"}}}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Healthcare app not working with ERPNext v15 on Docker — “No module named healthcare” error","mainEntity":{"@type":"Question","name":"Healthcare app not working with ERPNext v15 on Docker — “No module named healthcare” error","text":"Hey everyone :waving_hand:\n\nI’m trying to install the Healthcare app alongside ERPNext v15 (using the official Docker setup), but it’s not working correctly.\n\nThe setup completes without visible errors, yet when I open the site or run bench build, I keep getting this error:\n\nModuleNotFoundError: No &hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-10-25T10:57:07.107Z","author":{"@type":"Person","name":"sureshkhichi","url":"https://discuss.coworker365.com/u/sureshkhichi"}}}</script>
   </head>
   <body class="crawler ">
     <div class="erpnext-header">
-    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://coworker365.com" target="_blank">coworker365.com</a>
     <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
-    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
-    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://docs.coworker365.com/" target="_blank">Documentation</a>
+    <a href="https://coworker365.com/partners" target="_blank">Partners</a>
     <a href="https://frappe.school" target="_blank">Frappe School</a>
     <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
     <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
@@ -108,9 +108,9 @@ The setup completes without visible errors, yet when I open t&amp;hellip;">
 
       <div class="topic-category">
         <div class='discourse-tags list-tags'>
-            <a href='https://discuss.frappe.io/tag/healthcare' class='discourse-tag' rel="tag">healthcare</a>, 
-            <a href='https://discuss.frappe.io/tag/installation_problem' class='discourse-tag' rel="tag">installation_problem</a>, 
-            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>
+            <a href='https://discuss.coworker365.com/tag/healthcare' class='discourse-tag' rel="tag">healthcare</a>, 
+            <a href='https://discuss.coworker365.com/tag/installation_problem' class='discourse-tag' rel="tag">installation_problem</a>, 
+            <a href='https://discuss.coworker365.com/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>
         </div>
       </div>
   </div>
@@ -119,14 +119,14 @@ The setup completes without visible errors, yet when I open t&amp;hellip;">
 
     <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
       <meta itemprop='headline' content='Healthcare app not working with ERPNext v15 on Docker — “No module named healthcare” error'>
-      <link itemprop='url' href='https://discuss.frappe.io/t/healthcare-app-not-working-with-erpnext-v15-on-docker-no-module-named-healthcare-error/155994'>
+      <link itemprop='url' href='https://discuss.coworker365.com/t/healthcare-app-not-working-with-erpnext-v15-on-docker-no-module-named-healthcare-error/155994'>
       <meta itemprop='datePublished' content='2025-10-25T10:57:07Z'>
         <meta itemprop='articleSection' content='Healthcare'>
       <meta itemprop='keywords' content='healthcare, installation_problem, erpnext'>
       <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
         <meta itemprop='name' content='Frappe'>
           <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
-            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+            <meta itemprop='url' content='https://discuss.coworker365.com/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
           </div>
       </div>
 
@@ -134,11 +134,11 @@ The setup completes without visible errors, yet when I open t&amp;hellip;">
           <div id='post_1'  class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/sureshkhichi'><span itemprop='name'>sureshkhichi</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/sureshkhichi'><span itemprop='name'>sureshkhichi</span></a>
                 
               </span>
 
-                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/healthcare-app-not-working-with-erpnext-v15-on-docker-no-module-named-healthcare-error/155994">
+                <link itemprop="mainEntityOfPage" href="https://discuss.coworker365.com/t/healthcare-app-not-working-with-erpnext-v15-on-docker-no-module-named-healthcare-error/155994">
 
 
               <span class="crawler-post-infos">
@@ -150,7 +150,7 @@ The setup completes without visible errors, yet when I open t&amp;hellip;">
               </span>
             </div>
             <div class='post' itemprop='text'>
-              <p>Hey everyone <img src="https://discuss.frappe.io/images/emoji/twitter/waving_hand.png?v=14" title=":waving_hand:" class="emoji" alt=":waving_hand:" loading="lazy" width="20" height="20"></p>
+              <p>Hey everyone <img src="https://discuss.coworker365.com/images/emoji/twitter/waving_hand.png?v=14" title=":waving_hand:" class="emoji" alt=":waving_hand:" loading="lazy" width="20" height="20"></p>
 <p>I’m trying to install the <strong>Healthcare app alongside ERPNext v15</strong> (using the official Docker setup), but it’s not working correctly.<br>
 The setup completes without visible errors, yet when I open the site or run <code>bench build</code>, I keep getting this error:</p>
 <pre><code class="lang-auto">ModuleNotFoundError: No module named 'healthcare'
@@ -185,7 +185,7 @@ bench --site frontend install-app healthcare
 <h3><a name="p-484870-actual-3" class="anchor" href="#p-484870-actual-3"></a>Actual:</h3>
 <p><code>ModuleNotFoundError</code> + broken site, even though the app files exist.</p>
 <hr>
-<p>Any suggestions or known fixes from anyone who successfully ran <strong>Healthcare with ERPNext v15 Docker</strong> would be hugely appreciated <img src="https://discuss.frappe.io/images/emoji/twitter/folded_hands.png?v=14" title=":folded_hands:" class="emoji" alt=":folded_hands:" loading="lazy" width="20" height="20"></p>
+<p>Any suggestions or known fixes from anyone who successfully ran <strong>Healthcare with ERPNext v15 Docker</strong> would be hugely appreciated <img src="https://discuss.coworker365.com/images/emoji/twitter/folded_hands.png?v=14" title=":folded_hands:" class="emoji" alt=":folded_hands:" loading="lazy" width="20" height="20"></p>
 <hr>
 <p><em>(Tags: <code>erpnext</code>, <code>healthcare</code>, <code>installation_problem</code>, <code>docker</code>)</em></p>
             </div>
@@ -200,7 +200,7 @@ bench --site frontend install-app healthcare
           <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/n002213f'><span itemprop='name'>n002213f</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/n002213f'><span itemprop='name'>n002213f</span></a>
                 
               </span>
 
@@ -229,7 +229,7 @@ bench --site frontend install-app healthcare
           <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/asieftejani'><span itemprop='name'>asieftejani</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/asieftejani'><span itemprop='name'>asieftejani</span></a>
                 
               </span>
 
@@ -285,7 +285,7 @@ bench --site frontend install-app healthcare
           <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/sureshkhichi'><span itemprop='name'>sureshkhichi</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/sureshkhichi'><span itemprop='name'>sureshkhichi</span></a>
                 
               </span>
 
@@ -301,7 +301,7 @@ bench --site frontend install-app healthcare
             </div>
             <div class='post' itemprop='text'>
               <p><strong>Hi <a class="mention" href="/u/asieftejani">@asieftejani</a>,</strong></p>
-<p>Thanks a lot for the detailed response — that really clarified the Docker part <img src="https://discuss.frappe.io/images/emoji/twitter/folded_hands.png?v=14" title=":folded_hands:" class="emoji" alt=":folded_hands:" loading="lazy" width="20" height="20"></p>
+<p>Thanks a lot for the detailed response — that really clarified the Docker part <img src="https://discuss.coworker365.com/images/emoji/twitter/folded_hands.png?v=14" title=":folded_hands:" class="emoji" alt=":folded_hands:" loading="lazy" width="20" height="20"></p>
 <p>Just wanted to check one thing: since the original <strong>ERPNext Healthcare</strong> module is now discontinued and outsourced to <strong><a href="https://github.com/earthians/marley" rel="noopener nofollow ugc">Marley by Earthians</a></strong>,<br>
 what’s the recommended option now for running healthcare-related use-cases within the Frappe/ERPNext ecosystem?</p>
 <p>For example, if someone needs hospital management, patient records, appointments, or lab modules —<br>
@@ -314,7 +314,7 @@ should we:</p>
 <p>Is there any <strong>maintained healthcare app</strong> that still works with <strong>ERPNext v15</strong> (Docker or non-Docker)?</p>
 </li>
 </ol>
-<p>Would appreciate your guidance on how healthcare setups are being handled in the new ERPNext ecosystem <img src="https://discuss.frappe.io/images/emoji/twitter/raising_hands.png?v=14" title=":raising_hands:" class="emoji" alt=":raising_hands:" loading="lazy" width="20" height="20"></p>
+<p>Would appreciate your guidance on how healthcare setups are being handled in the new ERPNext ecosystem <img src="https://discuss.coworker365.com/images/emoji/twitter/raising_hands.png?v=14" title=":raising_hands:" class="emoji" alt=":raising_hands:" loading="lazy" width="20" height="20"></p>
             </div>
 
             <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
@@ -327,7 +327,7 @@ should we:</p>
           <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/akurungadam'><span itemprop='name'>akurungadam</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/akurungadam'><span itemprop='name'>akurungadam</span></a>
                 
               </span>
 
@@ -358,7 +358,7 @@ should we:</p>
           <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/asieftejani'><span itemprop='name'>asieftejani</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/asieftejani'><span itemprop='name'>asieftejani</span></a>
                 
               </span>
 
@@ -426,7 +426,7 @@ should we:</p>
 </footer>
 
     <div class="erpnext-footer">
-    <a href="https://frappe.io">Frappe</a>
+    <a href="https://coworker365.com">Frappe</a>
 </div>
     
   </body>

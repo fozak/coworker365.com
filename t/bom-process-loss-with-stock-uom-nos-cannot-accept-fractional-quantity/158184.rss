@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>BOM Process Loss with Stock UOM = Nos cannot accept fractional quantity</title>
-    <link>https://discuss.frappe.io/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184</link>
+    <link>https://discuss.coworker365.com/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184</link>
     <description>Hi everyone,
 
 I am facing an issue with Process Loss configuration in a BOM.
@@ -27,7 +27,7 @@ Thanks in advance.</description>
     
     <lastBuildDate>Wed, 24 Dec 2025 16:25:52 +0000</lastBuildDate>
     <category>Manufacturing</category>
-    <atom:link href="https://discuss.frappe.io/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184.rss" rel="self" type="application/rss+xml" />
+    <atom:link href="https://discuss.coworker365.com/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184.rss" rel="self" type="application/rss+xml" />
       <item>
         <title>BOM Process Loss with Stock UOM = Nos cannot accept fractional quantity</title>
         <dc:creator><![CDATA[Archana-1230]]></dc:creator>
@@ -36,25 +36,25 @@ Thanks in advance.</description>
 For items with Stock UOM = Nos, loss is inherently discrete, not percentage-based.<br>
 Because of this, fractional loss is logically invalid and ERPNext blocks it by design.<br>
 It’s best to treat process loss and count-based rejection as different concepts and align BOM design accordingly, rather than forcing percentages on whole-number items.</p>
-          <p><a href="https://discuss.frappe.io/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184/3">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184/3">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184/3</link>
+        <link>https://discuss.coworker365.com/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184/3</link>
         <pubDate>Wed, 24 Dec 2025 16:25:52 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-158184-3</guid>
-        <source url="https://discuss.frappe.io/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184.rss">BOM Process Loss with Stock UOM = Nos cannot accept fractional quantity</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-158184-3</guid>
+        <source url="https://discuss.coworker365.com/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184.rss">BOM Process Loss with Stock UOM = Nos cannot accept fractional quantity</source>
       </item>
       <item>
         <title>BOM Process Loss with Stock UOM = Nos cannot accept fractional quantity</title>
         <dc:creator><![CDATA[ahsantareen]]></dc:creator>
         <description><![CDATA[
-            <p>Hi <a class="mention" href="https://discuss.frappe.io/u/sfarbod">@sfarbod</a></p>
+            <p>Hi <a class="mention" href="https://discuss.coworker365.com/u/sfarbod">@sfarbod</a></p>
 <p>Each Float or Currency fields are programmed to record precision to a 9 level. These precisions can be controlled from <strong>system setting</strong> doctype globally. On the other hand, Process Loss Qty field type is float against which precision can be set to Zero by customizing the stock entry doctype particularly.</p>
-          <p><a href="https://discuss.frappe.io/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184/2">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184/2">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184/2</link>
+        <link>https://discuss.coworker365.com/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184/2</link>
         <pubDate>Mon, 22 Dec 2025 11:39:13 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-158184-2</guid>
-        <source url="https://discuss.frappe.io/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184.rss">BOM Process Loss with Stock UOM = Nos cannot accept fractional quantity</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-158184-2</guid>
+        <source url="https://discuss.coworker365.com/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184.rss">BOM Process Loss with Stock UOM = Nos cannot accept fractional quantity</source>
       </item>
       <item>
         <title>BOM Process Loss with Stock UOM = Nos cannot accept fractional quantity</title>
@@ -74,12 +74,12 @@ for count-based items (Stock UOM = Nos)?<br>
 Is changing the Stock UOM or avoiding Process Loss and using Scrap instead the only solution?</p>
 <p>Any guidance or best practice would be appreciated.</p>
 <p>Thanks in advance.</p>
-          <p><a href="https://discuss.frappe.io/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184/1">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184/1">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184/1</link>
+        <link>https://discuss.coworker365.com/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184/1</link>
         <pubDate>Sun, 21 Dec 2025 10:35:47 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-158184-1</guid>
-        <source url="https://discuss.frappe.io/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184.rss">BOM Process Loss with Stock UOM = Nos cannot accept fractional quantity</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-158184-1</guid>
+        <source url="https://discuss.coworker365.com/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184.rss">BOM Process Loss with Stock UOM = Nos cannot accept fractional quantity</source>
       </item>
   </channel>
 </rss>

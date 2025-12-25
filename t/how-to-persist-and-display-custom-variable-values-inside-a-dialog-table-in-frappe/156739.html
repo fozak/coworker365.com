@@ -7,53 +7,53 @@
 I’m currently building a custom Dialog in Frappe that contains a Table field (using fieldtype: &amp;quot;Table&amp;quot;) to display and edit alternative items in a Work Order form. 
 The dialog works fine — I ca&amp;hellip;">
     <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
-<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
-<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<link rel="icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
 <meta name="theme-color" media="all" content="#fff">
 
 <meta name="color-scheme" content="light">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-<link rel="canonical" href="https://discuss.frappe.io/t/how-to-persist-and-display-custom-variable-values-inside-a-dialog-table-in-frappe/156739" />
+<link rel="canonical" href="https://discuss.coworker365.com/t/how-to-persist-and-display-custom-variable-values-inside-a-dialog-table-in-frappe/156739" />
 
-<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.coworker365.com/opensearch.xml" title="Frappe Forum Search">
 
-    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
 
-<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common"  />
 
-  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop"  />
 
 
 
-    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
-    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
-    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
-    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
-    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
-    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
-    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
-    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
-    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
-    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
-    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
-    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
-    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
-    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll_desktop"  />
 
-  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
-    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
 
     
     
-        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;How to persist and display custom variable values inside a Dialog Table in Frappe?&#39;" href="https://discuss.frappe.io/t/how-to-persist-and-display-custom-variable-values-inside-a-dialog-table-in-frappe/156739.rss" />
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;How to persist and display custom variable values inside a Dialog Table in Frappe?&#39;" href="https://discuss.coworker365.com/t/how-to-persist-and-display-custom-variable-values-inside-a-dialog-table-in-frappe/156739.rss" />
     <meta property="og:site_name" content="Frappe Forum" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
-<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
-<meta property="og:url" content="https://discuss.frappe.io/t/how-to-persist-and-display-custom-variable-values-inside-a-dialog-table-in-frappe/156739" />
-<meta name="twitter:url" content="https://discuss.frappe.io/t/how-to-persist-and-display-custom-variable-values-inside-a-dialog-table-in-frappe/156739" />
+<meta name="twitter:image" content="https://discuss.coworker365.com/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.coworker365.com/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.coworker365.com/t/how-to-persist-and-display-custom-variable-values-inside-a-dialog-table-in-frappe/156739" />
+<meta name="twitter:url" content="https://discuss.coworker365.com/t/how-to-persist-and-display-custom-variable-values-inside-a-dialog-table-in-frappe/156739" />
 <meta property="og:title" content="How to persist and display custom variable values inside a Dialog Table in Frappe?" />
 <meta name="twitter:title" content="How to persist and display custom variable values inside a Dialog Table in Frappe?" />
 <meta property="og:description" content="Hi everyone 👋  I’m currently building a custom Dialog in Frappe that contains a Table field (using fieldtype: &quot;Table&quot;) to display and edit alternative items in a Work Order form.  The dialog works fine — I can dynamically load data into the table and update fields like alternate_item, available_qty, and ratio.  However, I’m struggling with how to store and retrieve temporary variables (e.g. cached API data, computed quantities, or custom state) inside the dialog or grid rows." />
@@ -70,14 +70,14 @@ The dialog works fine — I ca&amp;hellip;">
 <meta property="og:ignore_canonical" content="true" />
 
 
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"How to persist and display custom variable values inside a Dialog Table in Frappe?","mainEntity":{"@type":"Question","name":"How to persist and display custom variable values inside a Dialog Table in Frappe?","text":"Hi everyone :waving_hand:\n\nI’m currently building a custom Dialog in Frappe that contains a Table field (using fieldtype: &quot;Table&quot;) to display and edit alternative items in a Work Order form.\n\nThe dialog works fine — I can dynamically load data into the table and update fields like alternate_item, av&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-11-12T08:49:11.365Z","author":{"@type":"Person","name":"NgoAnhKhai","url":"https://discuss.frappe.io/u/NgoAnhKhai"}}}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"How to persist and display custom variable values inside a Dialog Table in Frappe?","mainEntity":{"@type":"Question","name":"How to persist and display custom variable values inside a Dialog Table in Frappe?","text":"Hi everyone :waving_hand:\n\nI’m currently building a custom Dialog in Frappe that contains a Table field (using fieldtype: &quot;Table&quot;) to display and edit alternative items in a Work Order form.\n\nThe dialog works fine — I can dynamically load data into the table and update fields like alternate_item, av&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-11-12T08:49:11.365Z","author":{"@type":"Person","name":"NgoAnhKhai","url":"https://discuss.coworker365.com/u/NgoAnhKhai"}}}</script>
   </head>
   <body class="crawler ">
     <div class="erpnext-header">
-    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://coworker365.com" target="_blank">coworker365.com</a>
     <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
-    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
-    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://docs.coworker365.com/" target="_blank">Documentation</a>
+    <a href="https://coworker365.com/partners" target="_blank">Partners</a>
     <a href="https://frappe.school" target="_blank">Frappe School</a>
     <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
     <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
@@ -116,10 +116,10 @@ The dialog works fine — I ca&amp;hellip;">
 
       <div class="topic-category">
         <div class='discourse-tags list-tags'>
-            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
-            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
-            <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag' rel="tag">customization</a>, 
-            <a href='https://discuss.frappe.io/tag/bug' class='discourse-tag' rel="tag">bug</a>
+            <a href='https://discuss.coworker365.com/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.coworker365.com/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
+            <a href='https://discuss.coworker365.com/tag/customization' class='discourse-tag' rel="tag">customization</a>, 
+            <a href='https://discuss.coworker365.com/tag/bug' class='discourse-tag' rel="tag">bug</a>
         </div>
       </div>
   </div>
@@ -128,14 +128,14 @@ The dialog works fine — I ca&amp;hellip;">
 
     <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
       <meta itemprop='headline' content='How to persist and display custom variable values inside a Dialog Table in Frappe?'>
-      <link itemprop='url' href='https://discuss.frappe.io/t/how-to-persist-and-display-custom-variable-values-inside-a-dialog-table-in-frappe/156739'>
+      <link itemprop='url' href='https://discuss.coworker365.com/t/how-to-persist-and-display-custom-variable-values-inside-a-dialog-table-in-frappe/156739'>
       <meta itemprop='datePublished' content='2025-11-12T08:49:11Z'>
         <meta itemprop='articleSection' content='Customize ERPNext'>
       <meta itemprop='keywords' content='erpnext, frappe, customization, bug'>
       <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
         <meta itemprop='name' content='Frappe'>
           <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
-            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+            <meta itemprop='url' content='https://discuss.coworker365.com/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
           </div>
       </div>
 
@@ -143,11 +143,11 @@ The dialog works fine — I ca&amp;hellip;">
           <div id='post_1'  class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/NgoAnhKhai'><span itemprop='name'>NgoAnhKhai</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/NgoAnhKhai'><span itemprop='name'>NgoAnhKhai</span></a>
                 
               </span>
 
-                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/how-to-persist-and-display-custom-variable-values-inside-a-dialog-table-in-frappe/156739">
+                <link itemprop="mainEntityOfPage" href="https://discuss.coworker365.com/t/how-to-persist-and-display-custom-variable-values-inside-a-dialog-table-in-frappe/156739">
 
 
               <span class="crawler-post-infos">
@@ -159,7 +159,7 @@ The dialog works fine — I ca&amp;hellip;">
               </span>
             </div>
             <div class='post' itemprop='text'>
-              <p>Hi everyone <img src="https://discuss.frappe.io/images/emoji/twitter/waving_hand.png?v=14" title=":waving_hand:" class="emoji" alt=":waving_hand:" loading="lazy" width="20" height="20"></p>
+              <p>Hi everyone <img src="https://discuss.coworker365.com/images/emoji/twitter/waving_hand.png?v=14" title=":waving_hand:" class="emoji" alt=":waving_hand:" loading="lazy" width="20" height="20"></p>
 <p>I’m currently building a custom <code>Dialog</code> in Frappe that contains a <code>Table</code> field (using <code>fieldtype: "Table"</code>) to display and edit alternative items in a <strong>Work Order</strong> form.</p>
 <p>The dialog works fine — I can dynamically load data into the table and update fields like <code>alternate_item</code>, <code>available_qty</code>, and <code>ratio</code>.<br>
 However, I’m struggling with <strong>how to store and retrieve temporary variables</strong> (e.g. cached API data, computed quantities, or custom state) inside the dialog or grid rows.</p>
@@ -175,7 +175,7 @@ However, I’m struggling with <strong>how to store and retrieve temporary varia
           <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Yamen_Zakhour'><span itemprop='name'>Yamen_Zakhour</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/Yamen_Zakhour'><span itemprop='name'>Yamen_Zakhour</span></a>
                 
               </span>
 
@@ -243,7 +243,7 @@ However, I’m struggling with <strong>how to store and retrieve temporary varia
 </footer>
 
     <div class="erpnext-footer">
-    <a href="https://frappe.io">Frappe</a>
+    <a href="https://coworker365.com">Frappe</a>
 </div>
     
   </body>

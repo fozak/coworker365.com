@@ -5,53 +5,53 @@
     <title>Automatic Depreciation Entry Does Not Inherit Branch from Asset - Accounting - Frappe Forum</title>
     <meta name="description" content="We are facing an issue in ERPNext 15 related to automatic depreciation entries. When adding a new asset and enabling the depreciation schedule, the system successfully creates the depreciation journal entry, but it does n&amp;hellip;">
     <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
-<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
-<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<link rel="icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
 <meta name="theme-color" media="all" content="#fff">
 
 <meta name="color-scheme" content="light">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-<link rel="canonical" href="https://discuss.frappe.io/t/automatic-depreciation-entry-does-not-inherit-branch-from-asset/157851" />
+<link rel="canonical" href="https://discuss.coworker365.com/t/automatic-depreciation-entry-does-not-inherit-branch-from-asset/157851" />
 
-<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.coworker365.com/opensearch.xml" title="Frappe Forum Search">
 
-    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
 
-<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common"  />
 
-  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop"  />
 
 
 
-    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
-    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
-    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
-    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
-    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
-    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
-    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
-    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
-    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
-    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
-    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
-    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
-    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
-    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll_desktop"  />
 
-  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
-    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
 
     
     
-        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Automatic Depreciation Entry Does Not Inherit Branch from Asset&#39;" href="https://discuss.frappe.io/t/automatic-depreciation-entry-does-not-inherit-branch-from-asset/157851.rss" />
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Automatic Depreciation Entry Does Not Inherit Branch from Asset&#39;" href="https://discuss.coworker365.com/t/automatic-depreciation-entry-does-not-inherit-branch-from-asset/157851.rss" />
     <meta property="og:site_name" content="Frappe Forum" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/8/d/8dd72886c02a500fae69fa53173f3eb6d2e639e6_2_1024x596.png" />
-<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/8/d/8dd72886c02a500fae69fa53173f3eb6d2e639e6_2_1024x596.png" />
-<meta property="og:url" content="https://discuss.frappe.io/t/automatic-depreciation-entry-does-not-inherit-branch-from-asset/157851" />
-<meta name="twitter:url" content="https://discuss.frappe.io/t/automatic-depreciation-entry-does-not-inherit-branch-from-asset/157851" />
+<meta name="twitter:image" content="https://discuss.coworker365.com/uploads/default/optimized/3X/8/d/8dd72886c02a500fae69fa53173f3eb6d2e639e6_2_1024x596.png" />
+<meta property="og:image" content="https://discuss.coworker365.com/uploads/default/optimized/3X/8/d/8dd72886c02a500fae69fa53173f3eb6d2e639e6_2_1024x596.png" />
+<meta property="og:url" content="https://discuss.coworker365.com/t/automatic-depreciation-entry-does-not-inherit-branch-from-asset/157851" />
+<meta name="twitter:url" content="https://discuss.coworker365.com/t/automatic-depreciation-entry-does-not-inherit-branch-from-asset/157851" />
 <meta property="og:title" content="Automatic Depreciation Entry Does Not Inherit Branch from Asset" />
 <meta name="twitter:title" content="Automatic Depreciation Entry Does Not Inherit Branch from Asset" />
 <meta property="og:description" content="We are facing an issue in ERPNext 15 related to automatic depreciation entries. When adding a new asset and enabling the depreciation schedule, the system successfully creates the depreciation journal entry, but it does not assign the Branch to the entry, even though the asset itself is linked to a specific branch.  How can we resolve this issue?" />
@@ -65,14 +65,14 @@
 <meta property="og:ignore_canonical" content="true" />
 
 
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Automatic Depreciation Entry Does Not Inherit Branch from Asset","mainEntity":{"@type":"Question","name":"Automatic Depreciation Entry Does Not Inherit Branch from Asset","text":"We are facing an issue in ERPNext 15 related to automatic depreciation entries. When adding a new asset and enabling the depreciation schedule, the system successfully creates the depreciation journal entry, but it does not assign the Branch to the entry, even though the asset itself is linked to a &hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-12-10T11:14:26.209Z","author":{"@type":"Person","name":"Ibyabes","url":"https://discuss.frappe.io/u/Ibyabes"}}}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Automatic Depreciation Entry Does Not Inherit Branch from Asset","mainEntity":{"@type":"Question","name":"Automatic Depreciation Entry Does Not Inherit Branch from Asset","text":"We are facing an issue in ERPNext 15 related to automatic depreciation entries. When adding a new asset and enabling the depreciation schedule, the system successfully creates the depreciation journal entry, but it does not assign the Branch to the entry, even though the asset itself is linked to a &hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-12-10T11:14:26.209Z","author":{"@type":"Person","name":"Ibyabes","url":"https://discuss.coworker365.com/u/Ibyabes"}}}</script>
   </head>
   <body class="crawler ">
     <div class="erpnext-header">
-    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://coworker365.com" target="_blank">coworker365.com</a>
     <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
-    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
-    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://docs.coworker365.com/" target="_blank">Documentation</a>
+    <a href="https://coworker365.com/partners" target="_blank">Partners</a>
     <a href="https://frappe.school" target="_blank">Frappe School</a>
     <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
     <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
@@ -111,7 +111,7 @@
 
       <div class="topic-category">
         <div class='discourse-tags list-tags'>
-            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>
+            <a href='https://discuss.coworker365.com/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>
         </div>
       </div>
   </div>
@@ -120,14 +120,14 @@
 
     <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
       <meta itemprop='headline' content='Automatic Depreciation Entry Does Not Inherit Branch from Asset'>
-      <link itemprop='url' href='https://discuss.frappe.io/t/automatic-depreciation-entry-does-not-inherit-branch-from-asset/157851'>
+      <link itemprop='url' href='https://discuss.coworker365.com/t/automatic-depreciation-entry-does-not-inherit-branch-from-asset/157851'>
       <meta itemprop='datePublished' content='2025-12-10T11:14:26Z'>
         <meta itemprop='articleSection' content='Accounting'>
       <meta itemprop='keywords' content='erpnext'>
       <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
         <meta itemprop='name' content='Frappe'>
           <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
-            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+            <meta itemprop='url' content='https://discuss.coworker365.com/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
           </div>
       </div>
 
@@ -135,13 +135,13 @@
           <div id='post_1'  class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Ibyabes'><span itemprop='name'>Ibyabes</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/Ibyabes'><span itemprop='name'>Ibyabes</span></a>
                 
               </span>
 
-                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/automatic-depreciation-entry-does-not-inherit-branch-from-asset/157851">
+                <link itemprop="mainEntityOfPage" href="https://discuss.coworker365.com/t/automatic-depreciation-entry-does-not-inherit-branch-from-asset/157851">
 
-                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/8/d/8dd72886c02a500fae69fa53173f3eb6d2e639e6.png">
+                <link itemprop="image" href="https://discuss.coworker365.com/uploads/default/original/3X/8/d/8dd72886c02a500fae69fa53173f3eb6d2e639e6.png">
 
               <span class="crawler-post-infos">
                   <time  datetime='2025-12-10T11:14:26Z' class='post-time'>
@@ -154,8 +154,8 @@
             <div class='post' itemprop='text'>
               <p>We are facing an issue in ERPNext 15 related to automatic depreciation entries. When adding a new asset and enabling the depreciation schedule, the system successfully creates the depreciation journal entry, but it does <strong>not</strong> assign the <strong>Branch</strong> to the entry, even though the asset itself is linked to a specific branch.</p>
 <p>How can we resolve this issue?</p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/8/d/8dd72886c02a500fae69fa53173f3eb6d2e639e6.png" data-download-href="https://discuss.frappe.io/uploads/default/8dd72886c02a500fae69fa53173f3eb6d2e639e6" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/8/d/8dd72886c02a500fae69fa53173f3eb6d2e639e6_2_689x401.png" alt="image" data-base62-sha1="keMit2IxKSLvIdMMQ8mVy3DP9dA" width="689" height="401" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/8/d/8dd72886c02a500fae69fa53173f3eb6d2e639e6_2_689x401.png, https://discuss.frappe.io/uploads/default/optimized/3X/8/d/8dd72886c02a500fae69fa53173f3eb6d2e639e6_2_1033x601.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/8/d/8dd72886c02a500fae69fa53173f3eb6d2e639e6.png 2x" data-dominant-color="FCFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1308×762 47.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
-<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/f/7f1b7610fcf6d2c40f764bb0a4f6e6901ae24a80.png" data-download-href="https://discuss.frappe.io/uploads/default/7f1b7610fcf6d2c40f764bb0a4f6e6901ae24a80" title="image"><img src="https://discuss.frappe.io/uploads/default/original/3X/7/f/7f1b7610fcf6d2c40f764bb0a4f6e6901ae24a80.png" alt="image" data-base62-sha1="i8rtooQ0Jg5wjbQlGtKHNqpQyze" width="502" height="500" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">692×688 18.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/8/d/8dd72886c02a500fae69fa53173f3eb6d2e639e6.png" data-download-href="https://discuss.coworker365.com/uploads/default/8dd72886c02a500fae69fa53173f3eb6d2e639e6" title="image"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/8/d/8dd72886c02a500fae69fa53173f3eb6d2e639e6_2_689x401.png" alt="image" data-base62-sha1="keMit2IxKSLvIdMMQ8mVy3DP9dA" width="689" height="401" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/8/d/8dd72886c02a500fae69fa53173f3eb6d2e639e6_2_689x401.png, https://discuss.coworker365.com/uploads/default/optimized/3X/8/d/8dd72886c02a500fae69fa53173f3eb6d2e639e6_2_1033x601.png 1.5x, https://discuss.coworker365.com/uploads/default/original/3X/8/d/8dd72886c02a500fae69fa53173f3eb6d2e639e6.png 2x" data-dominant-color="FCFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1308×762 47.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/7/f/7f1b7610fcf6d2c40f764bb0a4f6e6901ae24a80.png" data-download-href="https://discuss.coworker365.com/uploads/default/7f1b7610fcf6d2c40f764bb0a4f6e6901ae24a80" title="image"><img src="https://discuss.coworker365.com/uploads/default/original/3X/7/f/7f1b7610fcf6d2c40f764bb0a4f6e6901ae24a80.png" alt="image" data-base62-sha1="i8rtooQ0Jg5wjbQlGtKHNqpQyze" width="502" height="500" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">692×688 18.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
             </div>
 
             <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
@@ -208,7 +208,7 @@
 </footer>
 
     <div class="erpnext-footer">
-    <a href="https://frappe.io">Frappe</a>
+    <a href="https://coworker365.com">Frappe</a>
 </div>
     
   </body>
