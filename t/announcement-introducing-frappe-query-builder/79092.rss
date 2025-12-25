@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>[Announcement] Introducing Frappe Query Builder</title>
-    <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092</link>
+    <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092</link>
     <description>We&#39;ve wanted to add a more Pythonic way to manage queries in Frappe for a while. So, we finally got around and did it this month :smile: . 
 
 So you want to fetch some data from your database, but you need something more powerful than `frappe.get_all`? This is when most resort to using `frappe.db.sql`, and the brave-hearts use multiple `frappe.get_all` calls along with `pandas`, along with a `for` loop or two. With our query builder, we aim to ease this pain a bit. Here&#39;s how it&#39;d look like to run a select with **or**, and **and** filters:
@@ -72,7 +72,7 @@ Feel free to drop your suggestions or ideas for improvements :)</description>
     
     <lastBuildDate>Mon, 14 Mar 2022 18:04:03 +0000</lastBuildDate>
     <category>Community</category>
-    <atom:link href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss" rel="self" type="application/rss+xml" />
+    <atom:link href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss" rel="self" type="application/rss+xml" />
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
         <dc:creator><![CDATA[peterg]]></dc:creator>
@@ -80,28 +80,28 @@ Feel free to drop your suggestions or ideas for improvements :)</description>
             <aside class="quote no-group" data-username="casesolved-co-uk" data-post="27" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/casesolved-co-uk/48/31171_2.png" class="avatar"> casesolved-co-uk:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/casesolved-co-uk/48/31171_2.png" class="avatar"> casesolved-co-uk:</div>
 <blockquote>
 <p><code>customer_doc.qb.select...</code> could be an interesting architecture for example.</p>
 </blockquote>
 </aside>
-<p>Hmm…very interesting thought. I’m not sure, though. To my mind, at least half of the use case for frappe.qb involves table joins, and mixing object notation with parameters for tables just doesn’t feel that natural to me. Perhaps I’m too wedded to SQL, though. I might be getting old! <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>Hmm…very interesting thought. I’m not sure, though. To my mind, at least half of the use case for frappe.qb involves table joins, and mixing object notation with parameters for tables just doesn’t feel that natural to me. Perhaps I’m too wedded to SQL, though. I might be getting old! <img src="https://discuss.coworker365.com/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
 <p>In the end, I think it’s designed this way because query builder is a relatively thin wrapper on PyPika. I’m certainly open to the idea that there are better ways out there, but mostly I’m just glad that Frappe didn’t try to reinvent the wheel on this one.</p>
 <aside class="quote no-group" data-username="casesolved-co-uk" data-post="27" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/casesolved-co-uk/48/31171_2.png" class="avatar"> casesolved-co-uk:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/casesolved-co-uk/48/31171_2.png" class="avatar"> casesolved-co-uk:</div>
 <blockquote>
-<p>Am assuming you meant ‘would not’ <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>Am assuming you meant ‘would not’ <img src="https://discuss.coworker365.com/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
 </blockquote>
 </aside>
 <p>Sorry, my sentence there was not at all clear! By “strong choice”, I don’t mean “good choice” but rather “choice with significant structural implications”. It would not be the path of least resistance to drop frappe.db.sql, but that definitely doesn’t mean it couldn’t happen.</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/28">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/28">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/28</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/28</link>
         <pubDate>Mon, 14 Mar 2022 18:04:03 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-28</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-28</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
@@ -111,7 +111,7 @@ Feel free to drop your suggestions or ideas for improvements :)</description>
 <aside class="quote no-group" data-username="peterg" data-post="26" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/peterg/48/55463_2.png" class="avatar"> peterg:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/peterg/48/55463_2.png" class="avatar"> peterg:</div>
 <blockquote>
 <p><code>frappe.get_doc('DocType', 'Customer')</code> returns a doctype object whereas <code>frappe.qb.DocType</code> method returns the name of the SQL table the doctype uses as a string. The two methods have very different roles. The query builder is still very low level in most regards, hewing closer to the underlying SQL than the ORM abstraction.</p>
 </blockquote>
@@ -121,18 +121,18 @@ Feel free to drop your suggestions or ideas for improvements :)</description>
 <aside class="quote no-group" data-username="peterg" data-post="26" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/peterg/48/55463_2.png" class="avatar"> peterg:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/peterg/48/55463_2.png" class="avatar"> peterg:</div>
 <blockquote>
 <p>Agreed. The query builder uses <code>frappe.db.sql</code> on the backend, so it would be a strong choice to remove it.</p>
 </blockquote>
 </aside>
-<p>Am assuming you meant ‘would not’ <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/27">Read full topic</a></p>
+<p>Am assuming you meant ‘would not’ <img src="https://discuss.coworker365.com/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/27">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/27</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/27</link>
         <pubDate>Mon, 14 Mar 2022 16:19:43 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-27</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-27</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
@@ -142,7 +142,7 @@ Feel free to drop your suggestions or ideas for improvements :)</description>
 <aside class="quote no-group" data-username="casesolved-co-uk" data-post="25" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/casesolved-co-uk/48/31171_2.png" class="avatar"> casesolved-co-uk:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/casesolved-co-uk/48/31171_2.png" class="avatar"> casesolved-co-uk:</div>
 <blockquote>
 <ol>
 <li>Why would you use:</li>
@@ -156,18 +156,18 @@ and not:<br>
 <aside class="quote no-group" data-username="casesolved-co-uk" data-post="25" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/casesolved-co-uk/48/31171_2.png" class="avatar"> casesolved-co-uk:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/casesolved-co-uk/48/31171_2.png" class="avatar"> casesolved-co-uk:</div>
 <blockquote>
 <p>I hope frappe.db.sql will remain for those who don’t want to learn another technology syntax.</p>
 </blockquote>
 </aside>
 <p>Agreed. The query builder uses <code>frappe.db.sql</code> on the backend, so it would be a strong choice to remove it.</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/26">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/26">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/26</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/26</link>
         <pubDate>Mon, 14 Mar 2022 15:22:49 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-26</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-26</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
@@ -188,24 +188,24 @@ and not:<br>
 <p>I hope frappe.db.sql will remain for those who don’t want to learn another technology syntax.</p>
 </li>
 </ol>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/25">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/25">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/25</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/25</link>
         <pubDate>Mon, 14 Mar 2022 13:51:26 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-25</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-25</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
         <dc:creator><![CDATA[rmeyer]]></dc:creator>
         <description><![CDATA[
             <p>I agree. I started by converting (2) into (3), then noticed that the query is simple enough to use <code>get_list</code> (1).</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/24">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/24">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/24</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/24</link>
         <pubDate>Wed, 08 Dec 2021 13:43:35 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-24</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-24</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
@@ -218,19 +218,19 @@ and not:<br>
 <li>Complex queries, especially those featuring multiple table joins.</li>
 </ol>
 <p>For those, <code>get_list</code> is limited. Likewise, for me, the comparison is not between (3) and (1) but between (3) and (2). I don’t see the query builder changing the way we do normal document transactions necessarily, but I think it has huge potential for things like data analytics.</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/23">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/23">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/23</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/23</link>
         <pubDate>Wed, 08 Dec 2021 02:20:20 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-23</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-23</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
         <dc:creator><![CDATA[rmeyer]]></dc:creator>
         <description><![CDATA[
             <p>I just tried my hand at query building, so let me share an example of <a href="https://github.com/frappe/erpnext/blob/9a644f645cbf1eb65eb5b9cde4cf16a4077836a1/erpnext/regional/report/datev/datev.py#L518-L530">the same query</a> in three different styles:</p>
-<h3><a name="h-1-frappeget_all-1" class="anchor" href="https://discuss.frappe.io#h-1-frappeget_all-1"></a>1. <code>frappe.get_all</code></h3>
+<h3><a name="h-1-frappeget_all-1" class="anchor" href="https://discuss.coworker365.com#h-1-frappeget_all-1"></a>1. <code>frappe.get_all</code></h3>
 <pre data-code-wrap="python"><code class="lang-python">company = "My Company"
 
 frappe.get_all("Account",
@@ -246,7 +246,7 @@ frappe.get_all("Account",
 	}
 )
 </code></pre>
-<h3><a name="h-2-frappedbsql-2" class="anchor" href="https://discuss.frappe.io#h-2-frappedbsql-2"></a>2. <code>frappe.db.sql</code></h3>
+<h3><a name="h-2-frappedbsql-2" class="anchor" href="https://discuss.coworker365.com#h-2-frappedbsql-2"></a>2. <code>frappe.db.sql</code></h3>
 <pre data-code-wrap="python"><code class="lang-python">company = "My Company"
 
 frappe.db.sql("""
@@ -260,7 +260,7 @@ frappe.db.sql("""
 	AND account_number != ''
 """, {"company": company}, as_dict=1)
 </code></pre>
-<h3><a name="h-3-frappeqb-3" class="anchor" href="https://discuss.frappe.io#h-3-frappeqb-3"></a>3. <code>frappe.qb</code></h3>
+<h3><a name="h-3-frappeqb-3" class="anchor" href="https://discuss.coworker365.com#h-3-frappeqb-3"></a>3. <code>frappe.qb</code></h3>
 <pre data-code-wrap="python"><code class="lang-python">from pypika.functions import LiteralValue
 
 company = "My Company"
@@ -281,12 +281,12 @@ frappe.qb.from_(account).select(
 Let me know if I made and error or if the queries are not equivalent.</p>
 <hr>
 <p>Edit: I’ve changed <code>get_list</code> to <code>get_all</code> because it’s closer to the SQL queries (i.e. no permissions applied).</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/22">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/22">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/22</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/22</link>
         <pubDate>Tue, 07 Dec 2021 22:08:30 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-22</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-22</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
@@ -310,12 +310,12 @@ Let me know if I made and error or if the queries are not equivalent.</p>
 </ul>
 <p>I don’t expect you to do what I like, for free.  However, the opposite is also true.</p>
 <p>Just because it’s free?  That doesn’t mean I <em>have</em> to like it.</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/21">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/21">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/21</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/21</link>
         <pubDate>Fri, 20 Aug 2021 13:55:48 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-21</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-21</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
@@ -324,7 +324,7 @@ Let me know if I made and error or if the queries are not equivalent.</p>
             <aside class="quote no-group" data-username="peterg" data-post="17" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/peterg/48/55463_2.png" class="avatar"> peterg:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/peterg/48/55463_2.png" class="avatar"> peterg:</div>
 <blockquote>
 <p>With Frappe/ERPNext, things are very different. There’s no roadmap, I strongly suspect, because there’s no central plan. There’s no corporate overseer deciding who should do what next as part of a long-term strategy, but rather there are a bunch of talented and generous individuals chasing after whatever next thing seems interesting or important. Things get built because somebody with the skills to make it happen decided that it should be built. Nothing more, and nothing less. You can see that as a bad thing if you want, but I’d argue it’s the project’s central strength.</p>
 </blockquote>
@@ -333,7 +333,7 @@ Let me know if I made and error or if the queries are not equivalent.</p>
 <aside class="quote no-group" data-username="brian_pond" data-post="18" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/brian_pond/48/55153_2.png" class="avatar"> brian_pond:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/brian_pond/48/55153_2.png" class="avatar"> brian_pond:</div>
 <blockquote>
 <p>If the talented contributors were a diverse group of individuals, operating independently, and volunteering their time? I’d probably be more sympathetic. However, the vast majority are in-fact employees of the very corporate overseer you described. Given that we’re dealing with a corporation, I naturally expect things like roadmaps, strategy, and plans to exist.</p>
 <p>I’m certain they do. However, that information isn’t shared. Which is quite fine! It’s their prerogative. Private corporation. No one is obligated or required to do <em>anything</em> . It is, as you say, an open source project.</p>
@@ -343,13 +343,13 @@ Let me know if I made and error or if the queries are not equivalent.</p>
 </aside>
 <p>This is a completely speculative and in a way accusatory.</p>
 <p>If you and your clients depend on ERPNext, then either you could choose to work with Frappe or become a contributor or run your own thing. Expecting people to do what you like for free is unethical.</p>
-<p>I don’t know if you chanced upon the <a href="https://frappe.io/blog/management/rights-and-responsibilities-of-a-frappe-team-member">Frappe Blog</a>. Things are very much individual driven.</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/20">Read full topic</a></p>
+<p>I don’t know if you chanced upon the <a href="https://coworker365.com/blog/management/rights-and-responsibilities-of-a-frappe-team-member">Frappe Blog</a>. Things are very much individual driven.</p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/20">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/20</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/20</link>
         <pubDate>Fri, 20 Aug 2021 07:06:13 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-20</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-20</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
@@ -358,21 +358,21 @@ Let me know if I made and error or if the queries are not equivalent.</p>
             <aside class="quote no-group" data-username="brian_pond" data-post="18" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/brian_pond/48/55153_2.png" class="avatar"> brian_pond:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/brian_pond/48/55153_2.png" class="avatar"> brian_pond:</div>
 <blockquote>
 <p>Given that we’re dealing with a corporation, I naturally expect things like roadmaps, strategy, and plans to exist.</p>
 </blockquote>
 </aside>
-<p>If that’s your expectation, you and I have very different experiences of how decisions are made in corporations <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>If that’s your expectation, you and I have very different experiences of how decisions are made in corporations <img src="https://discuss.coworker365.com/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
 <p>Edited to add: I understand that most new code is being written by employees of Frappe Inc. What I’m objecting to is the idea that development priorities are being driven by an abstract plan like the kind had by Drupal and Moodle.</p>
 <p>Instead, I’m sure there’s an enormous wishlist, which probably doesn’t look that different from yours or mine. So how is one priority chosen over another? Having followed the repos for a few years now, I strongly suspect that the answer, at least 90% of the time, is “because a client wanted it and was willing to pay for it”.</p>
 <p>To be clear, I don’t think this is a bad thing, and I am grateful that Frappe is committed to sharing this work with me for free. But, in the end, all discussions on these forums about development priorities really should begin and end with the economic realities of the people doing the work.</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/19">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/19">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/19</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/19</link>
         <pubDate>Thu, 19 Aug 2021 17:47:06 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-19</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-19</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
@@ -382,13 +382,13 @@ Let me know if I made and error or if the queries are not equivalent.</p>
 <p>I’m certain they do.  However, that information isn’t shared.  Which is quite fine!  It’s their prerogative.  Private corporation.  No one is obligated or required to do <em>anything</em>.  It is, as you say, an open source project.</p>
 <p>On the other hand.  When this organization decides (occasionally) to share information publicly?  With no obvious benefit, and I’m not privvy to their long-term plans?</p>
 <p>Well.  It shouldn’t be surprising that I’m not entirely thrilled.  For myself, my clients, my business partners, and prospects?  This is a near-term burden.  We can <em>hope</em> for future dividends.  But since when has hope been an effective business strategy?</p>
-<p>I think you and I must agree to disagree on this, Peter. <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/18">Read full topic</a></p>
+<p>I think you and I must agree to disagree on this, Peter. <img src="https://discuss.coworker365.com/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/18">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/18</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/18</link>
         <pubDate>Thu, 19 Aug 2021 17:42:40 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-18</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-18</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
@@ -398,12 +398,12 @@ Let me know if I made and error or if the queries are not equivalent.</p>
 <p>The kind of centralized planning you’re describing certainly exists in the open source world. Apart from ERPNext, I have some minimal understanding of two other projects, Drupal and Moodle. Both are similar to ERPNext in scale and complexity, but unlike ERPNext those two projects have very formal development cycles. Roadmaps go out two, three, four years into the future, and decisions are made through painstaking negotiations among a wide range of boards and stakeholders.</p>
 <p>There are advantages to that approach, to be sure, but there are disadvantages too. For starters, development is slooooooow. If you compare Drupal or Moodle to what they looked like 5 years ago, really very little has changed. And those stakeholder negotiations? Unless your organization can commit 1000 hours+ of professional developer time annually, you simply don’t have a seat at the table.</p>
 <p>With Frappe/ERPNext, things are very different. There’s no roadmap, I strongly suspect, because there’s no central plan. There’s no corporate overseer deciding who should do what next as part of a long-term strategy, but rather there are a bunch of talented and generous individuals chasing after whatever next thing seems interesting or important. Things get built because somebody with the skills to make it happen decided that it should be built. Nothing more, and nothing less. You can see that as a bad thing if you want, but I’d argue it’s the project’s central strength.</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/17">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/17">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/17</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/17</link>
         <pubDate>Thu, 19 Aug 2021 17:23:25 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-17</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-17</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
@@ -414,12 +414,12 @@ Let me know if I made and error or if the queries are not equivalent.</p>
 <p>So until then.  Until ORM yields <em>Indirect</em> Added Value?  By itself, I don’t see <em>Direct</em> Added Value.  I cannot think of anything it can accomplish, that I cannot already via ordinary SQL.  There’s no limit to the quantity or complexity of my statements.  Even more-advanced syntax like CTEs work just fine, with a tiny tweak to <code>'database.sql'</code>.</p>
 <p>I admire your optimism and faith, Peter.  I really do.  I think I’ve just reached a breaking point, in terms of the lack of transparency and collaboration in this project.  I’m already scrambling to deal with the latest catastrophe with Web Forms and Easy Install.   Then I read this, and I’m like “<em>great…will this be another half-implemented feature that I’m fixing for the next 6 months?</em>”</p>
 <p>Probably not a great attitude on my part.  But hard to argue it’s not justified, given 5 years of history.</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/16">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/16">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/16</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/16</link>
         <pubDate>Thu, 19 Aug 2021 15:47:15 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-16</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-16</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
@@ -428,19 +428,19 @@ Let me know if I made and error or if the queries are not equivalent.</p>
             <aside class="quote no-group" data-username="brian_pond" data-post="14" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/brian_pond/48/55153_2.png" class="avatar"> brian_pond:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/brian_pond/48/55153_2.png" class="avatar"> brian_pond:</div>
 <blockquote>
 <p><em>Limited Added Value</em> : I can name a lot of features that would bring immediate help or improvement to ERPNext. Introducing a new ORM…is not one. Will it help <em>new</em> development? Probably. But given everything else that -could- be fixed/achieved with similar effort, I question the priority.</p>
 </blockquote>
 </aside>
 <p>I disagree. The importance of this change is not syntax; it’s programmability. With frappe.db.sql, query composition has always been done via string concatenation. This is an absolute anti-pattern, prone to error and very difficult to scale in complexity. By giving queries an object structure, much more complex queries become possible.</p>
 <p>The implications for this are important. At the moment, doctypes and sql tables are more or less one-to-one mapped. More complex data schema, I’d argue, really require a proper ORM. This has important implications for how data is normalized in the system between doctypes and in one-to-many relations. If you’re frustrated by how limited child docs currently are, for example, this is the necessary backend work to a more flexible system.</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/15">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/15">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/15</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/15</link>
         <pubDate>Thu, 19 Aug 2021 03:58:40 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-15</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-15</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
@@ -474,12 +474,12 @@ Let me know if I made and error or if the queries are not equivalent.</p>
 <em>Q</em>:  Okay Brian, you’re not being fair.  SQL has a learning curve too!<br>
 <em>A</em>:  For sure.  But here’s the thing.  Does learning PyPika <em>replace</em> our need to learn SQL?  No.    It’s an additional tool.  Not a replacement for SQL.</p>
 <p>Many report authors, developers, and business analysts will <em>still</em> need SQL language skills in their toolbelt.  Sooner or later, you want to query the database with a client tool.  Debug issues.  Perform ad-hoc data exploration.  Or write queries that are too-complex for an ORM to handle.  Tools like PyPika <em>supplement</em> SQL; they never supplant it.  So my point is now you must learn SQL <em>and</em> PyPika (2 things instead of 1)</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/14">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/14">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/14</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/14</link>
         <pubDate>Wed, 18 Aug 2021 21:27:58 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-14</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-14</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
@@ -488,19 +488,19 @@ Let me know if I made and error or if the queries are not equivalent.</p>
             <aside class="quote no-group" data-username="gavindsouza" data-post="10" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/gavindsouza/48/55161_2.png" class="avatar"> gavindsouza:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/gavindsouza/48/55161_2.png" class="avatar"> gavindsouza:</div>
 <blockquote>
 <p>So, there’s nothing restricting us from using pseudo columns in the current implementation.</p>
 </blockquote>
 </aside>
 <p>I’m not familiar enough with pypika yet, so I’m not quite sure what these demos are doing. Would the pseudo columns described here allow for table joins?</p>
 <p>I.e., on sales invoice, I’d like to be able to create a virtual field that links the phone number field in a linked customer document. This is similar to what the “Fetch From” property does in form customization, but taking place at the database rather than UI level. Is this going to be possible?</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/13">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/13">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/13</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/13</link>
         <pubDate>Tue, 17 Aug 2021 09:32:44 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-13</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-13</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
@@ -509,30 +509,30 @@ Let me know if I made and error or if the queries are not equivalent.</p>
             <aside class="quote no-group" data-username="gavindsouza" data-post="10" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/gavindsouza/48/55161_2.png" class="avatar"> gavindsouza:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/gavindsouza/48/55161_2.png" class="avatar"> gavindsouza:</div>
 <blockquote>
 <p>possibilities of permission management through the query builder</p>
 </blockquote>
 </aside>
 <p>Looking forward to see it implemented.</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/12">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/12">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/12</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/12</link>
         <pubDate>Tue, 17 Aug 2021 07:09:34 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-12</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-12</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
         <dc:creator><![CDATA[kisg]]></dc:creator>
         <description><![CDATA[
             <p>This is great stuff! Thank you!</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/11">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/11">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/11</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/11</link>
         <pubDate>Tue, 17 Aug 2021 06:11:26 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-11</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-11</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
@@ -541,7 +541,7 @@ Let me know if I made and error or if the queries are not equivalent.</p>
             <aside class="quote no-group" data-username="laurence" data-post="2" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/laurence/48/24525_2.png" class="avatar"> laurence:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/laurence/48/24525_2.png" class="avatar"> laurence:</div>
 <blockquote>
 <p>Exciting stuff! Will this be available on <a href="http://ERPNext.com">ERPNext.com</a> and Frappe.cloud?</p>
 </blockquote>
@@ -550,7 +550,7 @@ Let me know if I made and error or if the queries are not equivalent.</p>
 <aside class="quote no-group" data-username="peterg" data-post="4" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/peterg/48/55463_2.png" class="avatar"> peterg:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/peterg/48/55463_2.png" class="avatar"> peterg:</div>
 <blockquote>
 <p>This is an enormously huge step for Frappe as a data framework. Please allow Pseudo-columns (virtual fields?) to initiate joins and simple computations. ERPNext frequently struggles with <a href="https://en.wikipedia.org/wiki/Don't_repeat_yourself">data normalization </a>, and this kind of change will make life so much better for developers and users both!</p>
 </blockquote>
@@ -600,12 +600,12 @@ Let me know if I made and error or if the queries are not equivalent.</p>
 <aside class="quote no-group" data-username="mujeerhashmi" data-post="6" data-topic="79092" data-full="true">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/mujeerhashmi/48/27999_2.png" class="avatar"> mujeerhashmi:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/mujeerhashmi/48/27999_2.png" class="avatar"> mujeerhashmi:</div>
 <blockquote>
 <p>This is so impressive. It is going to help people build awesome customized reports with ease. Why don’t we merge this to v13 as well?</p>
 </blockquote>
 </aside>
-<p>A PR is open for the same. It would likely be introduced in the v13.10.0 release, if all goes well <img src="https://discuss.frappe.io/images/emoji/twitter/sweat_smile.png?v=12" title=":sweat_smile:" class="emoji" alt=":sweat_smile:" loading="lazy" width="20" height="20"></p>
+<p>A PR is open for the same. It would likely be introduced in the v13.10.0 release, if all goes well <img src="https://discuss.coworker365.com/images/emoji/twitter/sweat_smile.png?v=12" title=":sweat_smile:" class="emoji" alt=":sweat_smile:" loading="lazy" width="20" height="20"></p>
 <aside class="onebox githubpullrequest" data-onebox-src="https://github.com/frappe/frappe/pull/13950">
   <header class="source">
 
@@ -678,16 +678,16 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
 <aside class="quote no-group" data-username="Suresh_Thakor" data-post="7" data-topic="79092" data-full="true">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/suresh_thakor/48/55088_2.png" class="avatar"> Suresh_Thakor:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/suresh_thakor/48/55088_2.png" class="avatar"> Suresh_Thakor:</div>
 <blockquote>
 <p>Thanks for your effort and contribution towards ERPNext. This will save lot of time those who struggling to achieve MIS Report.</p>
 </blockquote>
 </aside>
-<p>Looking forward to see all the ways this query builder gets used in the future <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>Looking forward to see all the ways this query builder gets used in the future <img src="https://discuss.coworker365.com/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
 <aside class="quote no-group" data-username="SubhajitDey" data-post="8" data-topic="79092" data-full="true">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/subhajitdey/48/27950_2.png" class="avatar"> SubhajitDey:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/subhajitdey/48/27950_2.png" class="avatar"> SubhajitDey:</div>
 <blockquote>
 <p>Will this frappe query builder also consider data restrictions that set from user permissions, field permissions, etc. ?</p>
 </blockquote>
@@ -696,66 +696,66 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
 <aside class="quote no-group" data-username="khushal_t" data-post="9" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/khushal_t/48/55125_2.png" class="avatar"> khushal_t:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/khushal_t/48/55125_2.png" class="avatar"> khushal_t:</div>
 <blockquote>
-<p>Syntactically previous ORM was better to use but if a new one provides better performance and complex queries then its good to have it <img src="https://discuss.frappe.io/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+<p>Syntactically previous ORM was better to use but if a new one provides better performance and complex queries then its good to have it <img src="https://discuss.coworker365.com/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
 </blockquote>
 </aside>
 <p>Being the raw sql replacement it is, I doubt  you’d see any performance improvement. The motivations for this were to ease development and extend Frappe’s capabilities to run complex queries without resorting to <code>frappe.db.sql</code>.</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/10">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/10">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/10</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/10</link>
         <pubDate>Tue, 17 Aug 2021 06:08:09 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-10</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-10</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
         <dc:creator><![CDATA[khushal_t]]></dc:creator>
         <description><![CDATA[
-            <p>Syntactically previous ORM was better to use but if a new one provides better performance and complex queries then its good to have it <img src="https://discuss.frappe.io/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/9">Read full topic</a></p>
+            <p>Syntactically previous ORM was better to use but if a new one provides better performance and complex queries then its good to have it <img src="https://discuss.coworker365.com/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/9">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/9</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/9</link>
         <pubDate>Mon, 16 Aug 2021 07:15:46 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-9</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-9</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
         <dc:creator><![CDATA[SubhajitDey]]></dc:creator>
         <description><![CDATA[
             <p>Will this frappe query builder also consider data restrictions that set from user permissions,  field permissions, etc. ?</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/8">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/8">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/8</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/8</link>
         <pubDate>Sun, 15 Aug 2021 11:25:07 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-8</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-8</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
         <dc:creator><![CDATA[Suresh_Thakor]]></dc:creator>
         <description><![CDATA[
             <p>Thanks for your effort and contribution towards ERPNext. This will save lot of time those who struggling to achieve MIS Report.</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/7">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/7">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/7</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/7</link>
         <pubDate>Sat, 14 Aug 2021 16:34:15 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-7</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-7</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
         <dc:creator><![CDATA[mujeerhashmi]]></dc:creator>
         <description><![CDATA[
             <p>This is so impressive. It is going to help people build awesome customized reports with ease. Why don’t we merge this to v13 as well?</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/6">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/6">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/6</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/6</link>
         <pubDate>Sat, 14 Aug 2021 15:03:59 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-6</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-6</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
@@ -764,30 +764,30 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
             <aside class="quote no-group" data-username="gavindsouza" data-post="1" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/gavindsouza/48/55161_2.png" class="avatar"> gavindsouza:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/gavindsouza/48/55161_2.png" class="avatar"> gavindsouza:</div>
 <blockquote>
 <p>Support for pure column or data comparisons, and more Pythonic APIs for using Pseudo columns and better handling for SQL functions is <em>coming soon…</em></p>
 </blockquote>
 </aside>
 <p>This is an enormously huge step for Frappe as a data framework. Please allow Pseudo-columns (virtual fields?) to initiate joins and simple computations. ERPNext frequently struggles with <a href="https://en.wikipedia.org/wiki/Don't_repeat_yourself">data normalization</a>, and this kind of change will make life so much better for developers and users both!</p>
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/4">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/4">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/4</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/4</link>
         <pubDate>Sat, 14 Aug 2021 10:52:34 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-4</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-4</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
       <item>
         <title>[Announcement] Introducing Frappe Query Builder</title>
         <dc:creator><![CDATA[kennethsequeira]]></dc:creator>
         <description><![CDATA[
             
-          <p><a href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/3">Read full topic</a></p>
+          <p><a href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/3">Read full topic</a></p>
         ]]></description>
-        <link>https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092/3</link>
+        <link>https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092/3</link>
         <pubDate>Sat, 14 Aug 2021 06:28:52 +0000</pubDate>
-        <guid isPermaLink="false">discuss.frappe.io-post-79092-3</guid>
-        <source url="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
+        <guid isPermaLink="false">discuss.coworker365.com-post-79092-3</guid>
+        <source url="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss">[Announcement] Introducing Frappe Query Builder</source>
       </item>
   </channel>
 </rss>

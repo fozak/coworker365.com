@@ -6,53 +6,53 @@
     <meta name="description" content="We’ve wanted to add a more Pythonic way to manage queries in Frappe for a while. So, we finally got around and did it this month :smile: . 
 So you want to fetch some data from your database, but you need something more p&amp;hellip;">
     <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
-<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
-<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<link rel="icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.coworker365.com/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
 <meta name="theme-color" media="all" content="#fff">
 
 <meta name="color-scheme" content="light">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-<link rel="canonical" href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092" />
+<link rel="canonical" href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092" />
 
-<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.coworker365.com/opensearch.xml" title="Frappe Forum Search">
 
-    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
 
-<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common"  />
 
-  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop"  />
 
 
 
-    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
-    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
-    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
-    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
-    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
-    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
-    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
-    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
-    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
-    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
-    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
-    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
-    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
-    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="poll_desktop"  />
 
-  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
-    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.coworker365.com" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
 
     
     
-        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[Announcement] Introducing Frappe Query Builder&#39;" href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss" />
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[Announcement] Introducing Frappe Query Builder&#39;" href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092.rss" />
     <meta property="og:site_name" content="Frappe Forum" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
-<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
-<meta property="og:url" content="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092" />
-<meta name="twitter:url" content="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092" />
+<meta name="twitter:image" content="https://discuss.coworker365.com/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.coworker365.com/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092" />
+<meta name="twitter:url" content="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092" />
 <meta property="og:title" content="[Announcement] Introducing Frappe Query Builder" />
 <meta name="twitter:title" content="[Announcement] Introducing Frappe Query Builder" />
 <meta property="og:description" content="We’ve wanted to add a more Pythonic way to manage queries in Frappe for a while. So, we finally got around and did it this month 😄 .  So you want to fetch some data from your database, but you need something more powerful than frappe.get_all? This is when most resort to using frappe.db.sql, and the brave-hearts use multiple frappe.get_all calls along with pandas, along with a for loop or two. With our query builder, we aim to ease this pain a bit. Here’s how it’d look like to run a select ..." />
@@ -71,14 +71,14 @@ So you want to fetch some data from your database, but you need something more p
 
         <link rel="next" href="/t/announcement-introducing-frappe-query-builder/79092?page=2">
 
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"[Announcement] Introducing Frappe Query Builder","mainEntity":{"@type":"Question","name":"[Announcement] Introducing Frappe Query Builder","text":"We’ve wanted to add a more Pythonic way to manage queries in Frappe for a while. So, we finally got around and did it this month :smile: .\n\nSo you want to fetch some data from your database, but you need something more powerful than frappe.get_all? This is when most resort to using frappe.db.sql, an&hellip;","upvoteCount":49,"answerCount":0,"datePublished":"2021-08-13T17:17:26.462Z","author":{"@type":"Person","name":"gavindsouza","url":"https://discuss.frappe.io/u/gavindsouza"}}}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"[Announcement] Introducing Frappe Query Builder","mainEntity":{"@type":"Question","name":"[Announcement] Introducing Frappe Query Builder","text":"We’ve wanted to add a more Pythonic way to manage queries in Frappe for a while. So, we finally got around and did it this month :smile: .\n\nSo you want to fetch some data from your database, but you need something more powerful than frappe.get_all? This is when most resort to using frappe.db.sql, an&hellip;","upvoteCount":49,"answerCount":0,"datePublished":"2021-08-13T17:17:26.462Z","author":{"@type":"Person","name":"gavindsouza","url":"https://discuss.coworker365.com/u/gavindsouza"}}}</script>
   </head>
   <body class="crawler ">
     <div class="erpnext-header">
-    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://coworker365.com" target="_blank">coworker365.com</a>
     <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
-    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
-    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://docs.coworker365.com/" target="_blank">Documentation</a>
+    <a href="https://coworker365.com/partners" target="_blank">Partners</a>
     <a href="https://frappe.school" target="_blank">Frappe School</a>
     <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
     <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
@@ -108,9 +108,9 @@ So you want to fetch some data from your database, but you need something more p
 
       <div class="topic-category">
         <div class='discourse-tags list-tags'>
-            <a href='https://discuss.frappe.io/tag/sql' class='discourse-tag' rel="tag">sql</a>, 
-            <a href='https://discuss.frappe.io/tag/developer' class='discourse-tag' rel="tag">developer</a>, 
-            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>
+            <a href='https://discuss.coworker365.com/tag/sql' class='discourse-tag' rel="tag">sql</a>, 
+            <a href='https://discuss.coworker365.com/tag/developer' class='discourse-tag' rel="tag">developer</a>, 
+            <a href='https://discuss.coworker365.com/tag/frappe' class='discourse-tag' rel="tag">frappe</a>
         </div>
       </div>
   </div>
@@ -119,14 +119,14 @@ So you want to fetch some data from your database, but you need something more p
 
     <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
       <meta itemprop='headline' content='[Announcement] Introducing Frappe Query Builder'>
-      <link itemprop='url' href='https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092'>
+      <link itemprop='url' href='https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092'>
       <meta itemprop='datePublished' content='2021-08-13T17:17:26Z'>
         <meta itemprop='articleSection' content='Community'>
       <meta itemprop='keywords' content='sql, developer, frappe'>
       <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
         <meta itemprop='name' content='Frappe'>
           <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
-            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+            <meta itemprop='url' content='https://discuss.coworker365.com/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
           </div>
       </div>
 
@@ -134,11 +134,11 @@ So you want to fetch some data from your database, but you need something more p
           <div id='post_1'  class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/gavindsouza'><span itemprop='name'>gavindsouza</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/gavindsouza'><span itemprop='name'>gavindsouza</span></a>
                 
               </span>
 
-                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092">
+                <link itemprop="mainEntityOfPage" href="https://discuss.coworker365.com/t/announcement-introducing-frappe-query-builder/79092">
 
 
               <span class="crawler-post-infos">
@@ -150,7 +150,7 @@ So you want to fetch some data from your database, but you need something more p
               </span>
             </div>
             <div class='post' itemprop='text'>
-              <p>We’ve wanted to add a more Pythonic way to manage queries in Frappe for a while. So, we finally got around and did it this month <img src="https://discuss.frappe.io/images/emoji/twitter/smile.png?v=12" title=":smile:" class="emoji" alt=":smile:" loading="lazy" width="20" height="20"> .</p>
+              <p>We’ve wanted to add a more Pythonic way to manage queries in Frappe for a while. So, we finally got around and did it this month <img src="https://discuss.coworker365.com/images/emoji/twitter/smile.png?v=12" title=":smile:" class="emoji" alt=":smile:" loading="lazy" width="20" height="20"> .</p>
 <p>So you want to fetch some data from your database, but you need something more powerful than <code>frappe.get_all</code>? This is when most resort to using <code>frappe.db.sql</code>, and the brave-hearts use multiple <code>frappe.get_all</code> calls along with <code>pandas</code>, along with a <code>for</code> loop or two. With our query builder, we aim to ease this pain a bit. Here’s how it’d look like to run a select with <strong>or</strong>, and <strong>and</strong> filters:</p>
 <pre><code class="lang-python">customer = frappe.qb.DocType('Customer')
 filtered_data = (
@@ -205,13 +205,13 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
 <p>Apart from PyPika, we considered a few other query builders and ORMs. SQLAlchemy seemed to be a strong contender in the early stages. We soon faced a barrage of issues as we started implementing it. Some of our work on it is documented in this PR:</p>
 <p><a href="https://github.com/frappe/frappe/pull/13732" class="onebox" target="_blank" rel="noopener">https://github.com/frappe/frappe/pull/13732</a></p>
 <hr>
-<p>Apart from these, we’ve been making active efforts in extending the existing Database APIs to make them more powerful. We aim to make it easier for everyone to write Frappe Apps, and reduce the interfaces for bugs while we’re at it <img src="https://discuss.frappe.io/images/emoji/twitter/wink.png?v=12" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20"> .</p>
+<p>Apart from these, we’ve been making active efforts in extending the existing Database APIs to make them more powerful. We aim to make it easier for everyone to write Frappe Apps, and reduce the interfaces for bugs while we’re at it <img src="https://discuss.coworker365.com/images/emoji/twitter/wink.png?v=12" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20"> .</p>
 <p>We converted close to 80 raw queries to use the Database APIs. This enabled us to further improve on the low level <code>frappe.db.delete</code> API and introduce a new <code>frappe.db.truncate</code> too.</p>
 <p><a href="https://github.com/frappe/frappe/pull/13753" class="onebox" target="_blank" rel="noopener">https://github.com/frappe/frappe/pull/13753</a></p>
 <p>We’re also trying to expand the feature set in <code>DatabaseQuery</code> it’s the engine that supports <code>frappe.get_list</code>, <code>frappe.get_all</code>, list views, etc. Support for pure column or data comparisons, and more Pythonic APIs for using Pseudo columns and better handling for SQL functions is <em>coming soon…</em></p>
 <p><a href="https://github.com/frappe/frappe/pull/13845" class="onebox" target="_blank" rel="noopener">https://github.com/frappe/frappe/pull/13845</a></p>
 <hr>
-<p>Feel free to drop your suggestions or ideas for improvements <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>Feel free to drop your suggestions or ideas for improvements <img src="https://discuss.coworker365.com/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
             </div>
 
             <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
@@ -222,11 +222,11 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
 
                 <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
                       <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
-                        <a itemprop='url' href="https://discuss.frappe.io/t/erpnext-and-vitess/81820/4">ERPNext and Vitess</a>
+                        <a itemprop='url' href="https://discuss.coworker365.com/t/erpnext-and-vitess/81820/4">ERPNext and Vitess</a>
                         <meta itemprop='position' content='9'>
                       </div>
                       <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
-                        <a itemprop='url' href="https://discuss.frappe.io/t/erpnext-postgresql-support/67069/6">ERPNext PostgreSQL Support</a>
+                        <a itemprop='url' href="https://discuss.coworker365.com/t/erpnext-postgresql-support/67069/6">ERPNext PostgreSQL Support</a>
                         <meta itemprop='position' content='10'>
                       </div>
                 </div>
@@ -234,7 +234,7 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
           <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/laurence'><span itemprop='name'>laurence</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/laurence'><span itemprop='name'>laurence</span></a>
                 
               </span>
 
@@ -262,7 +262,7 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
           <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/peterg'><span itemprop='name'>peterg</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/peterg'><span itemprop='name'>peterg</span></a>
                 
               </span>
 
@@ -280,7 +280,7 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
               <aside class="quote no-group" data-username="gavindsouza" data-post="1" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/gavindsouza/48/55161_2.png" class="avatar"> gavindsouza:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/gavindsouza/48/55161_2.png" class="avatar"> gavindsouza:</div>
 <blockquote>
 <p>Support for pure column or data comparisons, and more Pythonic APIs for using Pseudo columns and better handling for SQL functions is <em>coming soon…</em></p>
 </blockquote>
@@ -298,7 +298,7 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
           <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mujeerhashmi'><span itemprop='name'>mujeerhashmi</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/mujeerhashmi'><span itemprop='name'>mujeerhashmi</span></a>
                 
               </span>
 
@@ -326,7 +326,7 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
           <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Suresh_Thakor'><span itemprop='name'>Suresh_Thakor</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/Suresh_Thakor'><span itemprop='name'>Suresh_Thakor</span></a>
                 
               </span>
 
@@ -354,7 +354,7 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
           <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SubhajitDey'><span itemprop='name'>SubhajitDey</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/SubhajitDey'><span itemprop='name'>SubhajitDey</span></a>
                 
               </span>
 
@@ -382,7 +382,7 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
           <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/khushal_t'><span itemprop='name'>khushal_t</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/khushal_t'><span itemprop='name'>khushal_t</span></a>
                 
               </span>
 
@@ -397,7 +397,7 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
               </span>
             </div>
             <div class='post' itemprop='text'>
-              <p>Syntactically previous ORM was better to use but if a new one provides better performance and complex queries then its good to have it <img src="https://discuss.frappe.io/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+              <p>Syntactically previous ORM was better to use but if a new one provides better performance and complex queries then its good to have it <img src="https://discuss.coworker365.com/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
             </div>
 
             <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
@@ -410,7 +410,7 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
           <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/gavindsouza'><span itemprop='name'>gavindsouza</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/gavindsouza'><span itemprop='name'>gavindsouza</span></a>
                 
               </span>
 
@@ -428,7 +428,7 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
               <aside class="quote no-group" data-username="laurence" data-post="2" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/laurence/48/24525_2.png" class="avatar"> laurence:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/laurence/48/24525_2.png" class="avatar"> laurence:</div>
 <blockquote>
 <p>Exciting stuff! Will this be available on <a href="http://ERPNext.com">ERPNext.com</a> and Frappe.cloud?</p>
 </blockquote>
@@ -437,7 +437,7 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
 <aside class="quote no-group" data-username="peterg" data-post="4" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/peterg/48/55463_2.png" class="avatar"> peterg:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/peterg/48/55463_2.png" class="avatar"> peterg:</div>
 <blockquote>
 <p>This is an enormously huge step for Frappe as a data framework. Please allow Pseudo-columns (virtual fields?) to initiate joins and simple computations. ERPNext frequently struggles with <a href="https://en.wikipedia.org/wiki/Don't_repeat_yourself">data normalization </a>, and this kind of change will make life so much better for developers and users both!</p>
 </blockquote>
@@ -487,12 +487,12 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
 <aside class="quote no-group" data-username="mujeerhashmi" data-post="6" data-topic="79092" data-full="true">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/mujeerhashmi/48/27999_2.png" class="avatar"> mujeerhashmi:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/mujeerhashmi/48/27999_2.png" class="avatar"> mujeerhashmi:</div>
 <blockquote>
 <p>This is so impressive. It is going to help people build awesome customized reports with ease. Why don’t we merge this to v13 as well?</p>
 </blockquote>
 </aside>
-<p>A PR is open for the same. It would likely be introduced in the v13.10.0 release, if all goes well <img src="https://discuss.frappe.io/images/emoji/twitter/sweat_smile.png?v=12" title=":sweat_smile:" class="emoji" alt=":sweat_smile:" loading="lazy" width="20" height="20"></p>
+<p>A PR is open for the same. It would likely be introduced in the v13.10.0 release, if all goes well <img src="https://discuss.coworker365.com/images/emoji/twitter/sweat_smile.png?v=12" title=":sweat_smile:" class="emoji" alt=":sweat_smile:" loading="lazy" width="20" height="20"></p>
 <aside class="onebox githubpullrequest" data-onebox-src="https://github.com/frappe/frappe/pull/13950">
   <header class="source">
 
@@ -565,16 +565,16 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
 <aside class="quote no-group" data-username="Suresh_Thakor" data-post="7" data-topic="79092" data-full="true">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/suresh_thakor/48/55088_2.png" class="avatar"> Suresh_Thakor:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/suresh_thakor/48/55088_2.png" class="avatar"> Suresh_Thakor:</div>
 <blockquote>
 <p>Thanks for your effort and contribution towards ERPNext. This will save lot of time those who struggling to achieve MIS Report.</p>
 </blockquote>
 </aside>
-<p>Looking forward to see all the ways this query builder gets used in the future <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>Looking forward to see all the ways this query builder gets used in the future <img src="https://discuss.coworker365.com/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
 <aside class="quote no-group" data-username="SubhajitDey" data-post="8" data-topic="79092" data-full="true">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/subhajitdey/48/27950_2.png" class="avatar"> SubhajitDey:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/subhajitdey/48/27950_2.png" class="avatar"> SubhajitDey:</div>
 <blockquote>
 <p>Will this frappe query builder also consider data restrictions that set from user permissions, field permissions, etc. ?</p>
 </blockquote>
@@ -583,9 +583,9 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
 <aside class="quote no-group" data-username="khushal_t" data-post="9" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/khushal_t/48/55125_2.png" class="avatar"> khushal_t:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/khushal_t/48/55125_2.png" class="avatar"> khushal_t:</div>
 <blockquote>
-<p>Syntactically previous ORM was better to use but if a new one provides better performance and complex queries then its good to have it <img src="https://discuss.frappe.io/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+<p>Syntactically previous ORM was better to use but if a new one provides better performance and complex queries then its good to have it <img src="https://discuss.coworker365.com/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
 </blockquote>
 </aside>
 <p>Being the raw sql replacement it is, I doubt  you’d see any performance improvement. The motivations for this were to ease development and extend Frappe’s capabilities to run complex queries without resorting to <code>frappe.db.sql</code>.</p>
@@ -601,7 +601,7 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
           <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kisg'><span itemprop='name'>kisg</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/kisg'><span itemprop='name'>kisg</span></a>
                 
               </span>
 
@@ -629,7 +629,7 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
           <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/szufisher'><span itemprop='name'>szufisher</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/szufisher'><span itemprop='name'>szufisher</span></a>
                 
               </span>
 
@@ -647,7 +647,7 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
               <aside class="quote no-group" data-username="gavindsouza" data-post="10" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/gavindsouza/48/55161_2.png" class="avatar"> gavindsouza:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/gavindsouza/48/55161_2.png" class="avatar"> gavindsouza:</div>
 <blockquote>
 <p>possibilities of permission management through the query builder</p>
 </blockquote>
@@ -665,7 +665,7 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
           <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/peterg'><span itemprop='name'>peterg</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/peterg'><span itemprop='name'>peterg</span></a>
                 
               </span>
 
@@ -683,7 +683,7 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
               <aside class="quote no-group" data-username="gavindsouza" data-post="10" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/gavindsouza/48/55161_2.png" class="avatar"> gavindsouza:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/gavindsouza/48/55161_2.png" class="avatar"> gavindsouza:</div>
 <blockquote>
 <p>So, there’s nothing restricting us from using pseudo columns in the current implementation.</p>
 </blockquote>
@@ -702,7 +702,7 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
           <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/brian_pond'><span itemprop='name'>brian_pond</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/brian_pond'><span itemprop='name'>brian_pond</span></a>
                 
               </span>
 
@@ -757,7 +757,7 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
           <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/peterg'><span itemprop='name'>peterg</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/peterg'><span itemprop='name'>peterg</span></a>
                 
               </span>
 
@@ -775,7 +775,7 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
               <aside class="quote no-group" data-username="brian_pond" data-post="14" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/brian_pond/48/55153_2.png" class="avatar"> brian_pond:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/brian_pond/48/55153_2.png" class="avatar"> brian_pond:</div>
 <blockquote>
 <p><em>Limited Added Value</em> : I can name a lot of features that would bring immediate help or improvement to ERPNext. Introducing a new ORM…is not one. Will it help <em>new</em> development? Probably. But given everything else that -could- be fixed/achieved with similar effort, I question the priority.</p>
 </blockquote>
@@ -794,7 +794,7 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
           <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/brian_pond'><span itemprop='name'>brian_pond</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/brian_pond'><span itemprop='name'>brian_pond</span></a>
                 
               </span>
 
@@ -826,7 +826,7 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
           <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/peterg'><span itemprop='name'>peterg</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/peterg'><span itemprop='name'>peterg</span></a>
                 
               </span>
 
@@ -857,7 +857,7 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
           <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/brian_pond'><span itemprop='name'>brian_pond</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/brian_pond'><span itemprop='name'>brian_pond</span></a>
                 
               </span>
 
@@ -876,7 +876,7 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
 <p>I’m certain they do.  However, that information isn’t shared.  Which is quite fine!  It’s their prerogative.  Private corporation.  No one is obligated or required to do <em>anything</em>.  It is, as you say, an open source project.</p>
 <p>On the other hand.  When this organization decides (occasionally) to share information publicly?  With no obvious benefit, and I’m not privvy to their long-term plans?</p>
 <p>Well.  It shouldn’t be surprising that I’m not entirely thrilled.  For myself, my clients, my business partners, and prospects?  This is a near-term burden.  We can <em>hope</em> for future dividends.  But since when has hope been an effective business strategy?</p>
-<p>I think you and I must agree to disagree on this, Peter. <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>I think you and I must agree to disagree on this, Peter. <img src="https://discuss.coworker365.com/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
             </div>
 
             <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
@@ -889,7 +889,7 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
           <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/peterg'><span itemprop='name'>peterg</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/peterg'><span itemprop='name'>peterg</span></a>
                 
               </span>
 
@@ -907,12 +907,12 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
               <aside class="quote no-group" data-username="brian_pond" data-post="18" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/brian_pond/48/55153_2.png" class="avatar"> brian_pond:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/brian_pond/48/55153_2.png" class="avatar"> brian_pond:</div>
 <blockquote>
 <p>Given that we’re dealing with a corporation, I naturally expect things like roadmaps, strategy, and plans to exist.</p>
 </blockquote>
 </aside>
-<p>If that’s your expectation, you and I have very different experiences of how decisions are made in corporations <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>If that’s your expectation, you and I have very different experiences of how decisions are made in corporations <img src="https://discuss.coworker365.com/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
 <p>Edited to add: I understand that most new code is being written by employees of Frappe Inc. What I’m objecting to is the idea that development priorities are being driven by an abstract plan like the kind had by Drupal and Moodle.</p>
 <p>Instead, I’m sure there’s an enormous wishlist, which probably doesn’t look that different from yours or mine. So how is one priority chosen over another? Having followed the repos for a few years now, I strongly suspect that the answer, at least 90% of the time, is “because a client wanted it and was willing to pay for it”.</p>
 <p>To be clear, I don’t think this is a bad thing, and I am grateful that Frappe is committed to sharing this work with me for free. But, in the end, all discussions on these forums about development priorities really should begin and end with the economic realities of the people doing the work.</p>
@@ -928,7 +928,7 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
           <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/rmehta'><span itemprop='name'>rmehta</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/rmehta'><span itemprop='name'>rmehta</span></a>
                 
               </span>
 
@@ -946,7 +946,7 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
               <aside class="quote no-group" data-username="peterg" data-post="17" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/peterg/48/55463_2.png" class="avatar"> peterg:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/peterg/48/55463_2.png" class="avatar"> peterg:</div>
 <blockquote>
 <p>With Frappe/ERPNext, things are very different. There’s no roadmap, I strongly suspect, because there’s no central plan. There’s no corporate overseer deciding who should do what next as part of a long-term strategy, but rather there are a bunch of talented and generous individuals chasing after whatever next thing seems interesting or important. Things get built because somebody with the skills to make it happen decided that it should be built. Nothing more, and nothing less. You can see that as a bad thing if you want, but I’d argue it’s the project’s central strength.</p>
 </blockquote>
@@ -955,7 +955,7 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
 <aside class="quote no-group" data-username="brian_pond" data-post="18" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
-<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/brian_pond/48/55153_2.png" class="avatar"> brian_pond:</div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.coworker365.com/user_avatar/discuss.coworker365.com/brian_pond/48/55153_2.png" class="avatar"> brian_pond:</div>
 <blockquote>
 <p>If the talented contributors were a diverse group of individuals, operating independently, and volunteering their time? I’d probably be more sympathetic. However, the vast majority are in-fact employees of the very corporate overseer you described. Given that we’re dealing with a corporation, I naturally expect things like roadmaps, strategy, and plans to exist.</p>
 <p>I’m certain they do. However, that information isn’t shared. Which is quite fine! It’s their prerogative. Private corporation. No one is obligated or required to do <em>anything</em> . It is, as you say, an open source project.</p>
@@ -965,7 +965,7 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
 </aside>
 <p>This is a completely speculative and in a way accusatory.</p>
 <p>If you and your clients depend on ERPNext, then either you could choose to work with Frappe or become a contributor or run your own thing. Expecting people to do what you like for free is unethical.</p>
-<p>I don’t know if you chanced upon the <a href="https://frappe.io/blog/management/rights-and-responsibilities-of-a-frappe-team-member">Frappe Blog</a>. Things are very much individual driven.</p>
+<p>I don’t know if you chanced upon the <a href="https://coworker365.com/blog/management/rights-and-responsibilities-of-a-frappe-team-member">Frappe Blog</a>. Things are very much individual driven.</p>
             </div>
 
             <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
@@ -978,7 +978,7 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
           <div id='post_21' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
             <div class='crawler-post-meta'>
               <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/brian_pond'><span itemprop='name'>brian_pond</span></a>
+                <a itemprop="url" rel='nofollow' href='https://discuss.coworker365.com/u/brian_pond'><span itemprop='name'>brian_pond</span></a>
                 
               </span>
 
@@ -1066,7 +1066,7 @@ Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
 </footer>
 
     <div class="erpnext-footer">
-    <a href="https://frappe.io">Frappe</a>
+    <a href="https://coworker365.com">Frappe</a>
 </div>
     
   </body>
