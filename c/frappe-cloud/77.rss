@@ -337,7 +337,7 @@ I need a better integration method that is:</p>
           <description><![CDATA[
             <p>Hi everyone, I followed this guidance <a href="https://discuss.coworker365.com/t/guide-installing-press-and-get-it-up-and-running-part-1/152576/6" class="inline-onebox">[Guide] Installing Press and get it up and running - Part 1 - #6 by anupd</a> and migration setup to Docker, K8s, and ECS, Press is running successfully.</p>
 <p>But when I created “Database Server” and “Server” and click “Setup Server” in “Action” button in Press UI,<br>
-The Ansible task failed in the auditd <a href="https://github.com/frappe/press/blob/develop/press/playbooks/roles/auditd/tasks/main.yml" rel="noopener nofollow ugc">https://github.com/frappe/press/blob/develop/press/playbooks/roles/auditd/tasks/main.yml</a><br>
+The Ansible task failed in the auditd <a href="https://github.com/coworker365com/press/blob/develop/press/playbooks/roles/auditd/tasks/main.yml" rel="noopener nofollow ugc">https://github.com/coworker365com/press/blob/develop/press/playbooks/roles/auditd/tasks/main.yml</a><br>
 The error<br>
 Error “Job for auditd.service failed because the control process exited with error code.<br>
 See “systemctl status auditd.service” and “journalctl -xeu auditd.service” for details.”</p>

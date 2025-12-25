@@ -374,7 +374,7 @@ In the &amp;hellip;">
     <a href="https://discuss.coworker365.com/t/issue-installing-apps-in-docker-container/118491/4">Issue Installing Apps in Docker Container</a> <a class="badge-category__wrapper " href="/c/erpnext/6"><span data-category-id="6" style="--category-badge-color: #BF1E2E; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category "><span class="badge-category__name">ERPNext</span></span></a>
   </div>
   <blockquote>
-    Officially, <a href="https://github.com/frappe/frappe_docker/blob/main/docs/custom-apps.md" rel="noopener nofollow ugc">you’re supposed to build a customer docker image</a> when you push a docker-based deployment which includes custom apps. The fact that you’re running bench commands manually inside the images seems to betray that you’re trying to install an app into an existing image. The main problem with this (among others) is that the apps folder in the image isn’t persistent, and will not survive image updates, besides the fact that it’s actually it’s not made to be possible at all. 
+    Officially, <a href="https://github.com/coworker365com/frappe_docker/blob/main/docs/custom-apps.md" rel="noopener nofollow ugc">you’re supposed to build a customer docker image</a> when you push a docker-based deployment which includes custom apps. The fact that you’re running bench commands manually inside the images seems to betray that you’re trying to install an app into an existing image. The main problem with this (among others) is that the apps folder in the image isn’t persistent, and will not survive image updates, besides the fact that it’s actually it’s not made to be possible at all. 
 That said, Frapp…
   </blockquote>
 </aside>

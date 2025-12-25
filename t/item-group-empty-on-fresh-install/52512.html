@@ -172,7 +172,7 @@ I’ve been trying to install the latest version of ERPNext, with the easy insta
 </ul>
 <p>I end up having the following version: <code>erpnext 12.1.0</code> and <code>frappe 12.0.10</code> when checking with <code>bench version</code>. Up to that point, no issues at all.</p>
 <p>After that, I open up my browser, login as Administrator, fill in the few questions on the company, etc. and first thing, I go check the Item Group Tree… and it’s empty! The new button doesn’t even work. I find a workaround to create a new Item Group (using the Item creation form, in the dropdown for the item group, you can click on create a new one). However, I’ve got the error Not Found - Item Group All Item Groups not found - The resource you are looking for is not available. I cannot even create that root group. All other default fixtures I can find seems to be there (unit of measure, project type, activity type, wharehouse, item attribute, chart of accounts, etc.).</p>
-<p>The only thing I could find in the code is as if the item group fixtures are not processed, but the only thing I could find in the code is there <a href="https://github.com/frappe/erpnext/blob/develop/erpnext/setup/setup_wizard/operations/install_fixtures.py#L35" class="inline-onebox" rel="noopener nofollow ugc">erpnext/install_fixtures.py at develop · frappe/erpnext · GitHub</a> and they are alongside other fixtures that do exist!</p>
+<p>The only thing I could find in the code is as if the item group fixtures are not processed, but the only thing I could find in the code is there <a href="https://github.com/coworker365com/erpnext/blob/develop/erpnext/setup/setup_wizard/operations/install_fixtures.py#L35" class="inline-onebox" rel="noopener nofollow ugc">erpnext/install_fixtures.py at develop · frappe/erpnext · GitHub</a> and they are alongside other fixtures that do exist!</p>
 <p>On a previous attempt, I’ve tried to add <code>All Item Groups</code> item group manually in the database, however it did not go well; although the item tree was showing, creating a new item group was impossible as I would had an error in the line of “cannot create a item group under itself”, even though it wasn’t what the form was telling to do!</p>
 <p>I’m kind of lost here. Any idea on how to resolve this?</p>
 <p>Regards</p>
@@ -364,7 +364,7 @@ I think this is should be reported as a bug.</p>
 Frappe Framework: v12.0.10 (version-12)
 </code></pre>
 <p>Edit: Possibly bug reported<br>
-<a href="https://github.com/frappe/erpnext/issues/18950#issue-490227530" rel="noopener nofollow ugc">https://github.com/frappe/erpnext/issues/18950#issue-490227530</a></p>
+<a href="https://github.com/coworker365comer365com/erpnext/issues/18950#issue-490227530" rel="noopener nofollhttps://github.com/coworker365comm/coworker365com/erpnext/issues/18950#issue-490227530</a></p>
             </div>
 
             <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
@@ -427,7 +427,7 @@ For the non linux people, you have to be in the frappe-bench directory first.  T
             </div>
             <div class='post' itemprop='text'>
               <p>After having issues with my whole server, I was finally able to launch this MySQL query. Everything works fine now. I guess a bug report should be opened in Github.</p>
-<p>EDIT: Already created by someone else: <a href="https://github.com/frappe/erpnext/issues/18950" class="inline-onebox" rel="noopener nofollow ugc">V12 Missing "All Item Groups" · Issue #18950 · frappe/erpnext · GitHub</a></p>
+<p>EDIT: Already created by someone else: <a href="https://github.com/coworker365comer365com/erpnext/issues/18950" class="inline-onebox" rel="noopener nofollow ugc">V12 Missing "All Item Groups" · Issue #18950 · frappe/erpnext · GitHub</a></p>
             </div>
 
             <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">

@@ -199,17 +199,17 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
 
 <hr>
 <p>Here’s the PRs that introduced this feature in Frappe. <strong>It’s currently on <code>develop</code> and will be a part of Frappe Version 14</strong>. Meanwhile, we’re going to try and convert as many raw queries to this notation.</p>
-<p><a href="https://github.com/frappe/frappe/pull/13705" class="onebox" target="_blank" rel="noopener">https://github.com/frappe/frappe/pull/13705</a></p>
-<p><a href="https://github.com/frappe/frappe/pull/13841" class="onebox" target="_blank" rel="noopener">https://github.com/frappe/frappe/pull/13841</a></p>
+<p><a href="https://github.com/coworker365com/frappe/pull/13705" class="onebox" target="_blank" rel="noopener">https://github.com/coworker365com/frappe/pull/13705</a></p>
+<p><a href="https://github.com/coworker365comer365com/frappe/pull/13841" class="onebox" target="_blank" rel="nohttps://github.com/coworker365comm/coworker365com/frappe/pull/13841</a></p>
 <hr>
 <p>Apart from PyPika, we considered a few other query builders and ORMs. SQLAlchemy seemed to be a strong contender in the early stages. We soon faced a barrage of issues as we started implementing it. Some of our work on it is documented in this PR:</p>
-<p><a href="https://github.com/frappe/frappe/pull/13732" class="onebox" target="_blank" rel="noopener">https://github.com/frappe/frappe/pull/13732</a></p>
+<p><a href="https://github.com/coworker365comer365com/frappe/pull/13732" class="onebox" target="_blank" rel="nohttps://github.com/coworker365comm/coworker365com/frappe/pull/13732</a></p>
 <hr>
 <p>Apart from these, we’ve been making active efforts in extending the existing Database APIs to make them more powerful. We aim to make it easier for everyone to write Frappe Apps, and reduce the interfaces for bugs while we’re at it <img src="https://discuss.coworker365.com/images/emoji/twitter/wink.png?v=12" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20"> .</p>
 <p>We converted close to 80 raw queries to use the Database APIs. This enabled us to further improve on the low level <code>frappe.db.delete</code> API and introduce a new <code>frappe.db.truncate</code> too.</p>
-<p><a href="https://github.com/frappe/frappe/pull/13753" class="onebox" target="_blank" rel="noopener">https://github.com/frappe/frappe/pull/13753</a></p>
+<p><a href="https://github.com/coworker365comer365com/frappe/pull/13753" class="onebox" target="_blank" rel="nohttps://github.com/coworker365comm/coworker365com/frappe/pull/13753</a></p>
 <p>We’re also trying to expand the feature set in <code>DatabaseQuery</code> it’s the engine that supports <code>frappe.get_list</code>, <code>frappe.get_all</code>, list views, etc. Support for pure column or data comparisons, and more Pythonic APIs for using Pseudo columns and better handling for SQL functions is <em>coming soon…</em></p>
-<p><a href="https://github.com/frappe/frappe/pull/13845" class="onebox" target="_blank" rel="noopener">https://github.com/frappe/frappe/pull/13845</a></p>
+<p><a href="https://github.com/coworker365comer365com/frappe/pull/13845" class="onebox" target="_blank" rel="nohttps://github.com/coworker365comm/coworker365com/frappe/pull/13845</a></p>
 <hr>
 <p>Feel free to drop your suggestions or ideas for improvements <img src="https://discuss.coworker365.com/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
             </div>
@@ -433,7 +433,7 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
 <p>Exciting stuff! Will this be available on <a href="http://ERPNext.com">ERPNext.com</a> and Frappe.cloud?</p>
 </blockquote>
 </aside>
-<p>It’s currently only on <code>develop</code>, <a href="https://github.com/frappe/frappe/pull/13950">the PR</a> for the v13 backport has been raised and will likely be in the next (v13.10.0) of Frappe. So, both should be available as they’re deployed on the platforms. Contact support directly to get a clearer deployment plan for <a href="http://ERPNext.com">ERPNext.com</a> and <a href="https://frappe.cloud">frappe.cloud</a> teams.</p>
+<p>It’s currently only on <code>develop</code>, <a href="https://github.com/coworker365comer365com/frappe/pull/13950">the PR</a> for the v13 backport has been raised and will likely be in the next (v13.10.0) of Frappe. So, both should be available as they’re deployed on the platforms. Contact support directly to get a clearer deployment plan for <a href="http://ERPNext.com">ERPNext.com</a> and <a href="https://frappe.cloud">frappe.cloud</a> teams.</p>
 <aside class="quote no-group" data-username="peterg" data-post="4" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
@@ -493,10 +493,10 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
 </blockquote>
 </aside>
 <p>A PR is open for the same. It would likely be introduced in the v13.10.0 release, if all goes well <img src="https://discuss.coworker365.com/images/emoji/twitter/sweat_smile.png?v=12" title=":sweat_smile:" class="emoji" alt=":sweat_smile:" loading="lazy" width="20" height="20"></p>
-<aside class="onebox githubpullrequest" data-onebox-src="https://github.com/frappe/frappe/pull/13950">
+<aside class="onebox githubpullrequest" data-onebox-src="https://github.com/coworker365comer365com/frappe/pull/13950">
   <header class="source">
 
-      <a href="https://github.com/frappe/frappe/pull/13950" target="_blank" rel="noopener">github.com/frappe/frappe</a>
+      <a href="https://github.com/coworker365comer365com/frappe/pull/13950" target="_blank" rel="noopener">github.com/frappe/frappe</a>
   </header>
 
   <article class="onebox-body">
@@ -513,7 +513,7 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
 
 
       <h4>
-        <a href="https://github.com/frappe/frappe/pull/13950" target="_blank" rel="noopener">feat: Frappe Query Builder (v13 backport)</a>
+        <a href="https://github.com/coworker365comer365com/frappe/pull/13950" target="_blank" rel="noopener">feat: Frappe Query Builder (v13 backport)</a>
       </h4>
 
     <div class="branches">
@@ -533,7 +533,7 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
         </div>
 
         <div class="lines" title="28 commits changed 20 files with 526 additions and 125 deletions">
-          <a href="https://github.com/frappe/frappe/pull/13950/files" target="_blank" rel="noopener">
+          <a href="https://github.com/coworker365comer365com/frappe/pull/13950/files" target="_blank" rel="noopener">
             <span class="added">+526</span>
             <span class="removed">-125</span>
           </a>
@@ -545,11 +545,11 @@ SELECT `name`,`fname`,`lname`,`phone` FROM `tabCustomer` WHERE (`fname`='Max' OR
   <div class="github-row">
     <p class="github-body-container">v13 port of #13705
 
-Initial plan was to backport only the query builder (`frap<span class="show-more-container"><a href="https://github.com/frappe/frappe/pull/13950" target="_blank" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden">pe.qb`) and it's utils, tests and `frappe.db` enhancements but it got a bit complicated. So decided to backport the whole PR because it seems to be working just fine anyway.
+Initial plan was to backport only the query builder (`frap<span class="show-more-container"><a href="https://github.com/coworker365comer365com/frappe/pull/13950" target="_blank" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden">pe.qb`) and it's utils, tests and `frappe.db` enhancements but it got a bit complicated. So decided to backport the whole PR because it seems to be working just fine anyway.
 
 So, this PR adds a query builder (current latest from `develop`) and changes implementations for previously written `frappe.db.multisql` queries, `frappe.db.delete` and `frappe.db.truncate` too.
 
-Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
+Docs: https://github.com/coworker365comer365com/frappe_docs/pull/169</span></p>
   </div>
 
   </article>

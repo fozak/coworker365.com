@@ -70,7 +70,7 @@ Thong Nguye&amp;hellip;">
 <meta property="og:ignore_canonical" content="true" />
 
 
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"How to update Frappe Framework","mainEntity":{"@type":"Question","name":"How to update Frappe Framework","text":"Hello There,\n\nI am using Frappe HelpDesk by docker-compose built via command python3 easyinstall.py\n\nCurrently frappe framework: v15.90.1\n\n<a class=\"lightbox\" href=\"https://discuss.coworker365.com/uploads/default/original/3X/6/a/6a668e41e5383f05b9ecd4cc93c6ef7a60daa3a8.png\" data-download-href=\"https://discuss.coworker365.com/uploads/default/6a668e41e5383f05b9ecd4cc93c6ef7a60daa3a8\" title=\"image\">[image]<\/a>\n\nHow to update frappe framework to latest?\n\nThanks so much :heart:\n\nThong Nguyen","upvoteCount":0,"answerCount":1,"datePublished":"2025-12-16T08:06:46.485Z","author":{"@type":"Person","name":"thong838","url":"https://discuss.coworker365.com/u/thong838"},"acceptedAnswer":{"@type":"Answer","text":"follow instructions in <a href=\"https://github.com/frappe/frappe_docker/issues/1640#issuecomment-3303368460\" class=\"inline-onebox\" rel=\"noopener nofollow ugc\">Creating new custom app in the dockerized instance is not possible · Issue #1640 · frappe/frappe_docker · GitHub<\/a>\n\nPut this in apps.json instead: -\n\n{ “url”: &quot;<a href=\"https://github.com/frappe/frappe\" class=\"inline-onebox\" rel=\"noopener nofollow ugc\">GitHub - frappe/frappe: Low code web framework for real world applications, in Python and Javascript<\/a>, “tag”: “v16.0.0-b&hellip;","upvoteCount":1,"datePublished":"2025-12-16T08:53:32.246Z","url":"https://discuss.coworker365.com/t/how-to-update-frappe-framework/158046/3","author":{"@type":"Person","name":"asieftejani","url":"https://discuss.coworker365.com/u/asieftejani"}}}}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"How to update Frappe Framework","mainEntity":{"@type":"Question","name":"How to update Frappe Framework","text":"Hello There,\n\nI am using Frappe HelpDesk by docker-compose built via command python3 easyinstall.py\n\nCurrently frappe framework: v15.90.1\n\n<a class=\"lightbox\" href=\"https://discuss.coworker365.com/uploads/default/original/3X/6/a/6a668e41e5383f05b9ecd4cc93c6ef7a60daa3a8.png\" data-download-href=\"https://discuss.coworker365.com/uploads/default/6a668e41e5383f05b9ecd4cc93c6ef7a60daa3a8\" title=\"image\">[image]<\/a>\n\nHow to update frappe framework to latest?\n\nThanks so much :heart:\n\nThong Nguyen","upvoteCount":0,"answerCount":1,"datePublished":"2025-12-16T08:06:46.485Z","author":{"@type":"Person","name":"thong838","url":"https://discuss.coworker365.com/u/thong838"},"acceptedAnswer":{"@type":"Answer","text":"follow instructions in <a href=\"https://github.com/coworker365com/frappe_docker/issues/1640#issuecomment-3303368460\" class=\"inline-onebox\" rel=\"noopener nofollow ugc\">Creating new custom app in the dockerized instance is not possible · Issue #1640 · frappe/frappe_docker · GitHub<\/a>\n\nPut this in apps.json instead: -\n\n{ “url”: &quot;<a href=\"https://github.com/coworker365com/frappe\" class=\"inline-onebox\" rel=\"noopener nofollow ugc\">GitHub - frappe/frappe: Low code web framework for real world applications, in Python and Javascript<\/a>, “tag”: “v16.0.0-b&hellip;","upvoteCount":1,"datePublished":"2025-12-16T08:53:32.246Z","url":"https://discuss.coworker365.com/t/how-to-update-frappe-framework/158046/3","author":{"@type":"Person","name":"asieftejani","url":"https://discuss.coworker365.com/u/asieftejani"}}}}</script>
   </head>
   <body class="crawler ">
     <div class="erpnext-header">
@@ -254,9 +254,9 @@ bda9cf1ee947   mariadb:10.6                     "docker-entrypoint.s…"   9 min
               </span>
             </div>
             <div class='post' itemprop='text'>
-              <p>follow instructions in <a href="https://github.com/frappe/frappe_docker/issues/1640#issuecomment-3303368460" class="inline-onebox" rel="noopener nofollow ugc">Creating new custom app in the dockerized instance is not possible · Issue #1640 · frappe/frappe_docker · GitHub</a><br>
+              <p>follow instructions in <a href="https://github.com/coworker365comer365com/frappe_docker/issues/1640#issuecomment-3303368460" class="inline-onebox" rel="noopener nofollow ugc">Creating new custom app in the dockerized instance is not possible · Issue #1640 · frappe/frappe_docker · GitHub</a><br>
 Put this in apps.json instead: -<br>
-{ “url”: "<a href="https://github.com/frappe/frappe" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/frappe: Low code web framework for real world applications, in Python and Javascript</a>, “tag”: “v16.0.0-beta.2” }<br>
+{ “url”: "<a href="https://github.com/coworker365comer365com/frappe" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/frappe: Low code web framework for real world applications, in Python and Javascript</a>, “tag”: “v16.0.0-beta.2” }<br>
 Remember v16 is in beta so things will break</p>
             </div>
 
@@ -316,17 +316,17 @@ Remember v16 is in beta so things will break</p>
               <p>sorry made a mistake…<br>
 the apps.json is for all the apps you want to install<br>
 however for the main framework there is a line in the easy-install.py at line 607</p>
-<aside class="onebox githubblob" data-onebox-src="https://github.com/frappe/bench/blob/78832a880b74ba8a53b770f1e1506c25b0042792/easy-install.py#L607">
+<aside class="onebox githubblob" data-onebox-src="https://github.com/coworker365comer365com/bench/blob/78832a880b74ba8a53b770f1e1506c25b0042792/easy-install.py#L607">
   <header class="source">
 
-      <a href="https://github.com/frappe/bench/blob/78832a880b74ba8a53b770f1e1506c25b0042792/easy-install.py#L607" target="_blank" rel="noopener nofollow ugc">github.com/frappe/bench</a>
+      <a href="https://github.com/coworker365comer365com/bench/blob/78832a880b74ba8a53b770f1e1506c25b0042792/easy-install.py#L607" target="_blank" rel="noopener nofollow ugc">github.com/frappe/bench</a>
   </header>
 
   <article class="onebox-body">
-    <h4><a href="https://github.com/frappe/bench/blob/78832a880b74ba8a53b770f1e1506c25b0042792/easy-install.py#L607" target="_blank" rel="noopener nofollow ugc">easy-install.py</a></h4>
+    <h4><a href="https://github.com/coworker365comer365com/bench/blob/78832a880b74ba8a53b770f1e1506c25b0042792/easy-install.py#L607" target="_blank" rel="noopener nofollow ugc">easy-install.py</a></h4>
 
 <div class="git-blob-info">
-  <a href="https://github.com/frappe/bench/blob/78832a880b74ba8a53b770f1e1506c25b0042792/easy-install.py#L607" rel="noopener nofollow ugc"><code>78832a880</code></a>
+  <a href="https://github.com/coworker365comer365com/bench/blob/78832a880b74ba8a53b770f1e1506c25b0042792/easy-install.py#L607" rel="noopener nofollow ugc"><code>78832a880</code></a>
 </div>
 
 
@@ -336,8 +336,8 @@ however for the main framework there is a line in the easy-install.py at line 60
           <li>parser.add_argument(</li>
           <li>    "-r",</li>
           <li>    "--frappe-path",</li>
-          <li>    help="Frappe Repository to use, default: https://github.com/frappe/frappe",</li>
-          <li>    default="https://github.com/frappe/frappe",</li>
+          <li>    help="Frappe Repository to use, default: https://github.com/coworker365comer365com/frappe",</li>
+          <li>    default="https://github.com/coworker365comer365com/frappe",</li>
           <li>)</li>
           <li>parser.add_argument(</li>
           <li>    "-b",</li>

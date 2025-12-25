@@ -43,15 +43,15 @@ https://github.com/kayak/pypika
 
 Here&#39;s the PRs that introduced this feature in Frappe. **It&#39;s currently on `develop` and will be a part of Frappe Version 14**. Meanwhile, we&#39;re going to try and convert as many raw queries to this notation.
 
-https://github.com/frappe/frappe/pull/13705
+https://github.com/coworker365com/frappe/pull/13705
 
-https://github.com/frappe/frappe/pull/13841
+https://github.com/coworker365comer365com/frappe/pull/13841
 
 ---
 
 Apart from PyPika, we considered a few other query builders and ORMs. SQLAlchemy seemed to be a strong contender in the early stages. We soon faced a barrage of issues as we started implementing it. Some of our work on it is documented in this PR:
 
-https://github.com/frappe/frappe/pull/13732
+https://github.com/coworker365comer365com/frappe/pull/13732
 
 
 ---
@@ -60,11 +60,11 @@ Apart from these, we&#39;ve been making active efforts in extending the existing
 
 We converted close to 80 raw queries to use the Database APIs. This enabled us to further improve on the low level `frappe.db.delete` API and introduce a new `frappe.db.truncate` too. 
 
-https://github.com/frappe/frappe/pull/13753
+https://github.com/coworker365comer365com/frappe/pull/13753
 
 We&#39;re also trying to expand the feature set in `DatabaseQuery` it&#39;s the engine that supports `frappe.get_list`, `frappe.get_all`, list views, etc. Support for pure column or data comparisons, and more Pythonic APIs for using Pseudo columns and better handling for SQL functions is *coming soon...*
 
-https://github.com/frappe/frappe/pull/13845
+https://github.com/coworker365comer365com/frappe/pull/13845
 
 ---
 
@@ -229,7 +229,7 @@ and not:<br>
         <title>[Announcement] Introducing Frappe Query Builder</title>
         <dc:creator><![CDATA[rmeyer]]></dc:creator>
         <description><![CDATA[
-            <p>I just tried my hand at query building, so let me share an example of <a href="https://github.com/frappe/erpnext/blob/9a644f645cbf1eb65eb5b9cde4cf16a4077836a1/erpnext/regional/report/datev/datev.py#L518-L530">the same query</a> in three different styles:</p>
+            <p>I just tried my hand at query building, so let me share an example of <a href="https://github.com/coworker365comer365com/erpnext/blob/9a644f645cbf1eb65eb5b9cde4cf16a4077836a1/erpnext/regional/report/datev/datev.py#L518-L530">the same query</a> in three different styles:</p>
 <h3><a name="h-1-frappeget_all-1" class="anchor" href="https://discuss.coworker365.com#h-1-frappeget_all-1"></a>1. <code>frappe.get_all</code></h3>
 <pre data-code-wrap="python"><code class="lang-python">company = "My Company"
 
@@ -546,7 +546,7 @@ Let me know if I made and error or if the queries are not equivalent.</p>
 <p>Exciting stuff! Will this be available on <a href="http://ERPNext.com">ERPNext.com</a> and Frappe.cloud?</p>
 </blockquote>
 </aside>
-<p>It’s currently only on <code>develop</code>, <a href="https://github.com/frappe/frappe/pull/13950">the PR</a> for the v13 backport has been raised and will likely be in the next (v13.10.0) of Frappe. So, both should be available as they’re deployed on the platforms. Contact support directly to get a clearer deployment plan for <a href="http://ERPNext.com">ERPNext.com</a> and <a href="https://frappe.cloud">frappe.cloud</a> teams.</p>
+<p>It’s currently only on <code>develop</code>, <a href="https://github.com/coworker365comer365com/frappe/pull/13950">the PR</a> for the v13 backport has been raised and will likely be in the next (v13.10.0) of Frappe. So, both should be available as they’re deployed on the platforms. Contact support directly to get a clearer deployment plan for <a href="http://ERPNext.com">ERPNext.com</a> and <a href="https://frappe.cloud">frappe.cloud</a> teams.</p>
 <aside class="quote no-group" data-username="peterg" data-post="4" data-topic="79092">
 <div class="title">
 <div class="quote-controls"></div>
@@ -606,10 +606,10 @@ Let me know if I made and error or if the queries are not equivalent.</p>
 </blockquote>
 </aside>
 <p>A PR is open for the same. It would likely be introduced in the v13.10.0 release, if all goes well <img src="https://discuss.coworker365.com/images/emoji/twitter/sweat_smile.png?v=12" title=":sweat_smile:" class="emoji" alt=":sweat_smile:" loading="lazy" width="20" height="20"></p>
-<aside class="onebox githubpullrequest" data-onebox-src="https://github.com/frappe/frappe/pull/13950">
+<aside class="onebox githubpullrequest" data-onebox-src="https://github.com/coworker365comer365com/frappe/pull/13950">
   <header class="source">
 
-      <a href="https://github.com/frappe/frappe/pull/13950" target="_blank" rel="noopener">github.com/frappe/frappe</a>
+      <a href="https://github.com/coworker365comer365com/frappe/pull/13950" target="_blank" rel="noopener">github.com/frappe/frappe</a>
   </header>
 
   <article class="onebox-body">
@@ -626,7 +626,7 @@ Let me know if I made and error or if the queries are not equivalent.</p>
 
 
       <h4>
-        <a href="https://github.com/frappe/frappe/pull/13950" target="_blank" rel="noopener">feat: Frappe Query Builder (v13 backport)</a>
+        <a href="https://github.com/coworker365comer365com/frappe/pull/13950" target="_blank" rel="noopener">feat: Frappe Query Builder (v13 backport)</a>
       </h4>
 
     <div class="branches">
@@ -646,7 +646,7 @@ Let me know if I made and error or if the queries are not equivalent.</p>
         </div>
 
         <div class="lines" title="28 commits changed 20 files with 526 additions and 125 deletions">
-          <a href="https://github.com/frappe/frappe/pull/13950/files" target="_blank" rel="noopener">
+          <a href="https://github.com/coworker365comer365com/frappe/pull/13950/files" target="_blank" rel="noopener">
             <span class="added">+526</span>
             <span class="removed">-125</span>
           </a>
@@ -658,11 +658,11 @@ Let me know if I made and error or if the queries are not equivalent.</p>
   <div class="github-row">
     <p class="github-body-container">v13 port of #13705
 
-Initial plan was to backport only the query builder (`frap<span class="show-more-container"><a href="https://github.com/frappe/frappe/pull/13950" target="_blank" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden">pe.qb`) and it's utils, tests and `frappe.db` enhancements but it got a bit complicated. So decided to backport the whole PR because it seems to be working just fine anyway.
+Initial plan was to backport only the query builder (`frap<span class="show-more-container"><a href="https://github.com/coworker365comer365com/frappe/pull/13950" target="_blank" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden">pe.qb`) and it's utils, tests and `frappe.db` enhancements but it got a bit complicated. So decided to backport the whole PR because it seems to be working just fine anyway.
 
 So, this PR adds a query builder (current latest from `develop`) and changes implementations for previously written `frappe.db.multisql` queries, `frappe.db.delete` and `frappe.db.truncate` too.
 
-Docs: https://github.com/frappe/frappe_docs/pull/169</span></p>
+Docs: https://github.com/coworker365comer365com/frappe_docs/pull/169</span></p>
   </div>
 
   </article>

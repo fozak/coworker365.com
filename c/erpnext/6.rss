@@ -1214,7 +1214,7 @@ Is server-side handling the only recommended approach?</p>
 <h2><a name="p-489177-installation-log-summary-1" class="anchor" href="https://discuss.coworker365.com#p-489177-installation-log-summary-1"></a>Installation Log Summary</h2>
 <pre><code class="lang-auto">text
 </code></pre>
-<p><code>bench get-app https://github.com/frappe/hrms bench get-app https://github.com/frappe/lms   bench get-app https://github.com/frappe/education  # Version warnings during install: Installed frappe-dependency frappe version 15.92.0 does not satisfy required version 16.0.0-dev,17.0.0 Installed frappe-dependency erpnext version 15.92.2 does not satisfy required version 16.0.0-dev,17.0.0 </code></p>
+<p><code>bench get-app https://github.com/coworker365com/hrms bench get-app https://github.com/coworker365com/lms   bench get-app https://github.com/coworker365com/education  # Version warnings during install: Installed frappe-dependency frappe version 15.92.0 does not satisfy required version 16.0.0-dev,17.0.0 Installed frappe-dependency erpnext version 15.92.2 does not satisfy required version 16.0.0-dev,17.0.0 </code></p>
 <p>Apps cloned/built successfully (HRMS: 65MB, LMS: 93MB), yarn installs completed despite peer dependency warnings (tiptap, vite-plugin-pwa, workbox deprecations), assets built, translations compiled.​</p>
 <pre><code class="lang-auto">text
 </code></pre>

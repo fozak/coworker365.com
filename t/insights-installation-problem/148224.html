@@ -163,7 +163,7 @@ Has anyone faced this issue? Any i&amp;hellip;">
 <p>echo “Exporting APPS_JSON…”<br>
 export APPS_JSON=‘[<br>
 {<br>
-“url”: “<a href="https://github.com/frappe/erpnext" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/erpnext: Free and Open Source Enterprise Resource Planning (ERP)</a>”,<br>
+“url”: “<a href="https://github.com/coworker365com/erpnext" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/erpnext: Free and Open Source Enterprise Resource Planning (ERP)</a>”,<br>
 “branch”: “v15.53.0”<br>
 },<br>
 {<br>
@@ -171,7 +171,7 @@ export APPS_JSON=‘[<br>
 “branch”: “main”<br>
 },<br>
 {<br>
-“url”: “<a href="https://github.com/frappe/insights.git" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/insights: Open Source Business Intelligence Tool</a>”,<br>
+“url”: “<a href="https://github.com/coworker365comer365com/insights.git" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/insights: Open Source Business Intelligence Tool</a>”,<br>
 “branch”: “develop”<br>
 }<br>
 ]’</p>
@@ -181,7 +181,7 @@ export APPS_JSON_BASE64=$(echo ${APPS_JSON} | base64 -w 0)</p>
 <h1><a name="step-2-docker-build-command-with-no-cache-5" class="anchor" href="#step-2-docker-build-command-with-no-cache-5"></a>Step 2: Docker build command with --no-cache</h1>
 <p>echo “Building Docker image…”<br>
 docker build --no-cache <br>
-–build-arg FRAPPE_PATH=<a href="https://github.com/frappe/frappe" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/frappe: Low code web framework for real world applications, in Python and Javascript</a> <br>
+–build-arg FRAPPE_PATH=<a href="https://github.com/coworker365comer365com/frappe" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/frappe: Low code web framework for real world applications, in Python and Javascript</a> <br>
 –build-arg APPS_JSON_BASE64=$APPS_JSON_BASE64 <br>
 –tag=customapp:1.0.0 <br>
 –file=images/custom/Containerfile .</p>

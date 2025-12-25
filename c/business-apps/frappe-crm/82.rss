@@ -364,10 +364,10 @@ Heshan Karunaratne</p>
           <description><![CDATA[
             <h3><a name="p-483774-bug-description-1" class="anchor" href="https://discuss.coworker365.com#p-483774-bug-description-1"></a>Bug Description</h3>
 <p>The Territory DocType contains a duplicate definition for the <strong>is_group</strong> field in its core JSON file (CRM territory.json). This causes a validation error (Duplicate name ‘is_group’) when a user attempts to save any customizations to this DocType, effectively blocking any modifications.</p>
-<aside class="onebox githubissue" data-onebox-src="https://github.com/frappe/crm/issues/1263#issue-3432933290">
+<aside class="onebox githubissue" data-onebox-src="https://github.com/coworker365com/crm/issues/1263#issue-3432933290">
   <header class="source">
 
-      <a href="https://github.com/frappe/crm/issues/1263#issue-3432933290" target="_blank" rel="noopener nofollow ugc">github.com/frappe/crm</a>
+      <a href="https://github.com/coworker365comer365com/crm/issues/1263#issue-3432933290" target="_blank" rel="noopener nofollow ugc">github.com/frappe/crm</a>
   </header>
 
   <article class="onebox-body">
@@ -378,7 +378,7 @@ Heshan Karunaratne</p>
 
   <div class="github-info-container">
     <h4>
-      <a href="https://github.com/frappe/crm/issues/1263#issue-3432933290" target="_blank" rel="noopener nofollow ugc">Bug: Duplicate is_group field in Territory DocType prevents saving customizations</a>
+      <a href="https://github.com/coworker365comer365com/crm/issues/1263#issue-3432933290" target="_blank" rel="noopener nofollow ugc">Bug: Duplicate is_group field in Territory DocType prevents saving customizations</a>
     </h4>
 
     <div class="github-info">

@@ -216,21 +216,21 @@ If successful, pls post your sollution here so that others benefit from it</p> ]
       <item>
         <title>ERPNext, HRMS &amp; Frappe Framework v16 Release Dates</title>
         <dc:creator><![CDATA[@JeansReal Jeans K. Real]]></dc:creator>
-        <description><![CDATA[ <p>Yes, parts of it, Please read: <a href="https://github.com/frappe/frappe/wiki/Migrating-to-version-16#separating-modules-from-frappe-into-new-apps" class="inline-onebox" rel="noopener nofollow ugc">Migrating to version 16 · frappe/frappe Wiki · GitHub</a></p>
+        <description><![CDATA[ <p>Yes, parts of it, Please read: <a href="https://github.com/coworker365com/frappe/wiki/Migrating-to-version-16#separating-modules-from-frappe-into-new-apps" class="inline-onebox" rel="noopener nofollow ugc">Migrating to version 16 · frappe/frappe Wiki · GitHub</a></p>
 <h3><a name="p-489514-separating-modules-from-frappe-into-new-apps-1" class="anchor" href="https://discuss.coworker365.com#p-489514-separating-modules-from-frappe-into-new-apps-1"></a>Separating modules from frappe into new apps</h3>
 <p>Continuing last year’s trend. some more modules have been moved out as separate apps:</p>
 <ul>
 <li>
-<p><a href="https://github.com/frappe/eps" rel="noopener nofollow ugc">Energy Points</a> (removed in <a href="https://github.com/frappe/frappe/pull/32040" rel="noopener nofollow ugc">#32040</a>)</p>
+<p><a href="https://github.com/coworker365comer365com/eps" rel="noopener nofollow ugc">Energy Points</a> (removed in <https://github.com/coworker365comm/coworker365com/frappe/pull/32040" rel="noopener nofollow ugc">#32040</a>)</p>
 </li>
 <li>
-<p><a href="https://github.com/frappe/newsletter" rel="noopener nofollow ugc">Newsletter</a> (removed in <a href="https://github.com/frappe/frappe/pull/32971" rel="noopener nofollow ugc">#32971</a>)</p>
+<p><a href="https://github.com/coworker365comer365com/newsletter" rel="noopener nofollow ugc">Newsletter</a> (removed in <https://github.com/coworker365comm/coworker365com/frappe/pull/32971" rel="noopener nofollow ugc">#32971</a>)</p>
 </li>
 <li>
-<p><a href="https://github.com/frappe/offsite_backups" rel="noopener nofollow ugc">Backup Integrations</a> (removed in <a href="https://github.com/frappe/frappe/pull/32351" rel="noopener nofollow ugc">#32351</a>)</p>
+<p><a href="https://github.com/coworker365comer365com/offsite_backups" rel="noopener nofollow ugc">Backup Integrations</a> (removed in <https://github.com/coworker365comm/coworker365com/frappe/pull/32351" rel="noopener nofollow ugc">#32351</a>)</p>
 </li>
 <li>
-<p><a href="https://github.com/frappe/blog" rel="noopener nofollow ugc">Blog</a> (removed in <a href="https://github.com/frappe/frappe/pull/32737" rel="noopener nofollow ugc">#32737</a>)</p>
+<p><a href="https://github.com/coworker365comer365com/blog" rel="noopener nofollow ugc">Blog</a> (removed in <https://github.com/coworker365comm/coworker365com/frappe/pull/32737" rel="noopener nofollow ugc">#32737</a>)</p>
 </li>
 </ul>
 <p>You may need to install those apps accordingly</p> ]]></description>
@@ -327,7 +327,7 @@ I couldn’t find a clean reference that matches the standard report output.</p>
       <item>
         <title>How to install the Frappe Lending app locally (no README available)</title>
         <dc:creator><![CDATA[@asieftejani Asief Tejani]]></dc:creator>
-        <description><![CDATA[ <p>Otherwise if you want to learn the docker way use easy-install.py at <a href="https://github.com/frappe/frappe_docker/issues/1640#issuecomment-3303368460" class="inline-onebox" rel="noopener nofollow ugc">Creating new custom app in the dockerized instance is not possible · Issue #1640 · frappe/frappe_docker · GitHub</a></p> ]]></description>
+        <description><![CDATA[ <p>Otherwise if you want to learn the docker way use easy-install.py at <a href="https://github.com/coworker365comer365com/frappe_docker/issues/1640#issuecomment-3303368460" class="inline-onebox" rel="noopener nofollow ugc">Creating new custom app in the dockerized instance is not possible · Issue #1640 · frappe/frappe_docker · GitHub</a></p> ]]></description>
         <link>https://discuss.coworker365.com/t/how-to-install-the-frappe-lending-app-locally-no-readme-available/158291#post_3</link>
         <pubDate>Wed, 24 Dec 2025 16:24:20 +0000</pubDate>
         <guid isPermaLink="false">discuss.coworker365.com-post-489507</guid>
@@ -363,10 +363,10 @@ All we ask is that you give back to others who may need your help one day</p> ]]
         <title>Wkhtmltopdf Fontconfig error: “No writable cache directories” on ERPNext v15 (Jammy)</title>
         <dc:creator><![CDATA[@asieftejani Asief Tejani]]></dc:creator>
         <description><![CDATA[ <p>This was an issue for me in docker so give it a shot if you are still stuck - no harm in trying, right?</p>
-<aside class="onebox githubissue" data-onebox-src="https://github.com/frappe/frappe_docker/issues/1680">
+<aside class="onebox githubissue" data-onebox-src="https://github.com/coworker365comer365com/frappe_docker/issues/1680">
   <header class="source">
 
-      <a href="https://github.com/frappe/frappe_docker/issues/1680" target="_blank" rel="noopener nofollow ugc">github.com/frappe/frappe_docker</a>
+      <a href="https://github.com/coworker365comer365com/frappe_docker/issues/1680" target="_blank" rel="noopener nofollow ugc">github.com/frappe/frappe_docker</a>
   </header>
 
   <article class="onebox-body">
@@ -377,7 +377,7 @@ All we ask is that you give back to others who may need your help one day</p> ]]
 
   <div class="github-info-container">
     <h4>
-      <a href="https://github.com/frappe/frappe_docker/issues/1680" target="_blank" rel="noopener nofollow ugc">wkhtmltopdf error everytime i compose</a>
+      <a href="https://github.com/coworker365comer365com/frappe_docker/issues/1680" target="_blank" rel="noopener nofollow ugc">wkhtmltopdf error everytime i compose</a>
     </h4>
 
     <div class="github-info">
@@ -610,17 +610,17 @@ If I logout from the system, I always land on Login Page…</p>
         <title>ERPNext, HRMS &amp; Frappe Framework v16 Release Dates</title>
         <dc:creator><![CDATA[@akhilnarang Akhil Narang]]></dc:creator>
         <description><![CDATA[ <p>You need python 3.14 and node 24 to use the latest version.</p>
-<aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/frappe/frappe/wiki/Migrating-to-version-16">
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/coworker365comer365com/frappe/wiki/Migrating-to-version-16">
   <header class="source">
       <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" alt="" width="32" height="32">
 
-      <a href="https://github.com/frappe/frappe/wiki/Migrating-to-version-16" target="_blank" rel="noopener nofollow ugc">GitHub</a>
+      <a href="https://github.com/coworker365comer365com/frappe/wiki/Migrating-to-version-16" target="_blank" rel="noopener nofollow ugc">GitHub</a>
   </header>
 
   <article class="onebox-body">
     <div class="aspect-image" style="--aspect-ratio:690/388;"><img src="https://repository-images.githubusercontent.com/1864194/4eb9e77e-b5fa-4e17-a330-a828f411afe1" class="thumbnail" alt="" width="690" height="388"></div>
 
-<h3><a href="https://github.com/frappe/frappe/wiki/Migrating-to-version-16" target="_blank" rel="noopener nofollow ugc">Migrating to version 16</a></h3>
+<h3><a href="https://github.com/coworker365comer365com/frappe/wiki/Migrating-to-version-16" target="_blank" rel="noopener nofollow ugc">Migrating to version 16</a></h3>
 
   <p>Low code web framework for real world applications, in Python and Javascript - frappe/frappe</p>
 
