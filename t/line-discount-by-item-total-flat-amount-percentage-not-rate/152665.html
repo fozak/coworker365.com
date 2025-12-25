@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Line Discount by Item Total (Flat Amount &amp; Percentage) – Not Rate - ERPNext - Frappe Forum</title>
+    <meta name="description" content="Hello everyone, 
+I’m trying to implement a specific type of line discount in ERPNext, but I’m running into issues with how it currently works. By default, ERPNext applies line discounts at the item rate level, which mean&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/line-discount-by-item-total-flat-amount-percentage-not-rate/152665" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Line Discount by Item Total (Flat Amount &amp; Percentage) – Not Rate&#39;" href="https://discuss.frappe.io/t/line-discount-by-item-total-flat-amount-percentage-not-rate/152665.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/line-discount-by-item-total-flat-amount-percentage-not-rate/152665" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/line-discount-by-item-total-flat-amount-percentage-not-rate/152665" />
+<meta property="og:title" content="Line Discount by Item Total (Flat Amount &amp; Percentage) – Not Rate" />
+<meta name="twitter:title" content="Line Discount by Item Total (Flat Amount &amp; Percentage) – Not Rate" />
+<meta property="og:description" content="Hello everyone,  I’m trying to implement a specific type of line discount in ERPNext, but I’m running into issues with how it currently works. By default, ERPNext applies line discounts at the item rate level, which means the rate of the item is reduced first and then extended to quantity.  What I need instead is for the discount to apply to the item’s total amount, before taxes are calculated.  In other words:  Item Total = [(Rate x Quantity) - Discount]  This should happen before taxes are app..." />
+<meta name="twitter:description" content="Hello everyone,  I’m trying to implement a specific type of line discount in ERPNext, but I’m running into issues with how it currently works. By default, ERPNext applies line discounts at the item rate level, which means the rate of the item is reduced first and then extended to quantity.  What I need instead is for the discount to apply to the item’s total amount, before taxes are calculated.  In other words:  Item Total = [(Rate x Quantity) - Discount]  This should happen before taxes are app..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="custom_script" />
+<meta property="og:article:tag" content="frappe" />
+<meta property="og:article:tag" content="customization" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="3 ❤" />
+<meta property="article:published_time" content="2025-08-25T19:08:59+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Line Discount by Item Total (Flat Amount & Percentage) – Not Rate","mainEntity":{"@type":"Question","name":"Line Discount by Item Total (Flat Amount & Percentage) – Not Rate","text":"Hello everyone,\n\nI’m trying to implement a specific type of line discount in ERPNext, but I’m running into issues with how it currently works. By default, ERPNext applies line discounts at the item rate level, which means the rate of the item is reduced first and then extended to quantity.\n\nWhat I n&hellip;","upvoteCount":1,"answerCount":0,"datePublished":"2025-08-25T19:08:59.164Z","author":{"@type":"Person","name":"gdelacruz-nts","url":"https://discuss.frappe.io/u/gdelacruz-nts"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/line-discount-by-item-total-flat-amount-percentage-not-rate/152665">Line Discount by Item Total (Flat Amount &amp; Percentage) – Not Rate</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/custom_script' class='discourse-tag' rel="tag">custom_script</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
+            <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag' rel="tag">customization</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Line Discount by Item Total (Flat Amount &amp; Percentage) – Not Rate'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/line-discount-by-item-total-flat-amount-percentage-not-rate/152665'>
+      <meta itemprop='datePublished' content='2025-08-25T19:08:59Z'>
+        <meta itemprop='articleSection' content='ERPNext'>
+      <meta itemprop='keywords' content='erpnext, custom_script, frappe, customization'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/gdelacruz-nts'><span itemprop='name'>gdelacruz-nts</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/line-discount-by-item-total-flat-amount-percentage-not-rate/152665">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-08-25T19:08:59Z' class='post-time'>
+                    August 25, 2025,  7:08pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-25T19:08:59Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello everyone,</p>
+<p>I’m trying to implement a specific type of line discount in ERPNext, but I’m running into issues with how it currently works. By default, ERPNext applies line discounts at the <strong>item rate</strong> level, which means the rate of the item is reduced first and then extended to quantity.</p>
+<p>What I need instead is for the discount to apply to the <strong>item’s total amount</strong>, before taxes are calculated.</p>
+<p>In other words:</p>
+<p><strong>Item Total = [(Rate x Quantity) - Discount]</strong></p>
+<p>This should happen before taxes are applied. If the tax is inclusive, then additional calculations would be needed to adjust the item totals accordingly.</p>
+<p>Here’s a simplified example of what I need:</p>
+<p><strong>Invoice Totals:</strong></p>
+<ul>
+<li><strong>Item Price</strong>: 250.00</li>
+<li><strong>Quantity</strong>: 9</li>
+<li><strong>Original subtotal</strong>: 9 × 250 = 2250</li>
+<li><strong>Discount applied to item total</strong>: –150</li>
+<li><strong>Net Item Total</strong>: 2100</li>
+<li><strong>Tax (18%)</strong>: 378</li>
+<li><strong>Grand Total</strong>: 2478</li>
+</ul>
+<p><strong>What I’m Looking For</strong></p>
+<ol>
+<li>Is there a way in ERPNext to apply <strong>line discounts directly to item totals</strong> instead of item rates?</li>
+<li>Ideally, I want to support <strong>both flat amount (e.g. –150)</strong> and <strong>percentage discounts (e.g. –10%)</strong>.</li>
+<li>Should this be handled via a client script, server script, or is there a built-in feature I might be missing?</li>
+</ol>
+<p>Has anyone else implemented this? Any guidance would be appreciated.</p>
+<p>Thanks!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ahsantareen'><span itemprop='name'>ahsantareen</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/b/5/b578aa1891d436dd926e8c223e44034723dcdbd7.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-26T04:56:03Z' class='post-time'>
+                    August 26, 2025,  4:56am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-26T04:56:03Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/gdelacruz-nts">@gdelacruz-nts</a></p>
+<p>Both item line level and the whole document level discounts available in ERPNext and it can be applied either with a percentage of discount or discount amount either ways.</p>
+<p>Item level discount is located in item table where either discount amount or percentage can be inserted based on price list rate as following;</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/b/5/b578aa1891d436dd926e8c223e44034723dcdbd7.png" data-download-href="https://discuss.frappe.io/uploads/default/b578aa1891d436dd926e8c223e44034723dcdbd7" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/b/5/b578aa1891d436dd926e8c223e44034723dcdbd7_2_690x424.png" alt="image" data-base62-sha1="pTmWyIDzTdlZjWNJ65VWpBPcs3Z" width="690" height="424" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/b/5/b578aa1891d436dd926e8c223e44034723dcdbd7_2_690x424.png, https://discuss.frappe.io/uploads/default/optimized/3X/b/5/b578aa1891d436dd926e8c223e44034723dcdbd7_2_1035x636.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/b/5/b578aa1891d436dd926e8c223e44034723dcdbd7_2_1380x848.png 2x" data-dominant-color="FBFAF6"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1391×855 60.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>On the other hand, if discount is common for the whole <strong>Quotation</strong> then Additional Discount section is available under tax table where one can apply discount either on Net total (item table total before tax) or grand total (item table total + tax ). In your case, additional discount on net total where amount based discount is applied resulting a new net total as 2100 ;</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/3/8/38ded462684aa98c99acc09f007dc83ac6cc1b74.png" data-download-href="https://discuss.frappe.io/uploads/default/38ded462684aa98c99acc09f007dc83ac6cc1b74" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/3/8/38ded462684aa98c99acc09f007dc83ac6cc1b74_2_690x474.png" alt="image" data-base62-sha1="8769dhTTenJauJVnyNbutAfffx2" width="690" height="474" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/3/8/38ded462684aa98c99acc09f007dc83ac6cc1b74_2_690x474.png, https://discuss.frappe.io/uploads/default/optimized/3X/3/8/38ded462684aa98c99acc09f007dc83ac6cc1b74_2_1035x711.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/3/8/38ded462684aa98c99acc09f007dc83ac6cc1b74.png 2x" data-dominant-color="FCFAF7"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1277×879 51.3 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/gdelacruz-nts'><span itemprop='name'>gdelacruz-nts</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/f/5/f5ce3398300b4abd6619d62e5b395186102fcdac.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-27T14:12:33Z' class='post-time'>
+                    August 27, 2025,  2:12pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-27T14:12:33Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="ahsantareen" data-post="2" data-topic="152665">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/ahsantareen/48/86743_2.png" class="avatar"> ahsantareen:</div>
+<blockquote>
+<p>located in item table where either discount amount or percentage can be inserted based on price list rate as following;</p>
+</blockquote>
+</aside>
+<p>Hi <a class="mention" href="/u/ahsantareen">@ahsantareen</a></p>
+<p>Thank you very much for your answer. However, this doesn’t solve my problem because using ERPNext’s current item line level discount, the price (or Price List Rate) of the item is changed.</p>
+<p>In this example, the rate would change by 100 (from 250 to 150), resulting in a final item total of 900.00.<br>
+This is <strong>not</strong> the desired result<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/5/f5ce3398300b4abd6619d62e5b395186102fcdac.png" data-download-href="https://discuss.frappe.io/uploads/default/f5ce3398300b4abd6619d62e5b395186102fcdac" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/f/5/f5ce3398300b4abd6619d62e5b395186102fcdac_2_690x69.png" alt="image" data-base62-sha1="z4uLqKDRyIDXajJ8kga0Ki458Kg" width="690" height="69" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/f/5/f5ce3398300b4abd6619d62e5b395186102fcdac_2_690x69.png, https://discuss.frappe.io/uploads/default/optimized/3X/f/5/f5ce3398300b4abd6619d62e5b395186102fcdac_2_1035x103.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/f/5/f5ce3398300b4abd6619d62e5b395186102fcdac.png 2x" data-dominant-color="F8F8F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1258×127 9.52 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>My task will only reduce the total at the item line level. Calculating that, 250 multiplied by 9 equals 2,250. After subtracting 150, the new total would be 2,100.00.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Muzzy'><span itemprop='name'>Muzzy</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-27T16:30:39Z' class='post-time'>
+                    August 27, 2025,  4:30pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-27T16:30:39Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We ran into this issue. In the end we had to do some custom work to keep the rate in another field and then calculate rate<em>qty</em>discount amount. Core will behave the way you have described.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/gdelacruz-nts'><span itemprop='name'>gdelacruz-nts</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-27T18:46:13Z' class='post-time'>
+                    August 27, 2025,  6:46pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-27T18:46:13Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello <a class="mention" href="/u/muzzy">@Muzzy</a></p>
+<p>Can you tell me how you achieve this behavior? What did you do?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Ashique-tridz'><span itemprop='name'>Ashique-tridz</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-02T06:26:17Z' class='post-time'>
+                    December 2, 2025,  6:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-02T06:29:43Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Is this problem resolved? I am experiencing the same issue <a href="https://www.perplexity.ai/search/reset-to-the-upstream-main-bra-dli1CEaWRyGmqtm9NwR24A" rel="noopener nofollow ugc">@gdelacruz-nts</a>. If it has been resolved, could you please describe how it was fixed here?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ahsantareen'><span itemprop='name'>ahsantareen</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/f/2/f2fc07f8f0efc8bb6a1295b586abad4fda3bfc27.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-02T08:00:55Z' class='post-time'>
+                    December 2, 2025,  8:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-02T08:00:55Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/gdelacruz-nts">@gdelacruz-nts</a></p>
+<p>You have to play with Rate field to come to your desired Amount for the item line as following;</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/2/f2fc07f8f0efc8bb6a1295b586abad4fda3bfc27.png" data-download-href="https://discuss.frappe.io/uploads/default/f2fc07f8f0efc8bb6a1295b586abad4fda3bfc27" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/f/2/f2fc07f8f0efc8bb6a1295b586abad4fda3bfc27_2_690x323.png" alt="image" data-base62-sha1="yFxwmSrKLbhgZpO5LL48ts5sUWb" width="690" height="323" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/f/2/f2fc07f8f0efc8bb6a1295b586abad4fda3bfc27_2_690x323.png, https://discuss.frappe.io/uploads/default/optimized/3X/f/2/f2fc07f8f0efc8bb6a1295b586abad4fda3bfc27_2_1035x484.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/f/2/f2fc07f8f0efc8bb6a1295b586abad4fda3bfc27_2_1380x646.png 2x" data-dominant-color="FBF9F7"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1902×892 66.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Otherwise custom script can handle such request.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Ashique-tridz'><span itemprop='name'>Ashique-tridz</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-03T09:43:42Z' class='post-time'>
+                    December 3, 2025,  9:43am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-03T09:43:42Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The issue is that when we add a discount or discount percentage, the item-wise total amount is updated, but the item rate also changes, which we do not want. In our case, the discount is derived from the Price List Rate, but when someone manually changes the item rate, the discount calculation still uses the original Price List Rate, and this causes the rate field to change unexpectedly on save.</p>
+<p>​</p>
+<p>For example: quantity 9 × rate 250 = 2,250. After applying a discount of 150, the new total should be 2,100, while the item rate should remain 250 and only the amount should be affected.</p>
+<p>​</p>
+<p>If there is any standard setting, script example, or recommended customization approach to apply item-wise discounts based on the line total (without modifying the item rate), suggestions would be appreciated.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

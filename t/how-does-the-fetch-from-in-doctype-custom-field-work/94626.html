@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How does the &quot;Fetch From&quot; in Doctype Custom Field work? - Customize ERPNext - Frappe Forum</title>
+    <meta name="description" content="Here’s the documentation for various options on the Custom Field modal: 
+
+
+Fetch From: When you want your Custom Field to be ‘Link Field’, you would be required to specify the Form to which this Field is to be linked. E.&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/how-does-the-fetch-from-in-doctype-custom-field-work/94626" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;How does the &quot;Fetch From&quot; in Doctype Custom Field work?&#39;" href="https://discuss.frappe.io/t/how-does-the-fetch-from-in-doctype-custom-field-work/94626.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/d/5/d5f4bac7b80fa70131c26a6512a0c1da3a98d55e_2_1024x369.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/d/5/d5f4bac7b80fa70131c26a6512a0c1da3a98d55e_2_1024x369.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/how-does-the-fetch-from-in-doctype-custom-field-work/94626" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/how-does-the-fetch-from-in-doctype-custom-field-work/94626" />
+<meta property="og:title" content="How does the &quot;Fetch From&quot; in Doctype Custom Field work?" />
+<meta name="twitter:title" content="How does the &quot;Fetch From&quot; in Doctype Custom Field work?" />
+<meta property="og:description" content="Here’s the documentation for various options on the Custom Field modal:    Fetch From: When you want your Custom Field to be ‘Link Field’, you would be required to specify the Form to which this Field is to be linked. E.g., you want to create a Custom Field ‘Project’ in the DocType ‘Item’. You would be required to enter to specify your Field Type as ‘Link’ and enter ‘Project’ in the Fetch From Field to ensure that the Field is updated with the list of all the required DocTypes. Fetch If Empty: T..." />
+<meta name="twitter:description" content="Here’s the documentation for various options on the Custom Field modal:    Fetch From: When you want your Custom Field to be ‘Link Field’, you would be required to specify the Form to which this Field is to be linked. E.g., you want to create a Custom Field ‘Project’ in the DocType ‘Item’. You would be required to enter to specify your Field Type as ‘Link’ and enter ‘Project’ in the Fetch From Field to ensure that the Field is updated with the list of all the required DocTypes. Fetch If Empty: T..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:section" content="Customize ERPNext" />
+<meta property="og:article:section:color" content="0088CC" />
+<meta property="og:article:tag" content="doctype" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="5 ❤" />
+<meta property="article:published_time" content="2022-09-14T01:07:37+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"How does the \"Fetch From\" in Doctype Custom Field work?","mainEntity":{"@type":"Question","name":"How does the \"Fetch From\" in Doctype Custom Field work?","text":"Here’s the documentation for various options on the Custom Field modal:\n\nFetch From: When you want your Custom Field to be ‘Link Field’, you would be required to specify the Form to which this Field is to be linked. E.g., you want to create a Custom Field ‘Project’ in the DocType ‘Item’. You would&hellip;","upvoteCount":0,"answerCount":1,"datePublished":"2022-09-14T01:07:37.651Z","author":{"@type":"Person","name":"geordie504","url":"https://discuss.frappe.io/u/geordie504"},"acceptedAnswer":{"@type":"Answer","text":"Hi there,\n\nI’m not at my computer to test, but I believe it should work if you set the link option as project.project_code rather than Project.project_code. You use the variable name  (not the label) to define the link.\n\nIf that doesn’t work, I’ll take a look when I get back to the office. If I’m un&hellip;","upvoteCount":2,"datePublished":"2022-09-14T07:15:40.959Z","url":"https://discuss.frappe.io/t/how-does-the-fetch-from-in-doctype-custom-field-work/94626/2","author":{"@type":"Person","name":"peterg","url":"https://discuss.frappe.io/u/peterg"}}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/how-does-the-fetch-from-in-doctype-custom-field-work/94626">How does the &quot;Fetch From&quot; in Doctype Custom Field work?</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/customize-erpnext/57" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0088CC'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Customize ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/doctype' class='discourse-tag' rel="tag">doctype</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='How does the &quot;Fetch From&quot; in Doctype Custom Field work?'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/how-does-the-fetch-from-in-doctype-custom-field-work/94626'>
+      <meta itemprop='datePublished' content='2022-09-14T01:07:37Z'>
+        <meta itemprop='articleSection' content='Customize ERPNext'>
+      <meta itemprop='keywords' content='doctype'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/geordie504'><span itemprop='name'>geordie504</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/how-does-the-fetch-from-in-doctype-custom-field-work/94626">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/d/5/d5f4bac7b80fa70131c26a6512a0c1da3a98d55e.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2022-09-14T01:07:37Z' class='post-time'>
+                    September 14, 2022,  1:07am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-09-14T01:07:37Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Here’s the documentation for various options on the Custom Field modal:</p>
+<blockquote>
+<ol>
+<li><strong>Fetch From</strong>: When you want your Custom Field to be ‘Link Field’, you would be required to specify the Form to which this Field is to be linked. E.g., you want to create a Custom Field ‘Project’ in the DocType ‘Item’. You would be required to enter to specify your Field Type as ‘Link’ and enter ‘Project’ in the Fetch From Field to ensure that the Field is updated with the list of all the required DocTypes.</li>
+<li><strong>Fetch If Empty</strong>: This check-box will ensure that this Field will be not overwritten based on Fetch From if a value already exists.</li>
+<li><strong>Default Value</strong>: Enter the default value of the Field which you would want to be fetched for this Field.</li>
+</ol>
+</blockquote>
+<p>I’m trying to auto-name a Task based on a “Project Key”, which is a custom four-character Identifier for projects.  Similar to the way Jira works.</p>
+<p>I’ve defined a custom field “Project Key” in the Project doctype.</p>
+<p>Now, when I create a task associated with that Project, I’d like the Project link to be automatically filled in, but I’d also like a “Project Key” field to be populated from the same project either when the Task is created, or even better, have the Project Key get updated any time the Project fields gets populated or changed.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/5/d5f4bac7b80fa70131c26a6512a0c1da3a98d55e.png" data-download-href="https://discuss.frappe.io/uploads/default/d5f4bac7b80fa70131c26a6512a0c1da3a98d55e" title="Screen Shot 2022-09-13 at 9.04.31 PM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/5/d5f4bac7b80fa70131c26a6512a0c1da3a98d55e_2_690x249.png" alt="Screen Shot 2022-09-13 at 9.04.31 PM" data-base62-sha1="uwK1YUYfOnUNguAwUxH7RrX60PA" width="690" height="249" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/5/d5f4bac7b80fa70131c26a6512a0c1da3a98d55e_2_690x249.png, https://discuss.frappe.io/uploads/default/optimized/3X/d/5/d5f4bac7b80fa70131c26a6512a0c1da3a98d55e_2_1035x373.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/d/5/d5f4bac7b80fa70131c26a6512a0c1da3a98d55e.png 2x" data-dominant-color="FBFBFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screen Shot 2022-09-13 at 9.04.31 PM</span><span class="informations">1285×464 40.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>My intuition is that the “Fetch From” field should be able to retrieve this value with something like this:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/8/1/8176aca42e867a0e50abc70eeaa4c688774065a4.png" data-download-href="https://discuss.frappe.io/uploads/default/8176aca42e867a0e50abc70eeaa4c688774065a4" title="Screen Shot 2022-09-13 at 9.11.18 PM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/8/1/8176aca42e867a0e50abc70eeaa4c688774065a4_2_690x434.png" alt="Screen Shot 2022-09-13 at 9.11.18 PM" data-base62-sha1="ithQQwO3hnUt76tpJRwiEYlR9OY" width="690" height="434" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/8/1/8176aca42e867a0e50abc70eeaa4c688774065a4_2_690x434.png, https://discuss.frappe.io/uploads/default/optimized/3X/8/1/8176aca42e867a0e50abc70eeaa4c688774065a4_2_1035x651.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/8/1/8176aca42e867a0e50abc70eeaa4c688774065a4.png 2x" data-dominant-color="F9FAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screen Shot 2022-09-13 at 9.11.18 PM</span><span class="informations">1216×766 42.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>You probably know that this has no effect and the Project Key field remains empty.</p>
+<p>Upon reflection, this makes some sense, since the “Fetch From” field may not know <em>which</em> Project to pull the code from.</p>
+<p>How can I retrieve the Project Key from the linked Project automatically upon task creation?</p>
+<p>The end goal, is to be able to use the Project Key to name the task, so a task attached to project with a key “RAIC” would use an auto name formula to name the task with the pattern RAIC-0001.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/fetch-data-from-sales-invoice-doctype-to-payment-entry-reference-doctype/129338/8">Fetch data from sales invoice doctype to payment entry reference doctype</a>
+                        <meta itemprop='position' content='3'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/i-have-create-one-custom-data-field-and-want-to-fetch-user-full-name/131235/2">I have create one custom data field and want to fetch user full name</a>
+                        <meta itemprop='position' content='4'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/purchase-order-item-child-table-not-able-to-update/129310/2">Purchase Order item- Child table- not able to update</a>
+                        <meta itemprop='position' content='5'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/i-need-one-field-to-fetch-from-item-transaction/130301/2">I need one field to fetch from Item transaction</a>
+                        <meta itemprop='position' content='6'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/peterg'><span itemprop='name'>peterg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-09-14T07:15:40Z' class='post-time'>
+                    September 14, 2022,  7:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-09-14T07:15:40Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi there,</p>
+<p>I’m not at my computer to test, but I believe it should work if you set the link option as <code>project.project_code</code> rather than <code>Project.project_code</code>. You use the variable name  (not the label) to define the link.</p>
+<p>If that doesn’t work, I’ll take a look when I get back to the office. If I’m understanding you correctly, what you are trying to do is possible.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/geordie504'><span itemprop='name'>geordie504</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-09-14T17:45:52Z' class='post-time'>
+                    September 14, 2022,  5:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-09-14T17:45:52Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you, <a class="mention" href="/u/peterg">@peterg</a>, you are my savior.</p>
+<p>That works like a charm!</p>
+<p>Do you know if there is a way to find out easily what variables are available in a given dialog field?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/peterg'><span itemprop='name'>peterg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-09-14T23:47:09Z' class='post-time'>
+                    September 14, 2022, 11:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-09-14T23:47:09Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I believe that you can fetch any field in any document that is linked to the current doc in a link field. In v14, the empty text field here has been replaced with a set of drop-down select fields in the Customize Form tool, so it’s all a bit easier.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Iulian_Olaru'><span itemprop='name'>Iulian_Olaru</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-09-15T13:37:39Z' class='post-time'>
+                    September 15, 2022,  1:37pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-09-15T13:37:39Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>What can be the reason for data not being fetched even though the fetch syntax is correct, the link field is there … etc ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/cmubeenali'><span itemprop='name'>cmubeenali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-12T13:38:02Z' class='post-time'>
+                    January 12, 2023,  1:38pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-12T13:38:02Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>But that drop-downs doesn’t list any doctypes. Also, the doctype i want list in the <code>Fetch From</code> field is in the same module i want to link the field. Could you please help in this scenario. I’m a newcomer to Frappe</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mijan1373'><span itemprop='name'>mijan1373</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/3/3/33c27edc06d915cd6ad4c48ae6b8f33e63c69da3.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-05-26T13:54:02Z' class='post-time'>
+                    May 26, 2023,  1:54pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-05-26T13:54:02Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This is working:</p>
+<p><img src="https://discuss.frappe.io/uploads/default/original/3X/3/3/33c27edc06d915cd6ad4c48ae6b8f33e63c69da3.png" alt="image" data-base62-sha1="7nT3soXuhRtgMCjal2cnB7W6gcH" width="506" height="181"></p>
+<p>This is not working:</p>
+<p><img src="https://discuss.frappe.io/uploads/default/original/3X/b/5/b5817cfd3961a2dba2159e9b572b959346da3c28.png" alt="image" data-base62-sha1="pTFQFbqVEOF3em6mjXtEHONgjAk" width="481" height="142"></p>
+<p>Fields of “DPP Content2” are not showing in the drop-down.</p>
+<p>However, same application running on another machine is working. These has been tested on frappe version-14 and develop both.</p>
+<p>Someone help please, if you resolved such issues earlier.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Nada-86'><span itemprop='name'>Nada-86</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/7/9/79e3c7ff699b096649164ebecee05a5b6d77c274.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-11-26T10:44:07Z' class='post-time'>
+                    November 26, 2023, 10:44am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-11-26T10:44:07Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It’s not working with me</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/9/79e3c7ff699b096649164ebecee05a5b6d77c274.png" data-download-href="https://discuss.frappe.io/uploads/default/79e3c7ff699b096649164ebecee05a5b6d77c274" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/9/79e3c7ff699b096649164ebecee05a5b6d77c274_2_690x369.png" alt="image" data-base62-sha1="hohNadWnnhRAAHgCfck3tmu5Ch6" width="690" height="369" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/9/79e3c7ff699b096649164ebecee05a5b6d77c274_2_690x369.png, https://discuss.frappe.io/uploads/default/optimized/3X/7/9/79e3c7ff699b096649164ebecee05a5b6d77c274_2_1035x553.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/7/9/79e3c7ff699b096649164ebecee05a5b6d77c274_2_1380x738.png 2x" data-dominant-color="DCD9DB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1922×1030 83.1 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ransikerandeni'><span itemprop='name'>ransikerandeni</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-11-07T04:23:03Z' class='post-time'>
+                    November 7, 2024,  4:23am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-11-07T04:23:03Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If there is a DocType name with 2 words. How to type it ?<br>
+For example, DocType: “Item Category”. If I want to fetch a field from that DocType type to another field in the Item DocType, Should I use,</p>
+<p>“item_category.main_category” ? Something like this</p>
+<p>I tried with the above notation, but it doesn’t work</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/NCP'><span itemprop='name'>NCP</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-11-07T04:36:27Z' class='post-time'>
+                    November 7, 2024,  4:36am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-11-07T04:36:27Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="ransikerandeni" data-post="9" data-topic="94626">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/ransikerandeni/48/74177_2.png" class="avatar"> ransikerandeni:</div>
+<blockquote>
+<p>“item_category.main_category” ? Something like this</p>
+</blockquote>
+</aside>
+<p>Check the example: <a href="https://docs.erpnext.com/docs/user/manual/en/how-to-add-master-link-and-fetch-data-from-the-same" class="inline-onebox">Fetching data from a linked master</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ransikerandeni'><span itemprop='name'>ransikerandeni</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/5/3/53da9479e6d9f00a475ba03a1e03f8313ba187ab.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-11-07T05:30:21Z' class='post-time'>
+                    November 7, 2024,  5:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-11-07T05:30:21Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I tried just like in the example. But it didn’t work.</p>
+<p>Custom DocType Name: “Item Category”<br>
+Fields in the “Item Category”: “main_category”, “sub_category”.</p>
+<p>I have created 2 custom Fields in Item DocType, “custom_main_category” and “custom_sub_category”. Field Type as Data.</p>
+<p>And I’m trying to fetch using this,</p>
+<p>For “custom_main_category” data field, “item_category.main_category”.<br>
+For “custom_sub_category” data field, “item_category.sub_category”.</p>
+<p>Tried according to the example but didn’t work.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/5/3/53da9479e6d9f00a475ba03a1e03f8313ba187ab.png" data-download-href="https://discuss.frappe.io/uploads/default/53da9479e6d9f00a475ba03a1e03f8313ba187ab" title="Screenshot 2024-11-07 at 10.59.13 AM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/5/3/53da9479e6d9f00a475ba03a1e03f8313ba187ab_2_689x390.png" alt="Screenshot 2024-11-07 at 10.59.13 AM" data-base62-sha1="bXNW059rgZ1rYtoult1J85eTJov" width="689" height="390" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/5/3/53da9479e6d9f00a475ba03a1e03f8313ba187ab_2_689x390.png, https://discuss.frappe.io/uploads/default/optimized/3X/5/3/53da9479e6d9f00a475ba03a1e03f8313ba187ab_2_1033x585.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/5/3/53da9479e6d9f00a475ba03a1e03f8313ba187ab_2_1378x780.png 2x" data-dominant-color="F9FAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot 2024-11-07 at 10.59.13 AM</span><span class="informations">2390×1352 147 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+Item DocType<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/c/3/c38c9ab4d16c4f5f91ba4661cefcefe2039d1dc5.png" data-download-href="https://discuss.frappe.io/uploads/default/c38c9ab4d16c4f5f91ba4661cefcefe2039d1dc5" title="Screenshot 2024-11-07 at 10.59.25 AM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/c/3/c38c9ab4d16c4f5f91ba4661cefcefe2039d1dc5_2_689x390.png" alt="Screenshot 2024-11-07 at 10.59.25 AM" data-base62-sha1="rTUlHOlANLGIfYNmiD05P8wE07j" width="689" height="390" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/c/3/c38c9ab4d16c4f5f91ba4661cefcefe2039d1dc5_2_689x390.png, https://discuss.frappe.io/uploads/default/optimized/3X/c/3/c38c9ab4d16c4f5f91ba4661cefcefe2039d1dc5_2_1033x585.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/c/3/c38c9ab4d16c4f5f91ba4661cefcefe2039d1dc5_2_1378x780.png 2x" data-dominant-color="F9FAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot 2024-11-07 at 10.59.25 AM</span><span class="informations">2390×1352 149 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+Item DocType<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/6/1/6147f4f7ad2965854f934b4a592a07ecf32303ca.png" data-download-href="https://discuss.frappe.io/uploads/default/6147f4f7ad2965854f934b4a592a07ecf32303ca" title="Screenshot 2024-11-07 at 10.59.46 AM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/6/1/6147f4f7ad2965854f934b4a592a07ecf32303ca_2_689x197.png" alt="Screenshot 2024-11-07 at 10.59.46 AM" data-base62-sha1="dSAtRelYCoOe9CvoYnAWhAJ58Ce" width="689" height="197" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/6/1/6147f4f7ad2965854f934b4a592a07ecf32303ca_2_689x197.png, https://discuss.frappe.io/uploads/default/optimized/3X/6/1/6147f4f7ad2965854f934b4a592a07ecf32303ca_2_1033x295.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/6/1/6147f4f7ad2965854f934b4a592a07ecf32303ca_2_1378x394.png 2x" data-dominant-color="F9F9FA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot 2024-11-07 at 10.59.46 AM</span><span class="informations">2390×684 54.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+Item Category DocType</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/NCP'><span itemprop='name'>NCP</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-11-07T07:26:59Z' class='post-time'>
+                    November 7, 2024,  7:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-11-07T07:26:59Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Again check the another example: <a href="https://frappeframework.com/docs/user/en/guides/app-development/fetch-custom-field-value-from-master-to-all-related-transactions" class="inline-onebox">Fetch a Field Value from a Document into a Transaction</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ransikerandeni'><span itemprop='name'>ransikerandeni</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-11-08T04:34:10Z' class='post-time'>
+                    November 8, 2024,  4:34am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-11-08T04:34:10Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks alot, currently I was able to manage, to get Item Category Data from the Link Field, and then from that field I was able to fetch fields inside it, using two additional fields</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/meichthys'><span itemprop='name'>meichthys</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-20T05:36:51Z' class='post-time'>
+                    December 20, 2025,  5:36am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-20T05:36:51Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Just a quick observation: The ‘fetch from’ feature doesn’t seem to work with ‘table’ fields.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

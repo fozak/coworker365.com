@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Class-Based Client Scripts for Frappe CRM - Frappe CRM - Frappe Forum</title>
+    <meta name="description" content="If you held back from customizing Frappe CRM because of scripting limitations, that’s now changed. 
+We’ve introduced a simpler, cleaner, class-based JavaScript approach to client scripts. It supports ES6-style classes, f&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/class-based-client-scripts-for-frappe-crm/147696" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Class-Based Client Scripts for Frappe CRM&#39;" href="https://discuss.frappe.io/t/class-based-client-scripts-for-frappe-crm/147696.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/class-based-client-scripts-for-frappe-crm/147696" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/class-based-client-scripts-for-frappe-crm/147696" />
+<meta property="og:title" content="Class-Based Client Scripts for Frappe CRM" />
+<meta name="twitter:title" content="Class-Based Client Scripts for Frappe CRM" />
+<meta property="og:description" content="If you held back from customizing Frappe CRM because of scripting limitations, that’s now changed.  We’ve introduced a simpler, cleaner, class-based JavaScript approach to client scripts. It supports ES6-style classes, field and grid-level triggers, and interactions between parent and child documents.  Simple syntax, structured logic, built for real-world use.  Read full blog here: Class-Based Client Scripts for Frappe CRM | Frappe Blog" />
+<meta name="twitter:description" content="If you held back from customizing Frappe CRM because of scripting limitations, that’s now changed.  We’ve introduced a simpler, cleaner, class-based JavaScript approach to client scripts. It supports ES6-style classes, field and grid-level triggers, and interactions between parent and child documents.  Simple syntax, structured logic, built for real-world use.  Read full blog here: Class-Based Client Scripts for Frappe CRM | Frappe Blog" />
+<meta property="og:article:section" content="Business Apps" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Frappe CRM" />
+<meta property="og:article:section:color" content="ED207B" />
+<meta property="og:article:tag" content="customization" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="5 ❤" />
+<meta property="article:published_time" content="2025-05-26T12:24:44+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Class-Based Client Scripts for Frappe CRM","mainEntity":{"@type":"Question","name":"Class-Based Client Scripts for Frappe CRM","text":"If you held back from customizing Frappe CRM because of scripting limitations, that’s now changed.\n\nWe’ve introduced a simpler, cleaner, class-based JavaScript approach to client scripts. It supports ES6-style classes, field and grid-level triggers, and interactions between parent and child document&hellip;","upvoteCount":3,"answerCount":0,"datePublished":"2025-05-26T12:24:44.350Z","author":{"@type":"Person","name":"shariquerik","url":"https://discuss.frappe.io/u/shariquerik"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/class-based-client-scripts-for-frappe-crm/147696">Class-Based Client Scripts for Frappe CRM</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/business-apps/89" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Business Apps</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/business-apps/frappe-crm/82" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #ED207B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe CRM</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag' rel="tag">customization</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Class-Based Client Scripts for Frappe CRM'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/class-based-client-scripts-for-frappe-crm/147696'>
+      <meta itemprop='datePublished' content='2025-05-26T12:24:44Z'>
+        <meta itemprop='articleSection' content='Frappe CRM'>
+      <meta itemprop='keywords' content='customization'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/shariquerik'><span itemprop='name'>shariquerik</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/class-based-client-scripts-for-frappe-crm/147696">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-05-26T12:24:44Z' class='post-time'>
+                    May 26, 2025, 12:24pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-05-26T12:24:44Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If you held back from customizing Frappe CRM because of scripting limitations, that’s now changed.</p>
+<p>We’ve introduced a simpler, cleaner, class-based JavaScript approach to client scripts. It supports ES6-style classes, field and grid-level triggers, and interactions between parent and child documents.</p>
+<p>Simple syntax, structured logic, built for real-world use.</p>
+<p>Read full blog here: <a href="https://frappe.io/blog/engineering/class-based-client-scripts-for-frappe-crm" class="inline-onebox">Class-Based Client Scripts for Frappe CRM | Frappe Blog</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/felixlu07'><span itemprop='name'>felixlu07</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-11T09:07:17Z' class='post-time'>
+                    June 11, 2025,  9:07am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-11T09:07:17Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi. I tried the new class based client script approach with CRM Deal, but somehow field level changes for <code>status</code> in <code>CRM Deal</code> are not captured at all.  Other fields are like <code>organization()</code> etc are ok, and I can see that the field level changes are captured. <code>status</code> seems to have issues.</p>
+<pre><code class="lang-auto">class CRMDeal {
+  status() {
+    console.log("🎯 TEST SUCCESS: status() method called!");
+  }
+}
+</code></pre>
+<p>Any ideas?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/shariquerik'><span itemprop='name'>shariquerik</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-13T09:40:18Z' class='post-time'>
+                    June 13, 2025,  9:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-13T09:40:18Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Fixed in develop will release in v1.48.0</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/felixlu07'><span itemprop='name'>felixlu07</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-16T07:25:54Z' class='post-time'>
+                    June 16, 2025,  7:25am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-16T07:25:54Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>That’s lovely. Thanks! Sure it would be really helpful for everyone else!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/noorain'><span itemprop='name'>noorain</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/d/c/dcbcfdc226350fdacff7544e4f62b5121504baa4.jpeg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-13T06:31:34Z' class='post-time'>
+                    November 13, 2025,  6:31am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-13T06:31:34Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey,</p>
+<p>in frappe crm i want to add a custom button on my frappe crm leads.<br>
+so i have added the code in client script like send message button<br>
+now the issue is button is appearing but in crm leads form in desk space not in frappe crm</p>
+<p>can u tell me how we can customize frappe crm ui if i want is this possible ?</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/c/dcbcfdc226350fdacff7544e4f62b5121504baa4.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/dcbcfdc226350fdacff7544e4f62b5121504baa4" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/c/dcbcfdc226350fdacff7544e4f62b5121504baa4_2_690x388.jpeg" alt="image" data-base62-sha1="vuJXerFI2RP5B4A9eM3sNdg5wry" width="690" height="388" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/c/dcbcfdc226350fdacff7544e4f62b5121504baa4_2_690x388.jpeg, https://discuss.frappe.io/uploads/default/optimized/3X/d/c/dcbcfdc226350fdacff7544e4f62b5121504baa4_2_1035x582.jpeg 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/d/c/dcbcfdc226350fdacff7544e4f62b5121504baa4_2_1380x776.jpeg 2x" data-dominant-color="DDDEDD"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1920×1080 245 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/0/9079b219bbee6474fc521f442e4306eae856fbb4.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/9079b219bbee6474fc521f442e4306eae856fbb4" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/9/0/9079b219bbee6474fc521f442e4306eae856fbb4_2_690x388.jpeg" alt="image" data-base62-sha1="kC5ueitdtmxLP3QpFsZqbV9CePy" width="690" height="388" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/9/0/9079b219bbee6474fc521f442e4306eae856fbb4_2_690x388.jpeg, https://discuss.frappe.io/uploads/default/optimized/3X/9/0/9079b219bbee6474fc521f442e4306eae856fbb4_2_1035x582.jpeg 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/9/0/9079b219bbee6474fc521f442e4306eae856fbb4_2_1380x776.jpeg 2x" data-dominant-color="DDDFDE"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1920×1080 208 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/noorain'><span itemprop='name'>noorain</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-17T05:40:44Z' class='post-time'>
+                    November 17, 2025,  5:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-17T05:40:44Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>we need to write crm form script not client script and the code will be also different form client side</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

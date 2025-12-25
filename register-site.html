@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<!-- Built on Frappe. https://frappeframework.com/ -->
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="frappe">
+
+	
+	<meta name="name" content="Register Site"><meta name="image" content="https://support.frappe.io/assets/frappe/images/frappe-framework-logo.svg"><meta property="og:type"  content="website"><meta name="title" content="Register Site"><meta name="language" content="en"><meta property="og:title"  content="Register Site"><meta property="og:image"  content="https://support.frappe.io/assets/frappe/images/frappe-framework-logo.svg"><meta name="twitter:title" content="Register Site"><meta name="twitter:image" content="https://support.frappe.io/assets/frappe/images/frappe-framework-logo.svg"><meta name="twitter:card" content="summary_large_image">
+
+
+	<title>Register Site</title>
+
+	
+	<link
+		rel="shortcut icon"
+		href="/files/frappedeae1b.png"
+		type="image/x-icon"
+	>
+	<style>
+   .login-with-email-link {
+        margin-top: 10px;
+        padding: 0 4px;
+    }
+</style>
+
+<script>
+
+const fc_logo = `<svg width="18" height="18" viewBox="0 0 118 118" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M93.4626 0H23.5665C10.5511 0 0 10.5511 0 23.5665V93.4626C0 106.478 10.5511 117.029 23.5665 117.029H93.4626C106.478 117.029 117.029 106.478 117.029 93.4626V23.5665C117.029 10.5511 106.478 0 93.4626 0Z" fill="url(#paint0_radial_0_9)"></path><path d="M94.4529 48.9854C89.7801 42.265 81.9046 38.3798 73.7142 38.9048C70.1965 32.552 63.6861 28.3517 56.0732 27.8792C50.7704 27.5642 45.4151 29.4018 41.2674 32.972C38.4322 35.4396 36.3846 38.2748 35.1245 41.4775C34.3895 43.3676 32.7094 44.5751 30.9243 44.5751H18.3761V55.0757H30.9243C37.0671 55.0757 42.5799 51.243 44.8901 45.3102C45.5201 43.6826 46.5702 42.265 48.1453 40.8999C50.1929 39.1148 52.8705 38.1698 55.3907 38.3273C59.1709 38.5898 61.8485 40.3224 63.5286 42.475C65.3137 44.4701 66.3113 47.5678 66.8888 50.6655C70.249 49.7204 73.9242 48.9329 77.4419 49.5104C80.3296 49.9829 83.0072 51.5055 84.9498 53.7631C85.2648 54.1307 85.5798 54.4982 85.8424 54.9182C88.3625 58.5409 88.835 63.0037 87.1549 67.4139C85.6324 71.5091 80.0145 75.2369 75.3418 75.2369H38.7997C33.8119 75.2369 29.7167 71.5091 29.0867 66.7314H18.5861C19.2686 77.337 28.0366 85.7374 38.7997 85.7374H75.3943C84.4248 85.7374 93.9278 79.3321 97.0255 71.1416C99.9132 63.4762 98.9681 55.3907 94.5054 48.9329L94.4529 48.9854Z" fill="#FFFAE9"></path><defs><radialGradient id="paint0_radial_0_9" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(-28.5 -58) rotate(54.335) scale(209.246)"><stop stop-color="#40D1FF"></stop><stop offset="1" stop-color="#0097FF"></stop></radialGradient></defs></svg>`
+
+document.addEventListener("DOMContentLoaded", function(){
+    if ($('.btn-frappe').length == 0) return
+    $('.btn-frappe').html('')
+    $('.btn-frappe').append(fc_logo)
+    $('.btn-frappe').css('align-items', 'center')
+    $('.btn-frappe').css('gap', '5px')
+    $('.btn-frappe').append('<span>Login with Frappe Cloud</span>')
+});
+
+</script><link type="text/css" rel="stylesheet" href="/assets/frappe/dist/css/website.bundle.25QTMWKN.css">
+		
+	<style>.navbar {
+    display: none;
+}
+
+html,
+body {
+  font-size: 16px;
+}
+:root,
+[data-theme=light] {
+  --brand-color: #0089FF;
+  --pink-900: #5B1E34;
+  --pink-800: #702440;
+  --pink-700: #97264F;
+  --pink-600: #D2326D;
+  --pink-500: #F2508B;
+  --pink-400: #F46B9E;
+  --pink-300: #F584AE;
+  --pink-200: #FAB9D1;
+  --pink-100: #FCDCE8;
+  --pink-50: #FEEDF3;
+  --blue-900: #1A4469;
+  --blue-800: #154875;
+  --blue-700: #1366AE;
+  --blue-600: #1673C5;
+  --blue-500: #2490EF;
+  --blue-400: #50A6F2;
+  --blue-300: #7CBCF5;
+  --blue-200: #A7D3F9;
+  --blue-100: #D3E9FC;
+  --blue-50: #F0F8FE;
+  --cyan-900: #006464;
+  --cyan-800: #007272;
+  --cyan-700: #008b8b;
+  --cyan-600: #02c5c5;
+  --cyan-500: #00ffff;
+  --cyan-400: #2ef8f8;
+  --cyan-300: #6efcfc;
+  --cyan-200: #a0f8f8;
+  --cyan-100: #c7fcfc;
+  --cyan-50: #dafafa;
+  --green-900: #2D401D;
+  --green-800: #44622A;
+  --green-700: #518B21;
+  --green-600: #68AB30;
+  --green-500: #8CCF54;
+  --green-400: #A5D97A;
+  --green-300: #BCE39B;
+  --green-200: #D2ECBD;
+  --green-100: #E9F6DE;
+  --green-50: #F4FAEE;
+  --dark-green-900: #1F3E2B;
+  --dark-green-800: #29593B;
+  --dark-green-700: #286840;
+  --dark-green-600: #2E844E;
+  --dark-green-500: #2F9D58;
+  --dark-green-400: #59B179;
+  --dark-green-300: #82C49B;
+  --dark-green-200: #ACD8BC;
+  --dark-green-100: #DFEEE5;
+  --dark-green-50: #EAF5EE;
+  --gray-900: #1F272E;
+  --gray-800: #333C44;
+  --gray-700: #505A62;
+  --gray-600: #687178;
+  --gray-500: #98A1A9;
+  --gray-400: #C0C6CC;
+  --gray-300: #DCE0E3;
+  --gray-200: #EBEEF0;
+  --gray-100: #F4F5F6;
+  --gray-50: #F9FAFA;
+  --red-900: #631D1D;
+  --red-800: #802121;
+  --red-700: #9B2C2C;
+  --red-600: #C53030;
+  --red-500: #E24C4C;
+  --red-400: #EC645E;
+  --red-300: #FCA4A4;
+  --red-200: #FCC8C8;
+  --red-100: #FFECEC;
+  --red-50: #FFF5F5;
+  --yellow-900: #5F370E;
+  --yellow-800: #744210;
+  --yellow-700: #975A16;
+  --yellow-600: #B7791F;
+  --yellow-500: #D69E2E;
+  --yellow-400: #ECB64B;
+  --yellow-300: #F6C35E;
+  --yellow-200: #FAD489;
+  --yellow-100: #FEE9BF;
+  --yellow-50: #FEF4E2;
+  --orange-900: #653019;
+  --orange-800: #7B3A1E;
+  --orange-700: #9C4621;
+  --orange-600: #CB5A2A;
+  --orange-500: #F8814F;
+  --orange-400: #F9966C;
+  --orange-300: #FDAE8C;
+  --orange-200: #FECDB8;
+  --orange-100: #FFEAE1;
+  --orange-50: #FFF5F0;
+  --purple-900: #343360;
+  --purple-800: #45438F;
+  --purple-700: #4946BF;
+  --purple-600: #6461D6;
+  --purple-500: #8684FF;
+  --purple-400: #9897F7;
+  --purple-300: #B9B8FA;
+  --purple-200: #DAD9F7;
+  --purple-100: #EAEAFB;
+  --purple-50: #F2F2FD;
+  --padding-xs: 5px;
+  --padding-sm: 10px;
+  --padding-md: 15px;
+  --padding-lg: 20px;
+  --padding-xl: 30px;
+  --padding-2xl: 40px;
+  --margin-xs: 5px;
+  --margin-sm: 8px;
+  --margin-md: 15px;
+  --margin-lg: 20px;
+  --margin-xl: 30px;
+  --margin-2xl: 40px;
+  --font-stack:
+    "Inter",
+    "-apple-system",
+    "BlinkMacSystemFont","Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell","Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
+  --text-bold: 500;
+  --shadow-xs:
+    rgba(0, 0, 0, 0.05) 0px 0.5px 0px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.05) 0px 2px 4px 0px;
+  --shadow-sm: 0px 1px 2px rgba(25, 39, 52, 0.05), 0px 0px 4px rgba(25, 39, 52, 0.1);
+  --shadow-base: 0px 4px 8px rgba(25, 39, 52, 0.06), 0px 0px 4px rgba(25, 39, 52, 0.12);
+  --shadow-md: 0px 8px 14px rgba(25, 39, 52, 0.08), 0px 2px 6px rgba(25, 39, 52, 0.04);
+  --shadow-lg:
+    0px 18px 22px rgba(25, 39, 52, 0.1),
+    0px 1px 10px rgba(0, 0, 0, 0.06),
+    0px 0.5px 5px rgba(25, 39, 52, 0.04);
+  --drop-shadow:
+    0px 0.5px 0px rgba(0, 0, 0, 0.05),
+    0px 0px 0px rgba(0, 0, 0, 0),
+    0px 2px 4px rgba(0, 0, 0, 0.05);
+  --modal-shadow: var(--shadow-md);
+  --card-shadow: var(--shadow-sm);
+  --btn-shadow: var(--shadow-xs);
+  --text-muted: var(--gray-700);
+  --text-light: var(--gray-800);
+  --text-dark: var(--fg-color);
+  --text-color: var(--gray-900);
+  --heading-color: var(--gray-900);
+  --icon-fill: transparent;
+  --icon-fill-bg: var(--fg-color);
+  --icon-stroke: var(--gray-900);
+  --bg-blue: var(--blue-100);
+  --bg-light-blue: var(--blue-50);
+  --bg-dark-blue: var(--blue-300);
+  --bg-green: var(--dark-green-50);
+  --bg-yellow: var(--yellow-50);
+  --bg-orange: var(--orange-50);
+  --bg-red: var(--red-100);
+  --bg-gray: var(--gray-200);
+  --bg-grey: var(--gray-200);
+  --bg-light-gray: var(--gray-100);
+  --bg-dark-gray: var(--gray-400);
+  --bg-darkgrey: var(--gray-400);
+  --bg-purple: var(--purple-100);
+  --bg-pink: var(--pink-50);
+  --bg-cyan: var(--cyan-50);
+  --text-xs: 11px;
+  --text-sm: 12px;
+  --text-md: 13px;
+  --text-base: 14px;
+  --text-lg: 16px;
+  --text-xl: 18px;
+  --text-2xl: 20px;
+  --text-3xl: 22px;
+  --text-on-blue: var(--blue-700);
+  --text-on-light-blue: var(--blue-600);
+  --text-on-dark-blue: var(--blue-800);
+  --text-on-green: var(--dark-green-700);
+  --text-on-yellow: var(--yellow-700);
+  --text-on-orange: var(--orange-700);
+  --text-on-red: var(--red-600);
+  --text-on-gray: var(--gray-700);
+  --text-on-grey: var(--gray-700);
+  --text-on-darkgrey: var(--gray-800);
+  --text-on-dark-gray: var(--gray-800);
+  --text-on-light-gray: var(--gray-800);
+  --text-on-purple: var(--purple-700);
+  --text-on-pink: var(--pink-700);
+  --text-on-cyan: var(--cyan-800);
+  --alert-text-danger: var(--red-600);
+  --alert-text-warning: var(--yellow-700);
+  --alert-text-info: var(--blue-700);
+  --alert-text-success: var(--green-700);
+  --alert-bg-danger: var(--red-50);
+  --alert-bg-warning: var(--yellow-50);
+  --alert-bg-info: var(--blue-50);
+  --alert-bg-success: var(--green-50);
+  --bg-color: var(--gray-50);
+  --fg-color: white;
+  --navbar-bg: white;
+  --fg-hover-color: var(--gray-100);
+  --card-bg: var(--fg-color);
+  --disabled-text-color: var(--gray-700);
+  --disabled-control-bg: var(--gray-50);
+  --control-bg: var(--gray-100);
+  --control-bg-on-gray: var(--gray-200);
+  --awesomebar-focus-bg: var(--fg-color);
+  --modal-bg: white;
+  --toast-bg: var(--modal-bg);
+  --popover-bg: white;
+  --awesomplete-hover-bg: var(--control-bg);
+  --btn-default-bg: var(--gray-100);
+  --btn-default-hover-bg: var(--gray-300);
+  --sidebar-select-color: var(--gray-200);
+  --scrollbar-thumb-color: var(--gray-400);
+  --scrollbar-track-color: var(--gray-200);
+  --shadow-inset: inset 0px -1px 0px var(--gray-300);
+  --border-color: var(--gray-100);
+  --dark-border-color: var(--gray-300);
+  --table-border-color: var(--gray-200);
+  --highlight-color: var(--gray-50);
+  --yellow-highlight-color: var(--yellow-50);
+  --btn-group-border-color: var(--gray-300);
+  --field-placeholder-color: var(--gray-50);
+  --highlight-shadow: 1px 1px 10px var(--blue-50), 0px 0px 4px var(--blue-600);
+  --code-block-bg: var(--gray-900);
+  --code-block-text: var(--gray-400);
+  --border-radius-sm: 4px;
+  --border-radius: 6px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-full: 999px;
+  --primary-color: #2490EF;
+  --btn-height: 30px;
+  --input-height: calc(1.5em + 0.75rem + 2px);
+  --input-disabled-bg: var(--gray-200);
+  --checkbox-right-margin: var(--margin-xs);
+  --checkbox-size: 14px;
+  --checkbox-focus-shadow: 0 0 0 2px var(--gray-300);
+  --checkbox-gradient: linear-gradient(180deg, #4AC3F8 -124.51%, var(--primary) 100%);
+  --diff-added: var(--green-100);
+  --diff-removed: var(--red-100);
+  --right-arrow-svg: url("data: image/svg+xml;utf8, <svg width='6' height='8' viewBox='0 0 6 8' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1.25 7.5L4.75 4L1.25 0.5' stroke='%231F272E' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  --left-arrow-svg: url("data: image/svg+xml;utf8, <svg width='6' height='8' viewBox='0 0 6 8' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M7.5 9.5L4 6l3.5-3.5' stroke='%231F272E' stroke-linecap='round' stroke-linejoin='round'></path></svg>");
+}
+:root,
+[data-theme=light] {
+  --xxl-width: map-get($grid-breakpoints, "2xl");
+  --xl-width: map-get($grid-breakpoints, "xl");
+  --lg-width: map-get($grid-breakpoints, "lg");
+  --md-width: map-get($grid-breakpoints, "md");
+  --sm-width: map-get($grid-breakpoints, "sm");
+  --xs-width: map-get($grid-breakpoints, "xs");
+  --text-bold: 500;
+  --navbar-height: 60px;
+  --appreciation-color: var(--dark-green-600);
+  --appreciation-bg: var(--dark-green-100);
+  --criticism-color: var(--red-600);
+  --criticism-bg: var(--red-100);
+  --error-bg: var(--red-50);
+  --error-border: var(--red-400);
+  --page-head-height: 75px;
+  --page-bottom-margin: 60px;
+  --checkbox-right-margin: var(--margin-xs);
+  --checkbox-size: 14px;
+  --checkbox-focus-shadow: 0 0 0 2px var(--gray-300);
+  --timeline-item-icon-size: 34px;
+  --timeline-item-left-margin: var(--margin-xl);
+  --timeline-item-bottom-margin: var(--margin-sm);
+  --timeline-content-max-width: 700px;
+  --timeline-left-padding: calc(var(--padding-xl) + var(--timeline-item-icon-size) / 2);
+  --user-mention-bg-color: var(--fg-color);
+  --group-mention-bg-color: var(--bg-purple);
+  --skeleton-bg: var(--gray-100);
+  --progress-bar-bg: var(--primary);
+}
+[data-theme=dark] {
+  --gray-50: #F9FAFA;
+  --gray-100: #f7fafc;
+  --gray-200: #edf2f7;
+  --gray-300: #c9d0d6;
+  --gray-400: #7a838c;
+  --gray-500: #575e66;
+  --gray-600: #434a52;
+  --gray-700: #242a30;
+  --gray-800: #1c2126;
+  --gray-900: #161a1f;
+  --text-muted: var(--gray-400);
+  --text-light: var(--gray-300);
+  --text-dark: var(--gray-900);
+  --text-color: var(--gray-50);
+  --heading-color: var(--gray-50);
+  --icon-fill: transparent;
+  --icon-stroke: var(--gray-300);
+  --error-bg: var(--red-70);
+  --error-border: var(--red-400);
+  --bg-color: var(--gray-900);
+  --fg-color: var(--gray-800);
+  --navbar-bg: var(--gray-800);
+  --fg-hover-color: var(--gray-700);
+  --card-bg: var(--gray-800);
+  --disabled-text-color: var(--gray-400);
+  --disabled-control-bg: var(--gray-700);
+  --control-bg: var(--gray-700);
+  --control-bg-on-gray: var(--gray-800);
+  --awesomebar-focus-bg: var(--control-bg);
+  --awesomplete-hover-bg: var(--gray-700);
+  --modal-bg: var(--gray-700);
+  --toast-bg: var(--modal-bg);
+  --popover-bg: var(--bg-color);
+  --btn-default-bg: var(--gray-700);
+  --btn-default-hover-bg: var(--gray-500);
+  --bg-blue: var(--blue-600);
+  --bg-light-blue: var(--blue-600);
+  --bg-dark-blue: var(--blue-900);
+  --bg-green: var(--green-800);
+  --bg-yellow: var(--yellow-700);
+  --bg-orange: var(--orange-700);
+  --bg-red: var(--red-600);
+  --bg-gray: var(--gray-400);
+  --bg-grey: var(--gray-400);
+  --bg-darkgrey: var(--gray-600);
+  --bg-dark-gray: var(--gray-600);
+  --bg-light-gray: var(--gray-700);
+  --bg-purple: var(--purple-700);
+  --bg-pink: var(--pink-700);
+  --bg-cyan: var(--cyan-800);
+  --text-on-blue: var(--blue-50);
+  --text-on-light-blue: var(--blue-50);
+  --text-on-dark-blue: var(--blue-300);
+  --text-on-green: var(--dark-green-50);
+  --text-on-yellow: var(--yellow-50);
+  --text-on-orange: var(--orange-100);
+  --text-on-red: var(--red-50);
+  --text-on-gray: var(--gray-50);
+  --text-on-grey: var(--gray-50);
+  --text-on-darkgrey: var(--gray-200);
+  --text-on-dark-gray: var(--gray-200);
+  --text-on-light-gray: var(--gray-100);
+  --text-on-purple: var(--purple-100);
+  --text-on-pink: var(--pink-100);
+  --text-on-cyan: var(--cyan-100);
+  --alert-text-danger: var(--red-300);
+  --alert-text-warning: var(--yellow-300);
+  --alert-text-info: var(--blue-300);
+  --alert-text-success: var(--green-300);
+  --alert-bg-danger: var(--red-900);
+  --alert-bg-warning: var(--yellow-900);
+  --alert-bg-info: var(--blue-900);
+  --alert-bg-success: var(--green-900);
+  --sidebar-select-color: var(--gray-800);
+  --scrollbar-thumb-color: var(--gray-600);
+  --scrollbar-track-color: var(--gray-700);
+  --shadow-inset: var(--fg-color);
+  --border-color: var(--gray-700);
+  --dark-border-color: var(--gray-600);
+  --table-border-color: var(--gray-600);
+  --highlight-color: var(--gray-700);
+  --yellow-highlight-color: var(--yellow-700);
+  --btn-group-border-color: var(--gray-800);
+  --field-placeholder-color: var(--gray-700);
+  --highlight-shadow: 1px 1px 10px var(--blue-900), 0px 0px 4px var(--blue-500);
+  --shadow-base: 0px 4px 8px rgba(114, 176, 233, 0.06), 0px 0px 4px rgba(112, 172, 228, 0.12);
+  --diff-added: var(--green-800);
+  --diff-removed: var(--red-800);
+  --input-disabled-bg: none;
+  --checkbox-focus-shadow: 0 0 0 2px var(--gray-600);
+  color-scheme: dark;
+  --skeleton-bg: var(--gray-800);
+  --right-arrow-svg: url("data: image/svg+xml;utf8, <svg width='6' height='8' viewBox='0 0 6 8' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1.25 7.5L4.75 4L1.25 0.5' stroke='white' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  --left-arrow-svg: url("data: image/svg+xml;utf8, <svg width='6' height='8' viewBox='0 0 6 8' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M7.5 9.5L4 6l3.5-3.5' stroke='white' stroke-linecap='round' stroke-linejoin='round'></path></svg>");
+}
+[data-theme=dark] .frappe-card .btn-default {
+  background-color: var(--bg-color);
+}
+[data-theme=dark] .frappe-card .btn-default:hover {
+  background-color: var(--fg-hover-color);
+}
+[data-theme=dark] .modal,
+[data-theme=dark] .form-in-grid {
+  --control-bg: var(--gray-800);
+  --border-color: var(--gray-600);
+}
+[data-theme=dark] .print-format {
+  --text-color: var(--gray-900);
+  --border-color: var(--gray-100);
+}
+[data-theme=dark] .ql-editor {
+  color: var(--text-on-gray);
+}
+[data-theme=dark] .ql-editor.read-mode span:not(.mention),
+[data-theme=dark] .ql-editor.read-mode p,
+[data-theme=dark] .ql-editor.read-mode u,
+[data-theme=dark] .ql-editor.read-mode strong {
+  background-color: inherit !important;
+  color: inherit !important;
+}
+[data-theme=dark] .chart-container {
+  --charts-label-color: var(--gray-300);
+  --charts-axis-line-color: var(--gray-500);
+  --charts-stroke-width: 5px;
+  --charts-dataset-circle-stroke: #ffffff;
+  --charts-dataset-circle-stroke-width: var(--charts-stroke-width);
+  --charts-tooltip-title: var(--charts-label-color);
+  --charts-tooltip-label: var(--charts-label-color);
+  --charts-tooltip-value: white;
+  --charts-tooltip-bg: var(--gray-900);
+  --charts-legend-label: var(--charts-label-color);
+}
+[data-theme=dark] .heatmap-chart g > rect[fill="#ebedf0"] {
+  fill: var(--gray-700);
+}
+[data-theme=dark] .rating {
+  --star-fill: var(--gray-500);
+}
+[data-theme=dark] .rating .star-hover {
+  --star-fill: var(--gray-400);
+}
+[data-theme=dark] ::-moz-selection {
+  color: var(--text-color);
+  background: var(--gray-500);
+}
+[data-theme=dark] ::selection {
+  color: var(--text-color);
+  background: var(--gray-500);
+}
+[data-theme=dark] .indicator {
+  --indicator-dot-green: var(--bg-green);
+}
+[data-theme=dark] .indicator {
+  --indicator-dot-cyan: var(--bg-cyan);
+}
+[data-theme=dark] .indicator {
+  --indicator-dot-blue: var(--bg-blue);
+}
+[data-theme=dark] .indicator {
+  --indicator-dot-orange: var(--bg-orange);
+}
+[data-theme=dark] .indicator {
+  --indicator-dot-yellow: var(--bg-yellow);
+}
+[data-theme=dark] .indicator {
+  --indicator-dot-gray: var(--bg-gray);
+}
+[data-theme=dark] .indicator {
+  --indicator-dot-grey: var(--bg-grey);
+}
+[data-theme=dark] .indicator {
+  --indicator-dot-red: var(--bg-red);
+}
+[data-theme=dark] .indicator {
+  --indicator-dot-pink: var(--bg-pink);
+}
+[data-theme=dark] .indicator {
+  --indicator-dot-darkgrey: var(--bg-darkgrey);
+}
+[data-theme=dark] .indicator {
+  --indicator-dot-purple: var(--bg-purple);
+}
+[data-theme=dark] .indicator {
+  --indicator-dot-light-blue: var(--bg-light-blue);
+}
+@media (min-width: 576px) {
+  body {
+    background-color: var(--bg-light-gray);
+  }
+}
+.for-forgot,
+.for-login-with-email-link,
+.for-signup,
+.for-email-login {
+  display: none;
+}
+.for-login,
+.for-forgot,
+.for-login-with-email-link,
+.for-signup,
+.for-email-login {
+  padding: max(10vh, 60px) 0;
+}
+@media (min-width: 576px) {
+  .for-login .page-card,
+  .for-forgot .page-card,
+  .for-login-with-email-link .page-card,
+  .for-signup .page-card,
+  .for-email-login .page-card {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    background-color: #fff;
+    box-shadow: var(--shadow-base);
+  }
+}
+.for-login .page-card,
+.for-forgot .page-card,
+.for-login-with-email-link .page-card,
+.for-signup .page-card,
+.for-email-login .page-card {
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: var(--border-radius-md);
+}
+.for-login .page-card form,
+.for-forgot .page-card form,
+.for-login-with-email-link .page-card form,
+.for-signup .page-card form,
+.for-email-login .page-card form {
+  max-width: 320px;
+  margin: 0 auto;
+}
+.for-login .page-card form .form-group,
+.for-forgot .page-card form .form-group,
+.for-login-with-email-link .page-card form .form-group,
+.for-signup .page-card form .form-group,
+.for-email-login .page-card form .form-group {
+  margin-bottom: var(--margin-sm);
+}
+.for-login .page-card .page-card-actions,
+.for-forgot .page-card .page-card-actions,
+.for-login-with-email-link .page-card .page-card-actions,
+.for-signup .page-card .page-card-actions,
+.for-email-login .page-card .page-card-actions {
+  margin-top: var(--margin-lg);
+}
+.for-login .page-card .page-card-body :-ms-input-placeholder,
+.for-forgot .page-card .page-card-body :-ms-input-placeholder,
+.for-login-with-email-link .page-card .page-card-body :-ms-input-placeholder,
+.for-signup .page-card .page-card-body :-ms-input-placeholder,
+.for-email-login .page-card .page-card-body :-ms-input-placeholder {
+  color: var(--text-light);
+  opacity: 1;
+}
+.for-login .page-card .page-card-body ::placeholder,
+.for-login .page-card .page-card-body ::-ms-input-placeholder,
+.for-forgot .page-card .page-card-body ::placeholder,
+.for-forgot .page-card .page-card-body ::-ms-input-placeholder,
+.for-login-with-email-link .page-card .page-card-body ::placeholder,
+.for-login-with-email-link .page-card .page-card-body ::-ms-input-placeholder,
+.for-signup .page-card .page-card-body ::placeholder,
+.for-signup .page-card .page-card-body ::-ms-input-placeholder,
+.for-email-login .page-card .page-card-body ::placeholder,
+.for-email-login .page-card .page-card-body ::-ms-input-placeholder {
+  color: var(--text-light);
+  opacity: 1;
+}
+.for-login .page-card .page-card-body input[type=text],
+.for-login .page-card .page-card-body input[type=email],
+.for-login .page-card .page-card-body input[type=password],
+.for-forgot .page-card .page-card-body input[type=text],
+.for-forgot .page-card .page-card-body input[type=email],
+.for-forgot .page-card .page-card-body input[type=password],
+.for-login-with-email-link .page-card .page-card-body input[type=text],
+.for-login-with-email-link .page-card .page-card-body input[type=email],
+.for-login-with-email-link .page-card .page-card-body input[type=password],
+.for-signup .page-card .page-card-body input[type=text],
+.for-signup .page-card .page-card-body input[type=email],
+.for-signup .page-card .page-card-body input[type=password],
+.for-email-login .page-card .page-card-body input[type=text],
+.for-email-login .page-card .page-card-body input[type=email],
+.for-email-login .page-card .page-card-body input[type=password] {
+  border: none;
+  color: var(--text-color);
+  font-size: var(--text-base);
+  background-color: var(--control-bg);
+  margin-bottom: 1rem;
+}
+.for-login .page-card .page-card-body.invalid input[type=text],
+.for-login .page-card .page-card-body.invalid input[type=email],
+.for-login .page-card .page-card-body.invalid input[type=password],
+.for-forgot .page-card .page-card-body.invalid input[type=text],
+.for-forgot .page-card .page-card-body.invalid input[type=email],
+.for-forgot .page-card .page-card-body.invalid input[type=password],
+.for-login-with-email-link .page-card .page-card-body.invalid input[type=text],
+.for-login-with-email-link .page-card .page-card-body.invalid input[type=email],
+.for-login-with-email-link .page-card .page-card-body.invalid input[type=password],
+.for-signup .page-card .page-card-body.invalid input[type=text],
+.for-signup .page-card .page-card-body.invalid input[type=email],
+.for-signup .page-card .page-card-body.invalid input[type=password],
+.for-email-login .page-card .page-card-body.invalid input[type=text],
+.for-email-login .page-card .page-card-body.invalid input[type=email],
+.for-email-login .page-card .page-card-body.invalid input[type=password] {
+  border: 1px solid var(--red-500);
+}
+.for-login .page-card .page-card-body .form-label,
+.for-forgot .page-card .page-card-body .form-label,
+.for-login-with-email-link .page-card .page-card-body .form-label,
+.for-signup .page-card .page-card-body .form-label,
+.for-email-login .page-card .page-card-body .form-label {
+  font-size: var(--text-base);
+}
+.for-login .page-card .page-card-body .forgot-password-message,
+.for-forgot .page-card .page-card-body .forgot-password-message,
+.for-login-with-email-link .page-card .page-card-body .forgot-password-message,
+.for-signup .page-card .page-card-body .forgot-password-message,
+.for-email-login .page-card .page-card-body .forgot-password-message {
+  text-align: right;
+  line-height: 1;
+}
+.for-login .page-card .page-card-body .forgot-password-message > *,
+.for-forgot .page-card .page-card-body .forgot-password-message > *,
+.for-login-with-email-link .page-card .page-card-body .forgot-password-message > *,
+.for-signup .page-card .page-card-body .forgot-password-message > *,
+.for-email-login .page-card .page-card-body .forgot-password-message > * {
+  color: var(--text-light);
+  font-size: var(--text-sm);
+}
+.for-login .page-card .page-card-body .field-icon,
+.for-forgot .page-card .page-card-body .field-icon,
+.for-login-with-email-link .page-card .page-card-body .field-icon,
+.for-signup .page-card .page-card-body .field-icon,
+.for-email-login .page-card .page-card-body .field-icon {
+  left: 9px;
+  top: 8px;
+  position: absolute;
+  z-index: 2;
+}
+.for-login .page-card .page-card-body .email-field,
+.for-login .page-card .page-card-body .password-field,
+.for-forgot .page-card .page-card-body .email-field,
+.for-forgot .page-card .page-card-body .password-field,
+.for-login-with-email-link .page-card .page-card-body .email-field,
+.for-login-with-email-link .page-card .page-card-body .password-field,
+.for-signup .page-card .page-card-body .email-field,
+.for-signup .page-card .page-card-body .password-field,
+.for-email-login .page-card .page-card-body .email-field,
+.for-email-login .page-card .page-card-body .password-field {
+  position: relative;
+}
+.for-login .page-card .page-card-body .email-field input,
+.for-login .page-card .page-card-body .password-field input,
+.for-forgot .page-card .page-card-body .email-field input,
+.for-forgot .page-card .page-card-body .password-field input,
+.for-login-with-email-link .page-card .page-card-body .email-field input,
+.for-login-with-email-link .page-card .page-card-body .password-field input,
+.for-signup .page-card .page-card-body .email-field input,
+.for-signup .page-card .page-card-body .password-field input,
+.for-email-login .page-card .page-card-body .email-field input,
+.for-email-login .page-card .page-card-body .password-field input {
+  padding-left: 35px;
+}
+.for-login .page-card .page-card-body .email-field .toggle-password,
+.for-login .page-card .page-card-body .password-field .toggle-password,
+.for-forgot .page-card .page-card-body .email-field .toggle-password,
+.for-forgot .page-card .page-card-body .password-field .toggle-password,
+.for-login-with-email-link .page-card .page-card-body .email-field .toggle-password,
+.for-login-with-email-link .page-card .page-card-body .password-field .toggle-password,
+.for-signup .page-card .page-card-body .email-field .toggle-password,
+.for-signup .page-card .page-card-body .password-field .toggle-password,
+.for-email-login .page-card .page-card-body .email-field .toggle-password,
+.for-email-login .page-card .page-card-body .password-field .toggle-password {
+  right: 9px;
+  top: 9px;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  font-size: 12px;
+}
+.for-login .page-card .page-card-body .btn-login-option,
+.for-forgot .page-card .page-card-body .btn-login-option,
+.for-login-with-email-link .page-card .page-card-body .btn-login-option,
+.for-signup .page-card .page-card-body .btn-login-option,
+.for-email-login .page-card .page-card-body .btn-login-option {
+  font-size: var(--text-md);
+  font-weight: 500;
+  color: var(--text-gray-700);
+  background: var(--gray-100);
+  box-shadow: none;
+  border: none;
+  display: flex;
+  place-content: center;
+}
+.for-login .page-card .page-card-body .btn-login-option.btn-salesforce i,
+.for-forgot .page-card .page-card-body .btn-login-option.btn-salesforce i,
+.for-login-with-email-link .page-card .page-card-body .btn-login-option.btn-salesforce i,
+.for-signup .page-card .page-card-body .btn-login-option.btn-salesforce i,
+.for-email-login .page-card .page-card-body .btn-login-option.btn-salesforce i {
+  color: var(--blue-400);
+}
+.for-login .page-card .page-card-body .btn-login-option img,
+.for-forgot .page-card .page-card-body .btn-login-option img,
+.for-login-with-email-link .page-card .page-card-body .btn-login-option img,
+.for-signup .page-card .page-card-body .btn-login-option img,
+.for-email-login .page-card .page-card-body .btn-login-option img {
+  margin-right: var(--padding-xs);
+}
+.for-login .page-card .page-card-body .btn-login-option:hover,
+.for-forgot .page-card .page-card-body .btn-login-option:hover,
+.for-login-with-email-link .page-card .page-card-body .btn-login-option:hover,
+.for-signup .page-card .page-card-body .btn-login-option:hover,
+.for-email-login .page-card .page-card-body .btn-login-option:hover {
+  border: none;
+  background: var(--gray-300);
+}
+.for-login .page-card .page-card-body .social-logins,
+.for-forgot .page-card .page-card-body .social-logins,
+.for-login-with-email-link .page-card .page-card-body .social-logins,
+.for-signup .page-card .page-card-body .social-logins,
+.for-email-login .page-card .page-card-body .social-logins {
+  margin-top: var(--margin-md);
+  font-size: var(--text-md);
+}
+.for-login .page-card .page-card-body .social-logins .social-login-buttons,
+.for-forgot .page-card .page-card-body .social-logins .social-login-buttons,
+.for-login-with-email-link .page-card .page-card-body .social-logins .social-login-buttons,
+.for-signup .page-card .page-card-body .social-logins .social-login-buttons,
+.for-email-login .page-card .page-card-body .social-logins .social-login-buttons {
+  margin-top: var(--margin-md);
+}
+.for-login .page-card .page-card-body .social-logins .social-login-buttons .login-button-wrapper,
+.for-forgot .page-card .page-card-body .social-logins .social-login-buttons .login-button-wrapper,
+.for-login-with-email-link .page-card .page-card-body .social-logins .social-login-buttons .login-button-wrapper,
+.for-signup .page-card .page-card-body .social-logins .social-login-buttons .login-button-wrapper,
+.for-email-login .page-card .page-card-body .social-logins .social-login-buttons .login-button-wrapper {
+  min-width: 50%;
+  padding: 0 4px;
+  margin-bottom: var(--margin-md);
+}
+@media (min-width: 768px) {
+  .for-login .page-card .page-card-body .social-logins .social-login-buttons .login-button-wrapper,
+  .for-forgot .page-card .page-card-body .social-logins .social-login-buttons .login-button-wrapper,
+  .for-login-with-email-link .page-card .page-card-body .social-logins .social-login-buttons .login-button-wrapper,
+  .for-signup .page-card .page-card-body .social-logins .social-login-buttons .login-button-wrapper,
+  .for-email-login .page-card .page-card-body .social-logins .social-login-buttons .login-button-wrapper {
+    min-width: 33.33%;
+  }
+}
+.for-login .page-card .page-card-body .social-logins .social-login-buttons .login-button-wrapper:last-child,
+.for-forgot .page-card .page-card-body .social-logins .social-login-buttons .login-button-wrapper:last-child,
+.for-login-with-email-link .page-card .page-card-body .social-logins .social-login-buttons .login-button-wrapper:last-child,
+.for-signup .page-card .page-card-body .social-logins .social-login-buttons .login-button-wrapper:last-child,
+.for-email-login .page-card .page-card-body .social-logins .social-login-buttons .login-button-wrapper:last-child {
+  margin-bottom: 0;
+}
+.for-login .page-card .page-card-body .login-divider,
+.for-forgot .page-card .page-card-body .login-divider,
+.for-login-with-email-link .page-card .page-card-body .login-divider,
+.for-signup .page-card .page-card-body .login-divider,
+.for-email-login .page-card .page-card-body .login-divider {
+  margin: var(--margin-md) 0;
+}
+.for-login .page-card-head,
+.for-forgot .page-card-head,
+.for-login-with-email-link .page-card-head,
+.for-signup .page-card-head,
+.for-email-login .page-card-head {
+  margin: 0 auto;
+  text-align: center;
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+.for-login .page-card-head img,
+.for-forgot .page-card-head img,
+.for-login-with-email-link .page-card-head img,
+.for-signup .page-card-head img,
+.for-email-login .page-card-head img {
+  max-height: 42px;
+  margin-bottom: var(--margin-lg, 30px);
+}
+.for-login .page-card-head h4,
+.for-forgot .page-card-head h4,
+.for-login-with-email-link .page-card-head h4,
+.for-signup .page-card-head h4,
+.for-email-login .page-card-head h4 {
+  margin-top: 1rem;
+  font-size: var(--text-xl);
+  color: var(--text-color);
+}
+.for-login .sign-up-message,
+.for-forgot .sign-up-message,
+.for-login-with-email-link .sign-up-message,
+.for-signup .sign-up-message,
+.for-email-login .sign-up-message {
+  margin-top: 2rem;
+  color: var(--text-light);
+  font-size: var(--text-md);
+}
+.for-login .sign-up-message a,
+.for-forgot .sign-up-message a,
+.for-login-with-email-link .sign-up-message a,
+.for-signup .sign-up-message a,
+.for-email-login .sign-up-message a {
+  font-size: var(--text-md);
+  color: var(--primary);
+}
+.for-login .invalid-login,
+.for-forgot .invalid-login,
+.for-login-with-email-link .invalid-login,
+.for-signup .invalid-login,
+.for-email-login .invalid-login {
+  -webkit-animation: wiggle 0.5s linear;
+}
+</style>
+
+	<script>
+		window.frappe = {};
+		window._version_number = "{{ build_version }}";
+		frappe.ready_events = [];
+		frappe.ready = function(fn) {
+			frappe.ready_events.push(fn);
+		}
+		window.dev_server = 0;
+		window.socketio_port = 9000;
+		window.show_language_picker = false;
+	</script>
+</head>
+<body frappe-session-status="logged-out" data-path="register-site" class="">
+
+		<nav class="navbar navbar-light navbar-expand-lg">
+<div class="container">
+<a class="navbar-brand" href="/"><img src="https://support.frappe.io/assets/frappe/images/frappe-framework-logo.svg"/></a>
+<button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+<span>
+<svg class="icon icon-lg">
+<use href="#icon-menu"></use>
+</svg>
+</span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="mr-auto navbar-nav">
+</ul>
+<ul class="ml-auto navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="/help">
+		Help
+	</a>
+</li>
+<!-- post login tools -->
+<li class="nav-item">
+<a class="nav-link btn-login-area" href="/login">Login</a>
+</li>
+</ul>
+</div>
+<div class="form-group mb-0 hide" id="language-switcher">
+<select class="form-control"></select>
+</div>
+</div>
+</nav>
+
+
+
+
+
+
+
+
+<div id="page-register-site" data-path="register-site"source-type="Generator" data-doctype="Web Page"source-content-type="HTML">
+	
+<div class="page-content-wrapper">
+	<!-- breadcrumbs -->
+	<div class="page-breadcrumbs">
+		
+    
+    
+    
+
+	</div>
+
+	
+	<main class="">
+		<div class="page-header-wrapper">
+			<div class="page-header">
+				
+			</div>
+
+			
+		</div>
+
+		<div class="page_content"><div class="webpage-content">
+	
+	<article class="web-page-content" id="register-site" style="text-align: Left">
+	<section class="for-login" style="height: 100vh">
+	<div class="login-content page-card">
+		<div class="page-card-head">
+			<img
+				class="app-logo"
+				src="/assets/frappe/images/frappe-framework-logo.svg"
+			/>
+			<h4>Register Site</h4>
+		</div>
+
+		<form class="form-signin form-login" role="form">
+			<div class="page-card-body">
+				<div class="page-card-body">
+					<div class="form-group">
+						<label class="form-label" for="sitename">Site Name</label>
+						<div class="">
+							<input
+								type="text"
+								id="sitename"
+								class="form-control"
+								style="margin-bottom: 0px"
+								placeholder="abc.erpnext.com"
+								required=""
+								autofocus=""
+								autocomplete="sitename"
+							/>
+						    <span style="font-size: 12px;">Site you want to raise tickets for</span>
+						</div>
+					</div>
+				    
+				    <div class="form-group" style="margin-top: 16px">
+						<label class="form-label" for="site_email">Email</label>
+						<div class="">
+							<input
+								type="text"
+								id="site_email"
+								class="form-control"
+								style="margin-bottom: 0px"
+								placeholder="jane@example.com"
+								required=""
+								autofocus=""
+								autocomplete="site_email"
+							/>
+							<span style="font-size: 12px;">You must be a valid user on the above site</span>
+						</div>
+					</div>
+
+				    <div class="form-group">
+						<label class="form-label" for="site_password">Password</label>
+						<div class="">
+							<input
+								type="password"
+								id="site_password"
+								class="form-control"
+								style="margin-bottom: 0px"
+								placeholder="********"
+								required=""
+								autofocus=""
+								autocomplete="site_password"
+							/>
+							<span style="font-size: 12px;">Login password for the above email and site</span>
+						</div>
+					</div>
+				</div>
+				<div class="page-card-actions">
+					<button
+						class="btn btn-sm btn-primary btn-block btn-register"
+						type="submit"
+					>
+						Register Site
+					</button>
+					<br/>
+				</div>
+			</div>
+		</form>
+	</div>
+	<a style="font-size: 14px; text-align: center; display: block; margin-top: 20px" href="/help">Documentation</a>
+</section>
+
+	</article>
+	
+</div></div>
+
+		<div class="page-footer"></div>
+	</main>
+	
+</div>
+
+</div>
+
+
+<footer class="web-footer">
+<div class="container">
+<div class="footer-logo-extension">
+<div class="row">
+<div class="text-left col-md-6"></div>
+<div class="text-right col-md-6">
+</div>
+</div>
+</div>
+<div class="footer-links">
+<div class="row">
+<div class="footer-col-left col-sm-6"></div>
+<div class="footer-col-right col-sm-6"></div>
+</div>
+</div>
+<div class="footer-info">
+<div class="row">
+<div class="footer-col-left col-sm-6 col-12">
+</div>
+<div class="footer-col-right col-sm-6 col-12 footer-powered">
+			Built on <a class="text-muted" href="https://frappeframework.com?source=website_footer" target="_blank">Frappe</a>
+</div>
+</div>
+</div>
+</div>
+</footer><div id="all-symbols" style="display:none"></div><script type="text/javascript">fetch(`/assets/frappe/icons/timeless/icons.svg?v=${window._version_number}`, {credentials: "same-origin"}).then((r) => r.text()).then((svg) => {let c = document.getElementById("all-symbols"); c.insertAdjacentHTML("beforeend", svg);});</script><script type="text/javascript">fetch(`/assets/frappe/icons/espresso/icons.svg?v=${window._version_number}`, {credentials: "same-origin"}).then((r) => r.text()).then((svg) => {let c = document.getElementById("all-symbols"); c.insertAdjacentHTML("beforeend", svg);});</script>
+	<!-- js should be loaded in body! -->
+	<script>
+		frappe.boot = {"lang":"en","apps_data":{"apps":[],"is_desk_apps":1,"default_path":""},"sysdefaults":{"float_precision":3,"date_format":"dd-mm-yyyy","time_format":"HH:mm:ss","first_day_of_the_week":"Sunday","number_format":"#,##,###.##","currency":null},"time_zone":{"system":"Asia/Kolkata","user":"Asia/Kolkata"},"assets_json":{"billing.bundle.js":"/assets/frappe/dist/js/billing.bundle.QQE2RPCA.js","bootstrap-4-web.bundle.js":"/assets/frappe/dist/js/bootstrap-4-web.bundle.FOZOVELL.js","calendar.bundle.js":"/assets/frappe/dist/js/calendar.bundle.4A4YITIU.js","controls.bundle.js":"/assets/frappe/dist/js/controls.bundle.OYYREBK2.js","data_import_tools.bundle.js":"/assets/frappe/dist/js/data_import_tools.bundle.44FYB4HH.js","desk.bundle.js":"/assets/frappe/dist/js/desk.bundle.TZIVO3TZ.js","dialog.bundle.js":"/assets/frappe/dist/js/dialog.bundle.LRMD735I.js","form.bundle.js":"/assets/frappe/dist/js/form.bundle.5FVAUHNT.js","frappe-web.bundle.js":"/assets/frappe/dist/js/frappe-web.bundle.7AVORODD.js","libs.bundle.js":"/assets/frappe/dist/js/libs.bundle.IGBCIYI5.js","list.bundle.js":"/assets/frappe/dist/js/list.bundle.WYEQPEX4.js","logtypes.bundle.js":"/assets/frappe/dist/js/logtypes.bundle.5KO3ZOOI.js","onboarding_tours.bundle.js":"/assets/frappe/dist/js/onboarding_tours.bundle.RAUR6X4Z.js","photoswipe.bundle.js":"/assets/frappe/dist/js/photoswipe.bundle.YSXZQA64.js","report.bundle.js":"/assets/frappe/dist/js/report.bundle.U5FVPKFU.js","sentry.bundle.js":"/assets/frappe/dist/js/sentry.bundle.AX44GVWW.js","syntax_highlighting.bundle.js":"/assets/frappe/dist/js/syntax_highlighting.bundle.YHGNRCUE.js","telemetry.bundle.js":"/assets/frappe/dist/js/telemetry.bundle.LKEZCADB.js","video_player.bundle.js":"/assets/frappe/dist/js/video_player.bundle.DUYYLSFO.js","web_form.bundle.js":"/assets/frappe/dist/js/web_form.bundle.XWZIJJTQ.js","form_builder.bundle.js":"/assets/frappe/dist/js/form_builder.bundle.JYTDXDWZ.js","print_format_builder.bundle.js":"/assets/frappe/dist/js/print_format_builder.bundle.VQYWNAGA.js","workflow_builder.bundle.js":"/assets/frappe/dist/js/workflow_builder.bundle.U4VDPLZF.js","build_events.bundle.js":"/assets/frappe/dist/js/build_events.bundle.BCX32TWL.js","file_uploader.bundle.js":"/assets/frappe/dist/js/file_uploader.bundle.YA3Z7QZ3.js","kanban_board.bundle.js":"/assets/frappe/dist/js/kanban_board.bundle.F6FPXXED.js","desk.bundle.css":"/assets/frappe/dist/css/desk.bundle.4TSECX23.css","email.bundle.css":"/assets/frappe/dist/css/email.bundle.ZOGSHV5K.css","login.bundle.css":"/assets/frappe/dist/css/login.bundle.SOJX34WS.css","print.bundle.css":"/assets/frappe/dist/css/print.bundle.YCPFM4VD.css","print_format.bundle.css":"/assets/frappe/dist/css/print_format.bundle.O64FUBAW.css","report.bundle.css":"/assets/frappe/dist/css/report.bundle.ESDYCSU2.css","web_form.bundle.css":"/assets/frappe/dist/css/web_form.bundle.AJNV3R7F.css","website.bundle.css":"/assets/frappe/dist/css/website.bundle.25QTMWKN.css","contributions.bundle.css":"/assets/wiki/dist/css/contributions.bundle.SQU6HLBQ.css","wiki.bundle.css":"/assets/wiki/dist/css/wiki.bundle.DDXPB3R6.css","wiki.bundle.js":"/assets/wiki/dist/js/wiki.bundle.QYLKJCF5.js","view_session.bundle.js":"/assets/otto/dist/js/view_session.bundle.S3MJHZS2.js","rtl_desk.bundle.css":"/assets/frappe/dist/css-rtl/desk.bundle.OFYD24JA.css","rtl_email.bundle.css":"/assets/frappe/dist/css-rtl/email.bundle.ULZCHTSP.css","rtl_login.bundle.css":"/assets/frappe/dist/css-rtl/login.bundle.PBHHUYZG.css","rtl_print.bundle.css":"/assets/frappe/dist/css-rtl/print.bundle.IZSWMQJO.css","rtl_print_format.bundle.css":"/assets/frappe/dist/css-rtl/print_format.bundle.G3CSVZKV.css","rtl_report.bundle.css":"/assets/frappe/dist/css-rtl/report.bundle.QTTLG36U.css","rtl_web_form.bundle.css":"/assets/frappe/dist/css-rtl/web_form.bundle.D5RDBPDX.css","rtl_website.bundle.css":"/assets/frappe/dist/css-rtl/website.bundle.5CZRAG2Z.css","rtl_contributions.bundle.css":"/assets/wiki/dist/css-rtl/contributions.bundle.3Z6Z6FYA.css","rtl_wiki.bundle.css":"/assets/wiki/dist/css-rtl/wiki.bundle.OV2QXP2T.css"},"sitename":"frappeio-support.frappe.cloud","is_fc_site":0}
+		// for backward compatibility of some libs
+		frappe.sys_defaults = frappe.boot.sysdefaults;
+	</script>
+	<script type="text/javascript" src="/assets/frappe/dist/js/frappe-web.bundle.7AVORODD.js"></script>
+	
+	<script type="text/javascript" src="/website_script.js"></script><script>$(document).ready(function () {
+    if (frappe.session.user == "Guest") {
+        window.location.href = '/login?redirect-to=register-site';
+    }
+    $("#site_email").val(frappe.session.user)
+    $("#site_email").attr('disabled', true)
+    
+	$(".form-login").on("submit", function (e) {
+		e.preventDefault();
+		var sitename = $("#sitename").val();
+		var site_email = $("#site_email").val();
+		var site_password = $("#site_password").val();
+
+		if (sitename.split('.').length < 3) {
+		    frappe.toast("Please enter a valid site url. eg. abc.example.com");
+		    return
+		}
+
+		if (site_email.indexOf("@") == -1 || site_email.indexOf(".") == -1) {
+		    frappe.toast("Please enter valid email address");
+		    return
+		}
+        
+		
+		$('.btn-register').prop('disabled', true);
+
+        frappe.call("register_new_site", {
+            sitename,
+            site_email,
+            site_password,
+        }).then((res) => {
+            console.log(res)
+            $('.btn-register').prop('disabled', false);
+            frappe.msgprint(
+                `Your site has been registered for frappe support. You can now raise tickets for ${sitename}`,
+                title="Site Registered"
+            )
+            setTimeout(() => {
+                window.href.location = '/helpdesk/my-tickets'
+            }, 1000)
+        })
+        .catch((err) => {
+            console.log(err)
+            $('.btn-register').prop('disabled', false);
+        })
+	});
+});</script>
+	<script>frappe.csrf_token = "None";</script></body>
+</html>

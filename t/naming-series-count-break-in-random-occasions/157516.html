@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Naming Series count break in random occasions - ERPNext - Frappe Forum</title>
+    <meta name="description" content="I have created a custom DocType named “Short Leave Application”, and it’s naming series is set as below, 
+Naming Rule: Expression 
+Auto Name: format:HR-SLA-{YYYY}-{####} 
+For the first few documents, the naming series wo&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/naming-series-count-break-in-random-occasions/157516" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Naming Series count break in random occasions&#39;" href="https://discuss.frappe.io/t/naming-series-count-break-in-random-occasions/157516.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/9/a/9a0b53d2dc574f6757a43ebd17a82d950594ea94.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/9/a/9a0b53d2dc574f6757a43ebd17a82d950594ea94.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/naming-series-count-break-in-random-occasions/157516" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/naming-series-count-break-in-random-occasions/157516" />
+<meta property="og:title" content="Naming Series count break in random occasions" />
+<meta name="twitter:title" content="Naming Series count break in random occasions" />
+<meta property="og:description" content="I have created a custom DocType named “Short Leave Application”, and it’s naming series is set as below,  Naming Rule: Expression  Auto Name: format:HR-SLA-{YYYY}-{####}  For the first few documents, the naming series worked fine,     But after many entries, it has skipped 408 counts from 235 to 643,     The above records were sorted according to the ID and there were no records created in between." />
+<meta name="twitter:description" content="I have created a custom DocType named “Short Leave Application”, and it’s naming series is set as below,  Naming Rule: Expression  Auto Name: format:HR-SLA-{YYYY}-{####}  For the first few documents, the naming series worked fine,     But after many entries, it has skipped 408 counts from 235 to 643,     The above records were sorted according to the ID and there were no records created in between." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="bug" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="4 ❤" />
+<meta property="article:published_time" content="2025-12-01T07:38:32+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Naming Series count break in random occasions","mainEntity":{"@type":"Question","name":"Naming Series count break in random occasions","text":"I have created a custom DocType named “Short Leave Application”, and it’s naming series is set as below,\n\nNaming Rule: Expression\n\nAuto Name: format:HR-SLA-{YYYY}-{####}\n\nFor the first few documents, the naming series worked fine,\n\n<a class=\"lightbox\" href=\"https://discuss.frappe.io/uploads/default/original/3X/9/a/9a0b53d2dc574f6757a43ebd17a82d950594ea94.png\" data-download-href=\"https://discuss.frappe.io/uploads/default/9a0b53d2dc574f6757a43ebd17a82d950594ea94\" title=\"Screenshot 2025-12-01 at 1.02.27 PM\">[Screenshot 2025-12-01 at 1.02.27 PM]<\/a>\n\nBut after many entries, it h&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-12-01T07:38:32.461Z","author":{"@type":"Person","name":"ransikerandeni","url":"https://discuss.frappe.io/u/ransikerandeni"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/naming-series-count-break-in-random-occasions/157516">Naming Series count break in random occasions</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/bug' class='discourse-tag' rel="tag">bug</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Naming Series count break in random occasions'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/naming-series-count-break-in-random-occasions/157516'>
+      <meta itemprop='datePublished' content='2025-12-01T07:38:32Z'>
+        <meta itemprop='articleSection' content='ERPNext'>
+      <meta itemprop='keywords' content='erpnext, bug'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ransikerandeni'><span itemprop='name'>ransikerandeni</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/naming-series-count-break-in-random-occasions/157516">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/9/a/9a0b53d2dc574f6757a43ebd17a82d950594ea94.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-12-01T07:38:32Z' class='post-time'>
+                    December 1, 2025,  7:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-01T07:38:32Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have created a custom DocType named “Short Leave Application”, and it’s naming series is set as below,</p>
+<p>Naming Rule: Expression</p>
+<p>Auto Name: format:HR-SLA-{YYYY}-{####}</p>
+<p>For the first few documents, the naming series worked fine,</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/a/9a0b53d2dc574f6757a43ebd17a82d950594ea94.png" data-download-href="https://discuss.frappe.io/uploads/default/9a0b53d2dc574f6757a43ebd17a82d950594ea94" title="Screenshot 2025-12-01 at 1.02.27 PM"><img src="https://discuss.frappe.io/uploads/default/original/3X/9/a/9a0b53d2dc574f6757a43ebd17a82d950594ea94.png" alt="Screenshot 2025-12-01 at 1.02.27 PM" data-base62-sha1="lYJNyM64riCb80q56tbS9roTI0Y" width="220" height="242"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot 2025-12-01 at 1.02.27 PM</span><span class="informations">220×242 3.45 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>But after many entries, it has skipped 408 counts from 235 to 643,</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/4/74eb386a50ae549dc9517192f16701a27f8b4a89.png" data-download-href="https://discuss.frappe.io/uploads/default/74eb386a50ae549dc9517192f16701a27f8b4a89" title="Screenshot 2025-12-01 at 1.06.47 PM"><img src="https://discuss.frappe.io/uploads/default/original/3X/7/4/74eb386a50ae549dc9517192f16701a27f8b4a89.png" alt="Screenshot 2025-12-01 at 1.06.47 PM" data-base62-sha1="gGjljVTOZxBScYEey1ljgaSQntD" width="180" height="500" data-dominant-color="F3F1F1"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot 2025-12-01 at 1.06.47 PM</span><span class="informations">236×653 7.17 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>The above records were sorted according to the ID and there were no records created in between.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/bahaou'><span itemprop='name'>bahaou</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-01T07:49:31Z' class='post-time'>
+                    December 1, 2025,  7:49am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-01T07:49:31Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/ransikerandeni">@ransikerandeni</a> someone with full access to your website changed the counts of your document from 235 to 642 .</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ransikerandeni'><span itemprop='name'>ransikerandeni</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-01T07:55:00Z' class='post-time'>
+                    December 1, 2025,  7:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-01T07:55:00Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>No, when I last checked the count from Document Naming Series, it was displayed as 163, but was naming around 2000.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Void_Moon'><span itemprop='name'>Void_Moon</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-01T08:57:53Z' class='post-time'>
+                    December 1, 2025,  8:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-01T08:57:53Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Naming series is a global counter. So if you used .#### for the counter, then any DocType that has a .#### counter in their naming series will update that counter. So if you create 0001 in one DocType, then if you create a record in another DocType with a .#### series, it will create as 0002.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ransikerandeni'><span itemprop='name'>ransikerandeni</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-01T09:38:14Z' class='post-time'>
+                    December 1, 2025,  9:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-01T09:44:11Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Is there any option to set the counter to start from “0” in newly created custom DocTypes?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Hemil_Sangani'><span itemprop='name'>Hemil_Sangani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-01T09:55:19Z' class='post-time'>
+                    December 1, 2025,  9:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-01T10:00:28Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>You can use Document Naming Rule for this:</p>
+<p>Navigate to <strong>Home → Document Naming Rule</strong> and click <strong>New</strong>.</p>
+<ol>
+<li>Select your <strong>Document Type</strong> (your custom DocType) from the dropdown.</li>
+<li>Set a <strong>Priority</strong> value (e.g., <code>10</code> for higher precedence — higher values are applied first).</li>
+<li>In the <strong>Naming</strong> section, enter your desired <strong>Prefix</strong> (e.g., <code>"CUST-"</code>) and specify the <strong>Counter Start</strong> value (the number from which naming should begin).</li>
+<li>Save the rule.</li>
+</ol>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/shaileshsaini'><span itemprop='name'>shaileshsaini</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/1/0/106fc050a901b07eac3274f00674cdd42f1ea46e.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-01T10:01:21Z' class='post-time'>
+                    December 1, 2025, 10:01am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-01T10:01:21Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In ERPNext, using <strong>Document Naming Rule</strong>, you can start a counter from 0 by creating a custom <strong>Naming Series</strong> for your DocType. For Eg  in Document naming rule set : DOC- and select the doctype. give the prefix and start series from.</p>
+<p>Just see the screenshot:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/0/106fc050a901b07eac3274f00674cdd42f1ea46e.png" data-download-href="https://discuss.frappe.io/uploads/default/106fc050a901b07eac3274f00674cdd42f1ea46e" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/1/0/106fc050a901b07eac3274f00674cdd42f1ea46e_2_690x307.png" alt="image" data-base62-sha1="2lp43wY7s0YmnidsmbAn3WMHkD4" width="690" height="307" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/1/0/106fc050a901b07eac3274f00674cdd42f1ea46e_2_690x307.png, https://discuss.frappe.io/uploads/default/optimized/3X/1/0/106fc050a901b07eac3274f00674cdd42f1ea46e_2_1035x460.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/1/0/106fc050a901b07eac3274f00674cdd42f1ea46e_2_1380x614.png 2x" data-dominant-color="FCFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1919×854 60.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ransikerandeni'><span itemprop='name'>ransikerandeni</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-01T10:26:29Z' class='post-time'>
+                    December 1, 2025, 10:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-01T10:26:29Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="Hemil_Sangani" data-post="6" data-topic="157516">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/letter_avatar_proxy/v4/letter/h/ce7236/48.png" class="avatar"> Hemil_Sangani:</div>
+<blockquote>
+<p>Document Naming Rule</p>
+</blockquote>
+</aside>
+<p>If I want to use this format HR-DSR-{YYYY}-{####}. What should I enter in the “Prefix” in Document Naming Rule?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Hemil_Sangani'><span itemprop='name'>Hemil_Sangani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-01T10:28:28Z' class='post-time'>
+                    December 1, 2025, 10:28am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-01T10:28:28Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Set Prefix to <strong>HR-DSR-.YYYY.-</strong> and set digits to 4</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/shaileshsaini'><span itemprop='name'>shaileshsaini</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-01T10:31:31Z' class='post-time'>
+                    December 1, 2025, 10:31am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-01T10:31:31Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Write prefix like HR-DSR-.YYYY.-</p>
+<p>For your reference:</p>
+<ul>
+<li>Allowed special characters are “/” and “-”</li>
+</ul>
+<p>- Optionally, set the number of digits in the series using dot (.) followed by hashes (#). For example, “.####” means that the series will have four digits. Default is five digits.</p>
+<p>- You can also use variables in the series name by putting them between (.) dots<br>
+Supported Variables:</p>
+<p>- <code>.YYYY.</code> - Year in 4 digits</p>
+<p>- <code>.YY.</code> - Year in 2 digits</p>
+<p>- <code>.MM.</code> - Month</p>
+<p>- <code>.DD.</code> - Day of month</p>
+<p>- <code>.WW.</code> - Week of the year</p>
+<p>- <code>.FY.</code> - Fiscal Year</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ransikerandeni'><span itemprop='name'>ransikerandeni</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-01T10:44:30Z' class='post-time'>
+                    December 1, 2025, 10:44am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-01T10:44:30Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If we want to use a DocType Field value how can we use it in the series?</p>
+<p>Example: If there is a Field name "called “custom_main_procurement“, and I want to use that value in the naming series, how to use that in the naming series?</p>
+<p>format:RFQ/{custom_main_procurement_type}/.YYYY.</p>
+<p>If a naming series is defined in the DocType, it will get override with the “Document Naming Rule”?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Hemil_Sangani'><span itemprop='name'>Hemil_Sangani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-01T10:55:32Z' class='post-time'>
+                    December 1, 2025, 10:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-01T10:55:32Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Use Like this <strong>RFQ/.{custom_main_procurement_type}./.YYYY.-</strong></p>
+<p>Yes Document Naming Rule Override naming series as it have highere priority then Naming Series</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ransikerandeni'><span itemprop='name'>ransikerandeni</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-02T06:51:20Z' class='post-time'>
+                    December 2, 2025,  6:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-02T06:51:20Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If we are to use a naming series like “<strong>RFQ/.{custom_main_procurement_type}./.YYYY.-”</strong>, which includes a field name, then it is not possible to use “Document Naming Rule”, right? Instead, we have to use DocType’s naming series? And if we use DocType’s naming series, is there any way to keep the count in order without skipping?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Hemil_Sangani'><span itemprop='name'>Hemil_Sangani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-02T07:30:07Z' class='post-time'>
+                    December 2, 2025,  7:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-02T09:37:42Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>You Can Use Document Naming Rule with fieldname, it works</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Mubasher'><span itemprop='name'>Mubasher</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-02T08:38:58Z' class='post-time'>
+                    December 2, 2025,  8:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-02T08:38:58Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>use the document naming setting tool</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ransikerandeni'><span itemprop='name'>ransikerandeni</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/5/7/5780ea04294655695549d0e0f712f674c32f1618.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-02T10:08:54Z' class='post-time'>
+                    December 2, 2025, 10:08am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-02T10:08:54Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Once we set the prefix in the DocType naming series or from the “Document Naming Rule”, the prefix won’t be displayed in the prefix list in the “Document Naming Settings”. If type the prefix manually without selecting, it’ll set the count globally.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/5/7/5780ea04294655695549d0e0f712f674c32f1618.png" data-download-href="https://discuss.frappe.io/uploads/default/5780ea04294655695549d0e0f712f674c32f1618" title="Screenshot 2025-12-02 at 3.40.39 PM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/5/7/5780ea04294655695549d0e0f712f674c32f1618_2_690x295.png" alt="Screenshot 2025-12-02 at 3.40.39 PM" data-base62-sha1="cu5JHGiDba01tWLue2AdtijEKko" width="690" height="295" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/5/7/5780ea04294655695549d0e0f712f674c32f1618_2_690x295.png, https://discuss.frappe.io/uploads/default/optimized/3X/5/7/5780ea04294655695549d0e0f712f674c32f1618_2_1035x442.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/5/7/5780ea04294655695549d0e0f712f674c32f1618.png 2x" data-dominant-color="F9FAFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot 2025-12-02 at 3.40.39 PM</span><span class="informations">1257×539 36.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/6/f/6f05df1b44a0f2409af61dfcf9d501373dc173a0.png" data-download-href="https://discuss.frappe.io/uploads/default/6f05df1b44a0f2409af61dfcf9d501373dc173a0" title="Screenshot 2025-12-02 at 3.41.18 PM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/6/f/6f05df1b44a0f2409af61dfcf9d501373dc173a0_2_690x339.png" alt="Screenshot 2025-12-02 at 3.41.18 PM" data-base62-sha1="fQ9zTbjLMIZ1kPrxWUniRyzuPeM" width="690" height="339" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/6/f/6f05df1b44a0f2409af61dfcf9d501373dc173a0_2_690x339.png, https://discuss.frappe.io/uploads/default/optimized/3X/6/f/6f05df1b44a0f2409af61dfcf9d501373dc173a0_2_1035x508.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/6/f/6f05df1b44a0f2409af61dfcf9d501373dc173a0.png 2x" data-dominant-color="F9FAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot 2025-12-02 at 3.41.18 PM</span><span class="informations">1095×539 34.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kolate_sambhaji'><span itemprop='name'>kolate_sambhaji</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-02T10:25:34Z' class='post-time'>
+                    December 2, 2025, 10:25am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-02T10:25:34Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Are you having two sites in same server?<br>
+or same naming series is used by any other form?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Hemil_Sangani'><span itemprop='name'>Hemil_Sangani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-02T10:29:19Z' class='post-time'>
+                    December 2, 2025, 10:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-02T10:29:19Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <ul>
+<li>The prefix list in <strong>Document Naming Settings</strong> only displays naming prefixes that are configured or predefined globally.</li>
+<li>Custom prefixes set within a DocType or naming rule are local to that DocType and hence not synced to the global prefix list.</li>
+</ul>
+<p>If you want a specific starting number for the suffix, you can configure the <strong>Counter</strong> field in the Document Naming Rule.<br>
+For example, if you set the counter to <strong>100</strong>, the next generated document will begin from <strong>101</strong>.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ransikerandeni'><span itemprop='name'>ransikerandeni</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-15T07:04:58Z' class='post-time'>
+                    December 15, 2025,  7:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-15T07:04:58Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you for the Info. It was useful. I want to know when using a <strong>Document Naming Rule</strong>, if we use something like this <strong>RFQ/.{custom_main_procurement_type}./.YYYY.-</strong> is it possible to reset the counter once the Year has passed from <strong>2025</strong> to <strong>2026</strong>?</p>
+<p>Example <strong>RFQ/TEST/2025/0891</strong> to **RFQ/TEST/2026/0001<br>
+**<br>
+If we have to set a Rule Condition, how to apply it?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_21' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Hemil_Sangani'><span itemprop='name'>Hemil_Sangani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-15T09:38:30Z' class='post-time'>
+                    December 15, 2025,  9:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-15T09:38:30Z'>
+              <span itemprop='position'>21</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>As far as I know, <strong>the counter automatically resets when the year changes.</strong><br>
+So you don’t need to reset the counter manually.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

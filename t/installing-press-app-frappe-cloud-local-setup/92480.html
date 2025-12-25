@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Installing Press App - Frappe Cloud Local Setup - Frappe Cloud - Frappe Forum</title>
+    <meta name="description" content="Hi, 
+Has anyone tried installing Press app locally? The get-app proceeds successfully but I am unable to install to a site despite several un-installs and installs.">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/installing-press-app-frappe-cloud-local-setup/92480" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Installing Press App - Frappe Cloud Local Setup&#39;" href="https://discuss.frappe.io/t/installing-press-app-frappe-cloud-local-setup/92480.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/installing-press-app-frappe-cloud-local-setup/92480" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/installing-press-app-frappe-cloud-local-setup/92480" />
+<meta property="og:title" content="Installing Press App - Frappe Cloud Local Setup" />
+<meta name="twitter:title" content="Installing Press App - Frappe Cloud Local Setup" />
+<meta property="og:description" content="Hi,  Has anyone tried installing Press app locally? The get-app proceeds successfully but I am unable to install to a site despite several un-installs and installs." />
+<meta name="twitter:description" content="Hi,  Has anyone tried installing Press app locally? The get-app proceeds successfully but I am unable to install to a site despite several un-installs and installs." />
+<meta property="og:article:section" content="Frappe Cloud" />
+<meta property="og:article:section:color" content="0088CC" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="8 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="42 ❤" />
+<meta property="article:published_time" content="2022-07-26T08:27:49+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="/t/installing-press-app-frappe-cloud-local-setup/92480?page=2">
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Installing Press App - Frappe Cloud Local Setup","mainEntity":{"@type":"Question","name":"Installing Press App - Frappe Cloud Local Setup","text":"Hi,\n\nHas anyone tried installing Press app locally? The get-app proceeds successfully but I am unable to install to a site despite several un-installs and installs.","upvoteCount":1,"answerCount":0,"datePublished":"2022-07-26T08:27:49.538Z","author":{"@type":"Person","name":"mwogi","url":"https://discuss.frappe.io/u/mwogi"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/installing-press-app-frappe-cloud-local-setup/92480">Installing Press App - Frappe Cloud Local Setup</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/frappe-cloud/77" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0088CC'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Cloud</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Installing Press App - Frappe Cloud Local Setup'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/installing-press-app-frappe-cloud-local-setup/92480'>
+      <meta itemprop='datePublished' content='2022-07-26T08:27:49Z'>
+        <meta itemprop='articleSection' content='Frappe Cloud'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mwogi'><span itemprop='name'>mwogi</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/installing-press-app-frappe-cloud-local-setup/92480">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2022-07-26T08:27:49Z' class='post-time'>
+                    July 26, 2022,  8:27am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-04T21:24:57Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,<br>
+Has anyone tried installing Press app locally? The get-app proceeds successfully but I am unable to install to a site despite several un-installs and installs.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/TurkerTunali'><span itemprop='name'>TurkerTunali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-07-26T10:05:56Z' class='post-time'>
+                    July 26, 2022, 10:05am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-07-26T10:05:56Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Most probably it will require v14.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mwogi'><span itemprop='name'>mwogi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-07-26T10:06:58Z' class='post-time'>
+                    July 26, 2022, 10:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-07-26T10:06:58Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks. Let me try with version-14 and see</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Ishtiyaq'><span itemprop='name'>Ishtiyaq</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-11-03T16:12:37Z' class='post-time'>
+                    November 3, 2022,  4:12pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-11-03T16:12:37Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Is it working</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mwogi'><span itemprop='name'>mwogi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-11-03T19:52:42Z' class='post-time'>
+                    November 3, 2022,  7:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-11-03T19:52:42Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey. Yeah, it is working quite well. I was on Kubernetes before but Press is a much more stable, less troublesome alternative.</p>
+<p>It is working here: <a href="https://lonius.cloud" rel="noopener nofollow ugc">https://lonius.cloud</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/rahy'><span itemprop='name'>rahy</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-11-04T03:50:04Z' class='post-time'>
+                    November 4, 2022,  3:50am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-11-04T03:50:04Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Does lonius.cloud commercially in production?<br>
+Because you use <a href="http://erpnext.com">erpnext.com</a> as the site name in registration.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mwogi'><span itemprop='name'>mwogi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-11-04T05:26:39Z' class='post-time'>
+                    November 4, 2022,  5:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-11-04T05:26:39Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Not yet. We are still doing configurations and changes especially to the frontend.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/BSombi'><span itemprop='name'>BSombi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-12-06T15:59:59Z' class='post-time'>
+                    December 6, 2022,  3:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-12-06T15:59:59Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>How did you install it. Any links?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mwogi'><span itemprop='name'>mwogi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-12-06T19:56:58Z' class='post-time'>
+                    December 6, 2022,  7:56pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-12-06T19:56:58Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/bsombi">@BSombi</a> Just follow the guide here: <a href="https://frappecloud.com/docs/local-fc-setup#press-settings" class="inline-onebox" rel="noopener nofollow ugc">Local Development Environment Setup</a></p>
+<p>It should work for most parts but hopefully they will improve on it more to include things like how to setup analytics.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/BSombi'><span itemprop='name'>BSombi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-12-07T12:23:20Z' class='post-time'>
+                    December 7, 2022, 12:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-12-07T12:23:20Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Edman_Perez'><span itemprop='name'>Edman_Perez</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-01T00:28:13Z' class='post-time'>
+                    January 1, 2023, 12:28am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-01T00:28:13Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello <a class="mention" href="/u/mwogi">@mwogi</a>,</p>
+<p>Can you please share some info regarding the TLS Certificates with CertBot<br>
+I have been trying to setup a frappe/press environment.<br>
+So far everything was smooth, I was able to installed and initiate the configuration… but know I’m in the creation of the proxy server</p>
+<p>Route53 and Certbot are working fine, but when I try to create a new proxy server on press I got this error “Valid wildcard TLS Certificate not found for domain.name”</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mwogi'><span itemprop='name'>mwogi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-04T12:33:38Z' class='post-time'>
+                    January 4, 2023, 12:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-04T12:33:38Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Check if you have pointed the root domain on Route53 to the right IP address. It should resolve to you IP of your Press server. From what I remember the wildcard TLS certificate was automatically created</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/tls-certificate-exception/99211/4">TLS Certificate Exception</a>
+                        <meta itemprop='position' content='1'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/rahy'><span itemprop='name'>rahy</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-07T09:56:45Z' class='post-time'>
+                    January 7, 2023,  9:56am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-07T09:56:45Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Can we use other VPS and cloud for this Frappe Press installation?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mwogi'><span itemprop='name'>mwogi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-09T07:12:23Z' class='post-time'>
+                    January 9, 2023,  7:12am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-09T07:12:23Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, should work with any other VPS so long as the server that you have installed press on can SSH into the other nodes.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/josog'><span itemprop='name'>josog</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/1/4/14fecaec0190c021940ae3c2c2d4d94474abd8fa.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-28T18:14:34Z' class='post-time'>
+                    January 28, 2023,  6:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-28T18:14:34Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="mwogi" data-post="14" data-topic="92480">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/mwogi/48/28646_2.png" class="avatar"> mwogi:</div>
+<blockquote>
+<p>as the server that yo</p>
+</blockquote>
+</aside>
+<p>i get this error when try to configure the proxy server:<br>
+<img src="https://discuss.frappe.io/uploads/default/original/3X/1/4/14fecaec0190c021940ae3c2c2d4d94474abd8fa.png" alt="imagen" data-base62-sha1="2ZJri1C6ajYKB25hREcfBp5Y6Ey" width="455" height="109"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/josog'><span itemprop='name'>josog</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-31T08:00:04Z' class='post-time'>
+                    January 31, 2023,  8:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-31T08:00:04Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey, your landing is awesome, share a little…</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mwogi'><span itemprop='name'>mwogi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-01-31T20:38:42Z' class='post-time'>
+                    January 31, 2023,  8:38pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-01-31T20:38:42Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We actually didn’t do much. Just used the website template builder using the ‘Hero with right image’ template</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Mortodus'><span itemprop='name'>Mortodus</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-02-20T21:25:30Z' class='post-time'>
+                    February 20, 2023,  9:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-02-20T21:25:30Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Me too, did you resolve this?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/iMoshi'><span itemprop='name'>iMoshi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-03-07T06:24:04Z' class='post-time'>
+                    March 7, 2023,  6:24am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-03-07T06:24:04Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Documentation says you’d need at least 3 servers, all for 3 different (f, m, n) purposes. Do you guys have any recommendation for server hardware for each? I’m guessing we don’t need a top level hardware for n server for example, but a top notch one is needed to run f server.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abu_Sayed'><span itemprop='name'>Abu_Sayed</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-04-21T05:27:58Z' class='post-time'>
+                    April 21, 2023,  5:27am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-04-21T05:27:58Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>why this error?</p>
+<p>An error occurred while installing press: <a href="http://Frappe.io" rel="noopener nofollow ugc">Frappe.io</a> URL not set up in Press Settings<br>
+Traceback (most recent call last):<br>
+File “apps/frappe/frappe/commands/site.py”, line 416, in install_app<br>
+_install_app(app, verbose=context.verbose, force=force)<br>
+File “apps/frappe/frappe/installer.py”, line 304, in install_app<br>
+frappe.get_attr(after_install)()<br>
+File “apps/press/press/install.py”, line 10, in after_install<br>
+create_administrator_team()<br>
+File “apps/press/press/install.py”, line 25, in create_administrator_team<br>
+administrator_team.insert()<br>
+File “apps/frappe/frappe/model/document.py”, line 285, in insert<br>
+self.run_post_save_methods()<br>
+File “apps/frappe/frappe/model/document.py”, line 1082, in run_post_save_methods<br>
+self.run_method(“on_update”)<br>
+File “apps/frappe/frappe/model/document.py”, line 914, in run_method<br>
+out = Document.hook(fn)(self, *args, **kwargs)<br>
+File “apps/frappe/frappe/model/document.py”, line 1264, in composer<br>
+return composed(self, method, *args, **kwargs)<br>
+File “apps/frappe/frappe/model/document.py”, line 1246, in runner<br>
+add_to_return_value(self, fn(self, *args, **kwargs))<br>
+File “apps/frappe/frappe/model/document.py”, line 911, in fn<br>
+return method_object(*args, **kwargs)<br>
+File “apps/press/press/press/doctype/team/team.py”, line 239, in on_update<br>
+self.update_billing_details_on_frappeio()<br>
+File “apps/press/press/press/doctype/team/team.py”, line 375, in update_billing_details_on_frappeio<br>
+raise e<br>
+File “apps/press/press/press/doctype/team/team.py”, line 370, in update_billing_details_on_frappeio<br>
+frappeio_client = get_frappe_io_connection()<br>
+File “apps/press/press/utils/billing.py”, line 93, in get_frappe_io_connection<br>
+frappe.throw(“<a href="http://Frappe.io" rel="noopener nofollow ugc">Frappe.io</a> URL not set up in Press Settings”, exc=FrappeioServerNotSet)<br>
+File “apps/frappe/frappe/<strong>init</strong>.py”, line 525, in throw<br>
+msgprint(<br>
+File “apps/frappe/frappe/<strong>init</strong>.py”, line 493, in msgprint<br>
+_raise_exception()<br>
+File “apps/frappe/frappe/<strong>init</strong>.py”, line 442, in _raise_exception<br>
+raise raise_exception(msg)<br>
+press.exceptions.FrappeioServerNotSet: <a href="http://Frappe.io" rel="noopener nofollow ugc">Frappe.io</a> URL not set up in Press Settings</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="/t/installing-press-app-frappe-cloud-local-setup/92480?page=2">next page →</a></b></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

@@ -1,0 +1,2 @@
+let number="";let timeout;document.addEventListener('keydown',function(ev){if(ev.keyCode>=48&&ev.keyCode<=57){number+=ev.key;}
+timeout&&clearTimeout(timeout);timeout=setTimeout(()=>{Array.from(document.querySelectorAll('.index')).forEach((el)=>{console.log(el.innerText);if(el.innerText===number){el.parentElement.querySelector('a').click();}});number="";},1000);})

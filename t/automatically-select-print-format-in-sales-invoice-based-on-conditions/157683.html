@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Automatically Select Print Format in Sales Invoice Based on Conditions - ERPNext - Frappe Forum</title>
+    <meta name="description" content="I am working with ERPNext v15.67.0 and Healthcare v15.1.3, and I have a requirement related to printing behavior in the Sales Invoice doctype. 
+Normally, when a user opens a Sales Invoice and clicks the Print icon, ERPNe&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/automatically-select-print-format-in-sales-invoice-based-on-conditions/157683" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Automatically Select Print Format in Sales Invoice Based on Conditions&#39;" href="https://discuss.frappe.io/t/automatically-select-print-format-in-sales-invoice-based-on-conditions/157683.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/automatically-select-print-format-in-sales-invoice-based-on-conditions/157683" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/automatically-select-print-format-in-sales-invoice-based-on-conditions/157683" />
+<meta property="og:title" content="Automatically Select Print Format in Sales Invoice Based on Conditions" />
+<meta name="twitter:title" content="Automatically Select Print Format in Sales Invoice Based on Conditions" />
+<meta property="og:description" content="I am working with ERPNext v15.67.0 and Healthcare v15.1.3, and I have a requirement related to printing behavior in the Sales Invoice doctype.  Normally, when a user opens a Sales Invoice and clicks the Print icon, ERPNext shows all available print formats for the user to choose from.  However, in my use case, I need ERPNext to automatically select a specific print format based on certain conditions inside the invoice.  For example:    If Condition A is true → use Print Format A    If Condition ..." />
+<meta name="twitter:description" content="I am working with ERPNext v15.67.0 and Healthcare v15.1.3, and I have a requirement related to printing behavior in the Sales Invoice doctype.  Normally, when a user opens a Sales Invoice and clicks the Print icon, ERPNext shows all available print formats for the user to choose from.  However, in my use case, I need ERPNext to automatically select a specific print format based on certain conditions inside the invoice.  For example:    If Condition A is true → use Print Format A    If Condition ..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:tag" content="print_format" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="custom_script" />
+<meta property="og:article:tag" content="frappe" />
+<meta property="og:article:tag" content="customization" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2025-12-05T10:41:32+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Automatically Select Print Format in Sales Invoice Based on Conditions","mainEntity":{"@type":"Question","name":"Automatically Select Print Format in Sales Invoice Based on Conditions","text":"I am working with ERPNext v15.67.0 and Healthcare v15.1.3, and I have a requirement related to printing behavior in the Sales Invoice doctype.\n\nNormally, when a user opens a Sales Invoice and clicks the Print icon, ERPNext shows all available print formats for the user to choose from.\n\nHowever, in m&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-12-05T10:41:32.084Z","author":{"@type":"Person","name":"Sharu","url":"https://discuss.frappe.io/u/Sharu"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/automatically-select-print-format-in-sales-invoice-based-on-conditions/157683">Automatically Select Print Format in Sales Invoice Based on Conditions</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/print_format' class='discourse-tag' rel="tag">print_format</a>, 
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/custom_script' class='discourse-tag' rel="tag">custom_script</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
+            <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag' rel="tag">customization</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Automatically Select Print Format in Sales Invoice Based on Conditions'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/automatically-select-print-format-in-sales-invoice-based-on-conditions/157683'>
+      <meta itemprop='datePublished' content='2025-12-05T10:41:32Z'>
+        <meta itemprop='articleSection' content='ERPNext'>
+      <meta itemprop='keywords' content='print_format, erpnext, custom_script, frappe, customization'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Sharu'><span itemprop='name'>Sharu</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/automatically-select-print-format-in-sales-invoice-based-on-conditions/157683">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-12-05T10:41:32Z' class='post-time'>
+                    December 5, 2025, 10:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-05T10:41:32Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am working with <strong>ERPNext v15.67.0</strong> and <strong>Healthcare v15.1.3</strong>, and I have a requirement related to printing behavior in the <strong>Sales Invoice</strong> doctype.</p>
+<p>Normally, when a user opens a Sales Invoice and clicks the <strong>Print</strong> icon, ERPNext shows all available print formats for the user to choose from.<br>
+However, in my use case, I need ERPNext to <strong>automatically select a specific print format based on certain conditions inside the invoice</strong>.</p>
+<p>For example:</p>
+<ul>
+<li>
+<p>If Condition A is true → use <strong>Print Format A</strong></p>
+</li>
+<li>
+<p>If Condition B is true → use <strong>Print Format B</strong></p>
+</li>
+<li>
+<p>If Condition C is true → use <strong>Print Format C</strong></p>
+</li>
+</ul>
+<p>The goal is that when the user presses the Print button, the system should <strong>directly open the print preview with the correct print format applied</strong>, without requiring the user to manually choose from the dropdown.</p>
+<p>So my question is:</p>
+<p><strong>In ERPNext v15.67.0, is there any default or built-in method to dynamically select and apply a print format automatically when clicking the Print icon in a Sales Invoice, based on document conditions?</strong></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/asieftejani'><span itemprop='name'>asieftejani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-06T07:00:36Z' class='post-time'>
+                    December 6, 2025,  7:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-06T07:00:36Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Try a client script (from ChatGPT): -</p>
+<p>frappe.ui.form.on(“Sales Invoice”, {<br>
+refresh(frm) {<br>
+// Replace the default Print button<br>
+frm.page.buttons.print.toggle(false);</p>
+<pre><code class="lang-auto">    // Add your custom Print button
+    frm.add_custom_button("Print", () =&gt; {
+        let doc = frm.doc;
+
+        // --- YOUR CONDITIONS ---
+        let selected_format = null;
+
+        if (doc.my_condition_field === "A") {
+            selected_format = "Print Format A";
+        } else if (doc.my_condition_field === "B") {
+            selected_format = "Print Format B";
+        } else {
+            selected_format = "Print Format C";   // fallback
+        }
+
+        // --- OPEN PRINT PREVIEW DIRECTLY ---
+        frappe.route_options = {
+            doctype: frm.doctype,
+            name: frm.docname,
+            format: selected_format,
+            no_letterhead: 0
+        };
+
+        frappe.set_route("print", {
+            doctype: frm.doctype,
+            name: frm.docname
+        });
+    });
+}
+</code></pre>
+<p>});</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/peterg'><span itemprop='name'>peterg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-06T07:09:59Z' class='post-time'>
+                    December 6, 2025,  7:09am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-06T07:09:59Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Did you test this before posting? I can’t find any reference to <code>frm.page.buttons.print</code> in the code, and it doesn’t work on my installation.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Sharu'><span itemprop='name'>Sharu</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-09T04:35:20Z' class='post-time'>
+                    December 9, 2025,  4:35am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-09T04:35:20Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>can this functionality be done directly through the default Print icon, without adding any custom buttons?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

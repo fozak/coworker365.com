@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Asset Depreciation Schedule Issue - Asset Management - Frappe Forum</title>
+    <meta name="description" content="Hi All, 
+I have a use case where I’m not able to Understand if the behaviour is a BUG or just different approach. For better understanding the details are here: 
+Method : Double Declining (DDB) 
+I have an Existing Asset &amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/asset-depreciation-schedule-issue/149760" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Asset Depreciation Schedule Issue&#39;" href="https://discuss.frappe.io/t/asset-depreciation-schedule-issue/149760.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/8/086660783ba3f18f65c79b95a9bfbbf43ef702ec.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/8/086660783ba3f18f65c79b95a9bfbbf43ef702ec.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/asset-depreciation-schedule-issue/149760" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/asset-depreciation-schedule-issue/149760" />
+<meta property="og:title" content="Asset Depreciation Schedule Issue" />
+<meta name="twitter:title" content="Asset Depreciation Schedule Issue" />
+<meta property="og:description" content="Hi All,  I have a use case where I’m not able to Understand if the behaviour is a BUG or just different approach. For better understanding the details are here:  Method : Double Declining (DDB)  I have an Existing Asset with Gross 48,00,000/-  Available to User : 01-May-2025  Purchase Date : 01-May-2025  The Asset Category has 48 Depreciation Nos configured.     In Asset,  Opening Accumulated Depreciation and Opening Number of Booked Depreciations are taken as 4,00,000 and 2     Expected output ..." />
+<meta name="twitter:description" content="Hi All,  I have a use case where I’m not able to Understand if the behaviour is a BUG or just different approach. For better understanding the details are here:  Method : Double Declining (DDB)  I have an Existing Asset with Gross 48,00,000/-  Available to User : 01-May-2025  Purchase Date : 01-May-2025  The Asset Category has 48 Depreciation Nos configured.     In Asset,  Opening Accumulated Depreciation and Opening Number of Booked Depreciations are taken as 4,00,000 and 2     Expected output ..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:section" content="Asset Management" />
+<meta property="og:article:section:color" content="0088CC" />
+<meta property="og:article:tag" content="accounting" />
+<meta property="og:article:tag" content="depreciation" />
+<meta property="og:article:tag" content="asset" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="article:published_time" content="2025-07-15T08:00:46+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Asset Depreciation Schedule Issue","mainEntity":{"@type":"Question","name":"Asset Depreciation Schedule Issue","text":"Hi All,\n\nI have a use case where I’m not able to Understand if the behaviour is a BUG or just different approach. For better understanding the details are here:\n\nMethod : Double Declining (DDB)\n\nI have an Existing Asset with Gross 48,00,000/-\n\nAvailable to User : 01-May-2025\n\nPurchase Date : 01-May-&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-07-15T08:00:46.756Z","author":{"@type":"Person","name":"tripathi_rajat","url":"https://discuss.frappe.io/u/tripathi_rajat"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/asset-depreciation-schedule-issue/149760">Asset Depreciation Schedule Issue</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/asset/55" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0088CC'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Asset Management</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/accounting' class='discourse-tag' rel="tag">accounting</a>, 
+            <a href='https://discuss.frappe.io/tag/depreciation' class='discourse-tag' rel="tag">depreciation</a>, 
+            <a href='https://discuss.frappe.io/tag/asset' class='discourse-tag' rel="tag">asset</a>, 
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Asset Depreciation Schedule Issue'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/asset-depreciation-schedule-issue/149760'>
+      <meta itemprop='datePublished' content='2025-07-15T08:00:46Z'>
+        <meta itemprop='articleSection' content='Asset Management'>
+      <meta itemprop='keywords' content='accounting, depreciation, asset, erpnext'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/tripathi_rajat'><span itemprop='name'>tripathi_rajat</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/asset-depreciation-schedule-issue/149760">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/0/8/086660783ba3f18f65c79b95a9bfbbf43ef702ec.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-07-15T08:00:46Z' class='post-time'>
+                    July 15, 2025,  8:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-15T08:00:46Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi All,</p>
+<p>I have a use case where I’m not able to Understand if the behaviour is a BUG or just different approach. For better understanding the details are here:</p>
+<p>Method : Double Declining (DDB)<br>
+I have an <strong>Existing Asset</strong> with Gross <strong>48,00,000/-</strong><br>
+Available to User : 01-May-2025<br>
+Purchase Date : 01-May-2025</p>
+<p>The Asset Category has 48 Depreciation Nos configured.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/8/086660783ba3f18f65c79b95a9bfbbf43ef702ec.png" data-download-href="https://discuss.frappe.io/uploads/default/086660783ba3f18f65c79b95a9bfbbf43ef702ec" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/8/086660783ba3f18f65c79b95a9bfbbf43ef702ec_2_690x311.png" alt="image" data-base62-sha1="1cj9Zlrv1kHKk5vdGcpelZ64jUM" width="690" height="311" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/8/086660783ba3f18f65c79b95a9bfbbf43ef702ec_2_690x311.png, https://discuss.frappe.io/uploads/default/original/3X/0/8/086660783ba3f18f65c79b95a9bfbbf43ef702ec.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/0/8/086660783ba3f18f65c79b95a9bfbbf43ef702ec.png 2x" data-dominant-color="F9F8F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">772×349 22.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>In Asset,<br>
+<strong>Opening Accumulated Depreciation <strong>and</strong> Opening Number of Booked Depreciations</strong> are taken as <strong>4,00,000</strong> and <strong>2</strong><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/6/c/6ca4af9bffd6f2ce7db5b90cb6f06d7faaddafb9.png" data-download-href="https://discuss.frappe.io/uploads/default/6ca4af9bffd6f2ce7db5b90cb6f06d7faaddafb9" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/6/c/6ca4af9bffd6f2ce7db5b90cb6f06d7faaddafb9_2_690x147.png" alt="image" data-base62-sha1="fv6p6mq9euIjmThUw8YqdpnFMzT" width="690" height="147" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/6/c/6ca4af9bffd6f2ce7db5b90cb6f06d7faaddafb9_2_690x147.png, https://discuss.frappe.io/uploads/default/original/3X/6/c/6ca4af9bffd6f2ce7db5b90cb6f06d7faaddafb9.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/6/c/6ca4af9bffd6f2ce7db5b90cb6f06d7faaddafb9.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">827×177 7.88 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Expected output is First 10 months with <strong>2,00,000 Depreciation</strong> but system is actually giving below output and also calculating the Depreciation 12 time on current value instead of 10 time as 2 time Depreciation is already done.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/3/9/392e12344596593c10a3bfbd1d20000910714305.png" data-download-href="https://discuss.frappe.io/uploads/default/392e12344596593c10a3bfbd1d20000910714305" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/3/9/392e12344596593c10a3bfbd1d20000910714305_2_665x500.png" alt="image" data-base62-sha1="89PVcUwBR0XLAHBMXoMUZXrNxit" width="665" height="500" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/3/9/392e12344596593c10a3bfbd1d20000910714305_2_665x500.png, https://discuss.frappe.io/uploads/default/original/3X/3/9/392e12344596593c10a3bfbd1d20000910714305.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/3/9/392e12344596593c10a3bfbd1d20000910714305.png 2x" data-dominant-color="F6F1F4"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">829×623 44.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>When using DDB is this correct calculation ? Or the system is having a BUG.</p>
+<p>Tested with <strong>ERPNext:</strong> v15.69.2 (version-15) and <strong>Frappe Framework:</strong> v15.73.0 (version-15)<br>
+Also<br>
+with old version<br>
+<strong>ERPNext:</strong> v15.29.3 and <strong>Frappe Framework:</strong> v15.34.1</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Maveez'><span itemprop='name'>Maveez</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/a/d/ada8dbbb3a1885f97178048b24d44f06313d40d0.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-15T09:07:34Z' class='post-time'>
+                    July 15, 2025,  9:07am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-15T09:10:29Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>it should calculate depreciation based on current book value… the depreciation amount looks wrong</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/a/d/ada8dbbb3a1885f97178048b24d44f06313d40d0.png" data-download-href="https://discuss.frappe.io/uploads/default/ada8dbbb3a1885f97178048b24d44f06313d40d0" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/a/d/ada8dbbb3a1885f97178048b24d44f06313d40d0_2_690x271.png" alt="image" data-base62-sha1="oMgnxuNPxqgYXhLEt2e2niUd7l6" width="690" height="271" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/a/d/ada8dbbb3a1885f97178048b24d44f06313d40d0_2_690x271.png, https://discuss.frappe.io/uploads/default/optimized/3X/a/d/ada8dbbb3a1885f97178048b24d44f06313d40d0_2_1035x406.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/a/d/ada8dbbb3a1885f97178048b24d44f06313d40d0_2_1380x542.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2034×800 62.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>it should follow following table</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Month</th>
+<th>Start Value</th>
+<th>Depreciation</th>
+<th>End Value</th>
+<th>Method Used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>200,000.00</td>
+<td>40,000.00</td>
+<td>160,000.00</td>
+<td>DDB</td>
+</tr>
+<tr>
+<td>2</td>
+<td>160,000.00</td>
+<td>32,000.00</td>
+<td>128,000.00</td>
+<td>DDB</td>
+</tr>
+<tr>
+<td>3</td>
+<td>128,000.00</td>
+<td>25,600.00</td>
+<td>102,400.00</td>
+<td>DDB</td>
+</tr>
+<tr>
+<td>4</td>
+<td>102,400.00</td>
+<td>20,480.00</td>
+<td>81,920.00</td>
+<td>DDB</td>
+</tr>
+<tr>
+<td>5</td>
+<td>81,920.00</td>
+<td>16,384.00</td>
+<td>65,536.00</td>
+<td>DDB</td>
+</tr>
+<tr>
+<td>6</td>
+<td>65,536.00</td>
+<td>13,107.20</td>
+<td>52,428.80</td>
+<td>DDB</td>
+</tr>
+<tr>
+<td>7</td>
+<td>52,428.80</td>
+<td>10,485.76</td>
+<td>41,943.04</td>
+<td>DDB</td>
+</tr>
+<tr>
+<td>8</td>
+<td>41,943.04</td>
+<td>8,388.61</td>
+<td>33,554.43</td>
+<td>DDB</td>
+</tr>
+<tr>
+<td>9</td>
+<td>33,554.43</td>
+<td>6,710.89</td>
+<td>26,843.55</td>
+<td>DDB</td>
+</tr>
+<tr>
+<td>10</td>
+<td>26,843.55</td>
+<td>26,843.55</td>
+<td><strong>0.00</strong></td>
+<td><strong>Adjusted</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/tripathi_rajat'><span itemprop='name'>tripathi_rajat</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-15T10:22:50Z' class='post-time'>
+                    July 15, 2025, 10:22am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-15T10:22:50Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="Maveez" data-post="2" data-topic="149760">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/maveez/48/55176_2.png" class="avatar"> Maveez:</div>
+<blockquote>
+<p>ation amount looks wron</p>
+</blockquote>
+</aside>
+<p>Thanks <a class="mention" href="/u/maveez">@Maveez</a> for confirming. So then we can consider this as a BUG or is there an other alternative where we can manage .</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Maveez'><span itemprop='name'>Maveez</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/8/7/87d4eacf421ebde16ccbc82235c88798f55272bd.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-15T10:48:29Z' class='post-time'>
+                    July 15, 2025, 10:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-15T10:56:34Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>better use manual method until its fixed. erpnext is using mixed method of depreciation where initially its updating higher depreciation values and later switching to straight line method (if you have monthly depreciation)</p>
+<p>Since ERPNext applies the <strong>double declining rate</strong> on the <strong>opening book value for the year</strong>, then spreads it monthly.</p>
+<p>Switch to a longer depreciation period, For very short lives, DDB behaves almost like straight line. Extending life to 2 years or more makes the declining effect clearer.</p>
+<p>refer to same asset of 200K depreciated across multiple years</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/8/7/87d4eacf421ebde16ccbc82235c88798f55272bd.png" data-download-href="https://discuss.frappe.io/uploads/default/87d4eacf421ebde16ccbc82235c88798f55272bd" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/8/7/87d4eacf421ebde16ccbc82235c88798f55272bd_2_690x333.png" alt="image" data-base62-sha1="jnCD9IKQKTzHUhDdQefpVOGzbiJ" width="690" height="333" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/8/7/87d4eacf421ebde16ccbc82235c88798f55272bd_2_690x333.png, https://discuss.frappe.io/uploads/default/optimized/3X/8/7/87d4eacf421ebde16ccbc82235c88798f55272bd_2_1035x499.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/8/7/87d4eacf421ebde16ccbc82235c88798f55272bd_2_1380x666.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1627×787 43.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Maveez'><span itemprop='name'>Maveez</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-16T06:03:03Z' class='post-time'>
+                    July 16, 2025,  6:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-16T06:03:03Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Did this solve the concern???</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

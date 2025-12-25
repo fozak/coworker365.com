@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Meat Cuts Processing - Stock/Inventory - Frappe Forum</title>
+    <meta name="description" content="Hello Everyone! I am new to ERPNext and the experience has been really great. I am currently learning its different functions and features so bear with me if my question has been already raised before. I have search thro&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/meat-cuts-processing/23974" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Meat Cuts Processing&#39;" href="https://discuss.frappe.io/t/meat-cuts-processing/23974.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/meat-cuts-processing/23974" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/meat-cuts-processing/23974" />
+<meta property="og:title" content="Meat Cuts Processing" />
+<meta name="twitter:title" content="Meat Cuts Processing" />
+<meta property="og:description" content="Hello Everyone! I am new to ERPNext and the experience has been really great. I am currently learning its different functions and features so bear with me if my question has been already raised before. I have search through the forum but my keywords might not be correct. Anyway, I wanted to ask help on how to treat the following scenario in ERPNext.  This company sells meat carcass. From the whole meat (pig, beef, chicken), they have to cut parts and sell them with different prices. Is there a w..." />
+<meta name="twitter:description" content="Hello Everyone! I am new to ERPNext and the experience has been really great. I am currently learning its different functions and features so bear with me if my question has been already raised before. I have search through the forum but my keywords might not be correct. Anyway, I wanted to ask help on how to treat the following scenario in ERPNext.  This company sells meat carcass. From the whole meat (pig, beef, chicken), they have to cut parts and sell them with different prices. Is there a w..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:section" content="Stock/Inventory" />
+<meta property="og:article:section:color" content="AB9364" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="4 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="12 ❤" />
+<meta property="article:published_time" content="2017-05-19T01:46:54+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="/t/meat-cuts-processing/23974?page=2">
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Meat Cuts Processing","mainEntity":{"@type":"Question","name":"Meat Cuts Processing","text":"Hello Everyone! I am new to ERPNext and the experience has been really great. I am currently learning its different functions and features so bear with me if my question has been already raised before. I have search through the forum but my keywords might not be correct. Anyway, I wanted to ask help&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2017-05-19T01:46:54.095Z","author":{"@type":"Person","name":"funtasho","url":"https://discuss.frappe.io/u/funtasho"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/meat-cuts-processing/23974">Meat Cuts Processing</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/stock/9" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #AB9364'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Stock/Inventory</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Meat Cuts Processing'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/meat-cuts-processing/23974'>
+      <meta itemprop='datePublished' content='2017-05-19T01:46:54Z'>
+        <meta itemprop='articleSection' content='Stock/Inventory'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/funtasho'><span itemprop='name'>funtasho</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/meat-cuts-processing/23974">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2017-05-19T01:46:54Z' class='post-time'>
+                    May 19, 2017,  1:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-05-19T01:46:54Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello Everyone! I am new to ERPNext and the experience has been really great. I am currently learning its different functions and features so bear with me if my question has been already raised before. I have search through the forum but my keywords might not be correct. Anyway, I wanted to ask help on how to treat the following scenario in ERPNext.</p>
+<p>This company sells meat carcass. From the whole meat (pig, beef, chicken), they have to cut parts and sell them with different prices. Is there a way in ERPNext to record the “cutting” part with correct recording of inventory from Whole meat to cuts by default? I am running in V8.</p>
+<p>Any help is greatly appreciated. Thanks!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Pawan'><span itemprop='name'>Pawan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-05-19T05:21:28Z' class='post-time'>
+                    May 19, 2017,  5:21am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-05-19T05:21:28Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>You could look to use “Stock Entry” with type of “Material Receipt”</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/funtasho'><span itemprop='name'>funtasho</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-05-19T06:17:57Z' class='post-time'>
+                    May 19, 2017,  6:17am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-05-19T06:17:57Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello <a class="mention" href="/u/pawan">@Pawan</a>! Thanks for your response, really appreciate it! I look through this but has one issue. The company receive the meat in whole and do the cutting themselves. Does that mean I need to out the Whole Meat for a dummy warehouse for cutting and record Materials Receipts for the parts?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jof2jc'><span itemprop='name'>jof2jc</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-05-19T06:45:34Z' class='post-time'>
+                    May 19, 2017,  6:45am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-05-19T06:45:34Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Please do Repack entry instead…create meat as one item and cutted pieces as another item…then do repack</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/funtasho'><span itemprop='name'>funtasho</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-05-19T06:51:04Z' class='post-time'>
+                    May 19, 2017,  6:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-05-19T06:51:04Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello <a class="mention" href="/u/jof2jc">@jof2jc</a>! Thank you for your response, really appreciate it. I have also look into this feature. The problem is one whole meat has lots of parts and repack can only do 1:1 for specific item (though qty can be changed). Anyway, I’ll keep looking for other workarounds. Thanks alot!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Fred1'><span itemprop='name'>Fred1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-05-19T07:04:11Z' class='post-time'>
+                    May 19, 2017,  7:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-05-19T07:04:11Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Simply receive the meat in kg and when you cut to sell measure the kg sold.It is a simple matter of unit of measurement</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/littlehera'><span itemprop='name'>littlehera</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-05-19T07:10:17Z' class='post-time'>
+                    May 19, 2017,  7:10am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-05-19T07:10:17Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think in Repack you can specify 1 source material (eg 1 whole port carcass) and then specify multiple items (for the parts) repacked from that carcass. This is based on v7. Not so sure on v8.</p>
+<p>The hard way would be creating a custom doctype that’s similar to repack. But that would take some time and lots of scripting. <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/funtasho'><span itemprop='name'>funtasho</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-05-19T07:15:12Z' class='post-time'>
+                    May 19, 2017,  7:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-05-19T07:15:12Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello <a class="mention" href="/u/fred1">@Fred1</a>! Thanks for your response, really appreciate it. This is correct but parts are sold in different prices. Also, the company wants to measure sales per parts (which are individual item). One workaround that I can think of is left out the receiving and cutting of the Whole Meat in ERPNext and receive it by parts instead. But if anyone out there have other ideas as well, it would be greatly appreciated. Thanks alot!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/funtasho'><span itemprop='name'>funtasho</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-05-19T07:16:38Z' class='post-time'>
+                    May 19, 2017,  7:16am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-05-19T07:16:38Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello <a class="mention" href="/u/littlehera">@littlehera</a>! Thanks for your response, really appreciate it. Didn’t know that this is possible. I’ll test this out in V8.  Thanks alot!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/cattle-farming-management/32612/2">Cattle Farming Management</a>
+                        <meta itemprop='position' content='1'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/tmatteson'><span itemprop='name'>tmatteson</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-05-19T18:33:37Z' class='post-time'>
+                    May 19, 2017,  6:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-05-19T18:33:37Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/funtasho">@funtasho</a>,<br>
+I’m working on the same thing with some help from <a class="mention" href="/u/revant_one">@revant_one</a> and the MN Technique team. My design (intention) is closest to what <a class="mention" href="/u/littlehera">@littlehera</a> described, but using the BOM as a template. This is a component in the chain of the whole farm-to-retail process I’m hoping to build, in this context, a Livestock app.<br>
+The challenge is reducing the amount of manual input, which is why (I think) I’d like to end up with a wizard format:</p>
+<ul>
+<li>An animal is harvested/processed, with live weight captured.</li>
+<li>{Very few companies I know process their own, this is almost always subcontracted to licensed facility in the US}</li>
+<li>The cuts are returned from the sub, either as halves, quarters, “boxed” or “retail ready”. That’s four different BOMs to select from, each item of which needs a manual input of the weight into the wizard. The larger cuts can be repacked into retail cuts, as you suggest, so the wizard needs to accommodate multiple input formats.<br>
+I think integrating barcode/RFID variables throughout will allow this to scale a little more easily, but that’s not something I’ve put a ton of thought into.<br>
+-Tyler</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/littlehera'><span itemprop='name'>littlehera</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-05-20T00:40:04Z' class='post-time'>
+                    May 20, 2017, 12:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-05-20T00:40:04Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/tmatteson">@tmatteson</a> you have an interesting idea there.</p>
+<p>And just to add, in BOM you can also add link an Operation for “Cutting” as long as the Bom has Operations. <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/tmatteson'><span itemprop='name'>tmatteson</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-06-19T00:43:03Z' class='post-time'>
+                    June 19, 2017, 12:43am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-06-19T00:43:03Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey <a class="mention" href="/u/littlehera">@littlehera</a>  and <a class="mention" href="/u/funtasho">@funtasho</a> - After digging in some more I think this should be a new workflow in the Stock Module, something like “BOM-Wise Stock Receipt” and approach it as a more generic process.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/adam26d'><span itemprop='name'>adam26d</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-11-23T11:37:07Z' class='post-time'>
+                    November 23, 2020, 11:37am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-11-23T11:37:07Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey <a class="mention" href="/u/tmatteson">@tmatteson</a></p>
+<p>Have you made any progress towards creating this app?</p>
+<p>I’m thinking of doing a simple BOM based processing app for this purpose, similar to the repacking method.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/tmatteson'><span itemprop='name'>tmatteson</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-11-24T16:28:42Z' class='post-time'>
+                    November 24, 2020,  4:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-11-24T16:28:42Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/adam26d">@adam26d</a> Not in a concrete way, but I think there are some things that might make sense for the workflow. I haven’t totally organized my thoughts but would like to talk through it with you and then summarize our thoughts in this thread. Are you interested in a chat?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/adam26d'><span itemprop='name'>adam26d</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-11-25T17:37:19Z' class='post-time'>
+                    November 25, 2020,  5:37pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-11-25T17:37:19Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/tmatteson">@tmatteson</a></p>
+<p>I’m very interested in this, I just have my hands full fit the another 14hrs or so, so I went be fully responsive. You may go ahead and start the thread and I’ll come in as much as I can until I’m fully available.</p>
+<p>Thanks, looking forward to it</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/tmatteson'><span itemprop='name'>tmatteson</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-11-30T20:33:19Z' class='post-time'>
+                    November 30, 2020,  8:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-11-30T20:33:19Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><strong>Disclaimers</strong>: For those that in some way ideologically or religiously opposed to eating animals, this post describes business challenges that highlight the difficulties of this industry; personally I believe that the humane treatment of these animals is a moral obligation; the content of this post is about post-mortem processes. For those that are squeamish, this post contains general descriptions of the insides of animals.</p>
+<p>The abattoirs I work with typically take an order from the farmer delivering the animal(s) about any special cuts, with the balance going to ground (mutton, lamb, etc). This can probably be best understood as a percentage of the animals’ live weight. Percentage of “Percent of live animal” <em>can</em> be a valid UOM conversion in ERPNext. Using a quotation to populate a Sales Order with these percentages seems like a good starting place; maybe using a product bundle as a way to template these things. For example, a customer could specify that they want half of the ground meat turned into sausage, for which there’s an extra charge. Moving a sales order to a collection of work orders is a surmountable technical/ mapping problem but there are some industry-specific areas of concern.</p>
+<p>Accounting in this industry is poorly defined for several reasons:</p>
+<ul>
+<li>One does not typically manufacture many items from a single input item, so there aren’t other industries from which to draw convention</li>
+<li>A decision needs to be made if the inventory remains owned by the customer
+<ul>
+<li>The abattoir’s service charge is typically priced based on the deliverable amounts yielded, which are returned to the customer, on a per-weight basis</li>
+<li>Some percentage (35-45%  in the US depending on the species) is considered waste and typically not returned to the customer. This includes things like bones, hooves and skin/hide; this is usually called ‘offal’ (though sometimes this is specific to the major organs), ‘byproduct’ or ‘coproduct’ (when there is meaningful value for some portion of these items, like for sale as pet food in the case of poultry or as liquid fertilizer in the case of pelagic fish)</li>
+</ul>
+</li>
+<li>This model of manufacturing is very clearly in the “process manufacturing” camp and isn’t a great fit for ERPNext’s ‘discrete’ manufacturing model/ perpetual inventory system. Though outbound items are weighed; often a regulatory requirement and the abattoir will often price their services based on these weights. The problem is that the intermediate states of inventory are <em>not</em> typically weighed.<br>
+For example:
+<ul>
+<li>In the case of most ungulates, there is a two week or more time that the carcass is hanging in refrigerated and sometimes humidity controlled space, which increases the quality of the meat due to  dehydration (less water, more flavor). Because of the dehydration, the weight at the time of hanging and the weight at the time processing the carcass begins are quite different (6-15% loss).</li>
+<li>In the case of processing fish, they are typically immediately placed on ice after they are killed and weighed. Because ice melts there is no way to calculate a tare on the batch, which are never weighed again until individual cuts are packaged. In poultry and fish processing much better automated control hardware exists that can weigh or size cuts is available, often with a tradeoff for traceability at the individual animal level. This hardware is not open source and there is no common interface or an exposed interface or sometimes any digital controls at all and is both adjacent and out of scope of this discussion.</li>
+<li>In many processing paths there will be intermediate states that are stored, especially with larger animals. For example, all sausage making could take place on a certain day of the week. Or “we break down the heads on Thursdays”.  In ERPNext’s typical workflow these need to be specific, inventory-able items, <em>especially</em> since there will be a case where the customer retains ownership of the item.</li>
+</ul>
+</li>
+</ul>
+<p>So, back to ERPNext. I don’t see a way where it makes sense to develop a generic tool for this industry: there are relatively few of these businesses worldwide (I would guess fewer than 100,000; there are fewer than 500 in the US that are USDA inspected) and each one likely has unique regulatory requirements, which in any food industry is non-negotiable. Back to what I said three years ago making a BOM that “unpacks”, I think the most reasonable approach for process manufacturing generally is to make stock entries directly. The process manufacturing app takes this approach, as well as other bespoke projects I am aware of.</p>
+<p>For non-animal uses cases, I think making a “Repack” stock entry after receiving items makes the most sense but a “Manufacture” stock entry might also be appropriate. For things that are very firmly in the process manufacturing realm its likely a custom workflow is going to be required anyway.</p>
+<p><a class="mention" href="/u/adam26d">@adam26d</a> Let me know how I can help, I am happy to do so. <a class="mention" href="/u/tropicalrambler">@Tropicalrambler</a> likely also has some input about this.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Tropicalrambler'><span itemprop='name'>Tropicalrambler</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-09T07:22:45Z' class='post-time'>
+                    December 9, 2020,  7:22am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-09T07:22:45Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Quick reply before going to bed:  I am using “repack” with a customer with fish livestock, it provides sufficiency.  Will read post at length with more rest.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/AhamdAli'><span itemprop='name'>AhamdAli</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-25T11:29:33Z' class='post-time'>
+                    November 25, 2025, 11:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-25T11:29:33Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Could you please explain more? How exactly did you handle this issue</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/francis1'><span itemprop='name'>francis1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-27T08:20:14Z' class='post-time'>
+                    November 27, 2025,  8:20am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-27T08:20:14Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Use manufacturing process , its a longer way then when you are finanlising the manufacturing it will ask you the actual output so you put the put that you got . So in the meat industry its called Block testing .</p>
+<p>So setup your BOM it should contain all your , expected out put when you cut the Cacus , after that create a work order and in the work order the qty to manufacture just leave it as one , at this point , the qty has no effect even if you put any figure . now you continue with the process . there is the last stage where it shows you the output the outgoing qty and the incoming qty , thats  when you put total cacus that have been cut , lets say 200kgs then put it on the outgoing then incoming qty you put the weight done for each item for hinder quarter you put 10kgs , bones put 15.8kg , Ribbs 4.55kgs and so on.</p>
+<p>so when you save its going to subtract cacus weight by 200kgs and add weights or qty to all other items accordingly</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_21' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/AhamdAli'><span itemprop='name'>AhamdAli</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-30T04:03:20Z' class='post-time'>
+                    November 30, 2025,  4:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-30T04:03:20Z'>
+              <span itemprop='position'>21</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, how do you define BOM for repack? in the BOM it does not support disassemble item</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="/t/meat-cuts-processing/23974?page=2">next page →</a></b></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

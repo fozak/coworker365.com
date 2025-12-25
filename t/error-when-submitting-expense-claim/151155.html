@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Error when submitting &#39;expense claim&#39; - Frappe HR - Frappe Forum</title>
+    <meta name="description" content="Hi 
+I get a server error when submitting expense claim. It was okay before the update (frappe HR). Here are the logs 
+
+Server Error
+AttributeError: ‘NoneType’ object has no attribute ‘fieldtype’ 
+Possible source of error&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/error-when-submitting-expense-claim/151155" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Error when submitting &#39;expense claim&#39;&#39;" href="https://discuss.frappe.io/t/error-when-submitting-expense-claim/151155.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/error-when-submitting-expense-claim/151155" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/error-when-submitting-expense-claim/151155" />
+<meta property="og:title" content="Error when submitting &#39;expense claim&#39;" />
+<meta name="twitter:title" content="Error when submitting &#39;expense claim&#39;" />
+<meta property="og:description" content="Hi  I get a server error when submitting expense claim. It was okay before the update (frappe HR). Here are the logs   Server Error AttributeError: ‘NoneType’ object has no attribute ‘fieldtype’  Possible source of error: hrms (app)    App Versions { 	&quot;erpnext&quot;: &quot;15.72.3&quot;, 	&quot;frappe&quot;: &quot;15.75.0&quot;, 	&quot;hrms&quot;: &quot;16.0.0-dev&quot; }  Route Form/Expense Claim/HR-EXP-2025-00031  Traceback Traceback (most recent call last):   File &quot;apps/frappe/frappe/app.py&quot;, line 115, in application     response = frappe.api.han..." />
+<meta name="twitter:description" content="Hi  I get a server error when submitting expense claim. It was okay before the update (frappe HR). Here are the logs   Server Error AttributeError: ‘NoneType’ object has no attribute ‘fieldtype’  Possible source of error: hrms (app)    App Versions { 	&quot;erpnext&quot;: &quot;15.72.3&quot;, 	&quot;frappe&quot;: &quot;15.75.0&quot;, 	&quot;hrms&quot;: &quot;16.0.0-dev&quot; }  Route Form/Expense Claim/HR-EXP-2025-00031  Traceback Traceback (most recent call last):   File &quot;apps/frappe/frappe/app.py&quot;, line 115, in application     response = frappe.api.han..." />
+<meta property="og:article:section" content="Frappe HR" />
+<meta property="og:article:section:color" content="ffd478" />
+<meta property="og:article:tag" content="hr" />
+<meta property="og:article:tag" content="expense" />
+<meta property="og:article:tag" content="expense-claim" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="3 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="3 ❤" />
+<meta property="article:published_time" content="2025-08-05T09:52:27+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Error when submitting 'expense claim'","mainEntity":{"@type":"Question","name":"Error when submitting 'expense claim'","text":"Hi\n\nI get a server error when submitting expense claim. It was okay before the update (frappe HR). Here are the logs\n\nServer Error\n\nAttributeError: ‘NoneType’ object has no attribute ‘fieldtype’\n\nPossible source of error: hrms (app)\n\nApp Versions\n\n{\n\n&quot;erpnext&quot;: &quot;15.72.3&quot;,\n\n&quot;frappe&quot;: &quot;15.75.0&quot;,\n\n&quot;hr&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-08-05T09:52:27.445Z","author":{"@type":"Person","name":"edstevens82","url":"https://discuss.frappe.io/u/edstevens82"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/error-when-submitting-expense-claim/151155">Error when submitting &#39;expense claim&#39;</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/hr/22" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #ffd478'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe HR</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/hr' class='discourse-tag' rel="tag">hr</a>, 
+            <a href='https://discuss.frappe.io/tag/expense' class='discourse-tag' rel="tag">expense</a>, 
+            <a href='https://discuss.frappe.io/tag/expense-claim' class='discourse-tag' rel="tag">expense-claim</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Error when submitting &#39;expense claim&#39;'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/error-when-submitting-expense-claim/151155'>
+      <meta itemprop='datePublished' content='2025-08-05T09:52:27Z'>
+        <meta itemprop='articleSection' content='Frappe HR'>
+      <meta itemprop='keywords' content='hr, expense, expense-claim'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/edstevens82'><span itemprop='name'>edstevens82</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/error-when-submitting-expense-claim/151155">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-08-05T09:52:27Z' class='post-time'>
+                    August 5, 2025,  9:52am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-05T09:52:27Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi</p>
+<p>I get a server error when submitting expense claim. It was okay before the update (frappe HR). Here are the logs</p>
+<blockquote>
+<h4>Server Error</h4>
+<p>AttributeError: ‘NoneType’ object has no attribute ‘fieldtype’<br>
+Possible source of error: <strong>hrms (app)</strong></p>
+</blockquote>
+<blockquote>
+<h3>App Versions</h3>
+<pre><code class="lang-auto">{
+	"erpnext": "15.72.3",
+	"frappe": "15.75.0",
+	"hrms": "16.0.0-dev"
+}
+</code></pre>
+<h3>Route</h3>
+<pre><code class="lang-auto">Form/Expense Claim/HR-EXP-2025-00031
+</code></pre>
+<h3>Traceback</h3>
+<pre><code class="lang-auto">Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 115, in application
+    response = frappe.api.handle(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/api/__init__.py", line 49, in handle
+    data = endpoint(**arguments)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/api/v1.py", line 36, in handle_rpc_call
+    return frappe.handler.handle()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/handler.py", line 51, in handle
+    data = execute_cmd(cmd)
+           ^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/handler.py", line 84, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1754, in call
+    return fn(*args, **newargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/typing_validations.py", line 32, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/desk/form/save.py", line 37, in savedocs
+    doc.submit()
+  File "apps/frappe/frappe/utils/typing_validations.py", line 32, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1093, in submit
+    return self._submit()
+           ^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1076, in _submit
+    return self.save()
+           ^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 378, in save
+    return self._save(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 431, in _save
+    self.run_post_save_methods()
+  File "apps/frappe/frappe/model/document.py", line 1176, in run_post_save_methods
+    self.run_method("on_submit")
+  File "apps/frappe/frappe/model/document.py", line 1007, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1367, in composer
+    return composed(self, method, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1349, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1004, in fn
+    return method_object(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/hrms/hrms/hr/doctype/expense_claim/expense_claim.py", line 143, in on_submit
+    update_reimbursed_amount(self)
+  File "apps/hrms/hrms/hr/doctype/expense_claim/expense_claim.py", line 408, in update_reimbursed_amount
+    total_amount_reimbursed = get_total_reimbursed_amount(doc)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/hrms/hrms/hr/doctype/expense_claim/expense_claim.py", line 430, in get_total_reimbursed_amount
+    amount_via_payment_entry = frappe.db.get_value(
+                               ^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/database.py", line 514, in get_value
+    result = self.get_values(
+             ^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/database.py", line 618, in get_values
+    out = self._get_values_from_table(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/database.py", line 876, in _get_values_from_table
+    query = frappe.qb.get_query(
+            ^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/query_builder/utils.py", line 61, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 74, in get_query
+    self.apply_fields(fields)
+  File "apps/frappe/frappe/database/query.py", line 102, in apply_fields
+    self.fields = self.parse_fields(fields)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 323, in parse_fields
+    _fields.append(ChildQuery(child_field, fields, self.doctype))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 488, in __init__
+    if field.fieldtype not in frappe.model.table_fields:
+       ^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'fieldtype'
+
+</code></pre>
+<h3>Request Data</h3>
+<pre><code class="lang-auto">{
+	"type": "POST",
+	"args": {
+		"doc": "{\"name\":\"HR-EXP-2025-00031\",\"owner\":\"Administrator\",\"creation\":\"2025-07-16 00:09:37.731869\",\"modified\":\"2025-08-04 18:08:09.544815\",\"modified_by\":\"Administrator\",\"docstatus\":0,\"idx\":0,\"naming_series\":\"HR-EXP-.YYYY.-\",\"employee\":\"HR-EMP-00002\",\"employee_name\":\"Ed\",\"department\":\"Management\",\"company\":\"Ed Holdings\",\"expense_approver\":\"Administrator\",\"approval_status\":\"Approved\",\"total_sanctioned_amount\":63,\"total_taxes_and_charges\":0,\"total_advance_amount\":0,\"grand_total\":63,\"total_claimed_amount\":63,\"total_amount_reimbursed\":0,\"posting_date\":\"2025-06-24\",\"is_paid\":0,\"payable_account\":\"Creditors - OOH\",\"remark\":\"None\",\"cost_center\":\"Main - OOH\",\"status\":\"Draft\",\"doctype\":\"Expense Claim\",\"expenses\":[{\"name\":\"u8nii9c0\",\"owner\":\"Administrator\",\"creation\":\"2025-07-16 00:09:37.731869\",\"modified\":\"2025-08-04 18:08:09.544815\",\"modified_by\":\"Administrator\",\"docstatus\":0,\"idx\":1,\"expense_date\":\"2025-06-23\",\"expense_type\":\"Medical/Clinic\",\"default_account\":\"Administrative Expenses - OOHSB\",\"description\":\"&lt;div class=\\\"ql-editor read-mode\\\"&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;\",\"amount\":63,\"sanctioned_amount\":63,\"cost_center\":\"Main - OOH\",\"parent\":\"HR-EXP-2025-00031\",\"parentfield\":\"expenses\",\"parenttype\":\"Expense Claim\",\"doctype\":\"Expense Claim Detail\"}],\"advances\":[],\"taxes\":[],\"__onload\":{\"make_payment_via_journal_entry\":0,\"self_expense_approval_not_allowed\":0},\"__last_sync_on\":\"2025-08-05T09:45:41.993Z\"}",
+		"action": "Submit"
+	},
+	"btn": {
+		"jQuery370048413931374136531": {
+			"events": {
+				"click": [
+					{
+						"type": "click",
+						"origType": "click",
+						"guid": 657,
+						"namespace": ""
+					}
+				]
+			}
+		}
+	},
+	"freeze": true,
+	"headers": {},
+	"error_handlers": {},
+	"url": "/api/method/frappe.desk.form.save.savedocs",
+	"request_id": null
+}
+</code></pre>
+<h3>Response Data</h3>
+<pre><code class="lang-auto">{
+	"exception": "AttributeError: 'NoneType' object has no attribute 'fieldtype'",
+	"exc_type": "AttributeError",
+	"_exc_source": "hrms (app)"
+}
+</code></pre>
+</blockquote>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/edstevens82'><span itemprop='name'>edstevens82</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-03T03:46:19Z' class='post-time'>
+                    September 3, 2025,  3:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-03T03:46:19Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>no update on this?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/aymanfagir'><span itemprop='name'>aymanfagir</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-13T07:56:30Z' class='post-time'>
+                    October 13, 2025,  7:56am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-13T07:56:30Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We are facing the same issue, i wonder how did you solved it .</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Mubasher'><span itemprop='name'>Mubasher</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-13T08:00:24Z' class='post-time'>
+                    October 13, 2025,  8:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-13T08:00:24Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>can you show the exact error</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/edstevens82'><span itemprop='name'>edstevens82</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-13T12:33:22Z' class='post-time'>
+                    October 13, 2025, 12:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-13T12:33:22Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>cannot solve it, still hanging.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/edstevens82'><span itemprop='name'>edstevens82</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-13T12:34:00Z' class='post-time'>
+                    October 13, 2025, 12:34pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-13T12:34:00Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>the exact error is on my first post</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/aymanfagir'><span itemprop='name'>aymanfagir</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-16T07:23:47Z' class='post-time'>
+                    October 16, 2025,  7:23am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-16T07:23:47Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h3><a name="p-484132-app-versions-1" class="anchor" href="#p-484132-app-versions-1"></a>App Versions</h3>
+<pre><code class="lang-auto">{
+	"diagnostic_app": "0.0.1",
+	"dobiz_app": "0.0.1",
+	"erpnext": "15.76.0",
+	"frappe": "15.78.1",
+	"hrms": "16.0.0-dev",
+	"ksa": "0.0.1",
+	"ksa_compliance": "0.55.3",
+	"print_designer": "1.0.0-dev"
+}
+</code></pre>
+<h3><a name="p-484132-route-2" class="anchor" href="#p-484132-route-2"></a>Route</h3>
+<pre><code class="lang-auto">Form/Expense Claim/HR-EXP-2025-00001
+</code></pre>
+<h3><a name="p-484132-traceback-3" class="anchor" href="#p-484132-traceback-3"></a>Traceback</h3>
+<pre><code class="lang-auto">Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 115, in application
+    response = frappe.api.handle(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/api/__init__.py", line 49, in handle
+    data = endpoint(**arguments)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/api/v1.py", line 36, in handle_rpc_call
+    return frappe.handler.handle()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/handler.py", line 52, in handle
+    data = execute_cmd(cmd)
+           ^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/handler.py", line 85, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1754, in call
+    return fn(*args, **newargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/typing_validations.py", line 32, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/desk/form/save.py", line 37, in savedocs
+    doc.submit()
+  File "apps/frappe/frappe/utils/typing_validations.py", line 32, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1093, in submit
+    return self._submit()
+           ^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1076, in _submit
+    return self.save()
+           ^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 378, in save
+    return self._save(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 431, in _save
+    self.run_post_save_methods()
+  File "apps/frappe/frappe/model/document.py", line 1176, in run_post_save_methods
+    self.run_method("on_submit")
+  File "apps/frappe/frappe/model/document.py", line 1007, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1367, in composer
+    return composed(self, method, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1349, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1004, in fn
+    return method_object(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/hrms/hrms/hr/doctype/expense_claim/expense_claim.py", line 143, in on_submit
+    update_reimbursed_amount(self)
+  File "apps/hrms/hrms/hr/doctype/expense_claim/expense_claim.py", line 408, in update_reimbursed_amount
+    total_amount_reimbursed = get_total_reimbursed_amount(doc)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/hrms/hrms/hr/doctype/expense_claim/expense_claim.py", line 430, in get_total_reimbursed_amount
+    amount_via_payment_entry = frappe.db.get_value(
+                               ^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/database.py", line 514, in get_value
+    result = self.get_values(
+             ^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/database.py", line 618, in get_values
+    out = self._get_values_from_table(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/database.py", line 876, in _get_values_from_table
+    query = frappe.qb.get_query(
+            ^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/query_builder/utils.py", line 61, in get_query
+    return Engine().get_query(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 74, in get_query
+    self.apply_fields(fields)
+  File "apps/frappe/frappe/database/query.py", line 102, in apply_fields
+    self.fields = self.parse_fields(fields)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 323, in parse_fields
+    _fields.append(ChildQuery(child_field, fields, self.doctype))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/query.py", line 488, in __init__
+    if field.fieldtype not in frappe.model.table_fields:
+       ^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'fieldtype'
+
+</code></pre>
+<h3><a name="p-484132-request-data-4" class="anchor" href="#p-484132-request-data-4"></a>Request Data</h3>
+<pre><code class="lang-auto">{
+	"type": "POST",
+	"args": {
+		"doc": "{\"name\":\"HR-EXP-2025-00001\",\"owner\":\"Administrator\",\"creation\":\"2025-10-13 10:43:47.778535\",\"modified\":\"2025-10-15 12:01:13.331261\",\"modified_by\":\"a.fagir@grcarabia.consulting\",\"docstatus\":0,\"idx\":0,\"naming_series\":\"HR-EXP-.YYYY.-\",\"employee\":\"HR-EMP-00002\",\"employee_name\":\"Ayman Fagir\",\"department\":\"الإدارة\",\"company\":\"GRC Consulting\",\"expense_approver\":\"a.fagir@grcarabia.consulting\",\"approval_status\":\"Approved\",\"total_sanctioned_amount\":125,\"total_taxes_and_charges\":18.75,\"total_advance_amount\":0,\"grand_total\":143.75,\"total_claimed_amount\":125,\"total_amount_reimbursed\":0,\"posting_date\":\"2025-10-13\",\"is_paid\":0,\"payable_account\":\"2110 - الدائنين - GRC\",\"remark\":\"a\",\"project\":\"PROJ-0001\",\"cost_center\":\"رئيسي - GRC\",\"status\":\"Draft\",\"doctype\":\"Expense Claim\",\"advances\":[],\"taxes\":[{\"name\":\"n3tb6a69fc\",\"owner\":\"a.fagir@grcarabia.consulting\",\"creation\":\"2025-10-13 10:43:47.778535\",\"modified\":\"2025-10-15 12:01:13.331261\",\"modified_by\":\"a.fagir@grcarabia.consulting\",\"docstatus\":0,\"idx\":1,\"account_head\":\"ضريبة القيمة المضافة - GRC\",\"rate\":15,\"tax_amount\":18.75,\"total\":143.75,\"description\":\"ضريبة القيمة المضافة\",\"cost_center\":\"رئيسي - GRC\",\"parent\":\"HR-EXP-2025-00001\",\"parentfield\":\"taxes\",\"parenttype\":\"Expense Claim\",\"doctype\":\"Expense Taxes and Charges\"}],\"expenses\":[{\"name\":\"i85m1vrjlq\",\"owner\":\"Administrator\",\"creation\":\"2025-10-13 10:43:47.778535\",\"modified\":\"2025-10-15 12:01:13.331261\",\"modified_by\":\"a.fagir@grcarabia.consulting\",\"docstatus\":0,\"idx\":1,\"expense_date\":\"2025-10-13\",\"expense_type\":\"تسويق رقمي\",\"default_account\":\"5207 - مصروفات التسويق الرقمي - GRC\",\"description\":\"&lt;div class=\\\"ql-editor read-mode\\\"&gt;&lt;p&gt;digital marketing&lt;/p&gt;&lt;/div&gt;\",\"amount\":125,\"sanctioned_amount\":125,\"cost_center\":\"رئيسي - GRC\",\"parent\":\"HR-EXP-2025-00001\",\"parentfield\":\"expenses\",\"parenttype\":\"Expense Claim\",\"doctype\":\"Expense Claim Detail\"}],\"__onload\":{\"make_payment_via_journal_entry\":0,\"self_expense_approval_not_allowed\":0},\"__last_sync_on\":\"2025-10-16T07:14:35.383Z\"}",
+		"action": "Submit"
+	},
+	"btn": {
+		"jQuery370086928261783395141": {
+			"events": {
+				"click": [
+					{
+						"type": "click",
+						"origType": "click",
+						"guid": 967,
+						"namespace": ""
+					}
+				]
+			}
+		}
+	},
+	"freeze": true,
+	"headers": {},
+	"error_handlers": {},
+	"url": "/api/method/frappe.desk.form.save.savedocs",
+	"request_id": null
+}
+</code></pre>
+<h3><a name="p-484132-response-data-5" class="anchor" href="#p-484132-response-data-5"></a>Response Data</h3>
+<pre><code class="lang-auto">{
+	"exception": "AttributeError: 'NoneType' object has no attribute 'fieldtype'",
+	"exc_type": "AttributeError",
+	"_exc_source": "hrms (app)"
+}
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/aymanfagir'><span itemprop='name'>aymanfagir</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-21T12:16:55Z' class='post-time'>
+                    October 21, 2025, 12:16pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-21T12:16:55Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Im still facing the problem, thus i have reported the issue on github  <a href="https://github.com/frappe/erpnext/issues/50183" class="inline-onebox" rel="noopener nofollow ugc">Error when submitting ‘expense claim’ Server Error AttributeError: ‘NoneType’ object has no attribute ‘fieldtype’ Possible source of error: hrms (app) · Issue #50183 · frappe/erpnext · GitHub</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

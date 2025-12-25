@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:discourse="http://www.discourse.org/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Frappe CRM - Frappe Forum</title>
+    <link>https://discuss.frappe.io/c/business-apps/frappe-crm/82</link>
+    <description>Topics in the &#39;Frappe CRM&#39; category </description>
+    
+      <lastBuildDate>Wed, 24 Dec 2025 06:40:47 +0000</lastBuildDate>
+      <atom:link href="https://discuss.frappe.io/c/business-apps/frappe-crm/82.rss" rel="self" type="application/rss+xml" />
+        <item>
+          <title>Integrating FCRM and Lending and getting a unique error bug</title>
+          <dc:creator><![CDATA[Heshan_Karunaratne]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>Hi there,</p>
+<p>I’m currently working on an integration involving ERPNext, Frappe CRM, and Lending. In older versions of Frappe, we were able to switch between apps directly from the sidebar. However, in the newer versions, this behavior seems to have changed — instead of app switching, the desk now shows icons based on modules (as I understand it).</p>
+<p>Since the CRM portal uses a separate Vue-based frontend, it still displays the older-style app switcher and allows switching between apps (as shown in <em>Image 1</em>).</p>
+<p>The issue arises when I select the Lending app from this list — I get redirected to the Lending app, but it immediately throws an error (as shown in <em>Image 2</em>).</p>
+<p>I’d appreciate some insight into whether this is:<br>
+<em><strong>an expected behavior due to changes in how app/module navigation works in newer Frappe versions,<br>
+a configuration issue on my side, or<br>
+a known bug on the Frappe/Lending side.</strong></em></p>
+<p>Any guidance on how to properly handle app switching in this setup, or how to resolve this error, would be greatly appreciated.</p>
+<p>Error Message:</p>
+<h3><a name="p-489460-app-versions-1" class="anchor" href="https://discuss.frappe.io#p-489460-app-versions-1"></a>App Versions</h3>
+<pre><code class="lang-auto">{
+	"frappe": "16.0.0-dev",
+	"crm": "2.0.0-dev",
+	"erpnext": "16.0.0-dev",
+	"lending": "0.0.1",
+	"dreamlink": "0.0.1"
+}
+</code></pre>
+<h3><a name="p-489460-route-2" class="anchor" href="https://discuss.frappe.io#p-489460-route-2"></a>Route</h3>
+<pre><code class="lang-auto">Workspaces/Lending
+</code></pre>
+<h3><a name="p-489460-traceback-3" class="anchor" href="https://discuss.frappe.io#p-489460-traceback-3"></a>Traceback</h3>
+<pre><code class="lang-auto">Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "apps/frappe/frappe/__init__.py", line 1126, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/utils/dashboard.py", line 26, in wrapper
+    results = generate_and_cache_results(kwargs, function, cache_key, chart)
+  File "apps/frappe/frappe/utils/dashboard.py", line 41, in generate_and_cache_results
+    results = function(
+  File "apps/frappe/frappe/desk/doctype/dashboard_chart/dashboard_chart.py", line 136, in get
+    chart_config = get_chart_config(chart, filters, timespan, timegrain, from_date, to_date)
+  File "apps/frappe/frappe/desk/doctype/dashboard_chart/dashboard_chart.py", line 202, in get_chart_config
+    data = frappe.get_list(
+  File "apps/frappe/frappe/__init__.py", line 1359, in get_list
+    return frappe.model.qb_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "apps/frappe/frappe/model/qb_query.py", line 203, in execute
+    query = frappe.qb.get_query(**kwargs)
+  File "apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+  File "apps/frappe/frappe/database/query.py", line 294, in get_query
+    self.apply_filters(filters)
+  File "apps/frappe/frappe/database/query.py", line 442, in apply_filters
+    self.apply_list_filters(
+  File "apps/frappe/frappe/database/query.py", line 496, in apply_list_filters
+    raise ValueError(f"Unknown filter format: {filter}")
+ValueError: Unknown filter format: ['Loan', 'docstatus', '=', '1', False]
+</code></pre>
+<h3><a name="p-489460-request-data-4" class="anchor" href="https://discuss.frappe.io#p-489460-request-data-4"></a>Request Data</h3>
+<pre><code class="lang-auto">{
+	"type": "POST",
+	"args": {
+		"chart_name": "New Loans",
+		"refresh": 1,
+		"time_interval": null,
+		"timespan": null,
+		"from_date": null,
+		"to_date": null,
+		"heatmap_year": null
+	},
+	"headers": {},
+	"error_handlers": {},
+	"url": "/api/method/frappe.desk.doctype.dashboard_chart.dashboard_chart.get",
+	"request_id": null
+}
+</code></pre>
+<h3><a name="p-489460-response-data-5" class="anchor" href="https://discuss.frappe.io#p-489460-response-data-5"></a>Response Data</h3>
+<pre><code class="lang-auto">{
+	"exception": "ValueError: Unknown filter format: ['Loan', 'docstatus', '=', '1', False]",
+	"exc_type": "ValueError"
+}
+</code></pre>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88.png" data-download-href="https://discuss.frappe.io/uploads/default/e755448edd84ac3af562aa65822c9db778495d88" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_690x388.png" alt="image" data-base62-sha1="x0sYPmo4aKmwAUaSdd89W2pMpGE" width="690" height="388" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_690x388.png, https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_1035x582.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_1380x776.png 2x" data-dominant-color="121212"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d.png" data-download-href="https://discuss.frappe.io/uploads/default/2d39c77dde336fa6de681d082dd83916e268da3d" title="image (1)"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_690x388.png" alt="image (1)" data-base62-sha1="6s5hdnhDBQOg3ReGESdEq32AcNf" width="690" height="388" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_690x388.png, https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_1035x582.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_1380x776.png 2x" data-dominant-color="222222"></a></div><p></p>
+<p>Thank you</p>
+<p>Heshan K</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282</link>
+          <pubDate>Wed, 24 Dec 2025 06:40:47 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158282</guid>
+          <source url="https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282.rss">Integrating FCRM and Lending and getting a unique error bug</source>
+        </item>
+        <item>
+          <title>How to customize CRM UI and add sidebar options without modifying core CRM app</title>
+          <dc:creator><![CDATA[bharatbisen]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>I want to customize the CRM app UI, but I do not want to touch or modify the core CRM app, as I want an upgrade-safe solution.</p>
+<p><strong>My Requirements</strong></p>
+<p>Make UI changes in the CRM app from a custom app only</p>
+<p>Add a custom option in the CRM sidebar</p>
+<p>From this custom sidebar option, perform CRUD operations  on my custom DocTypes like:<br>
+Leads<br>
+Customers<br>
+Opportunities<br>
+etc.</p>
+<p>Core CRM app should remain completely untouched</p>
+<p>What I am planning / considering</p>
+<p>Create a separate custom app</p>
+<p>Use:</p>
+<p>Custom Pages / Workspace/Doctypes</p>
+<p><strong>What is the recommended way to add a custom sidebar option in the CRM app without modifying core code?</strong></p>
+<p>If anyone has implemented custom CRM UI extensions (sidebar, custom screens, workflows), please share examples or references.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/how-to-customize-crm-ui-and-add-sidebar-options-without-modifying-core-crm-app/158136">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/how-to-customize-crm-ui-and-add-sidebar-options-without-modifying-core-crm-app/158136</link>
+          <pubDate>Fri, 19 Dec 2025 07:27:01 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158136</guid>
+          <source url="https://discuss.frappe.io/t/how-to-customize-crm-ui-and-add-sidebar-options-without-modifying-core-crm-app/158136.rss">How to customize CRM UI and add sidebar options without modifying core CRM app</source>
+        </item>
+        <item>
+          <title>Frappe CRM , Appointments Scheduling and Viewing</title>
+          <dc:creator><![CDATA[Yash_Gandhi]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>Hi,</p>
+<p>The Frappe CRM has the journey from Lead to Deal to Quotation.</p>
+<p>Is there a way to Schedule Appointments, View All Scheduled Appointments within Frappe CRM?</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/frappe-crm-appointments-scheduling-and-viewing/157956">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/frappe-crm-appointments-scheduling-and-viewing/157956</link>
+          <pubDate>Fri, 12 Dec 2025 11:45:42 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-157956</guid>
+          <source url="https://discuss.frappe.io/t/frappe-crm-appointments-scheduling-and-viewing/157956.rss">Frappe CRM , Appointments Scheduling and Viewing</source>
+        </item>
+        <item>
+          <title>Frappe CRM customize Doctypes</title>
+          <dc:creator><![CDATA[Heshan_Karunaratne]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>Hi All,</p>
+<p><em>I’m using frappe CRM over ERPNext CRM and I have below requirements. Tell me whether these are possible with minor changes and with forward compatibility.</em></p>
+<p>1. <strong>I should be able to rename a doctype in frappe CRM.</strong></p>
+<p>eg: Lead to SavingGroup</p>
+<p>2. <strong>I should be able to remove some of the fields/columns in Lead doctype</strong></p>
+<p>3. <strong>I should be able to add new fields/columns in Lead doctype</strong></p>
+<p>4. <strong>These changes must reflect in CRM vue.js UI</strong></p>
+<p><em>What is the correct way to overcome these requirements and if any of it not possible justify that answer?</em></p>
+<p>Thank you<br>
+Heshan Karunaratne</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/frappe-crm-customize-doctypes/157806">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/frappe-crm-customize-doctypes/157806</link>
+          <pubDate>Tue, 09 Dec 2025 05:40:49 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-157806</guid>
+          <source url="https://discuss.frappe.io/t/frappe-crm-customize-doctypes/157806.rss">Frappe CRM customize Doctypes</source>
+        </item>
+        <item>
+          <title>How to change currency on Frappe CRM</title>
+          <dc:creator><![CDATA[Tri_Agung1]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/b/1b360f3ca0744dfc9e1950f939992d68a4b0a2ab.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/1b360f3ca0744dfc9e1950f939992d68a4b0a2ab" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/1/b/1b360f3ca0744dfc9e1950f939992d68a4b0a2ab_2_690x364.jpeg" alt="image" data-base62-sha1="3SIIfpC2qIri7mWzXWHLaBpE57R" width="690" height="364" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/1/b/1b360f3ca0744dfc9e1950f939992d68a4b0a2ab_2_690x364.jpeg, https://discuss.frappe.io/uploads/default/optimized/3X/1/b/1b360f3ca0744dfc9e1950f939992d68a4b0a2ab_2_1035x546.jpeg 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/1/b/1b360f3ca0744dfc9e1950f939992d68a4b0a2ab_2_1380x728.jpeg 2x" data-dominant-color="E8E8E8"></a></div><p></p>
+<p>Anyone can help me for this?</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/how-to-change-currency-on-frappe-crm/157160">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/how-to-change-currency-on-frappe-crm/157160</link>
+          <pubDate>Sat, 22 Nov 2025 05:21:54 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-157160</guid>
+          <source url="https://discuss.frappe.io/t/how-to-change-currency-on-frappe-crm/157160.rss">How to change currency on Frappe CRM</source>
+        </item>
+        <item>
+          <title>FCRM UI - Existing Contacts</title>
+          <dc:creator><![CDATA[sanskarcitrusleaf]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>On FCRM UI, one can use existing contact to create Deals, but is it possible to use existing contacts for creating Leads.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/fcrm-ui-existing-contacts/156755">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/fcrm-ui-existing-contacts/156755</link>
+          <pubDate>Wed, 12 Nov 2025 13:15:58 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156755</guid>
+          <source url="https://discuss.frappe.io/t/fcrm-ui-existing-contacts/156755.rss">FCRM UI - Existing Contacts</source>
+        </item>
+        <item>
+          <title>Is there Table Multiselect support for CRM?</title>
+          <dc:creator><![CDATA[bruce78]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>I am running a trial on frappe.cloud and I can’t find any documentation or a tutorial on how to add a new, custom “Table MultiSelect” field to Frappe CRM.</p>
+<p>There’s a link here for ERPNext</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://docs.frappe.io/erpnext/user/manual/en/table-multiselect-field">
+  <header class="source">
+      <img src="https://docs.frappe.io/assets/frappe/images/frappe-favicon.svg" class="site-icon" alt="" width="400" height="400">
+
+      <a href="https://docs.frappe.io/erpnext/user/manual/en/table-multiselect-field" target="_blank" rel="noopener nofollow ugc">docs.frappe.io</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://docs.frappe.io/erpnext/user/manual/en/table-multiselect-field" target="_blank" rel="noopener nofollow ugc">Table MultiSelect Field</a></h3>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>But I can’t find anything in the CRM docs other than this fairly generic link that doesn’t mention Table MultiSelect at all</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://docs.frappe.io/crm/custom-fields">
+  <header class="source">
+      <img src="https://docs.frappe.io/assets/frappe/images/frappe-favicon.svg" class="site-icon" alt="" width="400" height="400">
+
+      <a href="https://docs.frappe.io/crm/custom-fields" target="_blank" rel="noopener nofollow ugc">docs.frappe.io</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://docs.frappe.io/crm/custom-fields" target="_blank" rel="noopener nofollow ugc">Custom Fields</a></h3>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Finally, this update from Feb 2025 talks about adding Table Multiselect but I can’t seem to get it work…</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://frappe.io/blog/product-updates/product-updates-for-february-2025#crm">
+  <header class="source">
+      <img src="https://frappe.io/files/frappeio82a788.ico" class="site-icon" alt="" width="256" height="256">
+
+      <a href="https://frappe.io/blog/product-updates/product-updates-for-february-2025#crm" target="_blank" rel="noopener nofollow ugc">frappe.io</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/336;"><img src="https://frappe.io/files/Frame%20(2).png" class="thumbnail" alt="" width="690" height="336"></div>
+
+<h3><a href="https://frappe.io/blog/product-updates/product-updates-for-february-2025#crm" target="_blank" rel="noopener nofollow ugc">Product Updates for February 2025 | Frappe Blog</a></h3>
+
+  <p>Short month, big events.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Does anyone have any ideas or is there a page in the documentation I can follow?</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/is-there-table-multiselect-support-for-crm/156522">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/is-there-table-multiselect-support-for-crm/156522</link>
+          <pubDate>Thu, 06 Nov 2025 19:04:13 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156522</guid>
+          <source url="https://discuss.frappe.io/t/is-there-table-multiselect-support-for-crm/156522.rss">Is there Table Multiselect support for CRM?</source>
+        </item>
+        <item>
+          <title>Not receiving Twilio response callback when making outbound call from FrappeCRM</title>
+          <dc:creator><![CDATA[yeshakrishnav]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>Hi Team,</p>
+<p>I’ve set up Twilio integration with FrappeCRM to make outbound calls directly from the Leads page. The call initiation works fine — the call connects successfully — but the Frappe side does not receive any callback or TwiML response from Twilio after the call is connected.</p>
+<p>In the error logs, a <code>TypeError ('NoneType' object is not iterable)</code> is recorded, which suggests that Frappe might be receiving an empty or improperly formatted payload from Twilio’s callback URL. Additionally, Twilio’s console shows an error related to response size being greater than 64KB, which could indicate that the TwiML or response body being returned from Frappe exceeds the allowed limit.</p>
+<h4><a name="p-483848-what-ive-verified-1" class="anchor" href="https://discuss.frappe.io#p-483848-what-ive-verified-1"></a><strong>What I’ve Verified</strong></h4>
+<ul>
+<li>Outbound call requests are being triggered correctly from Frappe.</li>
+<li>The callback URL is accessible publicly.</li>
+<li>Twilio credentials and endpoint configurations are valid.</li>
+<li>No permission or network-level issue observed.</li>
+</ul>
+<p>Frappe should receive a valid callback or TwiML response from Twilio once the call connects, and process the response without error.</p>
+<h4><a name="p-483848-actual-behavior-2" class="anchor" href="https://discuss.frappe.io#p-483848-actual-behavior-2"></a><strong>Actual Behavior</strong></h4>
+<ul>
+<li>The call connects successfully, but no valid response is returned to Frappe.</li>
+<li>A <code>TypeError</code> appears in the Frappe error log.</li>
+<li>Twilio logs an error indicating the response size is too large.</li>
+</ul>
+<h4><a name="p-483848-requesting-for-input-3" class="anchor" href="https://discuss.frappe.io#p-483848-requesting-for-input-3"></a><strong>Requesting for Input</strong></h4>
+<ol>
+<li>Could this be related to how Frappe handles external webhook callbacks or larger TwiML responses?</li>
+<li>Would adding validation or truncation to the response help ensure compatibility with Twilio’s 64KB response limit?</li>
+</ol>
+<p>Any insights or suggestions on handling this scenario in a Frappe-integrated setup would be greatly appreciated.</p>
+<p>Thanks!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/not-receiving-twilio-response-callback-when-making-outbound-call-from-frappecrm/155437">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/not-receiving-twilio-response-callback-when-making-outbound-call-from-frappecrm/155437</link>
+          <pubDate>Mon, 13 Oct 2025 14:51:45 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155437</guid>
+          <source url="https://discuss.frappe.io/t/not-receiving-twilio-response-callback-when-making-outbound-call-from-frappecrm/155437.rss">Not receiving Twilio response callback when making outbound call from FrappeCRM</source>
+        </item>
+        <item>
+          <title>There is a bug in the Frappe CRM Territory where is_group colum is duplicate</title>
+          <dc:creator><![CDATA[NoMi]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <h3><a name="p-483774-bug-description-1" class="anchor" href="https://discuss.frappe.io#p-483774-bug-description-1"></a>Bug Description</h3>
+<p>The Territory DocType contains a duplicate definition for the <strong>is_group</strong> field in its core JSON file (CRM territory.json). This causes a validation error (Duplicate name ‘is_group’) when a user attempts to save any customizations to this DocType, effectively blocking any modifications.</p>
+<aside class="onebox githubissue" data-onebox-src="https://github.com/frappe/crm/issues/1263#issue-3432933290">
+  <header class="source">
+
+      <a href="https://github.com/frappe/crm/issues/1263#issue-3432933290" target="_blank" rel="noopener nofollow ugc">github.com/frappe/crm</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="github-row">
+  <div class="github-icon-container" title="Issue" data-github-private-repo="false">
+	  <svg width="60" height="60" class="github-icon" viewBox="0 0 14 16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+  </div>
+
+  <div class="github-info-container">
+    <h4>
+      <a href="https://github.com/frappe/crm/issues/1263#issue-3432933290" target="_blank" rel="noopener nofollow ugc">Bug: Duplicate is_group field in Territory DocType prevents saving customizations</a>
+    </h4>
+
+    <div class="github-info">
+      <div class="date">
+        opened <span class="discourse-local-date" data-format="ll" data-date="2025-09-19" data-time="05:48:03" data-timezone="UTC">05:48AM - 19 Sep 25 UTC</span>
+      </div>
+
+
+      <div class="user">
+        <a href="https://github.com/OmmNoMi" target="_blank" rel="noopener nofollow ugc">
+          <img alt="" src="https://avatars.githubusercontent.com/u/191856196?v=4" class="onebox-avatar-inline" width="20" height="20">
+          OmmNoMi
+        </a>
+      </div>
+    </div>
+
+    <div class="labels">
+    </div>
+  </div>
+</div>
+
+  <div class="github-row">
+    <p class="github-body-container">### Bug Description
+The Territory DocType contains a duplicate definition for th<span class="show-more-container"><a href="" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden">e **is_group** field in its core JSON file (CRM territory.json). This causes a validation error (Duplicate name 'is_group') when a user attempts to save any customizations to this DocType, effectively blocking any modifications.
+
+### Steps to Reproduce
+-Go to 'Customize Form'.
+-Select the Territory DocType.
+-Make any change (e.g., add a new field, change a property).
+-Click 'Save'.
+
+### Behavior
+**Expected Behavior:** The customizations should be saved successfully.
+**Actual Behavior:** The system throws a Duplicate name 'is_group' error and the changes are not saved.
+
+### Evidence
+1. Error in UI:
+The following error appears when trying to save the form.
+&lt;img width="2016" height="1151" alt="Image" src="https://github.com/user-attachments/assets/b02842c8-1430-4650-ad41-f91e4f2cd0c9" /&gt;
+
+2. Root Cause in JSON:
+The crm_territory.json file on the develop branch clearly shows the is_group field defined twice.
+&lt;img width="2016" height="1151" alt="Image" src="https://github.com/user-attachments/assets/158840f3-6bec-4a90-8e2b-b2fd7274fc3b" /&gt;
+
+This seems to be my first bug report, and I'm happy to provide any more information needed to get this fixed. Thank you!</span></p>
+  </div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<h3><a name="p-483774-steps-to-reproduce-2" class="anchor" href="https://discuss.frappe.io#p-483774-steps-to-reproduce-2"></a>Steps to Reproduce</h3>
+<p>-Go to ‘Customize Form’.<br>
+-Select the Territory DocType.<br>
+-Make any change (e.g., add a new field, change a property).<br>
+-Click ‘Save’.</p>
+<h3><a name="p-483774-behavior-3" class="anchor" href="https://discuss.frappe.io#p-483774-behavior-3"></a>Behavior</h3>
+<p><strong>Expected Behavior:</strong> The customizations should be saved successfully.<br>
+<strong>Actual Behavior:</strong> The system throws a Duplicate name ‘is_group’ error and the changes are not saved.</p>
+<h3><a name="p-483774-evidence-4" class="anchor" href="https://discuss.frappe.io#p-483774-evidence-4"></a>Evidence</h3>
+<ol>
+<li>Error in UI:<br>
+The following error appears when trying to save the form.</li>
+</ol>
+<p><a href="https://private-user-images.githubusercontent.com/191856196/491411248-b02842c8-1430-4650-ad41-f91e4f2cd0c9.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjAyODczNTEsIm5iZiI6MTc2MDI4NzA1MSwicGF0aCI6Ii8xOTE4NTYxOTYvNDkxNDExMjQ4LWIwMjg0MmM4LTE0MzAtNDY1MC1hZDQxLWY5MWU0ZjJjZDBjOS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAxMlQxNjM3MzFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02MmFlNmFmNDhiMDhiNjYxYWNjNjQ3ZDZiOGVjMGVlODg0ZjQzYWFlOTMyODU3ZDA1YTBjOWNkZWU0ODQ1NzBmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.akTDrwOJj3-Wyxy35V5thVF1cLHkzylkl1LytC9D9Fc" rel="noopener nofollow ugc"><img src="https://private-user-images.githubusercontent.com/191856196/491411248-b02842c8-1430-4650-ad41-f91e4f2cd0c9.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjAyODczNTEsIm5iZiI6MTc2MDI4NzA1MSwicGF0aCI6Ii8xOTE4NTYxOTYvNDkxNDExMjQ4LWIwMjg0MmM4LTE0MzAtNDY1MC1hZDQxLWY5MWU0ZjJjZDBjOS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAxMlQxNjM3MzFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02MmFlNmFmNDhiMDhiNjYxYWNjNjQ3ZDZiOGVjMGVlODg0ZjQzYWFlOTMyODU3ZDA1YTBjOWNkZWU0ODQ1NzBmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.akTDrwOJj3-Wyxy35V5thVF1cLHkzylkl1LytC9D9Fc" alt="Image" width="690" height="397"></a></p>
+<ol start="2">
+<li>Root Cause in JSON:<br>
+The crm_territory.json file on the develop branch clearly shows the is_group field defined twice.</li>
+</ol>
+<p><a href="https://private-user-images.githubusercontent.com/191856196/491411246-158840f3-6bec-4a90-8e2b-b2fd7274fc3b.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjAyODczNTEsIm5iZiI6MTc2MDI4NzA1MSwicGF0aCI6Ii8xOTE4NTYxOTYvNDkxNDExMjQ2LTE1ODg0MGYzLTZiZWMtNGE5MC04ZTJiLWIyZmQ3Mjc0ZmMzYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAxMlQxNjM3MzFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03NmYxMDJjZDA4NjA2NGU1Y2ZlNmFjNTA5MzAyNjY3MGU3OTAzNmMyYjFkNmIzMGI4MjYwODJiNWIxYjc2NzIzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.1NxLCwgUWvH1qGl-evK6I1uR3zNV6ZNP3YDbL1C-MDE" rel="noopener nofollow ugc"><img src="https://private-user-images.githubusercontent.com/191856196/491411246-158840f3-6bec-4a90-8e2b-b2fd7274fc3b.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjAyODczNTEsIm5iZiI6MTc2MDI4NzA1MSwicGF0aCI6Ii8xOTE4NTYxOTYvNDkxNDExMjQ2LTE1ODg0MGYzLTZiZWMtNGE5MC04ZTJiLWIyZmQ3Mjc0ZmMzYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAxMlQxNjM3MzFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03NmYxMDJjZDA4NjA2NGU1Y2ZlNmFjNTA5MzAyNjY3MGU3OTAzNmMyYjFkNmIzMGI4MjYwODJiNWIxYjc2NzIzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.1NxLCwgUWvH1qGl-evK6I1uR3zNV6ZNP3YDbL1C-MDE" alt="Image" width="690" height="397"></a></p>
+<p>This seems to be my first bug report, and I’m happy to provide any more information needed to get this fixed. Thank you!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/there-is-a-bug-in-the-frappe-crm-territory-where-is-group-colum-is-duplicate/155397">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/there-is-a-bug-in-the-frappe-crm-territory-where-is-group-colum-is-duplicate/155397</link>
+          <pubDate>Sun, 12 Oct 2025 19:05:38 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155397</guid>
+          <source url="https://discuss.frappe.io/t/there-is-a-bug-in-the-frappe-crm-territory-where-is-group-colum-is-duplicate/155397.rss">There is a bug in the Frappe CRM Territory where is_group colum is duplicate</source>
+        </item>
+        <item>
+          <title>Add a custom doctype to the crm</title>
+          <dc:creator><![CDATA[MariamMahdi123]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>Hi, I have two apps—one called <strong>Project</strong> and the other <strong>CRM</strong>. In the CRM portal, can I add a custom DocType from the Project app so users don’t have to switch between Desk and the CRM portal?</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/add-a-custom-doctype-to-the-crm/155381">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/add-a-custom-doctype-to-the-crm/155381</link>
+          <pubDate>Sun, 12 Oct 2025 07:24:09 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155381</guid>
+          <source url="https://discuss.frappe.io/t/add-a-custom-doctype-to-the-crm/155381.rss">Add a custom doctype to the crm</source>
+        </item>
+        <item>
+          <title>Doesnt frappe crm support standard IMAP and SMTP</title>
+          <dc:creator><![CDATA[compgeniuses]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>i noticed on setting up emails on frappe crm, there is  only major email vendors, as well as frappe email,<br>
+The option to configure standard SMTP for other providers, like zoho, or even selfhosted email is not supported</p>
+<p>Am i missing something?</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/doesnt-frappe-crm-support-standard-imap-and-smtp/155363">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/doesnt-frappe-crm-support-standard-imap-and-smtp/155363</link>
+          <pubDate>Sat, 11 Oct 2025 16:58:40 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155363</guid>
+          <source url="https://discuss.frappe.io/t/doesnt-frappe-crm-support-standard-imap-and-smtp/155363.rss">Doesnt frappe crm support standard IMAP and SMTP</source>
+        </item>
+        <item>
+          <title>Customising Frappe CRM where leads are individual and never and organisation</title>
+          <dc:creator><![CDATA[piyush-sawhney]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>I have a use case, where customers for a business are individuals.<br>
+Frappe CRM is designed towards non individual leads. Does anyone have any customisation over crm where it can work for individuals.</p>
+<p>Or a way to modify the app for sich a use case.</p>
+<p>Any help would be appreciated</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/customising-frappe-crm-where-leads-are-individual-and-never-and-organisation/155319">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/customising-frappe-crm-where-leads-are-individual-and-never-and-organisation/155319</link>
+          <pubDate>Fri, 10 Oct 2025 09:35:46 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155319</guid>
+          <source url="https://discuss.frappe.io/t/customising-frappe-crm-where-leads-are-individual-and-never-and-organisation/155319.rss">Customising Frappe CRM where leads are individual and never and organisation</source>
+        </item>
+        <item>
+          <title>Calling Problem from CRM exotel integration</title>
+          <dc:creator><![CDATA[Mack]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>i have created an exotel account and verified i get token of 200 i when i call from frappe crm i get error this Exotel Number 09513886363 is Not valid</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/calling-problem-from-crm-exotel-integration/155283">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/calling-problem-from-crm-exotel-integration/155283</link>
+          <pubDate>Thu, 09 Oct 2025 11:06:50 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155283</guid>
+          <source url="https://discuss.frappe.io/t/calling-problem-from-crm-exotel-integration/155283.rss">Calling Problem from CRM exotel integration</source>
+        </item>
+        <item>
+          <title>Frappe CRM Create Customer Status Change</title>
+          <dc:creator><![CDATA[Annzhii]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>Create customer on status change is enabled.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/2/22f88aa3cf40439a4c2c4f8a5a5ac7ed425ce8da.png" data-download-href="https://discuss.frappe.io/uploads/default/22f88aa3cf40439a4c2c4f8a5a5ac7ed425ce8da" title="2025-10-02 15.44.59"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/2/22f88aa3cf40439a4c2c4f8a5a5ac7ed425ce8da_2_690x104.png" alt="2025-10-02 15.44.59" data-base62-sha1="4ZmJnb1KzSJnv9GhLdpO4AzxFY6" width="690" height="104" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/2/22f88aa3cf40439a4c2c4f8a5a5ac7ed425ce8da_2_690x104.png, https://discuss.frappe.io/uploads/default/optimized/3X/2/2/22f88aa3cf40439a4c2c4f8a5a5ac7ed425ce8da_2_1035x156.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/2/2/22f88aa3cf40439a4c2c4f8a5a5ac7ed425ce8da_2_1380x208.png 2x" data-dominant-color="FBFBFB"></a></div><br>
+and when I change a deal from other status to won, I get this notification:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/3/9/396506135589a4d981abb665035bd8021bc3e649.png" data-download-href="https://discuss.frappe.io/uploads/default/396506135589a4d981abb665035bd8021bc3e649" title="2025-10-02 15.44.36"><img src="https://discuss.frappe.io/uploads/default/original/3X/3/9/396506135589a4d981abb665035bd8021bc3e649.png" alt="2025-10-02 15.44.36" data-base62-sha1="8bJENYYFWkWPjoRBzYPYzeWkr7H" width="640" height="238"></a></div><br>
+BUT, the customer is not created in ERPNEXT.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/4/3/43507648fc4b0f2e415d2748520697378434a8ee.png" data-download-href="https://discuss.frappe.io/uploads/default/43507648fc4b0f2e415d2748520697378434a8ee" title="2025-10-02 15.49.38"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/4/3/43507648fc4b0f2e415d2748520697378434a8ee_2_690x357.png" alt="2025-10-02 15.49.38" data-base62-sha1="9BunxrUBv2mj8mKporGhzOcmmXY" width="690" height="357" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/4/3/43507648fc4b0f2e415d2748520697378434a8ee_2_690x357.png, https://discuss.frappe.io/uploads/default/optimized/3X/4/3/43507648fc4b0f2e415d2748520697378434a8ee_2_1035x535.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/4/3/43507648fc4b0f2e415d2748520697378434a8ee_2_1380x714.png 2x" data-dominant-color="FDFDFD"></a></div><br>
+Selfhosted, version of Frappe and FRAPPE CRM:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/2/12c874de6a569f7053a0ca60fbdc86ae4336d7fd.png" data-download-href="https://discuss.frappe.io/uploads/default/12c874de6a569f7053a0ca60fbdc86ae4336d7fd" title="2025-10-02 15.50.22"><img src="https://discuss.frappe.io/uploads/default/original/3X/1/2/12c874de6a569f7053a0ca60fbdc86ae4336d7fd.png" alt="2025-10-02 15.50.22" data-base62-sha1="2Ga4niV34lKaagIL42qOxmT9HDT" width="674" height="272"></a></div><p></p>
+<p>Anyone can help?</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/frappe-crm-create-customer-status-change/154980">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/frappe-crm-create-customer-status-change/154980</link>
+          <pubDate>Thu, 02 Oct 2025 07:52:05 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-154980</guid>
+          <source url="https://discuss.frappe.io/t/frappe-crm-create-customer-status-change/154980.rss">Frappe CRM Create Customer Status Change</source>
+        </item>
+        <item>
+          <title>Want to add an email option to sidebar</title>
+          <dc:creator><![CDATA[_abhiram]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>Is there anyway I can add an emails options in my appsidebar? I want a fully functional working mailbox which act exactly like a mailbox? I could only add the option in frontend, but could not make changes in backend.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/want-to-add-an-email-option-to-sidebar/153462">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/want-to-add-an-email-option-to-sidebar/153462</link>
+          <pubDate>Fri, 12 Sep 2025 11:28:44 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-153462</guid>
+          <source url="https://discuss.frappe.io/t/want-to-add-an-email-option-to-sidebar/153462.rss">Want to add an email option to sidebar</source>
+        </item>
+        <item>
+          <title>Emails are not syncing in communication doctype, frappe CRM</title>
+          <dc:creator><![CDATA[_abhiram]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>When I send emails through leads in frappe CRM, only the sent emails will be synced in communication doctype, but it is not acting as live mailbox, I don’t see emails even after selecting pull emails option. Is there anyway I can fix this? Your guidance will be appreciated. Thank you.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/emails-are-not-syncing-in-communication-doctype-frappe-crm/153461">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/emails-are-not-syncing-in-communication-doctype-frappe-crm/153461</link>
+          <pubDate>Fri, 12 Sep 2025 11:27:38 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-153461</guid>
+          <source url="https://discuss.frappe.io/t/emails-are-not-syncing-in-communication-doctype-frappe-crm/153461.rss">Emails are not syncing in communication doctype, frappe CRM</source>
+        </item>
+        <item>
+          <title>CSRF Token Error for Custom Frontend API Calls in Frappe CRM After Switching Pages (Development &amp; Cl</title>
+          <dc:creator><![CDATA[boora-aman]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>Hi Frappe Community,</p>
+<p>I’m facing an issue related to <strong>CSRF tokens</strong> in my Frappe-based application, specifically with my <strong>custom CRM frontend/CRM Override</strong>.</p>
+<ul>
+<li>After <strong>logging out and logging in</strong>, everything works fine when directly accessing <code>site.local/crm</code>.</li>
+<li>However, when switching to <code>site.local/app</code> or any other URL and then navigating back to <code>/crm</code>, I encounter <strong>CSRF token errors</strong> for the custom API calls I’ve added or modified.</li>
+<li>The <strong>default Frappe API calls</strong> work fine, but the CSRF issue arises for <strong>custom front-end pages</strong> or actions where I’ve made modifications.</li>
+<li><strong>Steps to reproduce</strong>:
+<ol>
+<li>Log in to the site.</li>
+<li>Visit <code>/crm</code> – everything works.</li>
+<li>Visit <code>/app</code> or any other page, and then navigate back to <code>/crm</code>.</li>
+<li>CSRF token error occurs when attempting to call my custom API.</li>
+<li>Only logging out and logging back in directly to <code>/crm</code> solves the issue temporarily.</li>
+</ol>
+</li>
+</ul>
+<p>This happens both in <strong>development</strong> and in <strong>Frappe Cloud</strong>, and I’m unable to pinpoint the cause.</p>
+<p>I’ve already tried:</p>
+<ol>
+<li>Using <code>ignore_csrf: 1</code> (but this is not secure for production).</li>
+<li>Ensuring the token is set with <code>frappe.csrf_token</code> – but it still doesn’t get sent for custom pages.</li>
+<li>Attempting to use a <strong>fresh login</strong> flow, but the issue persists when switching between URLs.</li>
+</ol>
+<h3><a name="p-480120-what-i-need-help-with-1" class="anchor" href="https://discuss.frappe.io#p-480120-what-i-need-help-with-1"></a><strong>What I need help with</strong>:</h3>
+<ul>
+<li>Understanding <strong>why CSRF tokens aren’t being sent</strong> for custom frontend pages.</li>
+<li>Ensuring <strong>proper CSRF protection</strong> for these custom pages while maintaining session integrity when switching between app pages.</li>
+<li>Any suggestions on <strong>workarounds</strong> or best practices for dealing with CSRF token issues in custom-built pages or apps.</li>
+</ul>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/csrf-token-error-for-custom-frontend-api-calls-in-frappe-crm-after-switching-pages-development-cl/153239">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/csrf-token-error-for-custom-frontend-api-calls-in-frappe-crm-after-switching-pages-development-cl/153239</link>
+          <pubDate>Mon, 08 Sep 2025 05:12:55 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-153239</guid>
+          <source url="https://discuss.frappe.io/t/csrf-token-error-for-custom-frontend-api-calls-in-frappe-crm-after-switching-pages-development-cl/153239.rss">CSRF Token Error for Custom Frontend API Calls in Frappe CRM After Switching Pages (Development &amp; Cl</source>
+        </item>
+        <item>
+          <title>[Self Promotion] AI Voice Agent: Calling Automation</title>
+          <dc:creator><![CDATA[snehmehta]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>Hi all,</p>
+<p>I am <strong>Sneh Mehta</strong>, founder of <strong>Voice Agent</strong>, and new to the Frappe‑verse. We have recently adopted Frappe products and in just two weeks we’ve been able to achieve some amazing things.</p>
+<p>The main attraction for me was that with Frappe you can customize anything. and since our technical founder, it’s very enticing to me to actually automate things that are boring in a business. There is largely an operations work, but also a bit of sales side as well.</p>
+<p>So here’s the setup. Our product, <strong>Voice Agent</strong>, is an AI calling platform. For one of our personas, doctors in the US, our pitch is simple, Voice Agent will handle the calls from their patients so they never miss a lead. We put that pitch directly into our Facebook ads. With the ad we attach a Facebook instant form, because instant forms have far lower drop ratios compared to website forms.</p>
+<p>Now here’s the crucial part. Once someone submits an instant form on Facebook, they must receive a call from us immediately. The pitch says “never miss a lead,” so we cannot miss our own lead.</p>
+<p>This is what we built. We created a custom app that listens to the Facebook <code>leadgen</code> webhook, accessible from our Facebook app. Our custom Frappe CRM app is the receiver of that webhook. Inside it, I wrote not more than 150 lines of code that not only listen for these changes, but also push calls to our Voice Agent platform, notify us on Discord whenever a new lead is added (which helps morale), and most importantly, automatically create a Lead inside Frappe CRM.</p>
+<p>What this means is the whole chain is live: someone fills out a Facebook form, Facebook passes that to our custom app, our app retrieves the details, pushes a call through Voice Agent, notifies the team on Discord, and also creates a proper Lead in the CRM. And all of this happens because Frappe lets us control the workflow with simple custom code.</p>
+<p>This is modern-day CRM. This is how it should work. And honestly, we could only achieve all of this because of Frappe and the freedom the Frappe universe gives us.</p>
+<p>For anyone interested in setting up such a flow, I’ve also written detailed documentation and a blog with the help of Claude Sonnet. You can read it here:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://blog.miraiminds.co/blog/facebook-leads">
+  <header class="source">
+      <img src="https://blog.miraiminds.co/favicon.svg" class="site-icon" width="128" height="128">
+
+      <a href="https://blog.miraiminds.co/blog/facebook-leads" target="_blank" rel="noopener nofollow ugc">blog.miraiminds.co</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/388;"><img src="https://blog.miraiminds.co/img/og.png" class="thumbnail" width="690" height="388"></div>
+
+<h3><a href="https://blog.miraiminds.co/blog/facebook-leads" target="_blank" rel="noopener nofollow ugc">Engineering Tales - Voice Agent</a></h3>
+
+  <p>All tales of building a voice agent.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Hope you find this useful. Until next time,<br>
+<strong>Sneh Mehta</strong></p>
+            <p><small>2 posts - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/self-promotion-ai-voice-agent-calling-automation/153121">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/self-promotion-ai-voice-agent-calling-automation/153121</link>
+          <pubDate>Thu, 04 Sep 2025 06:54:38 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-153121</guid>
+          <source url="https://discuss.frappe.io/t/self-promotion-ai-voice-agent-calling-automation/153121.rss">[Self Promotion] AI Voice Agent: Calling Automation</source>
+        </item>
+        <item>
+          <title>Office 365 email account</title>
+          <dc:creator><![CDATA[Yuriy]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>Hello everyone,</p>
+<p>Is there a way to properly set up an <strong>Office 365 (Exchange Online)</strong> mailbox in Frappe CRM?</p>
+<p>The built-in <em>Outlook</em> connector doesn’t seem to work, as it looks like it’s intended only for personal Outlook/Hotmail accounts, not for organizational Office 365 mailboxes.</p>
+<p>Has anyone successfully connected Office 365 with Frappe CRM, and if so, what’s the correct approach (IMAP/SMTP with app password, OAuth2, or another method)?</p>
+<p>Thanks in advance!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/office-365-email-account/152864">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/office-365-email-account/152864</link>
+          <pubDate>Thu, 28 Aug 2025 17:15:07 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-152864</guid>
+          <source url="https://discuss.frappe.io/t/office-365-email-account/152864.rss">Office 365 email account</source>
+        </item>
+        <item>
+          <title>How to design UI like CRM app?</title>
+          <dc:creator><![CDATA[sujalpawar17]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>I want to customize my default frappe application like CRM UI .</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/how-to-design-ui-like-crm-app/152835">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/how-to-design-ui-like-crm-app/152835</link>
+          <pubDate>Thu, 28 Aug 2025 09:46:52 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-152835</guid>
+          <source url="https://discuss.frappe.io/t/how-to-design-ui-like-crm-app/152835.rss">How to design UI like CRM app?</source>
+        </item>
+        <item>
+          <title>Custom DocType support in UI</title>
+          <dc:creator><![CDATA[Yuriy]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>Hello guys!</p>
+<p>Is there any way to add support of custom DocType in Frappe CRM UI ?<br>
+For example, I have created custom DocType “Attendees” in Desk view, added some fields and want this module be available in the frontend - to link it with Contacts, Deals and also new left bar menu item.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/custom-doctype-support-in-ui/152741">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/custom-doctype-support-in-ui/152741</link>
+          <pubDate>Tue, 26 Aug 2025 19:56:39 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-152741</guid>
+          <source url="https://discuss.frappe.io/t/custom-doctype-support-in-ui/152741.rss">Custom DocType support in UI</source>
+        </item>
+        <item>
+          <title>Frappe CRM Archive deals feature</title>
+          <dc:creator><![CDATA[dave8172]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>I would like to request a feature of archiving deals in Frappe CRM, as the deal page gets loaded after a while, and its not intuitive to apply filters.</p>
+<p>Atleast the Won and Lost deals can have the option to be archived.</p>
+<p>Is there any solution to do this already?</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/frappe-crm-archive-deals-feature/152548">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/frappe-crm-archive-deals-feature/152548</link>
+          <pubDate>Sat, 23 Aug 2025 06:37:49 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-152548</guid>
+          <source url="https://discuss.frappe.io/t/frappe-crm-archive-deals-feature/152548.rss">Frappe CRM Archive deals feature</source>
+        </item>
+        <item>
+          <title>Importing CSV files into Leads</title>
+          <dc:creator><![CDATA[CDM]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>I have recently set up the stand-alone Frappe CRM solution after using the full ERP next environment previously.</p>
+<p>The stand-alone CRM solution is perfect for a current project that we have however I am wanting to import files into leads, contacts, organisations etc and am unable to find any import functionality unlike the full ERP solution.</p>
+<p>What do I need to do to unable import into these individual categories?</p>
+<p>Thanking you in anticipation for your responses.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/importing-csv-files-into-leads/152078">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/importing-csv-files-into-leads/152078</link>
+          <pubDate>Tue, 19 Aug 2025 05:49:33 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-152078</guid>
+          <source url="https://discuss.frappe.io/t/importing-csv-files-into-leads/152078.rss">Importing CSV files into Leads</source>
+        </item>
+        <item>
+          <title>Can not connect email in CRM Frappe</title>
+          <dc:creator><![CDATA[sternbj]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>I do not manage to setup email in CRM Frappe. I definatly have set up and app password and for the email ID i used my M365 address. Why does it not work and sais invalid credentials? Any idea?</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/3/0338c5b7c095e3cf906f24b01fd023afcacc1a12.png" data-download-href="https://discuss.frappe.io/uploads/default/0338c5b7c095e3cf906f24b01fd023afcacc1a12" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/3/0338c5b7c095e3cf906f24b01fd023afcacc1a12_2_632x500.png" alt="image" data-base62-sha1="sv47Vtlz5tPi5LnnWMML4UWlMK" width="632" height="500" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/3/0338c5b7c095e3cf906f24b01fd023afcacc1a12_2_632x500.png, https://discuss.frappe.io/uploads/default/optimized/3X/0/3/0338c5b7c095e3cf906f24b01fd023afcacc1a12_2_948x750.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/0/3/0338c5b7c095e3cf906f24b01fd023afcacc1a12_2_1264x1000.png 2x" data-dominant-color="F8F8F8"></a></div><p></p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/can-not-connect-email-in-crm-frappe/151787">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/can-not-connect-email-in-crm-frappe/151787</link>
+          <pubDate>Wed, 13 Aug 2025 18:40:55 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-151787</guid>
+          <source url="https://discuss.frappe.io/t/can-not-connect-email-in-crm-frappe/151787.rss">Can not connect email in CRM Frappe</source>
+        </item>
+        <item>
+          <title>Permissions settings</title>
+          <dc:creator><![CDATA[vrumjantsev]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>Hello, i have 2 questions regarding permissions schemas in CRM.</p>
+<ol>
+<li>
+<p>how do i allow a role(or user) to only see leads assigned to him, rather then all available leads in db?</p>
+</li>
+<li>
+<p>is there a way somehow group sales into teams, with sales and manager roles, where manager is able to see all groups leads(group may be based on some field, like territory, or anything else)?</p>
+</li>
+</ol>
+            <p><small>6 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/permissions-settings/151503">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/permissions-settings/151503</link>
+          <pubDate>Mon, 11 Aug 2025 07:27:50 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-151503</guid>
+          <source url="https://discuss.frappe.io/t/permissions-settings/151503.rss">Permissions settings</source>
+        </item>
+  </channel>
+</rss>

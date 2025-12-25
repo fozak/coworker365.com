@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>There is a bug in the Frappe CRM Territory where is_group colum is duplicate - Frappe CRM - Frappe Forum</title>
+    <meta name="description" content="Bug Description
+The Territory DocType contains a duplicate definition for the is_group field in its core JSON file (CRM territory.json). This causes a validation error (Duplicate name ‘is_group’) when a user attempts to &amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/there-is-a-bug-in-the-frappe-crm-territory-where-is-group-colum-is-duplicate/155397" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;There is a bug in the Frappe CRM Territory where is_group colum is duplicate&#39;" href="https://discuss.frappe.io/t/there-is-a-bug-in-the-frappe-crm-territory-where-is-group-colum-is-duplicate/155397.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/there-is-a-bug-in-the-frappe-crm-territory-where-is-group-colum-is-duplicate/155397" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/there-is-a-bug-in-the-frappe-crm-territory-where-is-group-colum-is-duplicate/155397" />
+<meta property="og:title" content="There is a bug in the Frappe CRM Territory where is_group colum is duplicate" />
+<meta name="twitter:title" content="There is a bug in the Frappe CRM Territory where is_group colum is duplicate" />
+<meta property="og:description" content="Bug Description The Territory DocType contains a duplicate definition for the is_group field in its core JSON file (CRM territory.json). This causes a validation error (Duplicate name ‘is_group’) when a user attempts to save any customizations to this DocType, effectively blocking any modifications.    Steps to Reproduce -Go to ‘Customize Form’.  -Select the Territory DocType.  -Make any change (e.g., add a new field, change a property).  -Click ‘Save’.  Behavior Expected Behavior: The customiza..." />
+<meta name="twitter:description" content="Bug Description The Territory DocType contains a duplicate definition for the is_group field in its core JSON file (CRM territory.json). This causes a validation error (Duplicate name ‘is_group’) when a user attempts to save any customizations to this DocType, effectively blocking any modifications.    Steps to Reproduce -Go to ‘Customize Form’.  -Select the Territory DocType.  -Make any change (e.g., add a new field, change a property).  -Click ‘Save’.  Behavior Expected Behavior: The customiza..." />
+<meta property="og:article:section" content="Business Apps" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Frappe CRM" />
+<meta property="og:article:section:color" content="ED207B" />
+<meta property="article:published_time" content="2025-10-12T19:05:38+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"There is a bug in the Frappe CRM Territory where is_group colum is duplicate","mainEntity":{"@type":"Question","name":"There is a bug in the Frappe CRM Territory where is_group colum is duplicate","text":"<a name=\"p-483774-bug-description-1\" class=\"anchor\" href=\"#p-483774-bug-description-1\"><\/a>Bug Description\n\nThe Territory DocType contains a duplicate definition for the is_group field in its core JSON file (CRM territory.json). This causes a validation error (Duplicate name ‘is_group’) when a user attempts to save any customizations to this DocType, effectively blocking any modifications. &hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-10-12T19:05:38.467Z","author":{"@type":"Person","name":"NoMi","url":"https://discuss.frappe.io/u/NoMi"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/there-is-a-bug-in-the-frappe-crm-territory-where-is-group-colum-is-duplicate/155397">There is a bug in the Frappe CRM Territory where is_group colum is duplicate</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/business-apps/89" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Business Apps</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/business-apps/frappe-crm/82" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #ED207B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe CRM</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='There is a bug in the Frappe CRM Territory where is_group colum is duplicate'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/there-is-a-bug-in-the-frappe-crm-territory-where-is-group-colum-is-duplicate/155397'>
+      <meta itemprop='datePublished' content='2025-10-12T19:05:38Z'>
+        <meta itemprop='articleSection' content='Frappe CRM'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/NoMi'><span itemprop='name'>NoMi</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/there-is-a-bug-in-the-frappe-crm-territory-where-is-group-colum-is-duplicate/155397">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-10-12T19:05:38Z' class='post-time'>
+                    October 12, 2025,  7:05pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-12T19:05:38Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h3><a name="p-483774-bug-description-1" class="anchor" href="#p-483774-bug-description-1"></a>Bug Description</h3>
+<p>The Territory DocType contains a duplicate definition for the <strong>is_group</strong> field in its core JSON file (CRM territory.json). This causes a validation error (Duplicate name ‘is_group’) when a user attempts to save any customizations to this DocType, effectively blocking any modifications.</p>
+<aside class="onebox githubissue" data-onebox-src="https://github.com/frappe/crm/issues/1263#issue-3432933290">
+  <header class="source">
+
+      <a href="https://github.com/frappe/crm/issues/1263#issue-3432933290" target="_blank" rel="noopener nofollow ugc">github.com/frappe/crm</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="github-row">
+  <div class="github-icon-container" title="Issue" data-github-private-repo="false">
+	  <svg width="60" height="60" class="github-icon" viewBox="0 0 14 16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+  </div>
+
+  <div class="github-info-container">
+    <h4>
+      <a href="https://github.com/frappe/crm/issues/1263#issue-3432933290" target="_blank" rel="noopener nofollow ugc">Bug: Duplicate is_group field in Territory DocType prevents saving customizations</a>
+    </h4>
+
+    <div class="github-info">
+      <div class="date">
+        opened <span class="discourse-local-date" data-format="ll" data-date="2025-09-19" data-time="05:48:03" data-timezone="UTC">05:48AM - 19 Sep 25 UTC</span>
+      </div>
+
+
+      <div class="user">
+        <a href="https://github.com/OmmNoMi" target="_blank" rel="noopener nofollow ugc">
+          <img alt="" src="https://avatars.githubusercontent.com/u/191856196?v=4" class="onebox-avatar-inline" width="20" height="20">
+          OmmNoMi
+        </a>
+      </div>
+    </div>
+
+    <div class="labels">
+    </div>
+  </div>
+</div>
+
+  <div class="github-row">
+    <p class="github-body-container">### Bug Description
+The Territory DocType contains a duplicate definition for th<span class="show-more-container"><a href="" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden">e **is_group** field in its core JSON file (CRM territory.json). This causes a validation error (Duplicate name 'is_group') when a user attempts to save any customizations to this DocType, effectively blocking any modifications.
+
+### Steps to Reproduce
+-Go to 'Customize Form'.
+-Select the Territory DocType.
+-Make any change (e.g., add a new field, change a property).
+-Click 'Save'.
+
+### Behavior
+**Expected Behavior:** The customizations should be saved successfully.
+**Actual Behavior:** The system throws a Duplicate name 'is_group' error and the changes are not saved.
+
+### Evidence
+1. Error in UI:
+The following error appears when trying to save the form.
+&lt;img width="2016" height="1151" alt="Image" src="https://github.com/user-attachments/assets/b02842c8-1430-4650-ad41-f91e4f2cd0c9" /&gt;
+
+2. Root Cause in JSON:
+The crm_territory.json file on the develop branch clearly shows the is_group field defined twice.
+&lt;img width="2016" height="1151" alt="Image" src="https://github.com/user-attachments/assets/158840f3-6bec-4a90-8e2b-b2fd7274fc3b" /&gt;
+
+This seems to be my first bug report, and I'm happy to provide any more information needed to get this fixed. Thank you!</span></p>
+  </div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<h3><a name="p-483774-steps-to-reproduce-2" class="anchor" href="#p-483774-steps-to-reproduce-2"></a>Steps to Reproduce</h3>
+<p>-Go to ‘Customize Form’.<br>
+-Select the Territory DocType.<br>
+-Make any change (e.g., add a new field, change a property).<br>
+-Click ‘Save’.</p>
+<h3><a name="p-483774-behavior-3" class="anchor" href="#p-483774-behavior-3"></a>Behavior</h3>
+<p><strong>Expected Behavior:</strong> The customizations should be saved successfully.<br>
+<strong>Actual Behavior:</strong> The system throws a Duplicate name ‘is_group’ error and the changes are not saved.</p>
+<h3><a name="p-483774-evidence-4" class="anchor" href="#p-483774-evidence-4"></a>Evidence</h3>
+<ol>
+<li>Error in UI:<br>
+The following error appears when trying to save the form.</li>
+</ol>
+<p><a href="https://private-user-images.githubusercontent.com/191856196/491411248-b02842c8-1430-4650-ad41-f91e4f2cd0c9.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjAyODczNTEsIm5iZiI6MTc2MDI4NzA1MSwicGF0aCI6Ii8xOTE4NTYxOTYvNDkxNDExMjQ4LWIwMjg0MmM4LTE0MzAtNDY1MC1hZDQxLWY5MWU0ZjJjZDBjOS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAxMlQxNjM3MzFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02MmFlNmFmNDhiMDhiNjYxYWNjNjQ3ZDZiOGVjMGVlODg0ZjQzYWFlOTMyODU3ZDA1YTBjOWNkZWU0ODQ1NzBmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.akTDrwOJj3-Wyxy35V5thVF1cLHkzylkl1LytC9D9Fc" rel="noopener nofollow ugc"><img src="https://private-user-images.githubusercontent.com/191856196/491411248-b02842c8-1430-4650-ad41-f91e4f2cd0c9.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjAyODczNTEsIm5iZiI6MTc2MDI4NzA1MSwicGF0aCI6Ii8xOTE4NTYxOTYvNDkxNDExMjQ4LWIwMjg0MmM4LTE0MzAtNDY1MC1hZDQxLWY5MWU0ZjJjZDBjOS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAxMlQxNjM3MzFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02MmFlNmFmNDhiMDhiNjYxYWNjNjQ3ZDZiOGVjMGVlODg0ZjQzYWFlOTMyODU3ZDA1YTBjOWNkZWU0ODQ1NzBmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.akTDrwOJj3-Wyxy35V5thVF1cLHkzylkl1LytC9D9Fc" alt="Image" width="690" height="397"></a></p>
+<ol start="2">
+<li>Root Cause in JSON:<br>
+The crm_territory.json file on the develop branch clearly shows the is_group field defined twice.</li>
+</ol>
+<p><a href="https://private-user-images.githubusercontent.com/191856196/491411246-158840f3-6bec-4a90-8e2b-b2fd7274fc3b.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjAyODczNTEsIm5iZiI6MTc2MDI4NzA1MSwicGF0aCI6Ii8xOTE4NTYxOTYvNDkxNDExMjQ2LTE1ODg0MGYzLTZiZWMtNGE5MC04ZTJiLWIyZmQ3Mjc0ZmMzYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAxMlQxNjM3MzFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03NmYxMDJjZDA4NjA2NGU1Y2ZlNmFjNTA5MzAyNjY3MGU3OTAzNmMyYjFkNmIzMGI4MjYwODJiNWIxYjc2NzIzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.1NxLCwgUWvH1qGl-evK6I1uR3zNV6ZNP3YDbL1C-MDE" rel="noopener nofollow ugc"><img src="https://private-user-images.githubusercontent.com/191856196/491411246-158840f3-6bec-4a90-8e2b-b2fd7274fc3b.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjAyODczNTEsIm5iZiI6MTc2MDI4NzA1MSwicGF0aCI6Ii8xOTE4NTYxOTYvNDkxNDExMjQ2LTE1ODg0MGYzLTZiZWMtNGE5MC04ZTJiLWIyZmQ3Mjc0ZmMzYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAxMlQxNjM3MzFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03NmYxMDJjZDA4NjA2NGU1Y2ZlNmFjNTA5MzAyNjY3MGU3OTAzNmMyYjFkNmIzMGI4MjYwODJiNWIxYjc2NzIzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.1NxLCwgUWvH1qGl-evK6I1uR3zNV6ZNP3YDbL1C-MDE" alt="Image" width="690" height="397"></a></p>
+<p>This seems to be my first bug report, and I’m happy to provide any more information needed to get this fixed. Thank you!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

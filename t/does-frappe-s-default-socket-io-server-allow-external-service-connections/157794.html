@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Does Frappe’s default socket.io server allow external service connections? - App Development - Frappe Forum</title>
+    <meta name="description" content="Hi everyone, 
+I have a question regarding the default socket.io server that comes with Frappe. By default, does Frappe allow socket connections from external services (not just the browser or the same origin)?  I want to&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/does-frappe-s-default-socket-io-server-allow-external-service-connections/157794" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Does Frappe’s default socket.io server allow external service connections?&#39;" href="https://discuss.frappe.io/t/does-frappe-s-default-socket-io-server-allow-external-service-connections/157794.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/does-frappe-s-default-socket-io-server-allow-external-service-connections/157794" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/does-frappe-s-default-socket-io-server-allow-external-service-connections/157794" />
+<meta property="og:title" content="Does Frappe’s default socket.io server allow external service connections?" />
+<meta name="twitter:title" content="Does Frappe’s default socket.io server allow external service connections?" />
+<meta property="og:description" content="Hi everyone,  I have a question regarding the default socket.io server that comes with Frappe. By default, does Frappe allow socket connections from external services (not just the browser or the same origin)?  I want to connect socket to listen event push realtime from backend using Flutter App.  If external connections are supported, what is the correct way to configure and authenticate them?  Thanks in advance!" />
+<meta name="twitter:description" content="Hi everyone,  I have a question regarding the default socket.io server that comes with Frappe. By default, does Frappe allow socket connections from external services (not just the browser or the same origin)?  I want to connect socket to listen event push realtime from backend using Flutter App.  If external connections are supported, what is the correct way to configure and authenticate them?  Thanks in advance!" />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:section" content="App Development" />
+<meta property="og:article:section:color" content="0E76BD" />
+<meta property="og:article:tag" content="frappe" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="3 ❤" />
+<meta property="article:published_time" content="2025-12-08T17:39:15+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Does Frappe’s default socket.io server allow external service connections?","mainEntity":{"@type":"Question","name":"Does Frappe’s default socket.io server allow external service connections?","text":"Hi everyone,\n\nI have a question regarding the default <a href=\"http://socket.io\" rel=\"noopener nofollow ugc\">socket.io<\/a> server that comes with Frappe. By default, does Frappe allow socket connections from external services (not just the browser or the same origin)?  I want to connect socket to listen event push realtime from backend using Flutter App.\n\nI&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-12-08T17:39:15.168Z","author":{"@type":"Person","name":"SKDragon18","url":"https://discuss.frappe.io/u/SKDragon18"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/does-frappe-s-default-socket-io-server-allow-external-service-connections/157794">Does Frappe’s default socket.io server allow external service connections?</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/app-development/24" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0E76BD'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>App Development</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Does Frappe’s default socket.io server allow external service connections?'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/does-frappe-s-default-socket-io-server-allow-external-service-connections/157794'>
+      <meta itemprop='datePublished' content='2025-12-08T17:39:15Z'>
+        <meta itemprop='articleSection' content='App Development'>
+      <meta itemprop='keywords' content='frappe'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SKDragon18'><span itemprop='name'>SKDragon18</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/does-frappe-s-default-socket-io-server-allow-external-service-connections/157794">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-12-08T17:39:15Z' class='post-time'>
+                    December 8, 2025,  5:39pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-08T17:39:15Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi everyone,<br>
+I have a question regarding the default <a href="http://socket.io" rel="noopener nofollow ugc">socket.io</a> server that comes with Frappe. By default, does Frappe allow socket connections from external services (not just the browser or the same origin)?  I want to connect socket to listen event push realtime from backend using Flutter App.</p>
+<p>If external connections are supported, what is the correct way to configure and authenticate them?</p>
+<p>Thanks in advance!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Yamen_Zakhour'><span itemprop='name'>Yamen_Zakhour</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-08T18:24:07Z' class='post-time'>
+                    December 8, 2025,  6:24pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-08T18:24:07Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes<br>
+Check this <a href="https://docs.frappe.io/framework/user/en/api/realtime#custom-client" class="inline-onebox" rel="noopener nofollow ugc">Realtime (socket.io)</a></p>
+<p>Also check <a href="https://github.com/The-Commit-Company/raven" rel="noopener nofollow ugc">Raven</a> they built a react native chat app so that definitely suits your use case</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SKDragon18'><span itemprop='name'>SKDragon18</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-09T05:07:46Z' class='post-time'>
+                    December 9, 2025,  5:07am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-09T05:07:46Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you for your support. I’ve reviewed the Frappe Raven source code as well as some of Frappe’s official documentation. It seems that connecting to the <a href="http://Socket.IO" rel="noopener nofollow ugc">Socket.IO</a> server is technically possible, but I frequently encounter the <em>“Invalid origin”</em> error.</p>
+<p>Looking into Frappe’s core, I found this section:</p>
+<pre><code class="lang-auto">if (get_hostname(socket.request.headers.host) != get_hostname(socket.request.headers.origin)) {
+    next(new Error("Invalid origin"));
+    return;
+}
+
+</code></pre>
+<p>This makes me wonder whether Frappe is intentionally blocking connections from external origins.</p>
+<p>With Frappe Raven, it uses a React-based client. When specifying the <code>sitename</code> and <code>token</code> in the config and using the <code>websocket</code> transport, I was able to connect successfully with <strong><a href="http://localhost:9000" rel="noopener nofollow ugc">http://localhost:9000</a></strong>. However, it seems that the <code>sitename</code> parameter has no actual effect. Additionally, even when I publish a realtime event without specifying any user, no messages are received on the client.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Yamen_Zakhour'><span itemprop='name'>Yamen_Zakhour</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-09T08:49:04Z' class='post-time'>
+                    December 9, 2025,  8:49am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-09T08:49:04Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Oh right,<br>
+I faced the same issue when I was setting up <a href="https://discuss.frappe.io/t/guide-development-instances-on-dokploy/156409">Staging environments via Dokploy</a> and the only way I figured was to patch the middleware. I added it as a separate volume so that even when you pull frappe updates you can redeploy to patch it.</p>
+<p>That version also patched utils.js but for you I only think you need authenticate.js, something like this:</p>
+<pre data-code-wrap="yaml"><code class="lang-yaml">patch-socketio:
+  image: frappe/bench:latest
+  command:
+    - bash
+    - -c
+    - |
+      echo 'Waiting for bench initialization...'
+      until [ -f /home/frappe/frappe-bench/apps/frappe/socketio.js ]; do
+        sleep 5
+      done
+      
+      cd /home/frappe/frappe-bench/apps/frappe/realtime
+      
+      # Backup original if not already done
+      if [ ! -f middlewares/authenticate.js.original ]; then
+        cp middlewares/authenticate.js middlewares/authenticate.js.original
+      fi
+      
+      # Comment out the origin check
+      sed -i 's/if (get_hostname(socket.request.headers.host) != get_hostname(socket.request.headers.origin))/if (false \&amp;\&amp; get_hostname(socket.request.headers.host) != get_hostname(socket.request.headers.origin))/' middlewares/authenticate.js
+      
+      echo 'Origin check disabled for external frontend access!'
+  volumes:
+    - frappe-home:/home/frappe
+  depends_on:
+    init-bench:
+      condition: service_completed_successfully
+  networks:
+    - frappe-network
+  restart: "no"
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SKDragon18'><span itemprop='name'>SKDragon18</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-09T13:33:05Z' class='post-time'>
+                    December 9, 2025,  1:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-09T13:33:05Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I tried your suggestion. While the <em>Invalid Origin</em> error is gone, a new issue appeared: <strong>Unauthorized: Not Found</strong>.<br>
+After digging deeper into Frappe’s <code>authenticate.js</code>, I realized that Frappe is currently interpreting the <code>socket</code> parameter of <code>authenticate_with_frappe(socket, next)</code> as if the incoming connection were an internal URL. The evidence is in the line <code>get_url(socket, "/api/method/frappe.realtime.get_user_info")</code>. When the error is logged, it clearly shows that Frappe is building the URL using the client-supplied <code>Host</code> header — for example:</p>
+<pre><code class="lang-auto">https://firecamp.dev/api/method/frappe.realtime.get_user_info
+
+</code></pre>
+<p>This obviously isn’t the actual domain of my Frappe site; it’s the domain of the testing tool.<br>
+So to allow an external application to use Frappe’s realtime socket functionality in the same way the built-in Frappe frontend does, we need to adjust how Frappe interprets the socket’s host/origin information — or override the logic that constructs the authentication URL?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nikkothari22'><span itemprop='name'>nikkothari22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-09T14:47:39Z' class='post-time'>
+                    December 9, 2025,  2:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-09T14:47:39Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>On the Raven mobile app, we use OAuth bearer tokens to authenticate the user. If you use OAuth or API Key/Secret, it should bypass the host validation - atleast on latest versions of Frappe (latest v15 or above). We fixed this issue when building the mobile app.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

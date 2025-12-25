@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Is it possible to create custom field type for my custom app? - App Development - Frappe Forum</title>
+    <meta name="description" content="Hello everyone, 
+I’m new to Frappe and currently exploring its capabilities. I really like the framework so far, but I’ve noticed that the available field types for DocTypes are somewhat limited for advanced use cases. 
+F&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/is-it-possible-to-create-custom-field-type-for-my-custom-app/157993" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Is it possible to create custom field type for my custom app?&#39;" href="https://discuss.frappe.io/t/is-it-possible-to-create-custom-field-type-for-my-custom-app/157993.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/is-it-possible-to-create-custom-field-type-for-my-custom-app/157993" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/is-it-possible-to-create-custom-field-type-for-my-custom-app/157993" />
+<meta property="og:title" content="Is it possible to create custom field type for my custom app?" />
+<meta name="twitter:title" content="Is it possible to create custom field type for my custom app?" />
+<meta property="og:description" content="Hello everyone,  I’m new to Frappe and currently exploring its capabilities. I really like the framework so far, but I’ve noticed that the available field types for DocTypes are somewhat limited for advanced use cases.  For example, let’s say I want to implement a Query Builder as part of a DocType. Ideally, I’d like to define a custom field type that can:    Render a completely custom UI (custom JS/HTML/React component*).    Interact with the user inside the form.    Store and retrieve data lik..." />
+<meta name="twitter:description" content="Hello everyone,  I’m new to Frappe and currently exploring its capabilities. I really like the framework so far, but I’ve noticed that the available field types for DocTypes are somewhat limited for advanced use cases.  For example, let’s say I want to implement a Query Builder as part of a DocType. Ideally, I’d like to define a custom field type that can:    Render a completely custom UI (custom JS/HTML/React component*).    Interact with the user inside the form.    Store and retrieve data lik..." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:section" content="App Development" />
+<meta property="og:article:section:color" content="0E76BD" />
+<meta property="og:article:tag" content="custom_script" />
+<meta property="og:article:tag" content="frappe" />
+<meta property="og:article:tag" content="customization" />
+<meta property="article:published_time" content="2025-12-14T15:59:38+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Is it possible to create custom field type for my custom app?","mainEntity":{"@type":"Question","name":"Is it possible to create custom field type for my custom app?","text":"Hello everyone,\n\nI’m new to Frappe and currently exploring its capabilities. I really like the framework so far, but I’ve noticed that the available field types for DocTypes are somewhat limited for advanced use cases.\n\nFor example, let’s say I want to implement a Query Builder as part of a DocType.&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-12-14T15:59:37.858Z","author":{"@type":"Person","name":"h3lltronik","url":"https://discuss.frappe.io/u/h3lltronik"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/is-it-possible-to-create-custom-field-type-for-my-custom-app/157993">Is it possible to create custom field type for my custom app?</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/app-development/24" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0E76BD'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>App Development</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/custom_script' class='discourse-tag' rel="tag">custom_script</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
+            <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag' rel="tag">customization</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Is it possible to create custom field type for my custom app?'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/is-it-possible-to-create-custom-field-type-for-my-custom-app/157993'>
+      <meta itemprop='datePublished' content='2025-12-14T15:59:37Z'>
+        <meta itemprop='articleSection' content='App Development'>
+      <meta itemprop='keywords' content='custom_script, frappe, customization'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/h3lltronik'><span itemprop='name'>h3lltronik</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/is-it-possible-to-create-custom-field-type-for-my-custom-app/157993">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-12-14T15:59:38Z' class='post-time'>
+                    December 14, 2025,  3:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-14T15:59:38Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello everyone,</p>
+<p>I’m new to Frappe and currently exploring its capabilities. I really like the framework so far, but I’ve noticed that the available field types for DocTypes are somewhat limited for advanced use cases.</p>
+<p>For example, let’s say I want to implement a <strong>Query Builder</strong> as part of a DocType. Ideally, I’d like to define a <strong>custom field type</strong> that can:</p>
+<ul>
+<li>
+<p>Render a completely custom UI (custom JS/HTML/<em>React component*</em>).</p>
+</li>
+<li>
+<p>Interact with the user inside the form.</p>
+</li>
+<li>
+<p>Store and retrieve data like any other built-in field type.</p>
+</li>
+</ul>
+<p>My goal is to be able to create a new DocType, add a field, and select my custom “Query Builder” type from the list, which would then render its own UI and handle serialization automatically.</p>
+<p>Is it possible to extend Frappe to this level? If so, what would be the recommended approach or entry point for implementing a <strong>custom field type</strong> like this?</p>
+<p>Thank you in advance for any guidance or examples.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/peterg'><span itemprop='name'>peterg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-15T06:16:33Z' class='post-time'>
+                    December 15, 2025,  6:16am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-15T06:16:33Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi there,</p>
+<p>Adding a new field type would be complicated. If you’re just looking to add a new <em>widget</em> on top of an existing field type, which is actually what people want 99% of the time, that’s a lot easier.</p>
+<p>See here for example:</p>
+<aside class="quote" data-post="1" data-topic="147192">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/eugenep/48/55852_2.png" class="avatar">
+    <div class="quote-title__text-content">
+      <a href="https://discuss.frappe.io/t/custom-docfield-type/147192">Custom DocField Type</a> 
+    </div>
+  </div>
+  <blockquote>
+    Hello all 
+There are a few references to creating a custom docfield type on this forum.  However, is there any documentation on this, or is it an undocumented capability? 
+I want to create a custom field type for capturing a HH:MM time value.  The field should have 2 dropdowns one for the HH (00 to 23) and another for the MM (00, 15, 30, 45) separated by a ‘:’.  This new type can then replace my usage of 2 individual Select docfields.
+  </blockquote>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/asieftejani'><span itemprop='name'>asieftejani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-15T06:51:45Z' class='post-time'>
+                    December 15, 2025,  6:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-15T06:51:45Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Also check out <a href="https://frappe.io/insights" class="inline-onebox" rel="noopener nofollow ugc">Open Source Business Analytics Tool | Frappe Insights</a> - might help</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

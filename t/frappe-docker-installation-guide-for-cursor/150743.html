@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Frappe Docker Installation Guide for Cursor - Frappe Framework - Frappe Forum</title>
+    <meta name="description" content="This guide will help you install and set up Frappe Framework with Docker using Cursor IDE. 
+Prerequisites
+System Requirements
+
+Operating System: Linux (Ubuntu 20.04+ recommended), macOS, or Windows with WSL2
+Docker: Vers&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/frappe-docker-installation-guide-for-cursor/150743" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Frappe Docker Installation Guide for Cursor&#39;" href="https://discuss.frappe.io/t/frappe-docker-installation-guide-for-cursor/150743.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/frappe-docker-installation-guide-for-cursor/150743" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/frappe-docker-installation-guide-for-cursor/150743" />
+<meta property="og:title" content="Frappe Docker Installation Guide for Cursor" />
+<meta name="twitter:title" content="Frappe Docker Installation Guide for Cursor" />
+<meta property="og:description" content="This guide will help you install and set up Frappe Framework with Docker using Cursor IDE.  Prerequisites System Requirements  Operating System: Linux (Ubuntu 20.04+ recommended), macOS, or Windows with WSL2 Docker: Version 20.10+ with Docker Compose Cursor IDE: Latest version Git: For cloning repositories Python: 3.8+ (for the installer script) Node.js: 18.x (for frontend development)  Required Software   Docker &amp; Docker Compose  # Install Docker curl -fsSL https://get.docker.com -o get-docker...." />
+<meta name="twitter:description" content="This guide will help you install and set up Frappe Framework with Docker using Cursor IDE.  Prerequisites System Requirements  Operating System: Linux (Ubuntu 20.04+ recommended), macOS, or Windows with WSL2 Docker: Version 20.10+ with Docker Compose Cursor IDE: Latest version Git: For cloning repositories Python: 3.8+ (for the installer script) Node.js: 18.x (for frontend development)  Required Software   Docker &amp; Docker Compose  # Install Docker curl -fsSL https://get.docker.com -o get-docker...." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:tag" content="installation" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="frappe" />
+<meta property="og:article:tag" content="docker" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="3 ❤" />
+<meta property="article:published_time" content="2025-07-27T07:14:20+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Frappe Docker Installation Guide for Cursor","mainEntity":{"@type":"Question","name":"Frappe Docker Installation Guide for Cursor","text":"This guide will help you install and set up Frappe Framework with Docker using Cursor IDE.\n\n<a name=\"prerequisites-1\" class=\"anchor\" href=\"#prerequisites-1\"><\/a>Prerequisites\n\n<a name=\"system-requirements-2\" class=\"anchor\" href=\"#system-requirements-2\"><\/a>System Requirements\n\nOperating System: Linux (Ubuntu 20.04+ recommended), macOS, or Windows with WSL2\n\nDocker: Version 20.10+ with Docker Compose\n\nCursor IDE: Latest version\n\nGit: For cloning repos&hellip;","upvoteCount":3,"answerCount":0,"datePublished":"2025-07-27T07:14:19.771Z","author":{"@type":"Person","name":"Safvan_Ph","url":"https://discuss.frappe.io/u/Safvan_Ph"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/frappe-docker-installation-guide-for-cursor/150743">Frappe Docker Installation Guide for Cursor</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/installation' class='discourse-tag' rel="tag">installation</a>, 
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
+            <a href='https://discuss.frappe.io/tag/docker' class='discourse-tag' rel="tag">docker</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Frappe Docker Installation Guide for Cursor'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/frappe-docker-installation-guide-for-cursor/150743'>
+      <meta itemprop='datePublished' content='2025-07-27T07:14:19Z'>
+        <meta itemprop='articleSection' content='Frappe Framework'>
+      <meta itemprop='keywords' content='installation, erpnext, frappe, docker'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Safvan_Ph'><span itemprop='name'>Safvan_Ph</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/frappe-docker-installation-guide-for-cursor/150743">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-07-27T07:14:20Z' class='post-time'>
+                    July 27, 2025,  7:14am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-27T07:14:20Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This guide will help you install and set up Frappe Framework with Docker using Cursor IDE.</p>
+<h2><a name="prerequisites-1" class="anchor" href="#prerequisites-1"></a>Prerequisites</h2>
+<h3><a name="system-requirements-2" class="anchor" href="#system-requirements-2"></a>System Requirements</h3>
+<ul>
+<li><strong>Operating System</strong>: Linux (Ubuntu 20.04+ recommended), macOS, or Windows with WSL2</li>
+<li><strong>Docker</strong>: Version 20.10+ with Docker Compose</li>
+<li><strong>Cursor IDE</strong>: Latest version</li>
+<li><strong>Git</strong>: For cloning repositories</li>
+<li><strong>Python</strong>: 3.8+ (for the installer script)</li>
+<li><strong>Node.js</strong>: 18.x (for frontend development)</li>
+</ul>
+<h3><a name="required-software-3" class="anchor" href="#required-software-3"></a>Required Software</h3>
+<ol>
+<li>
+<p><strong>Docker &amp; Docker Compose</strong></p>
+<pre data-code-wrap="bash"><code class="lang-bash"># Install Docker
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+# Add user to docker group
+sudo usermod -aG docker $USER
+
+# Install Docker Compose
+sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+</code></pre>
+</li>
+<li>
+<p><strong>Python Dependencies</strong></p>
+<pre data-code-wrap="bash"><code class="lang-bash"># Install Python 3.8+
+sudo apt update
+sudo apt install python3 python3-pip python3-venv
+
+# Install bench CLI
+sudo pip3 install frappe-bench
+</code></pre>
+</li>
+<li>
+<p><strong>Node.js Setup</strong></p>
+<pre data-code-wrap="bash"><code class="lang-bash"># Install Node Version Manager (nvm)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+
+# Reload shell configuration
+source ~/.bashrc
+
+# Install Node.js 18 (recommended for Frappe)
+nvm install 18
+nvm use 18
+nvm alias default 18
+
+# Verify installation
+node --version  # Should show v18.x.x
+npm --version   # Should show 9.x.x or higher
+
+# Install Yarn (used by Frappe)
+npm install -g yarn
+</code></pre>
+</li>
+</ol>
+<h2><a name="installation-steps-4" class="anchor" href="#installation-steps-4"></a>Installation Steps</h2>
+<h3><a name="step-1-clone-the-repository-5" class="anchor" href="#step-1-clone-the-repository-5"></a>Step 1: Clone the Repository</h3>
+<pre data-code-wrap="bash"><code class="lang-bash"># Create your development directory
+mkdir frappe-development
+cd frappe-development
+
+# Clone the frappe-docker repository
+git clone https://github.com/frappe/frappe_docker.git
+cd frappe_docker
+</code></pre>
+<h3><a name="step-2-configure-apps-optional-6" class="anchor" href="#step-2-configure-apps-optional-6"></a>Step 2: Configure Apps (Optional)</h3>
+<p>Create or modify <code>apps.json</code> to specify which Frappe apps to install:</p>
+<pre data-code-wrap="json"><code class="lang-json">[
+  {
+    "url": "https://github.com/frappe/erpnext.git",
+    "branch": "version-15"
+  },
+  {
+    "url": "https://github.com/frappe/frappe.git",
+    "branch": "version-15"
+  }
+]
+</code></pre>
+<h3><a name="step-3-run-the-installer-script-7" class="anchor" href="#step-3-run-the-installer-script-7"></a>Step 3: Run the Installer Script</h3>
+<p>Use the provided installer script with your preferred options:</p>
+<pre data-code-wrap="bash"><code class="lang-bash"># Basic installation
+python3 installer.py
+
+# Custom installation with specific options
+python3 installer.py \
+  --bench-name my-frappe-bench \
+  --site-name myapp.localhost \
+  --admin-password mypassword \
+  --db-type mariadb \
+  --frappe-branch version-15 \
+  --verbose
+</code></pre>
+<h3><a name="step-4-start-docker-services-8" class="anchor" href="#step-4-start-docker-services-8"></a>Step 4: Start Docker Services</h3>
+<pre data-code-wrap="bash"><code class="lang-bash"># Start all services
+docker-compose up -d
+
+# Check service status
+docker-compose ps
+</code></pre>
+<h3><a name="step-5-initialize-the-site-9" class="anchor" href="#step-5-initialize-the-site-9"></a>Step 5: Initialize the Site</h3>
+<pre data-code-wrap="bash"><code class="lang-bash"># Navigate to your bench directory
+cd frappe-bench
+
+# Create a new site
+bench new-site myapp.localhost \
+  --db-host mariadb \
+  --db-type mariadb \
+  --db-root-password 123 \
+  --admin-password admin
+
+# Install apps
+bench --site myapp.localhost install-app erpnext
+</code></pre>
+<h2><a name="vs-codecursor-development-setup-10" class="anchor" href="#vs-codecursor-development-setup-10"></a>VS Code/Cursor Development Setup</h2>
+<h3><a name="step-6-configure-cursor-for-development-11" class="anchor" href="#step-6-configure-cursor-for-development-11"></a>Step 6: Configure Cursor for Development</h3>
+<p>The repository includes pre-configured VS Code/Cursor settings for optimal development experience:</p>
+<h4><a name="h-1-python-interpreter-configuration-12" class="anchor" href="#h-1-python-interpreter-configuration-12"></a>1. <strong>Python Interpreter Configuration</strong></h4>
+<p>Create <code>.vscode/settings.json</code>:</p>
+<pre data-code-wrap="json"><code class="lang-json">{
+  "python.defaultInterpreterPath": "${workspaceFolder}/frappe-bench/env/bin/python"
+}
+</code></pre>
+<h4><a name="h-2-recommended-extensions-13" class="anchor" href="#h-2-recommended-extensions-13"></a>2. <strong>Recommended Extensions</strong></h4>
+<p>Create <code>.vscode/extensions.json</code>:</p>
+<pre data-code-wrap="json"><code class="lang-json">{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-vscode.vscode-json",
+    "redhat.vscode-yaml",
+    "ms-azuretools.vscode-docker"
+  ]
+}
+</code></pre>
+<h4><a name="h-3-debug-configurations-14" class="anchor" href="#h-3-debug-configurations-14"></a>3. <strong>Debug Configurations</strong></h4>
+<p>Create <code>.vscode/launch.json</code> for debugging Frappe applications:</p>
+<pre data-code-wrap="json"><code class="lang-json">{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Bench Web",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/frappe-bench/apps/frappe/frappe/utils/bench_helper.py",
+      "args": [
+        "frappe",
+        "serve",
+        "--port",
+        "8000",
+        "--noreload",
+        "--nothreading"
+      ],
+      "pythonPath": "${workspaceFolder}/frappe-bench/env/bin/python",
+      "cwd": "${workspaceFolder}/frappe-bench/sites",
+      "env": {
+        "DEV_SERVER": "1"
+      }
+    },
+    {
+      "name": "Bench Short Worker",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/frappe-bench/apps/frappe/frappe/utils/bench_helper.py",
+      "args": ["frappe", "worker", "--queue", "short"],
+      "pythonPath": "${workspaceFolder}/frappe-bench/env/bin/python",
+      "cwd": "${workspaceFolder}/frappe-bench/sites",
+      "env": {
+        "DEV_SERVER": "1"
+      }
+    },
+    {
+      "name": "Bench Long Worker",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/frappe-bench/apps/frappe/frappe/utils/bench_helper.py",
+      "args": ["frappe", "worker", "--queue", "long"],
+      "pythonPath": "${workspaceFolder}/frappe-bench/env/bin/python",
+      "cwd": "${workspaceFolder}/frappe-bench/sites",
+      "env": {
+        "DEV_SERVER": "1"
+      }
+    }
+  ]
+}
+</code></pre>
+<h3><a name="step-7-install-recommended-extensions-in-cursor-15" class="anchor" href="#step-7-install-recommended-extensions-in-cursor-15"></a>Step 7: Install Recommended Extensions in Cursor</h3>
+<ol>
+<li><strong>Python Extension</strong>: For Python language support</li>
+<li><strong>Pylance</strong>: For advanced Python language features</li>
+<li><strong>Docker Extension</strong>: For Docker container management</li>
+<li><strong>YAML Extension</strong>: For docker-compose.yml files</li>
+<li><strong>JSON Extension</strong>: For configuration files</li>
+</ol>
+<h3><a name="step-8-development-workflow-in-cursor-16" class="anchor" href="#step-8-development-workflow-in-cursor-16"></a>Step 8: Development Workflow in Cursor</h3>
+<h4><a name="using-debug-configurations-17" class="anchor" href="#using-debug-configurations-17"></a><strong>Using Debug Configurations</strong></h4>
+<ol>
+<li>Open the Debug panel in Cursor (Ctrl+Shift+D)</li>
+<li>Select “Bench Web” configuration</li>
+<li>Press F5 to start debugging</li>
+<li>Set breakpoints in your Python code</li>
+<li>Use the debug console for interactive debugging</li>
+</ol>
+<h4><a name="running-bench-commands-18" class="anchor" href="#running-bench-commands-18"></a><strong>Running Bench Commands</strong></h4>
+<p>Use Cursor’s integrated terminal:</p>
+<pre data-code-wrap="bash"><code class="lang-bash"># Execute bench commands in container
+docker-compose exec frappe-python bench --site myapp.localhost migrate
+
+# Access container shell
+docker-compose exec frappe-python bash
+
+# View logs
+docker-compose logs -f frappe-python
+</code></pre>
+<h4><a name="code-navigation-and-intellisense-19" class="anchor" href="#code-navigation-and-intellisense-19"></a><strong>Code Navigation and IntelliSense</strong></h4>
+<ul>
+<li><strong>Go to Definition</strong>: Ctrl+Click on any function/class</li>
+<li><strong>Find All References</strong>: Shift+F12</li>
+<li><strong>Auto-completion</strong>: Available for Python, JavaScript, and HTML</li>
+<li><strong>Error Detection</strong>: Real-time syntax and type checking</li>
+</ul>
+<h2><a name="configuration-options-20" class="anchor" href="#configuration-options-20"></a>Configuration Options</h2>
+<h3><a name="installer-script-parameters-21" class="anchor" href="#installer-script-parameters-21"></a>Installer Script Parameters</h3>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Default</th>
+<th>Recommended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--bench-name</code></td>
+<td>Bench directory name</td>
+<td><code>frappe-bench</code></td>
+<td><code>frappe-bench</code></td>
+</tr>
+<tr>
+<td><code>--site-name</code></td>
+<td>Site name (must end with .localhost)</td>
+<td><code>development.localhost</code></td>
+<td><code>development.localhost</code></td>
+</tr>
+<tr>
+<td><code>--admin-password</code></td>
+<td>Admin password for the site</td>
+<td><code>admin</code></td>
+<td><code>admin</code></td>
+</tr>
+<tr>
+<td><code>--db-type</code></td>
+<td>Database type (mariadb/postgres)</td>
+<td><code>mariadb</code></td>
+<td><code>mariadb</code></td>
+</tr>
+<tr>
+<td><code>--frappe-branch</code></td>
+<td>Frappe branch to use</td>
+<td><code>version-15</code></td>
+<td><code>version-15</code></td>
+</tr>
+<tr>
+<td><code>--apps-json</code></td>
+<td>Path to apps configuration</td>
+<td><code>apps-example.json</code></td>
+<td><code>apps-example.json</code></td>
+</tr>
+<tr>
+<td><code>--py-version</code></td>
+<td>Python version</td>
+<td>Not set</td>
+<td><code>3.10</code></td>
+</tr>
+<tr>
+<td><code>--node-version</code></td>
+<td>Node.js version</td>
+<td>Not set</td>
+<td><code>18</code></td>
+</tr>
+<tr>
+<td><code>--verbose</code></td>
+<td>Enable verbose output</td>
+<td>False</td>
+<td><code>True</code></td>
+</tr>
+</tbody>
+</table>
+</div><h3><a name="environment-variables-22" class="anchor" href="#environment-variables-22"></a>Environment Variables</h3>
+<pre data-code-wrap="bash"><code class="lang-bash"># Set Python version
+export PYENV_VERSION=3.10
+
+# Set Node version
+export NVM_VERSION=18
+</code></pre>
+<h2><a name="docker-services-23" class="anchor" href="#docker-services-23"></a>Docker Services</h2>
+<p>The installation sets up the following Docker services:</p>
+<ul>
+<li><strong>frappe-python</strong>: Frappe application server</li>
+<li><strong>frappe-nginx</strong>: Web server</li>
+<li><strong>mariadb</strong>: Database server</li>
+<li><strong>redis-cache</strong>: Redis cache</li>
+<li><strong>redis-queue</strong>: Redis queue</li>
+<li><strong>redis-socketio</strong>: Redis for <a href="http://Socket.IO" rel="noopener nofollow ugc">Socket.IO</a></li>
+</ul>
+<h2><a name="development-workflow-24" class="anchor" href="#development-workflow-24"></a>Development Workflow</h2>
+<h3><a name="starting-development-25" class="anchor" href="#starting-development-25"></a>Starting Development</h3>
+<pre data-code-wrap="bash"><code class="lang-bash"># Start all services
+docker-compose up -d
+
+# View logs
+docker-compose logs -f frappe-python
+</code></pre>
+<h3><a name="making-code-changes-26" class="anchor" href="#making-code-changes-26"></a>Making Code Changes</h3>
+<ol>
+<li><strong>Edit files in Cursor</strong>: All Frappe files are mounted as volumes</li>
+<li><strong>Auto-reload</strong>: Frappe automatically reloads on file changes</li>
+<li><strong>Bench commands</strong>: Run bench commands inside the container</li>
+<li><strong>Debugging</strong>: Use Cursor’s debug configurations for step-by-step debugging</li>
+</ol>
+<pre data-code-wrap="bash"><code class="lang-bash"># Execute bench commands
+docker-compose exec frappe-python bench --site myapp.localhost migrate
+</code></pre>
+<h3><a name="stopping-services-27" class="anchor" href="#stopping-services-27"></a>Stopping Services</h3>
+<pre data-code-wrap="bash"><code class="lang-bash"># Stop all services
+docker-compose down
+
+# Stop and remove volumes (WARNING: This will delete data)
+docker-compose down -v
+</code></pre>
+<h2><a name="troubleshooting-28" class="anchor" href="#troubleshooting-28"></a>Troubleshooting</h2>
+<h3><a name="common-issues-29" class="anchor" href="#common-issues-29"></a>Common Issues</h3>
+<ol>
+<li>
+<p><strong>Port Conflicts</strong></p>
+<pre data-code-wrap="bash"><code class="lang-bash"># Check if ports are in use
+sudo netstat -tulpn | grep :80
+sudo netstat -tulpn | grep :8000
+</code></pre>
+</li>
+<li>
+<p><strong>Permission Issues</strong></p>
+<pre data-code-wrap="bash"><code class="lang-bash"># Fix Docker permissions
+sudo chown -R $USER:$USER .
+</code></pre>
+</li>
+<li>
+<p><strong>Database Connection Issues</strong></p>
+<pre data-code-wrap="bash"><code class="lang-bash"># Check database status
+docker-compose logs mariadb
+
+# Reset database
+docker-compose down -v
+docker-compose up -d
+</code></pre>
+</li>
+<li>
+<p><strong>Memory Issues</strong></p>
+<pre data-code-wrap="bash"><code class="lang-bash"># Increase Docker memory limit
+# Edit Docker Desktop settings or increase system memory
+</code></pre>
+</li>
+<li>
+<p><strong>Cursor/VS Code Issues</strong></p>
+<pre data-code-wrap="bash"><code class="lang-bash"># Reload Cursor window
+Ctrl+Shift+P -&gt; "Developer: Reload Window"
+
+# Reset Python interpreter
+Ctrl+Shift+P -&gt; "Python: Select Interpreter"
+</code></pre>
+</li>
+</ol>
+<h3><a name="logs-and-debugging-30" class="anchor" href="#logs-and-debugging-30"></a>Logs and Debugging</h3>
+<pre data-code-wrap="bash"><code class="lang-bash"># View all logs
+docker-compose logs
+
+# View specific service logs
+docker-compose logs frappe-python
+
+# Follow logs in real-time
+docker-compose logs -f
+</code></pre>
+<h2><a name="accessing-your-application-31" class="anchor" href="#accessing-your-application-31"></a>Accessing Your Application</h2>
+<ul>
+<li><strong>Frappe/ERPNext</strong>: <a href="http://localhost:8000" rel="noopener nofollow ugc">http://localhost:8000</a></li>
+<li><strong>Site</strong>: <a href="http://myapp.localhost:8000" rel="noopener nofollow ugc">http://myapp.localhost:8000</a></li>
+<li><strong>Admin</strong>: <a href="http://myapp.localhost:8000/app" rel="noopener nofollow ugc">http://myapp.localhost:8000/app</a></li>
+</ul>
+<h3><a name="default-credentials-32" class="anchor" href="#default-credentials-32"></a>Default Credentials</h3>
+<ul>
+<li><strong>Username</strong>: Administrator</li>
+<li><strong>Password</strong>: admin (or your custom password)</li>
+</ul>
+<h2><a name="advanced-configuration-33" class="anchor" href="#advanced-configuration-33"></a>Advanced Configuration</h2>
+<h3><a name="custom-docker-compose-34" class="anchor" href="#custom-docker-compose-34"></a>Custom Docker Compose</h3>
+<p>Create <code>docker-compose.override.yml</code> for custom configurations:</p>
+<pre data-code-wrap="yaml"><code class="lang-yaml">version: "3.7"
+services:
+  frappe-python:
+    environment:
+      - PYTHONPATH=/workspace/development/frappe-bench/apps
+    volumes:
+      - ./custom-apps:/workspace/development/frappe-bench/apps/custom-apps
+</code></pre>
+<h3><a name="multiple-sites-35" class="anchor" href="#multiple-sites-35"></a>Multiple Sites</h3>
+<pre data-code-wrap="bash"><code class="lang-bash"># Create additional sites
+bench new-site site2.localhost --db-host mariadb --db-type mariadb --db-root-password 123 --admin-password admin
+bench --site site2.localhost install-app erpnext
+</code></pre>
+<h2><a name="best-practices-36" class="anchor" href="#best-practices-36"></a>Best Practices</h2>
+<ol>
+<li>
+<p><strong>Backup Regularly</strong></p>
+<pre data-code-wrap="bash"><code class="lang-bash"># Backup database
+bench --site myapp.localhost backup
+</code></pre>
+</li>
+<li>
+<p><strong>Use Version Control</strong></p>
+<pre data-code-wrap="bash"><code class="lang-bash"># Initialize git repository
+git init
+git add .
+git commit -m "Initial Frappe setup"
+</code></pre>
+</li>
+<li>
+<p><strong>Environment Management</strong></p>
+<pre data-code-wrap="bash"><code class="lang-bash"># Create environment-specific configurations
+cp .env.example .env.production
+</code></pre>
+</li>
+<li>
+<p><strong>Cursor-Specific Tips</strong></p>
+<ul>
+<li>Use the integrated terminal for all Docker commands</li>
+<li>Leverage debug configurations for step-by-step debugging</li>
+<li>Use the file explorer to navigate between apps</li>
+<li>Enable auto-save for seamless development</li>
+</ul>
+</li>
+</ol>
+<h2><a name="support-and-resources-37" class="anchor" href="#support-and-resources-37"></a>Support and Resources</h2>
+<ul>
+<li><strong>Official Documentation</strong>: <a href="https://frappeframework.com/docs" class="inline-onebox" rel="noopener nofollow ugc">Introduction</a></li>
+<li><strong>GitHub Repository</strong>: <a href="https://github.com/frappe/frappe_docker" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/frappe_docker: Docker images for production and development setups of the Frappe framework and ERPNext</a></li>
+<li><strong>Community Forum</strong>: <a href="https://discuss.frappe.io">https://discuss.frappe.io</a></li>
+<li><strong>VS Code/Cursor Development</strong>: <a href="https://github.com/frappe/frappe_docker/blob/main/docs/development.md" class="inline-onebox" rel="noopener nofollow ugc">frappe_docker/docs/development.md at main · frappe/frappe_docker · GitHub</a></li>
+</ul>
+<h2><a name="quick-start-commands-38" class="anchor" href="#quick-start-commands-38"></a>Quick Start Commands</h2>
+<pre data-code-wrap="bash"><code class="lang-bash"># Complete setup in one go
+git clone https://github.com/frappe/frappe_docker.git
+cd frappe_docker
+python3 installer.py --verbose --node-version 18 --py-version 3.10
+docker-compose up -d
+
+# Open in Cursor
+cursor .
+</code></pre>
+<p>Your Frappe Docker environment is now ready for development in Cursor with full debugging capabilities!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

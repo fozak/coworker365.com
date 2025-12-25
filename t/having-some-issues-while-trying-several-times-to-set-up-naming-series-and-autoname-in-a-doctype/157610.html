@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Having some issues while trying several times to set up naming_series and autoname in a DocType - App Development - Frappe Forum</title>
+    <meta name="description" content="Hi all 
+I tell you what happened to me so you may be able to replicate and work something out of it. There are several issues to comment, I’ll try to explain my best what I did (I’m newbie, so take this with a grain of s&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/having-some-issues-while-trying-several-times-to-set-up-naming-series-and-autoname-in-a-doctype/157610" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Having some issues while trying several times to set up naming_series and autoname in a DocType&#39;" href="https://discuss.frappe.io/t/having-some-issues-while-trying-several-times-to-set-up-naming-series-and-autoname-in-a-doctype/157610.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/having-some-issues-while-trying-several-times-to-set-up-naming-series-and-autoname-in-a-doctype/157610" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/having-some-issues-while-trying-several-times-to-set-up-naming-series-and-autoname-in-a-doctype/157610" />
+<meta property="og:title" content="Having some issues while trying several times to set up naming_series and autoname in a DocType" />
+<meta name="twitter:title" content="Having some issues while trying several times to set up naming_series and autoname in a DocType" />
+<meta property="og:description" content="Hi all  I tell you what happened to me so you may be able to replicate and work something out of it. There are several issues to comment, I’ll try to explain my best what I did (I’m newbie, so take this with a grain of salt)  So, I installed latest development branch and updated as of 03/12//2025 and it’s working. I’m also following Frappe Framework App Development Bootcamp - Day 2 (Dubai, 2024), but trying a bit of new things, this is my second time following such tutorial, doing things in Span..." />
+<meta name="twitter:description" content="Hi all  I tell you what happened to me so you may be able to replicate and work something out of it. There are several issues to comment, I’ll try to explain my best what I did (I’m newbie, so take this with a grain of salt)  So, I installed latest development branch and updated as of 03/12//2025 and it’s working. I’m also following Frappe Framework App Development Bootcamp - Day 2 (Dubai, 2024), but trying a bit of new things, this is my second time following such tutorial, doing things in Span..." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:section" content="App Development" />
+<meta property="og:article:section:color" content="0E76BD" />
+<meta property="article:published_time" content="2025-12-03T13:11:11+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Having some issues while trying several times to set up naming_series and autoname in a DocType","mainEntity":{"@type":"Question","name":"Having some issues while trying several times to set up naming_series and autoname in a DocType","text":"Hi all\n\nI tell you what happened to me so you may be able to replicate and work something out of it. There are several issues to comment, I’ll try to explain my best what I did (I’m newbie, so take this with a grain of salt)\n\nSo, I installed latest development branch and updated as of 03/12//2025 an&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-12-03T13:11:11.066Z","author":{"@type":"Person","name":"ayito","url":"https://discuss.frappe.io/u/ayito"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/having-some-issues-while-trying-several-times-to-set-up-naming-series-and-autoname-in-a-doctype/157610">Having some issues while trying several times to set up naming_series and autoname in a DocType</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/app-development/24" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0E76BD'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>App Development</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Having some issues while trying several times to set up naming_series and autoname in a DocType'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/having-some-issues-while-trying-several-times-to-set-up-naming-series-and-autoname-in-a-doctype/157610'>
+      <meta itemprop='datePublished' content='2025-12-03T13:11:11Z'>
+        <meta itemprop='articleSection' content='App Development'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ayito'><span itemprop='name'>ayito</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/having-some-issues-while-trying-several-times-to-set-up-naming-series-and-autoname-in-a-doctype/157610">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-12-03T13:11:11Z' class='post-time'>
+                    December 3, 2025,  1:11pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-03T13:11:11Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi all<br>
+I tell you what happened to me so you may be able to replicate and work something out of it. There are several issues to comment, I’ll try to explain my best what I did (I’m newbie, so take this with a grain of salt)</p>
+<p>So, I installed latest development branch and updated as of 03/12//2025 and it’s working. I’m also following Frappe Framework App Development Bootcamp - Day 2 (Dubai, 2024), but trying a bit of new things, this is my second time following such tutorial, doing things in Spanish, my mother language.</p>
+<p>So I try to set up a field several times in frappe desk Build DocType, getting frustrated and deleting and doing it all over again, trying to get “autoname”: “naming_series:” the right way, after several tries, 1st try was “fieldtype”: “Link” then deleted it and again the 2nd try also “fieldtype”: “Link” and the 3rd try I configure it as “fieldtype”: “Select”, when I go to the editor I got to read the json and found the field like this:<br>
+{<br>
+“default”: “1lvtj3rpd4”,<br>
+“fieldname”: “naming_series”,<br>
+“fieldtype”: “Select”,<br>
+“hidden”: 1,<br>
+“label”: “N\u00famero de Solicitud”,<br>
+“<strong>link_filters</strong>”: “[[“Document Naming Rule”,“name”,“=”,“<strong>1lvtj3rpd4</strong>”]]”,<br>
+“options”: “1lvtj3rpd4”,<br>
+“read_only”: 1,<br>
+“reqd”: 1<br>
+}</p>
+<p>So I can have “autoname”: “naming_series:”. This is good, the problem, I guess is that I didn’t get it right the first time, in fact, I tried to set up for 3 times this to work, creating Document Naming Rules each time and assigning them to my field, first I triead to set it up as “fieldtype”: “Link”, it didn’t work the way I expected, I got frustrated and deleted the Document Naming Rule and created new ones, thinking the problem was there. Then I tried the one it’s copied above with “fieldtype”: “Select”. But I got in the json the “link_filters”: “[[“Document Naming Rule”,“name”,“=”,“1lvtj3rpd4”]]”, and I think this doesn’t make sense for a fieldtype: “Select”.</p>
+<p>So after reading the docs, asking serveral ai’s, etc… finally I think I got a clue:</p>
+<p>In the mariadb console, I describe the database table of the doctype with:</p>
+<p>MariaDB [_a27fa9b18cffdd35]&gt; DESC <code>tabSolicitud de reserva</code>;</p>
+<p>±------------------±-------------±-----±----±-----------±------+<br>
+| Field             | Type         | Null | <strong>Key</strong> | <strong>Default</strong>    | Extra |<br>
+±------------------±-------------±-----±----±-----------±------+<br>
+| name              | varchar(140) | NO   | PRI | NULL       |       |<br>
+| creation          | datetime(6)  | YES  | MUL | NULL       |       |<br>
+| modified          | datetime(6)  | YES  |     | NULL       |       |<br>
+| modified_by       | varchar(140) | YES  |     | NULL       |       |<br>
+| owner             | varchar(140) | YES  |     | NULL       |       |<br>
+| docstatus         | tinyint(4)   | NO   |     | 0          |       |<br>
+| idx               | int(11)      | NO   |     | 0          |       |<br>
+| _user_tags        | text         | YES  |     | NULL       |       |<br>
+| _comments         | text         | YES  |     | NULL       |       |<br>
+| _assign           | text         | YES  |     | NULL       |       |<br>
+| _liked_by         | text         | YES  |     | NULL       |       |<br>
+| nombre_cliente    | varchar(140) | YES  |     | NULL       |       |<br>
+| telefono_contacto | varchar(140) | YES  |     | NULL       |       |<br>
+| fecha_salida      | datetime(6)  | YES  |     | NULL       |       |<br>
+| estado            | varchar(140) | YES  |     | NULL       |       |<br>
+| direccion_inicio  | text         | YES  |     | NULL       |       |<br>
+| <strong>naming_series</strong>     | varchar(140) | YES  |     | <strong>73f33ve6g4</strong> |       |<br>
+| vehiculo          | varchar(140) | YES  |     | NULL       |       |<br>
+| <strong>referencia</strong>        | varchar(140) | YES  | <strong>UNI</strong> | <strong>73f33ve6g4</strong> |       |<br>
+±------------------±-------------±-----±----±-----------±------+</p>
+<p>The Field referencia, was one of my tries that I deleted (I didn’t named it naming_series, but referencia, my bad!), but remained in the table, when I try to create a new “Solicitud de reserva” in the front end, the first time works as I would expect, creating the record with “ID P-2025-12-0003”, but the second time it throws an error “referencia debe ser único” (“referencia has to be unique”), I deleted this field in the front end and I couldn’t understand what was happening at first → got frustrated!, (it was still in the table with Key UNI).</p>
+<p>Also on one of my tries I did name the field “naming_series”, didn’t work, deleted it and on the latest try I also created the Field “naming_series” since everything points that it’s the name it has to be. But the nagging point here is that I couldn’t get read of the default 73f33ve6g4 no matter how many things I tried, deleting the cache with bench --site irfan.cabs clear-cache or bench --site irfan.cabs clear-website-cache, also trying a different browser, just to make sure it was not a browser cache thing. Nothing seems to work. This code 73f33ve6g4 belonged to a previous Document Naming Rule that was also deleted, It was nowhere to be found when I searched the database with SELECT in different tables, like:</p>
+<p>MariaDB [_a27fa9b18cffdd35]&gt; SELECT * FROM <code>tabDocument Naming Rule</code> WHERE <code>name</code> = ‘73f33ve6g4’;</p>
+<p>Makes sense since I’ve deleted that Document Naming Rule.</p>
+<p>So I deleted again the field (in frappe desk Build DocType) and also made sure that those columns where dropped from the table:<br>
+MariaDB [_a27fa9b18cffdd35]&gt; ALTER TABLE <code>tabSolicitud de reserva</code> DROP COLUMN naming_series;<br>
+MariaDB [_a27fa9b18cffdd35]&gt; ALTER TABLE <code>tabSolicitud de reserva</code> DROP COLUMN referencia;</p>
+<p>deleting the field while working in the browser in frappe desk Build DocType is just not enough.</p>
+<p>Now there is no “referencia” nor “naming_series” in the json file of the doctype, neither it is in table DESC. I think it is clean now and I can create the field again with nothing there from past tries to fear.</p>
+<p>Now in the json file I get:<br>
+…<br>
+“autoname”: “naming_series:”<br>
+…</p>
+<p>…</p>
+<p>{<br>
+“default”: “1lvtj3rpd4”,<br>
+“fieldname”: “naming_series”,<br>
+“fieldtype”: “Select”,<br>
+“hidden”: 1,<br>
+“label”: "C\u00f3digo ",<br>
+“options”: “1lvtj3rpd4”,<br>
+“read_only”: 1,<br>
+“reqd”: 1<br>
+}<br>
+…</p>
+<p>But I still get in the DESC of the table this:</p>
+<p>…<br>
+| naming_series     | varchar(140) | YES  |     | 73f33ve6g4 |       |</p>
+<p>…</p>
+<p>The nagging reference to the deleted Document naming rule 73f33ve6g4, while it should be the latest and new created Document naming rule 1lvtj3rpd4.</p>
+<p>Then I executed this code in mariadb:</p>
+<p>MariaDB [_a27fa9b18cffdd35]&gt; ALTER TABLE <code>tabSolicitud de reserva</code><br>
+→ ALTER COLUMN naming_series DROP DEFAULT;<br>
+Query OK, 0 rows affected (0.020 sec)<br>
+Records: 0  Duplicates: 0  Warnings: 0</p>
+<p>MariaDB [_a27fa9b18cffdd35]&gt; UPDATE <code>tabSolicitud de reserva</code> SET naming_series = NULL WHERE naming_series = ‘73f33ve6g4’;<br>
+Query OK, 0 rows affected (0.001 sec)<br>
+Rows matched: 0  Changed: 0  Warnings: 0</p>
+<p>MariaDB [_a27fa9b18cffdd35]&gt; DESC <code>tabSolicitud de reserva</code>;</p>
+<p>And finally got:</p>
+<p>| naming_series     | varchar(140) | YES  |     | NULL    |       |</p>
+<p>went to the front end, check the naming_series field and in options and in default was the right code 1lvtj3rpd4, make a change in the label text just to notice the front end of the changes and saved it.</p>
+<p>went back to mariadb console and there it was!</p>
+<p>| naming_series     | varchar(140) | YES  |     | 73f33ve6g4 |       |</p>
+<p>the 73f33ve6g4 that I can’t get rid off.</p>
+<p>So, I just don’t know what is going on. Time for a bit of brute force I guess.</p>
+<p>(frappe-env) ubuntu@frappe-dev:~/frappe-bench$ mysqldump -u root -p _a27fa9b18cffdd35 tabSolicitud\ de\ reserva &gt; solicitud_reserva_backup.sql</p>
+<p>and modified the line so it reads with the default I want to get:</p>
+<p><code>naming_series</code> varchar(140) DEFAULT ‘1lvtj3rpd4’</p>
+<p>Here’s the full sql:</p>
+<p>DROP TABLE IF EXISTS <code>tabSolicitud de reserva</code>;<br>
+/*!40101 SET <span class="mention">@saved_cs_client</span>     = @<span class="mention">@character_set_client</span> <em>/;<br>
+/</em>!40101 SET character_set_client = utf8mb4 <em>/;<br>
+CREATE TABLE <code>tabSolicitud de reserva</code> (<br>
+<code>name</code> varchar(140) NOT NULL,<br>
+<code>creation</code> datetime(6) DEFAULT NULL,<br>
+<code>modified</code> datetime(6) DEFAULT NULL,<br>
+<code>modified_by</code> varchar(140) DEFAULT NULL,<br>
+<code>owner</code> varchar(140) DEFAULT NULL,<br>
+<code>docstatus</code> tinyint(4) NOT NULL DEFAULT 0,<br>
+<code>idx</code> int(11) NOT NULL DEFAULT 0,<br>
+<code>_user_tags</code> text DEFAULT NULL,<br>
+<code>_comments</code> text DEFAULT NULL,<br>
+<code>_assign</code> text DEFAULT NULL,<br>
+<code>_liked_by</code> text DEFAULT NULL,<br>
+<code>nombre_cliente</code> varchar(140) DEFAULT NULL,<br>
+<code>telefono_contacto</code> varchar(140) DEFAULT NULL,<br>
+<code>fecha_salida</code> datetime(6) DEFAULT NULL,<br>
+<code>estado</code> varchar(140) DEFAULT NULL,<br>
+<code>direccion_inicio</code> text DEFAULT NULL,<br>
+<code>vehiculo</code> varchar(140) DEFAULT NULL,<br>
+<code>naming_series</code> varchar(140) DEFAULT ‘1lvtj3rpd4’,<br>
+PRIMARY KEY (<code>name</code>),<br>
+KEY <code>creation</code> (<code>creation</code>)<br>
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;<br>
+/</em>!40101 SET character_set_client = <span class="mention">@saved_cs_client</span> */;</p>
+<p>and in mariadb console:</p>
+<p>MariaDB [_a27fa9b18cffdd35]&gt; DROP TABLE <code>tabSolicitud de reserva</code>;</p>
+<p>Then I import the modified sql with:</p>
+<p>(frappe-env) ubuntu@frappe-dev:~/frappe-bench$ mysql -u root -p _a27fa9b18cffdd35 &lt; solicitud_reserva_backup.sql</p>
+<p>and finally in mariadb console I can read:</p>
+<p>MariaDB [_a27fa9b18cffdd35]&gt; DESC <code>tabSolicitud de reserva</code>;<br>
+±------------------±-------------±-----±----±-----------±------+<br>
+| Field             | Type         | Null | Key | Default    | Extra |<br>
+±------------------±-------------±-----±----±-----------±------+<br>
+…</p>
+<p>…<br>
+| naming_series     | varchar(140) | YES  |     | 1lvtj3rpd4 |       |<br>
+±------------------±-------------±-----±----±-----------±------+</p>
+<p>This 1lvtj3rpd4 is the reference to the Document naming rule I wanted to use.</p>
+<p>Now is working when I add new records I get: P-2025-12-0004, P-2025-12-0005, P-2025-12-0006,…</p>
+<p>Brute force solution seemed to have worked, or it hasn’t? I mean, not fully happy with this, because if a I change to a different Document naming rule I might get into trouble again? Also, I’m not good at python or frappe, just learning and I feel I just got this out of being stubborn rather than using skill. I don’t know if I could have solved it in a better way, I guess I could.</p>
+<p>So… any feedback will be wellcomed. Hope you can replicate this experience and come out with a better solution or fix.</p>
+<p>Thanxs for the hard work in creating frappe!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Yamen_Zakhour'><span itemprop='name'>Yamen_Zakhour</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-03T17:28:33Z' class='post-time'>
+                    December 3, 2025,  5:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-03T17:28:33Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Since you are developing a custom app, you can simply setup <a href="https://docs.frappe.io/framework/user/en/basics/doctypes/naming#by-controller-method" rel="noopener nofollow ugc">Autonaming</a> in the doctype controller. This is much more cleaner.</p>
+<p>If you prefer the UI way, create a select field for naming series (no need for a naming rule link field) then create your rules and export them as fixtures to your apps</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ayito'><span itemprop='name'>ayito</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-03T18:08:59Z' class='post-time'>
+                    December 3, 2025,  6:08pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-03T18:08:59Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,<br>
+Yes, I guess I could do that and of course, I may try it in the future. Though I just wanted to point the 2 issues I’ve had. I’ll try to summarize a bit.</p>
+<ol>
+<li>
+<p>I created a field called “<strong>referencia”</strong> with property “<strong>unique</strong>”, save the DocType, try it out, doesn’t work the way I wanted when I go and test it creating a new record, so I deleted this field in the DocType and I also deleted the first and only record I was testing. List is empty again with no records. The field gets deleted from the json, but that column is still in the database table and it is marked as:<br>
+<strong>referencia</strong> | varchar(140) | YES | <strong>UNI</strong> | <strong>73f33ve6g4</strong> | (UNI → Unique)</p>
+<ol>
+<li>So even if the field is deleted, when I try other options, the firs record gets stored, but when I try to insert a second record it throws an error stating “referencia has to be unique” (or similar to this, I’m translating as I write from what I remember the Spanish sentence was). You get the point.</li>
+<li>Conclusion: it seems when creating a DocType, if you create a record with Unique property set, it means it has to be unique, If you try and test creating a few records, then delete this field, it remains in the database table and somehow it was still being validated even if it wasn’t suppose to be there in the form anymore since being deleted. So, is this a bug? a feature? is it documented somewhere? I don’t know. Please someone put some light on this.</li>
+</ol>
+</li>
+<li>
+<p>Second issue was that when trying to set up a <strong>naming_series</strong> field it has to be named “<strong>naming_series</strong>” in order to work ( don’t try <strong>referencia</strong> or any other because it doesn’t). The problem is similar than in number 1. I tried it, wasn’t happy about it, deleted the field but it remained in the database like this:</p>
+<p>| <strong>naming_series</strong> | varchar(140) | YES | | <strong>73f33ve6g4</strong> | |</p>
+<p>Not UNI set, but with default of <strong>73f33ve6g4</strong>, but this default correspond to a specific Document naming rule that I also got rid off (deleted it) and didn’t exist anymore. And what is worse, couldn’t change this default value.<br>
+When I realised that I have to create the field with the name “<strong>naming_series</strong>” since the field was already a column in the table belonging to the DocType it got this value, and couldn’t change it.</p>
+</li>
+<li>
+<p>I solved the issue number 1 by dropping the column “referencia” from the table.</p>
+</li>
+<li>
+<p>I solved issue number 2 by exporting the table in a sql backup, changing the value of default for the value I wanted to be there “<strong>1lvtj3rpd4</strong>”, dropping the table and restoring the backup with the correct value.</p>
+</li>
+</ol>
+<p>So, I can and will try different methods to achieve this, I get the point frappe framework try to do things easy for the user and the developer and give my props to that and thanks to all the team involved.  Also I’m trying the developer branch from github, so issues may happen. I don’t know if I shall just mentioned here or raise a bug, maybe is not a bug, I don’t know. But for me it was quite confusing and frustrating. Also I haven’t tried to set up a new “Document naming rule” and tried to change it or give it as an option, since the field is a select, I guess it could be there, but as of now it is also a hidden field, so I’ll have to take a look at that scenario more carefully and find out how to set it up, because a customer user is on thing but if the user is a team member, maybe he gets to choose which naming series to use for the new record and in this case the select shall have more options, be visible and these options should make sense for the user, not just codes like: 1lvtj3rpd4, 73f33ve6g4…</p>
+<p>Yeah, thanks for your input!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Yamen_Zakhour'><span itemprop='name'>Yamen_Zakhour</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-03T18:31:05Z' class='post-time'>
+                    December 3, 2025,  6:31pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-03T18:31:05Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Did you try <code>bench migrate</code> after those schema changes? Also make sure developer mode is on.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ayito'><span itemprop='name'>ayito</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-03T18:54:27Z' class='post-time'>
+                    December 3, 2025,  6:54pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-03T18:54:27Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, I tried bench migrate, as I was following the youtube tutorial the site is also called irfan.cabs</p>
+<ul>
+<li>I did:
+<ul>
+<li>bench --site irfan.cabs <strong>migrate</strong></li>
+</ul>
+</li>
+<li>Also:
+<ul>
+<li>bench update --reset (I think it does a migrate in the process), I do this to try the latest code.</li>
+</ul>
+</li>
+<li>In point number one, I did set up the default value of “referencia” to 1lvtj3rpd4, so my guess is that since the field wasn’t there anymore and even if it was deleted for the doctype, it didn’t go well with validation after one record is inserted, because it always got this default value and it was marked as unique. But anyway, it was supposed to be deleted.</li>
+<li>I tried many things I might have lost track of all, This is why I mentioned I created the field, link it to the Document naming rule, also to autoname, test introducing the new records, delete the whole thing (fields, configuration, Document naming rules… even the entire Doctype once and go over it again…) it was a mess. Then I went  again and again and finally what worked was dropping that “referencia” column and also hard replacing by backing up the table, modify it and restore it with different default value for the “naming_series” field. I wanted to share it in the forums because there has to be a better way.</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Yamen_Zakhour'><span itemprop='name'>Yamen_Zakhour</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-03T19:09:59Z' class='post-time'>
+                    December 3, 2025,  7:09pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-03T19:09:59Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Never encountered this issue, im not sure. But good that it is working right now. Goodluck</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ayito'><span itemprop='name'>ayito</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-03T19:22:21Z' class='post-time'>
+                    December 3, 2025,  7:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-03T19:22:21Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks, it was weird to me.<br>
+I mean, it makes sense that once a field is deleted it shouldn’t run any validation on it while inserting new records (the “referencia” case).<br>
+Also, in the case of the “naming_series” field, once the field type is changed the json should go accordingly and also the database.<br>
+So, maybe is a non issue after all and it’s just my installation. Anyway, hope this thread helps anybody, for me it has been a learning experience.<br>
+Best regards!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

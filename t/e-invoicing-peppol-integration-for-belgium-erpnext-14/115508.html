@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>E-invoicing - PEPPOL integration for Belgium - ERPNext 14 - Accounting - Frappe Forum</title>
+    <meta name="description" content="Hello, 
+Our Belgian government has decided that all invoices B2B should be sent over the PEPPOL network. 
+As we rely on a self-hosted ERPNext v14 for all our planning and administration, I need to figure out how to handl&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/e-invoicing-peppol-integration-for-belgium-erpnext-14/115508" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;E-invoicing - PEPPOL integration for Belgium - ERPNext 14&#39;" href="https://discuss.frappe.io/t/e-invoicing-peppol-integration-for-belgium-erpnext-14/115508.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/e-invoicing-peppol-integration-for-belgium-erpnext-14/115508" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/e-invoicing-peppol-integration-for-belgium-erpnext-14/115508" />
+<meta property="og:title" content="E-invoicing - PEPPOL integration for Belgium - ERPNext 14" />
+<meta name="twitter:title" content="E-invoicing - PEPPOL integration for Belgium - ERPNext 14" />
+<meta property="og:description" content="Hello,  Our Belgian government has decided that all invoices B2B should be sent over the PEPPOL network.  As we rely on a self-hosted ERPNext v14 for all our planning and administration, I need to figure out how to handle this.  I’ve searched the forum and found a lot of info about the Indian e-invoicing implementation. Besides that, I’ve found a few German, Swiss, and Austrian posts, but looking specifically for PEPPOL does not return any valuable information.  Is there someone who could get me..." />
+<meta name="twitter:description" content="Hello,  Our Belgian government has decided that all invoices B2B should be sent over the PEPPOL network.  As we rely on a self-hosted ERPNext v14 for all our planning and administration, I need to figure out how to handle this.  I’ve searched the forum and found a lot of info about the Indian e-invoicing implementation. Besides that, I’ve found a few German, Swiss, and Austrian posts, but looking specifically for PEPPOL does not return any valuable information.  Is there someone who could get me..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:section" content="Accounting" />
+<meta property="og:article:section:color" content="AB9364" />
+<meta property="og:article:tag" content="integration" />
+<meta property="og:article:tag" content="e-invoicing" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="6 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="25 ❤" />
+<meta property="article:published_time" content="2024-01-06T09:25:03+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="/t/e-invoicing-peppol-integration-for-belgium-erpnext-14/115508?page=2">
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"E-invoicing - PEPPOL integration for Belgium - ERPNext 14","mainEntity":{"@type":"Question","name":"E-invoicing - PEPPOL integration for Belgium - ERPNext 14","text":"Hello,\n\nOur Belgian government has decided that all invoices B2B should be sent over the PEPPOL network.\n\nAs we rely on a self-hosted ERPNext v14 for all our planning and administration, I need to figure out how to handle this.  I’ve searched the forum and found a lot of info about the Indian e-invo&hellip;","upvoteCount":4,"answerCount":0,"datePublished":"2024-01-06T09:25:03.553Z","author":{"@type":"Person","name":"pedro_vde","url":"https://discuss.frappe.io/u/pedro_vde"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/e-invoicing-peppol-integration-for-belgium-erpnext-14/115508">E-invoicing - PEPPOL integration for Belgium - ERPNext 14</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/accounts/7" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #AB9364'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Accounting</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/integration' class='discourse-tag' rel="tag">integration</a>, 
+            <a href='https://discuss.frappe.io/tag/e-invoicing' class='discourse-tag' rel="tag">e-invoicing</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='E-invoicing - PEPPOL integration for Belgium - ERPNext 14'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/e-invoicing-peppol-integration-for-belgium-erpnext-14/115508'>
+      <meta itemprop='datePublished' content='2024-01-06T09:25:03Z'>
+        <meta itemprop='articleSection' content='Accounting'>
+      <meta itemprop='keywords' content='integration, e-invoicing'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/pedro_vde'><span itemprop='name'>pedro_vde</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/e-invoicing-peppol-integration-for-belgium-erpnext-14/115508">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2024-01-06T09:25:03Z' class='post-time'>
+                    January 6, 2024,  9:25am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-06T09:25:03Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,</p>
+<p>Our Belgian government has decided that all invoices B2B should be sent over the PEPPOL network.</p>
+<p>As we rely on a self-hosted ERPNext v14 for all our planning and administration, I need to figure out how to handle this.  I’ve searched the forum and found a lot of info about the Indian e-invoicing implementation. Besides that, I’ve found a few German, Swiss, and Austrian posts, but looking specifically for PEPPOL does not return any valuable information.</p>
+<p>Is there someone who could get me started to integrate e-invoicing by PEPPOL to ERPNext v14?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Peer'><span itemprop='name'>Peer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-06T10:11:32Z' class='post-time'>
+                    January 6, 2024, 10:11am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-06T10:11:32Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><strong>Pan-European Public Procurement OnLine</strong> (<strong>PEPPOL</strong>)</p>
+<p>DE: <a href="https://de.wikipedia.org/wiki/PEPPOL" class="inline-onebox" rel="noopener nofollow ugc">PEPPOL – Wikipedia</a><br>
+EN: <a href="https://en.wikipedia.org/wiki/PEPPOL" class="inline-onebox" rel="noopener nofollow ugc">PEPPOL - Wikipedia</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Peer'><span itemprop='name'>Peer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-06T10:13:27Z' class='post-time'>
+                    January 6, 2024, 10:13am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-06T10:13:27Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Do you mean <strong>all</strong>  B2B invoices, or only those who have a government institution as one of the two contracting parties?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Peer'><span itemprop='name'>Peer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-06T10:23:32Z' class='post-time'>
+                    January 6, 2024, 10:23am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-06T10:28:21Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>There also is an org: <a href="https://peppol.org/" rel="noopener nofollow ugc">https://peppol.org/</a></p>
+<p>The language used and the aspects not expressed could suggest that it started as a government procurement digitization instigation, but is meant to mission creep into the whole economy, even beyond EU territory, complete with new “governance” bodies, digital “authorities”, certifications and whatnot to get people to voluntarily use it.</p>
+<p>To illustrate, here’s an excerpt from the current german wikipedia article:<br>
+“Deutschland: „Der IT-Planungsrat verpflichtet Bund und Länder, mit Ablauf der Umsetzungsfrist der Richtlinie 2014/55/EU mindestens PEPPOL anzubieten, wenn sie einen Webservice zur Einlieferung von elektronischen Rechnungen zur Verfügung stellen.“<a href="https://de.wikipedia.org/wiki/PEPPOL#cite_note-30" rel="noopener nofollow ugc">[30]</a> Die gesetzlichen Vorgaben verpflichten die öffentliche Verwaltung in Deutschland, E-Rechnungen ab dem 27. November 2018 zu empfangen und zu verarbeiten. Die <a href="https://de.wikipedia.org/wiki/KoSIT" rel="noopener nofollow ugc">Koordinierungsstelle für IT Standards (KoSIT)</a> ist im Auftrag des IT-Planungsrats als PEPPOL Authority für Deutschland im PEPPOL-Netzwerk tätig.”</p>
+<p>It seems to have started as a B2Gov, but these B’s might be required to have subcontractors also integrate this “network”. So that could be a big number of B entities and subentities for a start.</p>
+<p>Is this already outdated or does it reflect the current situation?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/pedro_vde'><span itemprop='name'>pedro_vde</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-06T10:30:29Z' class='post-time'>
+                    January 6, 2024, 10:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-06T10:30:29Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It started indeed as a B2Gov in 2021(?) but by 2026 all B2B invoices should also be handled over PEPPOL… At least over here in Belgium.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Peer'><span itemprop='name'>Peer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-06T10:30:37Z' class='post-time'>
+                    January 6, 2024, 10:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-06T10:30:37Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>There also is a members list of said organization:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://peppol.org/members/full-members-list/">
+  <header class="source">
+      <img src="https://peppol.org/wp-content/uploads/2022/03/cropped-1-Digital-Peppol-IconAlone-Gradient-32x32.jpg" class="site-icon" width="32" height="32">
+
+      <a href="https://peppol.org/members/full-members-list/" target="_blank" rel="noopener nofollow ugc">OpenPeppol</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://peppol.org/members/full-members-list/" target="_blank" rel="noopener nofollow ugc">Full members list - OpenPeppol</a></h3>
+
+  <p>Full members list Members list latest updated January 4th 2024.</p>
+
+  <p>
+    <span class="label1">Est. reading time: 21 minutes</span>
+  </p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Peer'><span itemprop='name'>Peer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-06T10:32:38Z' class='post-time'>
+                    January 6, 2024, 10:32am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-06T10:32:38Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>What does “handled over” mean?</p>
+<p>Are businesses required to use an open data exchange format?</p>
+<p>Or are they even required to do ALL their B2B, even if without any government procurement link, over a centralized API w/ servers, etc.?</p>
+<p>The latter would sound like some kind of power grab, wouldn’t it? Not exactly typical for democracy and free enterprise, so I’d be astonished if this were the case.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/pedro_vde'><span itemprop='name'>pedro_vde</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-06T11:00:17Z' class='post-time'>
+                    January 6, 2024, 11:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-06T11:00:17Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="Peer" data-post="7" data-topic="115508">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/letter_avatar_proxy/v4/letter/p/e9bcb4/48.png" class="avatar"> Peer:</div>
+<blockquote>
+<p>Or are they even required to do ALL their B2B, even if without any government procurement link, over a centralized API w/ servers, etc.?</p>
+<p>The latter would sound like some kind of power grab, wouldn’t it? Not exactly typical for democracy and free enterprise, so I’d be astonished if this were the case.</p>
+</blockquote>
+</aside>
+<p>The Belgian government has taken the decision that <em><strong>all</strong></em> B2B invoices should be sent via PEPPOL. They also make no bones about the fact that this is an obligation to minimise the discrepancy between the VAT received and the VAT that may effectively be charged. So you are correct that this is a way of gaining total control.</p>
+<p>Of course, no one is talking about the cost of aligning all systems with this new law. Let alone the additional costs that may have to be incurred to intermediaries, and time for in-house staff training.</p>
+<p>I don’t want to turn this post into a rant, but so I want to look for a solution. I am sure it is possible to meet the requirements through ERPNext. I fear I will need quite a bit of help from the community, though.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Peer'><span itemprop='name'>Peer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-01-06T11:16:43Z' class='post-time'>
+                    January 6, 2024, 11:16am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-01-06T11:16:43Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I guess there are already code snippets that could be reused.</p>
+<p>E.g. <a href="https://github.com/OpenPEPPOL" class="inline-onebox" rel="noopener nofollow ugc">OpenPeppol · GitHub</a></p>
+<p>After all, it’s more like an add-on to invoicing (which has to conform to certain standards anyway), and then some API to a financial authorities’ server, which also needs configuration and some crypto keys which need to be properly secured in the ERP system.<br>
+Or maybe on some other communication system, for instance if your governmant does prescribe some special hardware box or so (like they do in the german health system where doctor cabinets are required to get such a system – see <a href="https://www.gematik.de/anwendungen/kim" class="inline-onebox" rel="noopener nofollow ugc">KIM | gematik</a>, in german – for communication purposes; these boxen have their own security and privacy issues, unfortunately, although they are pushed with publicity claiming to solve such problems).</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ElPilouu'><span itemprop='name'>ElPilouu</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-01-28T05:34:13Z' class='post-time'>
+                    January 28, 2025,  5:34am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-01-28T05:34:13Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello Pedro,</p>
+<p>I’d like to make an app based on Erpnext as well for a dentist in Belgium as well. and I was wandering if you found a solution about this issue ?</p>
+<p>Kind regards,<br>
+Julien</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/pedro_vde'><span itemprop='name'>pedro_vde</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-01-28T12:21:11Z' class='post-time'>
+                    January 28, 2025, 12:21pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-01-28T12:21:11Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>@ <a href="https://discuss.frappe.io/u/ElPilouu">ElPilouu</a></p>
+<p>Unfortunately not for the moment. I’m looking in to this: <a href="https://github.com/alyf-de/eu_einvoice" rel="noopener nofollow ugc">https://github.com/alyf-de/eu_einvoice</a>. But currently no idea if this would work.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/daanl'><span itemprop='name'>daanl</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-01T12:03:58Z' class='post-time'>
+                    February 1, 2025, 12:03pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-01T12:03:58Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We are working on an open Peppol integration, along with an open Peppol Access Point, but I don’t have an ETA yet.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/rmeyer'><span itemprop='name'>rmeyer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-01T12:12:50Z' class='post-time'>
+                    February 1, 2025, 12:12pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-01T12:12:50Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Peppol has been requested as an extension of the eu_einvoice app by multiple companies and could be crowdfunded, like the rest of this app. I think it would be a natural fit. However, the timeline is not certain yet. We’re currently just getting started with e-invoicing and Peppol could be a second step once that is stable.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Mario_Gandha'><span itemprop='name'>Mario_Gandha</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-03-04T00:23:43Z' class='post-time'>
+                    March 4, 2025, 12:23am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-03-04T00:23:43Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We are working on something similar for the Singapore / Malaysia market. Let me know if you want to crowdfund. Thanks.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/pedro_vde'><span itemprop='name'>pedro_vde</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-04-27T15:40:08Z' class='post-time'>
+                    April 27, 2025,  3:40pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-04-27T15:40:08Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I just got a reply from <a class="mention" href="/u/rmeyer">@rmeyer</a> at ALYF, the company behind the <a href="https://github.com/alyf-de/eu_einvoice" rel="noopener nofollow ugc">eu_einvoice</a> app.</p>
+<p>I was asking for the cost to adapt their application to make it work for Peppol UBL XML, but as he pointed out, the price would be a bit too much for one small company to bear.</p>
+<p>So maybe this adaptation should be crowdfunded indeed…</p>
+<p>Shout-out to Belgian users of ERPNext. I presume we are all in the same boat, as we need to be able to invoice and receive invoices in the XML format by 01/01/2026.</p>
+<p>Who would be interested in a joint effort to tackle this?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Createdbytriks'><span itemprop='name'>Createdbytriks</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-05-09T18:11:54Z' class='post-time'>
+                    May 9, 2025,  6:11pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-05-09T18:11:54Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,</p>
+<p>I’m currently facing the same issue when trying to migrate my business activities and those of my partners to ERPNext and the Frappe suite of applications. There is a clear interest in making the switch, however, if I understood the discussion correctly, electronic invoicing via the Peppol network and the UBL format are not yet supported at this point?</p>
+<p><a class="mention" href="/u/pedro_vde">@pedro_vde</a> do you know how this could be handled in practice? I believe einvoicing has submitted a request to Peppol? Would an API integration with an already authorized tool like Billit.eu be a feasible option? If so, perhaps we could look into it together.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/pedro_vde'><span itemprop='name'>pedro_vde</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-15T11:38:50Z' class='post-time'>
+                    June 15, 2025, 11:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-15T11:38:50Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Currently, I have no solution yet as the eu_invoice app is not working for Peppol due to an incompatible format of the XML files. I’m talking to a company that has an application using the right format but I did not hear from them in the last few weeks.</p>
+<p>As I want to be ready for the obliged delivery and receipt of XML’s over Peppol by January 2026, I would be glad to look in this together.</p>
+<p>What I do know is that accessing the Peppol network always goes by an intermediate and most of them are happy to help out with an API to make the connection.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/prilk-consulting'><span itemprop='name'>prilk-consulting</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-15T21:03:56Z' class='post-time'>
+                    June 15, 2025,  9:03pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-15T21:03:56Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Pedro,</p>
+<p>I will reach out to you separately, we are building it for Netherlands. May be we can extend it for Belgium.</p>
+<p>Thanks<br>
+Prilk Consulting</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/pedro_vde'><span itemprop='name'>pedro_vde</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-24T18:17:51Z' class='post-time'>
+                    June 24, 2025,  6:17pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-24T18:17:51Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In the meantime, our ERPNext self-hosted setup is upgraded to v15, but currently, there is no solution for the Peppol integration (yet).</p>
+<p>The good news is that we are in discussions with the team at <a class="mention" href="/u/prilk-consulting">@prilk-consulting</a> in the Netherlands. They were working on a local solution, but they would be happy to develop an application that could serve all European countries, as we all need to access Peppol in the long term.</p>
+<p>If someone with a business in Belgium or Luxembourg - or even in the rest of Europe - is interested in being a part of this development, please do not hesitate to contact me by DM.</p>
+<p>It is not easy to find out which companies or self-employed people use ERPNext in Belgium. If you or your company are located in Belgium, please let me know.</p>
+<p>The more interested parties, the faster the solution can come.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/PierreSerpe'><span itemprop='name'>PierreSerpe</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-13T04:42:41Z' class='post-time'>
+                    August 13, 2025,  4:42am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-13T04:42:41Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi pedro, I m self employed And m using erpnext for invoicing. I dont have that many invoices but would be happy to keep using it in 2026.</p>
+<p>Pierre Serpe</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="/t/e-invoicing-peppol-integration-for-belgium-erpnext-14/115508?page=2">next page →</a></b></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

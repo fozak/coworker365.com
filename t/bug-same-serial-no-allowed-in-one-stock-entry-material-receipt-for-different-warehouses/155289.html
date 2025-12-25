@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>🐞 Bug: Same Serial No Allowed in One Stock Entry (Material Receipt) for Different Warehouses - Stock/Inventory - Frappe Forum</title>
+    <meta name="description" content="ERPNext currently allows the same Serial No to be included multiple times in a single Stock Entry (Material Receipt) but linked to different Warehouses. 
+This behavior should not be possible — a single serial number shou&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/bug-same-serial-no-allowed-in-one-stock-entry-material-receipt-for-different-warehouses/155289" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;🐞 Bug: Same Serial No Allowed in One Stock Entry (Material Receipt) for Different Warehouses&#39;" href="https://discuss.frappe.io/t/bug-same-serial-no-allowed-in-one-stock-entry-material-receipt-for-different-warehouses/155289.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/1/c/1c2119a0667ffe29cf082a79b6f2ebfe39fbf55e_2_1024x339.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/1/c/1c2119a0667ffe29cf082a79b6f2ebfe39fbf55e_2_1024x339.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/bug-same-serial-no-allowed-in-one-stock-entry-material-receipt-for-different-warehouses/155289" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/bug-same-serial-no-allowed-in-one-stock-entry-material-receipt-for-different-warehouses/155289" />
+<meta property="og:title" content="🐞 Bug: Same Serial No Allowed in One Stock Entry (Material Receipt) for Different Warehouses" />
+<meta name="twitter:title" content="🐞 Bug: Same Serial No Allowed in One Stock Entry (Material Receipt) for Different Warehouses" />
+<meta property="og:description" content="ERPNext currently allows the same Serial No to be included multiple times in a single Stock Entry (Material Receipt) but linked to different Warehouses.  This behavior should not be possible — a single serial number should always exist in one warehouse at a time, otherwise it corrupts the Serial No Ledger and creates data inconsistency across stock tracking reports.  Example Case  In my case, Stock Entry SE-HO-MR-00034 has two rows for the same Serial No BTCENTRAL00002 —  one linked to “Mehul Pa..." />
+<meta name="twitter:description" content="ERPNext currently allows the same Serial No to be included multiple times in a single Stock Entry (Material Receipt) but linked to different Warehouses.  This behavior should not be possible — a single serial number should always exist in one warehouse at a time, otherwise it corrupts the Serial No Ledger and creates data inconsistency across stock tracking reports.  Example Case  In my case, Stock Entry SE-HO-MR-00034 has two rows for the same Serial No BTCENTRAL00002 —  one linked to “Mehul Pa..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:section" content="Stock/Inventory" />
+<meta property="og:article:section:color" content="AB9364" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="inventory" />
+<meta property="og:article:tag" content="serial" />
+<meta property="og:article:tag" content="bug" />
+<meta property="og:article:tag" content="stock" />
+<meta property="article:published_time" content="2025-10-09T13:41:38+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"🐞 Bug: Same Serial No Allowed in One Stock Entry (Material Receipt) for Different Warehouses","mainEntity":{"@type":"Question","name":"🐞 Bug: Same Serial No Allowed in One Stock Entry (Material Receipt) for Different Warehouses","text":"ERPNext currently allows the same Serial No to be included multiple times in a single Stock Entry (Material Receipt) but linked to different Warehouses.\n\nThis behavior should not be possible — a single serial number should always exist in one warehouse at a time, otherwise it corrupts the Serial No &hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-10-09T13:41:37.942Z","author":{"@type":"Person","name":"Raj_47274","url":"https://discuss.frappe.io/u/Raj_47274"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/bug-same-serial-no-allowed-in-one-stock-entry-material-receipt-for-different-warehouses/155289">🐞 Bug: Same Serial No Allowed in One Stock Entry (Material Receipt) for Different Warehouses</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/stock/9" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #AB9364'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Stock/Inventory</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/inventory' class='discourse-tag' rel="tag">inventory</a>, 
+            <a href='https://discuss.frappe.io/tag/serial' class='discourse-tag' rel="tag">serial</a>, 
+            <a href='https://discuss.frappe.io/tag/bug' class='discourse-tag' rel="tag">bug</a>, 
+            <a href='https://discuss.frappe.io/tag/stock' class='discourse-tag' rel="tag">stock</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='🐞 Bug: Same Serial No Allowed in One Stock Entry (Material Receipt) for Different Warehouses'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/bug-same-serial-no-allowed-in-one-stock-entry-material-receipt-for-different-warehouses/155289'>
+      <meta itemprop='datePublished' content='2025-10-09T13:41:37Z'>
+        <meta itemprop='articleSection' content='Stock/Inventory'>
+      <meta itemprop='keywords' content='erpnext, inventory, serial, bug, stock'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Raj_47274'><span itemprop='name'>Raj_47274</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/bug-same-serial-no-allowed-in-one-stock-entry-material-receipt-for-different-warehouses/155289">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/1/c/1c2119a0667ffe29cf082a79b6f2ebfe39fbf55e.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-10-09T13:41:38Z' class='post-time'>
+                    October 9, 2025,  1:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-09T13:41:38Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>ERPNext currently allows the <em>same Serial No</em> to be included multiple times <strong>in a single Stock Entry (Material Receipt)</strong> but linked to <strong>different Warehouses</strong>.<br>
+This behavior should not be possible — a single serial number should always exist in <strong>one warehouse at a time</strong>, otherwise it corrupts the Serial No Ledger and creates data inconsistency across stock tracking reports.</p>
+<p><strong>Example Case</strong></p>
+<p>In my case, Stock Entry <strong>SE-HO-MR-00034</strong> has two rows for the same Serial No <code>BTCENTRAL00002</code> —<br>
+one linked to <strong>“Mehul Patel - PEPL”</strong> and another to <strong>“Panchmahal - Amul Amcs Main”</strong>.</p>
+<p>Here’s the affected Serial No Ledger view <img src="https://discuss.frappe.io/images/emoji/twitter/point_down.png?v=12" title=":point_down:" class="emoji" alt=":point_down:" loading="lazy" width="20" height="20"><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/c/1c2119a0667ffe29cf082a79b6f2ebfe39fbf55e.png" data-download-href="https://discuss.frappe.io/uploads/default/1c2119a0667ffe29cf082a79b6f2ebfe39fbf55e" title="Serial-No-Ledger-10-09-2025_12_26_PM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/1/c/1c2119a0667ffe29cf082a79b6f2ebfe39fbf55e_2_690x228.png" alt="Serial-No-Ledger-10-09-2025_12_26_PM" data-base62-sha1="40QhIGofJlRb8tHfdogvAfhfmnY" width="690" height="228" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/1/c/1c2119a0667ffe29cf082a79b6f2ebfe39fbf55e_2_690x228.png, https://discuss.frappe.io/uploads/default/optimized/3X/1/c/1c2119a0667ffe29cf082a79b6f2ebfe39fbf55e_2_1035x342.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/1/c/1c2119a0667ffe29cf082a79b6f2ebfe39fbf55e_2_1380x456.png 2x" data-dominant-color="F5EFEF"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Serial-No-Ledger-10-09-2025_12_26_PM</span><span class="informations">1643×545 123 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>You can see both entries showing “Active” even though the same Serial No was used in two different warehouses in one transaction.</p>
+<hr>
+<p><strong>Impact</strong></p>
+<ul>
+<li>Serial No Ledger becomes <strong>inconsistent</strong> (duplicate rows for same Serial No)</li>
+<li>Stock reconciliation reports become <strong>incorrect</strong></li>
+<li>Traceability and audit trail <strong>breaks</strong> for serialized items</li>
+</ul>
+<p><strong>Expected Behavior</strong></p>
+<p>ERPNext should <strong>restrict the same Serial No from being used more than once in a single Stock Entry</strong>, even across multiple child rows pointing to different Warehouses.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/rtdany10'><span itemprop='name'>rtdany10</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/0/7/07a42ed100295c606bb2f121835c07b82ee856f4.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-09T14:08:17Z' class='post-time'>
+                    October 9, 2025,  2:08pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-09T14:08:17Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think you can restrict it via Stock Settings<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/7/07a42ed100295c606bb2f121835c07b82ee856f4.png" data-download-href="https://discuss.frappe.io/uploads/default/07a42ed100295c606bb2f121835c07b82ee856f4" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/7/07a42ed100295c606bb2f121835c07b82ee856f4_2_690x364.png" alt="image" data-base62-sha1="15B6lWNi9kMX8mbIh7dsNOmwaTq" width="690" height="364" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/7/07a42ed100295c606bb2f121835c07b82ee856f4_2_690x364.png, https://discuss.frappe.io/uploads/default/optimized/3X/0/7/07a42ed100295c606bb2f121835c07b82ee856f4_2_1035x546.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/0/7/07a42ed100295c606bb2f121835c07b82ee856f4.png 2x" data-dominant-color="F9F7F7"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1362×720 97.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Raj_47274'><span itemprop='name'>Raj_47274</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-10T09:26:04Z' class='post-time'>
+                    October 10, 2025,  9:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-10T09:26:04Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In my case the same serial no is allowed in different warehouse in one stock entry (Material Receipt) , your solution may not be helpful for this scenario</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

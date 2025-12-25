@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Tutorial: How to add table view of linked documents within form - Customization - Frappe Forum</title>
+    <meta name="description" content="Hi, 
+Ok so the default way of viewing linked documents is via connections. So lets say for instance I want to view the tasks list for a particular project, either i can go to the tasks list view and add a filter or acces&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/tutorial-how-to-add-table-view-of-linked-documents-within-form/124766" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Tutorial: How to add table view of linked documents within form&#39;" href="https://discuss.frappe.io/t/tutorial-how-to-add-table-view-of-linked-documents-within-form/124766.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/0/9/09aef178f85afda9db51886a066b2203610cfa47_2_1024x565.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/0/9/09aef178f85afda9db51886a066b2203610cfa47_2_1024x565.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/tutorial-how-to-add-table-view-of-linked-documents-within-form/124766" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/tutorial-how-to-add-table-view-of-linked-documents-within-form/124766" />
+<meta property="og:title" content="Tutorial: How to add table view of linked documents within form" />
+<meta name="twitter:title" content="Tutorial: How to add table view of linked documents within form" />
+<meta property="og:description" content="Hi,  Ok so the default way of viewing linked documents is via connections. So lets say for instance I want to view the tasks list for a particular project, either i can go to the tasks list view and add a filter or access them via the connections tab in the project form(which more or less does the same as the former). Instead i wanted to add a separate tab in the project form containing a html field which show a paginated table of all tasks for a particular project. So I added an html field to t..." />
+<meta name="twitter:description" content="Hi,  Ok so the default way of viewing linked documents is via connections. So lets say for instance I want to view the tasks list for a particular project, either i can go to the tasks list view and add a filter or access them via the connections tab in the project form(which more or less does the same as the former). Instead i wanted to add a separate tab in the project form containing a html field which show a paginated table of all tasks for a particular project. So I added an html field to t..." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:section" content="Customization" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:tag" content="customization" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="11 ❤" />
+<meta property="article:published_time" content="2024-06-05T10:36:02+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Tutorial: How to add table view of linked documents within form","mainEntity":{"@type":"Question","name":"Tutorial: How to add table view of linked documents within form","text":"Hi,\n\nOk so the default way of viewing linked documents is via connections. So lets say for instance I want to view the tasks list for a particular project, either i can go to the tasks list view and add a filter or access them via the connections tab in the project form(which more or less does the s&hellip;","upvoteCount":8,"answerCount":0,"datePublished":"2024-06-05T10:36:02.681Z","author":{"@type":"Person","name":"Vesper_Solutions","url":"https://discuss.frappe.io/u/Vesper_Solutions"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/tutorial-how-to-add-table-view-of-linked-documents-within-form/124766">Tutorial: How to add table view of linked documents within form</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/customization/28" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Customization</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag' rel="tag">customization</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Tutorial: How to add table view of linked documents within form'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/tutorial-how-to-add-table-view-of-linked-documents-within-form/124766'>
+      <meta itemprop='datePublished' content='2024-06-05T10:36:02Z'>
+        <meta itemprop='articleSection' content='Customization'>
+      <meta itemprop='keywords' content='customization'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Vesper_Solutions'><span itemprop='name'>Vesper_Solutions</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/tutorial-how-to-add-table-view-of-linked-documents-within-form/124766">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/0/9/09aef178f85afda9db51886a066b2203610cfa47.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2024-06-05T10:36:02Z' class='post-time'>
+                    June 5, 2024, 10:36am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-06-05T10:36:02Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,<br>
+Ok so the default way of viewing linked documents is via connections. So lets say for instance I want to view the tasks list for a particular project, either i can go to the tasks list view and add a filter or access them via the connections tab in the project form(which more or less does the same as the former). Instead i wanted to add a separate tab in the project form containing a html field which show a paginated table of all tasks for a particular project. So I added an html field to the project doctype called <strong>“tasks_list”</strong> and added a client side script.</p>
+<p>Here’s the script:</p>
+<pre><code class="lang-auto">frappe.ui.form.on("Project", {
+  refresh: function(frm) {
+    console.log("Inside refresh function");
+
+    if (frm.fields_dict['tasks_list']) {
+      var cur_field = frm.fields_dict['tasks_list'];
+      console.log("cur_field found:", cur_field);
+
+      // Function to fetch tasks
+      function fetch_tasks(start, limit) {
+        console.log("Fetching tasks from start:", start, "with limit:", limit);
+        frappe.call({
+          method: "frappe.client.get_list",
+          args: {
+            doctype: "Task",
+            filters: [["project", "=", frm.doc.name]],
+            fields: ["name", "status", "description"],
+            limit_start: start,
+            limit_page_length: limit,
+          },
+          callback: function(response) {
+            console.log("Response received:", response);
+            if (!response.message || response.message.length === 0) {
+              cur_field.html("No linked tasks found for this project.");
+              return;
+            }
+
+            try {
+              var task_list_html = get_task_list_html(response.message);
+              cur_field.$wrapper.html(task_list_html); // Set the HTML
+              add_pagination_controls(cur_field.$wrapper, start, limit, response.message.length);
+            } catch (error) {
+              console.error("Error generating HTML:", error);
+              cur_field.$wrapper.html("Failed to display linked tasks.");
+            }
+          },
+          error: function(error) {
+            console.error("Error in frappe call:", error);
+            cur_field.$wrapper.html("Failed to fetch linked tasks.");
+          }
+        });
+      }
+
+      // Initial fetch with page 1
+      fetch_tasks(0, 10);
+    } else {
+      console.error("Custom field 'tasks_list' not found.");
+    }
+  },
+});
+
+// Function to generate HTML
+function get_task_list_html(data) {
+  try {
+    var table_html = '&lt;div class="table-responsive"&gt;&lt;table class="table table-bordered"&gt;';
+    table_html += "&lt;thead&gt;&lt;tr&gt;";
+    table_html += "&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;"; // Add table headers
+    table_html += "&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;";
+
+    // Iterate through fetched tasks and build table rows
+    data.forEach(task =&gt; {
+      table_html += "&lt;tr&gt;";
+      table_html += `&lt;td&gt;${task.name || ""}&lt;/td&gt;`;
+      table_html += `&lt;td&gt;${task.status || ""}&lt;/td&gt;`;
+      table_html += `&lt;td&gt;${task.description || ""}&lt;/td&gt;`;
+      table_html += "&lt;/tr&gt;";
+    });
+
+    table_html += "&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;";
+    return table_html;
+  } catch (error) {
+    console.error("Error in get_task_list_html function:", error);
+    throw error;
+  }
+}
+
+// Function to add pagination controls
+function add_pagination_controls(container, start, limit, fetched_count) {
+  try {
+    container = $(container); // Ensure container is a jQuery object
+    var pagination_html = '&lt;div class="pagination-controls"&gt;';
+    if (start &gt; 0) {
+      pagination_html += `&lt;button class="btn btn-secondary" onclick="fetch_tasks(${start - limit}, ${limit})"&gt;Previous&lt;/button&gt;`;
+    }
+    if (fetched_count === limit) {
+      pagination_html += `&lt;button class="btn btn-secondary" onclick="fetch_tasks(${start + limit}, ${limit})"&gt;Next&lt;/button&gt;`;
+    }
+    pagination_html += '&lt;/div&gt;';
+    container.append(pagination_html);
+  } catch (error) {
+    console.error("Error in add_pagination_controls function:", error);
+    throw error;
+  }
+}
+
+// Make fetch_tasks globally accessible
+window.fetch_tasks = function(start, limit) {
+  var frm = cur_frm; // Use the global cur_frm object
+  if (frm.fields_dict['tasks_list']) {
+    var cur_field = frm.fields_dict['tasks_list'];
+    console.log("Fetching tasks for pagination from start:", start, "with limit:", limit);
+    frappe.call({
+      method: "frappe.client.get_list",
+      args: {
+        doctype: "Task",
+        filters: [["project", "=", frm.doc.name]],
+        fields: ["name", "status", "description"],
+        limit_start: start,
+        limit_page_length: limit,
+      },
+      callback: function(response) {
+        console.log("Pagination response received:", response);
+        if (!response.message || response.message.length === 0) {
+          cur_field.$wrapper.html("No linked tasks found for this project.");
+          return;
+        }
+
+        try {
+          var task_list_html = get_task_list_html(response.message);
+          cur_field.$wrapper.html(task_list_html); // Set the HTML
+          add_pagination_controls(cur_field.$wrapper, start, limit, response.message.length);
+        } catch (error) {
+          console.error("Error generating HTML for pagination:", error);
+          cur_field.$wrapper.html("Failed to display linked tasks.");
+        }
+      },
+      error: function(error) {
+        console.error("Error in frappe call for pagination:", error);
+        cur_field.$wrapper.html("Failed to fetch linked tasks.");
+      }
+    });
+  } else {
+    console.error("Custom field 'tasks_list' not found.");
+  }
+};
+</code></pre>
+<p>Here’s a screenshot of the result:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/9/09aef178f85afda9db51886a066b2203610cfa47.png" data-download-href="https://discuss.frappe.io/uploads/default/09aef178f85afda9db51886a066b2203610cfa47" title="Screenshot 2024-06-05 at 3.35.08 PM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/9/09aef178f85afda9db51886a066b2203610cfa47_2_690x380.png" alt="Screenshot 2024-06-05 at 3.35.08 PM" data-base62-sha1="1nF6UjexG09hytbyxFJE16znrg3" width="690" height="380" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/9/09aef178f85afda9db51886a066b2203610cfa47_2_690x380.png, https://discuss.frappe.io/uploads/default/optimized/3X/0/9/09aef178f85afda9db51886a066b2203610cfa47_2_1035x570.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/0/9/09aef178f85afda9db51886a066b2203610cfa47_2_1380x760.png 2x" data-dominant-color="FCFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot 2024-06-05 at 3.35.08 PM</span><span class="informations">2880×1590 217 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>This lets you view all linked doctypes for another doctype within the form in a list view.<br>
+You can change the fields as per your wishes and dont forget to remove all the console error handlers.<br>
+Cheerio!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="8" />
+              <span class='post-likes'>8 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/childtable-data-fetch-from-everyparent-doctype-to-html-field/137110/2">Childtable Data fetch from everyparent doctype to html field</a>
+                        <meta itemprop='position' content='2'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/NCP'><span itemprop='name'>NCP</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/5/e/5e1bd3eb6df83a21fde86dd5d1c600e9a5912d13.jpeg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-06-05T11:34:36Z' class='post-time'>
+                    June 5, 2024, 11:34am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-06-05T11:34:36Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Nice <a class="mention" href="/u/vesper_solutions">@Vesper_Solutions</a>,</p>
+<p>You can easily set all project tasks in the table.</p>
+<p>This can be done using a server script, which might be helpful to someone. (You can put the script in the server script doctype.)</p>
+<hr>
+<p>When tasks are saved, they will automatically be added to the project.</p>
+<p>Script Type: <strong>DocType Event</strong><br>
+Reference Document Type: <strong>Task</strong><br>
+DocType Event: <strong>After Save</strong></p>
+<pre><code class="lang-auto">if doc.project:
+    project = frappe.get_doc('Project', doc.project)
+    found = False
+
+    for total_task in project.total_tasks:
+        if total_task.task == doc.name:
+            total_task.subject = doc.subject
+            total_task.status = doc.status
+            total_task.description = doc.description
+            found = True
+            break
+
+    if not found:
+        project.append('total_tasks', {
+            'task': doc.name,
+            'subject': doc.subject,
+            'status': doc.status,
+            'description': doc.description
+        })
+    
+    project.save()
+</code></pre>
+<p>When a user deletes a task, it will also be automatically removed from the project.</p>
+<p>Script Type: <strong>DocType Event</strong><br>
+Reference Document Type: <strong>Task</strong><br>
+DocType Event: <strong>Before Delete</strong></p>
+<pre><code class="lang-auto">if doc.project:
+    project = frappe.get_doc('Project', doc.project)
+    to_remove = None
+    
+    for total_task in project.total_tasks:
+        if total_task.task == doc.name:
+            to_remove = total_task
+            break
+
+    if to_remove:
+        project.remove(to_remove)
+        project.save()
+</code></pre>
+<p><strong>Output:</strong></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/5/e/5e1bd3eb6df83a21fde86dd5d1c600e9a5912d13.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/5e1bd3eb6df83a21fde86dd5d1c600e9a5912d13" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/5/e/5e1bd3eb6df83a21fde86dd5d1c600e9a5912d13_2_690x332.jpeg" alt="image" data-base62-sha1="dqwvbEKeLoq0YwFNOVTjrkWQCjx" width="690" height="332" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/5/e/5e1bd3eb6df83a21fde86dd5d1c600e9a5912d13_2_690x332.jpeg, https://discuss.frappe.io/uploads/default/optimized/3X/5/e/5e1bd3eb6df83a21fde86dd5d1c600e9a5912d13_2_1035x498.jpeg 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/5/e/5e1bd3eb6df83a21fde86dd5d1c600e9a5912d13_2_1380x664.jpeg 2x" data-dominant-color="F9F8F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1920×924 77.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Vesper_Solutions'><span itemprop='name'>Vesper_Solutions</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-06-05T11:57:51Z' class='post-time'>
+                    June 5, 2024, 11:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-06-05T11:57:51Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Of course. I just showing a proof of concept but your method is more comprehensive and allows more leeway. <img src="https://discuss.frappe.io/images/emoji/twitter/ok_hand.png?v=12" title=":ok_hand:" class="emoji" alt=":ok_hand:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/auliabismar'><span itemprop='name'>auliabismar</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-29T23:13:13Z' class='post-time'>
+                    August 29, 2024, 11:13pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-29T23:13:13Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/vesper_solutions">@Vesper_Solutions</a> solution is my preference, since I cannot find solution from frappe to ONLY show other doctype data. But I prefer using frappe.datatable instead of coding html from scratch.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/amgottsegen'><span itemprop='name'>amgottsegen</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-12T00:57:47Z' class='post-time'>
+                    November 12, 2025, 12:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-12T00:57:47Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi! I’m new to Frappe and enjoying learning the framework. I got your client script to work in my application <a class="mention" href="/u/vesper_solutions">@Vesper_Solutions</a> when I made sure that both “Task” and “Project” are regular doctypes. However in my case, my “Task” document would ideally be represented as a Child Doctype. <strong>Is there a way to modify this script so it will work for a Child Doctype?</strong> I couldn’t make this work, I’m guessing because maybe the “frappe.client.get_list” call doesn’t work for Child doctypes?</p>
+<p>In my case, my two doctypes that I have are Constituents and Meetings. A Constituent can attend multiple Meetings, and a Meeting can have multiple Constituents. At this point I’ve tried to implement a junction table, “RSVPs”, between these two multiple ways. I tried with RSVPs as a child of Constituents, and I tried with RSVPs as a child of Meetings. I prefer RSVPs as a child of Meetings so that I can have an editable grid within the Meetings form page where I can quickly see and modify the table of RSVPs and linked Constituents. The main problem with that approach is that I can’t see which Meetings a given Constituent has RSVP’d to easily. I’m hoping to get this script working so that I can have a tab within the Constituent form page which shows a table of their RSVPs!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

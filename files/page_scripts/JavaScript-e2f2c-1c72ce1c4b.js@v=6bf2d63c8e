@@ -1,0 +1,2 @@
+document.addEventListener('DOMContentLoaded',function(){const textContainer=document.querySelector('.description-content');const readMoreBtn=document.querySelector('.read-more-btn');const heightThreshold=350;function toggleReadMore(){textContainer.style.maxHeight='9000px';readMoreBtn.style.display='none';textContainer.style.maskImage='none';}
+readMoreBtn.addEventListener('click',toggleReadMore);requestAnimationFrame(function(){if(textContainer.clientHeight>heightThreshold){textContainer.style.maxHeight=heightThreshold+'px';readMoreBtn.style.display='block';}});});

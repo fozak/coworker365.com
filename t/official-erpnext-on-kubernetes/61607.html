@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Official ERPNext on Kubernetes - Announcements - Frappe Forum</title>
+    <meta name="description" content="Hello community, 
+We’ve spent the last few months containerizing ERPNext and scaling it up to its full potential. What we got out of it are the current Docker Images and Swarm support. Since then, we’ve been working h&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/official-erpnext-on-kubernetes/61607" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Official ERPNext on Kubernetes&#39;" href="https://discuss.frappe.io/t/official-erpnext-on-kubernetes/61607.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/official-erpnext-on-kubernetes/61607" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/official-erpnext-on-kubernetes/61607" />
+<meta property="og:title" content="Official ERPNext on Kubernetes" />
+<meta name="twitter:title" content="Official ERPNext on Kubernetes" />
+<meta property="og:description" content="Hello community,  We’ve spent the last few months containerizing ERPNext and scaling it up to its full potential. What we got out of it are the current Docker Images and Swarm support. Since then, we’ve been working hard to step it up a notch by adding enterprise-grade orchestration.  Today, we’re excited to announce Kubernetes for ERPNext!  With this, you will now be able to infinitely scale and orchestrate your ERPNext instance by setting up a Kubernetes cluster on a provider of your choice..." />
+<meta name="twitter:description" content="Hello community,  We’ve spent the last few months containerizing ERPNext and scaling it up to its full potential. What we got out of it are the current Docker Images and Swarm support. Since then, we’ve been working hard to step it up a notch by adding enterprise-grade orchestration.  Today, we’re excited to announce Kubernetes for ERPNext!  With this, you will now be able to infinitely scale and orchestrate your ERPNext instance by setting up a Kubernetes cluster on a provider of your choice..." />
+<meta property="og:article:section" content="Announcements" />
+<meta property="og:article:section:color" content="283890" />
+<meta property="og:article:tag" content="erpnext" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="3 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="109 ❤" />
+<meta property="article:published_time" content="2020-05-14T12:46:43+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Official ERPNext on Kubernetes","mainEntity":{"@type":"Question","name":"Official ERPNext on Kubernetes","text":"<a class=\"lightbox\" href=\"https://discuss.frappe.io/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png\" data-download-href=\"https://discuss.frappe.io/uploads/default/3a7b70007b9f3f28cd49727519bad68462867803\" title=\"1%20white\">[1%20white]<\/a>\n\nHello community,\n\nWe’ve spent the last few months <a href=\"https://discuss.frappe.io/t/official-docker-updates-2020/59224\">containerizing ERPNext<\/a> and scaling it up to its full potential. What we got out of it are the current <a href=\"https://github.com/frappe/frappe_docker\">Docker Images<\/a> and <a href=\"https://github.com/frappe/frappe_docker/wiki/Docker-Swarm\">Swarm support<\/a>. Since then, we’ve been working hard to step it up a notch by adding enterprise-grade orchestration.\n\nT&hellip;","upvoteCount":66,"answerCount":0,"datePublished":"2020-05-14T12:46:43.410Z","author":{"@type":"Person","name":"chinmaypai","url":"https://discuss.frappe.io/u/chinmaypai"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/official-erpnext-on-kubernetes/61607">Official ERPNext on Kubernetes</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/announcement/20" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #283890'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Announcements</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Official ERPNext on Kubernetes'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/official-erpnext-on-kubernetes/61607'>
+      <meta itemprop='datePublished' content='2020-05-14T12:46:43Z'>
+        <meta itemprop='articleSection' content='Announcements'>
+      <meta itemprop='keywords' content='erpnext'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/chinmaypai'><span itemprop='name'>chinmaypai</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/official-erpnext-on-kubernetes/61607">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2020-05-14T12:46:43Z' class='post-time'>
+                    May 14, 2020, 12:46pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-14T14:55:54Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png" data-download-href="https://discuss.frappe.io/uploads/default/3a7b70007b9f3f28cd49727519bad68462867803" title="1%20white"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803_2_690x332.png" alt="1%20white" data-base62-sha1="8lm9JdPESeaQhCejZChLCJvLjfZ" width="690" height="332" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803_2_690x332.png, https://discuss.frappe.io/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/3/a/3a7b70007b9f3f28cd49727519bad68462867803.png 2x" data-dominant-color="F5F6F8"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">1%20white</span><span class="informations">877×423 13.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div><br>
+Hello community,</p>
+<p>We’ve spent the last few months <a href="https://discuss.frappe.io/t/official-docker-updates-2020/59224">containerizing ERPNext</a> and scaling it up to its full potential. What we got out of it are the current <a href="https://github.com/frappe/frappe_docker">Docker Images</a> and <a href="https://github.com/frappe/frappe_docker/wiki/Docker-Swarm">Swarm support</a>. Since then, we’ve been working hard to step it up a notch by adding enterprise-grade orchestration.</p>
+<p>Today, we’re excited to announce Kubernetes for ERPNext!</p>
+<p>With this, you will now be able to infinitely scale and orchestrate your ERPNext instance by setting up a Kubernetes cluster on a provider of your choice.</p>
+<p>This installation is an alternative to the bench setup and requires you to be familiar with Kubernetes and Helm. We’ve also replaced the bench and its core functionalities with Kubernetes Jobs.</p>
+<p>For more information on getting started with ERPNext on Kubernetes, check out <a href="http://helm.erpnext.com">helm.erpnext.com</a>. The charts are also available on the <a href="https://hub.helm.sh/charts/erpnext/erpnext">Helm Hub</a> and <a href="https://artifacthub.io/package/chart/erpnext/erpnext">ArtifactHub</a>.</p>
+<p>As of now, we only offer the latest stable version of ERPNext. There are no plans to add support for the older versions, or the development branch. For setting up versions not supported by us, please refer to the FAQs.</p>
+<p>If you would like to contribute towards this project, feel free to <a href="https://github.com/frappe/helm/issues">raise an issue</a> or a <a href="https://github.com/frappe/helm/pulls">pull request</a> on GitHub.</p>
+<hr>
+<h3>
+<a name="links-1" class="anchor" href="#links-1"></a>Links:</h3>
+<ul>
+<li><a href="https://helm.erpnext.com">Official ERPNext Helm Repository</a></li>
+<li><a href="https://hub.helm.sh/charts/erpnext/erpnext">Helm Hub Repository</a></li>
+<li><a href="https://artifacthub.io/package/chart/erpnext/erpnext">ArtifactHub Repository</a></li>
+<li><a href="https://github.com/frappe/helm">GitHub</a></li>
+<li><a href="https://github.com/frappe/frappe_docker">ERPNext Docker</a></li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="66" />
+              <span class='post-likes'>66 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vrms'><span itemprop='name'>vrms</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-14T19:35:31Z' class='post-time'>
+                    May 14, 2020,  7:35pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-14T19:35:31Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>First of all congratulations! I am sure this was a ton of work.</p>
+<p>I am really curious who is going to actually use this in production. Are you having any plans for this on any of the Frappe Pvt products (<a href="http://erpnext.com">erpnext.com</a>, frappe.cloud)?</p>
+<aside class="quote no-group" data-username="chinmaypai" data-post="1" data-topic="61607">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/chinmaypai/48/19944_2.png" class="avatar"> chinmaypai:</div>
+<blockquote>
+<p>As of now, we <strong>only offer the latest stable version</strong> of ERPNext. There are <strong>no plans to add support for the older versions, or the development branch.</strong></p>
+</blockquote>
+</aside>
+<p>I don’t quite understand this as the ability to spin up any version of ERPNext in an exact same way would be super useful. This feels a bit like turning around just one meter below the peak after a very long climb.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/alkuhlani'><span itemprop='name'>alkuhlani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-14T20:18:47Z' class='post-time'>
+                    May 14, 2020,  8:18pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-14T20:18:47Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Nice to here that, congratulations. I think it will be so helpful and will use it in the next works and projects.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Vinob_chander_Ramasw'><span itemprop='name'>Vinob_chander_Ramasw</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-15T00:05:20Z' class='post-time'>
+                    May 15, 2020, 12:05am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-15T00:05:20Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Good to know that Guys… Congragulations &amp; All the best !!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ajit.pendse'><span itemprop='name'>ajit.pendse</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-15T04:04:10Z' class='post-time'>
+                    May 15, 2020,  4:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-15T04:04:10Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This is great addition to the rich feature set already available with Frappe/ERPNext. This will allow for unlocking the full potential of the framework and definitely help adaption at enterprise scale.</p>
+<p>We have been using Dockerized Frappe/ERPNext for some time now  and have been running production workloads on kubernetes for most part, without any issues. This has provided a lot of flexibility and has allowed seamless scale up/down without any manual intervention.</p>
+<p>The overall rationale behind this and the approach was presented during the ERPNext conference 2019 - <a href="https://youtu.be/rWOnsTVaA6U" rel="noopener nofollow ugc">here is the recorded presentation</a>.</p>
+<p>Versions of frappe docker container project along with helm charts used are also available on GitHub <a href="https://github.com/ElasticRun/frappe-docker" rel="noopener nofollow ugc">here</a> and <a href="https://github.com/ElasticRun/frappe-helm-chart" rel="noopener nofollow ugc">here</a>.</p>
+<p>Congratulations to the team and the community. This will play an important role in adaption of the great framework.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="10" />
+              <span class='post-likes'>10 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nikhildx'><span itemprop='name'>nikhildx</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-15T04:24:58Z' class='post-time'>
+                    May 15, 2020,  4:24am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-15T04:24:58Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Good going Team Frappe and Chinmay for spearheading this. It was long overdue. We truely feel that K8S &amp; containerisation compliments the otherwise functional monolith of ERPNext and it just unlocks that monolith at fundamental runtimes/infra level.</p>
+<p>We at Elasticrun have been reaping the benefits of these 2 best opensources (K8S and ERPNext/Frappe) for months now and it has saved a huge amount of admin efforts and provided good flexibility.</p>
+<p>We would be happy to connect and share our learnings and tweaks … you can also reach out anytime to <a class="mention" href="/u/ajit.pendse">@ajit.pendse</a> … who is the brain for making this happen at Elasticrun.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="6" />
+              <span class='post-likes'>6 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/chinmaypai'><span itemprop='name'>chinmaypai</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-15T04:48:05Z' class='post-time'>
+                    May 15, 2020,  4:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-15T04:48:05Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="vrms" data-post="3" data-topic="61607">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/vrms/48/8666_2.png" class="avatar"> vrms:</div>
+<blockquote>
+<p>I don’t quite understand this as the ability to spin up any version of ERPNext in an exact same way would be super useful. This feels a bit like turning around just one meter below the peak after a very long climb.</p>
+</blockquote>
+</aside>
+<p>We do have <a href="https://helm.erpnext.com/faq#how-do-i-customize-values-for-the-erpnext-helm-chart">documentation</a> to help setup any version that is required. It is just that we want to focus on ironing out issues specific to containerization and orchestration before moving on to supporting more versions. We’d eventually want to get there, but it’s not in our plans right now.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-15T11:09:15Z' class='post-time'>
+                    May 15, 2020, 11:09am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-15T11:09:15Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h3>
+<a name="why-i-moved-my-erpnext-sites-to-kubernetes-1" class="anchor" href="#why-i-moved-my-erpnext-sites-to-kubernetes-1"></a>Why I moved my ERPNext sites to Kubernetes?</h3>
+<p>I self host frappe-bench to use ERPNext and I build small, focused non-frappe apps and services.</p>
+<p>I extensively use ERPNext ReST API for achieving this.</p>
+<p>I already had kubernetes cluster, apps deployed on it and basic knowledge about the platform.</p>
+<p>Because of this, ERPNext on Kubernetes made sense to me.</p>
+<p>Currently my production sites and few staging/development sites for my customers are on kubernetes.</p>
+<h3>
+<a name="what-i-needed-what-i-achieved-2" class="anchor" href="#what-i-needed-what-i-achieved-2"></a>What I needed? What I Achieved?</h3>
+<ul>
+<li>
+<p>Easy management of ERPNext sites on Kubernetes: New site creation, backup, push backups to S3 compatible storage and restore from cloud are basic operations required for stress free use of ERPNext.</p>
+</li>
+<li>
+<p>Consistent and reliable deployments: Docker commands that are built into production containers are tested daily as well as on PRs. This ensures reliability and better ability to debug when things are not working on production. I have caught a few migration, site creation bugs and reported them to core team due to these automated tests.</p>
+</li>
+<li>
+<p>Database on Cluster: As MariaDB can be installed on cluster in Master-Slave configuration, Reports generation can benefit from it.</p>
+</li>
+<li>
+<p>Storage on Cluster: Single <code>sites</code> volume is shared across cluster as <code>Deployment</code> pods can be spawned on any node and share the <code>sites</code> volume.</p>
+</li>
+<li>
+<p>Horizontal Scale for single “frappe-bench” like environment: Single “frappe-bench” needs to add or remove workers across nodes as per need. Use case where multiple apps concurrently fire automated request to ERPNext more than users using the system.</p>
+</li>
+<li>
+<p>Easy access to logs and database for developers: Create kubernetes service-account/token for namespace, generate kubeconfig.yaml and revoke after use.</p>
+</li>
+</ul>
+<h3>
+<a name="why-make-it-official-vs-keeping-it-third-party-3" class="anchor" href="#why-make-it-official-vs-keeping-it-third-party-3"></a>Why make it official vs keeping it third party?</h3>
+<p>I had my set of docker images and helm charts being built in CI pipeline. Shared <a href="https://discuss.frappe.io/t/kubernetes-decoupled-frappe-erpnext-docker-images/54884">here</a> before.</p>
+<p>Keeping it open but not on upstream is not beneficial for improvement of code and features.</p>
+<p>Many more community members will review official PRs / git repositories over any third party code repositories.</p>
+<p>Contribution to core will be used and improved by many people. Improvements are beneficial to everyone including me. Check the repositories, there are PRs and reviews by community contributors.</p>
+<p>Last but not least, I can plug my company <a href="https://castlecraft.in">castlecraft</a> for ERPNext + Cloud Native magic! Any opportunities are welcome!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="18" />
+              <span class='post-likes'>18 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vrms'><span itemprop='name'>vrms</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-16T15:54:55Z' class='post-time'>
+                    May 16, 2020,  3:54pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-16T15:54:55Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="chinmaypai" data-post="8" data-topic="61607">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/chinmaypai/48/19944_2.png" class="avatar"> chinmaypai:</div>
+<blockquote>
+<p>We’d eventually want to get there, but it’s not in our plans right now.</p>
+</blockquote>
+</aside>
+<p>Ok, then I got the <em>"we do not have plans</em>" part wrong. I guess you mean you actually have ambitions to support older stable versions as well, but will get to working on this only after the general construction works on the current stable branch.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kevinpthorne'><span itemprop='name'>kevinpthorne</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-18T21:30:40Z' class='post-time'>
+                    May 18, 2020,  9:30pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-18T21:30:40Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Amazing work! These steps forward are why I went with ERPNext + Frappe over anything else.</p>
+<p>After briefly reviewing the repos (both Docker and Helm Chart), will there be resources on how to install apps onto the K8s “bench” via Jobs? I see that both Frappe and ERPNext are almost two different deployments.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-18T23:58:06Z' class='post-time'>
+                    May 18, 2020, 11:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-08-06T18:17:28Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>For custom apps you need to build a custom image. Refer <a href="https://github.com/frappe/frappe_docker/blob/develop/docs/custom-apps-for-production.md">custom-apps</a> section of README.</p>
+<p>Use the wrapper script <code>install_app</code> to install custom app. You can choose any base image frappe-* or erpnext-* depending on your app. ERPNext images are built using this wrapper script.</p>
+<p>Once your images are built and published, refer <a href="https://helm.erpnext.com/faq.html#how-do-i-customize-values-for-the-erpnext-helm-chart"> How do I customize values for the ERPNext helm chart?</a>. Here you can set the image repository and tag for your custom image(s)</p>
+<p>In case you have a fork of frappe or erpnext, you need to make changes to current Dockerfile(s) and replace the repository urls.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Obinna_Ukwueze'><span itemprop='name'>Obinna_Ukwueze</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-08-05T16:14:29Z' class='post-time'>
+                    August 5, 2020,  4:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-08-05T16:14:29Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>How do you enable and use multi-tenancy with this setup?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-08-05T16:21:47Z' class='post-time'>
+                    August 5, 2020,  4:21pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-08-05T16:21:47Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Do you want to create multiple sites?</p>
+<p>add <a href="https://helm.erpnext.com/kubernetes-resources/create-new-site-job">new sites</a> and <a href="https://helm.erpnext.com/kubernetes-resources/create-site-ingress">ingress</a> for each site.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mnoureldin'><span itemprop='name'>mnoureldin</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-11-01T00:46:22Z' class='post-time'>
+                    November 1, 2022, 12:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-11-01T00:46:22Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Is Installting ERPNext using Helm still working? For some reason, I get some pods in a crash loop, thus it does not working.</p>
+<p>I am using the latest version of both K8s and ERPNext, can anybody confirm if it is still working?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-11-01T04:16:24Z' class='post-time'>
+                    November 1, 2022,  4:16am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-11-01T04:16:24Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m using it in production, it is working. I didn’t get any issues reported by users using it.</p>
+<p>share logs of failing pods. you must use RWX storage class</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mergerlabs-services'><span itemprop='name'>mergerlabs-services</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-12-27T14:25:09Z' class='post-time'>
+                    December 27, 2022,  2:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-12-27T14:25:09Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m struggling terribly to get this working, any help please…<br>
+Here is my post explaining my situation the best I can:</p>
+<ul>
+<li><a href="https://discuss.frappe.io/t/stuck-at-login-for-administrative-user-e-logo/98917" class="inline-onebox">Stuck at login for Administrative User (E Logo)</a></li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mtssantos18'><span itemprop='name'>mtssantos18</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-02-06T18:51:28Z' class='post-time'>
+                    February 6, 2024,  6:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-02-06T18:51:28Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello Revant,</p>
+<p>I’m also trying to deploy my ERPNext and Education on Kubernetes, but i’m struggling with some points, like to connect Redis to my ERPNext container.</p>
+<p>Any tips on what I should do to make it work?</p>
+<p>could you give me an example of Redis manifest, or maybe Should I connect to redis container inside my ERPNext .yaml?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jakoguta'><span itemprop='name'>jakoguta</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-30T06:36:08Z' class='post-time'>
+                    August 30, 2024,  6:36am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-30T06:36:08Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Good job. I am definitely trying this out.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[Release Notes] ERPNext Version-13-beta-7 and Frappe Version-13-beta-9 - ERPNext - Frappe Forum</title>
+    <meta name="description" content="ERPNext Version 13.0.0 Beta 7
+Features and Enhancements
+
+GST E-invoicing for India (#23455)
+Multi-currency payroll (#23519)
+Allow back-dated stock transactions and repost item costing via background job (#24183)
+Introduc&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/release-notes-erpnext-version-13-beta-7-and-frappe-version-13-beta-9/69396" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[Release Notes] ERPNext Version-13-beta-7 and Frappe Version-13-beta-9&#39;" href="https://discuss.frappe.io/t/release-notes-erpnext-version-13-beta-7-and-frappe-version-13-beta-9/69396.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/release-notes-erpnext-version-13-beta-7-and-frappe-version-13-beta-9/69396" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/release-notes-erpnext-version-13-beta-7-and-frappe-version-13-beta-9/69396" />
+<meta property="og:title" content="[Release Notes] ERPNext Version-13-beta-7 and Frappe Version-13-beta-9" />
+<meta name="twitter:title" content="[Release Notes] ERPNext Version-13-beta-7 and Frappe Version-13-beta-9" />
+<meta property="og:description" content="ERPNext Version 13.0.0 Beta 7 Features and Enhancements  GST E-invoicing for India (#23455) Multi-currency payroll (#23519) Allow back-dated stock transactions and repost item costing via background job (#24183) Introduced telephony feature using Twillio (#24032) Shipment Doctype (#22914) Leave policy assignment (#23112) UAE VAT 201 Report (#23447) Return tracking in PR/DN (#22859) Close Production Plan (#23728) Quality Inspection on Job Card (#23964) Inpatient Medication Orders Script Report (#..." />
+<meta name="twitter:description" content="ERPNext Version 13.0.0 Beta 7 Features and Enhancements  GST E-invoicing for India (#23455) Multi-currency payroll (#23519) Allow back-dated stock transactions and repost item costing via background job (#24183) Introduced telephony feature using Twillio (#24032) Shipment Doctype (#22914) Leave policy assignment (#23112) UAE VAT 201 Report (#23447) Return tracking in PR/DN (#22859) Close Production Plan (#23728) Quality Inspection on Job Card (#23964) Inpatient Medication Orders Script Report (#..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:tag" content="release" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="frappe" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="8 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="20 ❤" />
+<meta property="article:published_time" content="2020-12-28T13:06:01+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"[Release Notes] ERPNext Version-13-beta-7 and Frappe Version-13-beta-9","mainEntity":{"@type":"Question","name":"[Release Notes] ERPNext Version-13-beta-7 and Frappe Version-13-beta-9","text":"<a name=\"p-268204-erpnext-version-1300-beta-7-1\" class=\"anchor\" href=\"#p-268204-erpnext-version-1300-beta-7-1\"><\/a>ERPNext Version 13.0.0 Beta 7\n\n<a name=\"p-268204-features-and-enhancements-2\" class=\"anchor\" href=\"#p-268204-features-and-enhancements-2\"><\/a>Features and Enhancements\n\nGST E-invoicing for India (<a href=\"https://github.com/frappe/erpnext/pull/23455\">#23455<\/a>)\n\nMulti-currency payroll (<a href=\"https://github.com/frappe/erpnext/pull/23519\">#23519<\/a>)\n\nAllow back-dated stock transactions and repost item costing via background job (<a href=\"https://github.com/frappe/erpnext/pull/24183\">#24183<\/a>)\n\nIntroduced telephony feature using Twillio (<a href=\"https://github.com/frappe/erpnext/pull/24032\">#24032<\/a>)\n\nShipment Doctype (<a href=\"https://github.com/frappe/erpnext/pull/22914\">#22914<\/a>)\n\nLeave poli&hellip;","upvoteCount":16,"answerCount":0,"datePublished":"2020-12-28T13:06:01.741Z","author":{"@type":"Person","name":"nabinhait","url":"https://discuss.frappe.io/u/nabinhait"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/release-notes-erpnext-version-13-beta-7-and-frappe-version-13-beta-9/69396">[Release Notes] ERPNext Version-13-beta-7 and Frappe Version-13-beta-9</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/release' class='discourse-tag' rel="tag">release</a>, 
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[Release Notes] ERPNext Version-13-beta-7 and Frappe Version-13-beta-9'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/release-notes-erpnext-version-13-beta-7-and-frappe-version-13-beta-9/69396'>
+      <meta itemprop='datePublished' content='2020-12-28T13:06:01Z'>
+        <meta itemprop='articleSection' content='ERPNext'>
+      <meta itemprop='keywords' content='release, erpnext, frappe'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nabinhait'><span itemprop='name'>nabinhait</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/release-notes-erpnext-version-13-beta-7-and-frappe-version-13-beta-9/69396">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2020-12-28T13:06:01Z' class='post-time'>
+                    December 28, 2020,  1:06pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-14T05:25:30Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h3><a name="p-268204-erpnext-version-1300-beta-7-1" class="anchor" href="#p-268204-erpnext-version-1300-beta-7-1"></a>ERPNext Version 13.0.0 Beta 7</h3>
+<h4><a name="p-268204-features-and-enhancements-2" class="anchor" href="#p-268204-features-and-enhancements-2"></a>Features and Enhancements</h4>
+<ul>
+<li>GST E-invoicing for India (<a href="https://github.com/frappe/erpnext/pull/23455">#23455</a>)</li>
+<li>Multi-currency payroll (<a href="https://github.com/frappe/erpnext/pull/23519">#23519</a>)</li>
+<li>Allow back-dated stock transactions and repost item costing via background job (<a href="https://github.com/frappe/erpnext/pull/24183">#24183</a>)</li>
+<li>Introduced telephony feature using Twillio (<a href="https://github.com/frappe/erpnext/pull/24032">#24032</a>)</li>
+<li>Shipment Doctype (<a href="https://github.com/frappe/erpnext/pull/22914">#22914</a>)</li>
+<li>Leave policy assignment (<a href="https://github.com/frappe/erpnext/pull/23112">#23112</a>)</li>
+<li>UAE VAT 201 Report (<a href="https://github.com/frappe/erpnext/pull/23447">#23447</a>)</li>
+<li>Return tracking in PR/DN (<a href="https://github.com/frappe/erpnext/pull/22859">#22859</a>)</li>
+<li>Close Production Plan (<a href="https://github.com/frappe/erpnext/pull/23728">#23728</a>)</li>
+<li>Quality Inspection on Job Card (<a href="https://github.com/frappe/erpnext/pull/23964">#23964</a>)</li>
+<li>Inpatient Medication Orders Script Report (<a href="https://github.com/frappe/erpnext/pull/23984">#23984</a>)</li>
+<li>Leave type with partial payment (<a href="https://github.com/frappe/erpnext/pull/23173">#23173</a>)</li>
+<li>Formula based Quality Inspection (<a href="https://github.com/frappe/erpnext/pull/23916">#23916</a>)</li>
+<li>Link to Material Requests in Tools section for RFQ and Supplier Quotation (<a href="https://github.com/frappe/erpnext/pull/23429">#23429</a>)</li>
+<li>Hide images &amp; auto add item checkbox (<a href="https://github.com/frappe/erpnext/pull/24102">#24102</a>)</li>
+<li>In reports get item details from Item instead of the transactions (<a href="https://github.com/frappe/erpnext/pull/24082">#24082</a>)</li>
+<li>sales order status filter added for production plan (<a href="https://github.com/frappe/erpnext/pull/23805">#23805</a>)</li>
+<li>Button to create Stock Entry for Drug Shortage (<a href="https://github.com/frappe/erpnext/pull/24012">#24012</a>)</li>
+<li>Sync old shopify orders (<a href="https://github.com/frappe/erpnext/pull/23841">#23841</a>)</li>
+<li>Added column cost center in Accounts Receivable report (<a href="https://github.com/frappe/erpnext/pull/23835">#23835</a>)</li>
+<li>Added jinja templating in Contract Template (<a href="https://github.com/frappe/erpnext/pull/24046">#24046</a>)</li>
+<li>Consider Holiday List in Student Leave Application and Attendance (<a href="https://github.com/frappe/erpnext/pull/23388">#23388</a>)</li>
+<li>Make account number length configurable (<a href="https://github.com/frappe/erpnext/pull/23845">#23845</a>)</li>
+<li>Add communication channel to communication medium (<a href="https://github.com/frappe/erpnext/pull/23793">#23793</a>)</li>
+</ul>
+<h4><a name="p-268204-fixes-3" class="anchor" href="#p-268204-fixes-3"></a>Fixes</h4>
+<ul>
+<li>Loan disbursement amount validation (<a href="https://github.com/frappe/erpnext/pull/24000">#24000</a>)</li>
+<li>Making company address read-only in delivery note (<a href="https://github.com/frappe/erpnext/pull/23890">#23890</a>)</li>
+<li>BOM stock report color showing always red (<a href="https://github.com/frappe/erpnext/pull/23994">#23994</a>)</li>
+<li>Added filter for customer field in Issue (<a href="https://github.com/frappe/erpnext/pull/24051">#24051</a>)</li>
+<li>Added project link in timesheet form (<a href="https://github.com/frappe/erpnext/pull/23764">#23764</a>)</li>
+<li>Update integrations desk page (<a href="https://github.com/frappe/erpnext/pull/23767">#23767</a>)</li>
+<li>Place of supply change on address change (<a href="https://github.com/frappe/erpnext/pull/23941">#23941</a>)</li>
+<li>TDS calculation, skip invoices with “Apply Tax Withholding Amount” has disabled (<a href="https://github.com/frappe/erpnext/pull/23672">#23672</a>)</li>
+<li>Auto fetch serial nos with modified conversion factor (<a href="https://github.com/frappe/erpnext/pull/23854">#23854</a>)</li>
+<li>Default cost center in item master not set in stock entry (<a href="https://github.com/frappe/erpnext/pull/23877">#23877</a>)</li>
+<li>Incorrect de-link serial no and batch (<a href="https://github.com/frappe/erpnext/pull/23947">#23947</a>)</li>
+<li>Accounting for internal transfer invoices within the same company (<a href="https://github.com/frappe/erpnext/pull/24021">#24021</a>)</li>
+<li>Multiple pricing rules with margin type as Percentage is not working (<a href="https://github.com/frappe/erpnext/pull/24205">#24205</a>)</li>
+<li>Added Purchase Order to Global Search (<a href="https://github.com/frappe/erpnext/pull/24055">#24055</a>)</li>
+<li>Cannot expand row in update items dialog (<a href="https://github.com/frappe/erpnext/pull/23839">#23839</a>)</li>
+<li>Maintain stock can’t be changed it there is a product bundle (<a href="https://github.com/frappe/erpnext/pull/23989">#23989</a>)</li>
+<li>SO to PO Mapping Issue (<a href="https://github.com/frappe/erpnext/pull/23820">#23820</a>)</li>
+<li>Asset with value zero doesn’t show up in fixed asset register (<a href="https://github.com/frappe/erpnext/pull/24091">#24091</a>)</li>
+<li>Cannot save customer email &amp; phone (<a href="https://github.com/frappe/erpnext/pull/23797">#23797</a>)</li>
+<li>Incorrect balance value in stock balance report (<a href="https://github.com/frappe/erpnext/pull/24048">#24048</a>)</li>
+<li>Payment Terms not fetched in Purchase Invoice from Purchase Receipt (<a href="https://github.com/frappe/erpnext/pull/23735">#23735</a>)</li>
+<li>Fix for LMS Sign Up link (<a href="https://github.com/frappe/erpnext/pull/23743">#23743</a>)</li>
+<li>Incorrect stock quantity if 'Allow Multiple Material Consumption… (<a href="https://github.com/frappe/erpnext/pull/24116">#24116</a>)</li>
+<li>Added wrong absent days calculation in salary slip (<a href="https://github.com/frappe/erpnext/pull/23897">#23897</a>)</li>
+<li>Purchase receipt to purchase invoice bill date mapping (<a href="https://github.com/frappe/erpnext/pull/23967">#23967</a>)</li>
+<li>Overriding po (<a href="https://github.com/frappe/erpnext/pull/24022">#24022</a>)</li>
+<li>Do not cancel reference document on Quality Inspection cancellation (<a href="https://github.com/frappe/erpnext/pull/24198">#24198</a>)</li>
+<li>Get formatted value in ‘taxes’ print template (<a href="https://github.com/frappe/erpnext/pull/24035">#24035</a>)</li>
+<li>Don’t overrule Item Price via Pricing Rule Rate if 0 (<a href="https://github.com/frappe/erpnext/pull/23636">#23636</a>)</li>
+<li>Job card error handling for operations field (<a href="https://github.com/frappe/erpnext/pull/23991">#23991</a>)</li>
+<li>Validation for journal entry with 0 debit and credit values (<a href="https://github.com/frappe/erpnext/pull/23975">#23975</a>)</li>
+<li>Check if customer exists in product listing (<a href="https://github.com/frappe/erpnext/pull/24030">#24030</a>)</li>
+<li>Asset finance book posting date fix (<a href="https://github.com/frappe/erpnext/pull/23778">#23778</a>)</li>
+<li>Same source and target tables in Status Updater’s update query (<a href="https://github.com/frappe/erpnext/pull/24110">#24110</a>)</li>
+<li>Asset finance book depreciation posting date fix (<a href="https://github.com/frappe/erpnext/pull/23833">#23833</a>)</li>
+<li>Ignore exception during leave ledger creation from the patch (<a href="https://github.com/frappe/erpnext/pull/24005">#24005</a>)</li>
+<li>Added link of bank reconciliation and clearance in accounting desk page (<a href="https://github.com/frappe/erpnext/pull/23850">#23850</a>)</li>
+<li>Sales invoice add button from sales order dashboard (<a href="https://github.com/frappe/erpnext/pull/24077">#24077</a>)</li>
+<li>Incorrect calculation for consumed qty for subcontract item (<a href="https://github.com/frappe/erpnext/pull/23257">#23257</a>)</li>
+<li>Incorrect required_qty in Production Planning Report (<a href="https://github.com/frappe/erpnext/pull/24074">#24074</a>)</li>
+<li>Email digest user not found (<a href="https://github.com/frappe/erpnext/pull/23949">#23949</a>)</li>
+<li>Delete Receive at Warehouse entry on cancellation of Send to War… (<a href="https://github.com/frappe/erpnext/pull/24115">#24115</a>)</li>
+<li>Added TDS Payable account number and an error message (<a href="https://github.com/frappe/erpnext/pull/24065">#24065</a>)</li>
+<li>Override field_map for job card gantt (<a href="https://github.com/frappe/erpnext/pull/24155">#24155</a>)</li>
+<li>Old Shopify order syncing date (<a href="https://github.com/frappe/erpnext/pull/23990">#23990</a>)</li>
+<li>Shipping charges not sync in erpnext from Shopify (<a href="https://github.com/frappe/erpnext/pull/24114">#24114</a>)</li>
+<li>GSTR B2C report (<a href="https://github.com/frappe/erpnext/pull/24039">#24039</a>)</li>
+<li>Ignore canceled entries in stock balance report (<a href="https://github.com/frappe/erpnext/pull/23757">#23757</a>)</li>
+<li>Stock aging report not working (<a href="https://github.com/frappe/erpnext/pull/23923">#23923</a>)</li>
+<li>Incorrect assign to in Maintenance Schedule  (<a href="https://github.com/frappe/erpnext/pull/23831">#23831</a>)</li>
+<li>Improve UX of DATEV report (<a href="https://github.com/frappe/erpnext/pull/23892">#23892</a>)</li>
+<li>Set SLA variance in seconds for Duration fieldtype (<a href="https://github.com/frappe/erpnext/pull/23765">#23765</a>)</li>
+<li>dDouble exception in payroll (<a href="https://github.com/frappe/erpnext/pull/24078">#24078</a>)</li>
+<li>Make asset dashboard charts public (<a href="https://github.com/frappe/erpnext/pull/23751">#23751</a>)</li>
+<li>Don’t copy terms and discount from SO to PO (<a href="https://github.com/frappe/erpnext/pull/23903">#23903</a>)</li>
+<li>Ignore doctypes on company transaction delete (<a href="https://github.com/frappe/erpnext/pull/23864">#23864</a>)</li>
+<li>Error handling in Upload Attendance  (<a href="https://github.com/frappe/erpnext/pull/23907">#23907</a>)</li>
+<li>Tax template update on customer address change (<a href="https://github.com/frappe/erpnext/pull/24160">#24160</a>)</li>
+<li>Not able to save bom (<a href="https://github.com/frappe/erpnext/pull/23910">#23910</a>)</li>
+<li>Enable Allow Auto-Repeat for standard doctypes having auto_repeat field (<a href="https://github.com/frappe/erpnext/pull/23776">#23776</a>)</li>
+<li>Place of Supply fix in Sales Invoices (<a href="https://github.com/frappe/erpnext/pull/23785">#23785</a>)</li>
+<li>Opening invoices in GSTR-1 report (<a href="https://github.com/frappe/erpnext/pull/24117">#24117</a>)</li>
+<li>Add check for allowing access to European region (<a href="https://github.com/frappe/erpnext/pull/23770">#23770</a>)</li>
+<li>Partial serial no return issue (<a href="https://github.com/frappe/erpnext/pull/24208">#24208</a>)</li>
+<li>Multiple pos issues (<a href="https://github.com/frappe/erpnext/pull/23347">#23347</a>)</li>
+<li>Import taxjar globally in the taxjar_integration module (<a href="https://github.com/frappe/erpnext/pull/24027">#24027</a>)</li>
+<li>Payroll attendance error (<a href="https://github.com/frappe/erpnext/pull/23887">#23887</a>)</li>
+<li>Cannot add items to cart (<a href="https://github.com/frappe/erpnext/pull/23796">#23796</a>)</li>
+<li>Show tax amount in base currencies (<a href="https://github.com/frappe/erpnext/pull/24069">#24069</a>)</li>
+<li>Loan application link on creating loan (<a href="https://github.com/frappe/erpnext/pull/23937">#23937</a>)</li>
+<li>Added shipment link in delivery note dashboard (<a href="https://github.com/frappe/erpnext/pull/24210">#24210</a>)</li>
+<li>POS item search includes non stock items (<a href="https://github.com/frappe/erpnext/pull/23914">#23914</a>)</li>
+<li>Paid amount in Sales Invoice POS return resets to 0 (<a href="https://github.com/frappe/erpnext/pull/24057">#24057</a>)</li>
+<li>Remove check for exempt_from_sales_tax (<a href="https://github.com/frappe/erpnext/pull/23870">#23870</a>)</li>
+<li>Fiscal year can be shorter than 12 months (<a href="https://github.com/frappe/erpnext/pull/23838">#23838</a>)</li>
+<li>Loan repayment type option remove (<a href="https://github.com/frappe/erpnext/pull/23582">#23582</a>)</li>
+<li>Make contract template editable (<a href="https://github.com/frappe/erpnext/pull/23891">#23891</a>)</li>
+<li>Item wise tax calculation (<a href="https://github.com/frappe/erpnext/pull/23744">#23744</a>)</li>
+<li>Enabling track changes for stock settings (<a href="https://github.com/frappe/erpnext/pull/23982">#23982</a>)</li>
+<li>Added link of bank reconciliation and clearance in accounting desk page (<a href="https://github.com/frappe/erpnext/pull/23809">#23809</a>)</li>
+<li>Location data on Asset to use command(make_demo) (<a href="https://github.com/frappe/erpnext/pull/23825">#23825</a>)</li>
+<li>Handle Account and Item None not found in Opening Invoice Creation Tool (<a href="https://github.com/frappe/erpnext/pull/23559">#23559</a>)</li>
+<li>List index out of range on including UOM (<a href="https://github.com/frappe/erpnext/pull/23814">#23814</a>)</li>
+<li>Showing error for wrong filters. (<a href="https://github.com/frappe/erpnext/pull/23726">#23726</a>)</li>
+<li>Multiple subcontracting issues (<a href="https://github.com/frappe/erpnext/pull/23662">#23662</a>)</li>
+<li>Sequence id override with workstation column (<a href="https://github.com/frappe/erpnext/pull/23810">#23810</a>)</li>
+<li>Replaced formatdate → format_date (<a href="https://github.com/frappe/erpnext/pull/23849">#23849</a>)</li>
+<li>Test Payment Based on Leave Application (Travis) (<a href="https://github.com/frappe/erpnext/pull/24044">#24044</a>)</li>
+<li>Leave policy dashboard fix and roles (<a href="https://github.com/frappe/erpnext/pull/24170">#24170</a>)</li>
+<li>Budget test cases (<a href="https://github.com/frappe/erpnext/pull/23801">#23801</a>)</li>
+<li>Handle for custom field IFSC code in Bank remittance report. (<a href="https://github.com/frappe/erpnext/pull/23905">#23905</a>)</li>
+<li>Scan barcode does not update barcode item field in sales order (<a href="https://github.com/frappe/erpnext/pull/24090">#24090</a>)</li>
+<li>Item price duplicate checking (<a href="https://github.com/frappe/erpnext/pull/23408">#23408</a>)</li>
+<li>Tax template update on supplier change for India (<a href="https://github.com/frappe/erpnext/pull/24060">#24060</a>)</li>
+<li>Consumed qty logic for subcontracted raw materials (<a href="https://github.com/frappe/erpnext/pull/23314">#23314</a>)</li>
+<li>Finance book not getting added in journal Entry of asset value adjustment (<a href="https://github.com/frappe/erpnext/pull/24100">#24100</a>)</li>
+<li>Fixed home desk page (<a href="https://github.com/frappe/erpnext/pull/24075">#24075</a>)</li>
+<li>po_detail field has no value for subcontracted stock entry (<a href="https://github.com/frappe/erpnext/pull/23777">#23777</a>)</li>
+<li>Set proper state code in E-waybill JSON when GST category is SEZ (<a href="https://github.com/frappe/erpnext/pull/23953">#23953</a>)</li>
+<li>Copying po no when mapping doc (<a href="https://github.com/frappe/erpnext/pull/23729">#23729</a>)</li>
+<li>Duplicate items validation for POS Invoice when allowing multiple items is disabled (<a href="https://github.com/frappe/erpnext/pull/23896">#23896</a>)</li>
+<li>POS register shows cancelled documents (<a href="https://github.com/frappe/erpnext/pull/23747">#23747</a>)</li>
+<li>Subscription test case (<a href="https://github.com/frappe/erpnext/pull/23763">#23763</a>)</li>
+<li>BOM stock report color issue (<a href="https://github.com/frappe/erpnext/pull/23980">#23980</a>)</li>
+<li>Handle the “no leave_allocation found” case (<a href="https://github.com/frappe/erpnext/pull/23922">#23922</a>)</li>
+<li>Filters for tax templates (<a href="https://github.com/frappe/erpnext/pull/23998">#23998</a>)</li>
+<li>Do not allow Company as accounting dimension (<a href="https://github.com/frappe/erpnext/pull/23749">#23749</a>)</li>
+<li>Validation for duplicate Tax Category (<a href="https://github.com/frappe/erpnext/pull/23978">#23978</a>)</li>
+<li>Therapy plan and session fixes (<a href="https://github.com/frappe/erpnext/pull/23817">#23817</a>)</li>
+<li>Correcting description field in taxes and charges for accounts with account number + account name (<a href="https://github.com/frappe/erpnext/pull/23836">#23836</a>)</li>
+<li>Pricing rule with the transaction not working for the additional product (<a href="https://github.com/frappe/erpnext/pull/24053">#24053</a>)</li>
+<li>Keyerror ‘sourced_by_supplier’ (<a href="https://github.com/frappe/erpnext/pull/24038">#24038</a>)</li>
+<li>Validation for membership (<a href="https://github.com/frappe/erpnext/pull/23934">#23934</a>)</li>
+<li>Inpatient Medication Order and Entry fixes (<a href="https://github.com/frappe/erpnext/pull/23799">#23799</a>)</li>
+<li>Avoid using SQL query to get fiscal year dates (<a href="https://github.com/frappe/erpnext/pull/24050">#24050</a>)</li>
+<li>Auto Statewise gst tax template (<a href="https://github.com/frappe/erpnext/pull/23832">#23832</a>)</li>
+<li>POS profile has no attr ‘show_only_available_items’ (<a href="https://github.com/frappe/erpnext/pull/23758">#23758</a>)</li>
+<li>On save sequence id column override with a workstation (<a href="https://github.com/frappe/erpnext/pull/23812">#23812</a>)</li>
+<li>Multiple pricing rules are not working on the selling side (<a href="https://github.com/frappe/erpnext/pull/22711">#22711</a>)</li>
+<li>Salary slip popup error (<a href="https://github.com/frappe/erpnext/pull/24192">#24192</a>)</li>
+</ul>
+<hr>
+<h3><a name="p-268204-frappe-version-1300-beta-9-4" class="anchor" href="#p-268204-frappe-version-1300-beta-9-4"></a>Frappe Version 13.0.0 Beta 9</h3>
+<h4><a name="p-268204-features-and-enhancements-5" class="anchor" href="#p-268204-features-and-enhancements-5"></a>Features and Enhancements</h4>
+<ul>
+<li>Permission Query via Server Script (<a href="https://github.com/frappe/frappe/pull/12034">#12034</a>)</li>
+<li>Option to strip EXIF data from image files before uploading (<a href="https://github.com/frappe/frappe/pull/12014">#12014</a>)</li>
+<li>Provision to open child table in customize form (<a href="https://github.com/frappe/frappe/pull/12030">#12030</a>)</li>
+<li>Added date format support DD-Mon-YY (<a href="https://github.com/frappe/frappe/pull/12056">#12056</a>)</li>
+<li>Partial Backups &amp; Restores (<a href="https://github.com/frappe/frappe/pull/11104">#11104</a>)</li>
+<li>Non-negative check for Int, Float, and Currency fields (<a href="https://github.com/frappe/frappe/pull/11818">#11818</a>)</li>
+<li>Allow html in email templates (<a href="https://github.com/frappe/frappe/pull/12018">#12018</a>)</li>
+<li>Webform fields support for a property depends on fields (read-on… (<a href="https://github.com/frappe/frappe/pull/11927">#11927</a>)</li>
+<li>Conditional Events in Event Streaming (<a href="https://github.com/frappe/frappe/pull/10868">#10868</a>)</li>
+<li>Added filters and order_by fields in frappe.get_last_doc API (<a href="https://github.com/frappe/frappe/pull/11870">#11870</a>)</li>
+<li>Check if auto_repeat field is already present (<a href="https://github.com/frappe/frappe/pull/11970">#11970</a>)</li>
+<li>as_raw update to display content inline not always download as an attachment (<a href="https://github.com/frappe/frappe/pull/11569">#11569</a>)</li>
+<li>Reset scroll position on list paging (<a href="https://github.com/frappe/frappe/pull/11673">#11673</a>)</li>
+<li>Validate sql file before restoring site (<a href="https://github.com/frappe/frappe/pull/11878">#11878</a>)</li>
+<li>Allow custom freeze message in Open Mapped Doc (<a href="https://github.com/frappe/frappe/pull/11976">#11976</a>)</li>
+<li>Show absolute value in print format (<a href="https://github.com/frappe/frappe/pull/12019">#12019</a>)</li>
+<li>Add links and actions to customize form and cleanup code (<a href="https://github.com/frappe/frappe/pull/11565">#11565</a>)</li>
+<li>Add module field in get_desk_sidebar_items (<a href="https://github.com/frappe/frappe/pull/11781">#11781</a>)</li>
+</ul>
+<h4><a name="p-268204-fixes-6" class="anchor" href="#p-268204-fixes-6"></a>Fixes</h4>
+<ul>
+<li>Maximum attachment limit validation (<a href="https://github.com/frappe/frappe/pull/11940">#11940</a>)</li>
+<li>Define chunk size based on backup file size to avoid timeout issues (<a href="https://github.com/frappe/frappe/pull/11526">#11526</a>)</li>
+<li>Fetch doc from db in get_transitions (<a href="https://github.com/frappe/frappe/pull/11883">#11883</a>)</li>
+<li>Remove Package Publish Tool (<a href="https://github.com/frappe/frappe/pull/11863">#11863</a>)</li>
+<li>Make strings translatable (<a href="https://github.com/frappe/frappe/pull/11825">#11825</a>)</li>
+<li>Clear cache after updating defaults manually (<a href="https://github.com/frappe/frappe/pull/11830">#11830</a>)</li>
+<li>Doctype query in create new shortcut (<a href="https://github.com/frappe/frappe/pull/11864">#11864</a>)</li>
+<li>Ace editor fixes (<a href="https://github.com/frappe/frappe/pull/11920">#11920</a>)</li>
+<li>Shorten number card percentage stat (<a href="https://github.com/frappe/frappe/pull/11846">#11846</a>)</li>
+<li>Error page rendering shouldn’t fail when the recorder is active (<a href="https://github.com/frappe/frappe/pull/11806">#11806</a>)</li>
+<li>Rename Doc considers invalid table name on renaming record (<a href="https://github.com/frappe/frappe/pull/11743">#11743</a>)</li>
+<li>Use modified by or owner to send notification from (<a href="https://github.com/frappe/frappe/pull/11981">#11981</a>)</li>
+<li>Bust cache by passing build_version to link and script src (<a href="https://github.com/frappe/frappe/pull/11903">#11903</a>)</li>
+<li>Customize options in desk page rtl layout (<a href="https://github.com/frappe/frappe/pull/11772">#11772</a>)</li>
+<li>Use sql_ddl to avoid exception triggered while running drop sql (<a href="https://github.com/frappe/frappe/pull/11831">#11831</a>)</li>
+<li>Render template for HTML content type (<a href="https://github.com/frappe/frappe/pull/12035">#12035</a>)</li>
+<li>Display style removed from emails (<a href="https://github.com/frappe/frappe/pull/11963">#11963</a>)</li>
+<li>Handle FileAlreadyAttachedException while pulling email (<a href="https://github.com/frappe/frappe/pull/11713">#11713</a>)</li>
+<li>Skip Email Account and Email Domain in Document Follow (<a href="https://github.com/frappe/frappe/pull/11973">#11973</a>)</li>
+<li>URI encode in case white spaces exist in docname (<a href="https://github.com/frappe/frappe/pull/11783">#11783</a>)</li>
+<li>Don’t run a query when a table is missing (<a href="https://github.com/frappe/frappe/pull/11801">#11801</a>)</li>
+<li>Submit on Creation configuration in Auto Repeat (<a href="https://github.com/frappe/frappe/pull/12069">#12069</a>)</li>
+<li>Add missing space in description (<a href="https://github.com/frappe/frappe/pull/11787">#11787</a>)</li>
+<li>Query to handle user value having special characters (<a href="https://github.com/frappe/frappe/pull/11694">#11694</a>)</li>
+<li>TypeError on saving report with child table (<a href="https://github.com/frappe/frappe/pull/11925">#11925</a>)</li>
+<li>Translate Kanban board title (<a href="https://github.com/frappe/frappe/pull/11985">#11985</a>)</li>
+<li>Set label as State/Province in Address instead of just State (<a href="https://github.com/frappe/frappe/pull/11748">#11748</a>)</li>
+<li>Allow “Default Print Language” for custom Print Format (<a href="https://github.com/frappe/frappe/pull/11800">#11800</a>)</li>
+<li>Validate SQL files better (<a href="https://github.com/frappe/frappe/pull/11930">#11930</a>)</li>
+<li>Validate links table data (<a href="https://github.com/frappe/frappe/pull/11884">#11884</a>)</li>
+<li>Use html.unescape for Python 3.9 compatibility. (<a href="https://github.com/frappe/frappe/pull/12005">#12005</a>)</li>
+<li>Use set_header to set Message-Id in header (<a href="https://github.com/frappe/frappe/pull/11778">#11778</a>)</li>
+<li>Typo when creating an SMTP server without a port (<a href="https://github.com/frappe/frappe/pull/11996">#11996</a>)</li>
+<li>Add rename_doc utils for external API usages (<a href="https://github.com/frappe/frappe/pull/12011">#12011</a>)</li>
+<li>Treats the scrollbar as an overlay (<a href="https://github.com/frappe/frappe/pull/11790">#11790</a>)</li>
+<li>Dashboard not visible bug (<a href="https://github.com/frappe/frappe/pull/11918">#11918</a>)</li>
+<li>Total Row in Checkbox Column Reports (<a href="https://github.com/frappe/frappe/pull/11872">#11872</a>)</li>
+<li>Remove scrolling on focus out event for touchscreen devices (<a href="https://github.com/frappe/frappe/pull/11888">#11888</a>)</li>
+<li>Add default to Web Template Field (<a href="https://github.com/frappe/frappe/pull/11780">#11780</a>)</li>
+<li>Order of HTML closing tags (<a href="https://github.com/frappe/frappe/pull/11923">#11923</a>)</li>
+<li>Show total text with value if first column is numeric (<a href="https://github.com/frappe/frappe/pull/11813">#11813</a>)</li>
+<li>Milestone not created for fields updated after submission (<a href="https://github.com/frappe/frappe/pull/11793">#11793</a>)</li>
+<li>Cint seconds before operations (<a href="https://github.com/frappe/frappe/pull/12067">#12067</a>)</li>
+<li>Validate email id before passing to formataddr (<a href="https://github.com/frappe/frappe/pull/11720">#11720</a>)</li>
+<li>Use frappe.utils.shorten_number (<a href="https://github.com/frappe/frappe/pull/12039">#12039</a>)</li>
+<li>Mandatory depends on in grid form (<a href="https://github.com/frappe/frappe/pull/11834">#11834</a>)</li>
+<li>Calculate chart data from the beginning of a period (<a href="https://github.com/frappe/frappe/pull/11794">#11794</a>)</li>
+<li>Move unnecessary compile all outside migrate (<a href="https://github.com/frappe/frappe/pull/11833">#11833</a>)</li>
+<li>PDF generation shouldn’t fail in background jobs and tests (<a href="https://github.com/frappe/frappe/pull/11792">#11792</a>)</li>
+<li>Throw exception if template not found (<a href="https://github.com/frappe/frappe/pull/11843">#11843</a>)</li>
+<li>Security upgrade snyk from 1.398.1 to 1.425.4 (<a href="https://github.com/frappe/frappe/pull/11990">#11990</a>)</li>
+<li>Show custom message for invalid login credentials (<a href="https://github.com/frappe/frappe/pull/11853">#11853</a>)</li>
+<li>Remove twilio integration (<a href="https://github.com/frappe/frappe/pull/11841">#11841</a>)</li>
+<li>Navbar logo height and width (<a href="https://github.com/frappe/frappe/pull/11822">#11822</a>)</li>
+<li>Allow all Data, Link, Dynamic Link fields to be set in based on the field (<a href="https://github.com/frappe/frappe/pull/11922">#11922</a>)</li>
+<li>Error on trying to check semantic version (<a href="https://github.com/frappe/frappe/pull/11916">#11916</a>)</li>
+<li>Notification settings (<a href="https://github.com/frappe/frappe/pull/11862">#11862</a>)</li>
+<li>Manage private images via get_local_image (<a href="https://github.com/frappe/frappe/pull/11935">#11935</a>)</li>
+<li>Filter dashboards, dashboard charts, number cards by modules (<a href="https://github.com/frappe/frappe/pull/12057">#12057</a>)</li>
+<li>Label for _assign field (<a href="https://github.com/frappe/frappe/pull/12038">#12038</a>)</li>
+<li>Bypass validation if force is passed (<a href="https://github.com/frappe/frappe/pull/11915">#11915</a>)</li>
+<li>Max slices for aggregate charts (<a href="https://github.com/frappe/frappe/pull/11808">#11808</a>)</li>
+<li>Delete prepared reports in batches (<a href="https://github.com/frappe/frappe/pull/11869">#11869</a>)</li>
+<li>Allow empty type for Web Templates that are not sections (<a href="https://github.com/frappe/frappe/pull/11628">#11628</a>)</li>
+<li>Allow other GitHub links in the same PR (<a href="https://github.com/frappe/frappe/pull/11982">#11982</a>)</li>
+<li>Don’t set context.no_cache (<a href="https://github.com/frappe/frappe/pull/11799">#11799</a>)</li>
+<li>Remove telephony related code (<a href="https://github.com/frappe/frappe/pull/12017">#12017</a>)</li>
+<li>Don’t throw if filter is invalid (<a href="https://github.com/frappe/frappe/pull/11866">#11866</a>)</li>
+<li>Show 0 instead of undefined when value not set in the dashboard (<a href="https://github.com/frappe/frappe/pull/11816">#11816</a>)</li>
+<li>Disable chart form condition (<a href="https://github.com/frappe/frappe/pull/11844">#11844</a>)</li>
+<li>Enable disable save when navigating between docs (<a href="https://github.com/frappe/frappe/pull/11867">#11867</a>)</li>
+<li>Don’t enqueue a job if it is being executed (<a href="https://github.com/frappe/frappe/pull/11655">#11655</a>)</li>
+<li>Clear localstorage if quota exceeds (<a href="https://github.com/frappe/frappe/pull/12002">#12002</a>)</li>
+<li>Uninstall app enhancements (<a href="https://github.com/frappe/frappe/pull/11911">#11911</a>)</li>
+<li>Make route and action read-only for standard navbar items (<a href="https://github.com/frappe/frappe/pull/11842">#11842</a>)</li>
+<li>Show scrollbar for datatable (<a href="https://github.com/frappe/frappe/pull/11910">#11910</a>)</li>
+<li>Open console even if Frappe imports failed (<a href="https://github.com/frappe/frappe/pull/11832">#11832</a>)</li>
+<li>Set user selected timezone in user defaults (<a href="https://github.com/frappe/frappe/pull/11902">#11902</a>)</li>
+<li>Email password prompt missing field name for submit button (<a href="https://github.com/frappe/frappe/pull/11840">#11840</a>)</li>
+<li>Add semicolons to end unicode  (<a href="https://github.com/frappe/frappe/pull/11993">#11993</a>)</li>
+<li>Replace target field in Top Bar Item table with a checkbox (<a href="https://github.com/frappe/frappe/pull/11763">#11763</a>)</li>
+<li>shorten_number function (<a href="https://github.com/frappe/frappe/pull/12050">#12050</a>)</li>
+<li>Not able to save Domain Settings (<a href="https://github.com/frappe/frappe/pull/11984">#11984</a>)</li>
+<li>uninstall-app enhancements (<a href="https://github.com/frappe/frappe/pull/11969">#11969</a>)</li>
+<li>Remove @ from relevance query (<a href="https://github.com/frappe/frappe/pull/11837">#11837</a>)</li>
+<li>Login Code Size too Small on Mobile (<a href="https://github.com/frappe/frappe/pull/11742">#11742</a>)</li>
+<li>Add namespaces to build_summary_item, generate_route, short… (<a href="https://github.com/frappe/frappe/pull/11868">#11868</a>)</li>
+<li>allow “only image” in comments (<a href="https://github.com/frappe/frappe/pull/11914">#11914</a>)</li>
+<li>oauth2 (<a href="https://github.com/frappe/frappe/pull/11966">#11966</a>)</li>
+<li>Server scripts enhancements (<a href="https://github.com/frappe/frappe/pull/12008">#12008</a>)</li>
+<li>Multiple y rows in charts (<a href="https://github.com/frappe/frappe/pull/12031">#12031</a>)</li>
+<li>Update child values for existing rows (<a href="https://github.com/frappe/frappe/pull/11737">#11737</a>)</li>
+<li>Auto contact creation in email account (<a href="https://github.com/frappe/frappe/pull/11732">#11732</a>)</li>
+<li>Display web template after save (<a href="https://github.com/frappe/frappe/pull/11809">#11809</a>)</li>
+<li>Create auto_repeat field only if docfield/custom field does not exist (<a href="https://github.com/frappe/frappe/pull/11827">#11827</a>)</li>
+<li>frappe.utils.formatdate not working in the jinja template (<a href="https://github.com/frappe/frappe/pull/11871">#11871</a>)</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="16" />
+              <span class='post-likes'>16 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/any-change-in-immutable-ledger/69625/2">Any Change in Immutable Ledger</a>
+                        <meta itemprop='position' content='259'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/glz'><span itemprop='name'>glz</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/7/8/788f90fcfbab75325b6ece646eabbc564b115d41.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-29T04:23:02Z' class='post-time'>
+                    December 29, 2020,  4:23am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-29T04:23:02Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/8/788f90fcfbab75325b6ece646eabbc564b115d41.png" data-download-href="https://discuss.frappe.io/uploads/default/788f90fcfbab75325b6ece646eabbc564b115d41" title="image"><img src="https://discuss.frappe.io/uploads/default/original/3X/7/8/788f90fcfbab75325b6ece646eabbc564b115d41.png" alt="image" data-base62-sha1="hcwSVDz5ywWbXTPnvSBJir9RGRX" width="690" height="41" data-dominant-color="0A0B0A"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">795×48 2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>Took more than 4 hours to run this patch, and eventually connection to database was lost.</p>
+<p>The patch probably needs some optimization.</p>
+<p>Re-running it.</p>
+<p>The database has:<br>
+Delivery Notes: 56,575<br>
+Returned Delivery Notes: 7,494</p>
+<p>Purchase Receipts: 5,192<br>
+Returned Purchase Receipts: 73</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/wale'><span itemprop='name'>wale</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-29T06:55:16Z' class='post-time'>
+                    December 29, 2020,  6:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-29T06:55:16Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="nabinhait" data-post="1" data-topic="69396">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/nabinhait/48/9505_2.png" class="avatar"> nabinhait:</div>
+<blockquote>
+<p>Allow back-dated stock transactions and repost item costing via background job</p>
+</blockquote>
+</aside>
+<p>Finally! Thank you, thank you, thank you! Lots of fixes too  <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>Kind regards,</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Suresh_Thakor'><span itemprop='name'>Suresh_Thakor</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/2/a/2a75e9921cd5688226db8ec5936ca8aa54d21cc2.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-29T17:47:32Z' class='post-time'>
+                    December 29, 2020,  5:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-29T17:47:32Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/nabinhait">@nabinhait</a>,  Little confusing <img src="https://discuss.frappe.io/images/emoji/twitter/confused.png?v=12" title=":confused:" class="emoji" alt=":confused:" loading="lazy" width="20" height="20"> All the point are same but is it Beta-6 or Beta.7<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/a/2a75e9921cd5688226db8ec5936ca8aa54d21cc2.png" data-download-href="https://discuss.frappe.io/uploads/default/2a75e9921cd5688226db8ec5936ca8aa54d21cc2" title="04%20PM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/a/2a75e9921cd5688226db8ec5936ca8aa54d21cc2_2_690x277.png" alt="04%20PM" data-base62-sha1="63CG9suMuMfRIdA33dNQ2eqfZbY" width="690" height="277" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/a/2a75e9921cd5688226db8ec5936ca8aa54d21cc2_2_690x277.png, https://discuss.frappe.io/uploads/default/original/3X/2/a/2a75e9921cd5688226db8ec5936ca8aa54d21cc2.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/2/a/2a75e9921cd5688226db8ec5936ca8aa54d21cc2.png 2x" data-dominant-color="F5F5F6"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">04%20PM</span><span class="informations">829×333 58.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div> <div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/7/07f03554e046a383b681566a1783660dbf365fc7.png" data-download-href="https://discuss.frappe.io/uploads/default/07f03554e046a383b681566a1783660dbf365fc7" title="43%20PM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/7/07f03554e046a383b681566a1783660dbf365fc7_2_690x341.png" alt="43%20PM" data-base62-sha1="18dZ9b68nUZLchcUQrz778eI9IX" width="690" height="341" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/7/07f03554e046a383b681566a1783660dbf365fc7_2_690x341.png, https://discuss.frappe.io/uploads/default/original/3X/0/7/07f03554e046a383b681566a1783660dbf365fc7.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/0/7/07f03554e046a383b681566a1783660dbf365fc7.png 2x" data-dominant-color="F5F7F9"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">43%20PM</span><span class="informations">788×390 53.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nabinhait'><span itemprop='name'>nabinhait</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-12-30T09:43:32Z' class='post-time'>
+                    December 30, 2020,  9:43am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-12-30T09:43:32Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for pointing out, fixed it here. Will fix it in product change log as well.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Amr_Allam'><span itemprop='name'>Amr_Allam</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-01-05T22:43:08Z' class='post-time'>
+                    January 5, 2021, 10:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-01-05T22:43:08Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Is erpnext 13 usable now?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vrms'><span itemprop='name'>vrms</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-01-05T22:46:11Z' class='post-time'>
+                    January 5, 2021, 10:46pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-01-05T22:46:11Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>it is usable, but in beta stage.</p>
+<p>It depends on your scenario, your level of expertise, your readiness to take the risk of running an unstable version.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/m.rashwan'><span itemprop='name'>m.rashwan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-01-05T23:23:10Z' class='post-time'>
+                    January 5, 2021, 11:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-01-05T23:23:10Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>How can i upgrade from v 12 to 13</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Fadil_Siddique'><span itemprop='name'>Fadil_Siddique</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-03-12T05:45:20Z' class='post-time'>
+                    March 12, 2021,  5:45am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-03-12T05:45:20Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Try following steps</p>
+<h1>
+<a name="update-1" class="anchor" href="#update-1"></a>update</h1>
+<p>cd ~/frappe-bench<br>
+bench update</p>
+<h1>
+<a name="update-to-major-release-ex-v12-v13-2" class="anchor" href="#update-to-major-release-ex-v12-v13-2"></a>update to major release ex. v12 → v13</h1>
+<h1>
+<a name="nodejs-10-required-3" class="anchor" href="#nodejs-10-required-3"></a>nodejs &gt;= 10 required</h1>
+<p>cd ~<br>
+curl -sL <a href="https://deb.nodesource.com/setup_10.x" rel="noopener nofollow ugc">https://deb.nodesource.com/setup_10.x</a> -o nodesource_setup.sh<br>
+sudo bash nodesource_setup.sh<br>
+sudo apt install nodejs<br>
+nodejs -v</p>
+<h1>
+<a name="now-upgrade-4" class="anchor" href="#now-upgrade-4"></a>now upgrade</h1>
+<p>cd ~/frappe-bench<br>
+bench switch-to-branch version-13-beta frappe erpnext --upgrade<br>
+bench update --patch<br>
+bench migrate<br>
+bench update --build</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/sachin1'><span itemprop='name'>sachin1</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/d/2/d2054281b6601188c92b79c0534f19bef23fd3b1.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-04-22T08:39:30Z' class='post-time'>
+                    April 22, 2021,  8:39am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-04-22T08:39:30Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,<br>
+The option for <strong>allow back-dated entry for stock</strong> is not showing in stock settings in v13 beta 6. How to resolve the issue. Please help!!!<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/2/d2054281b6601188c92b79c0534f19bef23fd3b1.png" data-download-href="https://discuss.frappe.io/uploads/default/d2054281b6601188c92b79c0534f19bef23fd3b1" title="allowed"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/2/d2054281b6601188c92b79c0534f19bef23fd3b1_2_690x148.png" alt="allowed" data-base62-sha1="tXVxltNBJ9VxTwxnnPkrlGgrs6B" width="690" height="148" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/2/d2054281b6601188c92b79c0534f19bef23fd3b1_2_690x148.png, https://discuss.frappe.io/uploads/default/original/3X/d/2/d2054281b6601188c92b79c0534f19bef23fd3b1.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/d/2/d2054281b6601188c92b79c0534f19bef23fd3b1.png 2x" data-dominant-color="F1F1ED"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">allowed</span><span class="informations">870×187 26.1 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

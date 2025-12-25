@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<!-- Built on Frappe. https://frappeframework.com/ -->
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="frappe">
+
+	
+	<meta name="description" content="Three days of amazing talks and discussions in ERPNext Conference 2017"><meta name="title" content="ERPNext Conference 2017"><meta name="language" content="en"><meta property="og:type"  content="article"><meta property="og:title"  content="ERPNext Conference 2017"><meta property="og:description"  content="Three days of amazing talks and discussions in ERPNext Conference 2017"><meta name="twitter:title" content="ERPNext Conference 2017"><meta name="twitter:description" content="Three days of amazing talks and discussions in ERPNext Conference 2017"><meta name="twitter:card" content="summary">
+
+
+	<title>ERPNext Conference 2017</title>
+
+	
+	<link
+		rel="shortcut icon"
+		href="/files/frappe-favicon.svg"
+		type="image/x-icon"
+	>
+	<!--for indexing -->
+<meta name="google-site-verification" content="pY8RgHujc1s-KwOQZBldPi1bH5BOZfZBf8cP3oEUc4I" /> 
+ 
+<script type="text/javascript">
+    function getCookie() {
+        return Object.fromEntries(document.cookie.split('; ').map((part) => part.split('=')).map((d) => [d[0], decodeURIComponent(d[1])]));
+    }
+
+    function setCookie(cname, cvalue, exdays, domain) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        let expires = "expires=" + d.toUTCString();
+        if (domain) {
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;" + "domain=" + domain + ";";
+        } else {
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;";
+        }
+    }
+
+    let old_cookie = getCookie();
+
+    // Remove all cookies that are not mentioned in Cookie Policy
+    for (let key in old_cookie) {
+        if (!["sid", "io", "user_id", "user_image", "system_user", "full_name"].includes(key)) {
+            setCookie(key, old_cookie[key], -1);
+            setCookie(key, old_cookie[key], -1, document.domain);
+            setCookie(key, old_cookie[key], -1, "." + document.domain);
+            setCookie(key, old_cookie[key], -1, "analytics.frappe.io");
+        }
+    }
+</script>
+
+
+<!-- Plausible -->
+<script defer data-api="https://frappecloud.com/api/event" data-domain="frappe.io" src="https://frappecloud.com/js/script.js"></script>
+<link type="text/css" rel="stylesheet" href="/assets/frappe/dist/css/website.bundle.BGBBLW3I.css">
+<link type="text/css" rel="stylesheet" href="/assets/erpnext/dist/css/erpnext-web.bundle.VSIKZJXK.css">
+<link type="text/css" rel="stylesheet" href="/assets/frappe/css/hljs-night-owl.css">
+<link type="text/css" rel="stylesheet" href="/assets/blog/css/blog.scss">
+		
+	<style>body {
+    font-family: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    letter-spacing: -.011em;
+}
+.exhibitor-content-parent {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  column-gap: 32px;
+  row-gap: 32px;
+  align-items: center;
+}
+
+.section-description {
+  margin-bottom: 24px;
+}
+.agenda {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 12px;
+  line-height: 21px;
+  min-height: 3rem;
+}
+.card-body {
+  /*word-wrap: break-word;*/
+}
+
+.standard-image {
+  background: #fff;
+  border: 0;
+}
+.exhibitor-card {
+  text-align: center;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  /*margin: 1rem 0;*/
+  border: 1px solid #e2e6e9;
+  border-radius: 8px;
+  background: #fff;
+  padding: 1.5rem 1.2rem;
+  filter: grayscale(100%);
+  transition: filter 300ms ease-in-out;
+}
+
+.exhibitor-card:hover {
+  filter: grayscale(0);
+}
+.exhibitor-card .company-logo {
+  height: 128px;
+  width: 300px;
+  object-fit: contain;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.card-parents {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(10rem, 1fr));
+  column-gap: 32px;
+  row-gap: 32px;
+  align-items: center;
+}
+
+.card-parents-keynote {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(220px, 1fr));
+  column-gap: 32px;
+  row-gap: 32px;
+  align-items: center;
+}
+.card-img {
+  height: 177px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: var(--blue-50);
+  background-blend-mode: multiply;
+  mix-blend-mode: multiply;
+}
+
+.card-text {
+  max-height: 55px;
+}
+
+.card-img {
+  min-height: 250px;
+  object-fit: cover;
+}
+
+.card-title-bg {
+  min-height: 3.5rem;
+}
+
+.card-img,
+.card-img-bottom {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  /*background*/
+}
+
+@media only screen and (max-width: 768px) {
+  .card-parents {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-content .btn {
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+  }
+  .exhibitor-card {
+    width: 100%;
+    margin: auto;
+  }
+  .exhibitor-content-parent {
+    display: flex;
+    flex-direction: column;
+  }
+  .about {
+    flex-direction: column;
+    margin: auto;
+  }
+  .about-img {
+    margin-bottom: 2rem;
+  }
+  .agenda {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 12px;
+    line-height: 21px;
+    min-height: 1px;
+  }
+  .section-description {
+    margin-bottom: 24px;
+  }
+}
+
+.coming-soon-container {
+  width: 600px;
+  height: 200px;
+  padding: 2rem;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.hero-with-right-image .hero-image {
+  max-width: 32rem;
+}
+
+.stretched-link {
+  font-size: 12px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+
+  padding: 1.25rem;
+  /*max-height: 200px;*/
+}
+
+.card-title {
+  font-size: 16px;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+  min-height: 250px;
+
+  /*color: white;*/
+  font-weight: bold;
+}
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #313b44;
+}
+
+.section-padding {
+  padding: 4rem 0;
+}
+.section-title {
+  margin-bottom: 0.5rem;
+}
+.hero-subtitle {
+  color: var(--gray-700);
+}
+.section-cta-container {
+  margin-top: 24px;
+}
+.profile-image {
+  width: 100%;
+  height: 177px;
+  object-fit: cover;
+}
+.card-keynote {
+  align-items: center;
+  text-align: center;
+}
+.speaker-name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27.52px;
+  margin: 12px 0 0px 0;
+}
+.speaker-company {
+  color: var(--gray-600);
+  font-size: 14px;
+}
+.speaker-designation {
+  color: var(--gray-600);
+  font-size: 14px;
+  line-height: 23.1px;
+ 
+
+}
+
+.btn-talk {
+  margin-bottom: 0.8rem;
+  width: 80%;
+}
+.text-muted {
+  margin-bottom: 0.2rem;
+}
+
+.talk-btn {
+  font-size: 14px;
+}
+
+.border-btm {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 4rem;
+}
+.standard-image {
+    /*background-color: #EBF4FC;*/
+    color: #318AD8;
+}
+
+.section-description {
+    font-size: 1.375rem;
+}
+.user-name {
+    cursor: pointer;
+    
+}
+.user-modal-img {
+    height: 140px;
+    width: 140px;
+}
+.user-modal-img .standard-image{
+    border-radius:0.75rem;
+    height: 140px;
+    width: 140px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-color: #fff;
+}
+.user-modal-img .avatar {
+    border-radius:0.75rem;
+    height: 140px;
+    width: 140px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-color: #fff;
+}
+
+.user-name-modal {
+    font-size: 24px;
+    line-height: 37.5px;
+    margin-bottom: 0;
+}
+.modal-dialog {
+    max-width: 750px;
+}
+.modal .modal-body {
+    padding: 2rem;
+}
+.close:focus {
+    outline: none;
+}
+@media only screen and (max-width: 768px) {
+
+  .search-head {
+      display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+  .section-description{
+      margin-bottom: 0.8rem !important;
+  }
+  .col-3 {
+      max-width: 100%;
+  }
+}
+.control-input {
+    width: 360px;
+    font-size: 13px;
+    color: var(--gray-600);
+}
+
+.control-input input {
+    background-image : url(/files/serach.svg);
+    background-repeat: no-repeat; 
+    background-position: 10px 9px;
+    
+padding-left:30px;
+}
+.modal .modal-header {
+    border-bottom: 0;
+}
+.modal-header .close {
+    padding: 0;
+    padding-right: 1rem;
+}</style>
+
+	<script>
+		window.frappe = {};
+		window._version_number = "{{ build_version }}";
+		frappe.ready_events = [];
+		frappe.ready = function(fn) {
+			frappe.ready_events.push(fn);
+		}
+		window.dev_server = 0;
+		window.socketio_port = 9000;
+		window.show_language_picker = false;
+	</script>
+</head>
+<body frappe-session-status="logged-out" data-path="conference/2017" class="">
+
+		<nav class="navbar navbar-light navbar-expand-lg">
+<div class="container">
+<a class="navbar-brand" href="/"><img src="/files/frappe-footer.png"/></a>
+</div>
+</nav>
+
+
+
+
+
+
+
+
+<div id="page-conference-page" data-path="conference/2017"source-type="Generator" data-doctype="Web Page"source-content-type="HTML">
+	
+<div class="page-content-wrapper">
+	<!-- breadcrumbs -->
+	<div class="page-breadcrumbs">
+		
+    
+    
+    
+
+	</div>
+
+	
+	<main class="">
+		<div class="page-header-wrapper">
+			<div class="page-header">
+				
+			</div>
+
+			
+		</div>
+
+		<div class="page_content"><div class="webpage-content">
+	
+	<article class="web-page-content" id="conference-page" style="text-align: Left">
+	<div class="page_content">
+	<section class="section section-padding-top section-padding-bottom" data-section-idx="2"
+		data-section-template="Hero with Right Image">
+		<div class="container">
+			<div class="hero-with-right-image">
+				<div class="hero-content">
+					<div>
+						<h1 class="hero-title">
+							ERPNext Conference 2017
+						</h1>
+						<p class="hero-subtitle">
+							Three days of amazing talks and discussions in ERPNext Conference 2017
+						</p>
+						<div>
+							<p>
+								October 12
+								
+								- October 14
+								
+							</p>
+							<a class="btn btn-lg btn-primary" href="/conference/2017/schedule">
+								View Schedule
+							</a>
+							
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	
+	<section class="section section-padding section-padding-top section-padding-bottom tracks" data-section-idx="2"
+		data-section-template="Section with Cards">
+		<div class="container">
+			<h2 class="section-title" style="margin-bottom: 0.5rem">Tracks</h2>
+			<p class="section-description">
+				All topics covered in the Conference 2017
+			</p>
+			
+			<div class="card-parents">
+				
+				<div class="card">
+					<div class="image-container">
+						<div class="card-img"></div>
+						<span class="image-text">Developer Talks</span>
+					</div>
+					<div class="card-body">
+						<h4 class="card-title">Developer Talks</h4>
+						<div class="card-text">
+							<p class="agenda text">None</p>
+						</div>
+						<a href="/conference/2017/Developer Talks/talks"
+							class="btn btn-secondary stretched-link">View Talks</a>
+					</div>
+				</div>
+
+				
+				<div class="card">
+					<div class="image-container">
+						<div class="card-img"></div>
+						<span class="image-text">ERPNext Roadmap</span>
+					</div>
+					<div class="card-body">
+						<h4 class="card-title">ERPNext Roadmap</h4>
+						<div class="card-text">
+							<p class="agenda text">Get to know ERPNext as a product, the team. Understand why they chose to break the monolith and the roadmap, moving forward.</p>
+						</div>
+						<a href="/conference/2017/ERPNext Roadmap/talks"
+							class="btn btn-secondary stretched-link">View Talks</a>
+					</div>
+				</div>
+
+				
+				<div class="card">
+					<div class="image-container">
+						<div class="card-img"></div>
+						<span class="image-text">Community and User Stories</span>
+					</div>
+					<div class="card-body">
+						<h4 class="card-title">Community and User Stories</h4>
+						<div class="card-text">
+							<p class="agenda text">Unveiling partnership talks to help you understand the execution of timely account expansions.</p>
+						</div>
+						<a href="/conference/2017/Community and User Stories/talks"
+							class="btn btn-secondary stretched-link">View Talks</a>
+					</div>
+				</div>
+
+				
+			</div>
+			
+		</div>
+	</section>
+    
+	<section class="section exhibitors section-padding bg-light" data-section-idx="2">
+		<div class="container">
+			<h2 class="section-title">Sponsors</h2>
+			
+			<p class="section-description">
+				Our sponsors for the 2017 conference
+			</p>
+			
+			<div class="exhibitor-content-parent">
+				
+				
+				<a href="https://indictranstech.com/" target="_blank">
+				
+					<div class="exhibitor-card">
+						<img class="standard-image company-logo" src="/files/indictrans.png" />
+					</div>
+				</a>
+				
+				
+				<a href="http://frappe.io/" target="_blank">
+				
+					<div class="exhibitor-card">
+						<img class="standard-image company-logo" src="/files/frappe-log.png" />
+					</div>
+				</a>
+				
+				
+				<a href="https://www.mntechnique.com/" target="_blank">
+				
+					<div class="exhibitor-card">
+						<img class="standard-image company-logo" src="/files/mnt-logo.png" />
+					</div>
+				</a>
+				
+				
+				<a>
+			    
+					<div class="exhibitor-card">
+						<img class="standard-image company-logo" src="/files/digithinkit.png" />
+					</div>
+				</a>
+				
+				
+				<a href="https://fogliasana.com/" target="_blank">
+				
+					<div class="exhibitor-card">
+						<img class="standard-image company-logo" src="/files/shs-logo.png" />
+					</div>
+				</a>
+				
+			</div>
+            
+		</div>
+	</section>
+	<div class="user hidden">Guest</div>
+</div>
+	</article>
+	
+</div></div>
+
+		<div class="page-footer"></div>
+	</main>
+	
+</div>
+
+</div>
+
+
+<div id="all-symbols" style="display:none"></div><script type="text/javascript">fetch(`/assets/frappe/icons/lucide/icons.svg?v=${window._version_number}`, {credentials: "same-origin"}).then((r) => r.text()).then((svg) => {let c = document.getElementById("all-symbols"); c.insertAdjacentHTML("beforeend", svg);});</script><script type="text/javascript">fetch(`/assets/frappe/icons/timeless/icons.svg?v=${window._version_number}`, {credentials: "same-origin"}).then((r) => r.text()).then((svg) => {let c = document.getElementById("all-symbols"); c.insertAdjacentHTML("beforeend", svg);});</script><script type="text/javascript">fetch(`/assets/frappe/icons/espresso/icons.svg?v=${window._version_number}`, {credentials: "same-origin"}).then((r) => r.text()).then((svg) => {let c = document.getElementById("all-symbols"); c.insertAdjacentHTML("beforeend", svg);});</script><script type="text/javascript">fetch(`/assets/erpnext/icons/pos-icons.svg?v=${window._version_number}`, {credentials: "same-origin"}).then((r) => r.text()).then((svg) => {let c = document.getElementById("all-symbols"); c.insertAdjacentHTML("beforeend", svg);});</script>
+	<!-- js should be loaded in body! -->
+	<script>
+		frappe.boot = {"lang":"en","apps_data":{"apps":[],"is_desk_apps":1,"default_path":""},"sysdefaults":{"float_precision":2,"date_format":"dd/mm/yyyy","time_format":"HH:mm:ss","first_day_of_the_week":"Sunday","number_format":"#,##,###.##","currency":null},"time_zone":{"system":"Asia/Kolkata","user":"Asia/Kolkata"},"assets_json":{"billing.bundle.js":"/assets/frappe/dist/js/billing.bundle.QQE2RPCA.js","bootstrap-4-web.bundle.js":"/assets/frappe/dist/js/bootstrap-4-web.bundle.FOZOVELL.js","calendar.bundle.js":"/assets/frappe/dist/js/calendar.bundle.4A4YITIU.js","controls.bundle.js":"/assets/frappe/dist/js/controls.bundle.QQS6VSE2.js","data_import_tools.bundle.js":"/assets/frappe/dist/js/data_import_tools.bundle.44FYB4HH.js","desk.bundle.js":"/assets/frappe/dist/js/desk.bundle.BMCYCQKG.js","dialog.bundle.js":"/assets/frappe/dist/js/dialog.bundle.VAP7UNJ7.js","form.bundle.js":"/assets/frappe/dist/js/form.bundle.O3J2FE6Y.js","frappe-web.bundle.js":"/assets/frappe/dist/js/frappe-web.bundle.BNE2MHTY.js","libs.bundle.js":"/assets/frappe/dist/js/libs.bundle.IGBCIYI5.js","list.bundle.js":"/assets/frappe/dist/js/list.bundle.7Z7PPURJ.js","logtypes.bundle.js":"/assets/frappe/dist/js/logtypes.bundle.WKQH7KBM.js","onboarding_tours.bundle.js":"/assets/frappe/dist/js/onboarding_tours.bundle.RAUR6X4Z.js","photoswipe.bundle.js":"/assets/frappe/dist/js/photoswipe.bundle.YSXZQA64.js","report.bundle.js":"/assets/frappe/dist/js/report.bundle.BSEKPAZ2.js","sentry.bundle.js":"/assets/frappe/dist/js/sentry.bundle.AX44GVWW.js","syntax_highlighting.bundle.js":"/assets/frappe/dist/js/syntax_highlighting.bundle.YHGNRCUE.js","telemetry.bundle.js":"/assets/frappe/dist/js/telemetry.bundle.LKEZCADB.js","video_player.bundle.js":"/assets/frappe/dist/js/video_player.bundle.DUYYLSFO.js","web_form.bundle.js":"/assets/frappe/dist/js/web_form.bundle.6GOZTRKQ.js","form_builder.bundle.js":"/assets/frappe/dist/js/form_builder.bundle.W25EO5PC.js","print_format_builder.bundle.js":"/assets/frappe/dist/js/print_format_builder.bundle.VQYWNAGA.js","workflow_builder.bundle.js":"/assets/frappe/dist/js/workflow_builder.bundle.JRT7LEHB.js","build_events.bundle.js":"/assets/frappe/dist/js/build_events.bundle.BCX32TWL.js","file_uploader.bundle.js":"/assets/frappe/dist/js/file_uploader.bundle.6I5E7RKC.js","kanban_board.bundle.js":"/assets/frappe/dist/js/kanban_board.bundle.F6FPXXED.js","desk.bundle.css":"/assets/frappe/dist/css/desk.bundle.ISEKYNZA.css","email.bundle.css":"/assets/frappe/dist/css/email.bundle.VEH5245X.css","login.bundle.css":"/assets/frappe/dist/css/login.bundle.MCRTCMIB.css","print.bundle.css":"/assets/frappe/dist/css/print.bundle.CCLZLCDJ.css","print_format.bundle.css":"/assets/frappe/dist/css/print_format.bundle.IZYXYBOP.css","report.bundle.css":"/assets/frappe/dist/css/report.bundle.FUNZ4Y3M.css","web_form.bundle.css":"/assets/frappe/dist/css/web_form.bundle.3JK2YHCS.css","website.bundle.css":"/assets/frappe/dist/css/website.bundle.BGBBLW3I.css","bank-reconciliation-tool.bundle.js":"/assets/erpnext/dist/js/bank-reconciliation-tool.bundle.PQSY2TRN.js","erpnext.bundle.js":"/assets/erpnext/dist/js/erpnext.bundle.6VCHX23F.js","item-dashboard.bundle.js":"/assets/erpnext/dist/js/item-dashboard.bundle.GLB2UJ4S.js","point-of-sale.bundle.js":"/assets/erpnext/dist/js/point-of-sale.bundle.HVONX3JS.js","bom_configurator.bundle.js":"/assets/erpnext/dist/js/bom_configurator.bundle.5GOR6CXI.js","erpnext-web.bundle.css":"/assets/erpnext/dist/css/erpnext-web.bundle.VSIKZJXK.css","erpnext.bundle.css":"/assets/erpnext/dist/css/erpnext.bundle.FZM67DC4.css","erpnext_email.bundle.css":"/assets/erpnext/dist/css/erpnext_email.bundle.VBMUIWFQ.css","charts-demo.bundle.js":"/assets/frappe_io/dist/js/charts-demo.bundle.VNV6RUNF.js","datatable.bundle.js":"/assets/frappe_io/dist/js/datatable.bundle.SOZHUVE4.js","datatable.bundle.css":"/assets/frappe_io/dist/css/datatable.bundle.N6MPPLYE.css","wiki.bundle.js":"/assets/wiki/dist/js/wiki.bundle.TPQEISUL.js","contributions.bundle.css":"/assets/wiki/dist/css/contributions.bundle.PA6JKZEY.css","wiki.bundle.css":"/assets/wiki/dist/css/wiki.bundle.C2EITML6.css","buy_credits.bundle.js":"/assets/partner_relationship_management/dist/js/buy_credits.bundle.PTRLR7SB.js","education.bundle.js":"/assets/education/dist/js/education.bundle.PSPI3YNS.js","gstr1.bundle.js":"/assets/india_compliance/dist/js/gstr1.bundle.2TBEXJWQ.js","ims.bundle.js":"/assets/india_compliance/dist/js/ims.bundle.DNRGLVX2.js","india_compliance.bundle.js":"/assets/india_compliance/dist/js/india_compliance.bundle.UQP2C2DC.js","purchase_reconciliation_tool.bundle.js":"/assets/india_compliance/dist/js/purchase_reconciliation_tool.bundle.NKK4EG2T.js","india_compliance_account.bundle.js":"/assets/india_compliance/dist/js/india_compliance_account.bundle.CR243CUL.js","india_compliance_account.bundle.css":"/assets/india_compliance/dist/css/india_compliance_account.bundle.SIKZ7EY5.css","hierarchy-chart.bundle.js":"/assets/hrms/dist/js/hierarchy-chart.bundle.5E224PCR.js","hrms.bundle.js":"/assets/hrms/dist/js/hrms.bundle.QS2GRVNQ.js","interview.bundle.js":"/assets/hrms/dist/js/interview.bundle.C7CDEMYA.js","performance.bundle.js":"/assets/hrms/dist/js/performance.bundle.63UL5NS7.js","hrms.bundle.css":"/assets/hrms/dist/css/hrms.bundle.HWL5ZADJ.css","print_designer.bundle.js":"/assets/print_designer/dist/js/print_designer.bundle.U4ABZPDA.js","pdfjs.bundle.css":"/assets/print_designer/dist/css/pdfjs.bundle.CHU65NM7.css","print_designer.bundle.css":"/assets/print_designer/dist/css/print_designer.bundle.E7SB6YGD.css","lending.bundle.js":"/assets/lending/dist/js/lending.bundle.YFDCXFD2.js","newsletter-web.bundle.js":"/assets/newsletter/dist/js/newsletter-web.bundle.EMCZY25S.js","newsletter.bundle.js":"/assets/newsletter/dist/js/newsletter.bundle.3GCU7H5V.js","rtl_desk.bundle.css":"/assets/frappe/dist/css-rtl/desk.bundle.AGMGYGTD.css","rtl_email.bundle.css":"/assets/frappe/dist/css-rtl/email.bundle.GWSPXZHN.css","rtl_login.bundle.css":"/assets/frappe/dist/css-rtl/login.bundle.F67G65RC.css","rtl_print.bundle.css":"/assets/frappe/dist/css-rtl/print.bundle.7TYIN6EK.css","rtl_print_format.bundle.css":"/assets/frappe/dist/css-rtl/print_format.bundle.6ANA4F3P.css","rtl_report.bundle.css":"/assets/frappe/dist/css-rtl/report.bundle.OP4ULE2I.css","rtl_web_form.bundle.css":"/assets/frappe/dist/css-rtl/web_form.bundle.IZEHIJW6.css","rtl_website.bundle.css":"/assets/frappe/dist/css-rtl/website.bundle.BNF2KIS2.css","rtl_erpnext-web.bundle.css":"/assets/erpnext/dist/css-rtl/erpnext-web.bundle.S2WDI5C3.css","rtl_erpnext.bundle.css":"/assets/erpnext/dist/css-rtl/erpnext.bundle.6FJDC5X5.css","rtl_erpnext_email.bundle.css":"/assets/erpnext/dist/css-rtl/erpnext_email.bundle.JTGM4QLH.css","rtl_datatable.bundle.css":"/assets/frappe_io/dist/css-rtl/datatable.bundle.DFEIS7KM.css","rtl_contributions.bundle.css":"/assets/wiki/dist/css-rtl/contributions.bundle.YMAMD3CO.css","rtl_wiki.bundle.css":"/assets/wiki/dist/css-rtl/wiki.bundle.UHVYMZ4Q.css","rtl_india_compliance_account.bundle.css":"/assets/india_compliance/dist/css-rtl/india_compliance_account.bundle.3JTJ42AS.css","rtl_hrms.bundle.css":"/assets/hrms/dist/css-rtl/hrms.bundle.FNMENRLT.css","rtl_pdfjs.bundle.css":"/assets/print_designer/dist/css-rtl/pdfjs.bundle.T57MBE3C.css","rtl_print_designer.bundle.css":"/assets/print_designer/dist/css-rtl/print_designer.bundle.7WFIUJXV.css"},"sitename":"frappeio.frappe.cloud","is_fc_site":0}
+		// for backward compatibility of some libs
+		frappe.sys_defaults = frappe.boot.sysdefaults;
+	</script>
+	<script type="text/javascript" src="/assets/frappe/dist/js/frappe-web.bundle.BNE2MHTY.js"></script>
+	
+	<script type="text/javascript" src="/website_script.js"></script>
+	<script type="text/javascript" src="/assets/newsletter/dist/js/newsletter-web.bundle.EMCZY25S.js"></script><script>if (!($('.speaker-name').is(':visible'))) {
+    $('.tracks').addClass('bg-light')
+}
+
+if (!($('.speaker-name').is(':visible'))) {
+    $('.exhibitors').removeClass('bg-light')
+}
+
+if($(".participants").is(':visible')) {
+    $('.tracks').addClass('bg-light')
+}
+
+if($(".participants").is(':visible')) {
+    $('.exhibitors').removeClass('bg-light')
+}</script>
+	<script>frappe.csrf_token = "None";</script></body>
+</html>

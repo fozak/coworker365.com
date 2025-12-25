@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Server Error submitting the pick list</title>
+    <link>https://discuss.frappe.io/t/server-error-submitting-the-pick-list/158273</link>
+    <description>Hello, 
+
+I am still learning the ERPNext, studying now the WO process. when I submit the WO and try to submit the pick list, i get the following error: MySQLdb.OperationalError: (1054, &quot;Unknown column &#39;tabDelivery Note.pick_list&#39; in &#39;WHERE&#39;&quot;):
+
+App Versions
+
+```
+{
+	&quot;frappe&quot;: &quot;16.0.0-dev&quot;,
+	&quot;erpnext&quot;: &quot;16.0.0-dev&quot;
+}
+```
+
+### Route
+
+```
+Form/Pick List/STO-PICK-2025-00001
+```
+
+### Traceback
+
+```
+Traceback (most recent call last):
+  File &quot;apps/frappe/frappe/app.py&quot;, line 121, in application
+    response = frappe.api.handle(request)
+  File &quot;apps/frappe/frappe/api/__init__.py&quot;, line 60, in handle
+    data = endpoint(**arguments)
+  File &quot;apps/frappe/frappe/api/v1.py&quot;, line 36, in handle_rpc_call
+    return frappe.handler.handle()
+  File &quot;apps/frappe/frappe/handler.py&quot;, line 52, in handle
+    data = execute_cmd(cmd)
+  File &quot;apps/frappe/frappe/handler.py&quot;, line 85, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File &quot;apps/frappe/frappe/__init__.py&quot;, line 1127, in call
+    return fn(*args, **newargs)
+  File &quot;apps/frappe/frappe/utils/typing_validations.py&quot;, line 36, in wrapper
+    return func(*args, **kwargs)
+  File &quot;apps/frappe/frappe/__init__.py&quot;, line 489, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File &quot;apps/frappe/frappe/desk/notifications.py&quot;, line 259, in get_open_count
+    return _get_linked_document_counts(doctype, name, items)
+  File &quot;apps/frappe/frappe/desk/notifications.py&quot;, line 301, in _get_linked_document_counts
+    external_links_data_for_d = get_external_links(d, name, links)
+  File &quot;apps/frappe/frappe/desk/notifications.py&quot;, line 348, in get_external_links
+    total_count = get_doc_count(doctype, filters)
+  File &quot;apps/frappe/frappe/desk/notifications.py&quot;, line 360, in get_doc_count
+    docs = frappe.get_all(
+  File &quot;apps/frappe/frappe/__init__.py&quot;, line 1385, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File &quot;apps/frappe/frappe/__init__.py&quot;, line 1360, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File &quot;apps/frappe/frappe/model/db_query.py&quot;, line 210, in execute
+    result = self.build_and_run()
+  File &quot;apps/frappe/frappe/model/db_query.py&quot;, line 251, in build_and_run
+    return frappe.db.sql(
+  File &quot;apps/frappe/frappe/database/database.py&quot;, line 271, in sql
+    self.execute_query(query, values)
+  File &quot;apps/frappe/frappe/database/database.py&quot;, line 365, in execute_query
+    return self._cursor.execute(query, values)
+  File &quot;env/lib/python3.10/site-packages/MySQLdb/cursors.py&quot;, line 179, in execute
+    res = self._query(mogrified_query)
+  File &quot;env/lib/python3.10/site-packages/MySQLdb/cursors.py&quot;, line 330, in _query
+    db.query(q)
+  File &quot;env/lib/python3.10/site-packages/MySQLdb/connections.py&quot;, line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, &quot;Unknown column &#39;tabDelivery Note.pick_list&#39; in &#39;WHERE&#39;&quot;)
+
+```
+
+### Request Data
+
+```
+{
+	&quot;type&quot;: &quot;GET&quot;,
+	&quot;args&quot;: {
+		&quot;doctype&quot;: &quot;Pick List&quot;,
+		&quot;name&quot;: &quot;STO-PICK-2025-00001&quot;,
+		&quot;items&quot;: &quot;[\&quot;Stock Entry\&quot;,\&quot;Sales Order\&quot;,\&quot;Delivery Note\&quot;,\&quot;Stock Reservation Entry\&quot;]&quot;
+	},
+	&quot;headers&quot;: {},
+	&quot;error_handlers&quot;: {},
+	&quot;url&quot;: &quot;/api/method/frappe.desk.notifications.get_open_count&quot;,
+	&quot;request_id&quot;: null
+}
+```
+
+### Response Data
+
+```
+{
+	&quot;exception&quot;: &quot;MySQLdb.OperationalError: (1054, \&quot;Unknown column &#39;tabDelivery Note.pick_list&#39; in &#39;WHERE&#39;\&quot;)&quot;,
+	&quot;exc_type&quot;: &quot;OperationalError&quot;
+}
+```
+
+
+Please advise, what is wrong?
+
+Thank you in advance,
+
+Igor.</description>
+    
+    <lastBuildDate>Thu, 25 Dec 2025 11:46:04 +0000</lastBuildDate>
+    <category>ERPNext</category>
+    <atom:link href="https://discuss.frappe.io/t/server-error-submitting-the-pick-list/158273.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Server Error submitting the pick list</title>
+        <dc:creator><![CDATA[igor-k]]></dc:creator>
+        <description><![CDATA[
+            <p>Solved it by upgrading to latest version.</p>
+          <p><a href="https://discuss.frappe.io/t/server-error-submitting-the-pick-list/158273/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/server-error-submitting-the-pick-list/158273/2</link>
+        <pubDate>Thu, 25 Dec 2025 11:46:04 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158273-2</guid>
+        <source url="https://discuss.frappe.io/t/server-error-submitting-the-pick-list/158273.rss">Server Error submitting the pick list</source>
+      </item>
+      <item>
+        <title>Server Error submitting the pick list</title>
+        <dc:creator><![CDATA[igor-k]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello,</p>
+<p>I am still learning the ERPNext, studying now the WO process. when I submit the WO and try to submit the pick list, i get the following error: MySQLdb.OperationalError: (1054, “Unknown column ‘tabDelivery Note.pick_list’ in ‘WHERE’”):</p>
+<p>App Versions</p>
+<pre><code class="lang-auto">{
+	"frappe": "16.0.0-dev",
+	"erpnext": "16.0.0-dev"
+}
+</code></pre>
+<h3><a name="p-489443-route-1" class="anchor" href="https://discuss.frappe.io#p-489443-route-1"></a>Route</h3>
+<pre><code class="lang-auto">Form/Pick List/STO-PICK-2025-00001
+</code></pre>
+<h3><a name="p-489443-traceback-2" class="anchor" href="https://discuss.frappe.io#p-489443-traceback-2"></a>Traceback</h3>
+<pre><code class="lang-auto">Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 60, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 36, in handle_rpc_call
+    return frappe.handler.handle()
+  File "apps/frappe/frappe/handler.py", line 52, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 85, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "apps/frappe/frappe/__init__.py", line 1127, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 489, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/notifications.py", line 259, in get_open_count
+    return _get_linked_document_counts(doctype, name, items)
+  File "apps/frappe/frappe/desk/notifications.py", line 301, in _get_linked_document_counts
+    external_links_data_for_d = get_external_links(d, name, links)
+  File "apps/frappe/frappe/desk/notifications.py", line 348, in get_external_links
+    total_count = get_doc_count(doctype, filters)
+  File "apps/frappe/frappe/desk/notifications.py", line 360, in get_doc_count
+    docs = frappe.get_all(
+  File "apps/frappe/frappe/__init__.py", line 1385, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 1360, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "apps/frappe/frappe/model/db_query.py", line 210, in execute
+    result = self.build_and_run()
+  File "apps/frappe/frappe/model/db_query.py", line 251, in build_and_run
+    return frappe.db.sql(
+  File "apps/frappe/frappe/database/database.py", line 271, in sql
+    self.execute_query(query, values)
+  File "apps/frappe/frappe/database/database.py", line 365, in execute_query
+    return self._cursor.execute(query, values)
+  File "env/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "env/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "env/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'tabDelivery Note.pick_list' in 'WHERE'")
+
+</code></pre>
+<h3><a name="p-489443-request-data-3" class="anchor" href="https://discuss.frappe.io#p-489443-request-data-3"></a>Request Data</h3>
+<pre><code class="lang-auto">{
+	"type": "GET",
+	"args": {
+		"doctype": "Pick List",
+		"name": "STO-PICK-2025-00001",
+		"items": "[\"Stock Entry\",\"Sales Order\",\"Delivery Note\",\"Stock Reservation Entry\"]"
+	},
+	"headers": {},
+	"error_handlers": {},
+	"url": "/api/method/frappe.desk.notifications.get_open_count",
+	"request_id": null
+}
+</code></pre>
+<h3><a name="p-489443-response-data-4" class="anchor" href="https://discuss.frappe.io#p-489443-response-data-4"></a>Response Data</h3>
+<pre><code class="lang-auto">{
+	"exception": "MySQLdb.OperationalError: (1054, \"Unknown column 'tabDelivery Note.pick_list' in 'WHERE'\")",
+	"exc_type": "OperationalError"
+}
+</code></pre>
+<p>Please advise, what is wrong?</p>
+<p>Thank you in advance,</p>
+<p>Igor.</p>
+          <p><a href="https://discuss.frappe.io/t/server-error-submitting-the-pick-list/158273/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/server-error-submitting-the-pick-list/158273/1</link>
+        <pubDate>Tue, 23 Dec 2025 15:34:56 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158273-1</guid>
+        <source url="https://discuss.frappe.io/t/server-error-submitting-the-pick-list/158273.rss">Server Error submitting the pick list</source>
+      </item>
+  </channel>
+</rss>

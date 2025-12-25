@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Virtual DocType as Child Table - App Development - Frappe Forum</title>
+    <meta name="description" content="Hi there, 
+I am wondering if it’s possible to create a child table as a virtual doctype. 
+So technically it works: I mean, I can create the DocType with the Flags: 
+x Virtual 
+x Child Table 
+The generated .py file has th&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/virtual-doctype-as-child-table/89248" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Virtual DocType as Child Table&#39;" href="https://discuss.frappe.io/t/virtual-doctype-as-child-table/89248.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/virtual-doctype-as-child-table/89248" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/virtual-doctype-as-child-table/89248" />
+<meta property="og:title" content="Virtual DocType as Child Table" />
+<meta name="twitter:title" content="Virtual DocType as Child Table" />
+<meta property="og:description" content="Hi there,  I am wondering if it’s possible to create a child table as a virtual doctype.  So technically it works: I mean, I can create the DocType with the Flags:  x Virtual  x Child Table  The generated .py file has the methods:   db_insert db_update get get_list get_count get_stats  I expected to implement get_list() to return the values I want to display.  I just want to aggregate some other data in another block, which are already persisted in the database.  So I thought that might be the e..." />
+<meta name="twitter:description" content="Hi there,  I am wondering if it’s possible to create a child table as a virtual doctype.  So technically it works: I mean, I can create the DocType with the Flags:  x Virtual  x Child Table  The generated .py file has the methods:   db_insert db_update get get_list get_count get_stats  I expected to implement get_list() to return the values I want to display.  I just want to aggregate some other data in another block, which are already persisted in the database.  So I thought that might be the e..." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:section" content="App Development" />
+<meta property="og:article:section:color" content="0E76BD" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="10 ❤" />
+<meta property="article:published_time" content="2022-05-03T08:19:17+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Virtual DocType as Child Table","mainEntity":{"@type":"Question","name":"Virtual DocType as Child Table","text":"Hi there,\n\nI am wondering if it’s possible to create a child table as a virtual doctype.\n\nSo technically it works: I mean, I can create the DocType with the Flags:\n\nx Virtual\n\nx Child Table\n\nThe generated .py file has the methods:\n\ndb_insert\n\ndb_update\n\nget\n\nget_list\n\nget_count\n\nget_stats\n\nI expected to&hellip;","upvoteCount":1,"answerCount":0,"datePublished":"2022-05-03T08:19:17.850Z","author":{"@type":"Person","name":"pgr","url":"https://discuss.frappe.io/u/pgr"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/virtual-doctype-as-child-table/89248">Virtual DocType as Child Table</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/app-development/24" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0E76BD'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>App Development</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Virtual DocType as Child Table'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/virtual-doctype-as-child-table/89248'>
+      <meta itemprop='datePublished' content='2022-05-03T08:19:17Z'>
+        <meta itemprop='articleSection' content='App Development'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/pgr'><span itemprop='name'>pgr</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/virtual-doctype-as-child-table/89248">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2022-05-03T08:19:17Z' class='post-time'>
+                    May 3, 2022,  8:19am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-03T08:19:17Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi there,</p>
+<p>I am wondering if it’s possible to create a child table as a virtual doctype.</p>
+<p>So technically it works: I mean, I can create the DocType with the Flags:<br>
+x Virtual<br>
+x Child Table</p>
+<p>The generated .py file has the methods:</p>
+<ul>
+<li>db_insert</li>
+<li>db_update</li>
+<li>get</li>
+<li>get_list</li>
+<li>get_count</li>
+<li>get_stats</li>
+</ul>
+<p>I expected to implement <strong>get_list()</strong> to return the values I want to display.</p>
+<p>I just want to aggregate some other data in another block, which are already persisted in the database.<br>
+So I thought that might be the easiest way … but I cannot find anything about that in the docs or in the forum… so I hope somebody can help me.</p>
+<p>The current result is → </p>
+<p>The child table is embedded at the parent doctype but with empty entities.</p>
+<p>I’ve called <em>frappe.logger()</em> within the method <strong>get_list()</strong>, which doesnt log anything.</p>
+<p>So it seems, that there needs to be another method to be redefined to gather the Child Table’s data… hope anybody did this already?</p>
+<p>Thanks alot!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/peterg'><span itemprop='name'>peterg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-03T08:50:58Z' class='post-time'>
+                    May 3, 2022,  8:50am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-03T08:50:58Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This is a really interesting idea. Among other things, it suggests a way to get real table joins through the regular form interface. Last I check in v13, virtual doctypes were still only half implemented, but I’ve heard it’s working more fully in the v14 betas. What version are you testing on?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/RWEMA_Aimable'><span itemprop='name'>RWEMA_Aimable</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-03T09:20:05Z' class='post-time'>
+                    May 3, 2022,  9:20am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-03T09:20:05Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have tried to link to Virtual Doctype but it throws a frappe.db.exists error on V13. I will try on V14</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/pgr'><span itemprop='name'>pgr</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-03T11:09:38Z' class='post-time'>
+                    May 3, 2022, 11:09am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-03T11:09:38Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am on V13 … it works without any error, but simply displays an empty table</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/pgr'><span itemprop='name'>pgr</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-23T08:20:36Z' class='post-time'>
+                    May 23, 2022,  8:20am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-23T08:20:36Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>After having other topics, I finally got back to that and solved it ugly via JS.</p>
+<p>As I want to load the data asynchronously, only when the Section is expanded, I created an API method, let’s call it here ‘my_app.api.load_data’.</p>
+<p>Then in the expand-event</p>
+<pre><code class="lang-auto">frappe.call('my_app.api.load_data', {
+      'sales_invoice': cur_frm.doc.name
+      }).then(result =&gt; {
+        for(let item_data of result.data) {
+          const new_item = cur_frm.add_child('table_identifier');
+
+          new_item.attr1 = item_data.val1;
+          new_item.attr2 = item_data.val2;
+          new_item.attr... 
+        }
+
+        cur_frm.refresh_field('table_identifier');
+      });
+      ...
+})
+</code></pre>
+<p>Maybe it helps sbd else.</p>
+<p>In the meantime I am hoping that I just didnt find a better way (and I get informed about it) <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/szufisher'><span itemprop='name'>szufisher</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-23T08:29:43Z' class='post-time'>
+                    May 23, 2022,  8:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-23T08:29:43Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>smart workaround.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/szufisher'><span itemprop='name'>szufisher</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-23T08:31:55Z' class='post-time'>
+                    May 23, 2022,  8:31am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-23T08:31:55Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="pgr" data-post="5" data-topic="89248">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/pgr/48/45713_2.png" class="avatar"> pgr:</div>
+<blockquote>
+<p>Then in the expand-event</p>
+</blockquote>
+</aside>
+<p>how you hook to expand-event? sample code also? thanks.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/pgr'><span itemprop='name'>pgr</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-23T08:58:49Z' class='post-time'>
+                    May 23, 2022,  8:58am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-23T08:58:49Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Haha good point (I forgot), this was also a very dirty hack (as I am not 100% sure about the lifecycle of the frappe class instances).</p>
+<p>In the refresh method of the Parent doctype:</p>
+<pre><code class="lang-auto">refresh: function(doc, dt, dn) {
+    frappe.model.clear_table(cur_frm.doc, 'table_identifier');
+    cur_frm.refresh_field('table_identifier');
+    
+    if (cur_frm.fields_dict.table_identifier.collapse_link[0].classList.contains('collapsed')) {
+      cur_frm.fields_dict.table_identifier.collapse_link[0].addEventListener('click', this.events.load_data, { once: true });
+    } else {
+      this.events.load_data();
+    }
+  },
+</code></pre>
+<p>The event’s method will then not be called in the “this” scope.<br>
+But I cannot use <code>this.events.load_data.bind(this)</code> as it would generate an anonymous function, which would then be bound additionally to the click, each time another refresh appears.</p>
+<p>So my loading function doesn’t care about its scope, which made it ok.</p>
+<p>Otherwise you could memoize the anonymous function to get the same effect, but as I previously mentioned, I don’t have enough experience with frappe to know about the instance lifecycles.</p>
+<p>I didn’t find a “real” attribute for the current indication of collapse/expand, that’s why I triggered the DOM element’s class… again a kind of ugly.</p>
+<p>If there a better ways for that, it would really be useful to have this in the docs.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/szufisher'><span itemprop='name'>szufisher</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-24T00:28:08Z' class='post-time'>
+                    May 24, 2022, 12:28am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-24T00:28:08Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Tested the python onload event, it also works</p>
+<pre><code class="lang-auto">class TestVirtualChild(Document):
+
+    def onload(self):
+
+        self.append("child",
+
+            {"item":"1234",
+
+             "remark": "my remarks"})
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/pgr'><span itemprop='name'>pgr</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-24T06:31:37Z' class='post-time'>
+                    May 24, 2022,  6:31am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-24T06:31:37Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Strange… you tested this without any JS, right?</p>
+<p>It’s not called when I try this.</p>
+<p>It neither aborts, when I just try to crash it… so on my v13 the <code>onload</code> method is just not called obviously.</p>
+<pre><code class="lang-auto">def onload(self):
+	frappe.throw('sdf')
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/szufisher'><span itemprop='name'>szufisher</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-24T08:58:17Z' class='post-time'>
+                    May 24, 2022,  8:58am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-24T08:58:17Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="pgr" data-post="10" data-topic="89248">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/pgr/48/45713_2.png" class="avatar"> pgr:</div>
+<blockquote>
+<p>Strange… you tested this without any JS, right?</p>
+</blockquote>
+</aside>
+<p>Yes, I tested just using pure python code as above.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/pgr'><span itemprop='name'>pgr</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-24T15:28:35Z' class='post-time'>
+                    May 24, 2022,  3:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-24T15:28:35Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Very strange… but unfortunately I encountered further trouble when persisting/deleting the parent doctype.<br>
+Opened a PR for that… hope this will get reviewed soon, but for now I have to disable that feature because of that.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Bob_Schulze'><span itemprop='name'>Bob_Schulze</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-12-12T20:37:05Z' class='post-time'>
+                    December 12, 2022,  8:37pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-12-12T20:37:05Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, indeed only get_list is useful here…IF my PR would be accepted: <a href="https://github.com/frappe/frappe/pull/19254" class="inline-onebox" rel="noopener nofollow ugc">feat: virtual child doctypes by alias · Pull Request #19254 · frappe/frappe · GitHub</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mattesilver'><span itemprop='name'>mattesilver</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-05-26T16:33:09Z' class='post-time'>
+                    May 26, 2023,  4:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-05-26T16:33:09Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>On V14 none of the methods in the virtual doctype class gets called when displaying a child table.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/pgr'><span itemprop='name'>pgr</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-05-30T20:20:04Z' class='post-time'>
+                    May 30, 2023,  8:20pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-05-30T20:20:04Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>So same as I encountered. The only way, which worked for me is reading the data with JS as described</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jlfernandez83'><span itemprop='name'>jlfernandez83</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-14T21:33:23Z' class='post-time'>
+                    November 14, 2025,  9:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-14T21:33:23Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It seems it is now possible. Not tested yet.</p>
+<aside class="onebox githubpullrequest" data-onebox-src="https://github.com/frappe/frappe/pull/33088">
+  <header class="source">
+
+      <a href="https://github.com/frappe/frappe/pull/33088" target="_blank" rel="noopener nofollow ugc">github.com/frappe/frappe</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="github-row" data-github-private-repo="false">
+
+
+
+    <div class="github-icon-container" title="Pull Request">
+      <svg width="60" height="60" class="github-icon" viewBox="0 0 12 16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+    </div>
+
+  <div class="github-info-container">
+
+
+
+      <h4>
+        <a href="https://github.com/frappe/frappe/pull/33088" target="_blank" rel="noopener nofollow ugc">feat: Computed/virtual child-tables</a>
+      </h4>
+
+    <div class="branches">
+      <code>develop</code> ← <code>ankush:computed_child_table</code>
+    </div>
+
+      <div class="github-info">
+        <div class="date">
+          opened <span class="discourse-local-date" data-format="ll" data-date="2025-06-25" data-time="06:47:14" data-timezone="UTC">06:47AM - 25 Jun 25 UTC</span>
+        </div>
+
+        <div class="user">
+          <a href="https://github.com/ankush" target="_blank" rel="noopener nofollow ugc">
+            <img alt="" src="https://avatars.githubusercontent.com/u/9079960?v=4" class="onebox-avatar-inline" width="20" height="20">
+            ankush
+          </a>
+        </div>
+
+        <div class="lines" title="30 commits changed 19 files with 392 additions and 91 deletions">
+          <a href="https://github.com/frappe/frappe/pull/33088/files" target="_blank" rel="noopener nofollow ugc">
+            <span class="added">+392</span>
+            <span class="removed">-91</span>
+          </a>
+        </div>
+      </div>
+  </div>
+</div>
+
+  <div class="github-row">
+    <p class="github-body-container">Why? 
+
+&gt; The general use case for this feature, regardless of the specific imp<span class="show-more-container"><a href="https://github.com/frappe/frappe/pull/33088" target="_blank" rel="noopener nofollow ugc" class="show-more">…</a></span><span class="excerpt hidden">lementation, is this: instead of linking to a separate report, we can show an overview of related data directly in the form (without storing it again). (from https://github.com/frappe/frappe/pull/33019)
+
+
+---
+
+- They need to be a non-data descriptor i.e. cached_property or equivalent
+- When "loading from DB", we will trigger the descriptor
+- The descriptor can return dict or docs for better DX.
+- We initialize docs as normal child tables
+
+TODO:
+- [x] More checks, edge cases, tests etc.
+  - [x] interactions with lazy docs
+  - [x] all "table_fieldname" usage. 
+- [x] restrict to virtual fields. Improve previous validations.
+- [x] Disable writing to computed tables (happens automatically on read-only fields :smile: )
+
+
+Alternative implementations:
+- https://github.com/frappe/frappe/pull/32460
+- https://github.com/frappe/frappe/pull/33019
+
+
+closes https://github.com/frappe/frappe/issues/31976
+
+---
+
+Example usage: show active sessions of a user.
+
+![image](https://github.com/user-attachments/assets/4b457a07-cfb2-4d4f-afb8-0720cbd7aaea)
+
+TODO: 
+- [x] Allow clearing a suspicious session</span></p>
+  </div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/avc'><span itemprop='name'>avc</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/b/3/b3e729ab10627e35d7f39f3d000b464a3111fd54.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-16T00:07:21Z' class='post-time'>
+                    November 16, 2025, 12:07am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-16T00:07:21Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/jlfernandez83">@jlfernandez83</a></p>
+<p>Check User doctype (<code>develop</code> branch) …<br>
+Here you can see an implementation of this feature.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/b/3/b3e729ab10627e35d7f39f3d000b464a3111fd54.png" data-download-href="https://discuss.frappe.io/uploads/default/b3e729ab10627e35d7f39f3d000b464a3111fd54" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/b/3/b3e729ab10627e35d7f39f3d000b464a3111fd54_2_690x297.png" alt="image" data-base62-sha1="pFuJkykKwlFZR7yT24QxHxvAjl2" width="690" height="297" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/b/3/b3e729ab10627e35d7f39f3d000b464a3111fd54_2_690x297.png, https://discuss.frappe.io/uploads/default/optimized/3X/b/3/b3e729ab10627e35d7f39f3d000b464a3111fd54_2_1035x445.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/b/3/b3e729ab10627e35d7f39f3d000b464a3111fd54.png 2x" data-dominant-color="1E1E1E"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1186×511 65 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jlfernandez83'><span itemprop='name'>jlfernandez83</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-16T16:42:46Z' class='post-time'>
+                    November 16, 2025,  4:42pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-16T16:42:46Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks <a class="mention" href="/u/avc">@avc</a></p>
+<p>Following your example (sessions in user doctype), it seems it’s ok if you want to see data in a table layout inside another doctype, but this data are not useful for proccesing in the backend, as they are not selectable…</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/avc'><span itemprop='name'>avc</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-16T17:53:42Z' class='post-time'>
+                    November 16, 2025,  5:53pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-16T17:53:42Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>AFAIK this is the main goal of this PR, just adding virtual child table to regular doctype.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_21' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jlfernandez83'><span itemprop='name'>jlfernandez83</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-16T17:59:02Z' class='post-time'>
+                    November 16, 2025,  5:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-16T18:06:12Z'>
+              <span itemprop='position'>21</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>That’s true. <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=14" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>They mention:</p>
+<blockquote>
+<p>The general use case for this feature, regardless of the specific implementation, is this: instead of linking to a separate report, we can show an overview of related data directly in the form (without storing it again).</p>
+</blockquote>
+<p>Anyway, it would be nice to be able to use virtual child tables as a “Controller facade”.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

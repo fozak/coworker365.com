@@ -1,0 +1,4 @@
+let currentIndex=0;const testimonials=document.querySelectorAll('.testimonial');function showTestimonial(index){if(index>=testimonials.length){currentIndex=0;}else if(index<0){currentIndex=testimonials.length-1;}
+testimonials.forEach(testimonial=>{testimonial.classList.remove('active');});testimonials[currentIndex].classList.add('active');}
+function moveSlide(direction){currentIndex+=direction;showTestimonial(currentIndex);}
+showTestimonial(currentIndex);

@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Push Notifications - Frappe HR - Frappe Forum</title>
+    <meta name="description" content="Hi there, I have self-hosted frappe and erpnext instance running on an Ubuntu VPS. 
+I also have the Frappe HR Mobile Application. I have followed all instructions on push notifications on the following screen and website&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/push-notifications/131991" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Push Notifications&#39;" href="https://discuss.frappe.io/t/push-notifications/131991.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/b/0/b073d79326715557eeed90b25790fd163c3be632_2_1024x435.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/b/0/b073d79326715557eeed90b25790fd163c3be632_2_1024x435.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/push-notifications/131991" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/push-notifications/131991" />
+<meta property="og:title" content="Push Notifications" />
+<meta name="twitter:title" content="Push Notifications" />
+<meta property="og:description" content="Hi there, I have self-hosted frappe and erpnext instance running on an Ubuntu VPS.  I also have the Frappe HR Mobile Application. I have followed all instructions on push notifications on the following screen and website.  Push Notification (frappe.io)  I appreciate it seems this is aimed at Frappe Cloud but what about self hosting?  v15 onwards, all sites hosted on Frappe Cloud can enable Push Notifications for the mobile app.  If you turn on Enable Push Notification Relay you get the following..." />
+<meta name="twitter:description" content="Hi there, I have self-hosted frappe and erpnext instance running on an Ubuntu VPS.  I also have the Frappe HR Mobile Application. I have followed all instructions on push notifications on the following screen and website.  Push Notification (frappe.io)  I appreciate it seems this is aimed at Frappe Cloud but what about self hosting?  v15 onwards, all sites hosted on Frappe Cloud can enable Push Notifications for the mobile app.  If you turn on Enable Push Notification Relay you get the following..." />
+<meta property="og:article:section" content="Frappe HR" />
+<meta property="og:article:section:color" content="ffd478" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="frappe" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="15 ❤" />
+<meta property="article:published_time" content="2024-08-29T05:10:13+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="/t/push-notifications/131991?page=2">
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Push Notifications","mainEntity":{"@type":"Question","name":"Push Notifications","text":"Hi there, I have self-hosted frappe and erpnext instance running on an Ubuntu VPS.\n\nI also have the Frappe HR Mobile Application. I have followed all instructions on push notifications on the following screen and website.\n\n<a href=\"https://docs.frappe.io/hr/push-notification\" rel=\"noopener nofollow ugc\">Push Notification (frappe.io)<\/a>\n\nI appreciate it seems this is aimed at Frappe &hellip;","upvoteCount":2,"answerCount":0,"datePublished":"2024-08-29T05:10:13.570Z","author":{"@type":"Person","name":"benjamen","url":"https://discuss.frappe.io/u/benjamen"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/push-notifications/131991">Push Notifications</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/hr/22" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #ffd478'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe HR</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Push Notifications'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/push-notifications/131991'>
+      <meta itemprop='datePublished' content='2024-08-29T05:10:13Z'>
+        <meta itemprop='articleSection' content='Frappe HR'>
+      <meta itemprop='keywords' content='erpnext, frappe'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/benjamen'><span itemprop='name'>benjamen</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/push-notifications/131991">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/b/0/b073d79326715557eeed90b25790fd163c3be632.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2024-08-29T05:10:13Z' class='post-time'>
+                    August 29, 2024,  5:10am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-29T05:10:13Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi there, I have self-hosted frappe and erpnext instance running on an Ubuntu VPS.<br>
+I also have the Frappe HR Mobile Application. I have followed all instructions on push notifications on the following screen and website.</p>
+<p><a href="https://docs.frappe.io/hr/push-notification" rel="noopener nofollow ugc">Push Notification (frappe.io)</a></p>
+<p>I appreciate it seems this is aimed at Frappe Cloud but what about self hosting?<br>
+<em>v15 onwards, all sites hosted on Frappe Cloud can enable Push Notifications for the mobile app.</em></p>
+<p>If you turn on Enable Push Notification Relay you get the following message:</p>
+<h4><a name="h-1" class="anchor" href="#h-1"></a></h4>
+<p><strong>Relay Server URL missing</strong></p>
+<p><strong>The Push Relay Server URL key (<code>push_relay_server_url</code>) is missing in your site config</strong></p>
+<p>If you go to your site_config.json and add this parameter push_relay_server_url and following the firebase FMC set up you can get some configure details</p>
+<p><a href="https://firebase.google.com/docs/cloud-messaging/server#auth" class="onebox" target="_blank" rel="noopener nofollow ugc">https://firebase.google.com/docs/cloud-messaging/server#auth</a></p>
+<p>But the API Key/Secret relates to a previous version of this tool and so you are left with other configure options.</p>
+<ol>
+<li>
+<p>Has anyone managed to get this working on their own server (not local) and if so how?</p>
+</li>
+<li>
+<p>Why is this so hard? and shouldnlt it just be the same configure for self service?</p>
+</li>
+</ol>
+<p><span class="hashtag-raw">#help</span> <a class="hashtag-cooked" href="/c/hr/22" data-type="category" data-slug="hr" data-id="22"><span class="hashtag-icon-placeholder"><svg class="fa d-icon d-icon-square-full svg-icon svg-node"><use href="#square-full"></use></svg></span><span>Frappe HR</span></a> <span class="hashtag-raw">#pushnotification</span> <span class="hashtag-raw">#fmc</span></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/b/0/b073d79326715557eeed90b25790fd163c3be632.png" data-download-href="https://discuss.frappe.io/uploads/default/b073d79326715557eeed90b25790fd163c3be632" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/b/0/b073d79326715557eeed90b25790fd163c3be632_2_690x293.png" alt="image" data-base62-sha1="paYdYavvQQIUsQ6YfLGgux9APU6" width="690" height="293" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/b/0/b073d79326715557eeed90b25790fd163c3be632_2_690x293.png, https://discuss.frappe.io/uploads/default/optimized/3X/b/0/b073d79326715557eeed90b25790fd163c3be632_2_1035x439.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/b/0/b073d79326715557eeed90b25790fd163c3be632_2_1380x586.png 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1565×665 50.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/avc'><span itemprop='name'>avc</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-29T05:48:20Z' class='post-time'>
+                    August 29, 2024,  5:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-29T05:48:20Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/benjamen">@benjamen</a>:</p>
+<p>As far I know, this only works on Frappe Cloud sites … It needs a server, running a relay app for Firebase service, etc … Repository is not public yet. Maybe by the first days of October we will know something else … <img src="https://discuss.frappe.io/images/emoji/twitter/wink.png?v=12" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20"></p>
+<p>Hope this helps.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="5" />
+              <span class='post-likes'>5 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/JeansReal'><span itemprop='name'>JeansReal</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-10-21T16:49:04Z' class='post-time'>
+                    October 21, 2024,  4:49pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-10-21T16:49:04Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello, is there any update on this?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Jasa1983'><span itemprop='name'>Jasa1983</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-11-04T04:09:06Z' class='post-time'>
+                    November 4, 2024,  4:09am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-11-04T04:09:06Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, are here updates?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/frappefr'><span itemprop='name'>frappefr</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-06T14:48:08Z' class='post-time'>
+                    February 6, 2025,  2:48pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-06T14:48:08Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hitting the same problem on my self hosted PWA.<br>
+Why not using mozilla push servers?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/sowmyarajshreekala12'><span itemprop='name'>sowmyarajshreekala12</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-03-12T04:53:44Z' class='post-time'>
+                    March 12, 2025,  4:53am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-03-12T04:53:44Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I tried enabling Push Notifications in a self-hosted Frappe and ERPNext instance. However, when I enable Push Notifications in the HRMS mobile app, I get an error: “Cannot read properties of null (reading ‘vapidKey’).”</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Hardik_Zinzu'><span itemprop='name'>Hardik_Zinzu</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-03-12T09:04:41Z' class='post-time'>
+                    March 12, 2025,  9:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-03-12T09:04:41Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I had created Push Notification functionality which works on self hosted environment as well. Let me know if I can help you with.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/JeansReal'><span itemprop='name'>JeansReal</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-03-14T22:39:30Z' class='post-time'>
+                    March 14, 2025, 10:39pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-03-14T22:39:30Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello, please DM Friend!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/benjamen'><span itemprop='name'>benjamen</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-03-14T22:41:14Z' class='post-time'>
+                    March 14, 2025, 10:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-03-14T22:41:14Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Post on here please!! It would help everyone</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Hardik_Zinzu'><span itemprop='name'>Hardik_Zinzu</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-03-15T06:28:41Z' class='post-time'>
+                    March 15, 2025,  6:28am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-03-15T06:28:41Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It’s an app I created so not possible to share it here. But I can guide you that how I had created it a long ago.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/benjamen'><span itemprop='name'>benjamen</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-03-15T07:11:40Z' class='post-time'>
+                    March 15, 2025,  7:11am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-03-15T07:11:40Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Would it possible to post it to GitHub?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jithu'><span itemprop='name'>jithu</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-03-26T15:54:30Z' class='post-time'>
+                    March 26, 2025,  3:54pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-03-26T15:54:30Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Can you please help me to setup.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ebrahimHakimuddin'><span itemprop='name'>ebrahimHakimuddin</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-26T20:03:58Z' class='post-time'>
+                    August 26, 2025,  8:03pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-26T20:03:58Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, Can you help me also integrate this please​:pray:<img src="https://discuss.frappe.io/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Mubasher'><span itemprop='name'>Mubasher</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-27T04:13:42Z' class='post-time'>
+                    August 27, 2025,  4:13am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-27T04:13:42Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>how can i help you</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ebrahimHakimuddin'><span itemprop='name'>ebrahimHakimuddin</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-27T05:46:41Z' class='post-time'>
+                    August 27, 2025,  5:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-27T05:46:41Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I want to know how some of you managed to integrate the push notifications in ERPnext desk</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/compgeniuses'><span itemprop='name'>compgeniuses</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-06T11:15:18Z' class='post-time'>
+                    October 6, 2025, 11:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-06T11:15:18Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I Notice the following Apps, and i am confused</p>
+<p><a href="https://github.com/tridz-dev/frappe_notifier" rel="noopener nofollow ugc">tridz-dev/frappe_notifier</a></p>
+<p><a href="https://github.com/tridz-dev/erpnext_fcm" rel="noopener nofollow ugc">tridz-dev/erpnext_fcm: Firebase Cloud Messaging integration for sending notification created in ERPNext/Frappe to users as push notification.</a></p>
+<p>and also,</p><aside class="onebox githubrepo" data-onebox-src="https://github.com/tridz-dev/frappe_messenger">
+  <header class="source">
+
+      <a href="https://github.com/tridz-dev/frappe_messenger" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="github-row" data-github-private-repo="false">
+  <img width="690" height="344" src="https://opengraph.githubassets.com/3ce55d08f7c78b5a3f5bace63e4125f2/tridz-dev/frappe_messenger" class="thumbnail">
+
+  <h3><a href="https://github.com/tridz-dev/frappe_messenger" target="_blank" rel="noopener nofollow ugc">GitHub - tridz-dev/frappe_messenger</a></h3>
+
+    <p><span class="github-repo-description">Contribute to tridz-dev/frappe_messenger development by creating an account on GitHub.</span></p>
+</div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>All these Apps confuse me, and t=do they relate to the Push notification System, i need some clarity kindly.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vaibhavv10x'><span itemprop='name'>vaibhavv10x</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-15T13:44:00Z' class='post-time'>
+                    October 15, 2025,  1:44pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-15T13:44:00Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Can I use this Frappe Cloud site? If yes, then how to configure into erpnext mobile application, which is available on the Play Store?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/shzd'><span itemprop='name'>shzd</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-16T06:19:42Z' class='post-time'>
+                    October 16, 2025,  6:19am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-16T06:19:42Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/compgeniuses">@compgeniuses</a><br>
+Frappe notifier app is for push notifications which is working in Raven, Frappe HR by default.</p>
+<p>Erpnext_fcm was an old implementation which is depreciated.</p>
+<p>Frappe Messenger is not related to Push notifications, it is an app for Meta messaging - Facebook, Instagram and WhatsApp</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/compgeniuses'><span itemprop='name'>compgeniuses</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-17T16:14:46Z' class='post-time'>
+                    October 17, 2025,  4:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-17T16:14:46Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you, that answers alot of questions,</p>
+<p>WHy then though, does raven require a seprate push notification server, if as you say, frappe notifier is by default available, and i have to choose either frappe cloud or raenchat cloud?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nikkothari22'><span itemprop='name'>nikkothari22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-17T19:31:05Z' class='post-time'>
+                    October 17, 2025,  7:31pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-17T19:31:05Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Raven’s use case is very different from other apps - push notifications are critical for a chat app. Plus we didn’t have a lot of control over the Frappe push notification app, and it was easier to build our own service. It’s free to use though.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="/t/push-notifications/131991?page=2">next page →</a></b></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

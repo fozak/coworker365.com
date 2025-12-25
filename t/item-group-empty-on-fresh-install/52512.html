@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Item group empty on fresh install - Setup - Frappe Forum</title>
+    <meta name="description" content="Hello, 
+I’ve been trying to install the latest version of ERPNext, with the easy install method of Bench on Ubuntu 18.04.3LTS. After figuring out the container issue, the locale issue, I end up having a function desk. Ev&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/item-group-empty-on-fresh-install/52512" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Item group empty on fresh install&#39;" href="https://discuss.frappe.io/t/item-group-empty-on-fresh-install/52512.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/item-group-empty-on-fresh-install/52512" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/item-group-empty-on-fresh-install/52512" />
+<meta property="og:title" content="Item group empty on fresh install" />
+<meta name="twitter:title" content="Item group empty on fresh install" />
+<meta property="og:description" content="Hello,  I’ve been trying to install the latest version of ERPNext, with the easy install method of Bench on Ubuntu 18.04.3LTS. After figuring out the container issue, the locale issue, I end up having a function desk. Everything seems to work. However, when I try to add items, it seems that the Item Group tree is empty. There is no “All Group Items” master parent in there. I’ve tried to reinstall many times (thinking the pre-load of fixtures may have been jeopardize with the locale stuff), but n..." />
+<meta name="twitter:description" content="Hello,  I’ve been trying to install the latest version of ERPNext, with the easy install method of Bench on Ubuntu 18.04.3LTS. After figuring out the container issue, the locale issue, I end up having a function desk. Everything seems to work. However, when I try to add items, it seems that the Item Group tree is empty. There is no “All Group Items” master parent in there. I’ve tried to reinstall many times (thinking the pre-load of fixtures may have been jeopardize with the locale stuff), but n..." />
+<meta property="og:article:section" content="Install / Update" />
+<meta property="og:article:section:color" content="B3B5B4" />
+<meta property="og:article:section" content="Setup" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:tag" content="installation_problem" />
+<meta property="og:article:tag" content="item" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="10 ❤" />
+<meta property="article:published_time" content="2019-09-05T02:19:14+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Item group empty on fresh install","mainEntity":{"@type":"Question","name":"Item group empty on fresh install","text":"Hello,\n\nI’ve been trying to install the latest version of ERPNext, with the easy install method of Bench on Ubuntu 18.04.3LTS. After figuring out the container issue, the locale issue, I end up having a function desk. Everything seems to work. However, when I try to add items, it seems that the Item&hellip;","upvoteCount":1,"answerCount":1,"datePublished":"2019-09-05T02:19:13.921Z","author":{"@type":"Person","name":"sharky98","url":"https://discuss.frappe.io/u/sharky98"},"acceptedAnswer":{"@type":"Answer","text":"[image] sharky98:\n\nOn a previous attempt, I’ve tried to add All Item Groups item group manually in the database, however it did not go well; although the item tree was showing, creating a new item group was impossible as I would had an error in the line of “cannot create a item group under itself&hellip;","upvoteCount":4,"datePublished":"2019-09-05T09:04:32.266Z","url":"https://discuss.frappe.io/t/item-group-empty-on-fresh-install/52512/3","author":{"@type":"Person","name":"mtaki14","url":"https://discuss.frappe.io/u/mtaki14"}}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/item-group-empty-on-fresh-install/52512">Item group empty on fresh install</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/bench/13" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #B3B5B4'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Install / Update</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/bench/setup/33" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Setup</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/installation_problem' class='discourse-tag' rel="tag">installation_problem</a>, 
+            <a href='https://discuss.frappe.io/tag/item' class='discourse-tag' rel="tag">item</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Item group empty on fresh install'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/item-group-empty-on-fresh-install/52512'>
+      <meta itemprop='datePublished' content='2019-09-05T02:19:13Z'>
+        <meta itemprop='articleSection' content='Setup'>
+      <meta itemprop='keywords' content='installation_problem, item'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/sharky98'><span itemprop='name'>sharky98</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/item-group-empty-on-fresh-install/52512">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2019-09-05T02:19:14Z' class='post-time'>
+                    September 5, 2019,  2:19am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-09-05T02:19:14Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,</p>
+<p>I’ve been trying to install the latest version of ERPNext, with the easy install method of Bench on Ubuntu 18.04.3LTS. After figuring out the container issue, the locale issue, I end up having a function desk. Everything seems to work. However, when I try to add items, it seems that the Item Group tree is empty. There is no “All Group Items” master parent in there. I’ve tried to reinstall many times (thinking the pre-load of fixtures may have been jeopardize with the locale stuff), but nothing seems to do it. On the last run where I had no errors I did the following steps:</p>
+<ul>
+<li>Create a system user and assign to the sudo group.</li>
+<li>Install the <code>python3-setuptools</code> and the <code>build-essentials</code> package.</li>
+<li>Generate and assign as default the <code>en_US.utf8</code> locale to both <code>LANG</code> and <code>LC_ALL</code> in <code>/etc/default/locale</code>
+</li>
+<li>Install Bench with the install script using <code>python3 install.py --container --user [user] --production --mysql-root-password [mysqlPasswd] --admin-password [adminPasswd] --site [siteName]</code>
+</li>
+<li>Run <code>bench update</code>
+</li>
+</ul>
+<p>I end up having the following version: <code>erpnext 12.1.0</code> and <code>frappe 12.0.10</code> when checking with <code>bench version</code>. Up to that point, no issues at all.</p>
+<p>After that, I open up my browser, login as Administrator, fill in the few questions on the company, etc. and first thing, I go check the Item Group Tree… and it’s empty! The new button doesn’t even work. I find a workaround to create a new Item Group (using the Item creation form, in the dropdown for the item group, you can click on create a new one). However, I’ve got the error Not Found - Item Group All Item Groups not found - The resource you are looking for is not available. I cannot even create that root group. All other default fixtures I can find seems to be there (unit of measure, project type, activity type, wharehouse, item attribute, chart of accounts, etc.).</p>
+<p>The only thing I could find in the code is as if the item group fixtures are not processed, but the only thing I could find in the code is there <a href="https://github.com/frappe/erpnext/blob/develop/erpnext/setup/setup_wizard/operations/install_fixtures.py#L35" class="inline-onebox" rel="noopener nofollow ugc">erpnext/install_fixtures.py at develop · frappe/erpnext · GitHub</a> and they are alongside other fixtures that do exist!</p>
+<p>On a previous attempt, I’ve tried to add <code>All Item Groups</code> item group manually in the database, however it did not go well; although the item tree was showing, creating a new item group was impossible as I would had an error in the line of “cannot create a item group under itself”, even though it wasn’t what the form was telling to do!</p>
+<p>I’m kind of lost here. Any idea on how to resolve this?</p>
+<p>Regards</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/a_vooc'><span itemprop='name'>a_vooc</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-09-05T08:36:50Z' class='post-time'>
+                    September 5, 2019,  8:36am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-09-05T08:36:50Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have same problem too. if i can pass the setup wizard, Item Group Tree is empty, can’t insert any group / item.<br>
+tried drop site, re-add, remove erpnext and install it to site. Now, it stuck on setup_wizard, message on server says that it can’t find All Item Group.<br>
+checked the ‘tabItem Group’ table, and it’s empty. nothing there.</p>
+<p>Am i missing some installation steps?<br>
+I’m new on this.</p>
+<p>thank you</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/item-group-issue/52645/2">Item group issue</a>
+                        <meta itemprop='position' content='1'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mtaki14'><span itemprop='name'>mtaki14</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-09-05T09:04:32Z' class='post-time'>
+                    September 5, 2019,  9:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-09-05T09:04:32Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="sharky98" data-post="1" data-topic="52512">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/letter_avatar_proxy/v4/letter/s/c77e96/48.png" class="avatar"> sharky98:</div>
+<blockquote>
+<p>On a previous attempt, I’ve tried to add <code>All Item Groups</code> item group manually in the database, however it did not go well; although the item tree was showing, creating a new item group was impossible as I would had an error in the line of “cannot create a item group under itself”, even though it wasn’t what the form was telling to do!</p>
+</blockquote>
+</aside>
+<p>This is how the “All Item Groups” record looks like in the database for me, give it a try</p>
+<pre><code class="lang-auto">INSERT INTO `tabItem Group` (`name`, `creation`, `modified`, `modified_by`, `owner`, `docstatus`, `parent`, `parentfield`, `parenttype`, `idx`, `image`, `lft`, `rgt`, `_comments`, `_liked_by`, `description`, `item_group_name`, `_assign`, `is_group`, `slideshow`, `show_in_website`, `_user_tags`, `weightage`, `route`, `parent_item_group`, `old_parent`) VALUES ('All Item Groups', '2019-08-29 15:39:02.542508', '2019-08-29 15:39:02.952698', 'Administrator', 'Administrator', 0, NULL, NULL, NULL, 0, NULL, 1, 12, NULL, NULL, NULL, 'All Item Groups', NULL, 1, NULL, 0, NULL, 0, 'all-item-groups', '', '');</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/item-group-issue/52645/2">Item group issue</a>
+                        <meta itemprop='position' content='1'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/a_vooc'><span itemprop='name'>a_vooc</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-09-05T09:36:41Z' class='post-time'>
+                    September 5, 2019,  9:36am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-09-05T09:36:41Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group quote-modified" data-username="mtaki14" data-post="3" data-topic="52512">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/mtaki14/48/24609_2.png" class="avatar"> mtaki14:</div>
+<blockquote>
+<p>INSERT INTO <code>tabItem Group</code> (<code>name</code>, <code>creation</code>, <code>modified</code>, <code>modified_by</code>, <code>owner</code>, <code>docstatus</code>, <code>parent</code>, <code>parentfield</code>, <code>parenttype</code>, <code>idx</code>, <code>image</code>, <code>lft</code>, <code>rgt</code>, <code>_comments</code>, <code>_liked_by</code>, <code>description</code>, <code>item_group_name</code>, <code>_assign</code>, <code>is_group</code>, <code>slideshow</code>, <code>show_in_website</code>, <code>_user_tags</code>, <code>weightage</code>, <code>route</code>, <code>parent_item_group</code>, <code>old_parent</code>) VALUES (‘All Item Groups’, ‘2019-08-29 15:39:02.542508’, ‘2019-08-29 15:39:02.952698’, ‘Administrator’, ‘Administrator’, 0, NULL, NULL, NULL, 0, NULL, 1, 12, NULL, NULL, NULL, ‘All Item Groups’, NULL, 1, NULL, 0, NULL, 0, ‘all-item-groups’, ‘’, ‘’);</p>
+</blockquote>
+</aside>
+<p>this solve my problem. i tried to use bench to add All Item Groups, but it need All Item Group before insert the All Item Group <img src="https://discuss.frappe.io/images/emoji/twitter/joy.png?v=12" title=":joy:" class="emoji" alt=":joy:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/bojkic'><span itemprop='name'>bojkic</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-09-05T13:27:18Z' class='post-time'>
+                    September 5, 2019,  1:27pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-09-05T13:27:18Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>same problem here…</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/RoyIrwan'><span itemprop='name'>RoyIrwan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-09-06T09:04:25Z' class='post-time'>
+                    September 6, 2019,  9:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-09-06T09:18:58Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group quote-modified" data-username="mtaki14" data-post="3" data-topic="52512">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/mtaki14/48/24609_2.png" class="avatar"> mtaki14:</div>
+<blockquote>
+<p>INSERT INTO <code>tabItem Group</code> (<code>name</code>, <code>creation</code>, <code>modified</code>, <code>modified_by</code>, <code>owner</code>, <code>docstatus</code>, <code>parent</code>, <code>parentfield</code>, <code>parenttype</code>, <code>idx</code>, <code>image</code>, <code>lft</code>, <code>rgt</code>, <code>_comments</code>, <code>_liked_by</code>, <code>description</code>, <code>item_group_name</code>, <code>_assign</code>, <code>is_group</code>, <code>slideshow</code>, <code>show_in_website</code>, <code>_user_tags</code>, <code>weightage</code>, <code>route</code>, <code>parent_item_group</code>, <code>old_parent</code>) VALUES (‘All Item Groups’, ‘2019-08-29 15:39:02.542508’, ‘2019-08-29 15:39:02.952698’, ‘Administrator’, ‘Administrator’, 0, NULL, NULL, NULL, 0, NULL, 1, 12, NULL, NULL, NULL, ‘All Item Groups’, NULL, 1, NULL, 0, NULL, 0, ‘all-item-groups’, ‘’, ‘’);</p>
+</blockquote>
+</aside>
+<p>Thanks <a class="mention" href="/u/mtaki14">@mtaki14</a><br>
+This workaround works for me too <img src="https://discuss.frappe.io/images/emoji/twitter/grin.png?v=12" title=":grin:" class="emoji" alt=":grin:" loading="lazy" width="20" height="20"><img src="https://discuss.frappe.io/images/emoji/twitter/+1.png?v=12" title=":+1:" class="emoji" alt=":+1:" loading="lazy" width="20" height="20"><br>
+I think this is should be reported as a bug.</p>
+<pre><code>ERPNext: v12.1.0 (version-12)
+Frappe Framework: v12.0.10 (version-12)
+</code></pre>
+<p>Edit: Possibly bug reported<br>
+<a href="https://github.com/frappe/erpnext/issues/18950#issue-490227530" rel="noopener nofollow ugc">https://github.com/frappe/erpnext/issues/18950#issue-490227530</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/toddc2mfl'><span itemprop='name'>toddc2mfl</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-09-06T12:07:04Z' class='post-time'>
+                    September 6, 2019, 12:07pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-09-06T12:07:04Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This worked for me.<br>
+For the non linux people, you have to be in the frappe-bench directory first.  Then type:</p>
+<p>bench mariadb</p>
+<p>then copy and paste:</p>
+<p>INSERT INTO <code>tabItem Group</code> (<code>name</code>, <code>creation</code>, <code>modified</code>, <code>modified_by</code>, <code>owner</code>, <code>docstatus</code>, <code>parent</code>, <code>parentfield</code>, <code>parenttype</code>, <code>idx</code>, <code>image</code>, <code>lft</code>, <code>rgt</code>, <code>_comments</code>, <code>_liked_by</code>, <code>description</code>, <code>item_group_name</code>, <code>_assign</code>, <code>is_group</code>, <code>slideshow</code>, <code>show_in_website</code>, <code>_user_tags</code>, <code>weightage</code>, <code>route</code>, <code>parent_item_group</code>, <code>old_parent</code>) VALUES (‘All Item Groups’, ‘2019-08-29 15:39:02.542508’, ‘2019-08-29 15:39:02.952698’, ‘Administrator’, ‘Administrator’, 0, NULL, NULL, NULL, 0, NULL, 1, 12, NULL, NULL, NULL, ‘All Item Groups’, NULL, 1, NULL, 0, NULL, 0, ‘all-item-groups’, ‘’, ‘’);</p>
+<p>(from above) and hit enter.  It will give an OK message.  After that you can type \q and return to exit the mysql console.</p>
+<p>Once I did this the all item group was there and I could add items.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/sharky98'><span itemprop='name'>sharky98</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-09-06T14:14:42Z' class='post-time'>
+                    September 6, 2019,  2:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-09-06T14:14:42Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>After having issues with my whole server, I was finally able to launch this MySQL query. Everything works fine now. I guess a bug report should be opened in Github.</p>
+<p>EDIT: Already created by someone else: <a href="https://github.com/frappe/erpnext/issues/18950" class="inline-onebox" rel="noopener nofollow ugc">V12 Missing "All Item Groups" · Issue #18950 · frappe/erpnext · GitHub</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/youssef'><span itemprop='name'>youssef</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-09-06T14:42:54Z' class='post-time'>
+                    September 6, 2019,  2:42pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-09-06T14:49:52Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It worked for me too</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vh1'><span itemprop='name'>vh1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-09-09T15:59:23Z' class='post-time'>
+                    September 9, 2019,  3:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-09-09T15:59:23Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Same issue for me. Manually inserting the SQL worked though. Something wrong probably with the installing fixtures?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Utesar72'><span itemprop='name'>Utesar72</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-03-22T00:33:37Z' class='post-time'>
+                    March 22, 2022, 12:33am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-03-22T00:33:37Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Wow, Thanks a lot.</p>
+<p>This helps!!!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/rbn.dev'><span itemprop='name'>rbn.dev</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-02T16:40:11Z' class='post-time'>
+                    September 2, 2025,  4:40pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-02T16:45:19Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Still facing this issue… Any idea what causes this?</p>
+<p>This was after reinstalling the site and clearing the db with a custom developed app. It is fixed when re-running the set-up wizard of erpnext and the --force installing the app again. No need for the SQL hack.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

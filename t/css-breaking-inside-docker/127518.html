@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS breaking inside docker - docker - Frappe Forum</title>
+    <meta name="description" content="When i installed docker yesterday i didnt get icons display which, i corrected it by running bench build --hard-link --production in my frontend 
+I also restarted the docker after sometime, then it worked completely fine &amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/css-breaking-inside-docker/127518" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;CSS breaking inside docker&#39;" href="https://discuss.frappe.io/t/css-breaking-inside-docker/127518.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/6/a/6ac77751c2020bebd99400b0756c2d2065120946_2_1024x582.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/6/a/6ac77751c2020bebd99400b0756c2d2065120946_2_1024x582.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/css-breaking-inside-docker/127518" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/css-breaking-inside-docker/127518" />
+<meta property="og:title" content="CSS breaking inside docker" />
+<meta name="twitter:title" content="CSS breaking inside docker" />
+<meta property="og:description" content="When i installed docker yesterday i didnt get icons display which, i corrected it by running bench build --hard-link --production in my frontend  I also restarted the docker after sometime, then it worked completely fine  but today, when i  opening it its CSS is breaking  and its giving me this error  GET http://localhost:8080/assets/frappe/dist/css/website.bundle.YPQRHL6G.css net::ERR_ABORTED 404 (Not Found)  :8080/assets/erpnext/dist/css/erpnext-web.bundle.UOGARZZ2.css:1 GET http://localhost:8..." />
+<meta name="twitter:description" content="When i installed docker yesterday i didnt get icons display which, i corrected it by running bench build --hard-link --production in my frontend  I also restarted the docker after sometime, then it worked completely fine  but today, when i  opening it its CSS is breaking  and its giving me this error  GET http://localhost:8080/assets/frappe/dist/css/website.bundle.YPQRHL6G.css net::ERR_ABORTED 404 (Not Found)  :8080/assets/erpnext/dist/css/erpnext-web.bundle.UOGARZZ2.css:1 GET http://localhost:8..." />
+<meta property="og:article:tag" content="docker" />
+<meta property="article:published_time" content="2024-06-26T05:17:48+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"CSS breaking inside docker","mainEntity":{"@type":"Question","name":"CSS breaking inside docker","text":"When i installed docker yesterday i didnt get icons display which, i corrected it by running bench build --hard-link --production in my frontend\n\nI also restarted the docker after sometime, then it worked completely fine\n\nbut today, when i  opening it its CSS is breaking\n\nand its giving me this erro&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2024-06-26T05:17:48.535Z","author":{"@type":"Person","name":"sneha","url":"https://discuss.frappe.io/u/sneha"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/css-breaking-inside-docker/127518">CSS breaking inside docker</a>
+    </h1>
+
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/docker' class='discourse-tag' rel="tag">docker</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='CSS breaking inside docker'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/css-breaking-inside-docker/127518'>
+      <meta itemprop='datePublished' content='2024-06-26T05:17:48Z'>
+        <meta itemprop='articleSection' content='Uncategorized'>
+      <meta itemprop='keywords' content='docker'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/sneha'><span itemprop='name'>sneha</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/css-breaking-inside-docker/127518">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/6/a/6ac77751c2020bebd99400b0756c2d2065120946.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2024-06-26T05:17:48Z' class='post-time'>
+                    June 26, 2024,  5:17am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-06-26T05:17:48Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>When i installed docker yesterday i didnt get icons display which, i corrected it by running bench build --hard-link --production in my frontend<br>
+I also restarted the docker after sometime, then it worked completely fine<br>
+but today, when i  opening it its CSS is breaking<br>
+and its giving me this error</p>
+<p>GET <a href="http://localhost:8080/assets/frappe/dist/css/website.bundle.YPQRHL6G.css" rel="noopener nofollow ugc">http://localhost:8080/assets/frappe/dist/css/website.bundle.YPQRHL6G.css</a> net::ERR_ABORTED 404 (Not Found)<br>
+:8080/assets/erpnext/dist/css/erpnext-web.bundle.UOGARZZ2.css:1 GET <a href="http://localhost:8080/assets/erpnext/dist/css/erpnext-web.bundle.UOGARZZ2.css" rel="noopener nofollow ugc">http://localhost:8080/assets/erpnext/dist/css/erpnext-web.bundle.UOGARZZ2.css</a> net::ERR_ABORTED 404 (Not Found)</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/6/a/6ac77751c2020bebd99400b0756c2d2065120946.png" data-download-href="https://discuss.frappe.io/uploads/default/6ac77751c2020bebd99400b0756c2d2065120946" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/6/a/6ac77751c2020bebd99400b0756c2d2065120946_2_690x392.png" alt="image" data-base62-sha1="feBXTibwoOQY8XD90Me4lPhlWNU" width="690" height="392" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/6/a/6ac77751c2020bebd99400b0756c2d2065120946_2_690x392.png, https://discuss.frappe.io/uploads/default/optimized/3X/6/a/6ac77751c2020bebd99400b0756c2d2065120946_2_1035x588.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/6/a/6ac77751c2020bebd99400b0756c2d2065120946_2_1380x784.png 2x" data-dominant-color="F7F7F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1850×1053 122 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>I tried out a couple of commands but none works<br>
+$ bench build<br>
+$ bench build --production<br>
+$ bench --site mysite.erp clear-website-cache</p>
+<p>bench setup requirements<br>
+bench build<br>
+bench clear-cache<br>
+bench clear-website-cache</p>
+<p>But none works, can anyone help me out please?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/helix'><span itemprop='name'>helix</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-01-31T18:22:44Z' class='post-time'>
+                    January 31, 2025,  6:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-01-31T18:22:44Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="sneha" data-post="1" data-topic="127518">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/letter_avatar_proxy/v4/letter/s/ecc23a/48.png" class="avatar"> sneha:</div>
+<blockquote>
+<p>but today, when i opening it its CSS is breaking</p>
+</blockquote>
+</aside>
+<p>Did you figure this out?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Adeel_Siddiqui'><span itemprop='name'>Adeel_Siddiqui</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-05-02T14:45:49Z' class='post-time'>
+                    May 2, 2025,  2:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-05-02T14:45:49Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Did you find a solution for this?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/suhail135'><span itemprop='name'>suhail135</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-14T07:38:19Z' class='post-time'>
+                    August 14, 2025,  7:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-14T07:38:19Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>any update on this ??</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kolate_sambhaji'><span itemprop='name'>kolate_sambhaji</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-14T10:58:24Z' class='post-time'>
+                    August 14, 2025, 10:58am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-14T10:58:24Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>As you already tried bench build &amp;&amp; bench clear-cache</p>
+<p>try another way, use a proper site host like site1.docker instead of localhost. Frappe routes by Host header, so matching your site name to the host avoids asset/cookie issues.</p>
+<p>Steps:</p>
+<ul>
+<li>Create/use a site named site1.docker (bench new-site site1.docker or recreate/restore).</li>
+<li>Map host: add “127.0.0.1 site1.docker” to your /etc/hosts (Windows: drivers/etc/hosts).</li>
+<li>Optional: set “host_name”: “<a href="http://site1.docker:8080/">http://site1.docker:8080</a>” in sites/site1.docker/site_config.json.</li>
+<li>Ensure docker-compose shares ./sites to /home/frappe/frappe-bench/sites (and assets if separate).</li>
+<li>In the web container: bench build --production; bench clear-cache; bench clear-website-cache; bench restart.</li>
+<li>Access via <a href="http://site1.docker:8080/">http://site1.docker:8080</a> and verify /assets/* hashed files load 200.</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

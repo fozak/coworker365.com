@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[Release Notes] ERPNext and Frappe Version 13.23.0 - ERPNext - Frappe Forum</title>
+    <meta name="description" content="ERPNext version 13.23.0 Release Notes
+Features &amp;amp; Enhancements
+
+feat: Bank Reconciliation for loan documents (backport #29865) (#29865)
+feat: Include child item group products in Item Group Page &amp;amp; cleanup (backport #30091)&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/release-notes-erpnext-and-frappe-version-13-23-0/87465" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[Release Notes] ERPNext and Frappe Version 13.23.0&#39;" href="https://discuss.frappe.io/t/release-notes-erpnext-and-frappe-version-13-23-0/87465.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/release-notes-erpnext-and-frappe-version-13-23-0/87465" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/release-notes-erpnext-and-frappe-version-13-23-0/87465" />
+<meta property="og:title" content="[Release Notes] ERPNext and Frappe Version 13.23.0" />
+<meta name="twitter:title" content="[Release Notes] ERPNext and Frappe Version 13.23.0" />
+<meta property="og:description" content="ERPNext version 13.23.0 Release Notes Features &amp; Enhancements  feat: Bank Reconciliation for loan documents (backport #29865) (#29865) feat: Include child item group products in Item Group Page &amp; cleanup (backport #30091) (#30091) refactor: Employee Leave Balance (backport #29439) (#29439)  Fixes  perf(asset): fetch only distinct depreciable assets (backport #30114) (#30114) fix(pos): do not reset mode of payments in case of consolidation (backport #30198) (#30198) fix(pos): loyalty points in ca..." />
+<meta name="twitter:description" content="ERPNext version 13.23.0 Release Notes Features &amp; Enhancements  feat: Bank Reconciliation for loan documents (backport #29865) (#29865) feat: Include child item group products in Item Group Page &amp; cleanup (backport #30091) (#30091) refactor: Employee Leave Balance (backport #29439) (#29439)  Fixes  perf(asset): fetch only distinct depreciable assets (backport #30114) (#30114) fix(pos): do not reset mode of payments in case of consolidation (backport #30198) (#30198) fix(pos): loyalty points in ca..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:tag" content="release" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="frappe" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="3 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="8 ❤" />
+<meta property="article:published_time" content="2022-03-21T05:25:48+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"[Release Notes] ERPNext and Frappe Version 13.23.0","mainEntity":{"@type":"Question","name":"[Release Notes] ERPNext and Frappe Version 13.23.0","text":"<a name=\"p-318638-erpnext-version-13230-release-notes-1\" class=\"anchor\" href=\"#p-318638-erpnext-version-13230-release-notes-1\"><\/a>ERPNext version 13.23.0 Release Notes\n\n<a name=\"p-318638-features-enhancements-2\" class=\"anchor\" href=\"#p-318638-features-enhancements-2\"><\/a>Features &amp; Enhancements\n\nfeat: Bank Reconciliation for loan documents (backport #29865) (<a href=\"https://github.com/frappe/erpnext/pull/29865\">#29865<\/a>)\n\nfeat: Include child item group products in Item Group Page &amp; cleanup (backport #30091) (<a href=\"https://github.com/frappe/erpnext/pull/30091\">#30091<\/a>)\n\nrefactor: Employee Leave Balance (backport #29439) (<a href=\"https://github.com/frappe/erpnext/pull/29439\">#29439<\/a>)\n\n<a name=\"p-318638-fixes-3\" class=\"anchor\" href=\"#p-318638-fixes-3\"><\/a>Fixes\n\np&hellip;","upvoteCount":7,"answerCount":0,"datePublished":"2022-03-21T05:25:48.398Z","author":{"@type":"Person","name":"ankush","url":"https://discuss.frappe.io/u/ankush"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/release-notes-erpnext-and-frappe-version-13-23-0/87465">[Release Notes] ERPNext and Frappe Version 13.23.0</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/release' class='discourse-tag' rel="tag">release</a>, 
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[Release Notes] ERPNext and Frappe Version 13.23.0'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/release-notes-erpnext-and-frappe-version-13-23-0/87465'>
+      <meta itemprop='datePublished' content='2022-03-21T05:25:48Z'>
+        <meta itemprop='articleSection' content='ERPNext'>
+      <meta itemprop='keywords' content='release, erpnext, frappe'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ankush'><span itemprop='name'>ankush</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/release-notes-erpnext-and-frappe-version-13-23-0/87465">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2022-03-21T05:25:48Z' class='post-time'>
+                    March 21, 2022,  5:25am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-14T05:25:26Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h2><a name="p-318638-erpnext-version-13230-release-notes-1" class="anchor" href="#p-318638-erpnext-version-13230-release-notes-1"></a>ERPNext version 13.23.0 Release Notes</h2>
+<h3><a name="p-318638-features-enhancements-2" class="anchor" href="#p-318638-features-enhancements-2"></a>Features &amp; Enhancements</h3>
+<ul>
+<li>feat: Bank Reconciliation for loan documents (backport <span class="hashtag-raw">#29865</span>) (<a href="https://github.com/frappe/erpnext/pull/29865">#29865</a>)</li>
+<li>feat: Include child item group products in Item Group Page &amp; cleanup (backport <span class="hashtag-raw">#30091</span>) (<a href="https://github.com/frappe/erpnext/pull/30091">#30091</a>)</li>
+<li>refactor: Employee Leave Balance (backport <span class="hashtag-raw">#29439</span>) (<a href="https://github.com/frappe/erpnext/pull/29439">#29439</a>)</li>
+</ul>
+<h3><a name="p-318638-fixes-3" class="anchor" href="#p-318638-fixes-3"></a>Fixes</h3>
+<ul>
+<li>perf(asset): fetch only distinct depreciable assets (backport <span class="hashtag-raw">#30114</span>) (<a href="https://github.com/frappe/erpnext/pull/30114">#30114</a>)</li>
+<li>fix(pos): do not reset mode of payments in case of consolidation (backport <span class="hashtag-raw">#30198</span>) (<a href="https://github.com/frappe/erpnext/pull/30198">#30198</a>)</li>
+<li>fix(pos): loyalty points in case of returned pos invoice (backport <span class="hashtag-raw">#30242</span>) (<a href="https://github.com/frappe/erpnext/pull/30242">#30242</a>)</li>
+<li>fix(psoa): add company filter to account (backport <span class="hashtag-raw">#30145</span>) (<a href="https://github.com/frappe/erpnext/pull/30145">#30145</a>)</li>
+<li>fix(psoa): no such element: dict object[‘account’] (backport <span class="hashtag-raw">#30153</span>) (<a href="https://github.com/frappe/erpnext/pull/30153">#30153</a>)</li>
+<li>fix(translation) - correction for assets translation (backport <span class="hashtag-raw">#30000</span>) (<a href="https://github.com/frappe/erpnext/pull/30000">#30000</a>)</li>
+<li>fix(ux): Improve label for better understanding (backport <span class="hashtag-raw">#30096</span>) (<a href="https://github.com/frappe/erpnext/pull/30096">#30096</a>)</li>
+<li>fix: ‘save_quotations_as_draft’ checkbox not honoured (backport <span class="hashtag-raw">#30160</span>) (<a href="https://github.com/frappe/erpnext/pull/30160">#30160</a>)</li>
+<li>fix: Add missing currency option in Supplier Quotation’s <code>rounded_total</code> field (backport <span class="hashtag-raw">#30229</span>) (<a href="https://github.com/frappe/erpnext/pull/30229">#30229</a>)</li>
+<li>fix: Ambigous column in picklist query (backport <span class="hashtag-raw">#30102</span>) (<a href="https://github.com/frappe/erpnext/pull/30102">#30102</a>)</li>
+<li>fix: Cleanup and fixes in Dimension-wise Accounts Balance Report (backport <span class="hashtag-raw">#30284</span>) (<a href="https://github.com/frappe/erpnext/pull/30284">#30284</a>)</li>
+<li>fix: Do not consider cancelled entries (backport <span class="hashtag-raw">#30207</span>) (<a href="https://github.com/frappe/erpnext/pull/30207">#30207</a>)</li>
+<li>fix: Do not update ignore pricing rule check implicitly (backport <span class="hashtag-raw">#30269</span>) (<a href="https://github.com/frappe/erpnext/pull/30269">#30269</a>)</li>
+<li>fix: Error in bank reconciliation statement (backport <span class="hashtag-raw">#30261</span>) (<a href="https://github.com/frappe/erpnext/pull/30261">#30261</a>)</li>
+<li>fix: Get MRs that are yet to be received but fully ordered in Report <code>Requested Items to Order and Receive</code> (backport <span class="hashtag-raw">#29987</span>) (<a href="https://github.com/frappe/erpnext/pull/29987">#29987</a>)</li>
+<li>fix: Item discounts for quotation and other docs (backport <span class="hashtag-raw">#29940</span>) (<a href="https://github.com/frappe/erpnext/pull/29940">#29940</a>)</li>
+<li>fix: Item-wise sales history report (backport <span class="hashtag-raw">#30080</span>) (<a href="https://github.com/frappe/erpnext/pull/30080">#30080</a>)</li>
+<li>fix: Job Card sub operations status and list view (<a href="https://github.com/frappe/erpnext/pull/30243">#30243</a>)</li>
+<li>fix: KSA E-Invoice QR Code showing wrong VAT amount (backport <span class="hashtag-raw">#30230</span>) (<a href="https://github.com/frappe/erpnext/pull/30230">#30230</a>)</li>
+<li>fix: Leave Policy Assignment creation patch (<a href="https://github.com/frappe/erpnext/pull/30215">#30215</a>)</li>
+<li>fix: Multi-currency bank reconciliation fixes (backport <span class="hashtag-raw">#29979</span>) (<a href="https://github.com/frappe/erpnext/pull/29979">#29979</a>)</li>
+<li>fix: Multiple fixes in Gross Profit report (backport <span class="hashtag-raw">#29740</span>) (<a href="https://github.com/frappe/erpnext/pull/29740">#29740</a>)</li>
+<li>fix: Nil and Exempted values in GSTR-3B Report (backport <span class="hashtag-raw">#30039</span>) (<a href="https://github.com/frappe/erpnext/pull/30039">#30039</a>)</li>
+<li>fix: Non Profit fixes (<a href="https://github.com/frappe/erpnext/pull/30280">#30280</a>)</li>
+<li>fix: Pos return payment mode issue (<a href="https://github.com/frappe/erpnext/pull/26872">#26872</a>)</li>
+<li>fix: Remove tax invoice no field (backport <span class="hashtag-raw">#30136</span>) (<a href="https://github.com/frappe/erpnext/pull/30136">#30136</a>)</li>
+<li>fix: Sales and Purchase return optimization (backport <span class="hashtag-raw">#30152</span>) (<a href="https://github.com/frappe/erpnext/pull/30152">#30152</a>)</li>
+<li>fix: Search query of payroll entry reference in Journal Entry (<a href="https://github.com/frappe/erpnext/pull/30225">#30225</a>)</li>
+<li>fix: Shipping rule application fixes (backport <span class="hashtag-raw">#30181</span>) (<a href="https://github.com/frappe/erpnext/pull/30181">#30181</a>)</li>
+<li>fix: Sub-Category Routing in Item Group Page Listing pills (backport <span class="hashtag-raw">#30258</span>) (<a href="https://github.com/frappe/erpnext/pull/30258">#30258</a>)</li>
+<li>fix: Validate income/expense account in sales and purchase invoice (backport <span class="hashtag-raw">#30266</span>) (<a href="https://github.com/frappe/erpnext/pull/30266">#30266</a>)</li>
+<li>fix: cannot create multicurrency sales order with product bundles (backport <span class="hashtag-raw">#30166</span>) (<a href="https://github.com/frappe/erpnext/pull/30166">#30166</a>)</li>
+<li>fix: cannot create purchase order from sales order (backport <span class="hashtag-raw">#30217</span>) (<a href="https://github.com/frappe/erpnext/pull/30217">#30217</a>)</li>
+<li>fix: customer credit limit validation on update (backport <span class="hashtag-raw">#30110</span>) (<a href="https://github.com/frappe/erpnext/pull/30110">#30110</a>)</li>
+<li>fix: disable “get items” buttons from submitted production plan (backport <span class="hashtag-raw">#30223</span>) (<a href="https://github.com/frappe/erpnext/pull/30223">#30223</a>)</li>
+<li>fix: do not reset asset_category (backport <span class="hashtag-raw">#29696</span>) (<a href="https://github.com/frappe/erpnext/pull/29696">#29696</a>)</li>
+<li>fix: dont fetch entire barcode table in get_item_details (<a href="https://github.com/frappe/erpnext/pull/30131">#30131</a>)</li>
+<li>fix: dont reset UOM in MR on every get_item_detail call (backport <span class="hashtag-raw">#30164</span>) (<a href="https://github.com/frappe/erpnext/pull/30164">#30164</a>)</li>
+<li>fix: fetch new fields from routing to bom (<a href="https://github.com/frappe/erpnext/pull/30169">#30169</a>)</li>
+<li>fix: filter default_discount_account field in item_group_defaults table is_group = 0 (<a href="https://github.com/frappe/erpnext/pull/30095">#30095</a>)</li>
+<li>fix: ignore non-unique swift numbers while migrating (backport <span class="hashtag-raw">#30132</span>) (<a href="https://github.com/frappe/erpnext/pull/30132">#30132</a>)</li>
+<li>fix: incorrect debit credit amount in presentation currency (backport <span class="hashtag-raw">#30244</span>) (<a href="https://github.com/frappe/erpnext/pull/30244">#30244</a>)</li>
+<li>fix: leave allocation records query (<a href="https://github.com/frappe/erpnext/pull/30118">#30118</a>)</li>
+<li>fix: max_qty validation condition in WO (backport <span class="hashtag-raw">#30216</span>) (<a href="https://github.com/frappe/erpnext/pull/30216">#30216</a>)</li>
+<li>fix: pos return payment mode issue (<span class="hashtag-raw">#26872</span>) (<a href="https://github.com/frappe/erpnext/pull/30220">#30220</a>)</li>
+<li>fix: program enrollment button labels (backport <span class="hashtag-raw">#30148</span>) (<a href="https://github.com/frappe/erpnext/pull/30148">#30148</a>)</li>
+<li>fix: respect db multi_tenancy while fetching precision (backport <span class="hashtag-raw">#30301</span>) (<a href="https://github.com/frappe/erpnext/pull/30301">#30301</a>)</li>
+<li>fix: salary slip amount rounding errors (<a href="https://github.com/frappe/erpnext/pull/30248">#30248</a>)</li>
+<li>fix: packed items return when items are removed (<a href="https://github.com/frappe/erpnext/pull/30263">#30263</a>)</li>
+<li>fix: wrong payment days in salary slip for employees joining/leaving during mid payroll dates (backport <span class="hashtag-raw">#29082</span>) (<a href="https://github.com/frappe/erpnext/pull/29082">#29082</a>)</li>
+<li>refactor: removed unrequired code and test for standalone delivery note serial return (<a href="https://github.com/frappe/erpnext/pull/30276">#30276</a>)</li>
+<li>revert: BU Schl√ºssel (a21f76f) (backport <span class="hashtag-raw">#29654</span>) (<a href="https://github.com/frappe/erpnext/pull/29654">#29654</a>)</li>
+<li>chore: add German translations (backport <span class="hashtag-raw">#30265</span>) (<a href="https://github.com/frappe/erpnext/pull/30265">#30265</a>)</li>
+</ul>
+<h2><a name="p-318638-frappe-version-13230-release-notes-4" class="anchor" href="#p-318638-frappe-version-13230-release-notes-4"></a>Frappe version 13.23.0 Release Notes</h2>
+<h3><a name="p-318638-features-enhancements-5" class="anchor" href="#p-318638-features-enhancements-5"></a>Features &amp; Enhancements</h3>
+<ul>
+<li>feat: MySQL TIMESTAMP functionality for QB (<a href="https://github.com/frappe/frappe/pull/16295">#16295</a>)</li>
+</ul>
+<h3><a name="p-318638-fixes-6" class="anchor" href="#p-318638-fixes-6"></a>Fixes</h3>
+<ul>
+<li>fix: Consider title field only if it’s value exists (<a href="https://github.com/frappe/frappe/pull/16236">#16236</a>)</li>
+<li>fix: <code>set_column_disp</code> contradicts arguments (backport <span class="hashtag-raw">#16255</span>) (<a href="https://github.com/frappe/frappe/pull/16255">#16255</a>)</li>
+<li>fix(BackupGenerator): set missing attribute for class object (<a href="https://github.com/frappe/frappe/pull/16273">#16273</a>)</li>
+<li>fix(rename_doc): Allow updating only document title or name (backport <span class="hashtag-raw">#16225</span>) (<a href="https://github.com/frappe/frappe/pull/16225">#16225</a>)</li>
+<li>fix(ux): remove attachment limits (<a href="https://github.com/frappe/frappe/pull/16222">#16222</a>)</li>
+<li>fix: Dashboard report link (backport <span class="hashtag-raw">#14052</span>) (<a href="https://github.com/frappe/frappe/pull/14052">#14052</a>)</li>
+<li>fix: Double signature in composed Email (backport <span class="hashtag-raw">#16178</span>) (<a href="https://github.com/frappe/frappe/pull/16178">#16178</a>)</li>
+<li>fix: Number Card to support child table doctype for filters (backport <span class="hashtag-raw">#16243</span>) (<a href="https://github.com/frappe/frappe/pull/16243">#16243</a>)</li>
+<li>fix: Print for tree view is broken (backport <span class="hashtag-raw">#16137</span>) (<a href="https://github.com/frappe/frappe/pull/16137">#16137</a>)</li>
+<li>fix: Routing with hash in URL [v13] (<a href="https://github.com/frappe/frappe/pull/16298">#16298</a>)</li>
+<li>fix: Typo in is_downgrade’s user warning (backport <span class="hashtag-raw">#16313</span>) (<a href="https://github.com/frappe/frappe/pull/16313">#16313</a>)</li>
+<li>fix: typo in database file for v12 - latest (<a href="https://github.com/frappe/frappe/pull/16250">#16250</a>)</li>
+<li>chore: add German translations (backport <span class="hashtag-raw">#16292</span>) (<a href="https://github.com/frappe/frappe/pull/16292">#16292</a>)</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="7" />
+              <span class='post-likes'>7 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ponyooooo'><span itemprop='name'>ponyooooo</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-03-25T00:23:33Z' class='post-time'>
+                    March 25, 2022, 12:23am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-03-25T00:23:33Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>have anyone experienced here that the rate field of any item on all transactions is being rounded off based on the discount percentage?</p>
+<p>Example:<br>
+I have a pricelist of 3,500<br>
+my rate on the invoice is 2,500<br>
+so the discount amount will be 1,000</p>
+<p>However, the system prioritizes the discount percentage so it changes the discount amount to 999.99 with a 28.57 discount percentage.</p>
+<p>Then after saving the document, the system will change the rate to 2500.015 instead of the encoded 2,500.</p>
+<p>We are using a Frappe cloud and before the latest version update, we never experience this error. So right now all rate are having the wrong amount.</p>
+<p>The solution or work around that we did is to make the precision of the discount percentage to 9.</p>
+<p>This is to get a discount percentage of 28.571428571<br>
+and a discount rate of exact to 1,000.</p>
+<p>The solution for now is working however, we need to change the percentage to all item child tables for the transactions.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/szufisher'><span itemprop='name'>szufisher</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-03-25T00:45:37Z' class='post-time'>
+                    March 25, 2022, 12:45am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-03-25T00:45:37Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>refer to issue <a href="https://github.com/frappe/erpnext/issues/30394" class="inline-onebox">Item rate changes on save · Issue #30394 · frappe/erpnext · GitHub</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ponyooooo'><span itemprop='name'>ponyooooo</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-03-25T00:51:10Z' class='post-time'>
+                    March 25, 2022, 12:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-03-25T00:51:10Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you for the github reference <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> I hope this can be fix on the next update. <img src="https://discuss.frappe.io/images/emoji/twitter/grin.png?v=12" title=":grin:" class="emoji" alt=":grin:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ponyooooo'><span itemprop='name'>ponyooooo</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/2/0/2053d0412145dff67a79e5e60490ffe12866e8d2.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-06-26T23:59:38Z' class='post-time'>
+                    June 26, 2022, 11:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-06-26T23:59:38Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/0/2053d0412145dff67a79e5e60490ffe12866e8d2.png" data-download-href="https://discuss.frappe.io/uploads/default/2053d0412145dff67a79e5e60490ffe12866e8d2" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/0/2053d0412145dff67a79e5e60490ffe12866e8d2_2_690x168.png" alt="image" data-base62-sha1="4BYQC9SIPDhjwzsyEDIhrwIjlFE" width="690" height="168" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/0/2053d0412145dff67a79e5e60490ffe12866e8d2_2_690x168.png, https://discuss.frappe.io/uploads/default/optimized/3X/2/0/2053d0412145dff67a79e5e60490ffe12866e8d2_2_1035x252.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/2/0/2053d0412145dff67a79e5e60490ffe12866e8d2.png 2x" data-dominant-color="F9F9F9"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1125×275 37.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>Not sure when was this bug occurred but we are experiencing it right now for the newly created suppliers but for the past years and for the old suppliers we can still create invoices for AP that has different document Currency. For example, the document currency is billed as INR based on the supplier invoice, but we use the multi-currency to convert the invoice into USD since we need to record the AP in USD since in our credit card it was paid as USD.</p>
+<p>We also do this conversion since our profit and loss statement should be in USD. Or are we doing it wrong? Is our process incorrect?</p>
+<p>Current system version is using frappe cloud:<br>
+ERPNext: v13.34.1 (HEAD)<br>
+Frappe Framework: v13.33.1 (HEAD)<br>
+<code>https://github.com/frappe/erpnext/issues/31452</code></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

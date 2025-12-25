@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Updating helpdesk using frappe_docker steps - Setup - Frappe Forum</title>
+    <meta name="description" content="I have a multi apps on mysite built using the steps outlined here frappe_docker/docs/custom-apps.md at main · frappe/frappe_docker · GitHub 
+My apps.json has the following: 
+[ 
+{ 
+“url”: “GitHub - frappe/erpnext: Free an&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/updating-helpdesk-using-frappe-docker-steps/147323" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Updating helpdesk using frappe_docker steps&#39;" href="https://discuss.frappe.io/t/updating-helpdesk-using-frappe-docker-steps/147323.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/updating-helpdesk-using-frappe-docker-steps/147323" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/updating-helpdesk-using-frappe-docker-steps/147323" />
+<meta property="og:title" content="Updating helpdesk using frappe_docker steps" />
+<meta name="twitter:title" content="Updating helpdesk using frappe_docker steps" />
+<meta property="og:description" content="I have a multi apps on mysite built using the steps outlined here frappe_docker/docs/custom-apps.md at main · frappe/frappe_docker · GitHub  My apps.json has the following:  [  {  “url”: “GitHub - frappe/erpnext: Free and Open Source Enterprise Resource Planning (ERP)”,  “branch”: “v15.61.1”  },  {  “url”: “GitHub - frappe/hrms: Open Source HR and Payroll Software”,  “branch”: “v15.45.2”  },  {  “url”: “GitHub - frappe/crm: Fully featured, open source CRM”,  “branch”: “v1.42.2”  },  {  “url”: “G..." />
+<meta name="twitter:description" content="I have a multi apps on mysite built using the steps outlined here frappe_docker/docs/custom-apps.md at main · frappe/frappe_docker · GitHub  My apps.json has the following:  [  {  “url”: “GitHub - frappe/erpnext: Free and Open Source Enterprise Resource Planning (ERP)”,  “branch”: “v15.61.1”  },  {  “url”: “GitHub - frappe/hrms: Open Source HR and Payroll Software”,  “branch”: “v15.45.2”  },  {  “url”: “GitHub - frappe/crm: Fully featured, open source CRM”,  “branch”: “v1.42.2”  },  {  “url”: “G..." />
+<meta property="og:article:section" content="Install / Update" />
+<meta property="og:article:section:color" content="B3B5B4" />
+<meta property="og:article:section" content="Setup" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:tag" content="installation_problem" />
+<meta property="og:article:tag" content="frappe" />
+<meta property="og:article:tag" content="docker" />
+<meta property="article:published_time" content="2025-05-19T06:57:57+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Updating helpdesk using frappe_docker steps","mainEntity":{"@type":"Question","name":"Updating helpdesk using frappe_docker steps","text":"I have a multi apps on mysite built using the steps outlined here <a href=\"https://github.com/frappe/frappe_docker/blob/main/docs/custom-apps.md\" class=\"inline-onebox\" rel=\"noopener nofollow ugc\">frappe_docker/docs/custom-apps.md at main · frappe/frappe_docker · GitHub<\/a>\n\nMy apps.json has the following:\n\n[\n\n{\n\n“url”: “<a href=\"https://github.com/frappe/erpnext\" class=\"inline-onebox\" rel=\"noopener nofollow ugc\">GitHub - frappe/erpnext: Free and Open Source Enterprise Resource Planning (ERP)<\/a>”,\n\n“branch”: “v15.61.1”\n\n},\n\n{\n\n&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-05-19T06:57:57.027Z","author":{"@type":"Person","name":"zizi","url":"https://discuss.frappe.io/u/zizi"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/updating-helpdesk-using-frappe-docker-steps/147323">Updating helpdesk using frappe_docker steps</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/bench/13" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #B3B5B4'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Install / Update</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/bench/setup/33" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Setup</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/installation_problem' class='discourse-tag' rel="tag">installation_problem</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
+            <a href='https://discuss.frappe.io/tag/docker' class='discourse-tag' rel="tag">docker</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Updating helpdesk using frappe_docker steps'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/updating-helpdesk-using-frappe-docker-steps/147323'>
+      <meta itemprop='datePublished' content='2025-05-19T06:57:57Z'>
+        <meta itemprop='articleSection' content='Setup'>
+      <meta itemprop='keywords' content='installation_problem, frappe, docker'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/zizi'><span itemprop='name'>zizi</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/updating-helpdesk-using-frappe-docker-steps/147323">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-05-19T06:57:57Z' class='post-time'>
+                    May 19, 2025,  6:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-05-19T06:57:57Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have a multi apps on mysite built using the steps outlined here <a href="https://github.com/frappe/frappe_docker/blob/main/docs/custom-apps.md" class="inline-onebox" rel="noopener nofollow ugc">frappe_docker/docs/custom-apps.md at main · frappe/frappe_docker · GitHub</a></p>
+<p>My apps.json has the following:<br>
+[<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/erpnext" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/erpnext: Free and Open Source Enterprise Resource Planning (ERP)</a>”,<br>
+“branch”: “v15.61.1”<br>
+},<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/hrms" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/hrms: Open Source HR and Payroll Software</a>”,<br>
+“branch”: “v15.45.2”<br>
+},<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/crm" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/crm: Fully featured, open source CRM</a>”,<br>
+“branch”: “v1.42.2”<br>
+},<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/helpdesk" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/helpdesk: Modern, Streamlined, Free and Open Source Customer Service Software</a>”,<br>
+“branch”: “v1.8.0”<br>
+},<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/print_designer" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/print_designer: Visual print designer for Frappe / ERPNext</a>”,<br>
+“branch”: “v1.5.1”<br>
+},<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/builder" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/builder: Craft beautiful websites effortlessly with an intuitive visual builder and publish them instantly</a>”,<br>
+“branch”: “v1.16.5”<br>
+},<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/education" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/education: Open source education / school management system</a>”,<br>
+“branch”: “v15.5.2”<br>
+},<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/insights" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/insights: Open Source Business Intelligence Tool</a>”,<br>
+“branch”: “v3.1.3”<br>
+},<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/lending" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/lending: Open Source Lending software</a>”,<br>
+“branch”: “v1.0.0”<br>
+},<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/lms" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/lms: Easy to Use, 100% Open Source Learning Management System</a>”,<br>
+“branch”: “v2.28.1”<br>
+}<br>
+]</p>
+<p>The image builds fine and I am able to deploy mysite, this is the output of bench version --format plain<br>
+builder 1.16.5  ()<br>
+crm 1.42.2  ()<br>
+education 15.5.0  ()<br>
+erpnext 15.61.1  ()<br>
+frappe 15.68.1  ()<br>
+<strong>helpdesk 1.7.0  ()</strong><br>
+hrms 15.45.2  ()<br>
+insights 3.1.3  ()<br>
+lending 0.0.1  ()<br>
+lms 2.28.1  ()<br>
+print_designer 1.5.1  ()</p>
+<p>As you would note Helpdesk is still v1.7.0 and not v1.8.0</p>
+<p>I have tried to search the forum for a solution.</p>
+<p>Any ideas as to why Helpdesk is not showing v1.8.0 as expected</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

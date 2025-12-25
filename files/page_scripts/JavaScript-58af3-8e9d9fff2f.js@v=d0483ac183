@@ -1,0 +1,6 @@
+window.addEventListener("DOMContentLoaded",function(){const filterArea=document.querySelector('.filter-area');filterArea.appendChild(createFilter('country','Country',["All Countries",...page_data.country_list]));function createFilter(name,label,options){const filter=document.createElement('div');filter.classList.add('filter');const params=new URLSearchParams(window.location.search);const value=params.get(name);filter.innerHTML=`
+			<select name="${name}" id="${name}" aria-label="Select ${label}">
+				<option value="" disabled>${label}</option>
+				${options.map(option => `<option value="${option}"${value==option?'selected':''}>${option}</option>`)}
+			</select>
+		`;filter.querySelector('select').addEventListener('change',function(){const params=new URLSearchParams(window.location.search);params.set(this.name,this.value);window.location.search=params.toString();});return filter;}});

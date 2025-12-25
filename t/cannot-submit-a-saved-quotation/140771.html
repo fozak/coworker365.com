@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cannot submit a saved quotation - Selling/CRM - Frappe Forum</title>
+    <meta name="description" content="App Versions
+{
+	&amp;quot;crm&amp;quot;: &amp;quot;2.0.0-dev&amp;quot;,
+	&amp;quot;erpnext&amp;quot;: &amp;quot;15.47.4&amp;quot;,
+	&amp;quot;frappe&amp;quot;: &amp;quot;15.51.1&amp;quot;,
+	&amp;quot;myapp&amp;quot;: &amp;quot;0.0.1&amp;quot;
+}
+
+Route
+Form/Quotation/SAL-QTN-2025-00003
+
+Traceback
+Traceback (most recent call last):
+  File &amp;quot;apps/frappe/frappe/app.p&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/cannot-submit-a-saved-quotation/140771" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Cannot submit a saved quotation&#39;" href="https://discuss.frappe.io/t/cannot-submit-a-saved-quotation/140771.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/cannot-submit-a-saved-quotation/140771" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/cannot-submit-a-saved-quotation/140771" />
+<meta property="og:title" content="Cannot submit a saved quotation" />
+<meta name="twitter:title" content="Cannot submit a saved quotation" />
+<meta property="og:description" content="App Versions { 	&quot;crm&quot;: &quot;2.0.0-dev&quot;, 	&quot;erpnext&quot;: &quot;15.47.4&quot;, 	&quot;frappe&quot;: &quot;15.51.1&quot;, 	&quot;myapp&quot;: &quot;0.0.1&quot; }  Route Form/Quotation/SAL-QTN-2025-00003  Traceback Traceback (most recent call last):   File &quot;apps/frappe/frappe/app.py&quot;, line 114, in application     response = frappe.api.handle(request)                ^^^^^^^^^^^^^^^^^^^^^^^^^^   File &quot;apps/frappe/frappe/api/__init__.py&quot;, line 49, in handle     data = endpoint(**arguments)            ^^^^^^^^^^^^^^^^^^^^^   File &quot;apps/frappe/frappe/api/v1.py&quot;..." />
+<meta name="twitter:description" content="App Versions { 	&quot;crm&quot;: &quot;2.0.0-dev&quot;, 	&quot;erpnext&quot;: &quot;15.47.4&quot;, 	&quot;frappe&quot;: &quot;15.51.1&quot;, 	&quot;myapp&quot;: &quot;0.0.1&quot; }  Route Form/Quotation/SAL-QTN-2025-00003  Traceback Traceback (most recent call last):   File &quot;apps/frappe/frappe/app.py&quot;, line 114, in application     response = frappe.api.handle(request)                ^^^^^^^^^^^^^^^^^^^^^^^^^^   File &quot;apps/frappe/frappe/api/__init__.py&quot;, line 49, in handle     data = endpoint(**arguments)            ^^^^^^^^^^^^^^^^^^^^^   File &quot;apps/frappe/frappe/api/v1.py&quot;..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:section" content="Selling/CRM" />
+<meta property="og:article:section:color" content="9EB83B" />
+<meta property="og:article:tag" content="selling" />
+<meta property="og:article:tag" content="quotation" />
+<meta property="og:article:tag" content="crm" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="article:published_time" content="2025-01-16T11:36:08+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Cannot submit a saved quotation","mainEntity":{"@type":"Question","name":"Cannot submit a saved quotation","text":"<a name=\"app-versions-1\" class=\"anchor\" href=\"#app-versions-1\"><\/a>App Versions\n\n{\n\n&quot;crm&quot;: &quot;2.0.0-dev&quot;,\n\n&quot;erpnext&quot;: &quot;15.47.4&quot;,\n\n&quot;frappe&quot;: &quot;15.51.1&quot;,\n\n&quot;myapp&quot;: &quot;0.0.1&quot;\n\n}\n\n<a name=\"route-2\" class=\"anchor\" href=\"#route-2\"><\/a>Route\n\nForm/Quotation/SAL-QTN-2025-00003\n\n<a name=\"traceback-3\" class=\"anchor\" href=\"#traceback-3\"><\/a>Traceback\n\nTraceback (most recent call last):\n\nFile &quot;apps/frappe/frappe/app.py&quot;, line 114, in application\n\nresponse = frappe.api.handle(request)\n\n&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-01-16T11:36:08.619Z","author":{"@type":"Person","name":"AfsalCp","url":"https://discuss.frappe.io/u/AfsalCp"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/cannot-submit-a-saved-quotation/140771">Cannot submit a saved quotation</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/selling/8" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #9EB83B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Selling/CRM</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/selling' class='discourse-tag' rel="tag">selling</a>, 
+            <a href='https://discuss.frappe.io/tag/quotation' class='discourse-tag' rel="tag">quotation</a>, 
+            <a href='https://discuss.frappe.io/tag/crm' class='discourse-tag' rel="tag">crm</a>, 
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Cannot submit a saved quotation'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/cannot-submit-a-saved-quotation/140771'>
+      <meta itemprop='datePublished' content='2025-01-16T11:36:08Z'>
+        <meta itemprop='articleSection' content='Selling/CRM'>
+      <meta itemprop='keywords' content='selling, quotation, crm, erpnext'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/AfsalCp'><span itemprop='name'>AfsalCp</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/cannot-submit-a-saved-quotation/140771">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-01-16T11:36:08Z' class='post-time'>
+                    January 16, 2025, 11:36am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-01-16T11:36:08Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h3><a name="app-versions-1" class="anchor" href="#app-versions-1"></a>App Versions</h3>
+<pre><code class="lang-auto">{
+	"crm": "2.0.0-dev",
+	"erpnext": "15.47.4",
+	"frappe": "15.51.1",
+	"myapp": "0.0.1"
+}
+</code></pre>
+<h3><a name="route-2" class="anchor" href="#route-2"></a>Route</h3>
+<pre><code class="lang-auto">Form/Quotation/SAL-QTN-2025-00003
+</code></pre>
+<h3><a name="traceback-3" class="anchor" href="#traceback-3"></a>Traceback</h3>
+<pre><code class="lang-auto">Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 114, in application
+    response = frappe.api.handle(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/api/__init__.py", line 49, in handle
+    data = endpoint(**arguments)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/api/v1.py", line 36, in handle_rpc_call
+    return frappe.handler.handle()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/handler.py", line 50, in handle
+    data = execute_cmd(cmd)
+           ^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1726, in call
+    return fn(*args, **newargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/desk/form/save.py", line 37, in savedocs
+    doc.submit()
+  File "apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1060, in submit
+    return self._submit()
+           ^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1043, in _submit
+    return self.save()
+           ^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 342, in save
+    return self._save(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 395, in _save
+    self.run_post_save_methods()
+  File "apps/frappe/frappe/model/document.py", line 1143, in run_post_save_methods
+    self.run_method("on_submit")
+  File "apps/frappe/frappe/model/document.py", line 974, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1334, in composer
+    return composed(self, method, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1316, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 971, in fn
+    return method_object(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/erpnext/erpnext/selling/doctype/quotation/quotation.py", line 283, in on_submit
+    self.update_lead()
+  File "apps/erpnext/erpnext/selling/doctype/quotation/quotation.py", line 215, in update_lead
+    frappe.get_doc("Lead", self.party_name).set_docstatus(update=1)
+TypeError: Document.set_docstatus() got an unexpected keyword argument 'update'
+
+</code></pre>
+<h3><a name="request-data-4" class="anchor" href="#request-data-4"></a>Request Data</h3>
+<pre><code class="lang-auto">{
+	"type": "POST",
+	"args": {
+		"doc": "{\"name\":\"SAL-QTN-2025-00003\",\"owner\":\"Administrator\",\"creation\":\"2025-01-16 16:53:59.436021\",\"modified\":\"2025-01-16 16:53:59.436021\",\"modified_by\":\"Administrator\",\"docstatus\":0,\"idx\":0,\"title\":\"Maya Enterprise\",\"naming_series\":\"SAL-QTN-.YYYY.-\",\"quotation_to\":\"Lead\",\"party_name\":\"1diqbinlrl\",\"customer_name\":\"Maya Enterprise\",\"transaction_date\":\"2025-01-16\",\"valid_till\":\"2025-02-16\",\"order_type\":\"Sales\",\"company\":\"Babu Textiles\",\"currency\":\"INR\",\"conversion_rate\":1,\"selling_price_list\":\"Standard Selling\",\"price_list_currency\":\"INR\",\"plc_conversion_rate\":1,\"ignore_pricing_rule\":0,\"total_qty\":67,\"total_net_weight\":0,\"base_total\":1126,\"base_net_total\":1126,\"total\":1126,\"net_total\":1126,\"tax_category\":\"GST\",\"taxes_and_charges\":\"GSt - BBTex\",\"base_total_taxes_and_charges\":202.68,\"total_taxes_and_charges\":202.68,\"base_grand_total\":1328.68,\"base_rounding_adjustment\":0.32,\"base_rounded_total\":1329,\"base_in_words\":\"\",\"grand_total\":1328.68,\"rounding_adjustment\":0.32,\"rounded_total\":1329,\"disable_rounded_total\":0,\"in_words\":\"\",\"apply_discount_on\":\"Grand Total\",\"base_discount_amount\":0,\"additional_discount_percentage\":0,\"discount_amount\":0,\"other_charges_calculation\":\"&lt;div class=\\\"tax-break-up\\\" style=\\\"overflow-x: auto;\\\"&gt;\\n\\t&lt;table class=\\\"table table-bordered table-hover\\\"&gt;\\n\\t\\t&lt;thead&gt;\\n\\t\\t\\t&lt;tr&gt;\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t&lt;th class=\\\"text-left\\\"&gt;Item&lt;/th&gt;\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t&lt;th class=\\\"text-right\\\"&gt;Taxable Amount&lt;/th&gt;\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t&lt;th class=\\\"text-right\\\"&gt;CGST&lt;/th&gt;\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t&lt;th class=\\\"text-right\\\"&gt;SGST&lt;/th&gt;\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\n\\t\\t\\t&lt;/tr&gt;\\n\\t\\t&lt;/thead&gt;\\n\\t\\t&lt;tbody&gt;\\n\\t\\t\\t\\n\\t\\t\\t\\t&lt;tr&gt;\\n\\t\\t\\t\\t\\t&lt;td&gt;IT0003:Book&lt;/td&gt;\\n\\t\\t\\t\\t\\t&lt;td class=\\\"text-right\\\"&gt;\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t₹ 846.00\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t&lt;/td&gt;\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t&lt;td class=\\\"text-right\\\"&gt;\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t(9.0%)\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t₹ 76.14\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t&lt;/td&gt;\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t&lt;td class=\\\"text-right\\\"&gt;\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t(9.0%)\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t₹ 76.14\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t&lt;/td&gt;\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t&lt;/tr&gt;\\n\\t\\t\\t\\n\\t\\t\\t\\t&lt;tr&gt;\\n\\t\\t\\t\\t\\t&lt;td&gt;IT001&lt;/td&gt;\\n\\t\\t\\t\\t\\t&lt;td class=\\\"text-right\\\"&gt;\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t₹ 280.00\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t&lt;/td&gt;\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t&lt;td class=\\\"text-right\\\"&gt;\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t(9.0%)\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t₹ 25.20\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t&lt;/td&gt;\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t&lt;td class=\\\"text-right\\\"&gt;\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t(9.0%)\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t\\t\\t₹ 25.20\\n\\t\\t\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\t\\t&lt;/td&gt;\\n\\t\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t\\t\\n\\t\\t\\t\\t&lt;/tr&gt;\\n\\t\\t\\t\\n\\t\\t&lt;/tbody&gt;\\n\\t&lt;/table&gt;\\n&lt;/div&gt;\",\"contact_display\":\"\",\"contact_mobile\":\"5656565645\",\"contact_email\":\"maya@gmail.com\",\"tc_name\":\"No returning of damaged products\",\"terms\":\"&lt;div class=\\\"ql-editor read-mode\\\"&gt;&lt;p&gt;The products sold cannot be returned if damaged&lt;/p&gt;&lt;/div&gt;\",\"group_same_items\":0,\"language\":\"en\",\"status\":\"Draft\",\"doctype\":\"Quotation\",\"payment_schedule\":[{\"name\":\"qhtt54n1hf\",\"owner\":\"Administrator\",\"creation\":\"2025-01-16 16:53:59.620428\",\"modified\":\"2025-01-16 16:53:59.620428\",\"modified_by\":\"Administrator\",\"docstatus\":0,\"idx\":1,\"due_date\":\"2025-01-16\",\"invoice_portion\":100,\"discount\":0,\"payment_amount\":1329,\"outstanding\":1329,\"paid_amount\":0,\"discounted_amount\":0,\"base_payment_amount\":1329,\"parent\":\"SAL-QTN-2025-00003\",\"parentfield\":\"payment_schedule\",\"parenttype\":\"Quotation\",\"doctype\":\"Payment Schedule\"}],\"packed_items\":[],\"pricing_rules\":[],\"lost_reasons\":[],\"competitors\":[],\"items\":[{\"name\":\"ejgg5tjc56\",\"owner\":\"Administrator\",\"creation\":\"2025-01-16 16:53:59.436021\",\"modified\":\"2025-01-16 16:53:59.436021\",\"modified_by\":\"Administrator\",\"docstatus\":0,\"idx\":1,\"item_code\":\"IT0003:Book\",\"item_name\":\"IT0003:Book\",\"description\":\"IT0003:Book\",\"item_group\":\"Products\",\"image\":\"\",\"qty\":47,\"stock_uom\":\"Nos\",\"uom\":\"Nos\",\"conversion_factor\":1,\"stock_qty\":47,\"actual_qty\":0,\"company_total_stock\":0,\"price_list_rate\":0,\"base_price_list_rate\":0,\"margin_type\":\"\",\"margin_rate_or_amount\":0,\"rate_with_margin\":0,\"discount_percentage\":0,\"discount_amount\":0,\"base_rate_with_margin\":0,\"rate\":18,\"net_rate\":18,\"amount\":846,\"net_amount\":846,\"base_rate\":18,\"base_net_rate\":18,\"base_amount\":846,\"base_net_amount\":846,\"pricing_rules\":\"\",\"stock_uom_rate\":18,\"is_free_item\":0,\"is_alternative\":0,\"has_alternative_item\":0,\"valuation_rate\":0,\"gross_profit\":846,\"weight_per_unit\":0,\"total_weight\":0,\"warehouse\":\"Stores - BBTex\",\"against_blanket_order\":0,\"blanket_order_rate\":0,\"projected_qty\":0,\"item_tax_rate\":\"{}\",\"page_break\":0,\"parent\":\"SAL-QTN-2025-00003\",\"parentfield\":\"items\",\"parenttype\":\"Quotation\",\"doctype\":\"Quotation Item\"},{\"name\":\"pfjf7m0uoe\",\"owner\":\"Administrator\",\"creation\":\"2025-01-16 16:53:59.436021\",\"modified\":\"2025-01-16 16:53:59.436021\",\"modified_by\":\"Administrator\",\"docstatus\":0,\"idx\":2,\"item_code\":\"IT001\",\"item_name\":\"IT001\",\"description\":\"IT001\",\"item_group\":\"Products\",\"image\":\"\",\"qty\":20,\"stock_uom\":\"Nos\",\"uom\":\"Nos\",\"conversion_factor\":1,\"stock_qty\":20,\"actual_qty\":0,\"company_total_stock\":0,\"price_list_rate\":0,\"base_price_list_rate\":0,\"margin_type\":\"\",\"margin_rate_or_amount\":0,\"rate_with_margin\":0,\"discount_percentage\":0,\"discount_amount\":0,\"base_rate_with_margin\":0,\"rate\":14,\"net_rate\":14,\"amount\":280,\"net_amount\":280,\"base_rate\":14,\"base_net_rate\":14,\"base_amount\":280,\"base_net_amount\":280,\"pricing_rules\":\"\",\"stock_uom_rate\":14,\"is_free_item\":0,\"is_alternative\":0,\"has_alternative_item\":0,\"valuation_rate\":0,\"gross_profit\":280,\"weight_per_unit\":0,\"total_weight\":0,\"against_blanket_order\":0,\"blanket_order_rate\":0,\"projected_qty\":0,\"item_tax_rate\":\"{}\",\"page_break\":0,\"parent\":\"SAL-QTN-2025-00003\",\"parentfield\":\"items\",\"parenttype\":\"Quotation\",\"doctype\":\"Quotation Item\"}],\"taxes\":[{\"name\":\"q48a3c7ovk\",\"owner\":\"Administrator\",\"creation\":\"2025-01-16 16:53:59.436021\",\"modified\":\"2025-01-16 16:53:59.436021\",\"modified_by\":\"Administrator\",\"docstatus\":0,\"idx\":1,\"charge_type\":\"On Net Total\",\"account_head\":\"2020202020 - CGST - BBTex\",\"description\":\"CGST\",\"included_in_print_rate\":0,\"included_in_paid_amount\":0,\"cost_center\":\"Main - BBTex\",\"rate\":9,\"account_currency\":\"INR\",\"tax_amount\":101.34,\"total\":1227.34,\"tax_amount_after_discount_amount\":101.34,\"base_tax_amount\":101.34,\"base_total\":1227.34,\"base_tax_amount_after_discount_amount\":101.34,\"item_wise_tax_detail\":\"{\\\"IT0003:Book\\\":[9,76.14],\\\"IT001\\\":[9,25.2]}\",\"dont_recompute_tax\":0,\"parent\":\"SAL-QTN-2025-00003\",\"parentfield\":\"taxes\",\"parenttype\":\"Quotation\",\"doctype\":\"Sales Taxes and Charges\"},{\"name\":\"i64i4m20ej\",\"owner\":\"Administrator\",\"creation\":\"2025-01-16 16:53:59.436021\",\"modified\":\"2025-01-16 16:53:59.436021\",\"modified_by\":\"Administrator\",\"docstatus\":0,\"idx\":2,\"charge_type\":\"On Net Total\",\"account_head\":\"212121212121 - SGST - BBTex\",\"description\":\"SGST\",\"included_in_print_rate\":0,\"included_in_paid_amount\":0,\"cost_center\":\"Main - BBTex\",\"rate\":9,\"account_currency\":\"INR\",\"tax_amount\":101.34,\"total\":1328.68,\"tax_amount_after_discount_amount\":101.34,\"base_tax_amount\":101.34,\"base_total\":1328.68,\"base_tax_amount_after_discount_amount\":101.34,\"item_wise_tax_detail\":\"{\\\"IT0003:Book\\\":[9,76.14],\\\"IT001\\\":[9,25.2]}\",\"dont_recompute_tax\":0,\"parent\":\"SAL-QTN-2025-00003\",\"parentfield\":\"taxes\",\"parenttype\":\"Quotation\",\"doctype\":\"Sales Taxes and Charges\"}],\"__onload\":{\"make_payment_via_journal_entry\":0},\"__last_sync_on\":\"2025-01-16T11:28:20.708Z\"}",
+		"action": "Submit"
+	},
+	"btn": {
+		"jQuery370074875812433312831": {
+			"events": {
+				"click": [
+					{
+						"type": "click",
+						"origType": "click",
+						"guid": 399,
+						"namespace": ""
+					}
+				]
+			}
+		}
+	},
+	"freeze": true,
+	"headers": {},
+	"error_handlers": {},
+	"url": "/api/method/frappe.desk.form.save.savedocs",
+	"request_id": null
+}
+</code></pre>
+<h3><a name="response-data-5" class="anchor" href="#response-data-5"></a>Response Data</h3>
+<pre><code class="lang-auto">{
+	"exception": "TypeError: Document.set_docstatus() got an unexpected keyword argument 'update'",
+	"exc_type": "TypeError",
+	"_exc_source": "erpnext (app)"
+}
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Customize ERPNext - Frappe Forum</title>
+    <meta name="description" content="Welcome to the ERPNext Customize forum. The Customize Module in ERPNext has features to customize various parts of ERPNext like adding custom fields, forms, scripts, workflows, and more.">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/c/erpnext/customize-erpnext/57" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="next" href="/c/erpnext/customize-erpnext/57?page=1">
+    <link rel="alternate" type="application/rss+xml" title="Latest posts" href="https://discuss.frappe.io/posts.rss" />
+    <link rel="alternate" type="application/rss+xml" title="Latest topics" href="https://discuss.frappe.io/latest.rss" />
+    <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of topics in the &#39;Customize ERPNext&#39; category" href="https://discuss.frappe.io/c/erpnext/customize-erpnext/57.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/c/erpnext/customize-erpnext/57" />
+<meta name="twitter:url" content="https://discuss.frappe.io/c/erpnext/customize-erpnext/57" />
+<meta property="og:title" content="Customize ERPNext" />
+<meta name="twitter:title" content="Customize ERPNext" />
+<meta property="og:description" content="Welcome to the ERPNext Customize forum. The Customize Module in ERPNext has features to customize various parts of ERPNext like adding custom fields, forms, scripts, workflows, and more." />
+<meta name="twitter:description" content="Welcome to the ERPNext Customize forum. The Customize Module in ERPNext has features to customize various parts of ERPNext like adding custom fields, forms, scripts, workflows, and more." />
+
+    
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+      
+
+
+
+  <h1>
+      <a itemprop="item" href="/c/erpnext/6">
+        <span itemprop='name'>ERPNext</span>
+</a>      &nbsp;
+
+    <a itemprop="item" href="/c/erpnext/customize-erpnext/57">
+      <span itemprop='name'>Customize ERPNext</span>
+</a>  </h1>
+  <br/>
+
+
+<div class="topic-list-container" itemscope itemtype='http://schema.org/ItemList'>
+  <meta itemprop='itemListOrder' content='http://schema.org/ItemListOrderDescending'>
+
+  <table class='topic-list'>
+
+    <thead>
+      <tr>
+        <th>Topic</th>
+        <th></th>
+        <th class="replies">Replies</th>
+        <th class="views">Views</th>
+        <th>Activity</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='1'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/about-the-customize-erpnext-category/56272' class='title raw-link raw-topic-link'>About the Customize ERPNext category</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/prasadr" class="latest single">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/prasadr/25/28127_2.png" class="avatar" title='prasadr - Original Poster, Most Recent Poster' aria-label='prasadr - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>1272</span>
+          </td>
+          <td>
+            December 23, 2019
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='2'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/how-to-reduce-the-size-of-a-field-box/129334' class='title raw-link raw-topic-link'>How to reduce the size of a field box</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag'>customization</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Anjalijangid" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/a/3ec8ea/25.png" class="avatar" title='Anjalijangid - Original Poster' aria-label='Anjalijangid - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Manav_Mandli" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/manav_mandli/25/71011_2.png" class="avatar" title='Manav_Mandli - Frequent Poster, Accepted Answer' aria-label='Manav_Mandli - Frequent Poster, Accepted Answer'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/EugeneP" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/eugenep/25/55852_2.png" class="avatar" title='EugeneP - Frequent Poster' aria-label='EugeneP - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/NCP" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/ncp/25/66573_2.png" class="avatar" title='NCP - Frequent Poster' aria-label='NCP - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/M.Toseef" class="latest">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/m.toseef/25/78893_2.png" class="avatar" title='M.Toseef - Most Recent Poster' aria-label='M.Toseef - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>10</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>1224</span>
+          </td>
+          <td>
+            December 25, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='3'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/custom-ai-chatbot-inside-erpnext/158270' class='title raw-link raw-topic-link'>custom AI chatbot inside ERPNext</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag'>customization</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag'>erpnext</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag'>frappe</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/developer' class='discourse-tag'>developer</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/AbdulMajid" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/a/b9bd4f/25.png" class="avatar" title='AbdulMajid - Original Poster' aria-label='AbdulMajid - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/kolate_sambhaji" class="latest">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/kolate_sambhaji/25/42955_2.png" class="avatar" title='kolate_sambhaji - Most Recent Poster' aria-label='kolate_sambhaji - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>62</span>
+          </td>
+          <td>
+            December 24, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='4'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/how-does-the-fetch-from-in-doctype-custom-field-work/94626' class='title raw-link raw-topic-link'>How does the &quot;Fetch From&quot; in Doctype Custom Field work?</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/doctype' class='discourse-tag'>doctype</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/geordie504" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/geordie504/25/52772_2.png" class="avatar" title='geordie504 - Original Poster' aria-label='geordie504 - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/peterg" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/peterg/25/55463_2.png" class="avatar" title='peterg - Frequent Poster, Accepted Answer' aria-label='peterg - Frequent Poster, Accepted Answer'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Nada-86" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/nada-86/25/62306_2.png" class="avatar" title='Nada-86 - Frequent Poster' aria-label='Nada-86 - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/NCP" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/ncp/25/66573_2.png" class="avatar" title='NCP - Frequent Poster' aria-label='NCP - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/meichthys" class="latest">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/meichthys/25/82086_2.png" class="avatar" title='meichthys - Most Recent Poster' aria-label='meichthys - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>13</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>6949</span>
+          </td>
+          <td>
+            December 20, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='5'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/child-table-columns-not-changing/158134' class='title raw-link raw-topic-link'>Child table columns not changing</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/abubakar" class="latest single">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/abubakar/25/34996_2.png" class="avatar" title='abubakar - Original Poster, Most Recent Poster' aria-label='abubakar - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>19</span>
+          </td>
+          <td>
+            December 19, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='6'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/how-to-show-image-in-items-list-view/151235' class='title raw-link raw-topic-link'>How to show image in Items list view?</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/a7medalyousofi" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/a7medalyousofi/25/90303_2.png" class="avatar" title='a7medalyousofi - Original Poster' aria-label='a7medalyousofi - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/avc" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/avc/25/55078_2.png" class="avatar" title='avc - Frequent Poster' aria-label='avc - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Sudhanshu" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/sudhanshu/25/68856_2.png" class="avatar" title='Sudhanshu - Frequent Poster' aria-label='Sudhanshu - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/focuser2009" class="latest">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/focuser2009/25/92626_2.png" class="avatar" title='focuser2009 - Most Recent Poster' aria-label='focuser2009 - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>13</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>172</span>
+          </td>
+          <td>
+            December 17, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='7'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/error-while-saving-new-item-with-linked-fields/158020' class='title raw-link raw-topic-link'>Error while saving NEW ITEM with linked fields</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag'>customization</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/item' class='discourse-tag'>item</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Hussain" class="latest single">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/h/f17d59/25.png" class="avatar" title='Hussain - Original Poster, Most Recent Poster' aria-label='Hussain - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>27</span>
+          </td>
+          <td>
+            December 15, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='8'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/frappe-custom-theme/131503' class='title raw-link raw-topic-link'>Frappe Custom Theme!</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/noumanyousafkhan" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/n/ecb155/25.png" class="avatar" title='noumanyousafkhan - Original Poster' aria-label='noumanyousafkhan - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Meet" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/meet/25/78498_2.png" class="avatar" title='Meet - Frequent Poster' aria-label='Meet - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/asoral" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/asoral/25/27207_2.png" class="avatar" title='asoral - Frequent Poster' aria-label='asoral - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/nirav" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/nirav/25/87295_2.png" class="avatar" title='nirav - Frequent Poster' aria-label='nirav - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Sudhanshu" class="latest">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/sudhanshu/25/68856_2.png" class="avatar" title='Sudhanshu - Most Recent Poster' aria-label='Sudhanshu - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>7</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>2250</span>
+          </td>
+          <td>
+            December 11, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='9'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/i-want-to-make-ui-field-according-to-image-and-that-representation-of-field-is-not-avaialble-in-sys/157680' class='title raw-link raw-topic-link'>I want to make UI field according to image and that representation of field is not avaialble in sys</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag'>erpnext</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag'>frappe</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/user2025" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/u/eb9ed0/25.png" class="avatar" title='user2025 - Original Poster' aria-label='user2025 - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Abdeali" class="latest">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/abdeali/25/90545_2.png" class="avatar" title='Abdeali - Most Recent Poster' aria-label='Abdeali - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>36</span>
+          </td>
+          <td>
+            December 5, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='10'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/how-to-restrict-normal-users-to-add-column-or-pick-column-in-reports/157612' class='title raw-link raw-topic-link'>How to Restrict Normal Users to Add Column or Pick Column in reports</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag'>erpnext</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/report' class='discourse-tag'>report</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Abubakar_Falah" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/a/7cd45c/25.png" class="avatar" title='Abubakar_Falah - Original Poster' aria-label='Abubakar_Falah - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/shaileshsaini" class="latest">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/shaileshsaini/25/92114_2.png" class="avatar" title='shaileshsaini - Most Recent Poster' aria-label='shaileshsaini - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>25</span>
+          </td>
+          <td>
+            December 4, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='11'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/help-with-script-report-in-gui/157576' class='title raw-link raw-topic-link'>Help with script report in GUI</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/volkswagner" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/volkswagner/25/55461_2.png" class="avatar" title='volkswagner - Original Poster' aria-label='volkswagner - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/asieftejani" class="latest">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/asieftejani/25/86086_2.png" class="avatar" title='asieftejani - Most Recent Poster' aria-label='asieftejani - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>40</span>
+          </td>
+          <td>
+            December 3, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='12'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/emails-not-sending-automatically-from-queue/145149' class='title raw-link raw-topic-link'>Emails Not Sending Automatically from Queue</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag'>customization</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag'>erpnext</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag'>frappe</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Mohammadsami_Bakhtya" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/mohammadsami_bakhtya/25/64898_2.png" class="avatar" title='Mohammadsami_Bakhtya - Original Poster' aria-label='Mohammadsami_Bakhtya - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Sudh33r" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/sudh33r/25/86028_2.png" class="avatar" title='Sudh33r - Frequent Poster' aria-label='Sudh33r - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Adeel_Siddiqui" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/adeel_siddiqui/25/56201_2.png" class="avatar" title='Adeel_Siddiqui - Frequent Poster' aria-label='Adeel_Siddiqui - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Vsbehter" class="latest">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/v/ad7895/25.png" class="avatar" title='Vsbehter - Most Recent Poster' aria-label='Vsbehter - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>5</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>603</span>
+          </td>
+          <td>
+            December 3, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='13'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/leads-or-deals-restriction/157302' class='title raw-link raw-topic-link'>Leads or Deals Restriction</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag'>customization</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/custom_script' class='discourse-tag'>custom_script</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag'>erpnext</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag'>frappe</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/crm' class='discourse-tag'>crm</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Tri_Agung1" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/tri_agung1/25/56959_2.png" class="avatar" title='Tri_Agung1 - Original Poster' aria-label='Tri_Agung1 - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/asieftejani" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/asieftejani/25/86086_2.png" class="avatar" title='asieftejani - Frequent Poster' aria-label='asieftejani - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Mubasher" class="latest">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/m/e0b2c6/25.png" class="avatar" title='Mubasher - Most Recent Poster' aria-label='Mubasher - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>3</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>33</span>
+          </td>
+          <td>
+            November 27, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='14'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/shopping-cart-cannot-find-triggers/157297' class='title raw-link raw-topic-link'>Shopping Cart - Cannot Find Triggers</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/TSping1" class="latest single">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/t/4da419/25.png" class="avatar" title='TSping1 - Original Poster, Most Recent Poster' aria-label='TSping1 - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>31</span>
+          </td>
+          <td>
+            November 26, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='15'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/print-page-number-in-custom-print-format/72803' class='title raw-link raw-topic-link'>Print Page number in custom print format</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/developer' class='discourse-tag'>developer</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/arokia" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/arokia/25/28553_2.png" class="avatar" title='arokia - Original Poster' aria-label='arokia - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/kevingee" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/k/ba9def/25.png" class="avatar" title='kevingee - Frequent Poster' aria-label='kevingee - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/moe01325" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/moe01325/25/36583_2.png" class="avatar" title='moe01325 - Frequent Poster' aria-label='moe01325 - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Sarah" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/s/9de053/25.png" class="avatar" title='Sarah - Frequent Poster' aria-label='Sarah - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/neocode" class="latest">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/n/47e85d/25.png" class="avatar" title='neocode - Most Recent Poster' aria-label='neocode - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>13</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>3499</span>
+          </td>
+          <td>
+            November 25, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='16'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/best-ai-tool-to-use-frappe-developers/148278' class='title raw-link raw-topic-link'>Best AI tool to use frappe developers</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag'>customization</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/custom_script' class='discourse-tag'>custom_script</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag'>erpnext</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag'>frappe</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/developer' class='discourse-tag'>developer</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Venkat_dev" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/v/ee59a6/25.png" class="avatar" title='Venkat_dev - Original Poster' aria-label='Venkat_dev - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/rmeyer" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/rmeyer/25/76684_2.png" class="avatar" title='rmeyer - Frequent Poster' aria-label='rmeyer - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/ahassoun" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/ahassoun/25/74654_2.png" class="avatar" title='ahassoun - Frequent Poster' aria-label='ahassoun - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Chinmay_Bhat" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/c/b2d939/25.png" class="avatar" title='Chinmay_Bhat - Frequent Poster' aria-label='Chinmay_Bhat - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/kittiu" class="latest">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/kittiu/25/80550_2.png" class="avatar" title='kittiu - Most Recent Poster' aria-label='kittiu - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>13</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>1723</span>
+          </td>
+          <td>
+            November 23, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='17'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/how-to-change-the-whole-ui/157103' class='title raw-link raw-topic-link'>How to change the whole UI</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/ui' class='discourse-tag'>ui</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag'>customization</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag'>erpnext</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag'>frappe</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/developer' class='discourse-tag'>developer</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Skynovia" class="latest">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/s/838e76/25.png" class="avatar" title='Skynovia - Original Poster, Most Recent Poster' aria-label='Skynovia - Original Poster, Most Recent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/compgeniuses" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/compgeniuses/25/73530_2.png" class="avatar" title='compgeniuses - Frequent Poster' aria-label='compgeniuses - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Yamen_Zakhour" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/yamen_zakhour/25/91826_2.png" class="avatar" title='Yamen_Zakhour - Frequent Poster' aria-label='Yamen_Zakhour - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/ahsantareen" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/ahsantareen/25/86743_2.png" class="avatar" title='ahsantareen - Frequent Poster' aria-label='ahsantareen - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/kolate_sambhaji" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/kolate_sambhaji/25/42955_2.png" class="avatar" title='kolate_sambhaji - Frequent Poster' aria-label='kolate_sambhaji - Frequent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>6</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>258</span>
+          </td>
+          <td>
+            November 21, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='18'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/electronic-invoicing-system/156865' class='title raw-link raw-topic-link'>Electronic Invoicing System</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/ITSV" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/i/e9bcb4/25.png" class="avatar" title='ITSV - Original Poster' aria-label='ITSV - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/agaitan" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/a/8797f3/25.png" class="avatar" title='agaitan - Frequent Poster' aria-label='agaitan - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Atheetha" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/atheetha/25/87437_2.png" class="avatar" title='Atheetha - Frequent Poster' aria-label='Atheetha - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/ahmadmalik" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/a/258eb7/25.png" class="avatar" title='ahmadmalik - Frequent Poster' aria-label='ahmadmalik - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Muzzy" class="latest">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/muzzy/25/15514_2.png" class="avatar" title='Muzzy - Most Recent Poster' aria-label='Muzzy - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>7</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>204</span>
+          </td>
+          <td>
+            November 21, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='19'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/script-report-filter-not-showing/147352' class='title raw-link raw-topic-link'>Script report Filter not showing</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/bug' class='discourse-tag'>bug</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag'>customization</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/custom_script' class='discourse-tag'>custom_script</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag'>erpnext</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/developer' class='discourse-tag'>developer</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Usman-Kanz" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/usman-kanz/25/86564_2.png" class="avatar" title='Usman-Kanz - Original Poster' aria-label='Usman-Kanz - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/vijaywm" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/vijaywm/25/18739_2.png" class="avatar" title='vijaywm - Frequent Poster' aria-label='vijaywm - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/ahmadmalik" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/a/258eb7/25.png" class="avatar" title='ahmadmalik - Frequent Poster' aria-label='ahmadmalik - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/519_Hamza_Habeeb" class="latest">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/519_hamza_habeeb/25/59465_2.png" class="avatar" title='519_Hamza_Habeeb - Most Recent Poster' aria-label='519_Hamza_Habeeb - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>6</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>249</span>
+          </td>
+          <td>
+            November 21, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='20'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/how-to-export-selected-columns-from-custom-script-report-in-erpnext/157080' class='title raw-link raw-topic-link'>How to Export Selected Columns from Custom Script Report in ERPNext?</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag'>customization</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Stark" class="latest single">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/stark/25/84959_2.png" class="avatar" title='Stark - Original Poster, Most Recent Poster' aria-label='Stark - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>49</span>
+          </td>
+          <td>
+            November 20, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='21'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/should-posnext-include-an-employee-performance-dashboard/157023' class='title raw-link raw-topic-link'>📌 Should POSNext Include an Employee Performance Dashboard?</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/pos_point_of_sale' class='discourse-tag'>pos_point_of_sale</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag'>erpnext</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/pos' class='discourse-tag'>pos</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/ahmed_osama_1190" class="latest single">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/a/e99b99/25.png" class="avatar" title='ahmed_osama_1190 - Original Poster, Most Recent Poster' aria-label='ahmed_osama_1190 - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>34</span>
+          </td>
+          <td>
+            November 19, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='22'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/css-not-loading-after-custom-app-installation/137868' class='title raw-link raw-topic-link'>CSS not Loading after custom app installation</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Thevoice" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/thevoice/25/90888_2.png" class="avatar" title='Thevoice - Original Poster' aria-label='Thevoice - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/umutyilmaz44" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/umutyilmaz44/25/81627_2.png" class="avatar" title='umutyilmaz44 - Frequent Poster, Accepted Answer' aria-label='umutyilmaz44 - Frequent Poster, Accepted Answer'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/avc" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/avc/25/55078_2.png" class="avatar" title='avc - Frequent Poster' aria-label='avc - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Manav_Mandli" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/manav_mandli/25/71011_2.png" class="avatar" title='Manav_Mandli - Frequent Poster' aria-label='Manav_Mandli - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/mbunjimo" class="latest">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/m/ecccb3/25.png" class="avatar" title='mbunjimo - Most Recent Poster' aria-label='mbunjimo - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>10</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>1716</span>
+          </td>
+          <td>
+            November 17, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='23'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/show-only-documents-with-certian-field-value/156884' class='title raw-link raw-topic-link'>Show only documents with certian field value</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Pararera" class="latest">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/pararera/25/33348_2.png" class="avatar" title='Pararera - Original Poster, Most Recent Poster' aria-label='Pararera - Original Poster, Most Recent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/volkswagner" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/volkswagner/25/55461_2.png" class="avatar" title='volkswagner - Frequent Poster, Accepted Answer' aria-label='volkswagner - Frequent Poster, Accepted Answer'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/ahsantareen" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/ahsantareen/25/86743_2.png" class="avatar" title='ahsantareen - Frequent Poster' aria-label='ahsantareen - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/peterg" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/peterg/25/55463_2.png" class="avatar" title='peterg - Frequent Poster' aria-label='peterg - Frequent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>5</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>74</span>
+          </td>
+          <td>
+            November 16, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='24'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/configuration-of-erpnext/156731' class='title raw-link raw-topic-link'>Configuration of ERPNext</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag'>erpnext</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/ITSV" class="latest">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/i/e9bcb4/25.png" class="avatar" title='ITSV - Original Poster, Most Recent Poster' aria-label='ITSV - Original Poster, Most Recent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/saaad_asiiif" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/saaad_asiiif/25/90603_2.png" class="avatar" title='saaad_asiiif - Frequent Poster' aria-label='saaad_asiiif - Frequent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>6</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>135</span>
+          </td>
+          <td>
+            November 13, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='25'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/i-want-to-add-button-in-list-view-of-all-doctype/156747' class='title raw-link raw-topic-link'>I want to add button in List view of all Doctype</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/bug' class='discourse-tag'>bug</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag'>customization</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/custom_script' class='discourse-tag'>custom_script</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/js' class='discourse-tag'>js</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/developer' class='discourse-tag'>developer</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/rajat1" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/rajat1/25/43923_2.png" class="avatar" title='rajat1 - Original Poster' aria-label='rajat1 - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Ishtiyak" class="latest">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/i/e19b73/25.png" class="avatar" title='Ishtiyak - Most Recent Poster' aria-label='Ishtiyak - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>48</span>
+          </td>
+          <td>
+            November 12, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='26'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/how-to-persist-and-display-custom-variable-values-inside-a-dialog-table-in-frappe/156739' class='title raw-link raw-topic-link'>How to persist and display custom variable values inside a Dialog Table in Frappe?</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/bug' class='discourse-tag'>bug</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag'>customization</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag'>erpnext</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag'>frappe</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/NgoAnhKhai" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/ngoanhkhai/25/86147_2.png" class="avatar" title='NgoAnhKhai - Original Poster' aria-label='NgoAnhKhai - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Yamen_Zakhour" class="latest">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/yamen_zakhour/25/91826_2.png" class="avatar" title='Yamen_Zakhour - Most Recent Poster' aria-label='Yamen_Zakhour - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>28</span>
+          </td>
+          <td>
+            November 12, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='27'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/how-to-track-employees-owings-indvidually-from-payroll-entry/156737' class='title raw-link raw-topic-link'>How to track employees owings indvidually from payroll entry</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/francis1" class="latest single">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/francis1/25/44205_2.png" class="avatar" title='francis1 - Original Poster, Most Recent Poster' aria-label='francis1 - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>19</span>
+          </td>
+          <td>
+            November 12, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='28'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/passing-url-parameters-to-pre-fill-erpnext-web-form-fields/156726' class='title raw-link raw-topic-link'>Passing URL Parameters to Pre-fill ERPNext Web Form Fields</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag'>customization</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/custom_script' class='discourse-tag'>custom_script</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/mahmodaldahol" class="latest single">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/m/3d9bf3/25.png" class="avatar" title='mahmodaldahol - Original Poster, Most Recent Poster' aria-label='mahmodaldahol - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>23</span>
+          </td>
+          <td>
+            November 12, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='29'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/how-to-change-website-title-meta-title-in-erpnext/151949' class='title raw-link raw-topic-link'>How to change Website Title (Meta Title) in ERPNext?</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag'>customization</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/custom_script' class='discourse-tag'>custom_script</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag'>erpnext</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/web' class='discourse-tag'>web</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/web-browser' class='discourse-tag'>web-browser</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Mohemd_Ali" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/m/ec9cab/25.png" class="avatar" title='Mohemd_Ali - Original Poster' aria-label='Mohemd_Ali - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/ahsantareen" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/ahsantareen/25/86743_2.png" class="avatar" title='ahsantareen - Frequent Poster' aria-label='ahsantareen - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Dwyersola" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/d/dbc845/25.png" class="avatar" title='Dwyersola - Frequent Poster' aria-label='Dwyersola - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Mikanedis" class="latest">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/m/9f8e36/25.png" class="avatar" title='Mikanedis - Most Recent Poster' aria-label='Mikanedis - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>8</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>179</span>
+          </td>
+          <td>
+            November 11, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='30'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://discuss.frappe.io/t/how-to-set-use-as-wildcard-for-current-user-login/156657' class='title raw-link raw-topic-link'>How to set &quot;use % as wildcard&quot; for current user login?</a>
+            </span>
+            <div class="link-bottom-line">
+                <div class="discourse-tags">
+                    <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag'>customization</a>
+                    ,&nbsp;
+                    <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag'>erpnext</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/thecodeunderdog" class="">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/thecodeunderdog/25/88585_2.png" class="avatar" title='thecodeunderdog - Original Poster, Accepted Answer' aria-label='thecodeunderdog - Original Poster, Accepted Answer'>
+              </a>
+              <a rel='nofollow' href="https://discuss.frappe.io/u/Abdeali" class="latest">
+                <img width="25" height="25" src="/user_avatar/discuss.frappe.io/abdeali/25/90545_2.png" class="avatar" title='Abdeali - Most Recent Poster' aria-label='Abdeali - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>2</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>43</span>
+          </td>
+          <td>
+            November 11, 2025
+          </td>
+        </tr>
+    </tbody>
+
+  </table>
+</div>
+
+  <div class="navigation" role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement'>
+      <span itemprop='name'><b><a href='/c/erpnext/customize-erpnext/57?page=1' rel='next' itemprop='url'>next page →</a></b></span>
+  </div>
+
+ <!-- include_crawler_content? -->
+
+
+
+  
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[Release Notes] ERPNext v12.9.0 and Frappe v12.6.0 - ERPNext - Frappe Forum</title>
+    <meta name="description" content="Here is the release note of the latest release of ERPNext and Frappe as per the monthly release cycle. 
+ERPNext v12.9.0 Release Note
+Enhancements
+
+Pick List enhancements #20962
+
+The purpose Delivery Against Sales Order h&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/release-notes-erpnext-v12-9-0-and-frappe-v12-6-0/61853" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[Release Notes] ERPNext v12.9.0 and Frappe v12.6.0&#39;" href="https://discuss.frappe.io/t/release-notes-erpnext-v12-9-0-and-frappe-v12-6-0/61853.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/release-notes-erpnext-v12-9-0-and-frappe-v12-6-0/61853" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/release-notes-erpnext-v12-9-0-and-frappe-v12-6-0/61853" />
+<meta property="og:title" content="[Release Notes] ERPNext v12.9.0 and Frappe v12.6.0" />
+<meta name="twitter:title" content="[Release Notes] ERPNext v12.9.0 and Frappe v12.6.0" />
+<meta property="og:description" content="Here is the release note of the latest release of ERPNext and Frappe as per the monthly release cycle.  ERPNext v12.9.0 Release Note Enhancements  Pick List enhancements #20962  The purpose Delivery Against Sales Order has been changed to Delivery and patch for existing records. If the purpose is Delivery then allow rows without Sales Order against them to be mapped to the Delivery Note. Update Current Stock button to update locations and quantity after Submit. Validations if Item Locations tabl..." />
+<meta name="twitter:description" content="Here is the release note of the latest release of ERPNext and Frappe as per the monthly release cycle.  ERPNext v12.9.0 Release Note Enhancements  Pick List enhancements #20962  The purpose Delivery Against Sales Order has been changed to Delivery and patch for existing records. If the purpose is Delivery then allow rows without Sales Order against them to be mapped to the Delivery Note. Update Current Stock button to update locations and quantity after Submit. Validations if Item Locations tabl..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:tag" content="release" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="frappe" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="15 ❤" />
+<meta property="article:published_time" content="2020-05-21T12:53:41+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"[Release Notes] ERPNext v12.9.0 and Frappe v12.6.0","mainEntity":{"@type":"Question","name":"[Release Notes] ERPNext v12.9.0 and Frappe v12.6.0","text":"Here is the release note of the latest release of ERPNext and Frappe as per the monthly release cycle.\n\n<a name=\"p-245640-erpnext-v1290-release-note-1\" class=\"anchor\" href=\"#p-245640-erpnext-v1290-release-note-1\"><\/a>ERPNext v12.9.0 Release Note\n\n<a name=\"p-245640-enhancements-2\" class=\"anchor\" href=\"#p-245640-enhancements-2\"><\/a>Enhancements\n\nPick List enhancements <a href=\"https://github.com/frappe/erpnext/pull/20962\">#20962<\/a>\n\nThe purpose Delivery Against Sales Order has been changed to Delivery and patch for existing records.\n\nIf the purpose is De&hellip;","upvoteCount":15,"answerCount":0,"datePublished":"2020-05-21T12:53:41.527Z","author":{"@type":"Person","name":"nabinhait","url":"https://discuss.frappe.io/u/nabinhait"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/release-notes-erpnext-v12-9-0-and-frappe-v12-6-0/61853">[Release Notes] ERPNext v12.9.0 and Frappe v12.6.0</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/release' class='discourse-tag' rel="tag">release</a>, 
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[Release Notes] ERPNext v12.9.0 and Frappe v12.6.0'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/release-notes-erpnext-v12-9-0-and-frappe-v12-6-0/61853'>
+      <meta itemprop='datePublished' content='2020-05-21T12:53:41Z'>
+        <meta itemprop='articleSection' content='ERPNext'>
+      <meta itemprop='keywords' content='release, erpnext, frappe'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nabinhait'><span itemprop='name'>nabinhait</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/release-notes-erpnext-v12-9-0-and-frappe-v12-6-0/61853">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2020-05-21T12:53:41Z' class='post-time'>
+                    May 21, 2020, 12:53pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-14T05:26:43Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Here is the release note of the latest release of ERPNext and Frappe as per the monthly release cycle.</p>
+<h2><a name="p-245640-erpnext-v1290-release-note-1" class="anchor" href="#p-245640-erpnext-v1290-release-note-1"></a>ERPNext v12.9.0 Release Note</h2>
+<h3><a name="p-245640-enhancements-2" class="anchor" href="#p-245640-enhancements-2"></a>Enhancements</h3>
+<ul>
+<li>Pick List enhancements <a href="https://github.com/frappe/erpnext/pull/20962">#20962</a>
+<ul>
+<li>The purpose <strong>Delivery Against Sales Order</strong> has been changed to <strong>Delivery</strong> and patch for existing records.</li>
+<li>If the purpose is Delivery then allow rows without Sales Order against them to be mapped to the Delivery Note.</li>
+<li><strong>Update Current Stock</strong> button to update locations and quantity after Submit.</li>
+<li>Validations if Item Locations table is empty (on creation of Delivery Note, Stock Entry).</li>
+<li>Company-wise fetching of locations and quantity.</li>
+</ul>
+</li>
+<li>Payment allocation on Payment Entry based on invoice payment terms. <a href="https://github.com/frappe/erpnext/pull/20945">#20945</a></li>
+<li>Allow Tax Withholding Category selection at invoice level <a href="https://github.com/frappe/erpnext/pull/20870">#20870</a></li>
+<li>Enhanced Employee Leave Balance report, added new fields New Allocation, Expired Leaves. <a href="https://github.com/frappe/erpnext/pull/21282">#21282</a></li>
+<li>Provision to set Default Item Manufacturer. <a href="https://github.com/frappe/erpnext/pull/21197">#21197</a></li>
+<li>Tax Amount in Credit Note print format should be shown in positive. <a href="https://github.com/frappe/erpnext/pull/21252">#21252</a></li>
+<li>On creation of return from employee advance, sets default voucher type as Bank Entry and default debit account as Cash. <a href="https://github.com/frappe/erpnext/pull/21411">#21411</a></li>
+<li>On saving a Contact linked with a Lead, update the contact info from Contact into the Lead. <a href="https://github.com/frappe/erpnext/pull/21469">#21469</a></li>
+<li>Warning on making payment against paid invoices. <a href="https://github.com/frappe/erpnext/pull/21501">#21501</a></li>
+<li>Enhanced Stock Balance report with color-coding. <a href="https://github.com/frappe/erpnext/pull/21516">#21516</a></li>
+<li>Added total row in sales analytics report <a href="https://github.com/frappe/erpnext/pull/21519">#21519</a></li>
+<li>Asset related accounts must be in company currency. <a href="https://github.com/frappe/erpnext/pull/21524">#21524</a></li>
+<li>Accounting Dimensions in Period Closing Voucher. <a href="https://github.com/frappe/erpnext/pull/21564">#21564</a></li>
+<li>Renamed LMS to Learning Management System. <a href="https://github.com/frappe/erpnext/pull/21645">#21645</a></li>
+<li>Allow half-day attendance only via leave application. <a href="https://github.com/frappe/erpnext/pull/21719">#21719</a></li>
+<li>In BOM, allowed Price List in other than company currency. <a href="https://github.com/frappe/erpnext/pull/21585">#21585</a></li>
+</ul>
+<h3><a name="p-245640-fixes-3" class="anchor" href="#p-245640-fixes-3"></a>Fixes:</h3>
+<ul>
+<li>Account Type validation for accounts selected in Asset Category. <a href="https://github.com/frappe/erpnext/pull/21102">#21102</a></li>
+<li>Warehouse unset if an item doesn’t have a default warehouse. <a href="https://github.com/frappe/erpnext/pull/21285">#21285</a></li>
+<li>Bin Requested Qty should be calculated for customer-provided items. <a href="https://github.com/frappe/erpnext/pull/21300">#21300</a></li>
+<li>On change of item in sales and purchase transactions, UOM should be reset based on the item’s default UOM. <a href="https://github.com/frappe/erpnext/pull/21254">#21254</a></li>
+<li>Target warehouse in Delivery Note and Sales Invoice should not be set based on user permission. Patch to fix affected records. <a href="https://github.com/frappe/erpnext/pull/21359">#21359</a></li>
+<li>Budget validation against an Accounting Dimension was missing. <a href="https://github.com/frappe/erpnext/pull/21268">#21268</a></li>
+<li>On change of qty in Stock Entry, the fields in base currency were not set for non-serialized items. <a href="https://github.com/frappe/erpnext/pull/21389">#21389</a></li>
+<li>Payment request not able to make against fees <a href="https://github.com/frappe/erpnext/pull/21486">#21486</a></li>
+<li>Cost Center renaming is allowed only from Cost Center form <a href="https://github.com/frappe/erpnext/pull/21503">#21503</a></li>
+<li>Accounts Payable report showing the advance amount of other company <a href="https://github.com/frappe/erpnext/pull/21548">#21548</a></li>
+<li>Heatmap was not working for customer and supplier <a href="https://github.com/frappe/erpnext/pull/21578">#21578</a></li>
+<li>Item tax template set in the Item master is not fetched into the sales invoice and taxes are not shown in the offline pos. <a href="https://github.com/frappe/erpnext/pull/21714">#21714</a></li>
+<li>Validate duplicate creation of expiry ledger entry for carry forward allocation and patch to remove duplicate ledgers. <a href="https://github.com/frappe/erpnext/pull/21505">#21505</a></li>
+<li>Dimensions were not getting added for some GL Entries and were missing in some recently added transactions. <a href="https://github.com/frappe/erpnext/pull/21689">#21689</a></li>
+<li>In Repack entry, set rate for finished goods based on the cost of raw materials. <a href="https://github.com/frappe/erpnext/pull/21736">#21736</a></li>
+<li>Removed Guest access from Lead. <a href="https://github.com/frappe/erpnext/pull/21692">#21692</a></li>
+<li>Standard and Custom queries did not show search fields for Link fields. <a href="https://github.com/frappe/erpnext/pull/21685">#21685</a></li>
+</ul>
+<hr>
+<h2><a name="p-245640-version-1260-release-notes-4" class="anchor" href="#p-245640-version-1260-release-notes-4"></a>Version 12.6.0 Release Notes</h2>
+<h3><a name="p-245640-bug-fixes-5" class="anchor" href="#p-245640-bug-fixes-5"></a>Bug Fixes</h3>
+<ul>
+<li>Fixed Calculation of dates and values for Dashboard Charts (<a href="https://github.com/frappe/frappe/pull/9968">#9968</a>)</li>
+<li>Fixed and enhanced email thread system (<a href="https://github.com/frappe/frappe/pull/10261">#10261</a>)</li>
+<li>Fixed invalid date parsing issue (<a href="https://github.com/frappe/frappe/pull/10288">#10288</a>)</li>
+<li>Data Import Beta will now properly handle datetime imports (<a href="https://github.com/frappe/frappe/pull/10077">#10077</a>)</li>
+<li>Fixed Auto Repeat schedule date calculation for Daily and Weekly frequencies (<a href="https://github.com/frappe/frappe/pull/10237">#10237</a>)</li>
+<li>Fixed an issue of assignments getting reopened on close (<a href="https://github.com/frappe/frappe/pull/10354">#10354</a>)</li>
+<li>Fixed permission issue while creating new private files (<a href="https://github.com/frappe/frappe/pull/10115">#10115</a>)</li>
+<li>Fixed an issue where Print formats were not retaining customizations (<a href="https://github.com/frappe/frappe/pull/10060">#10060</a>)</li>
+</ul>
+<h3><a name="p-245640-uiux-enhancements-6" class="anchor" href="#p-245640-uiux-enhancements-6"></a>UI/UX Enhancements</h3>
+<ul>
+<li>Introduced checkbox option to text editor’s toolbar (<a href="https://github.com/frappe/frappe/pull/9979">#9979</a>)</li>
+<li>Sidebar for Web Form items in mobile view (<a href="https://github.com/frappe/frappe/pull/9942">#9942</a>)</li>
+<li>Arrow on select select is now clickable (<a href="https://github.com/frappe/frappe/pull/10263">#10263</a>)</li>
+<li>Made website footer stick to bottom (<a href="https://github.com/frappe/frappe/pull/9690">#9690</a>)</li>
+<li>Fixed the issue of Multi Select List field being rendered multiple times in dialog (<a href="https://github.com/frappe/frappe/pull/10093">#10093</a>)</li>
+</ul>
+<h3><a name="p-245640-feature-7" class="anchor" href="#p-245640-feature-7"></a>Feature</h3>
+<ul>
+<li>Enabled 2FA for LDAP users (<a href="https://github.com/frappe/frappe/pull/10002">#10002</a>)</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="15" />
+              <span class='post-likes'>15 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/new-sales-invoice-import-using-data-import-beta-is-not-working/59132/5">New Sales Invoice Import using Data Import Beta is not working</a>
+                        <meta itemprop='position' content='48'>
+                      </div>
+                </div>
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

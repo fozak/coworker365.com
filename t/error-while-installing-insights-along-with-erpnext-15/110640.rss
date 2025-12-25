@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Error while Installing Insights along with ERPNext 15</title>
+    <link>https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640</link>
+    <description>I was installing Insights develop branch to ERPNext version 14.4. The installation shows a success and on the search bar in ERPNext i can get Insights. But when I try to run it It says the page isn&#39;t not found.
+When I install it on v15 develop version of ERPnext Insight works but not in v14 and on the docs it says Insights is compatible with v15. Any tips on how to resolve this issue?</description>
+    
+    <lastBuildDate>Wed, 24 Dec 2025 15:36:17 +0000</lastBuildDate>
+    <category>Insights</category>
+    <atom:link href="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Error while Installing Insights along with ERPNext 15</title>
+        <dc:creator><![CDATA[YogeshJoshi]]></dc:creator>
+        <description><![CDATA[
+            <p>I got the same issue but below command solved it.</p>
+<p>bench get-app insights --branch main</p>
+          <p><a href="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/11</link>
+        <pubDate>Wed, 24 Dec 2025 15:36:17 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-110640-11</guid>
+        <source url="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640.rss">Error while Installing Insights along with ERPNext 15</source>
+      </item>
+      <item>
+        <title>Error while Installing Insights along with ERPNext 15</title>
+        <dc:creator><![CDATA[Taher_Khalil]]></dc:creator>
+        <description><![CDATA[
+            <p>i get the following error when installing it on v15</p>
+<p>Installing insights…<br>
+File “/usr/lib/python3.10/runpy.py”, line 196, in _run_module_as_main<br>
+return _run_code(code, main_globals, None,<br>
+File “/usr/lib/python3.10/runpy.py”, line 86, in _run_code<br>
+exec(code, run_globals)<br>
+File “/home/global/frappe-bench/apps/frappe/frappe/utils/bench_helper.py”, line 114, in <br>
+main()<br>
+File “/home/global/frappe-bench/apps/frappe/frappe/utils/bench_helper.py”, line 20, in main<br>
+click.Group(commands=commands)(prog_name=“bench”)<br>
+File “/home/global/frappe-bench/env/lib/python3.10/site-packages/click/core.py”, line 1157, in <strong>call</strong><br>
+return self.main(*args, **kwargs)<br>
+File “/home/global/frappe-bench/env/lib/python3.10/site-packages/click/core.py”, line 1078, in main<br>
+rv = self.invoke(ctx)<br>
+File “/home/global/frappe-bench/env/lib/python3.10/site-packages/click/core.py”, line 1688, in invoke<br>
+return _process_result(sub_ctx.command.invoke(sub_ctx))<br>
+File “/home/global/frappe-bench/env/lib/python3.10/site-packages/click/core.py”, line 1688, in invoke<br>
+return _process_result(sub_ctx.command.invoke(sub_ctx))<br>
+File “/home/global/frappe-bench/env/lib/python3.10/site-packages/click/core.py”, line 1434, in invoke<br>
+return ctx.invoke(self.callback, **ctx.params)<br>
+File “/home/global/frappe-bench/env/lib/python3.10/site-packages/click/core.py”, line 783, in invoke<br>
+return __callback(*args, **kwargs)<br>
+File “/home/global/frappe-bench/env/lib/python3.10/site-packages/click/decorators.py”, line 33, in new_func<br>
+return f(get_current_context(), *args, **kwargs)<br>
+File “/home/global/frappe-bench/apps/frappe/frappe/commands/<strong>init</strong>.py”, line 29, in _func<br>
+ret = f(frappe._dict(ctx.obj), *args, **kwargs)<br>
+File “/home/global/frappe-bench/apps/frappe/frappe/commands/site.py”, line 446, in install_app<br>
+_install_app(app, verbose=context.verbose, force=force)<br>
+File “/home/global/frappe-bench/apps/frappe/frappe/installer.py”, line 309, in install_app<br>
+frappe.get_attr(after_install)()<br>
+File “/home/global/frappe-bench/apps/insights/insights/setup/<strong>init</strong>.py”, line 12, in after_install<br>
+sync_site_tables()<br>
+File “/home/global/frappe-bench/apps/insights/insights/setup/<strong>init</strong>.py”, line 19, in sync_site_tables<br>
+if not frappe.db.exists(“Insights Data Source”, “Site DB”):<br>
+File “/home/global/frappe-bench/apps/frappe/frappe/database/database.py”, line 1120, in exists<br>
+return self.get_value(dt, dn, ignore=True, cache=cache, order_by=None)<br>
+File “/home/global/frappe-bench/apps/frappe/frappe/database/database.py”, line 517, in get_value<br>
+result = self.get_values(<br>
+File “/home/global/frappe-bench/apps/frappe/frappe/database/database.py”, line 618, in get_values<br>
+out = self._get_values_from_table(<br>
+File “/home/global/frappe-bench/apps/frappe/frappe/database/database.py”, line 888, in _get_values_from_table<br>
+return query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)<br>
+File “/home/global/frappe-bench/apps/frappe/frappe/query_builder/utils.py”, line 87, in execute_query<br>
+result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep<br>
+File “/home/global/frappe-bench/apps/frappe/frappe/database/database.py”, line 262, in sql<br>
+traceback.print_stack()<br>
+Error in query:<br>
+(‘SELECT <code>name</code> FROM <code>tabInsights Data Source</code> WHERE <code>name</code>=%(param1)s LIMIT 1’, {‘param1’: ‘Site DB’})<br>
+An error occurred while installing insights: Module import failed for Insights Data Source, the DocType you’re trying to open might be deleted.<br> Error: No module named ‘frappe.core.doctype.insights_data_source’<br>
+Traceback with variables (most recent call last):<br>
+File “apps/frappe/frappe/commands/site.py”, line 446, in install_app<br>
+_install_app(app, verbose=context.verbose, force=force)<br>
+context = {‘sites’: [‘<a href="http://work.bobyangold.com" rel="noopener nofollow ugc">work.bobyangold.com</a>’], ‘force’: False, ‘verbose’: False, ‘profile’: False}<br>
+apps = (‘insights’,)<br>
+force = False<br>
+_install_app = &lt;function install_app at 0x7fb8efed5c60&gt;<br>
+filelock = &lt;function filelock at 0x7fb8efed5900&gt;<br>
+exit_code = 0<br>
+site = ‘<a href="http://work.bobyangold.com" rel="noopener nofollow ugc">work.bobyangold.com</a>’<br>
+app = ‘insights’<br>
+err = ImportError(“Module import failed for Insights Data Source, the DocType you’re trying to open might be deleted.<br> Error: No module named ‘frappe.core.doctype.insights_data_source’”)<br>
+File “apps/frappe/frappe/installer.py”, line 309, in install_app<br>
+frappe.get_attr(after_install)()<br>
+name = ‘insights’<br>
+verbose = False<br>
+set_as_patched = True<br>
+force = False<br>
+sync_jobs = &lt;function sync_jobs at 0x7fb8ef7513f0&gt;<br>
+sync_for = &lt;function sync_for at 0x7fb8ef751ea0&gt;<br>
+sync_customizations = &lt;function sync_customizations at 0x7fb8f00688b0&gt;<br>
+sync_fixtures = &lt;function sync_fixtures at 0x7fb8ef7520e0&gt;<br>
+app_hooks = {‘after_install’: [‘insights.setup.after_install’], ‘app_color’: [‘grey’], ‘app_description’: [‘Powerful Reporting Tool for Frappe Apps’], ‘app_email’: [‘hello@frappe.io’], ‘app_icon’: [‘octicon octicon-file-directory’], ‘app_license’: [‘GNU GPLv3’], ‘app_name’: [‘insights’], ‘app_publisher’: [‘Frappe Technologies Pvt. Ltd.’], ‘app_title’: [‘Frappe Insights’], ‘app_version’: [‘2.1.2’], ‘before_tests’: [‘insights.tests.utils.before_tests’], ‘fixtures’: [‘Insights Data Source’], ‘has_permission’: {‘Insights Data Source’: [‘insights.overrides.has_permission’], ‘Insights Table’: [‘insights.overrides.has_permission’], ‘Insights Query’: [‘insights.overrides.has_permission’], ‘Insights Dashboard’: [‘insights.overrides.has_permission’]}, ‘scheduler_events’: {‘all’: [‘insights.insights.doctype.insights_alert.insights_alert.send_alerts’]}, ‘setup_wizard_requires’: [‘assets/insights/js/setup_wizard.js’], ‘setup_wizard_stages’: [‘insights.setup.setup_wizard.get_setup_stages’], 'website_route_rules…<br>
+installed_apps = [‘frappe’, ‘erpnext’, ‘bg_items’, ‘location_management’, ‘stock_records’, ‘custom_auth’, ‘bg_general_customizations’, ‘bulk_barcode’, ‘hrms’]<br>
+after_install = ‘insights.setup.after_install’<br>
+File “apps/insights/insights/setup/<strong>init</strong>.py”, line 12, in after_install<br>
+sync_site_tables()<br>
+File “apps/insights/insights/setup/<strong>init</strong>.py”, line 20, in sync_site_tables<br>
+create_site_db_data_source()<br>
+File “apps/insights/insights/setup/<strong>init</strong>.py”, line 32, in create_site_db_data_source<br>
+frappe.get_doc(site_db).insert()<br>
+data_source_fixture_path = ‘apps/insights/insights/fixtures/insights_data_source.json’<br>
+f = &lt;_io.TextIOWrapper name=‘apps/insights/insights/fixtures/insights_data_source.json’ mode=‘r’ encoding=‘UTF-8’&gt;<br>
+site_db = {‘doctype’: ‘Insights Data Source’, ‘is_site_db’: 1, ‘name’: ‘Site DB’, ‘title’: ‘Site DB’, ‘status’: ‘Active’, ‘database_type’: ‘MariaDB’, ‘modified’: ‘2022-01-01 00:01:00.000000’, ‘creation’: ‘2022-01-01 00:01:00.000000’}<br>
+File “apps/frappe/frappe/<strong>init</strong>.py”, line 1276, in get_doc<br>
+doc = frappe.model.document.get_doc(*args, **kwargs)<br>
+args = ({‘doctype’: ‘Insights Data Source’, ‘is_site_db’: 1, ‘name’: ‘Site DB’, ‘title’: ‘Site DB’, ‘status’: ‘Active’, ‘database_type’: ‘MariaDB’, ‘modified’: ‘2022-01-01 00:01:00.000000’, ‘creation’: ‘2022-01-01 00:01:00.000000’},)<br>
+kwargs = {}<br>
+frappe = &lt;module ‘frappe’ from ‘apps/frappe/frappe/<strong>init</strong>.py’&gt;<br>
+File “apps/frappe/frappe/model/document.py”, line 79, in get_doc<br>
+controller = get_controller(doctype)<br>
+args = ({‘doctype’: ‘Insights Data Source’, ‘is_site_db’: 1, ‘name’: ‘Site DB’, ‘title’: ‘Site DB’, ‘status’: ‘Active’, ‘database_type’: ‘MariaDB’, ‘modified’: ‘2022-01-01 00:01:00.000000’, ‘creation’: ‘2022-01-01 00:01:00.000000’},)<br>
+kwargs = {‘doctype’: ‘Insights Data Source’, ‘is_site_db’: 1, ‘name’: ‘Site DB’, ‘title’: ‘Site DB’, ‘status’: ‘Active’, ‘database_type’: ‘MariaDB’, ‘modified’: ‘2022-01-01 00:01:00.000000’, ‘creation’: ‘2022-01-01 00:01:00.000000’}<br>
+doctype = ‘Insights Data Source’<br>
+File “apps/frappe/frappe/model/base_document.py”, line 70, in get_controller<br>
+site_controllers[doctype] = import_controller(doctype)<br>
+doctype = ‘Insights Data Source’<br>
+site_controllers = {‘Module Def’: &lt;class ‘frappe.core.doctype.module_def.module_def.ModuleDef’&gt;, ‘DocField’: &lt;class ‘frappe.core.doctype.docfield.docfield.DocField’&gt;, ‘DocPerm’: &lt;class ‘frappe.core.doctype.docperm.docperm.DocPerm’&gt;, ‘DocType Link’: &lt;class ‘frappe.core.doctype.doctype_link.doctype_link.DocTypeLink’&gt;, ‘System Settings’: &lt;class ‘frappe.core.doctype.system_settings.system_settings.SystemSettings’&gt;, ‘Notification Settings’: &lt;class ‘frappe.desk.doctype.notification_settings.notification_settings.NotificationSettings’&gt;, ‘DefaultValue’: &lt;class ‘frappe.core.doctype.defaultvalue.defaultvalue.DefaultValue’&gt;, ‘Payment Reconciliation’: &lt;class ‘erpnext.accounts.doctype.payment_reconciliation.payment_reconciliation.PaymentReconciliation’&gt;, ‘Customize Form’: &lt;class ‘frappe.custom.doctype.customize_form.customize_form.CustomizeForm’&gt;, ‘DocType Action’: &lt;class ‘frappe.core.doctype.doctype_action.doctype_action.DocTypeAction’&gt;, ‘DocType State’: &lt;class 'frappe.core.doctype.doctype_state.doctype_state.DocTyp…<br>
+File “apps/frappe/frappe/model/base_document.py”, line 95, in import_controller<br>
+module = load_doctype_module(doctype, module_name)<br>
+doctype = ‘Insights Data Source’<br>
+Document = &lt;class ‘frappe.model.document.Document’&gt;<br>
+NestedSet = &lt;class ‘frappe.utils.nestedset.NestedSet’&gt;<br>
+module_name = ‘Core’<br>
+doctype_info = None<br>
+module_path = None<br>
+class_overrides = {‘Address’: [‘erpnext.accounts.custom.address.ERPNextAddress’], ‘Employee’: [‘hrms.overrides.employee_master.EmployeeMaster’], ‘Timesheet’: [‘hrms.overrides.employee_timesheet.EmployeeTimesheet’], ‘Payment Entry’: [‘hrms.overrides.employee_payment_entry.EmployeePaymentEntry’], ‘Project’: [‘hrms.overrides.employee_project.EmployeeProject’]}<br>
+File “apps/frappe/frappe/modules/utils.py”, line 241, in load_doctype_module<br>
+raise ImportError(msg) from e<br>
+doctype = ‘Insights Data Source’<br>
+module = ‘Core’<br>
+prefix = ‘’<br>
+suffix = ‘’<br>
+app = ‘frappe’<br>
+key = ********<br>
+module_name = ‘frappe.core.doctype.insights_data_source.insights_data_source’<br>
+msg = “Module import failed for Insights Data Source, the DocType you’re trying to open might be deleted.<br> Error: No module named ‘frappe.core.doctype.insights_data_source’”<br>
+builtins.ImportError: Module import failed for Insights Data Source, the DocType you’re trying to open might be deleted.<br> Error: No module named ‘frappe.core.doctype.insights_data_source’</p>
+<p>is it not compatible with erpnext and frappe v15 ?</p>
+          <p><a href="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/10</link>
+        <pubDate>Mon, 04 Mar 2024 21:43:55 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-110640-10</guid>
+        <source url="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640.rss">Error while Installing Insights along with ERPNext 15</source>
+      </item>
+      <item>
+        <title>Error while Installing Insights along with ERPNext 15</title>
+        <dc:creator><![CDATA[girumtibebu]]></dc:creator>
+        <description><![CDATA[
+            <p>updated node to v18.18.0 but still getting this error:</p>
+<p>Running build command for insights<br>
+$ cd frontend &amp;&amp; yarn build<br>
+$ vite build --base=/assets/insights/frontend/ &amp;&amp; yarn copy-html-entry<br>
+vite: invalid option – ‘-’<br>
+vite: invalid option – ‘b’<br>
+vite: invalid option – ‘a’<br>
+Splitting build<br>
+Cannot open file build<br>
+Aborted (core dumped)<br>
+error Command failed with exit code 134.<br>
+info Visit <a href="https://yarnpkg.com/en/docs/cli/run" class="inline-onebox" rel="noopener nofollow ugc">yarn run | Yarn</a> for documentation about this command.<br>
+error Command failed with exit code 134.<br>
+info Visit <a href="https://yarnpkg.com/en/docs/cli/run" class="inline-onebox" rel="noopener nofollow ugc">yarn run | Yarn</a> for documentation about this command.<br>
+Error: Command failed: yarn build<br>
+at checkExecSyncError (node:child_process:890:11)<br>
+at execSync (node:child_process:962:15)<br>
+at run_build_command_for_apps (/home/emc/frappe-bench/apps/frappe/esbuild/esbuild.js:433:5)<br>
+at /home/emc/frappe-bench/apps/frappe/esbuild/esbuild.js:88:35<br>
+at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {<br>
+status: 134,<br>
+signal: null,<br>
+output: [ null, null, null ],<br>
+pid: 1473156,<br>
+stdout: null,<br>
+stderr: null<br>
+}<br>
+clean: postcss.plugin was deprecated. Migration guide:<br>
+<a href="https://evilmartians.com/chronicles/postcss-8-plugin-migration" class="inline-onebox" rel="noopener nofollow ugc">PostCSS 8.0: Plugin migration guide—Martian Chronicles, Evil Martians’ team blog</a><br>
+Done in 3.91s.</p>
+          <p><a href="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/9</link>
+        <pubDate>Tue, 03 Oct 2023 12:19:22 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-110640-9</guid>
+        <source url="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640.rss">Error while Installing Insights along with ERPNext 15</source>
+      </item>
+      <item>
+        <title>Error while Installing Insights along with ERPNext 15</title>
+        <dc:creator><![CDATA[Suresh_Thakor]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://discuss.frappe.io/u/girumtibebu">@girumtibebu</a>. yes, it works in V14.</p>
+<p>Run the below command to resolve node v18 dependency.</p>
+<pre><code class="lang-auto">sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+</code></pre>
+          <p><a href="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/8</link>
+        <pubDate>Mon, 02 Oct 2023 17:52:06 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-110640-8</guid>
+        <source url="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640.rss">Error while Installing Insights along with ERPNext 15</source>
+      </item>
+      <item>
+        <title>Error while Installing Insights along with ERPNext 15</title>
+        <dc:creator><![CDATA[girumtibebu]]></dc:creator>
+        <description><![CDATA[
+            <p>Yes whien i build insights specifically using ‘bench build --app insights --force’ … i get the error below</p>
+<p>Running build command for insights<br>
+$ cd frontend &amp;&amp; yarn build<br>
+$ vite build --base=/assets/insights/frontend/ &amp;&amp; yarn copy-html-entry<br>
+vite: invalid option – ‘-’<br>
+vite: invalid option – ‘b’<br>
+vite: invalid option – ‘a’<br>
+Splitting build<br>
+Cannot open file build<br>
+Aborted (core dumped)<br>
+error Command failed with exit code 134.<br>
+info Visit <a href="https://yarnpkg.com/en/docs/cli/run" class="inline-onebox" rel="noopener nofollow ugc">yarn run | Yarn</a> for documentation about this command.<br>
+error Command failed with exit code 134.<br>
+info Visit <a href="https://yarnpkg.com/en/docs/cli/run" class="inline-onebox" rel="noopener nofollow ugc">yarn run | Yarn</a> for documentation about this command.<br>
+Error: Command failed: yarn build<br>
+at checkExecSyncError (node:child_process:828:11)<br>
+at execSync (node:child_process:899:15)<br>
+at run_build_command_for_apps (/home/emc/frappe-bench/apps/frappe/esbuild/esbuild.js:433:5)<br>
+at /home/emc/frappe-bench/apps/frappe/esbuild/esbuild.js:88:35<br>
+at processTicksAndRejections (node:internal/process/task_queues:96:5) {<br>
+status: 134,<br>
+signal: null,<br>
+output: [ null, null, null ],<br>
+pid: 1394023,<br>
+stdout: null,<br>
+stderr: null<br>
+}<br>
+Done in 4.75s</p>
+<p>Also if i update the node to v18 will it work with erpnext v14?</p>
+          <p><a href="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/7</link>
+        <pubDate>Mon, 02 Oct 2023 14:08:46 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-110640-7</guid>
+        <source url="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640.rss">Error while Installing Insights along with ERPNext 15</source>
+      </item>
+      <item>
+        <title>Error while Installing Insights along with ERPNext 15</title>
+        <dc:creator><![CDATA[mrPauwHaan]]></dc:creator>
+        <description><![CDATA[
+            <p>I think node needs to be v18, but you should see errors about that during the installation then.</p>
+          <p><a href="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/6</link>
+        <pubDate>Mon, 02 Oct 2023 13:51:04 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-110640-6</guid>
+        <source url="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640.rss">Error while Installing Insights along with ERPNext 15</source>
+      </item>
+      <item>
+        <title>Error while Installing Insights along with ERPNext 15</title>
+        <dc:creator><![CDATA[girumtibebu]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://discuss.frappe.io/u/mrpauwhaan">@mrPauwHaan</a> I did build and migrate but no luck for me. I think the issue maybe from the version of requirments like node. my current installation is node v16.<br>
+Can you share me the version of node?</p>
+          <p><a href="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/5</link>
+        <pubDate>Mon, 02 Oct 2023 12:33:17 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-110640-5</guid>
+        <source url="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640.rss">Error while Installing Insights along with ERPNext 15</source>
+      </item>
+      <item>
+        <title>Error while Installing Insights along with ERPNext 15</title>
+        <dc:creator><![CDATA[mrPauwHaan]]></dc:creator>
+        <description><![CDATA[
+            <p>Running “bench migrate” fixed this problem for me.</p>
+          <p><a href="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/4</link>
+        <pubDate>Mon, 02 Oct 2023 12:00:29 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-110640-4</guid>
+        <source url="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640.rss">Error while Installing Insights along with ERPNext 15</source>
+      </item>
+      <item>
+        <title>Error while Installing Insights along with ERPNext 15</title>
+        <dc:creator><![CDATA[girumtibebu]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi <a class="mention" href="https://discuss.frappe.io/u/fhenry">@FHenry</a>,<br>
+I currently have that setup. But using insights inside ERPNext removes the hustle of user access contol since we frequently change it. Just curios if Insight isn’t compatible with v14.<br>
+Also Hoping ERPNext v15 will be released in couple of days should i wait for that?</p>
+          <p><a href="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/3</link>
+        <pubDate>Mon, 02 Oct 2023 07:26:53 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-110640-3</guid>
+        <source url="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640.rss">Error while Installing Insights along with ERPNext 15</source>
+      </item>
+      <item>
+        <title>Error while Installing Insights along with ERPNext 15</title>
+        <dc:creator><![CDATA[FHenry]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi<br>
+Install two bench, one with frappev14 and ERPNExt, and another with frappe v15 and insight</p>
+          <p><a href="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/2</link>
+        <pubDate>Sat, 30 Sep 2023 10:03:28 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-110640-2</guid>
+        <source url="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640.rss">Error while Installing Insights along with ERPNext 15</source>
+      </item>
+      <item>
+        <title>Error while Installing Insights along with ERPNext 15</title>
+        <dc:creator><![CDATA[girumtibebu]]></dc:creator>
+        <description><![CDATA[
+            <p>I was installing Insights develop branch to ERPNext version 14.4. The installation shows a success and on the search bar in ERPNext i can get Insights. But when I try to run it It says the page isn’t not found.<br>
+When I install it on v15 develop version of ERPnext Insight works but not in v14 and on the docs it says Insights is compatible with v15. Any tips on how to resolve this issue?</p>
+          <p><a href="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640/1</link>
+        <pubDate>Fri, 29 Sep 2023 19:46:23 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-110640-1</guid>
+        <source url="https://discuss.frappe.io/t/error-while-installing-insights-along-with-erpnext-15/110640.rss">Error while Installing Insights along with ERPNext 15</source>
+      </item>
+  </channel>
+</rss>

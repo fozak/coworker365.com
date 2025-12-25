@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:discourse="http://www.discourse.org/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Setup - Frappe Forum</title>
+    <link>https://discuss.frappe.io/c/bench/setup/33</link>
+    <description>Topics in the &#39;Setup&#39; category </description>
+    
+      <lastBuildDate>Wed, 24 Dec 2025 09:31:31 +0000</lastBuildDate>
+      <atom:link href="https://discuss.frappe.io/c/bench/setup/33.rss" rel="self" type="application/rss+xml" />
+        <item>
+          <title>How to install the Frappe Lending app locally (no README available)</title>
+          <dc:creator><![CDATA[patelpkm]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>The Frappe Lending GitHub repository currently does not include a README file, which makes it unclear how to install and set up the app locally.<br>
+This post explains the <strong>step-by-step process to install the Frappe Lending app on a local Frappe/Bench setup</strong>.</p>
+            <p><small>3 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/how-to-install-the-frappe-lending-app-locally-no-readme-available/158291">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/how-to-install-the-frappe-lending-app-locally-no-readme-available/158291</link>
+          <pubDate>Wed, 24 Dec 2025 09:31:31 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158291</guid>
+          <source url="https://discuss.frappe.io/t/how-to-install-the-frappe-lending-app-locally-no-readme-available/158291.rss">How to install the Frappe Lending app locally (no README available)</source>
+        </item>
+        <item>
+          <title>ERPNext Production v16.beta ova (Virtual Machine Setup) download link</title>
+          <dc:creator><![CDATA[GGR]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>**ERPNext<br>
+HRMS<br>
+POSAWESOME</p>
+<p>Here is download link for ERPNext Production V16 Beta**</p>
+<p><a href="https://drive.google.com/file/d/1B9wBV1IuFuc-IXfsV1wVcnWmTdOjft9y/view" rel="noopener nofollow ugc">ERPNext V16beta ova</a></p>
+<p>Import in <strong><a href="https://download.virtualbox.org/virtualbox/7.0.12/VirtualBox-7.0.12-159484-Win.exe" rel="noopener nofollow ugc">Open VirtualBox 7.0</a></strong> and enjoy. <img src="https://discuss.frappe.io/images/emoji/twitter/blush.png?v=14" title=":blush:" class="emoji" alt=":blush:" loading="lazy" width="20" height="20"><br>
+Ubuntu Server: **22.04.2 LTS<br>
+**</p>
+<p>For installation of ERPnext is<br>
+username = <strong>Administrator</strong><br>
+password = <strong>admin</strong></p>
+<p>For VirtualBox<br>
+username = <strong>frappe</strong><br>
+password = <strong>frappe</strong></p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/erpnext-production-v16-beta-ova-virtual-machine-setup-download-link/157388">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/erpnext-production-v16-beta-ova-virtual-machine-setup-download-link/157388</link>
+          <pubDate>Thu, 27 Nov 2025 05:05:45 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-157388</guid>
+          <source url="https://discuss.frappe.io/t/erpnext-production-v16-beta-ova-virtual-machine-setup-download-link/157388.rss">ERPNext Production v16.beta ova (Virtual Machine Setup) download link</source>
+        </item>
+        <item>
+          <title>My docker installation lacking the ERPNext module</title>
+          <dc:creator><![CDATA[marcchicoye]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>I installed ERPNext on Docker locally on my laptop 1 month ago. When I run Docker, the ERPNext instance has, as a module installed, Frappe and ERPNext automatically. This week I took a server in Digital Ocean and set up the ERPNext Docker. But this time, when I run Docker, the only module installed is Frappe. How can I install another module like ERPNext?</p>
+            <p><small>4 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/my-docker-installation-lacking-the-erpnext-module/157058">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/my-docker-installation-lacking-the-erpnext-module/157058</link>
+          <pubDate>Thu, 20 Nov 2025 04:39:16 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-157058</guid>
+          <source url="https://discuss.frappe.io/t/my-docker-installation-lacking-the-erpnext-module/157058.rss">My docker installation lacking the ERPNext module</source>
+        </item>
+        <item>
+          <title>ERPnext v15 Update fails with &quot;No module named &#39;_sqlite3&#39;&quot;</title>
+          <dc:creator><![CDATA[smw]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>Dear all,</p>
+<p>for the first time in years the update a minor update of our ERPnext v15 installation failed. Update runs smoothly at first like always but then crashes when starting to patch sites:</p>
+<p><code>...</code><br>
+<code>Patching sites…</code><br>
+<code>Traceback (most recent call last):</code><br>
+<code>File “/usr/local/lib/python3.10/runpy.py”, line 196, in _run_module_as_main</code><br>
+<code>return _run_code(code, main_globals, None,</code><br>
+<code>File “/usr/local/lib/python3.10/runpy.py”, line 86, in _run_code</code><br>
+<code>exec(code, run_globals)</code><br>
+<code>File “/home/erp/frappe-bench/apps/frappe/frappe/utils/bench_helper.py”, line 114, in </code><br>
+<code>main()</code><br>
+<code>File “/home/erp/frappe-bench/apps/frappe/frappe/utils/bench_helper.py”, line 20, in main</code><br>
+<code>click.Group(commands=commands)(prog_name=“bench”)</code><br>
+<code>File “/home/erp/frappe-bench/env/lib/python3.10/site-packages/click/core.py”, line 1442, in </code><strong><code>call</code></strong><br>
+<code>return self.main(*args, **kwargs)</code><br>
+<code>File “/home/erp/frappe-bench/env/lib/python3.10/site-packages/click/core.py”, line 1363, in main</code><br>
+<code>rv = self.invoke(ctx)</code><br>
+<code>File “/home/erp/frappe-bench/env/lib/python3.10/site-packages/click/core.py”, line 1830, in invoke</code><br>
+<code>return _process_result(sub_ctx.command.invoke(sub_ctx))</code><br>
+<code>File “/home/erp/frappe-bench/env/lib/python3.10/site-packages/click/core.py”, line 1830, in invoke</code><br>
+<code>return _process_result(sub_ctx.command.invoke(sub_ctx))</code><br>
+<code>File “/home/erp/frappe-bench/env/lib/python3.10/site-packages/click/core.py”, line 1226, in invoke</code><br>
+<code>return ctx.invoke(self.callback, **ctx.params)</code><br>
+<code>File “/home/erp/frappe-bench/env/lib/python3.10/site-packages/click/core.py”, line 794, in invoke</code><br>
+<code>return callback(*args, **kwargs)</code><br>
+<code>File “/home/erp/frappe-bench/env/lib/python3.10/site-packages/click/decorators.py”, line 34, in new_func</code><br>
+<code>return f(get_current_context(), *args, **kwargs)</code><br>
+<code>File “/home/erp/frappe-bench/apps/frappe/frappe/commands/</code><strong><code>init</code></strong><code>.py”, line 29, in _func</code><br>
+<code>ret = f(frappe._dict(ctx.obj), *args, **kwargs)</code><br>
+<code>File “/home/erp/frappe-bench/apps/frappe/frappe/commands/site.py”, line 678, in migrate</code><br>
+<code>from frappe.migrate import SiteMigration</code><br>
+<code>File “/home/erp/frappe-bench/apps/frappe/frappe/migrate.py”, line 24, in </code><br>
+<code>from frappe.search.website_search import build_index_for_all_routes</code><br>
+<code>File “/home/erp/frappe-bench/apps/frappe/frappe/search/</code><strong><code>init</code></strong><code>.py”, line 6, in </code><br>
+<code>from frappe.search.sqlite_search import SQLiteSearch</code><br>
+<code>File “/home/erp/frappe-bench/apps/frappe/frappe/search/sqlite_search.py”, line 8, in </code><br>
+<code>import sqlite3</code><br>
+<code>File “/usr/local/lib/python3.10/sqlite3/</code><strong><code>init</code></strong><code>.py”, line 23, in </code><br>
+<code>from sqlite3.dbapi2 import *</code><br>
+<code>File “/usr/local/lib/python3.10/sqlite3/dbapi2.py”, line 27, in </code><br>
+<code>from _sqlite3 import *</code><br>
+<code>ModuleNotFoundError: No module named ‘_sqlite3’</code></p>
+<p>Can anyone suggest a recovery strategy?</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/erpnext-v15-update-fails-with-no-module-named-sqlite3/156261">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/erpnext-v15-update-fails-with-no-module-named-sqlite3/156261</link>
+          <pubDate>Fri, 31 Oct 2025 16:41:55 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156261</guid>
+          <source url="https://discuss.frappe.io/t/erpnext-v15-update-fails-with-no-module-named-sqlite3/156261.rss">ERPnext v15 Update fails with &quot;No module named &#39;_sqlite3&#39;&quot;</source>
+        </item>
+        <item>
+          <title>Issue in Onprimise Setup of Frappe HelpDesk </title>
+          <dc:creator><![CDATA[sanket.chalke]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>Hi Team,</p>
+<p>I’m setting up Frappe Cloud locally and trying to build the Helpdesk app.</p>
+<p>I get the following error in the output:</p>
+<p>Command: bench get-app file:///home/frappe/context/apps/helpdesk<br>
+command Output:<br>
+Getting helpdesk<br>
+$ git clone file:///home/frappe/context/apps/helpdesk  --depth 1 --origin upstream<br>
+Cloning into ‘helpdesk’…<br>
+Ignoring dependencies of file:///home/frappe/context/apps/helpdesk. To install dependencies use --resolve-deps<br>
+Installing helpdesk<br>
+$ /home/frappe/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/frappe/frappe-bench/apps/helpdesk<br>
+$ yarn install --check-files<br>
+yarn install v1.22.22<br>
+[1/4] Resolving packages…<br>
+[2/4] Fetching packages…<br>
+[3/4] Linking dependencies…<br>
+warning “workspace-aggregator-0758a22f-fb81-4260-b217-4550055f2c41 &gt; helpdesk-ui &gt; <span class="mention">@tiptap</span>/core@2.26.1” has unmet peer dependency “<span class="mention">@tiptap</span>/pm@^2.7.0”.<br>
+warning “workspace-aggregator-0758a22f-fb81-4260-b217-4550055f2c41 &gt; helpdesk-ui &gt; vite-plugin-pwa@0.20.5” has unmet peer dependency “workbox-build@^7.1.0”.<br>
+warning “workspace-aggregator-0758a22f-fb81-4260-b217-4550055f2c41 &gt; helpdesk-ui &gt; vite-plugin-pwa@0.20.5” has unmet peer dependency “workbox-window@^7.1.0”.<br>
+[4/4] Building fresh packages…<br>
+success Saved lockfile.<br>
+$ cd desk &amp;&amp; yarn install<br>
+yarn install v1.22.22<br>
+[1/4] Resolving packages…<br>
+success Already up-to-date.<br>
+Done in 0.61s.<br>
+Done in 24.32s.<br>
+$ bench build --app helpdesk<br>
+Linking /home/frappe/frappe-bench/apps/frappe/frappe/public to ./assets/frappe<br>
+/home/frappe/frappe-bench/apps/frappe/node_modules to ./assets/frappe/node_modules<br>
+/home/frappe/frappe-bench/apps/helpdesk/helpdesk/public to ./assets/helpdesk<br>
+/home/frappe/frappe-bench/apps/helpdesk/node_modules to ./assets/helpdesk/node_modules<br>
+Application Assets Linked</p>
+<p>yarn run v1.22.22<br>
+$ node esbuild --production --apps helpdesk --run-build-command<br>
+File                                                        Size</p>
+<p>DONE  Total Build Time: 324.396ms</p>
+<p>Running build command for helpdesk<br>
+$ cd desk &amp;&amp; yarn build<br>
+$ vite build<br>
+[unplugin-vue-components] component “Autocomplete”(/home/frappe/frappe-bench/apps/helpdesk/desk/src/components/frappe-ui/Autocomplete.vue) has naming conflicts with other components, ignored.<br>
+[unplugin-vue-components] component “Autocomplete”(/home/frappe/frappe-bench/apps/helpdesk/desk/src/components/frappe-ui/Autocomplete.vue) has naming conflicts with other components, ignored.<br>
+vite v4.5.14 building for production…<br>
+transforming…</p>
+<p>Inter-DisplayRegular.woff2?v=3.19 referenced in /home/frappe/frappe-bench/apps/helpdesk/desk/src/index.css didn’t resolve at build time, it will remain unchanged to be resolved at runtime</p>
+<p>Inter-DisplayRegular.woff2?v=3.19 referenced in /home/frappe/frappe-bench/apps/helpdesk/desk/src/index.css?used&amp;inline didn’t resolve at build time, it will remain unchanged to be resolved at runtime<br>
+✓ 2735 modules transformed.<br>
+Export “ImageExtension” of module “…/node_modules/frappe-ui/src/components/TextEditor/extensions/image/image-extension.ts” was reexported through module “…/node_modules/frappe-ui/src/components/TextEditor/extensions/image/index.ts” while both modules are dependencies of each other and will end up in different chunks by current Rollup settings. This scenario is not well supported at the moment as it will produce a circular dependency between chunks and will likely lead to broken execution order.<br>
+Either change the import in “…/node_modules/frappe-ui/src/components/TextEditor/TextEditor.vue?vue&amp;type=script&amp;setup=true&amp;lang.ts” to point directly to the exporting module or reconfigure “output.manualChunks” to ensure these modules end up in the same chunk.<br>
+rendering chunks…<br>
+Killed<br>
+error Command failed with exit code 137.<br>
+info Visit <a href="https://yarnpkg.com/en/docs/cli/run" class="inline-onebox" rel="noopener nofollow ugc">yarn run | Yarn</a> for documentation about this command.<br>
+error Command failed with exit code 137.<br>
+info Visit <a href="https://yarnpkg.com/en/docs/cli/run" class="inline-onebox" rel="noopener nofollow ugc">yarn run | Yarn</a> for documentation about this command.<br>
+Error: Command failed: yarn build<br>
+at checkExecSyncError (node:child_process:885:11)<br>
+at execSync (node:child_process:957:15)<br>
+at run_build_command_for_apps (/home/frappe/frappe-bench/apps/frappe/esbuild/esbuild.js:453:5)<br>
+at execute (/home/frappe/frappe-bench/apps/frappe/esbuild/esbuild.js:125:23) {<br>
+status: 137,<br>
+signal: null,<br>
+output: [ null, null, null ],<br>
+pid: 147,<br>
+stdout: null,<br>
+stderr: null<br>
+}<br>
+error Command failed with exit code 1.<br>
+info Visit <a href="https://yarnpkg.com/en/docs/cli/run" class="inline-onebox" rel="noopener nofollow ugc">yarn run | Yarn</a> for documentation about this command.<br>
+Traceback (most recent call last):<br>
+File “”, line 198, in _run_module_as_main<br>
+File “”, line 88, in _run_code<br>
+File “/home/frappe/frappe-bench/apps/frappe/frappe/utils/bench_helper.py”, line 114, in <br>
+main()<br>
+File “/home/frappe/frappe-bench/apps/frappe/frappe/utils/bench_helper.py”, line 20, in main<br>
+click.Group(commands=commands)(prog_name=“bench”)<br>
+File “/home/frappe/frappe-bench/env/lib/python3.11/site-packages/click/core.py”, line 1442, in <strong>call</strong><br>
+return self.main(*args, **kwargs)<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/env/lib/python3.11/site-packages/click/core.py”, line 1363, in main<br>
+rv = self.invoke(ctx)<br>
+^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/env/lib/python3.11/site-packages/click/core.py”, line 1830, in invoke<br>
+return _process_result(sub_ctx.command.invoke(sub_ctx))<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/env/lib/python3.11/site-packages/click/core.py”, line 1830, in invoke<br>
+return <em>process_result(sub_ctx.command.invoke(sub_ctx))<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/env/lib/python3.11/site-packages/click/core.py”, line 1226, in invoke<br>
+return ctx.invoke(self.callback, **ctx.params)<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/env/lib/python3.11/site-packages/click/core.py”, line 794, in invoke<br>
+return callback(*args, **kwargs)<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/apps/frappe/frappe/commands/utils.py”, line 77, in build<br>
+bundle(<br>
+File “/home/frappe/frappe-bench/apps/frappe/frappe/build.py”, line 255, in bundle<br>
+frappe.commands.popen(command, cwd=frappe_app_path, env=get_node_env(), raise_err=True)<br>
+File “/home/frappe/frappe-bench/apps/frappe/frappe/commands/<strong>init</strong>.py”, line 97, in popen<br>
+raise subprocess.CalledProcessError(return</em>, command)<br>
+subprocess.CalledProcessError: Command ‘yarn run production --apps helpdesk --run-build-command’ returned non-zero exit status 1.<br>
+ERROR: bench build --app helpdesk<br>
+subprocess.CalledProcessError: Command ‘bench build --app helpdesk’ returned non-zero exit status 1.</p>
+<p>The above exception was the direct cause of the following exception:</p>
+<p>Traceback (most recent call last):<br>
+File “/home/frappe/.local/bin/bench”, line 7, in <br>
+sys.exit(cli())<br>
+^^^^^<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/cli.py”, line 132, in cli<br>
+bench_command()<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/commands/make.py”, line 181, in get_app<br>
+get_app(<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/app.py”, line 778, in get_app<br>
+app.install(verbose=verbose, skip_assets=skip_assets, restart_bench=restart_bench)<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/utils/render.py”, line 126, in wrapper_fn<br>
+return fn(*args, **kwargs)<br>
+^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/app.py”, line 253, in install<br>
+install_app(<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/app.py”, line 940, in install_app<br>
+build_assets(bench_path=bench_path, app=app, using_cached=using_cached)<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/utils/bench.py”, line 384, in build_assets<br>
+exec_cmd(command, cwd=bench_path, env=env)<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/utils/<strong>init</strong>.py”, line 181, in exec_cmd<br>
+raise CommandFailedError(cmd) from subprocess.CalledProcessError(return_code, cmd)<br>
+bench.exceptions.CommandFailedError: bench build --app helpdesk</p>
+<h2><a name="p-483944-info-a-newer-version-of-bench-is-available-5251-52511-process-binsh-c-bench-get-app-filehomefrappecontextappshelpdesk-stage-apps-helpdesk-did-not-complete-successfully-exit-code-1-1" class="anchor" href="https://discuss.frappe.io#p-483944-info-a-newer-version-of-bench-is-available-5251-52511-process-binsh-c-bench-get-app-filehomefrappecontextappshelpdesk-stage-apps-helpdesk-did-not-complete-successfully-exit-code-1-1"></a>INFO: A newer version of bench is available: 5.25.1 → 5.25.11<br>
+process “/bin/sh -c bench get-app file:///home/frappe/context/apps/helpdesk   <code>#stage-apps-helpdesk</code>” did not complete successfully: exit code: 1</h2>
+<h2><a name="p-483944-stage-0-2629-run-mounttypecachesharinglockedtargethomefrappecacheuid1000gid1000-mounttypebindsourceappshelpdesktargethomefrappecontextappshelpdesk-bench-get-app-filehomefrappecontextappshelpdesk-stage-apps-helpdesk-install_app-file-homefrappelocallibpython311site-packagesbenchapppy-line-940-in-install_app-build_assetsbench_pathbench_path-appapp-using_cachedusing_cached-file-homefrappelocallibpython311site-packagesbenchutilsbenchpy-line-384-in-build_assets-exec_cmdcommand-cwdbench_path-envenv-file-homefrappelocallibpython311site-packagesbenchutils__init__py-line-181-in-exec_cmd-raise-commandfailederrorcmd-from-subprocesscalledprocesserrorreturn_code-cmd-benchexceptionscommandfailederror-bench-build-app-helpdesk-1320-info-a-newer-version-of-bench-is-available-5251-52511-2" class="anchor" href="https://discuss.frappe.io#p-483944-stage-0-2629-run-mounttypecachesharinglockedtargethomefrappecacheuid1000gid1000-mounttypebindsourceappshelpdesktargethomefrappecontextappshelpdesk-bench-get-app-filehomefrappecontextappshelpdesk-stage-apps-helpdesk-install_app-file-homefrappelocallibpython311site-packagesbenchapppy-line-940-in-install_app-build_assetsbench_pathbench_path-appapp-using_cachedusing_cached-file-homefrappelocallibpython311site-packagesbenchutilsbenchpy-line-384-in-build_assets-exec_cmdcommand-cwdbench_path-envenv-file-homefrappelocallibpython311site-packagesbenchutils__init__py-line-181-in-exec_cmd-raise-commandfailederrorcmd-from-subprocesscalledprocesserrorreturn_code-cmd-benchexceptionscommandfailederror-bench-build-app-helpdesk-1320-info-a-newer-version-of-bench-is-available-5251-52511-2"></a>[stage-0 26/29] RUN --mount=type=cache,sharing=locked,target=/home/frappe/.cache,uid=1000,gid=1000   --mount=type=bind,source=apps/helpdesk,target=/home/frappe/context/apps/helpdesk   bench get-app file:///home/frappe/context/apps/helpdesk   <code>#stage-apps-helpdesk</code>:<br>
+install_app(<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/app.py”, line 940, in install_app<br>
+build_assets(bench_path=bench_path, app=app, using_cached=using_cached)<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/utils/bench.py”, line 384, in build_assets<br>
+exec_cmd(command, cwd=bench_path, env=env)<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/utils/<strong>init</strong>.py”, line 181, in exec_cmd<br>
+raise CommandFailedError(cmd) from subprocess.CalledProcessError(return_code, cmd)<br>
+bench.exceptions.CommandFailedError: bench build --app helpdesk<br>
+132.0<br>
+INFO: A newer version of bench is available: 5.25.1 → 5.25.11</h2>
+<p>failed to build: failed to solve: process “/bin/sh -c bench get-app file:///home/frappe/context/apps/helpdesk   <code>#stage-apps-helpdesk</code>” did not complete successfully: exit code: 1</p>
+<p>Could anyone please guide what might be missing or misconfigured in the Helpdesk app build setup?</p>
+<p>Thanks in advance for your help.</p>
+<p>Sanket</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/issue-in-onprimise-setup-of-frappe-helpdesk/155490">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/issue-in-onprimise-setup-of-frappe-helpdesk/155490</link>
+          <pubDate>Tue, 14 Oct 2025 11:36:59 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155490</guid>
+          <source url="https://discuss.frappe.io/t/issue-in-onprimise-setup-of-frappe-helpdesk/155490.rss">Issue in Onprimise Setup of Frappe HelpDesk </source>
+        </item>
+        <item>
+          <title>wkhtml error installing</title>
+          <dc:creator><![CDATA[aaronsgeorge]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>sudo dpkg -i wkhtmltox_0.12.6-1.bionic_amd64.deb<br>
+dpkg: warning: downgrading wkhtmltox from 1:0.12.6.1-2.bullseye to 1:0.12.6-1.bionic<br>
+(Reading database … 51789 files and directories currently installed.)<br>
+Preparing to unpack wkhtmltox_0.12.6-1.bionic_amd64.deb …<br>
+Unpacking wkhtmltox (1:0.12.6-1.bionic) over (1:0.12.6.1-2.bullseye) …<br>
+dpkg: dependency problems prevent configuration of wkhtmltox:<br>
+wkhtmltox depends on libssl1.1; however:<br>
+Package libssl1.1 is not installed.<br>
+wkhtmltox depends on xfonts-75dpi; however:<br>
+Package xfonts-75dpi is not installed.</p>
+<p>dpkg: error processing package wkhtmltox (–install):<br>
+dependency problems - leaving unconfigured<br>
+Processing triggers for man-db (2.12.0-4build2) …<br>
+Errors were encountered while processing:<br>
+wkhtmltox</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/wkhtml-error-installing/155184">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/wkhtml-error-installing/155184</link>
+          <pubDate>Tue, 07 Oct 2025 16:56:20 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155184</guid>
+          <source url="https://discuss.frappe.io/t/wkhtml-error-installing/155184.rss">wkhtml error installing</source>
+        </item>
+        <item>
+          <title>Bank reconciliations configurations </title>
+          <dc:creator><![CDATA[Thisara]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>Currently we are not using the bank reconciliation option. So, i want to setup the bank reconciliation option in the system. Please let me know the process.</p>
+            <p><small>3 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/bank-reconciliations-configurations/154088">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/bank-reconciliations-configurations/154088</link>
+          <pubDate>Tue, 23 Sep 2025 06:02:33 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-154088</guid>
+          <source url="https://discuss.frappe.io/t/bank-reconciliations-configurations/154088.rss">Bank reconciliations configurations </source>
+        </item>
+        <item>
+          <title>Frappe Production Setup – DNS Loads HTML Only, Missing CSS/JS Bundles (404 Errors)</title>
+          <dc:creator><![CDATA[SurajBhosale003]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>We are facing an issue while setting up <strong>ERPNext/Frappe in production</strong> on our server.</p>
+<p>Here’s our setup:</p>
+<ul>
+<li><strong>DNS → Firewall IP → Local Server</strong> (where we are installing Frappe in production)</li>
+<li>We followed the official production setup process.</li>
+<li>On the <strong>local server</strong>, the bench is working perfectly.</li>
+<li>We are running Frappe in production mode using <strong>Supervisor</strong>.</li>
+<li>DNS is pointing correctly to our server (verified by toggling maintenance mode).</li>
+</ul>
+<h3><a name="p-477232-the-problem-1" class="anchor" href="https://discuss.frappe.io#p-477232-the-problem-1"></a><strong>The Problem</strong></h3>
+<p>When accessing the site via <strong>DNS</strong>, the HTML loads, but <strong>no CSS or JS bundles</strong> load.<br>
+On both DNS and IP access, we only see the raw HTML without styling or interactivity.</p>
+<hr>
+<h3><a name="p-477232-browser-console-errors-2" class="anchor" href="https://discuss.frappe.io#p-477232-browser-console-errors-2"></a><strong>Browser Console Errors</strong></h3>
+<p>plaintext</p>
+<p>CopyEdit</p>
+<pre><code class="lang-auto">Download the React DevTools for a better development experience: https://fb.me/react-devtools
+contentscript.bundle.js:1 Teflon Content Script injected
+
+/assets/frappe/dist/css/website.bundle.N3UF3RRC.css:1 GET https://erp.parkmont.co.in/assets/frappe/dist/css/website.bundle.N3UF3RRC.css net::ERR_ABORTED 404
+/assets/frappe/dist/css/login.bundle.5UZ7UMY6.css:1 GET https://erp.parkmont.co.in/assets/frappe/dist/css/login.bundle.5UZ7UMY6.css 404
+/assets/frappe/dist/js/frappe-web.bundle.2Y7H3RYT.js:1 GET https://erp.parkmont.co.in/assets/frappe/dist/js/frappe-web.bundle.2Y7H3RYT.js 404
+/assets/frappe/images/frappe-framework-logo.svg:1 GET https://erp.parkmont.co.in/assets/frappe/images/frappe-framework-logo.svg 404
+Uncaught ReferenceError: $ is not defined
+    at login.reset_sections ((index):3187:3)
+    at login.login ((index):3200:8)
+    at login.route ((index):3182:14)
+</code></pre>
+<h3><a name="p-477232-observations-3" class="anchor" href="https://discuss.frappe.io#p-477232-observations-3"></a><strong>Observations</strong></h3>
+<ul>
+<li>The site loads fine locally via <code>http://localhost</code> (with CSS/JS).</li>
+<li>Through DNS, only HTML loads – all asset requests return <strong>404</strong>.</li>
+<li>Nginx seems not to be serving the <code>/assets</code> path properly or the build files are missing.</li>
+</ul>
+<p>Any help or guidance would be greatly appreciated. We’ve been stuck on this for 3 days now.</p>
+            <p><small>3 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/frappe-production-setup-dns-loads-html-only-missing-css-js-bundles-404-errors/151622">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/frappe-production-setup-dns-loads-html-only-missing-css-js-bundles-404-errors/151622</link>
+          <pubDate>Tue, 12 Aug 2025 12:12:56 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-151622</guid>
+          <source url="https://discuss.frappe.io/t/frappe-production-setup-dns-loads-html-only-missing-css-js-bundles-404-errors/151622.rss">Frappe Production Setup – DNS Loads HTML Only, Missing CSS/JS Bundles (404 Errors)</source>
+        </item>
+        <item>
+          <title>Bench new site creation fails</title>
+          <dc:creator><![CDATA[Bowrna]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>Hello , I am a Macbook Air M1 user, and during bench’s new site creation after getting the app , i am getting below error<br>
+(frappe-bench-venv) sathishkannan@Sathishs-MacBook-Air frappe-bench % bench new-site press.localhost<br>
+Enter mysql super user [root]:<br>
+MySQL root password:<br>
+Traceback (most recent call last):<br>
+File “/Users/sathishkannan/code/frappe-bench/apps/frappe/frappe/commands/site.py”, line 112, in new_site<br>
+_new_site(<br>
+File “/Users/sathishkannan/code/frappe-bench/apps/frappe/frappe/installer.py”, line 84, in _new_site<br>
+install_db(<br>
+File “/Users/sathishkannan/code/frappe-bench/apps/frappe/frappe/installer.py”, line 165, in install_db<br>
+setup_database(force, verbose, mariadb_user_host_login_scope)<br>
+File “/Users/sathishkannan/code/frappe-bench/apps/frappe/frappe/database/<strong>init</strong>.py”, line 18, in setup_database<br>
+return frappe.database.mariadb.setup_db.setup_database(force, verbose, mariadb_user_host_login_scope)<br>
+File “/Users/sathishkannan/code/frappe-bench/apps/frappe/frappe/database/mariadb/setup_db.py”, line 27, in setup_database<br>
+root_conn = get_root_connection()<br>
+File “/Users/sathishkannan/code/frappe-bench/apps/frappe/frappe/database/mariadb/setup_db.py”, line 143, in get_root_connection<br>
+frappe.local.flags.root_connection = frappe.database.get_db(<br>
+File “/Users/sathishkannan/code/frappe-bench/apps/frappe/frappe/database/<strong>init</strong>.py”, line 79, in get_db<br>
+import frappe.database.mariadb.mysqlclient<br>
+File “/Users/sathishkannan/code/frappe-bench/apps/frappe/frappe/database/mariadb/mysqlclient.py”, line 4, in <br>
+import MySQLdb<br>
+File “/Users/sathishkannan/code/frappe-bench/env/lib/python3.10/site-packages/MySQLdb/<strong>init</strong>.py”, line 17, in <br>
+from . import _mysql<br>
+ImportError: dlopen(/Users/sathishkannan/code/frappe-bench/env/lib/python3.10/site-packages/MySQLdb/_mysql.cpython-310-darwin.so, 0x0002): symbol not found in flat namespace ‘_mysql_affected_rows’<br>
+Site creation failed, do you want to rollback the site? [y/N]:<br>
+Aborted!<br>
+the mysql client installed within Bench automatically defaults to intel and throws this error.<br>
+I found a similar issue here. <a href="https://github.com/PyMySQL/mysqlclient/issues/496" class="inline-onebox" rel="noopener nofollow ugc">Macos M1 mysqlclient Symbol not found: _mysql_affected_rows ERROR · Issue #496 · PyMySQL/mysqlclient · GitHub</a>. however installing mysqlclient still fails and i couldn’t fix this issue.<br>
+Tried with python 3.12 and python 3.10 and followed the steps in frappe framework documentation for setting up the app.</p>
+<p>If anyone has faced similar issue and fixed it, please do let me know how it can be done. Thank you.</p>
+            <p><small>2 posts - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/bench-new-site-creation-fails/150509">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/bench-new-site-creation-fails/150509</link>
+          <pubDate>Tue, 22 Jul 2025 06:25:05 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-150509</guid>
+          <source url="https://discuss.frappe.io/t/bench-new-site-creation-fails/150509.rss">Bench new site creation fails</source>
+        </item>
+        <item>
+          <title>Sudo: bench: command not found 2025</title>
+          <dc:creator><![CDATA[YogiYang]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>I am trying to setup Frappe Bench on a fresh server for production.</p>
+<p>I have managed to setup most of it following the instructions on this page:<br>
+<a href="https://docs.frappe.io/framework/user/en/bench/guides/setup-production" class="onebox" target="_blank" rel="noopener nofollow ugc">https://docs.frappe.io/framework/user/en/bench/guides/setup-production</a></p>
+<p>But when I give the command:<br>
+<code>sudo bench setup production $USER</code></p>
+<p>I am getting the following error:<br>
+<code>sudo: bench: command not found</code></p>
+<p>How to solve this issue?</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/sudo-bench-command-not-found-2025/149097">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/sudo-bench-command-not-found-2025/149097</link>
+          <pubDate>Fri, 27 Jun 2025 14:25:20 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-149097</guid>
+          <source url="https://discuss.frappe.io/t/sudo-bench-command-not-found-2025/149097.rss">Sudo: bench: command not found 2025</source>
+        </item>
+        <item>
+          <title>Help required: how to disable the NAVARI KRA etims module</title>
+          <dc:creator><![CDATA[Scottv53]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>Dear Sir/Madam;<br>
+how do i disable the NAVARI KRA etims module,  I activated it by error, and can’t submit invoice.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/5/3/537daaf5a9bf5a068d160c8a65ec3254e4028429.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/537daaf5a9bf5a068d160c8a65ec3254e4028429" title="Screenshot 2025-06-18 at 16.07.30"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/5/3/537daaf5a9bf5a068d160c8a65ec3254e4028429_2_690x431.jpeg" alt="Screenshot 2025-06-18 at 16.07.30" data-base62-sha1="bUAS4jCvIsAloX2NzmytWo4UI89" width="690" height="431" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/5/3/537daaf5a9bf5a068d160c8a65ec3254e4028429_2_690x431.jpeg, https://discuss.frappe.io/uploads/default/optimized/3X/5/3/537daaf5a9bf5a068d160c8a65ec3254e4028429_2_1035x646.jpeg 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/5/3/537daaf5a9bf5a068d160c8a65ec3254e4028429_2_1380x862.jpeg 2x" data-dominant-color="696969"></a></div><p></p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/help-required-how-to-disable-the-navari-kra-etims-module/148719">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/help-required-how-to-disable-the-navari-kra-etims-module/148719</link>
+          <pubDate>Wed, 18 Jun 2025 16:56:25 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-148719</guid>
+          <source url="https://discuss.frappe.io/t/help-required-how-to-disable-the-navari-kra-etims-module/148719.rss">Help required: how to disable the NAVARI KRA etims module</source>
+        </item>
+        <item>
+          <title>Setuping up the Architecture.</title>
+          <dc:creator><![CDATA[Cold-boolded-coder]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>Hello Everyone hope you guys are fine, Please refer to the below architecture,<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/c/1/c13e6b8befb5a67ac0905beaf15e08118dd0f9e9.png" data-download-href="https://discuss.frappe.io/uploads/default/c13e6b8befb5a67ac0905beaf15e08118dd0f9e9" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/c/1/c13e6b8befb5a67ac0905beaf15e08118dd0f9e9_2_446x500.png" alt="image" data-base62-sha1="rzvSWKQ8a0rMo28NilwLp7wTVR7" width="446" height="500" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/c/1/c13e6b8befb5a67ac0905beaf15e08118dd0f9e9_2_446x500.png, https://discuss.frappe.io/uploads/default/original/3X/c/1/c13e6b8befb5a67ac0905beaf15e08118dd0f9e9.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/c/1/c13e6b8befb5a67ac0905beaf15e08118dd0f9e9.png 2x" data-dominant-color="E9EFF6"></a></div><p></p>
+<p>I want to read and write to the diffrent site with multiple Master the master need to be switched based on load to DB. as per now i can see we can only map single db on site_config.json (please correct me if am wrong).<br>
+refer to the screenshot.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/6/d652413192a70af3288be212f0448ef47e196cb0.png" data-download-href="https://discuss.frappe.io/uploads/default/d652413192a70af3288be212f0448ef47e196cb0" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/6/d652413192a70af3288be212f0448ef47e196cb0_2_690x124.png" alt="image" data-base62-sha1="uzYpkbLMr2787u3qv7fNsTfkJgI" width="690" height="124" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/6/d652413192a70af3288be212f0448ef47e196cb0_2_690x124.png, https://discuss.frappe.io/uploads/default/original/3X/d/6/d652413192a70af3288be212f0448ef47e196cb0.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/d/6/d652413192a70af3288be212f0448ef47e196cb0.png 2x" data-dominant-color="38132F"></a></div><p></p>
+<p>please help me with the basic setup.</p>
+            <p><small>4 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/setuping-up-the-architecture/148490">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/setuping-up-the-architecture/148490</link>
+          <pubDate>Thu, 12 Jun 2025 11:11:30 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-148490</guid>
+          <source url="https://discuss.frappe.io/t/setuping-up-the-architecture/148490.rss">Setuping up the Architecture.</source>
+        </item>
+        <item>
+          <title>Updating helpdesk using frappe_docker steps</title>
+          <dc:creator><![CDATA[zizi]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>I have a multi apps on mysite built using the steps outlined here <a href="https://github.com/frappe/frappe_docker/blob/main/docs/custom-apps.md" class="inline-onebox" rel="noopener nofollow ugc">frappe_docker/docs/custom-apps.md at main · frappe/frappe_docker · GitHub</a></p>
+<p>My apps.json has the following:<br>
+[<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/erpnext" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/erpnext: Free and Open Source Enterprise Resource Planning (ERP)</a>”,<br>
+“branch”: “v15.61.1”<br>
+},<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/hrms" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/hrms: Open Source HR and Payroll Software</a>”,<br>
+“branch”: “v15.45.2”<br>
+},<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/crm" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/crm: Fully featured, open source CRM</a>”,<br>
+“branch”: “v1.42.2”<br>
+},<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/helpdesk" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/helpdesk: Modern, Streamlined, Free and Open Source Customer Service Software</a>”,<br>
+“branch”: “v1.8.0”<br>
+},<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/print_designer" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/print_designer: Visual print designer for Frappe / ERPNext</a>”,<br>
+“branch”: “v1.5.1”<br>
+},<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/builder" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/builder: Craft beautiful websites effortlessly with an intuitive visual builder and publish them instantly</a>”,<br>
+“branch”: “v1.16.5”<br>
+},<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/education" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/education: Open source education / school management system</a>”,<br>
+“branch”: “v15.5.2”<br>
+},<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/insights" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/insights: Open Source Business Intelligence Tool</a>”,<br>
+“branch”: “v3.1.3”<br>
+},<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/lending" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/lending: Open Source Lending software</a>”,<br>
+“branch”: “v1.0.0”<br>
+},<br>
+{<br>
+“url”: “<a href="https://github.com/frappe/lms" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/lms: Easy to Use, 100% Open Source Learning Management System</a>”,<br>
+“branch”: “v2.28.1”<br>
+}<br>
+]</p>
+<p>The image builds fine and I am able to deploy mysite, this is the output of bench version --format plain<br>
+builder 1.16.5  ()<br>
+crm 1.42.2  ()<br>
+education 15.5.0  ()<br>
+erpnext 15.61.1  ()<br>
+frappe 15.68.1  ()<br>
+<strong>helpdesk 1.7.0  ()</strong><br>
+hrms 15.45.2  ()<br>
+insights 3.1.3  ()<br>
+lending 0.0.1  ()<br>
+lms 2.28.1  ()<br>
+print_designer 1.5.1  ()</p>
+<p>As you would note Helpdesk is still v1.7.0 and not v1.8.0</p>
+<p>I have tried to search the forum for a solution.</p>
+<p>Any ideas as to why Helpdesk is not showing v1.8.0 as expected</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/updating-helpdesk-using-frappe-docker-steps/147323">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/updating-helpdesk-using-frappe-docker-steps/147323</link>
+          <pubDate>Mon, 19 May 2025 06:57:57 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-147323</guid>
+          <source url="https://discuss.frappe.io/t/updating-helpdesk-using-frappe-docker-steps/147323.rss">Updating helpdesk using frappe_docker steps</source>
+        </item>
+        <item>
+          <title>Apps via Docker not showing in UI (/app), missing icons – Gameplan, Helpdesk, Wiki</title>
+          <dc:creator><![CDATA[edardev]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>Apps via Docker (Gameplan, Helpdesk, Wiki)</p>
+<hr>
+<p><strong>Problem Summary:</strong></p>
+<p>While attempting to install multiple Frappe/ERPNext apps like <code>gameplan</code>, <code>helpdesk</code>, and <code>wiki</code> using a Docker-based environment, I encountered persistent issues where the apps:</p>
+<ul>
+<li>Do not show up in <code>/app</code></li>
+<li>Do not load in <code>/app/&lt;module&gt;</code></li>
+<li>Are missing icons in <code>/apps</code></li>
+<li>Are not accessible via the Workspace UI</li>
+</ul>
+<p>Despite the apps being successfully listed in <code>bench --site &lt;site&gt; list-apps</code>, they do not integrate into the UI as expected.</p>
+<hr>
+<p><strong>Environment:</strong></p>
+<ul>
+<li>Frappe: 15.68.0</li>
+<li>ERPNext: 15.60.2</li>
+<li>Gameplan: 0.0.1</li>
+<li>Install method: Docker (custom stack)</li>
+<li>Site: <code>demo.site.com</code></li>
+</ul>
+<hr>
+<p><strong>Apps Installed:</strong></p>
+<pre><code class="lang-auto">frappe   15.68.0 UNVERSIONED
+erpnext  15.60.2 UNVERSIONED
+gameplan 0.0.1   main
+</code></pre>
+<hr>
+<p><strong>Directories Verified:</strong></p>
+<pre><code class="lang-auto">apps/gameplan/gameplan/config/desktop.py
+apps/gameplan/gameplan/config/docs.py
+</code></pre>
+<p><code>desktop.py</code> contains:</p>
+<pre data-code-wrap="python"><code class="lang-python">from frappe import _
+
+def get_data():
+    return [{"module_name": "Gameplan", "type": "module", "label": _("Gameplan")}]
+</code></pre>
+<p>Assets folder:</p>
+<pre><code class="lang-auto">sites/assets/
+├── gameplan
+├── helpdesk
+├── wiki
+</code></pre>
+<hr>
+<p><strong>Steps Taken to Resolve (Unsuccessful):</strong></p>
+<ul>
+<li><code>bench get-app &lt;app&gt;</code></li>
+<li><code>bench install-app &lt;app&gt;</code></li>
+<li><code>bench build</code></li>
+<li><code>yarn build</code></li>
+<li><code>bench build-app &lt;app&gt;</code> (e.g., <code>helpdesk</code>, <code>wiki</code>, <code>gameplan</code>)</li>
+<li><code>bench clear-cache</code></li>
+<li><code>bench clear-website-cache</code></li>
+<li><code>bench restart</code></li>
+<li><code>bench migrate</code></li>
+<li>Verified <code>desktop.py</code> exists and returns proper <code>get_data()</code></li>
+<li>Checked <code>Module Def</code> and <code>Workspace</code> manually (not created automatically)</li>
+<li>Attempted to open <code>/app/helpdesk</code>, <code>/app/gameplan</code>, <code>/app/wiki</code> (failed or blank)</li>
+</ul>
+<hr>
+<p><strong>Expected Behavior:</strong></p>
+<ul>
+<li>Apps should appear in <code>/app</code> workspace navigation</li>
+<li>Modules should be browsable via <code>/app/&lt;module&gt;</code></li>
+<li>Icons and module links should appear in <code>/apps</code></li>
+<li><code>Module Def</code> and <code>Workspace</code> should be created automatically</li>
+</ul>
+<hr>
+<p><strong>Actual Behavior:</strong></p>
+<ul>
+<li>Apps are installed and present in <code>apps/</code> and <code>sites/assets/</code></li>
+<li>No UI visibility in <code>/app</code></li>
+<li>Icons missing in <code>/apps</code></li>
+<li>No Workspace or Module Def generated</li>
+</ul>
+<hr>
+<p><strong>Request for Help:</strong></p>
+<p>Looking for guidance on:</p>
+<ul>
+<li>Why these modules aren’t registering correctly with the UI/workspace</li>
+<li>Whether a manual step is required in Docker-based installs</li>
+<li>How to make these apps consistent with ERPNext modules in the UI</li>
+</ul>
+<p>I can provide more logs if needed. Happy to help with documentation or contribute patches if necessary.</p>
+<p>Thanks!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/apps-via-docker-not-showing-in-ui-app-missing-icons-gameplan-helpdesk-wiki/147126">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/apps-via-docker-not-showing-in-ui-app-missing-icons-gameplan-helpdesk-wiki/147126</link>
+          <pubDate>Wed, 14 May 2025 17:30:44 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-147126</guid>
+          <source url="https://discuss.frappe.io/t/apps-via-docker-not-showing-in-ui-app-missing-icons-gameplan-helpdesk-wiki/147126.rss">Apps via Docker not showing in UI (/app), missing icons – Gameplan, Helpdesk, Wiki</source>
+        </item>
+        <item>
+          <title>Deploy Scheduled</title>
+          <dc:creator><![CDATA[irkhamdivistant]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>I am following the documentation <a href="https://frappecloud.com/docs/local-fc-setup" class="inline-onebox" rel="noopener nofollow ugc">Local Development Environment Setup</a> to setup my press, but i am facing issue on the deploy candidate build, the status just scheduled, nothing happend<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/3/13f7cb65edc34ad8dea7c387a351a55a263f54a4.png" data-download-href="https://discuss.frappe.io/uploads/default/13f7cb65edc34ad8dea7c387a351a55a263f54a4" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/1/3/13f7cb65edc34ad8dea7c387a351a55a263f54a4_2_690x200.png" alt="image" data-base62-sha1="2QDY5PhLHsFoMhqe8SsDrujevAM" width="690" height="200" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/1/3/13f7cb65edc34ad8dea7c387a351a55a263f54a4_2_690x200.png, https://discuss.frappe.io/uploads/default/optimized/3X/1/3/13f7cb65edc34ad8dea7c387a351a55a263f54a4_2_1035x300.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/1/3/13f7cb65edc34ad8dea7c387a351a55a263f54a4_2_1380x400.png 2x" data-dominant-color="FBFCFC"></a></div><p></p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/deploy-scheduled/146853">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/deploy-scheduled/146853</link>
+          <pubDate>Thu, 08 May 2025 18:03:05 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-146853</guid>
+          <source url="https://discuss.frappe.io/t/deploy-scheduled/146853.rss">Deploy Scheduled</source>
+        </item>
+        <item>
+          <title>error with command &#39;bench start&#39;</title>
+          <dc:creator><![CDATA[220100dungvan]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>I installed frappe following this guide :<br>
+<a>https://github.com/D-codE-Hub/Guide-to-Install-Frappe-ERPNext-in-Windows-Using-Docker</a><br>
+after i run the command: <code>bench start</code><br>
+01:24:50 system     | web.1 started (pid=2858)<br>
+01:24:50 system     | socketio.1 started (pid=2860)<br>
+01:24:50 system     | watch.1 started (pid=2863)<br>
+01:24:50 system     | schedule.1 started (pid=2865)<br>
+01:24:50 system     | worker.1 started (pid=2868)<br>
+01:24:58 watch.1    |<br>
+01:24:58 socketio.1 | node:events:495<br>
+01:24:58 socketio.1 |       throw er; // Unhandled ‘error’ event<br>
+01:24:58 socketio.1 |       ^<br>
+01:24:58 socketio.1 |<br>
+01:24:58 socketio.1 | Error: getaddrinfo ENOTFOUND redis-socketio<br>
+01:24:58 socketio.1 |     at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:108:26)<br>
+01:24:58 socketio.1 | Emitted ‘error’ event on RedisClient instance at:<br>
+01:24:58 socketio.1 |     at RedisClient.on_error (/workspace/development/frappe-bench/apps/frappe/node_modules/redis/index.js:342:14)<br>
+01:24:58 socketio.1 |     at Socket. (/workspace/development/frappe-bench/apps/frappe/node_modules/redis/index.js:223:14)<br>
+01:24:58 socketio.1 |     at Socket.emit (node:events:517:28)<br>
+01:24:58 socketio.1 |     at emitErrorNT (node:internal/streams/destroy:151:8)<br>
+01:24:58 socketio.1 |     at emitErrorCloseNT (node:internal/streams/destroy:116:3)<br>
+01:24:58 socketio.1 |     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {<br>
+01:24:58 socketio.1 |   errno: -3007,<br>
+01:24:58 socketio.1 |   code: ‘ENOTFOUND’,<br>
+01:24:58 socketio.1 |   syscall: ‘getaddrinfo’,<br>
+01:24:58 socketio.1 |   hostname: ‘redis-socketio’<br>
+01:24:58 socketio.1 | }<br>
+01:24:58 socketio.1 |<br>
+01:24:58 socketio.1 | Node.js v18.18.2<br>
+01:24:58 system     | socketio.1 stopped (rc=1)<br>
+01:24:58 system     | sending SIGTERM to web.1 (pid 2858)<br>
+01:24:58 system     | sending SIGTERM to watch.1 (pid 2863)<br>
+01:24:58 system     | sending SIGTERM to schedule.1 (pid 2865)<br>
+01:24:58 system     | sending SIGTERM to worker.1 (pid 2868)<br>
+01:24:58 system     | worker.1 stopped (rc=-15)<br>
+01:24:58 system     | web.1 stopped (rc=-15)<br>
+01:24:58 system     | schedule.1 stopped (rc=-15)<br>
+01:24:58 system     | watch.1 stopped (rc=-15)</p>
+<p>I use docker destop , dev container extension in Visual Studio Code</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/error-with-command-bench-start/146382">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/error-with-command-bench-start/146382</link>
+          <pubDate>Sun, 27 Apr 2025 06:54:45 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-146382</guid>
+          <source url="https://discuss.frappe.io/t/error-with-command-bench-start/146382.rss">error with command &#39;bench start&#39;</source>
+        </item>
+        <item>
+          <title>Reinstallation without losing data</title>
+          <dc:creator><![CDATA[Pabiuro]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>Hey,<br>
+is there any way to reinstall without loosing data? Somehow my erpnext lost assets and bench build doesn’t help (probably because I did wrong way updating). For me I’ve did total mess with files (version 16.0.0-dev … etc) and I was thinking to do clean install and migrate database to it.</p>
+<p>When I try to bench migrate it return this message:</p>
+<blockquote>
+<p>Migrating Frappe</p>
+<p>Traceback (most recent call last):<br>
+File “/home/frappe/frappe-bench/apps/frappe/frappe/utils/bench_helper.py”, line 48, in invoke<br>
+return super().invoke(ctx)<br>
+^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/env/lib/python3.11/site-packages/click/core.py”, line 1697, in invoke<br>
+return _process_result(sub_ctx.command.invoke(sub_ctx))<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/env/lib/python3.11/site-packages/click/core.py”, line 1443, in invoke<br>
+return ctx.invoke(self.callback, **ctx.params)<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/env/lib/python3.11/site-packages/click/core.py”, line 788, in invoke<br>
+return __callback(*args, **kwargs)<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/env/lib/python3.11/site-packages/click/decorators.py”, line 33, in new_func<br>
+return f(get_current_context(), *args, **kwargs)<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/apps/frappe/frappe/commands/<strong>init</strong>.py”, line 28, in _func<br>
+ret = f(ctx.obj, *args, **kwargs)<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/apps/frappe/frappe/commands/site.py”, line 706, in migrate<br>
+).run(site=site)<br>
+^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/apps/frappe/frappe/migrate.py”, line 198, in run<br>
+if not self.required_services_running():<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/apps/frappe/frappe/migrate.py”, line 177, in required_services_running<br>
+service_status = check_connection(redis_services=[“redis_cache”])<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/apps/frappe/frappe/utils/connections.py”, line 54, in check_connection<br>
+service_status.update(check_redis(redis_services))<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/apps/frappe/frappe/utils/connections.py”, line 47, in check_redis<br>
+status[srv] = is_open(url.scheme, url.hostname, url.port, url.path)<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/apps/frappe/frappe/utils/connections.py”, line 13, in is_open<br>
+conn = (hostname, int(port))<br>
+^^^^^^^^^<br>
+TypeError: int() argument must be a string, a bytes-like object or a real number, not ‘NoneType’</p>
+<p>int() argument must be a string, a bytes-like object or a real number, not ‘NoneType’</p>
+</blockquote>
+<p>In general main problem is with logging to the site. When I try to do this it only shows erpnext blue logo and doesn’t load css. In console I have this log:</p>
+<p>GET<br>
+https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/css/desk.bundle.DQM44BAO.css<br>
+[HTTP/2 404  60ms]</p>
+<p>GET<br>
+https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/css/report.bundle.VWCNLCM2.css<br>
+[HTTP/2 404  58ms]</p>
+<p>GET<br>
+https://erpnext.MY_SERVER_NAME.com/assets/erpnext/dist/css/erpnext.bundle.DEYVMYDK.css<br>
+[HTTP/2 404  69ms]</p>
+<p>GET<br>
+https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/js/desk.bundle.7VZCYKUE.js<br>
+[HTTP/2 404  60ms]</p>
+<p>GET<br>
+https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/js/list.bundle.DWCMIDYF.js<br>
+[HTTP/2 404  59ms]</p>
+<p>GET<br>
+https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/js/form.bundle.5WGQJSC4.js<br>
+[HTTP/2 404  64ms]</p>
+<p>GET<br>
+https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/js/controls.bundle.XYVEQIFK.js<br>
+[HTTP/2 404  63ms]</p>
+<p>GET<br>
+https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/js/report.bundle.JS7AFESX.js<br>
+[HTTP/2 404  58ms]</p>
+<p>GET<br>
+https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/js/billing.bundle.AFTRQ3D5.js<br>
+[HTTP/2 404  61ms]</p>
+<p>GET<br>
+https://erpnext.MY_SERVER_NAME.com/assets/erpnext/dist/js/erpnext.bundle.OBP2BMGP.js<br>
+[HTTP/2 404  60ms]</p>
+<p>GET<br>
+https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/js/desk.bundle.7VZCYKUE.js<br>
+[HTTP/2 404  58ms]</p>
+<p>Loading failed for the “script” with source „https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/js/desk.bundle.7VZCYKUE.js”. sales-order:8653:86<br>
+GET<br>
+https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/js/list.bundle.DWCMIDYF.js<br>
+[HTTP/2 404 41ms]</p>
+<p>Loading failed for the “script” with source „https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/js/list.bundle.DWCMIDYF.js”. sales-order:8655:86<br>
+GET<br>
+https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/js/form.bundle.5WGQJSC4.js<br>
+[HTTP/2 404 56ms]</p>
+<p>Loading failed for the “script” with source „https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/js/form.bundle.5WGQJSC4.js”. sales-order:8657:86<br>
+GET<br>
+https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/js/controls.bundle.XYVEQIFK.js<br>
+[HTTP/2 404 44ms]</p>
+<p>Loading failed for the “script” with source „https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/js/controls.bundle.XYVEQIFK.js”. sales-order:8659:90<br>
+GET<br>
+https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/js/report.bundle.JS7AFESX.js<br>
+[HTTP/2 404 41ms]</p>
+<p>Loading failed for the “script” with source „https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/js/report.bundle.JS7AFESX.js”. sales-order:8661:88<br>
+Uncaught ReferenceError: cint is not defined<br>
+c index.js:10<br>
+index.js:85<br>
+index.js:86<br>
+telemetry.bundle.LKEZCADB.js:1:1108<br>
+GET<br>
+https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/js/billing.bundle.AFTRQ3D5.js<br>
+[HTTP/2 404 48ms]</p>
+<p>Loading failed for the “script” with source „https://erpnext.MY_SERVER_NAME.com/assets/frappe/dist/js/billing.bundle.AFTRQ3D5.js”. sales-order:8665:89<br>
+GET<br>
+https://erpnext.MY_SERVER_NAME.com/assets/erpnext/dist/js/erpnext.bundle.OBP2BMGP.js<br>
+[HTTP/2 404 41ms]</p>
+<p>Loading failed for the “script” with source „https://erpnext.MY_SERVER_NAME.com/assets/erpnext/dist/js/erpnext.bundle.OBP2BMGP.js”. sales-order:8667:90</p>
+<p>Maybe someone could help me with that? It was working just fine but one day it crashed during generating reports from warehouse. It stucked on genereting them in queue and when I’ve tried to remove them it crashed css. Before/after I’ve tried to update it and did total mess with them… I don’t have much experience with working on such setups, should have done it on production env <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> but we learn on our mistakes.</p>
+            <p><small>7 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/reinstallation-without-losing-data/145743">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/reinstallation-without-losing-data/145743</link>
+          <pubDate>Mon, 14 Apr 2025 18:17:08 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-145743</guid>
+          <source url="https://discuss.frappe.io/t/reinstallation-without-losing-data/145743.rss">Reinstallation without losing data</source>
+        </item>
+        <item>
+          <title>Muliple Benchs at production level on one server</title>
+          <dc:creator><![CDATA[Naqeeb_Khan]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>hi i want to deploye multiple benches at production level on one server  how can i do this i dont want to create multiple sites inside one bench but i want to create multiple benches and deploye it on production level…</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/muliple-benchs-at-production-level-on-one-server/145134">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/muliple-benchs-at-production-level-on-one-server/145134</link>
+          <pubDate>Fri, 04 Apr 2025 04:46:14 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-145134</guid>
+          <source url="https://discuss.frappe.io/t/muliple-benchs-at-production-level-on-one-server/145134.rss">Muliple Benchs at production level on one server</source>
+        </item>
+        <item>
+          <title>DNS_PROBE_FINISHED_NXDOMAIN</title>
+          <dc:creator><![CDATA[ravi.thakkar]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>We are getting an error of DNS_PROBE_FINISHED_NXDOMAIN<br>
+we are not able to access the new-site which we have created. Can any one help on this?</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/dns-probe-finished-nxdomain/145031">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/dns-probe-finished-nxdomain/145031</link>
+          <pubDate>Wed, 02 Apr 2025 10:53:35 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-145031</guid>
+          <source url="https://discuss.frappe.io/t/dns-probe-finished-nxdomain/145031.rss">DNS_PROBE_FINISHED_NXDOMAIN</source>
+        </item>
+        <item>
+          <title>Serve a site via IP along with the domain</title>
+          <dc:creator><![CDATA[ahassoun]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>Hello,</p>
+<p>I need to serve my Frappe site via IP and port, alongside the real domain name.</p>
+<ol>
+<li>I used <code>bench setup add-domain MY-PRIVATE-IP</code>; nginx.conf re-generated.</li>
+<li>gunicorn is listening on port 8000, default.</li>
+<li>Production setup, multi-tenancy is ON hostname-based is ON, but we have only one site.</li>
+</ol>
+<p>Accessing <a href="http://MY-PRIVATE-IP:8000" rel="noopener nofollow ugc">http://MY-PRIVATE-IP:8000</a> won’t reach Frappe.</p>
+<p>If it matters: the server is in a private network, requires VPN to access. On my Windows machine, I mapped a dummy domain to the IP on the <code>hosts</code> file and it worked fine, but I need to serve the site via the IP as well.</p>
+<p>Your advice is highly appreciated.</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/serve-a-site-via-ip-along-with-the-domain/144525">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/serve-a-site-via-ip-along-with-the-domain/144525</link>
+          <pubDate>Sun, 23 Mar 2025 14:57:21 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-144525</guid>
+          <source url="https://discuss.frappe.io/t/serve-a-site-via-ip-along-with-the-domain/144525.rss">Serve a site via IP along with the domain</source>
+        </item>
+        <item>
+          <title>Internal Server Error on AWS</title>
+          <dc:creator><![CDATA[fkardame]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>Hello Everyone,</p>
+<p>I am having hard time figuring out what is causing internal server error on a 5 year old setup on AWS.</p>
+<p>Mariadb is working. can do `bench --site {sitename} mariadb<br>
+supervisor is working when I check with systemd status.</p>
+<p>restarting supervisord brings up the login page and after few minutes it goes back to internal server error.</p>
+<p>I find 2 suspicious error in logs.</p>
+<ol>
+<li><code>ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)</code></li>
+<li><code>ImportError: cannot import name 'get_default_company'</code> in frappe log.</li>
+</ol>
+<p>the issue is with the second one where updating frappe and erpnext fixed it for few months until it broke again, version is 12 which I am scheduled to upgrade in coming weeks but I would like to understand what is going on with it.</p>
+<p>After updating frappe now I am getting pickle error on migrate</p>
+<pre><code class="lang-auto">AttributeError: Can't pickle local object 'allow_regional.&lt;locals&gt;.caller'
+</code></pre>
+<p>Tried <a>this</a> but no luck.</p>
+<p>This is where all pickle is being used</p>
+<pre><code class="lang-auto">apps/frappe/frappe/utils/redis_wrapper.py:6:from six.moves import cPickle as pickle
+apps/frappe/frappe/utils/redis_wrapper.py:46:                           self.setex(key, pickle.dumps(val), expires_in_sec)
+apps/frappe/frappe/utils/redis_wrapper.py:48:                           self.set(key, pickle.dumps(val))
+apps/frappe/frappe/utils/redis_wrapper.py:75:                           val = pickle.loads(val)
+apps/frappe/frappe/utils/redis_wrapper.py:160:                          key, pickle.dumps(value))
+apps/frappe/frappe/utils/redis_wrapper.py:165:          return {key: pickle.loads(value) for key, value in
+apps/frappe/frappe/utils/redis_wrapper.py:183:                  value = pickle.loads(value)
+</code></pre>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/internal-server-error-on-aws/144262">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/internal-server-error-on-aws/144262</link>
+          <pubDate>Tue, 18 Mar 2025 23:55:24 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-144262</guid>
+          <source url="https://discuss.frappe.io/t/internal-server-error-on-aws/144262.rss">Internal Server Error on AWS</source>
+        </item>
+        <item>
+          <title>Getting issues with Deploy Candidate in Press setup</title>
+          <dc:creator><![CDATA[malek]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>Hi guys, I have successfully setup all the 3 servers n1, m1 and f1 according to this <a href="https://frappecloud.com/docs/local-fc-setup" rel="noopener nofollow ugc">documentation</a>, but after adding the app, and deploy candidate, it keeps failing at the <em>Install Apps - Frappe</em> stage.</p>
+<p>Here is the error I keep seeing:</p>
+<pre><code class="lang-auto">bench init --python /usr/bin/python3.11 --no-backups --frappe-path file:///home/frappe/context/apps/frappe frappe-bench
+Setting Up Environment
+$ /usr/bin/python3.11 -m venv env
+$ /home/frappe/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+$ /home/frappe/frappe-bench/env/bin/python -m pip install --quiet wheel
+Getting frappe
+$ git clone file:///home/frappe/context/apps/frappe  --depth 1 --origin upstream
+Cloning into 'frappe'...
+fatal: detected dubious ownership in repository at '/home/frappe/context/apps/frappe/.git'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/frappe/context/apps/frappe/.git
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+subprocess.CalledProcessError: Command 'git clone file:///home/frappe/context/apps/frappe  --depth 1 --origin upstream' returned non-zero exit status 128.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/frappe/.local/lib/python3.11/site-packages/bench/commands/make.py", line 75, in init
+    init(
+  File "/home/frappe/.local/lib/python3.11/site-packages/bench/utils/render.py", line 105, in wrapper_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/frappe/.local/lib/python3.11/site-packages/bench/utils/system.py", line 87, in init
+    get_app(
+  File "/home/frappe/.local/lib/python3.11/site-packages/bench/app.py", line 770, in get_app
+    app.get()
+  File "/home/frappe/.local/lib/python3.11/site-packages/bench/utils/render.py", line 126, in wrapper_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/frappe/.local/lib/python3.11/site-packages/bench/app.py", line 203, in get
+    self.bench.run(
+  File "/home/frappe/.local/lib/python3.11/site-packages/bench/bench.py", line 48, in run
+    return exec_cmd(cmd, cwd=cwd or self.cwd, _raise=_raise)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/frappe/.local/lib/python3.11/site-packages/bench/utils/__init__.py", line 178, in exec_cmd
+    raise CommandFailedError(cmd) from subprocess.CalledProcessError(return_code, cmd)
+bench.exceptions.CommandFailedError: git clone file:///home/frappe/context/apps/frappe  --depth 1 --origin upstream
+
+ERROR: There was a problem while creating frappe-bench
+Do you want to rollback these changes? [y/N]: Aborted!
+INFO: A newer version of bench is available: 5.22.6 → 5.23.0
+process "/bin/sh -c bench init --python /usr/bin/python${PYTHON_VERSION} --no-backups --frappe-path file:///home/frappe/context/apps/frappe frappe-bench `#stage-apps-frappe`" did not complete successfully: exit code: 1
+------
+[stage-0 20/27] RUN --mount=type=cache,sharing=locked,target=/home/frappe/.cache,uid=1000,gid=1000 --mount=type=bind,source=apps/frappe,target=/home/frappe/context/apps/frappe bench init --python /usr/bin/python3.11 --no-backups --frappe-path file:///home/frappe/context/apps/frappe frappe-bench `#stage-apps-frappe`:
+File "/home/frappe/.local/lib/python3.11/site-packages/bench/bench.py", line 48, in run
+return exec_cmd(cmd, cwd=cwd or self.cwd, _raise=_raise)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/frappe/.local/lib/python3.11/site-packages/bench/utils/__init__.py", line 178, in exec_cmd
+raise CommandFailedError(cmd) from subprocess.CalledProcessError(return_code, cmd)
+bench.exceptions.CommandFailedError: git clone file:///home/frappe/context/apps/frappe  --depth 1 --origin upstream
+10.55
+ERROR: There was a problem while creating frappe-bench
+Do you want to rollback these changes? [y/N]: Aborted!
+INFO: A newer version of bench is available: 5.22.6 → 5.23.0
+------
+failed to solve: process "/bin/sh -c bench init --python /usr/bin/python${PYTHON_VERSION} --no-backups --frappe-path file:///home/frappe/context/apps/frappe frappe-bench `#stage-apps-frappe`" did not complete successfully: exit code: 1
+</code></pre>
+<p>I have done everything over the last few days, nothing works.</p>
+<p>Context: All the 3 servers are running Ubuntu 20.04 on Google Cloud.</p>
+<p>I would really appreciate some guidance from the community</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/getting-issues-with-deploy-candidate-in-press-setup/144229">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/getting-issues-with-deploy-candidate-in-press-setup/144229</link>
+          <pubDate>Tue, 18 Mar 2025 11:02:56 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-144229</guid>
+          <source url="https://discuss.frappe.io/t/getting-issues-with-deploy-candidate-in-press-setup/144229.rss">Getting issues with Deploy Candidate in Press setup</source>
+        </item>
+        <item>
+          <title>Cant create site what is this issue i have stucked i have tried all biut it not works</title>
+          <dc:creator><![CDATA[Anku_singh]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>(env) ankusingh@DESKTOP-9C880KG:~/frappe-bench$ bench --site mysite.local console<br>
+Traceback (most recent call last):<br>
+File “/home/ankusingh/.pyenv/versions/3.10.13/lib/python3.10/runpy.py”, line 196, in _run_module_as_main<br>
+return _run_code(code, main_globals, None,<br>
+File “/home/ankusingh/.pyenv/versions/3.10.13/lib/python3.10/runpy.py”, line 86, in _run_code<br>
+exec(code, run_globals)<br>
+File “/home/ankusingh/frappe-bench/apps/frappe/frappe/utils/bench_helper.py”, line 109, in <br>
+main()<br>
+File “/home/ankusingh/frappe-bench/apps/frappe/frappe/utils/bench_helper.py”, line 18, in main<br>
+click.Group(commands=commands)(prog_name=“bench”)<br>
+File “/home/ankusingh/frappe-bench/env/lib/python3.10/site-packages/click/core.py”, line 829, in <strong>call</strong><br>
+return self.main(*args, **kwargs)<br>
+File “/home/ankusingh/frappe-bench/env/lib/python3.10/site-packages/click/core.py”, line 782, in main<br>
+rv = self.invoke(ctx)<br>
+File “/home/ankusingh/frappe-bench/env/lib/python3.10/site-packages/click/core.py”, line 1259, in invoke<br>
+return _process_result(sub_ctx.command.invoke(sub_ctx))<br>
+File “/home/ankusingh/frappe-bench/env/lib/python3.10/site-packages/click/core.py”, line 1259, in invoke<br>
+return _process_result(sub_ctx.command.invoke(sub_ctx))<br>
+File “/home/ankusingh/frappe-bench/env/lib/python3.10/site-packages/click/core.py”, line 1066, in invoke<br>
+return ctx.invoke(self.callback, **ctx.params)<br>
+File “/home/ankusingh/frappe-bench/env/lib/python3.10/site-packages/click/core.py”, line 610, in invoke<br>
+return callback(*args, **kwargs)<br>
+File “/home/ankusingh/frappe-bench/env/lib/python3.10/site-packages/click/decorators.py”, line 21, in new_func<br>
+return f(get_current_context(), *args, **kwargs)<br>
+File “/home/ankusingh/frappe-bench/apps/frappe/frappe/commands/<strong>init</strong>.py”, line 29, in _func<br>
+ret = f(frappe.<em>dict(ctx.obj), *args, **kwargs)<br>
+File “/home/ankusingh/frappe-bench/apps/frappe/frappe/commands/utils.py”, line 632, in console<br>
+frappe.local.lang = frappe.db.get_default(“lang”)<br>
+File “/home/ankusingh/frappe-bench/apps/frappe/frappe/database/database.py”, line 1060, in get_default<br>
+d = self.get_defaults(key, parent)<br>
+File “/home/ankusingh/frappe-bench/apps/frappe/frappe/database/database.py”, line 1076, in get_defaults<br>
+defaults = frappe.defaults.get_defaults_for(parent)<br>
+File “/home/ankusingh/frappe-bench/apps/frappe/frappe/defaults.py”, line 238, in get_defaults_for<br>
+frappe.qb.from</em>(table)<br>
+File “/home/ankusingh/frappe-bench/apps/frappe/frappe/query_builder/utils.py”, line 87, in execute_query<br>
+result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep<br>
+File “/home/ankusingh/frappe-bench/apps/frappe/frappe/database/database.py”, line 221, in sql<br>
+self.connect()<br>
+File “/home/ankusingh/frappe-bench/apps/frappe/frappe/database/database.py”, line 126, in connect<br>
+self._conn: “MariadbConnection” | “PostgresConnection” = self.get_connection()<br>
+File “/home/ankusingh/frappe-bench/apps/frappe/frappe/database/mariadb/database.py”, line 103, in get_connection<br>
+conn = self._get_connection()<br>
+File “/home/ankusingh/frappe-bench/apps/frappe/frappe/database/mariadb/database.py”, line 109, in _get_connection<br>
+return self.create_connection()<br>
+File “/home/ankusingh/frappe-bench/apps/frappe/frappe/database/mariadb/database.py”, line 112, in create_connection<br>
+return pymysql.connect(**self.get_connection_settings())<br>
+File “/home/ankusingh/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py”, line 361, in <strong>init</strong><br>
+self.connect()<br>
+File “/home/ankusingh/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py”, line 669, in connect<br>
+self._request_authentication()<br>
+File “/home/ankusingh/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py”, line 957, in _request_authentication<br>
+auth_packet = self._read_packet()<br>
+File “/home/ankusingh/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py”, line 775, in _read_packet<br>
+packet.raise_for_error()<br>
+File “/home/ankusingh/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py”, line 219, in raise_for_error<br>
+err.raise_mysql_exception(self._data)<br>
+File “/home/ankusingh/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py”, line 150, in raise_mysql_exception<br>
+raise errorclass(errno, errval)<br>
+pymysql.err.OperationalError: (1045, “Access denied for user ‘_793a1b7354650ea2’@‘localhost’ (using password: YES)”)</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/cant-create-site-what-is-this-issue-i-have-stucked-i-have-tried-all-biut-it-not-works/144209">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/cant-create-site-what-is-this-issue-i-have-stucked-i-have-tried-all-biut-it-not-works/144209</link>
+          <pubDate>Tue, 18 Mar 2025 06:10:43 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-144209</guid>
+          <source url="https://discuss.frappe.io/t/cant-create-site-what-is-this-issue-i-have-stucked-i-have-tried-all-biut-it-not-works/144209.rss">Cant create site what is this issue i have stucked i have tried all biut it not works</source>
+        </item>
+        <item>
+          <title>About the Bench Manager, Is it still recommended?</title>
+          <dc:creator><![CDATA[bewh1629]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>Since the repository was archived by the owner on December 1, 2022, it is now read-only.</p>
+<p>A few questions:</p>
+<ul>
+<li>Is it still recommended, or has it been deprecated?</li>
+<li>Has it been integrated into another application?</li>
+<li>Does it still work with the latest version of Frappe?</li>
+</ul>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/about-the-bench-manager-is-it-still-recommended/144186">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/about-the-bench-manager-is-it-still-recommended/144186</link>
+          <pubDate>Mon, 17 Mar 2025 18:09:18 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-144186</guid>
+          <source url="https://discuss.frappe.io/t/about-the-bench-manager-is-it-still-recommended/144186.rss">About the Bench Manager, Is it still recommended?</source>
+        </item>
+        <item>
+          <title>MariaDB 11.7 with Vector Search</title>
+          <dc:creator><![CDATA[tukutela]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>Anyone attempted to use Frappe/ERPNext with MariaDB’s latest release 11.7? I’m keen to play with Vector Search and generate a RAG platform with our Financial data.</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/mariadb-11-7-with-vector-search/142438">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/mariadb-11-7-with-vector-search/142438</link>
+          <pubDate>Sat, 15 Feb 2025 03:40:19 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-142438</guid>
+          <source url="https://discuss.frappe.io/t/mariadb-11-7-with-vector-search/142438.rss">MariaDB 11.7 with Vector Search</source>
+        </item>
+  </channel>
+</rss>

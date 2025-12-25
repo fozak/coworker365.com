@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Setup Frappe development environment in a few minutes (frappe_docker) - Frappe Framework - Frappe Forum</title>
+    <meta name="description" content=":whale: Frappe Docker Development Environment Setup Guide
+Overview
+This setup gives you everything you need to start building apps with Frappe immediately — 
+without the pain of installing and configuring Python, Node, R&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/setup-frappe-development-environment-in-a-few-minutes-frappe-docker/153480" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Setup Frappe development environment in a few minutes (frappe_docker)&#39;" href="https://discuss.frappe.io/t/setup-frappe-development-environment-in-a-few-minutes-frappe-docker/153480.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/setup-frappe-development-environment-in-a-few-minutes-frappe-docker/153480" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/setup-frappe-development-environment-in-a-few-minutes-frappe-docker/153480" />
+<meta property="og:title" content="Setup Frappe development environment in a few minutes (frappe_docker)" />
+<meta name="twitter:title" content="Setup Frappe development environment in a few minutes (frappe_docker)" />
+<meta property="og:description" content="🐋 Frappe Docker Development Environment Setup Guide Overview This setup gives you everything you need to start building apps with Frappe immediately —  without the pain of installing and configuring Python, Node, Redis, and MariaDB on your computer.  Using Docker, you get:   Start fast – just clone, open, and code. No messy dependencies. Safe &amp; clean – your computer stays untouched. Same setup for everyone – no more “works on my machine” problems. Easy reset – if something breaks, reset in..." />
+<meta name="twitter:description" content="🐋 Frappe Docker Development Environment Setup Guide Overview This setup gives you everything you need to start building apps with Frappe immediately —  without the pain of installing and configuring Python, Node, Redis, and MariaDB on your computer.  Using Docker, you get:   Start fast – just clone, open, and code. No messy dependencies. Safe &amp; clean – your computer stays untouched. Same setup for everyone – no more “works on my machine” problems. Easy reset – if something breaks, reset in..." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:tag" content="developer" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="frappe" />
+<meta property="og:article:tag" content="docker" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="3 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="10 ❤" />
+<meta property="article:published_time" content="2025-09-12T17:12:30+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Setup Frappe development environment in a few minutes (frappe_docker)","mainEntity":{"@type":"Question","name":"Setup Frappe development environment in a few minutes (frappe_docker)","text":"<a name=\"p-480546-frappe-docker-development-environment-setup-guide-1\" class=\"anchor\" href=\"#p-480546-frappe-docker-development-environment-setup-guide-1\"><\/a>:whale: Frappe Docker Development Environment Setup Guide\n\n<a name=\"p-480546-overview-2\" class=\"anchor\" href=\"#p-480546-overview-2\"><\/a>Overview\n\nThis setup gives you everything you need to start building apps with Frappe immediately —\n\nwithout the pain of installing and configuring Python, Node, Redis, and MariaDB on your computer.\n\nUsing Docker, you get:\n\nStart fast – just &hellip;","upvoteCount":4,"answerCount":0,"datePublished":"2025-09-12T17:12:30.690Z","author":{"@type":"Person","name":"mohamed-ameer","url":"https://discuss.frappe.io/u/mohamed-ameer"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/setup-frappe-development-environment-in-a-few-minutes-frappe-docker/153480">Setup Frappe development environment in a few minutes (frappe_docker)</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/developer' class='discourse-tag' rel="tag">developer</a>, 
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
+            <a href='https://discuss.frappe.io/tag/docker' class='discourse-tag' rel="tag">docker</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Setup Frappe development environment in a few minutes (frappe_docker)'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/setup-frappe-development-environment-in-a-few-minutes-frappe-docker/153480'>
+      <meta itemprop='datePublished' content='2025-09-12T17:12:30Z'>
+        <meta itemprop='articleSection' content='Frappe Framework'>
+      <meta itemprop='keywords' content='developer, erpnext, frappe, docker'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mohamed-ameer'><span itemprop='name'>mohamed-ameer</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/setup-frappe-development-environment-in-a-few-minutes-frappe-docker/153480">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-09-12T17:12:30Z' class='post-time'>
+                    September 12, 2025,  5:12pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-12T17:12:30Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h1><a name="p-480546-frappe-docker-development-environment-setup-guide-1" class="anchor" href="#p-480546-frappe-docker-development-environment-setup-guide-1"></a><img src="https://discuss.frappe.io/images/emoji/twitter/whale.png?v=12" title=":whale:" class="emoji" alt=":whale:" loading="lazy" width="20" height="20"> Frappe Docker Development Environment Setup Guide</h1>
+<h2><a name="p-480546-overview-2" class="anchor" href="#p-480546-overview-2"></a>Overview</h2>
+<p>This setup gives you everything you need to start building apps with <strong>Frappe</strong> immediately —<br>
+without the pain of installing and configuring Python, Node, Redis, and MariaDB on your computer.</p>
+<p>Using <strong>Docker</strong>, you get:</p>
+<ul>
+<li><strong>Start fast</strong> – just clone, open, and code. No messy dependencies.</li>
+<li><strong>Safe &amp; clean</strong> – your computer stays untouched.</li>
+<li><strong>Same setup for everyone</strong> – no more “works on my machine” problems.</li>
+<li><strong>Easy reset</strong> – if something breaks, reset in one command.</li>
+<li><strong>Team-friendly</strong> – your teammates use the exact same environment.</li>
+</ul>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/point_right.png?v=12" title=":point_right:" class="emoji" alt=":point_right:" loading="lazy" width="20" height="20"> Think of this as a <strong>fast road for developers</strong>:<br>
+you skip the boring setup and jump straight into building apps, testing ideas, and shipping features.</p>
+<h2><a name="p-480546-quick-start-summary-3" class="anchor" href="#p-480546-quick-start-summary-3"></a>Quick Start Summary</h2>
+<h2><a name="p-480546-prerequisites-4" class="anchor" href="#p-480546-prerequisites-4"></a>Prerequisites</h2>
+<ul>
+<li>Docker Desktop installed and running</li>
+<li>Visual Studio Code with Remote Containers extension</li>
+<li>Git installed</li>
+</ul>
+<h2><a name="p-480546-setup-steps-5" class="anchor" href="#p-480546-setup-steps-5"></a>Setup Steps</h2>
+<h3><a name="p-480546-step-1-clone-and-setup-6" class="anchor" href="#p-480546-step-1-clone-and-setup-6"></a><strong>Step 1: Clone and Setup</strong></h3>
+<pre data-code-wrap="bash"><code class="lang-bash">git clone https://github.com/frappe/frappe_docker.git
+cd frappe_docker
+cp -R devcontainer-example .devcontainer
+cp -R development/vscode-example development/.vscode
+code .
+</code></pre>
+<h3><a name="p-480546-step-2-install-vs-code-extension-7" class="anchor" href="#p-480546-step-2-install-vs-code-extension-7"></a><strong>Step 2: Install VS Code Extension</strong></h3>
+<ul>
+<li>Press <code>Ctrl+Shift+X</code></li>
+<li>Install: <code>ms-vscode-remote.remote-containers</code></li>
+</ul>
+<h3><a name="p-480546-step-3-open-in-container-8" class="anchor" href="#p-480546-step-3-open-in-container-8"></a><strong>Step 3: Open in Container</strong></h3>
+<ul>
+<li>Press <code>Ctrl+Shift+P</code></li>
+<li>Select: <code>Dev Containers: Reopen in Container</code></li>
+<li>Wait for container to build (5-10 minutes first time)</li>
+</ul>
+<h3><a name="p-480546-step-4-initialize-frappe-bench-9" class="anchor" href="#p-480546-step-4-initialize-frappe-bench-9"></a><strong>Step 4: Initialize Frappe Bench</strong></h3>
+<pre data-code-wrap="bash"><code class="lang-bash">bench init --skip-redis-config-generation frappe-bench
+cd frappe-bench
+</code></pre>
+<h3><a name="p-480546-step-5-configure-database-redis-10" class="anchor" href="#p-480546-step-5-configure-database-redis-10"></a><strong>Step 5: Configure Database &amp; Redis</strong></h3>
+<pre data-code-wrap="bash"><code class="lang-bash">bench set-config -g db_host mariadb
+bench set-config -g redis_cache redis://redis-cache:6379
+bench set-config -g redis_queue redis://redis-queue:6379
+bench set-config -g redis_socketio redis://redis-queue:6379
+</code></pre>
+<h3><a name="p-480546-step-6-create-your-site-11" class="anchor" href="#p-480546-step-6-create-your-site-11"></a><strong>Step 6: Create Your Site</strong></h3>
+<pre data-code-wrap="bash"><code class="lang-bash">bench new-site --db-root-password 123 --admin-password admin --mariadb-user-host-login-scope=% your_site_name.localhost
+</code></pre>
+<h3><a name="p-480546-step-7-start-development-server-12" class="anchor" href="#p-480546-step-7-start-development-server-12"></a><strong>Step 7: Start Development Server</strong></h3>
+<pre data-code-wrap="bash"><code class="lang-bash">bench start
+</code></pre>
+<h3><a name="p-480546-step-8-access-your-site-13" class="anchor" href="#p-480546-step-8-access-your-site-13"></a><strong>Step 8: Access Your Site</strong></h3>
+<ul>
+<li>Open browser: <code>http://development.localhost:8000</code></li>
+<li>Login with admin/admin</li>
+</ul>
+<hr>
+<h2><a name="p-480546-daily-workflow-14" class="anchor" href="#p-480546-daily-workflow-14"></a>Daily Workflow</h2>
+<h3><a name="p-480546-starting-development-session-15" class="anchor" href="#p-480546-starting-development-session-15"></a><strong>Starting Development Session:</strong></h3>
+<ol>
+<li>Open VS Code</li>
+<li>Navigate to <code>frappe_docker</code> folder</li>
+<li>Press <code>Ctrl+Shift+P</code> → <code>Dev Containers: Reopen in Container</code></li>
+<li>Wait for container to start</li>
+<li>Open terminal and run <code>bench start</code></li>
+</ol>
+<h3><a name="p-480546-stopping-development-session-16" class="anchor" href="#p-480546-stopping-development-session-16"></a><strong>Stopping Development Session:</strong></h3>
+<ol>
+<li>Press <code>Ctrl+Shift+P</code> → <code>Dev Containers: Reopen Folder Locally</code></li>
+<li>This closes the container and returns you to your local system</li>
+</ol>
+<hr>
+<h2><a name="p-480546-detailed-setup-process-17" class="anchor" href="#p-480546-detailed-setup-process-17"></a>Detailed Setup Process</h2>
+<h2><a name="p-480546-prerequisites-18" class="anchor" href="#p-480546-prerequisites-18"></a>Prerequisites</h2>
+<p>Before starting, ensure you have:</p>
+<ul>
+<li><strong>Docker Desktop</strong> installed and running</li>
+<li><strong>Visual Studio Code</strong> with Remote Containers extension</li>
+<li><strong>Git</strong> for cloning repositories</li>
+<li><strong>Basic knowledge</strong> of Frappe framework</li>
+</ul>
+<h3><a name="p-480546-step-1-clone-and-setup-frappe-docker-19" class="anchor" href="#p-480546-step-1-clone-and-setup-frappe-docker-19"></a>Step 1: Clone and Setup Frappe Docker</h3>
+<pre data-code-wrap="bash"><code class="lang-bash"># Clone the frappe_docker repository
+git clone https://github.com/frappe/frappe_docker.git
+cd frappe_docker
+
+# Copy development container configuration
+cp -R devcontainer-example .devcontainer
+cp -R development/vscode-example development/.vscode
+
+# Open in Visual Studio Code
+code .
+</code></pre>
+<h3><a name="p-480546-step-2-install-required-extensions-20" class="anchor" href="#p-480546-step-2-install-required-extensions-20"></a>Step 2: Install Required Extensions</h3>
+<ol>
+<li>Press <code>Ctrl+Shift+X</code> to open Extensions</li>
+<li>Search for and install: <code>ms-vscode-remote.remote-containers</code></li>
+<li>Wait for installation to complete</li>
+</ol>
+<h3><a name="p-480546-step-3-open-in-container-21" class="anchor" href="#p-480546-step-3-open-in-container-21"></a>Step 3: Open in Container</h3>
+<ol>
+<li>Press <code>Ctrl+Shift+P</code> to open Command Palette</li>
+<li>Type and select: <code>Dev Containers: Reopen in Container</code></li>
+<li>Wait for container to build and start (first time may take 5-10 minutes)</li>
+</ol>
+<h3><a name="p-480546-step-123-as-a-one-step-container-environment-setup-22" class="anchor" href="#p-480546-step-123-as-a-one-step-container-environment-setup-22"></a>Step 1,2,3 (as a one step): Container Environment Setup</h3>
+<h4><a name="p-480546-why-this-step-23" class="anchor" href="#p-480546-why-this-step-23"></a>Why This Step?</h4>
+<p>The development container provides a pre-configured environment with all necessary tools and dependencies for Frappe development.</p>
+<h4><a name="p-480546-what-happens-24" class="anchor" href="#p-480546-what-happens-24"></a>What Happens?</h4>
+<ul>
+<li>Docker builds a container with Python, Node.js, MariaDB, Redis, and other dependencies</li>
+<li>VS Code connects to the container, giving you a full development environment</li>
+<li>All your code runs inside the container, isolated from your host system</li>
+</ul>
+<h3><a name="p-480546-step-4-initialize-frappe-bench-25" class="anchor" href="#p-480546-step-4-initialize-frappe-bench-25"></a>Step 4: Initialize Frappe Bench</h3>
+<p>Once inside the container, open the terminal and run:</p>
+<pre data-code-wrap="bash"><code class="lang-bash"># Initialize a new Frappe bench (skip Redis config as it's handled by Docker)
+bench init --skip-redis-config-generation frappe-bench
+
+# Navigate to the bench directory
+cd frappe-bench
+</code></pre>
+<h4><a name="p-480546-why-skip-redis-config-generation-26" class="anchor" href="#p-480546-why-skip-redis-config-generation-26"></a>Why <code>--skip-redis-config-generation</code>?</h4>
+<p>Docker handles Redis configuration automatically, so we skip the default Redis setup to avoid conflicts.</p>
+<h3><a name="p-480546-step-5-configure-database-and-redis-connections-27" class="anchor" href="#p-480546-step-5-configure-database-and-redis-connections-27"></a>Step 5: Configure Database and Redis Connections</h3>
+<pre data-code-wrap="bash"><code class="lang-bash"># Configure database connection to use Docker MariaDB
+bench set-config -g db_host mariadb
+
+# Configure Redis connections for different purposes
+bench set-config -g redis_cache redis://redis-cache:6379
+bench set-config -g redis_queue redis://redis-queue:6379
+bench set-config -g redis_socketio redis://redis-queue:6379
+</code></pre>
+<h4><a name="p-480546-what-each-configuration-does-28" class="anchor" href="#p-480546-what-each-configuration-does-28"></a>What Each Configuration Does:</h4>
+<ul>
+<li><strong><code>db_host mariadb</code></strong>: Points to the MariaDB container</li>
+<li><strong><code>redis_cache</code></strong>: Used for caching data</li>
+<li><strong><code>redis_queue</code></strong>: Used for background job processing</li>
+<li><strong><code>redis_socketio</code></strong>: Used for real-time communication</li>
+</ul>
+<h4><a name="p-480546-verify-configuration-29" class="anchor" href="#p-480546-verify-configuration-29"></a>Verify Configuration:</h4>
+<pre data-code-wrap="bash"><code class="lang-bash"># Check if configuration is correct
+cat frappe-bench/sites/common_site_config.json
+</code></pre>
+<p>Expected output should show:</p>
+<pre data-code-wrap="json"><code class="lang-json">{
+    "db_host": "mariadb",
+    "redis_cache": "redis://redis-cache:6379",
+    "redis_queue": "redis://redis-queue:6379",
+    "redis_socketio": "redis://redis-queue:6379"
+}
+</code></pre>
+<h3><a name="p-480546-step-6-create-your-first-site-30" class="anchor" href="#p-480546-step-6-create-your-first-site-30"></a>Step 6: Create Your First Site</h3>
+<pre data-code-wrap="bash"><code class="lang-bash"># Create a new site (replace 'your_site_name' with your preferred name)
+bench new-site --db-root-password 123 --admin-password admin --mariadb-user-host-login-scope=% your_site_name.localhost
+</code></pre>
+<h4><a name="p-480546-parameters-explained-31" class="anchor" href="#p-480546-parameters-explained-31"></a>Parameters Explained:</h4>
+<ul>
+<li><strong><code>--db-root-password 123</code></strong>: MariaDB root password (Docker default)</li>
+<li><strong><code>--admin-password admin</code></strong>: Frappe admin user password</li>
+<li><strong><code>--mariadb-user-host-login-scope=%</code></strong>: Allows connections from any host</li>
+<li><strong><code>your_site_name.localhost</code></strong>: Your site name (use <code>.localhost</code> for local development)</li>
+</ul>
+<h3><a name="p-480546-step-7-start-development-server-32" class="anchor" href="#p-480546-step-7-start-development-server-32"></a>Step 7: Start Development Server</h3>
+<pre data-code-wrap="bash"><code class="lang-bash"># Start the Frappe development server
+bench start
+</code></pre>
+<h4><a name="p-480546-what-happens-33" class="anchor" href="#p-480546-what-happens-33"></a>What Happens:</h4>
+<ul>
+<li>Frappe starts the web server</li>
+<li>All services (MariaDB, Redis) are automatically started</li>
+<li>Your site becomes accessible at <code>http://development.localhost:8000</code></li>
+</ul>
+<h2><a name="p-480546-development-workflow-34" class="anchor" href="#p-480546-development-workflow-34"></a>Development Workflow</h2>
+<h3><a name="p-480546-daily-development-routine-35" class="anchor" href="#p-480546-daily-development-routine-35"></a>Daily Development Routine</h3>
+<h4><a name="p-480546-starting-your-development-session-36" class="anchor" href="#p-480546-starting-your-development-session-36"></a>Starting Your Development Session:</h4>
+<ol>
+<li>Open VS Code</li>
+<li>Navigate to your <code>frappe_docker</code> folder</li>
+<li>Press <code>Ctrl+Shift+P</code> → <code>Dev Containers: Reopen in Container</code></li>
+<li>Wait for container to start</li>
+<li>Open terminal and run <code>bench start</code></li>
+</ol>
+<h4><a name="p-480546-stopping-your-development-session-37" class="anchor" href="#p-480546-stopping-your-development-session-37"></a>Stopping Your Development Session:</h4>
+<ol>
+<li>Press <code>Ctrl+Shift+P</code> → <code>Dev Containers: Reopen Folder Locally</code></li>
+<li>This closes the container and returns you to your local system</li>
+</ol>
+<h3><a name="p-480546-working-with-multiple-sites-38" class="anchor" href="#p-480546-working-with-multiple-sites-38"></a>Working with Multiple Sites</h3>
+<pre data-code-wrap="bash"><code class="lang-bash"># Create additional sites
+bench new-site --db-root-password 123 --admin-password admin --mariadb-user-host-login-scope=% site2.localhost
+
+# List all sites
+bench list-sites
+
+# Switch between sites
+bench use site1.localhost
+bench use site2.localhost
+</code></pre>
+<h3><a name="p-480546-installing-apps-39" class="anchor" href="#p-480546-installing-apps-39"></a>Installing Apps</h3>
+<pre data-code-wrap="bash"><code class="lang-bash"># Install ERPNext
+bench get-app erpnext
+bench --site your_site_name.localhost install-app erpnext
+
+# Install custom apps
+bench get-app https://github.com/your-username/your-app.git
+bench --site your_site_name.localhost install-app your_app
+</code></pre>
+<hr>
+<h3><a name="p-480546-errors-may-happen-if-you-switch-from-frappe-v16-to-v15-40" class="anchor" href="#p-480546-errors-may-happen-if-you-switch-from-frappe-v16-to-v15-40"></a>Errors may happen if you switch from frappe v16 to v15</h3>
+<details>
+  <summary><h4>❌ NameError: name 'null' is not defined</h4></summary>
+<p><strong>Cause:</strong><br>
+This usually happens due to cached assets or browser issues after switching branches.</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Run: <code>bench clear-cache</code></li>
+<li>Or try accessing with a different browser</li>
+</ul>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/link.png?v=12" title=":link:" class="emoji" alt=":link:" loading="lazy" width="20" height="20"> <a href="https://discuss.frappe.io/t/server-error-at-the-front-of-any-page/120135">Reference</a></p>
+</details>
+<details><summary><h4>❌ bench stop / bench start fails: Missing module (e.g., "Cannot find module 'superagent'")</h4></summary>
+<p><strong>Cause:</strong><br>
+Node.js dependencies are missing after switching branches.</p>
+<p><strong>Solution:</strong><br>
+Re-install required packages:</p>
+<pre data-code-wrap="bash"><code class="lang-bash">bench setup requirements
+</code></pre>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/link.png?v=12" title=":link:" class="emoji" alt=":link:" loading="lazy" width="20" height="20"> <a href="https://discuss.frappe.io/t/bench-start-with-serveral-errors/40904/13">Reference</a></p>
+</details>
+<details>
+  <summary><h4>❌ ValueError: id must not contain ":"</h4></summary>
+<p><strong>Cause:</strong><br>
+Older Frappe version had a bug in job ID generation (create_job_id in frappe/utils/backgroundjobs.py).</p>
+<p><strong>Solution:</strong></p>
+<p>Best fix: Update to the latest Frappe version.</p>
+<p>Manual fix: Update the function to replace : with |:</p>
+<pre data-code-wrap="python"><code class="lang-python">def create_job_id(job_id: str | None = None) -&gt; str:
+	"""
+	Generate unique job id for deduplication
+	"""
+	if not job_id:
+		job_id = str(uuid4())
+	else:
+		job_id = job_id.replace(":", "|")
+	return f"{frappe.local.site}||{job_id}"
+</code></pre>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/link.png?v=12" title=":link:" class="emoji" alt=":link:" loading="lazy" width="20" height="20"> <a href="https://discuss.frappe.io/t/migrate-command-error-in/145017/2">Reference</a></p>
+</details>
+<hr>
+<h4><a name="p-480546-for-more-details-read-the-official-documentaionhttpsgithubcomfrappefrappe_dockerblobmaindocsdevelopmentmdbootstrap-containers-for-development-41" class="anchor" href="#p-480546-for-more-details-read-the-official-documentaionhttpsgithubcomfrappefrappe_dockerblobmaindocsdevelopmentmdbootstrap-containers-for-development-41"></a>For More Details =&gt; <a href="https://github.com/frappe/frappe_docker/blob/main/docs/development.md#bootstrap-containers-for-development" rel="noopener nofollow ugc">Read the Official Documentaion</a></h4>
+<p><em>Happy coding! <img src="https://discuss.frappe.io/images/emoji/twitter/grin.png?v=12" title=":grin:" class="emoji" alt=":grin:" loading="lazy" width="20" height="20"></em></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/frappe-installation-for-windows-os/157470/3">Frappe Installation for Windows OS</a>
+                        <meta itemprop='position' content='5'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-13T02:11:22Z' class='post-time'>
+                    September 13, 2025,  2:11am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-13T02:11:22Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Check this script <a href="https://github.com/frappe/frappe_docker/blob/main/docs/development.md#setup-bench--new-site-using-script" class="inline-onebox">frappe_docker/docs/development.md at main · frappe/frappe_docker · GitHub</a></p>
+<p>Once inside devcontainer, execute it.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/samy4sam'><span itemprop='name'>samy4sam</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-15T15:14:17Z' class='post-time'>
+                    September 15, 2025,  3:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-15T15:14:17Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We created a PR today that will significantly improve the performance of the development environment on computers with ARM-based CPUs:</p><aside class="onebox githubpullrequest" data-onebox-src="https://github.com/frappe/frappe_docker/pull/1707">
+  <header class="source">
+
+      <a href="https://github.com/frappe/frappe_docker/pull/1707" target="_blank" rel="noopener nofollow ugc">github.com/frappe/frappe_docker</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="github-row" data-github-private-repo="false">
+
+
+
+    <div class="github-icon-container" title="Pull Request">
+      <svg width="60" height="60" class="github-icon" viewBox="0 0 12 16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+    </div>
+
+  <div class="github-info-container">
+
+
+
+      <h4>
+        <a href="https://github.com/frappe/frappe_docker/pull/1707" target="_blank" rel="noopener nofollow ugc">Improve devcontainer behaviour on ARM Macs</a>
+      </h4>
+
+    <div class="branches">
+      <code>main</code> ← <code>Centura-AG:main</code>
+    </div>
+
+      <div class="github-info">
+        <div class="date">
+          opened <span class="discourse-local-date" data-format="ll" data-date="2025-09-15" data-time="08:43:29" data-timezone="UTC">08:43AM - 15 Sep 25 UTC</span>
+        </div>
+
+        <div class="user">
+          <a href="https://github.com/nliechti" target="_blank" rel="noopener nofollow ugc">
+            <img alt="" src="https://avatars.githubusercontent.com/u/2284764?v=4" class="onebox-avatar-inline" width="20" height="20">
+            nliechti
+          </a>
+        </div>
+
+        <div class="lines" title="2 commits changed 1 files with 1 additions and 5 deletions">
+          <a href="https://github.com/frappe/frappe_docker/pull/1707/files" target="_blank" rel="noopener nofollow ugc">
+            <span class="added">+1</span>
+            <span class="removed">-5</span>
+          </a>
+        </div>
+      </div>
+  </div>
+</div>
+
+  <div class="github-row">
+    <p class="github-body-container">We discovered that the devcontainer experience is subobtimal on ARM Macs. I thin<span class="show-more-container"><a href="https://github.com/frappe/frappe_docker/pull/1707" target="_blank" rel="noopener nofollow ugc" class="show-more">…</a></span><span class="excerpt hidden">k these are very popular and maybe even Windows or Linux builds with ARM CPU's will someday be useful ;).
+
+This change increased the performance of our local dev Setup significantly.</span></p>
+  </div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/yourGuy'><span itemprop='name'>yourGuy</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-21T06:57:26Z' class='post-time'>
+                    October 21, 2025,  6:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-21T06:57:26Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>How do I work with local code and not code from a git repo ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Peer'><span itemprop='name'>Peer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-21T07:54:17Z' class='post-time'>
+                    October 21, 2025,  7:54am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-21T07:54:17Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Then you need to know what you are doing, lest you loose your local code!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/yourGuy'><span itemprop='name'>yourGuy</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-22T02:59:01Z' class='post-time'>
+                    October 22, 2025,  2:59am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-22T02:59:01Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m here to learn, can you explain what I “need to know“ ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Peer'><span itemprop='name'>Peer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-22T06:02:22Z' class='post-time'>
+                    October 22, 2025,  6:02am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-22T06:02:22Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>You can build your app in the apps directory of your bench, but this could be overwritten under certain circumstances which you should be aware of and able to know/recognize beforehand. If not, you might lose your work.</p>
+<p>You can also have a local (e.g. on your dev computer; better: on another computer in the LAN, better because if the dev station dies, you still have the repo; you can also use another self-owned git repo even “more elsewhere”, but short of having it at an organizational entity you have no control over) git repo, but it should reside elsewhere than in said above apps directory of your bench, simply in order to use it for one layer of fast and immediate backup just in case. (Note that “local” can have several meanings, depending on your awareness of the dangers coming from updates and errors by yourself, other devs, hardware failure, changes made by external organizations.)</p>
+<p>You need to know enough about git to not shoot yourself in the foot, e.g. with “git hard –reset” command or other git commands that help you destroy parts of or whole projects if used inadvertently or when tired or so.</p>
+<p>Some bench commands, or also frappe script constructs, can be destructive. Sometimes they warn by saying so with terminology “only do this if you know what you are doing” in the documentation or CLI messages. So know what you are doing, and be wary that there might be no such warning if using the framework, because for some reason it’s not there albeit it should be or would be better to be there.</p>
+<p>Happy developing! It’s a lot of fun, but there are risks of many different kinds.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/usmanalikhan'><span itemprop='name'>usmanalikhan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-30T14:55:14Z' class='post-time'>
+                    November 30, 2025,  2:55pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-30T14:55:14Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Would this work on VPS same way? from VPS or deployment perspective, having to restart it everyday would be a hassle.<br>
+also it this for v16 or v15?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Yamen_Zakhour'><span itemprop='name'>Yamen_Zakhour</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-01T00:48:02Z' class='post-time'>
+                    December 1, 2025, 12:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-01T00:55:13Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This is for development purposes only, if you restart your VPS/container you would need to bench start again. It works anywhere you have docker installed and for both versions.</p>
+<p>Edit: if you want it for staging (production-like development environment with ssl, socket, redis) you can try my template via Dokploy. It also starts automatically after restarts.</p>
+<aside class="quote quote-modified" data-post="1" data-topic="156409">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/yamen_zakhour/48/91826_2.png" class="avatar">
+    <div class="quote-title__text-content">
+      <a href="https://discuss.frappe.io/t/guide-development-instances-on-dokploy/156409">[Guide] Development Instances on Dokploy</a> <a class="badge-category__wrapper " href="/c/framework/5"><span data-category-id="5" style="--category-badge-color: #F7941D; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category --style-square " title="This is a subforum for all discussions related to Frappe Framework."><span class="badge-category__name">Frappe Framework</span></span></a>
+    </div>
+  </div>
+  <blockquote>
+    Note 
+This guide is for setting up Development instance on Dokploy. 
+For Production instance on Dokploy check <a href="https://discuss.frappe.io/t/how-to-setup-frappe-benches-sites-and-custom-domains-with-dokploy/141521/15">this</a>. 
+To setup development containers locally on your PC use <a href="https://github.com/yamenzak/FrappeDev" rel="noopener nofollow ugc">this</a>. 
+
+<a name="p-485590-setting-up-dokploy-1" class="anchor" href="#p-485590-setting-up-dokploy-1"></a>Setting up Dokploy
+To setup Dokploy on your server, follow the <a href="https://docs.dokploy.com/docs/core/installation" rel="noopener nofollow ugc">official guide</a>. 
+Personally, I like to create a project called Frappe which includes two environments Production &amp; Development. However you can setup a separate project for development. 
+Then add a service to your environment, and choose compose. Name does…
+  </blockquote>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/meichthys'><span itemprop='name'>meichthys</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-01T20:45:37Z' class='post-time'>
+                    December 1, 2025,  8:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-01T20:45:37Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ve found that frappe-manager is the easiest way to set up a development (or production) environment in seconds.</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/rtCamp/Frappe-Manager/issues">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" alt="" width="32" height="32">
+
+      <a href="https://github.com/rtCamp/Frappe-Manager/issues" target="_blank" rel="noopener nofollow ugc">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/344;"><img src="https://opengraph.githubassets.com/ea78d9bb80a939d7530799e1e403c76a6a76cab5fccadc5c386fc4dfc3b355d7/rtCamp/Frappe-Manager" class="thumbnail" alt="" width="690" height="345"></div>
+
+<h3><a href="https://github.com/rtCamp/Frappe-Manager/issues" target="_blank" rel="noopener nofollow ugc">rtCamp/Frappe-Manager</a></h3>
+
+  <p>A CLI tool based on Docker Compose to easily manage Frappe based projects. - rtCamp/Frappe-Manager</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

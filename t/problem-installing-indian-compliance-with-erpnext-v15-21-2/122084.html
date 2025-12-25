@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Problem installing Indian Compliance with ERPNext v15.21.2 - India Compliance - Frappe Forum</title>
+    <meta name="description" content="I am trying to install India compliance with ERPnext V15.21.2 but getting following error 
+An error occurred while installing india_compliance: Module import failed for Currency Exchange Settings, the DocType you&amp;#39;re tryi&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/problem-installing-indian-compliance-with-erpnext-v15-21-2/122084" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Problem installing Indian Compliance with ERPNext v15.21.2&#39;" href="https://discuss.frappe.io/t/problem-installing-indian-compliance-with-erpnext-v15-21-2/122084.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/problem-installing-indian-compliance-with-erpnext-v15-21-2/122084" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/problem-installing-indian-compliance-with-erpnext-v15-21-2/122084" />
+<meta property="og:title" content="Problem installing Indian Compliance with ERPNext v15.21.2" />
+<meta name="twitter:title" content="Problem installing Indian Compliance with ERPNext v15.21.2" />
+<meta property="og:description" content="I am trying to install India compliance with ERPnext V15.21.2 but getting following error  An error occurred while installing india_compliance: Module import failed for Currency Exchange Settings, the DocType you&#39;re trying to open might be deleted.&lt;br&gt; Error: No module named &#39;frappe.core.doctype.currency_exchange_settings&#39; 2024-04-29 21:23:48 Traceback with variables (most recent call last): 2024-04-29 21:23:48   File &quot;apps/frappe/frappe/commands/site.py&quot;, line 445, in install_app 2024-04-29 21:..." />
+<meta name="twitter:description" content="I am trying to install India compliance with ERPnext V15.21.2 but getting following error  An error occurred while installing india_compliance: Module import failed for Currency Exchange Settings, the DocType you&#39;re trying to open might be deleted.&lt;br&gt; Error: No module named &#39;frappe.core.doctype.currency_exchange_settings&#39; 2024-04-29 21:23:48 Traceback with variables (most recent call last): 2024-04-29 21:23:48   File &quot;apps/frappe/frappe/commands/site.py&quot;, line 445, in install_app 2024-04-29 21:..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:section" content="India Compliance" />
+<meta property="og:article:section:color" content="E45735" />
+<meta property="og:article:tag" content="installation_problem" />
+<meta property="og:article:tag" content="erpnext" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="3 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2024-04-29T16:06:06+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Problem installing Indian Compliance with ERPNext v15.21.2","mainEntity":{"@type":"Question","name":"Problem installing Indian Compliance with ERPNext v15.21.2","text":"I am trying to install India compliance with ERPnext V15.21.2 but getting following error\n\nAn error occurred while installing india_compliance: Module import failed for Currency Exchange Settings, the DocType you&#39;re trying to open might be deleted.&lt;br&gt; Error: No module named &#39;frappe.core.doctype.cur&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2024-04-29T16:06:06.661Z","author":{"@type":"Person","name":"murtaza.ghadiali","url":"https://discuss.frappe.io/u/murtaza.ghadiali"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/problem-installing-indian-compliance-with-erpnext-v15-21-2/122084">Problem installing Indian Compliance with ERPNext v15.21.2</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/india-compliance/65" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #E45735'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>India Compliance</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/installation_problem' class='discourse-tag' rel="tag">installation_problem</a>, 
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Problem installing Indian Compliance with ERPNext v15.21.2'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/problem-installing-indian-compliance-with-erpnext-v15-21-2/122084'>
+      <meta itemprop='datePublished' content='2024-04-29T16:06:06Z'>
+        <meta itemprop='articleSection' content='India Compliance'>
+      <meta itemprop='keywords' content='installation_problem, erpnext'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/murtaza.ghadiali'><span itemprop='name'>murtaza.ghadiali</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/problem-installing-indian-compliance-with-erpnext-v15-21-2/122084">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2024-04-29T16:06:06Z' class='post-time'>
+                    April 29, 2024,  4:06pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-04-29T16:06:06Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am trying to install India compliance with ERPnext V15.21.2 but getting following error</p>
+<pre><code class="lang-auto">An error occurred while installing india_compliance: Module import failed for Currency Exchange Settings, the DocType you're trying to open might be deleted.&lt;br&gt; Error: No module named 'frappe.core.doctype.currency_exchange_settings'
+2024-04-29 21:23:48 Traceback with variables (most recent call last):
+2024-04-29 21:23:48   File "apps/frappe/frappe/commands/site.py", line 445, in install_app
+2024-04-29 21:23:48     _install_app(app, verbose=context.verbose, force=force)
+2024-04-29 21:23:48       context = {'sites': ['frontend'], 'force': False, 'verbose': False, 'profile': False}
+2024-04-29 21:23:48       apps = ('india_compliance',)
+2024-04-29 21:23:48       force = False
+2024-04-29 21:23:48       _install_app = &lt;function install_app at 0x7f3409248c20&gt;
+2024-04-29 21:23:48       filelock = &lt;function filelock at 0x7f340923e020&gt;
+2024-04-29 21:23:48       exit_code = 0
+2024-04-29 21:23:48       site = 'frontend'
+2024-04-29 21:23:48       app = 'india_compliance'
+2024-04-29 21:23:48       err = ImportError("Module import failed for Currency Exchange Settings, the DocType you're trying to open might be deleted.&lt;br&gt; Error: No module named 'frappe.core.doctype.currency_exchange_settings'")
+2024-04-29 21:23:48   File "apps/frappe/frappe/installer.py", line 273, in install_app
+2024-04-29 21:23:48     install_app(required_app, verbose=verbose)
+2024-04-29 21:23:48       name = 'india_compliance'
+2024-04-29 21:23:48       verbose = False
+2024-04-29 21:23:48       set_as_patched = True
+2024-04-29 21:23:48       force = False
+2024-04-29 21:23:48       sync_jobs = &lt;function sync_jobs at 0x7f3408246840&gt;
+2024-04-29 21:23:48       sync_for = &lt;function sync_for at 0x7f3408247880&gt;
+2024-04-29 21:23:48       sync_customizations = &lt;function sync_customizations at 0x7f34093ce7a0&gt;
+2024-04-29 21:23:48       sync_fixtures = &lt;function sync_fixtures at 0x7f3408247a60&gt;
+2024-04-29 21:23:48       app_hooks = {'accounting_dimension_doctypes': ['Bill of Entry', 'Bill of Entry Item'], 'after_app_install': ['india_compliance.install.after_app_install'], 'after_install': ['india_compliance.install.after_install'], 'after_migrate': ['india_compliance.audit_trail.setup.after_migrate'], 'app_color': ['grey'], 'app_description': ['ERPNext app to simplify compliance with Indian Rules and Regulations'], 'app_email': ['hello@indiacompliance.app'], 'app_icon': ['octicon octicon-file-directory'], 'app_include_js': ['india_compliance.bundle.js'], 'app_license': ['GNU General Public License (v3)'], 'app_name': ['india_compliance'], 'app_publisher': ['Resilient Tech'], 'app_title': ['India Compliance'], 'audit_trail_doctypes': ['Accounts Settings', 'Dunning', 'Invoice Discounting', 'Journal Entry', 'Payment Entry', 'Period Closing Voucher', 'Process Deferred Accounting', 'Purchase Invoice', 'Sales Invoice', 'Asset', 'Asset Capitalization', 'Asset Repair', 'Delivery Note', 'Landed Cost Voucher', 'Purchase R...
+2024-04-29 21:23:48       installed_apps = ['frappe']
+2024-04-29 21:23:48       app = 'frappe/erpnext'
+2024-04-29 21:23:48       required_app = 'erpnext'
+2024-04-29 21:23:48   File "apps/frappe/frappe/installer.py", line 311, in install_app
+2024-04-29 21:23:48     frappe.get_attr(after_install)()
+2024-04-29 21:23:48       name = 'erpnext'
+2024-04-29 21:23:48       verbose = False
+2024-04-29 21:23:48       set_as_patched = True
+2024-04-29 21:23:48       force = False
+2024-04-29 21:23:48       sync_jobs = &lt;function sync_jobs at 0x7f3408246840&gt;
+2024-04-29 21:23:48       sync_for = &lt;function sync_for at 0x7f3408247880&gt;
+2024-04-29 21:23:48       sync_customizations = &lt;function sync_customizations at 0x7f34093ce7a0&gt;
+2024-04-29 21:23:48       sync_fixtures = &lt;function sync_fixtures at 0x7f3408247a60&gt;
+2024-04-29 21:23:48       app_hooks = {'accounting_dimension_doctypes': ['GL Entry', 'Payment Ledger Entry', 'Sales Invoice', 'Purchase Invoice', 'Payment Entry', 'Asset', 'Stock Entry', 'Budget', 'Delivery Note', 'Sales Invoice Item', 'Purchase Invoice Item', 'Purchase Order Item', 'Sales Order Item', 'Journal Entry Account', 'Material Request Item', 'Delivery Note Item', 'Purchase Receipt Item', 'Stock Entry Detail', 'Payment Entry Deduction', 'Sales Taxes and Charges', 'Purchase Taxes and Charges', 'Shipping Rule', 'Landed Cost Item', 'Asset Value Adjustment', 'Asset Repair', 'Asset Capitalization', 'Loyalty Program', 'Stock Reconciliation', 'POS Profile', 'Opening Invoice Creation Tool', 'Opening Invoice Creation Tool Item', 'Subscription', 'Subscription Plan', 'POS Invoice', 'POS Invoice Item', 'Purchase Order', 'Purchase Receipt', 'Sales Order', 'Subcontracting Order', 'Subcontracting Order Item', 'Subcontracting Receipt', 'Subcontracting Receipt Item', 'Account Closing Balance', 'Supplier Quotation', 'Supplier Quota...
+2024-04-29 21:23:48       installed_apps = ['frappe']
+2024-04-29 21:23:48       before_install = 'erpnext.setup.install.check_frappe_version'
+2024-04-29 21:23:48       out = None
+2024-04-29 21:23:48       after_install = 'erpnext.setup.install.after_install'
+2024-04-29 21:23:48   File "apps/erpnext/erpnext/setup/install.py", line 26, in after_install
+2024-04-29 21:23:48     set_single_defaults()
+2024-04-29 21:23:48   File "apps/erpnext/erpnext/setup/install.py", line 92, in set_single_defaults
+2024-04-29 21:23:48     setup_currency_exchange()
+2024-04-29 21:23:48       dt = 'Stock Settings'
+2024-04-29 21:23:48       default_values = ()
+2024-04-29 21:23:48       doc = &lt;PrintSettings: Print Settings&gt;
+2024-04-29 21:23:48       fieldname = 'print_style_preview'
+2024-04-29 21:23:48       value = None
+2024-04-29 21:23:48   File "apps/erpnext/erpnext/setup/install.py", line 96, in setup_currency_exchange
+2024-04-29 21:23:48     ces = frappe.get_single("Currency Exchange Settings")
+2024-04-29 21:23:48   File "apps/frappe/frappe/__init__.py", line 1349, in get_single
+2024-04-29 21:23:48     return get_doc(doctype, doctype)
+2024-04-29 21:23:48       doctype = 'Currency Exchange Settings'
+2024-04-29 21:23:48   File "apps/frappe/frappe/__init__.py", line 1329, in get_doc
+2024-04-29 21:23:48     doc = frappe.model.document.get_doc(*args, **kwargs)
+2024-04-29 21:23:48       args = ('Currency Exchange Settings', 'Currency Exchange Settings')
+2024-04-29 21:23:48       kwargs = {}
+2024-04-29 21:23:48       frappe = &lt;module 'frappe' from 'apps/frappe/frappe/__init__.py'&gt;
+2024-04-29 21:23:48   File "apps/frappe/frappe/model/document.py", line 83, in get_doc
+2024-04-29 21:23:48     controller = get_controller(doctype)
+2024-04-29 21:23:48       args = ('Currency Exchange Settings', 'Currency Exchange Settings')
+2024-04-29 21:23:48       kwargs = {}
+2024-04-29 21:23:48       doctype = 'Currency Exchange Settings'
+2024-04-29 21:23:48   File "apps/frappe/frappe/model/base_document.py", line 70, in get_controller
+2024-04-29 21:23:48     site_controllers[doctype] = import_controller(doctype)
+2024-04-29 21:23:48       doctype = 'Currency Exchange Settings'
+2024-04-29 21:23:48       site_controllers = {'DocField': &lt;class 'frappe.core.doctype.docfield.docfield.DocField'&gt;, 'DocPerm': &lt;class 'frappe.core.doctype.docperm.docperm.DocPerm'&gt;, 'Module Def': &lt;class 'frappe.core.doctype.module_def.module_def.ModuleDef'&gt;, 'DocType Link': &lt;class 'frappe.core.doctype.doctype_link.doctype_link.DocTypeLink'&gt;, 'System Settings': &lt;class 'frappe.core.doctype.system_settings.system_settings.SystemSettings'&gt;, 'Notification Settings': &lt;class 'frappe.desk.doctype.notification_settings.notification_settings.NotificationSettings'&gt;, 'DefaultValue': &lt;class 'frappe.core.doctype.defaultvalue.defaultvalue.DefaultValue'&gt;, 'Customize Form': &lt;class 'frappe.custom.doctype.customize_form.customize_form.CustomizeForm'&gt;, 'DocType Action': &lt;class 'frappe.core.doctype.doctype_action.doctype_action.DocTypeAction'&gt;, 'DocType State': &lt;class 'frappe.core.doctype.doctype_state.doctype_state.DocTypeState'&gt;, 'Customize Form Field': &lt;class 'frappe.custom.doctype.customize_form_field.customize_form_field.CustomizeFormField'&gt;, 'P...
+2024-04-29 21:23:48   File "apps/frappe/frappe/model/base_document.py", line 95, in import_controller
+2024-04-29 21:23:48     module = load_doctype_module(doctype, module_name)
+2024-04-29 21:23:48       doctype = 'Currency Exchange Settings'
+2024-04-29 21:23:48       Document = &lt;class 'frappe.model.document.Document'&gt;
+2024-04-29 21:23:48       NestedSet = &lt;class 'frappe.utils.nestedset.NestedSet'&gt;
+2024-04-29 21:23:48       module_name = 'Core'
+2024-04-29 21:23:48       doctype_info = None
+2024-04-29 21:23:48       module_path = None
+2024-04-29 21:23:48       class_overrides = {'Address': ['erpnext.accounts.custom.address.ERPNextAddress']}
+2024-04-29 21:23:48   File "apps/frappe/frappe/modules/utils.py", line 254, in load_doctype_module
+2024-04-29 21:23:48     raise ImportError(msg) from e
+2024-04-29 21:23:48       doctype = 'Currency Exchange Settings'
+2024-04-29 21:23:48       module = 'Core'
+2024-04-29 21:23:48       prefix = ''
+2024-04-29 21:23:48       suffix = ''
+2024-04-29 21:23:48       app = 'frappe'
+2024-04-29 21:23:48       key = ********
+2024-04-29 21:23:48       module_name = 'frappe.core.doctype.currency_exchange_settings.currency_exchange_settings'
+2024-04-29 21:23:48       msg = "Module import failed for Currency Exchange Settings, the DocType you're trying to open might be deleted.&lt;br&gt; Error: No module named 'frappe.core.doctype.currency_exchange_settings'"
+2024-04-29 21:23:48 builtins.ImportError: Module import failed for Currency Exchange Settings, the DocType you're trying to open might be deleted.&lt;br&gt; Error: No module named 'frappe.core.doctype.currency_exchange_settings'
+</code></pre>
+<p>Installation command using</p>
+<pre><code class="lang-auto">bench get-app --branch version-15 https://github.com/resilient-tech/india-compliance.git;
+        bench --site frontend install-app india_compliance;
+</code></pre>
+<p>Any help would be helpful</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/techmaniacc'><span itemprop='name'>techmaniacc</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/c/0/c0337287592666ee350b4cbaf0c73c491c197db5.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-04-29T16:29:41Z' class='post-time'>
+                    April 29, 2024,  4:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-04-29T16:29:41Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Install erpnext and lending app, payment before installing indian compliance<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/c/0/c0337287592666ee350b4cbaf0c73c491c197db5.png" data-download-href="https://discuss.frappe.io/uploads/default/c0337287592666ee350b4cbaf0c73c491c197db5" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/c/0/c0337287592666ee350b4cbaf0c73c491c197db5_2_690x34.png" alt="image" data-base62-sha1="rqhTMVq0Pr2BMqjrglcr1NoZyVD" width="690" height="34" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/c/0/c0337287592666ee350b4cbaf0c73c491c197db5_2_690x34.png, https://discuss.frappe.io/uploads/default/optimized/3X/c/0/c0337287592666ee350b4cbaf0c73c491c197db5_2_1035x51.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/c/0/c0337287592666ee350b4cbaf0c73c491c197db5.png 2x" data-dominant-color="F3F4F5"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1288×64 14.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/murtaza.ghadiali'><span itemprop='name'>murtaza.ghadiali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-04-29T16:41:02Z' class='post-time'>
+                    April 29, 2024,  4:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-04-29T16:41:02Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have install erpnext app, but what’s this payment app?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/techmaniacc'><span itemprop='name'>techmaniacc</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-04-29T18:52:56Z' class='post-time'>
+                    April 29, 2024,  6:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-04-29T18:52:56Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>some app go hand in hand that why I was asking you to install also payment, anyway, you can do away with payment but install the rest then retry Indian compliance installation.</p>
+<p>Is the app still giving errors</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/murtaza.ghadiali'><span itemprop='name'>murtaza.ghadiali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-04-30T11:48:27Z' class='post-time'>
+                    April 30, 2024, 11:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-04-30T11:48:27Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/techmaniacc">@techmaniacc</a> yes</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/techmaniacc'><span itemprop='name'>techmaniacc</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-02T09:17:05Z' class='post-time'>
+                    May 2, 2024,  9:17am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-02T09:17:05Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Which apps have you installed actually, check there documentation, how many apps do indian compliance depends on, guess this should solve the problem. If it persist, can help in meet</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/murtaza.ghadiali'><span itemprop='name'>murtaza.ghadiali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-02T14:47:01Z' class='post-time'>
+                    May 2, 2024,  2:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-02T14:48:25Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It’s working fine now, I have tried in Ubuntu and working like a charm, but it was creating issue in Windows system <img src="https://discuss.frappe.io/images/emoji/twitter/frowning.png?v=12" title=":frowning:" class="emoji" alt=":frowning:" loading="lazy" width="20" height="20"></p>
+<p>Also no need to install any other application following is working fine:</p>
+<pre><code class="lang-auto">
+[
+  {
+    "url": "https://github.com/frappe/erpnext.git",
+    "branch": "v15.22.0"
+  },
+  {
+    "url": "https://github.com/resilient-tech/india-compliance.git",
+    "branch": "v15.7.3"
+  }
+]
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/gajeradhruv'><span itemprop='name'>gajeradhruv</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-27T07:30:21Z' class='post-time'>
+                    November 27, 2025,  7:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-27T07:30:21Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The error occurs because your ERPNext version does not contain the DocType <em>Currency Exchange Settings</em>, which exists only in ERPNext v15, so india_compliance cannot install on older versions.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

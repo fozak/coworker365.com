@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[Docker] Scheduler consumes huge RAM - Frappe Framework - Frappe Forum</title>
+    <meta name="description" content="Hello, 
+I am having a Docker setup for ERPNext. 
+I noticed that “Scheduler” container is eating ~2GB of RAM!! 
+I just restarted the container and the RAM consumption went down to less than 60MB. 
+Everything was working f&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/docker-scheduler-consumes-huge-ram/150705" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[Docker] Scheduler consumes huge RAM&#39;" href="https://discuss.frappe.io/t/docker-scheduler-consumes-huge-ram/150705.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/docker-scheduler-consumes-huge-ram/150705" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/docker-scheduler-consumes-huge-ram/150705" />
+<meta property="og:title" content="[Docker] Scheduler consumes huge RAM" />
+<meta name="twitter:title" content="[Docker] Scheduler consumes huge RAM" />
+<meta property="og:description" content="Hello,  I am having a Docker setup for ERPNext.  I noticed that “Scheduler” container is eating ~2GB of RAM!!  I just restarted the container and the RAM consumption went down to less than 60MB.  Everything was working fine in both cases - before and after the restart of that container.  I am trying to run:  docker logs {project-name}-scheduler-1  Yet, no output there.  That is very serious as growing RAM usage to 2 GB by one container of 10 that comprise a Frappe setup is huge.  How can I know ..." />
+<meta name="twitter:description" content="Hello,  I am having a Docker setup for ERPNext.  I noticed that “Scheduler” container is eating ~2GB of RAM!!  I just restarted the container and the RAM consumption went down to less than 60MB.  Everything was working fine in both cases - before and after the restart of that container.  I am trying to run:  docker logs {project-name}-scheduler-1  Yet, no output there.  That is very serious as growing RAM usage to 2 GB by one container of 10 that comprise a Frappe setup is huge.  How can I know ..." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:tag" content="docker" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="7 ❤" />
+<meta property="article:published_time" content="2025-07-25T23:17:41+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"[Docker] Scheduler consumes huge RAM","mainEntity":{"@type":"Question","name":"[Docker] Scheduler consumes huge RAM","text":"Hello,\n\nI am having a Docker setup for ERPNext.\n\nI noticed that “Scheduler” container is eating ~2GB of RAM!!\n\nI just restarted the container and the RAM consumption went down to less than 60MB.\n\nEverything was working fine in both cases - before and after the restart of that container.\n\nI am trying&hellip;","upvoteCount":1,"answerCount":0,"datePublished":"2025-07-25T23:17:41.057Z","author":{"@type":"Person","name":"knimer","url":"https://discuss.frappe.io/u/knimer"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/docker-scheduler-consumes-huge-ram/150705">[Docker] Scheduler consumes huge RAM</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/docker' class='discourse-tag' rel="tag">docker</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[Docker] Scheduler consumes huge RAM'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/docker-scheduler-consumes-huge-ram/150705'>
+      <meta itemprop='datePublished' content='2025-07-25T23:17:41Z'>
+        <meta itemprop='articleSection' content='Frappe Framework'>
+      <meta itemprop='keywords' content='docker'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/knimer'><span itemprop='name'>knimer</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/docker-scheduler-consumes-huge-ram/150705">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-07-25T23:17:41Z' class='post-time'>
+                    July 25, 2025, 11:17pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-26T00:19:46Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,</p>
+<p>I am having a Docker setup for ERPNext.</p>
+<p>I noticed that “Scheduler” container is eating <strong>~2GB of RAM!!</strong></p>
+<p>I just restarted the container and the RAM consumption went down to <strong>less than 60MB.</strong></p>
+<p>Everything was working fine in both cases - before and after the restart of that container.</p>
+<p>I am trying to run:</p>
+<pre><code class="lang-auto">docker logs {project-name}-scheduler-1
+</code></pre>
+<p>Yet, no output there.</p>
+<p>That is very serious as growing RAM usage to 2 GB by one container of 10 that comprise a Frappe setup is huge.</p>
+<p>How can I know the reason for this?<br>
+Maybe if someone can help me to figure out how to get Logs recorded there… or if there are records, to show these log records.</p>
+<p>Thanks in advance.</p>
+<p>K</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-26T06:03:17Z' class='post-time'>
+                    July 26, 2025,  6:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-26T06:03:17Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>To save your resources use limits <a href="https://www.baeldung.com/ops/docker-memory-limit">https://www.baeldung.com/ops/docker-memory-limit</a>.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/knimer'><span itemprop='name'>knimer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-26T12:10:08Z' class='post-time'>
+                    July 26, 2025, 12:10pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-26T12:10:08Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks a lot <a class="mention" href="/u/revant_one">@revant_one</a></p>
+<p>I agree, limiting the resources is needed to protect overall system.</p>
+<p>Yet, what would be the cause for this?<br>
+A functioning service with 60MB vs 2GB is a huge difference.</p>
+<p>Why there are no logs in Scheduler container? How to enable it?</p>
+<p>K</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/knimer'><span itemprop='name'>knimer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-29T16:36:25Z' class='post-time'>
+                    July 29, 2025,  4:36pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-29T16:36:25Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello community…</p>
+<p>No help here?<br>
+The container grows RAM usage from 60MB to 2 GB in a day or two.</p>
+<p>Is this a memory leak?<br>
+It is definitely worth checking and investigating.</p>
+<p>Anyone else with the same problem?</p>
+<p>K</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Peer'><span itemprop='name'>Peer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-29T17:34:42Z' class='post-time'>
+                    July 29, 2025,  5:34pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-29T17:34:42Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Why is this a problem?</p>
+<p>Using a lot of RAM is not a problem in itself.<br>
+If otherwise it’d be sitting there unused, why not use it?</p>
+<p>Is anything else restricted by this use of the 2 GB? If there is a problem: how does it manifest?</p>
+<p>Maybe it’s used as a cache for something, instead of just idling.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/knimer'><span itemprop='name'>knimer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-29T22:01:30Z' class='post-time'>
+                    July 29, 2025, 10:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-29T22:01:30Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello <a class="mention" href="/u/peer">@Peer</a></p>
+<p>If this is natural and the scheduler needs that amount of RAM no one is indicating that.</p>
+<p>Also, there are no logs to check, is this some jobs running the container and expanding the RAM usage unnecessarily?</p>
+<p>Let me call it: situation instead of: problem.</p>
+<p>I would assume the DB will be the biggest RAM consumer in a Frappe Instance. Or the Backend container. The Scheduler just runs jobs. It can grow RAM usage for a job with big data, but that should go down after the job completes.</p>
+<p>Why to have RAM consumption at 50%, with Scheduler containers taking the lions share of that instead of having a 20% utilization?</p>
+<p>What I am doing now, is to find out if it will grow RAM usage beyond 2.2 GB.</p>
+<p>I hope this clears what I am after here.</p>
+<p>K</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Peer'><span itemprop='name'>Peer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-29T22:15:07Z' class='post-time'>
+                    July 29, 2025, 10:15pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-29T22:15:07Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I know that at some point in time (many years ago) the Linux Kernel started using RAM for disk access caching, just opportunistically because if it’s unused, it can as well be used for speeding up things.<br>
+I’m not sure that this was widely advertised (and if it’s still happening), and if this counts as “used” RAM. Because there can be “used”, and “used but freeable if needed”.</p>
+<p>You say the Scheduler just runs jobs. Maybe, but did you ever look at the scheduler’s logs? There can be a lot of stuff going on. Running jobs entails pushing job data into some sort of pipeline and assuring results get where they need to get. Depending on what and how this is done, this could imply lots of data and also caching, indexing, etc. Running scheduler jobs generally takes place for long-running tasks which cannot be done while serving a request, so they get pushed to be run at other times. So these are jobs which typically need more resources than normal reactions of an instance.</p>
+<p>It’s easy to make assumptions about things, although things in reality are different.<br>
+I don’t say that what you observe is not problematic, it could well be.<br>
+But don’t rush to conclusions too quickly either.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/knimer'><span itemprop='name'>knimer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-29T22:42:34Z' class='post-time'>
+                    July 29, 2025, 10:42pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-29T22:42:34Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks <a class="mention" href="/u/peer">@Peer</a></p>
+<p>I understand what you are saying. I first asked to find a way to get the logs of the scheduler container.</p>
+<p>Can you help with that?</p>
+<p>K</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/brian_pond'><span itemprop='name'>brian_pond</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-30T00:55:24Z' class='post-time'>
+                    July 30, 2025, 12:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-30T00:55:24Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/knimer">@knimer</a> I have seen the same behaviors.  Schedulers consuming a huge amount of memory until they restart.  Then back to a normal reasonable level (30-50 megabytes)</p>
+<p>You are right to be concerned: 2GB usage for a scheduler is insane.</p>
+<p>Here’s my <em>suspicion</em>:  as the scheduler writes to stdout and stderr, those text strings remain in memory (even if they’re also being written to disk.).  When you restart, stdout/stderr are cleared.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/knimer'><span itemprop='name'>knimer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-31T00:33:02Z' class='post-time'>
+                    July 31, 2025, 12:33am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-31T00:33:02Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello <a class="mention" href="/u/brian_pond">@brian_pond</a></p>
+<p>A great piece of info. Thanks a lot.<br>
+Will check that for sure</p>
+<p>K</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/trustedcomputer'><span itemprop='name'>trustedcomputer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-31T02:15:19Z' class='post-time'>
+                    July 31, 2025,  2:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-31T02:20:44Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>For what it’s worth, in my very small deployment, scheduler on docker is sitting at 61MB RAM usage. But schedulers will vary, depending on what they are running. Even so, it’s hard to imagine any deployment using 2GB when functioning “as designed”. Maybe jobs are crashing, getting stuck, or running concurrently, etc. Have you done any customization to the jobs? Maybe a selective restore of the scheduled job type list table(s) on a troubleshooting instance could help isolate things.</p>
+<p>EDIT: I also have no output running this from the project folder: <code>docker compose logs scheduler</code> It’s the only container in the whole stack that gives me no logs, so maybe that is expected.</p>
+<p>ANOTHER EDIT: Have you checked the scheduled job logs in frappe? Search in the awesome bar: <code>scheduled job log list</code></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/knimer'><span itemprop='name'>knimer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-01T22:47:44Z' class='post-time'>
+                    August 1, 2025, 10:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-01T22:47:44Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks <a class="mention" href="/u/trustedcomputer">@trustedcomputer</a> …</p>
+<p>Great input, will check and get back here with an update.</p>
+<p>K</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/knimer'><span itemprop='name'>knimer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-01T22:56:53Z' class='post-time'>
+                    August 1, 2025, 10:56pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-01T22:56:53Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I checked the logs you mentioned.</p>
+<p>There are thousands of it.<br>
+I scrolled down to 2500 and got 100% completed status. So, it does not look like crashing jobs.</p>
+<p>Yet, few days ago… I started “restarting” the scheduler container every night. Will stop that, which will get the memory usage to grow back and then will check these logs again and get back here.</p>
+<p>Yes, the Scheduler container missing logs matter is interesting!</p>
+<p>Will come back here with details in a day or two.</p>
+<p>Thanks all</p>
+<p>K</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

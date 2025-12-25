@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Installing ERPNext after using Frappe for some time - Setup - Frappe Forum</title>
+    <meta name="description" content="We have been using frappe for our ngo only for some time now (using docker-compose without bench) and would like to add the erpnext app. 
+I tried to edit the .env file with INSTALL_APPS=erpnext and did docker-compose pul&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/installing-erpnext-after-using-frappe-for-some-time/78032" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Installing ERPNext after using Frappe for some time&#39;" href="https://discuss.frappe.io/t/installing-erpnext-after-using-frappe-for-some-time/78032.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/2/4/240d24e1efebb30923b86684f9e58b340c0a8091.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/2/4/240d24e1efebb30923b86684f9e58b340c0a8091.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/installing-erpnext-after-using-frappe-for-some-time/78032" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/installing-erpnext-after-using-frappe-for-some-time/78032" />
+<meta property="og:title" content="Installing ERPNext after using Frappe for some time" />
+<meta name="twitter:title" content="Installing ERPNext after using Frappe for some time" />
+<meta property="og:description" content="We have been using frappe for our ngo only for some time now (using docker-compose without bench) and would like to add the erpnext app.  I tried to edit the .env file with INSTALL_APPS=erpnext and did docker-compose pull followed by docker-compose --project-name project up -d  but erpnext is still not installed:    is it possible to install erpnext on top of frappe without bench?  if bench is really needed, can we still install it now without loosing our data?  thx in advance for your support.  ..." />
+<meta name="twitter:description" content="We have been using frappe for our ngo only for some time now (using docker-compose without bench) and would like to add the erpnext app.  I tried to edit the .env file with INSTALL_APPS=erpnext and did docker-compose pull followed by docker-compose --project-name project up -d  but erpnext is still not installed:    is it possible to install erpnext on top of frappe without bench?  if bench is really needed, can we still install it now without loosing our data?  thx in advance for your support.  ..." />
+<meta property="og:article:section" content="Install / Update" />
+<meta property="og:article:section:color" content="B3B5B4" />
+<meta property="og:article:section" content="Setup" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="5 ❤" />
+<meta property="article:published_time" content="2021-07-13T23:20:58+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="/t/installing-erpnext-after-using-frappe-for-some-time/78032?page=2">
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Installing ERPNext after using Frappe for some time","mainEntity":{"@type":"Question","name":"Installing ERPNext after using Frappe for some time","text":"We have been using frappe for our ngo only for some time now (using docker-compose without bench) and would like to add the erpnext app.\n\nI tried to edit the .env file with INSTALL_APPS=erpnext and did docker-compose pull followed by docker-compose --project-name project up -d\n\nbut erpnext is still &hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2021-07-13T23:20:58.550Z","author":{"@type":"Person","name":"SDKAAA","url":"https://discuss.frappe.io/u/SDKAAA"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/installing-erpnext-after-using-frappe-for-some-time/78032">Installing ERPNext after using Frappe for some time</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/bench/13" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #B3B5B4'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Install / Update</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/bench/setup/33" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Setup</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Installing ERPNext after using Frappe for some time'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/installing-erpnext-after-using-frappe-for-some-time/78032'>
+      <meta itemprop='datePublished' content='2021-07-13T23:20:58Z'>
+        <meta itemprop='articleSection' content='Setup'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SDKAAA'><span itemprop='name'>SDKAAA</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/installing-erpnext-after-using-frappe-for-some-time/78032">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/2/4/240d24e1efebb30923b86684f9e58b340c0a8091.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2021-07-13T23:20:58Z' class='post-time'>
+                    July 13, 2021, 11:20pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-13T23:20:58Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We have been using frappe for our ngo only for some time now (using docker-compose without bench) and would like to add the erpnext app.<br>
+I tried to edit the .env file with INSTALL_APPS=erpnext and did docker-compose pull followed by docker-compose --project-name project up -d<br>
+but erpnext is still not installed:<br>
+<img src="https://discuss.frappe.io/uploads/default/original/3X/2/4/240d24e1efebb30923b86684f9e58b340c0a8091.png" alt="image" data-base62-sha1="58VlHkqTjzvVKqB0FQD5VFTC5LX" width="303" height="102"><br>
+is it possible to install erpnext on top of frappe without bench?<br>
+if bench is really needed, can we still install it now without loosing our data?<br>
+thx in advance for your support.<br>
+Best,<br>
+Bernard</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-14T00:16:01Z' class='post-time'>
+                    July 14, 2021, 12:16am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-14T00:16:01Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It is only possible if you’ve not yet run the wizard.</p>
+<p>It needs fresh site with wizard yet to complete before you install ERPNext.</p>
+<p>If you’ve fresh site, enter the erpnext-python container and execute <code>bench --site sitename.domain.ltd install-app erpnext</code></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SDKAAA'><span itemprop='name'>SDKAAA</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-14T20:52:33Z' class='post-time'>
+                    July 14, 2021,  8:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-14T20:52:33Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you!<br>
+Unfortunately I don’t have a fresh site.<br>
+And I don’t remember if I ran the wizard yet.<br>
+Shouldn’t it be possible to install custom apps on non-fresh sites? Why not to have the possibility to install erpnext then?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-14T23:46:59Z' class='post-time'>
+                    July 14, 2021, 11:46pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-15T08:42:09Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="SDKAAA" data-post="3" data-topic="78032">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/sdkaaa/48/38406_2.png" class="avatar"> SDKAAA:</div>
+<blockquote>
+<p>Why not to have the possibility to install erpnext then?</p>
+</blockquote>
+</aside>
+<p>Try it.</p>
+<p>ERPNext can’t be installed once setup wizard is run.<br>
+That’s part of frappe/ERPNext code and is has nothing to do with docker.</p>
+<p>Add feature request in ERPNext that you want to install ERPNext after wizard is complete.</p>
+<p>Also redeploying the docker-compose doesn’t reinstall anything. Site creator container only runs once, second time it’ll stop if it finds same site already existing.</p>
+<p>To manipulate the existing site, you’ll need to enter the erpnext-python container and issue bench helper commands. Same can also be done by creating new containers with attached network and volumes from existing frappe_docker project</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SDKAAA'><span itemprop='name'>SDKAAA</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-20T09:22:12Z' class='post-time'>
+                    July 20, 2021,  9:22am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-20T09:22:12Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>unfortunately it seems that i ran the wizzard before:</p>
+<pre><code class="lang-auto">frappe@01e36404ce48:~/frappe-bench/sites$ bench --site mysite.org install-app erpnext
+
+Installing erpnext...
+An error occurred while installing erpnext:
+ERPNext can only be installed on a fresh site where the setup wizard is not completed.
+You can reinstall this site (after saving your data) using: bench --site [sitename] reinstall
+Traceback (most recent call last):
+  File "/usr/local/bin/bench", line 18, in &lt;module&gt;
+    [sys.executable, bench_helper, 'frappe'] + sys.argv[1:],
+  File "/usr/local/lib/python3.7/subprocess.py", line 363, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['/home/frappe/frappe-bench/env/bin/python', '/home/frappe/frappe-bench/apps/frappe/frappe/utils/bench_helper.py', 'frappe', '--site', 'mysite.org', 'install-app', 'erpnext']' returned non-zero exit status 1.
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SDKAAA'><span itemprop='name'>SDKAAA</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-20T11:25:06Z' class='post-time'>
+                    July 20, 2021, 11:25am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-20T11:25:06Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>What if I do some partial backup and then re-install the whole site (with ERPnext) and then partially restoring the backup?<br>
+do you think such a thing could work?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SDKAAA'><span itemprop='name'>SDKAAA</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-20T11:33:26Z' class='post-time'>
+                    July 20, 2021, 11:33am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-20T11:33:26Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>one possible solution is to start a fresh site including ERPNext and then import the metadata and data one by one.<br>
+let me know what are your thoughts <img src="https://discuss.frappe.io/images/emoji/twitter/wink.png?v=12" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20"><br>
+thx</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-20T11:48:05Z' class='post-time'>
+                    July 20, 2021, 11:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-20T11:48:05Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>How much data you added just in frappe cms?<br>
+What’s the data you’re trying to restore?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SDKAAA'><span itemprop='name'>SDKAAA</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-20T14:24:45Z' class='post-time'>
+                    July 20, 2021,  2:24pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-20T14:24:45Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>1 custom module with 3 doctypes each with about 600 entries; 2 of them are also linked.<br>
+we also have about 30 users<br>
+1 email domain/address configured for notifications<br>
+1 webpage as the landing page<br>
+1 custom script on 1 of the custom doctypes<br>
+is this feasible? do i need to recreate each doctype before the import? will i face loads of errors and incompatibilities?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-20T14:28:23Z' class='post-time'>
+                    July 20, 2021,  2:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-20T14:28:23Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If you have track of all these try “data export” - “data import”</p>
+<p>Export the data, create new instance with ERPNext and then import it.</p>
+<p>I think users will have to reset passwords, or if you’ve social login that’ll save rest passwords.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SDKAAA'><span itemprop='name'>SDKAAA</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-20T14:34:14Z' class='post-time'>
+                    July 20, 2021,  2:34pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-20T14:34:14Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>is it possible to export/import the doctype metadata itself? or we need to re-create it manually?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-20T16:36:02Z' class='post-time'>
+                    July 20, 2021,  4:36pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-20T16:36:02Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If you have created the doctype as part of your custom app, installing the app will create the doctype metadata.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SDKAAA'><span itemprop='name'>SDKAAA</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-20T18:34:29Z' class='post-time'>
+                    July 20, 2021,  6:34pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-20T18:34:29Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>unfortunately the custom doctypes I have created directly under the frappe app <img src="https://discuss.frappe.io/images/emoji/twitter/frowning.png?v=12" title=":frowning:" class="emoji" alt=":frowning:" loading="lazy" width="20" height="20"><br>
+is it a best practice to create a separate app for my custom doctypes?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kylestevenson'><span itemprop='name'>kylestevenson</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-20T19:04:06Z' class='post-time'>
+                    July 20, 2021,  7:04pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-20T19:04:06Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Best practice, yes, but what revant_one outlined above should still be possible. Give it a try and let us know how it goes.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SDKAAA'><span itemprop='name'>SDKAAA</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-20T19:14:06Z' class='post-time'>
+                    July 20, 2021,  7:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-20T19:14:06Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>are you suggesting i create a new app and move the custom doctypes i have to this new app?<br>
+but then how do i export a specific app with its doctypes and then import them?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-20T19:41:25Z' class='post-time'>
+                    July 20, 2021,  7:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-20T19:41:25Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Try data export/import with the doctype doctype.</p>
+<p>Filter it with “Custom” check box set.</p>
+<p>To create custom app:</p>
+<ul>
+<li>Take backup</li>
+<li>Restore locally in development bench</li>
+<li>create app, save the doctypes under your app, set it as standard</li>
+</ul>
+<p>Go through basic Frappe framework tutorial for more information</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SDKAAA'><span itemprop='name'>SDKAAA</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-21T22:59:00Z' class='post-time'>
+                    July 21, 2021, 10:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-21T22:59:00Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>it seems very complicated to export/import every individual doctype dependencies <img src="https://discuss.frappe.io/images/emoji/twitter/frowning.png?v=12" title=":frowning:" class="emoji" alt=":frowning:" loading="lazy" width="20" height="20"> (i’ve tried it and failed miserably either because i am doing something wrong or because i’m insisting on the dependencies in order to guarantee logs and versions)</p>
+<p>I have submitted this feature request: (in the hope that we will be able to use ERPNext using the same frappe installation soon)</p><aside class="onebox githubissue" data-onebox-src="https://github.com/frappe/erpnext/issues/26587">
+  <header class="source">
+
+      <a href="https://github.com/frappe/erpnext/issues/26587" target="_blank" rel="noopener nofollow ugc">github.com/frappe/erpnext</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="github-row">
+  <div class="github-icon-container" title="Issue">
+	  <svg width="60" height="60" class="github-icon" viewbox="0 0 14 16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+  </div>
+
+  <div class="github-info-container">
+    <h4>
+      <a href="https://github.com/frappe/erpnext/issues/26587" target="_blank" rel="noopener nofollow ugc">Install ERPNext after wizard is complete</a>
+    </h4>
+
+    <div class="github-info">
+      <div class="date">
+        opened <span class="discourse-local-date" data-format="ll" data-date="2021-07-21" data-time="16:26:05" data-timezone="UTC">04:26PM - 21 Jul 21 UTC</span>
+      </div>
+
+        <div class="date">
+          closed <span class="discourse-local-date" data-format="ll" data-date="2021-11-01" data-time="13:26:18" data-timezone="UTC">01:26PM - 01 Nov 21 UTC</span>
+        </div>
+
+      <div class="user">
+        <a href="https://github.com/SDKAAA" target="_blank" rel="noopener nofollow ugc">
+          <img alt="SDKAAA" src="https://avatars.githubusercontent.com/u/13576574?v=4" class="onebox-avatar-inline" width="20" height="20">
+          SDKAAA
+        </a>
+      </div>
+    </div>
+
+    <div class="labels">
+        <span style="display:inline-block;margin-top:2px;background-color: #B8B8B8;padding: 2px;border-radius: 4px;color: #fff;margin-left: 3px;">
+          wontfix
+        </span>
+        <span style="display:inline-block;margin-top:2px;background-color: #B8B8B8;padding: 2px;border-radius: 4px;color: #fff;margin-left: 3px;">
+          feature-request
+        </span>
+    </div>
+  </div>
+</div>
+
+  <div class="github-row">
+    <p class="github-body-container">We would like to suggest to be able to install ERPNext after wizard is complete <span class="show-more-container"><a href="" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden">(and keep the app up-to-date).
+**Our usecase:**
+We have installed frappe alone and on top of it created custom doctypes and forms and started to use it.
+However, after few weeks of usage (including a few thousand records captured into several doctypes) we noticed that ERPNext could be very beneficial to our other activities and would like to install it.
+Currently it is not possible to install ERPNext after the wizard has been run (we only tested it in the docker image).
+
+It would be of great advantage if ERPNext could be installed at any time the same way as any other app even if the wizard has been run (and it should remain possible to update ERPNext the same way as updating frappe).
+This feature request was initiated following [this thread](https://discuss.erpnext.com/t/installing-erpnext-after-using-frappe-for-some-time/78032/4) in the forum.</span></p>
+  </div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>P.S: We (local branch of the Lebanese Red Cross) are currently only using it for custom modules for recruitment, but we hope to be able to use it also for inventory management and other tasks.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-22T00:22:37Z' class='post-time'>
+                    July 22, 2021, 12:22am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-22T00:22:37Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I don’t know if you will get to install ERPNext with wizard complete.</p>
+<p>Another workaround I can think of,</p>
+<ul>
+<li>keep the current frappe server as your Authorization server.</li>
+<li>install another ERPNext server and add your frappe server as social login key. <a href="https://discuss.frappe.io/t/oauth-2-provider-for-frappe-apps/15652/12" class="inline-onebox">OAuth 2 provider for Frappe Apps - #12 by revant_one</a>
+</li>
+</ul>
+<p>With this your previous server continues to be live.<br>
+ERPNext server will login using the accounts from frappe server.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SDKAAA'><span itemprop='name'>SDKAAA</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-22T13:04:26Z' class='post-time'>
+                    July 22, 2021,  1:04pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-22T13:05:40Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>thank you <a class="mention" href="/u/revant_one">@revant_one</a>,<br>
+unfortunately we can not afford to have a second server (at least not for now especially with the current economical crisis in Lebanon <img src="https://discuss.frappe.io/images/emoji/twitter/frowning.png?v=12" title=":frowning:" class="emoji" alt=":frowning:" loading="lazy" width="20" height="20"> )</p>
+<p>Besides, we are looking to have all our work in one place; ERPNext: one platform to rule them all!</p>
+<p>i was thinking maybe i could export the files of erpnext and install them the same way as other new apps, but then i will loose the automatic updates, no?<br>
+even if i choose to do that, i guess i will need to do some more research.<br>
+Worst case scenario i wait until some hero finds our feature-request and do it <img src="https://discuss.frappe.io/images/emoji/twitter/wink.png?v=12" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-07-22T13:20:21Z' class='post-time'>
+                    July 22, 2021,  1:20pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-07-22T13:20:21Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>just add a fresh site in same bench setup. Use the multi-tenant feature of frappe.</p>
+<p>No need to setup one more server.</p>
+<aside class="quote no-group" data-username="SDKAAA" data-post="19" data-topic="78032">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/sdkaaa/48/38406_2.png" class="avatar"> SDKAAA:</div>
+<blockquote>
+<p>Worst case scenario i wait until some hero finds our feature-request and do it <img src="https://discuss.frappe.io/images/emoji/twitter/wink.png?v=12" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20"></p>
+</blockquote>
+</aside>
+<p>You won’t be able to keep frappe data and install ERPNext. You either reset everything and start fresh. Or add one more site for ERPNext.</p>
+<p>Generally people pause when they see 3 step setup wizard instead of more steps that ERPNext has.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="/t/installing-erpnext-after-using-frappe-for-some-time/78032?page=2">next page →</a></b></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Integrating FCRM and Lending and getting a unique error bug</title>
+    <link>https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282</link>
+    <description>Hi there,
+
+I’m currently working on an integration involving ERPNext, Frappe CRM, and Lending. In older versions of Frappe, we were able to switch between apps directly from the sidebar. However, in the newer versions, this behavior seems to have changed — instead of app switching, the desk now shows icons based on modules (as I understand it).
+
+Since the CRM portal uses a separate Vue-based frontend, it still displays the older-style app switcher and allows switching between apps (as shown in *Image 1*). 
+
+The issue arises when I select the Lending app from this list — I get redirected to the Lending app, but it immediately throws an error (as shown in *Image 2*).
+
+I’d appreciate some insight into whether this is:
+***an expected behavior due to changes in how app/module navigation works in newer Frappe versions,
+a configuration issue on my side, or
+a known bug on the Frappe/Lending side.***
+
+Any guidance on how to properly handle app switching in this setup, or how to resolve this error, would be greatly appreciated.
+
+Error Message:
+
+### App Versions
+
+```
+{
+	&quot;frappe&quot;: &quot;16.0.0-dev&quot;,
+	&quot;crm&quot;: &quot;2.0.0-dev&quot;,
+	&quot;erpnext&quot;: &quot;16.0.0-dev&quot;,
+	&quot;lending&quot;: &quot;0.0.1&quot;,
+	&quot;dreamlink&quot;: &quot;0.0.1&quot;
+}
+```
+
+### Route
+
+```
+Workspaces/Lending
+```
+
+### Traceback
+
+```
+Traceback (most recent call last):
+  File &quot;apps/frappe/frappe/app.py&quot;, line 121, in application
+    response = frappe.api.handle(request)
+  File &quot;apps/frappe/frappe/api/__init__.py&quot;, line 63, in handle
+    data = endpoint(**arguments)
+  File &quot;apps/frappe/frappe/api/v1.py&quot;, line 40, in handle_rpc_call
+    return frappe.handler.handle()
+  File &quot;apps/frappe/frappe/handler.py&quot;, line 53, in handle
+    data = execute_cmd(cmd)
+  File &quot;apps/frappe/frappe/handler.py&quot;, line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File &quot;apps/frappe/frappe/__init__.py&quot;, line 1126, in call
+    return fn(*args, **newargs)
+  File &quot;apps/frappe/frappe/utils/typing_validations.py&quot;, line 36, in wrapper
+    return func(*args, **kwargs)
+  File &quot;apps/frappe/frappe/utils/dashboard.py&quot;, line 26, in wrapper
+    results = generate_and_cache_results(kwargs, function, cache_key, chart)
+  File &quot;apps/frappe/frappe/utils/dashboard.py&quot;, line 41, in generate_and_cache_results
+    results = function(
+  File &quot;apps/frappe/frappe/desk/doctype/dashboard_chart/dashboard_chart.py&quot;, line 136, in get
+    chart_config = get_chart_config(chart, filters, timespan, timegrain, from_date, to_date)
+  File &quot;apps/frappe/frappe/desk/doctype/dashboard_chart/dashboard_chart.py&quot;, line 202, in get_chart_config
+    data = frappe.get_list(
+  File &quot;apps/frappe/frappe/__init__.py&quot;, line 1359, in get_list
+    return frappe.model.qb_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File &quot;apps/frappe/frappe/model/qb_query.py&quot;, line 203, in execute
+    query = frappe.qb.get_query(**kwargs)
+  File &quot;apps/frappe/frappe/query_builder/utils.py&quot;, line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+  File &quot;apps/frappe/frappe/database/query.py&quot;, line 294, in get_query
+    self.apply_filters(filters)
+  File &quot;apps/frappe/frappe/database/query.py&quot;, line 442, in apply_filters
+    self.apply_list_filters(
+  File &quot;apps/frappe/frappe/database/query.py&quot;, line 496, in apply_list_filters
+    raise ValueError(f&quot;Unknown filter format: {filter}&quot;)
+ValueError: Unknown filter format: [&#39;Loan&#39;, &#39;docstatus&#39;, &#39;=&#39;, &#39;1&#39;, False]
+```
+
+### Request Data
+
+```
+{
+	&quot;type&quot;: &quot;POST&quot;,
+	&quot;args&quot;: {
+		&quot;chart_name&quot;: &quot;New Loans&quot;,
+		&quot;refresh&quot;: 1,
+		&quot;time_interval&quot;: null,
+		&quot;timespan&quot;: null,
+		&quot;from_date&quot;: null,
+		&quot;to_date&quot;: null,
+		&quot;heatmap_year&quot;: null
+	},
+	&quot;headers&quot;: {},
+	&quot;error_handlers&quot;: {},
+	&quot;url&quot;: &quot;/api/method/frappe.desk.doctype.dashboard_chart.dashboard_chart.get&quot;,
+	&quot;request_id&quot;: null
+}
+```
+
+### Response Data
+
+```
+{
+	&quot;exception&quot;: &quot;ValueError: Unknown filter format: [&#39;Loan&#39;, &#39;docstatus&#39;, &#39;=&#39;, &#39;1&#39;, False]&quot;,
+	&quot;exc_type&quot;: &quot;ValueError&quot;
+}
+```
+
+![image|690x388](upload://x0sYPmo4aKmwAUaSdd89W2pMpGE.png)
+
+![image (1)|690x388](upload://6s5hdnhDBQOg3ReGESdEq32AcNf.png)
+
+Thank you
+
+Heshan K</description>
+    
+    <lastBuildDate>Wed, 24 Dec 2025 06:40:47 +0000</lastBuildDate>
+    <category>Frappe CRM</category>
+    <atom:link href="https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Integrating FCRM and Lending and getting a unique error bug</title>
+        <dc:creator><![CDATA[Heshan_Karunaratne]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi there,</p>
+<p>I’m currently working on an integration involving ERPNext, Frappe CRM, and Lending. In older versions of Frappe, we were able to switch between apps directly from the sidebar. However, in the newer versions, this behavior seems to have changed — instead of app switching, the desk now shows icons based on modules (as I understand it).</p>
+<p>Since the CRM portal uses a separate Vue-based frontend, it still displays the older-style app switcher and allows switching between apps (as shown in <em>Image 1</em>).</p>
+<p>The issue arises when I select the Lending app from this list — I get redirected to the Lending app, but it immediately throws an error (as shown in <em>Image 2</em>).</p>
+<p>I’d appreciate some insight into whether this is:<br>
+<em><strong>an expected behavior due to changes in how app/module navigation works in newer Frappe versions,<br>
+a configuration issue on my side, or<br>
+a known bug on the Frappe/Lending side.</strong></em></p>
+<p>Any guidance on how to properly handle app switching in this setup, or how to resolve this error, would be greatly appreciated.</p>
+<p>Error Message:</p>
+<h3><a name="p-489460-app-versions-1" class="anchor" href="https://discuss.frappe.io#p-489460-app-versions-1"></a>App Versions</h3>
+<pre><code class="lang-auto">{
+	"frappe": "16.0.0-dev",
+	"crm": "2.0.0-dev",
+	"erpnext": "16.0.0-dev",
+	"lending": "0.0.1",
+	"dreamlink": "0.0.1"
+}
+</code></pre>
+<h3><a name="p-489460-route-2" class="anchor" href="https://discuss.frappe.io#p-489460-route-2"></a>Route</h3>
+<pre><code class="lang-auto">Workspaces/Lending
+</code></pre>
+<h3><a name="p-489460-traceback-3" class="anchor" href="https://discuss.frappe.io#p-489460-traceback-3"></a>Traceback</h3>
+<pre><code class="lang-auto">Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "apps/frappe/frappe/__init__.py", line 1126, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/utils/dashboard.py", line 26, in wrapper
+    results = generate_and_cache_results(kwargs, function, cache_key, chart)
+  File "apps/frappe/frappe/utils/dashboard.py", line 41, in generate_and_cache_results
+    results = function(
+  File "apps/frappe/frappe/desk/doctype/dashboard_chart/dashboard_chart.py", line 136, in get
+    chart_config = get_chart_config(chart, filters, timespan, timegrain, from_date, to_date)
+  File "apps/frappe/frappe/desk/doctype/dashboard_chart/dashboard_chart.py", line 202, in get_chart_config
+    data = frappe.get_list(
+  File "apps/frappe/frappe/__init__.py", line 1359, in get_list
+    return frappe.model.qb_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "apps/frappe/frappe/model/qb_query.py", line 203, in execute
+    query = frappe.qb.get_query(**kwargs)
+  File "apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+  File "apps/frappe/frappe/database/query.py", line 294, in get_query
+    self.apply_filters(filters)
+  File "apps/frappe/frappe/database/query.py", line 442, in apply_filters
+    self.apply_list_filters(
+  File "apps/frappe/frappe/database/query.py", line 496, in apply_list_filters
+    raise ValueError(f"Unknown filter format: {filter}")
+ValueError: Unknown filter format: ['Loan', 'docstatus', '=', '1', False]
+</code></pre>
+<h3><a name="p-489460-request-data-4" class="anchor" href="https://discuss.frappe.io#p-489460-request-data-4"></a>Request Data</h3>
+<pre><code class="lang-auto">{
+	"type": "POST",
+	"args": {
+		"chart_name": "New Loans",
+		"refresh": 1,
+		"time_interval": null,
+		"timespan": null,
+		"from_date": null,
+		"to_date": null,
+		"heatmap_year": null
+	},
+	"headers": {},
+	"error_handlers": {},
+	"url": "/api/method/frappe.desk.doctype.dashboard_chart.dashboard_chart.get",
+	"request_id": null
+}
+</code></pre>
+<h3><a name="p-489460-response-data-5" class="anchor" href="https://discuss.frappe.io#p-489460-response-data-5"></a>Response Data</h3>
+<pre><code class="lang-auto">{
+	"exception": "ValueError: Unknown filter format: ['Loan', 'docstatus', '=', '1', False]",
+	"exc_type": "ValueError"
+}
+</code></pre>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88.png" data-download-href="https://discuss.frappe.io/uploads/default/e755448edd84ac3af562aa65822c9db778495d88" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_690x388.png" alt="image" data-base62-sha1="x0sYPmo4aKmwAUaSdd89W2pMpGE" width="690" height="388" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_690x388.png, https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_1035x582.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_1380x776.png 2x" data-dominant-color="121212"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d.png" data-download-href="https://discuss.frappe.io/uploads/default/2d39c77dde336fa6de681d082dd83916e268da3d" title="image (1)"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_690x388.png" alt="image (1)" data-base62-sha1="6s5hdnhDBQOg3ReGESdEq32AcNf" width="690" height="388" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_690x388.png, https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_1035x582.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_1380x776.png 2x" data-dominant-color="222222"></a></div><p></p>
+<p>Thank you</p>
+<p>Heshan K</p>
+          <p><a href="https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282/1</link>
+        <pubDate>Wed, 24 Dec 2025 06:40:47 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158282-1</guid>
+        <source url="https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282.rss">Integrating FCRM and Lending and getting a unique error bug</source>
+      </item>
+  </channel>
+</rss>

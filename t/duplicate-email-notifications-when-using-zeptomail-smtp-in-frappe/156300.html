@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Duplicate Email Notifications when using ZeptoMail SMTP in Frappe - Frappe Framework - Frappe Forum</title>
+    <meta name="description" content="I’ve integrated ZeptoMail SMTP with Frappe for sending email notifications. 
+The configuration works — emails are delivered successfully — but I’m facing an issue where duplicate emails are sent for the same notification&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/duplicate-email-notifications-when-using-zeptomail-smtp-in-frappe/156300" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Duplicate Email Notifications when using ZeptoMail SMTP in Frappe&#39;" href="https://discuss.frappe.io/t/duplicate-email-notifications-when-using-zeptomail-smtp-in-frappe/156300.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/duplicate-email-notifications-when-using-zeptomail-smtp-in-frappe/156300" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/duplicate-email-notifications-when-using-zeptomail-smtp-in-frappe/156300" />
+<meta property="og:title" content="Duplicate Email Notifications when using ZeptoMail SMTP in Frappe" />
+<meta name="twitter:title" content="Duplicate Email Notifications when using ZeptoMail SMTP in Frappe" />
+<meta property="og:description" content="I’ve integrated ZeptoMail SMTP with Frappe for sending email notifications.  The configuration works — emails are delivered successfully — but I’m facing an issue where duplicate emails are sent for the same notification.   details:    I have a Notification set up for the Lead doctype that sends an email to all users with the System Manager role whenever a new Lead is created.    Here’s the issue I’m facing:    If there are 4 users with the “System Manager” role, each user receives 4 duplicate e..." />
+<meta name="twitter:description" content="I’ve integrated ZeptoMail SMTP with Frappe for sending email notifications.  The configuration works — emails are delivered successfully — but I’m facing an issue where duplicate emails are sent for the same notification.   details:    I have a Notification set up for the Lead doctype that sends an email to all users with the System Manager role whenever a new Lead is created.    Here’s the issue I’m facing:    If there are 4 users with the “System Manager” role, each user receives 4 duplicate e..." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:tag" content="bug" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2025-11-02T11:02:22+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Duplicate Email Notifications when using ZeptoMail SMTP in Frappe","mainEntity":{"@type":"Question","name":"Duplicate Email Notifications when using ZeptoMail SMTP in Frappe","text":"I’ve integrated ZeptoMail SMTP with Frappe for sending email notifications.\n\nThe configuration works — emails are delivered successfully — but I’m facing an issue where duplicate emails are sent for the same notification.\n\ndetails:\n\nI have a Notification set up for the Lead doctype that sends an &hellip;","upvoteCount":1,"answerCount":0,"datePublished":"2025-11-02T11:02:22.013Z","author":{"@type":"Person","name":"MostafaKadry","url":"https://discuss.frappe.io/u/MostafaKadry"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/duplicate-email-notifications-when-using-zeptomail-smtp-in-frappe/156300">Duplicate Email Notifications when using ZeptoMail SMTP in Frappe</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/bug' class='discourse-tag' rel="tag">bug</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Duplicate Email Notifications when using ZeptoMail SMTP in Frappe'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/duplicate-email-notifications-when-using-zeptomail-smtp-in-frappe/156300'>
+      <meta itemprop='datePublished' content='2025-11-02T11:02:22Z'>
+        <meta itemprop='articleSection' content='Frappe Framework'>
+      <meta itemprop='keywords' content='bug'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/MostafaKadry'><span itemprop='name'>MostafaKadry</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/duplicate-email-notifications-when-using-zeptomail-smtp-in-frappe/156300">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-11-02T11:02:22Z' class='post-time'>
+                    November 2, 2025, 11:02am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-02T11:02:22Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ve integrated <strong>ZeptoMail SMTP</strong> with Frappe for sending email notifications.<br>
+The configuration works — emails are delivered successfully — but I’m facing an issue where <strong>duplicate emails are sent</strong> for the same notification.</p>
+<hr>
+<p><strong>details:</strong></p>
+<ul>
+<li>
+<p>I have a Notification set up for the <strong>Lead</strong> doctype that sends an email to all users with the <strong>System Manager</strong> role whenever a new Lead is created.</p>
+</li>
+<li>
+<p>Here’s the issue I’m facing:</p>
+<ul>
+<li>
+<p>If there are <strong>4 users</strong> with the “System Manager” role, <strong>each user receives 4 duplicate emails</strong>.</p>
+</li>
+<li>
+<p>When I add a 5th user, <strong>each of them receives 5 duplicate copies</strong> of the same notification.</p>
+</li>
+<li>
+<p>In <strong>Frappe’s Email Queue</strong>, only <strong>one email record</strong> is created per event.</p>
+</li>
+<li>
+<p>However, in <strong>ZeptoMail’s transaction logs</strong>, I can see <strong>multiple identical deliveries</strong> (4 copies) of the same message, only seconds apart.</p>
+</li>
+<li>
+<p>When I switch the outgoing server to <strong>Zoho SMTP (<a href="http://smtp.zoho.com" rel="noopener nofollow ugc">smtp.zoho.com</a>)</strong> using the same configuration and notification setup, the issue disappears completely — <strong>no duplicate emails</strong> are sent.</p>
+</li>
+</ul>
+<p>So this duplication only occurs when using <strong>ZeptoMail SMTP (<a href="http://smtp.zeptomail.com" rel="noopener nofollow ugc">smtp.zeptomail.com</a>)</strong>.</p>
+</li>
+</ul>
+<p><strong>Expected Behavior:</strong><br>
+Each recipient should receive one email per notification event, regardless of the SMTP provider.</p>
+<p><strong>Note:</strong><br>
+This domain is configured as <strong>outgoing-only</strong> (no incoming mail for <code>noreply@example.com</code>).<br>
+To bypass Frappe’s mandatory “Incoming Server” field for Email Domain, I temporarily entered<br>
+<code>imap.zoho.com</code> while keeping the outgoing server as <code>smtp.zeptomail.com</code>.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/akhilnarang'><span itemprop='name'>akhilnarang</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-05T11:07:15Z' class='post-time'>
+                    November 5, 2025, 11:07am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-05T11:07:15Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The Email Queue has the subject and recipients as expected?</p>
+<p>If so, maybe its an issue at your provider’s end, since Zoho worked fine.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/MostafaKadry'><span itemprop='name'>MostafaKadry</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-10T11:47:27Z' class='post-time'>
+                    November 10, 2025, 11:47am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-10T11:48:12Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="MostafaKadry" data-post="1" data-topic="156300">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/mostafakadry/48/89413_2.png" class="avatar"> MostafaKadry:</div>
+<blockquote>
+<p>In <strong>Frappe’s Email Queue</strong>, only <strong>one email record</strong> is created per event.</p>
+</blockquote>
+</aside>
+<p>Yes, that’s correct.<br>
+As I mentioned, in Frappe’s Email Queue, only one email record is created per event, so everything is working as expected on that end. The issue, however, lies with ZeptoMail.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/MostafaKadry'><span itemprop='name'>MostafaKadry</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-10T11:48:04Z' class='post-time'>
+                    November 10, 2025, 11:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-10T11:48:04Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, that’s correct.<br>
+As I mentioned, in Frappe’s Email Queue, only one email record is created per event, so everything is working as expected on that end. The issue, however, lies with ZeptoMail.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/meichthys'><span itemprop='name'>meichthys</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-01T20:13:42Z' class='post-time'>
+                    December 1, 2025,  8:13pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-01T20:13:42Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We’ve also been getting duplicate email notifications using Rackspace smtp, however we DO see duplicate emails in the Email Queue.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

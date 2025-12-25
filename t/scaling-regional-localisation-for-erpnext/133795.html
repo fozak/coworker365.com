@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Scaling Regional Localisation for ERPNext - Community - Frappe Forum</title>
+    <meta name="description" content="What is ERPNext Localisation and Why
+Each country has a statutory tax compliance which businesses need to fulfil. For a business evaluating ERP solutions, fulfilment of this statutory compliance is a basic expectation. H&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/scaling-regional-localisation-for-erpnext/133795" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Scaling Regional Localisation for ERPNext&#39;" href="https://discuss.frappe.io/t/scaling-regional-localisation-for-erpnext/133795.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/4/f/4f0bff1c23573011efe9342fe4198a035114a3a0_2_1024x519.gif" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/4/f/4f0bff1c23573011efe9342fe4198a035114a3a0_2_1024x519.gif" />
+<meta property="og:url" content="https://discuss.frappe.io/t/scaling-regional-localisation-for-erpnext/133795" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/scaling-regional-localisation-for-erpnext/133795" />
+<meta property="og:title" content="Scaling Regional Localisation for ERPNext" />
+<meta name="twitter:title" content="Scaling Regional Localisation for ERPNext" />
+<meta property="og:description" content="What is ERPNext Localisation and Why Each country has a statutory tax compliance which businesses need to fulfil. For a business evaluating ERP solutions, fulfilment of this statutory compliance is a basic expectation. Hence, it becomes crucial for us as a Frappe community to ensure that ERPNext has a coverage of regional compliances. It can be as simple as applying taxes on the invoices. Or it can get as complex as -invoicing, with real-time integration with the government’s systems, for exampl..." />
+<meta name="twitter:description" content="What is ERPNext Localisation and Why Each country has a statutory tax compliance which businesses need to fulfil. For a business evaluating ERP solutions, fulfilment of this statutory compliance is a basic expectation. Hence, it becomes crucial for us as a Frappe community to ensure that ERPNext has a coverage of regional compliances. It can be as simple as applying taxes on the invoices. Or it can get as complex as -invoicing, with real-time integration with the government’s systems, for exampl..." />
+<meta property="og:article:section" content="Community" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:tag" content="localisation" />
+<meta property="og:article:tag" content="erpnext" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="34 ❤" />
+<meta property="article:published_time" content="2024-09-23T08:56:52+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Scaling Regional Localisation for ERPNext","mainEntity":{"@type":"Question","name":"Scaling Regional Localisation for ERPNext","text":"<a name=\"what-is-erpnext-localisation-and-why-1\" class=\"anchor\" href=\"#what-is-erpnext-localisation-and-why-1\"><\/a>What is ERPNext Localisation and Why\n\nEach country has a statutory tax compliance which businesses need to fulfil. For a business evaluating ERP solutions, fulfilment of this statutory compliance is a basic expectation. Hence, it becomes crucial for us as a Frappe community to ensure that ERPNext has&hellip;","upvoteCount":13,"answerCount":1,"datePublished":"2024-09-23T08:56:52.810Z","author":{"@type":"Person","name":"umair","url":"https://discuss.frappe.io/u/umair"},"acceptedAnswer":{"@type":"Answer","text":"Sorry for the delay, I’ve added it last week.\n\n<a href=\"https://crowdin.com/editor/frappe/97/en-th?view=side-by-side&amp;filter=basic&amp;value=0\" class=\"onebox\" target=\"_blank\" rel=\"noopener\">https://crowdin.com/editor/frappe/97/en-th?view=side-by-side&amp;filter=basic&amp;value=0<\/a>","upvoteCount":2,"datePublished":"2025-03-21T08:44:34.375Z","url":"https://discuss.frappe.io/t/scaling-regional-localisation-for-erpnext/133795/11","author":{"@type":"Person","name":"rmeyer","url":"https://discuss.frappe.io/u/rmeyer"}}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/scaling-regional-localisation-for-erpnext/133795">Scaling Regional Localisation for ERPNext</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/community/37" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Community</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/localisation' class='discourse-tag' rel="tag">localisation</a>, 
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Scaling Regional Localisation for ERPNext'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/scaling-regional-localisation-for-erpnext/133795'>
+      <meta itemprop='datePublished' content='2024-09-23T08:56:52Z'>
+        <meta itemprop='articleSection' content='Community'>
+      <meta itemprop='keywords' content='localisation, erpnext'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/umair'><span itemprop='name'>umair</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/scaling-regional-localisation-for-erpnext/133795">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/4/f/4f0bff1c23573011efe9342fe4198a035114a3a0.gif">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2024-09-23T08:56:52Z' class='post-time'>
+                    September 23, 2024,  8:56am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-09-23T09:36:13Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h2><a name="what-is-erpnext-localisation-and-why-1" class="anchor" href="#what-is-erpnext-localisation-and-why-1"></a>What is ERPNext Localisation and Why</h2>
+<p>Each country has a statutory tax compliance which businesses need to fulfil. For a business evaluating ERP solutions, fulfilment of this statutory compliance is a basic expectation. Hence, it becomes crucial for us as a Frappe community to ensure that ERPNext has a coverage of regional compliances. It can be as simple as applying taxes on the invoices. Or it can get as complex as -invoicing, with real-time integration with the government’s systems, for example <a href="https://docs.indiacompliance.app/">India Compliance app</a>.</p>
+<p>In Frappe’s ecosystem, we trust partners to fulfil this requirement for these two reasons.</p>
+<ul>
+<li>
+<p><strong>Better Understanding</strong>: Since the scope of localisation varies from country to country, it is also scalable through regional partners. Also, in the spirit of open-source, which is at the heart of the Frappe ecosystem, community partners can make this significant contribution. I am pleased to inform you that many community members contributed localisation for ~ ten countries as an open-source application. A lot needs to be done, however.</p>
+</li>
+<li>
+<p><strong>Scale</strong>: Since we have compliance of hundreds of countries to be covered, we need a scalable model. Since we have a global community of Frappe app developers, it makes sense to trust the community to ensure coverage of this scale.</p>
+</li>
+</ul>
+<h2><a name="regional-apps-when-creating-a-new-site-on-frappe-cloud-2" class="anchor" href="#regional-apps-when-creating-a-new-site-on-frappe-cloud-2"></a>Regional Apps when creating a new Site on Frappe Cloud</h2>
+<p>Though we have localisation for a few countries, it wasn’t discoverable when creating a new site. Hence, to ensure country localisations are easily discoverable, we have added an option in the UI for new site creation. Here is the demo.</p>
+<p><img src="https://discuss.frappe.io/uploads/default/original/3X/4/f/4f0bff1c23573011efe9342fe4198a035114a3a0.gif" alt="localisation_3" data-base62-sha1="bhhqcsRn5IVEp5EOShahfMRDi48" width="690" height="350" class="animated"></p>
+<p>When creating a site from Frappe Cloud, after selecting apps, enable the option to select regional localisation. Based on the country’s selection, a regional localisation app will be auto-installed on your site.</p>
+<blockquote>
+<p>Please note that we will be releasing this feature in phases. For now, it will only be available to Frappe partners. It will soon be open to all Frappe Cloud users. In the meantime, we are working with the published and new apps on UI upgrades, etc.</p>
+</blockquote>
+<h2><a name="countries-covered-3" class="anchor" href="#countries-covered-3"></a>Countries Covered</h2>
+<p>Here are the countries for which regional localisation is available when creating a new site on Frappe Cloud.</p>
+<ul>
+<li><a href="https://frappecloud.com/marketplace/apps/india_compliance">India <img src="https://discuss.frappe.io/images/emoji/twitter/india.png?v=12" title=":india:" class="emoji" alt=":india:" loading="lazy" width="20" height="20"></a></li>
+<li><a href="https://frappecloud.com/marketplace/apps/ksa_compliance">KSA <img src="https://discuss.frappe.io/images/emoji/twitter/saudi_arabia.png?v=12" title=":saudi_arabia:" class="emoji" alt=":saudi_arabia:" loading="lazy" width="20" height="20"></a></li>
+<li><a href="https://frappecloud.com/marketplace/apps/swiss_accounting_integration">Switzerland <img src="https://discuss.frappe.io/images/emoji/twitter/switzerland.png?v=12" title=":switzerland:" class="emoji" alt=":switzerland:" loading="lazy" width="20" height="20"></a></li>
+<li><a href="https://frappecloud.com/marketplace/apps/erpnext_france">France <img src="https://discuss.frappe.io/images/emoji/twitter/fr.png?v=12" title=":fr:" class="emoji" alt=":fr:" loading="lazy" width="20" height="20"></a></li>
+<li><a href="https://frappecloud.com/marketplace/apps/erpnext_germany">Germany <img src="https://discuss.frappe.io/images/emoji/twitter/de.png?v=12" title=":de:" class="emoji" alt=":de:" loading="lazy" width="20" height="20"></a></li>
+<li><a href="https://frappecloud.com/marketplace/apps/mexico_einvoice">Mexico <img src="https://discuss.frappe.io/images/emoji/twitter/mexico.png?v=12" title=":mexico:" class="emoji" alt=":mexico:" loading="lazy" width="20" height="20"></a></li>
+<li><a href="https://frappecloud.com/marketplace/apps/thai_tax">Thailand <img src="https://discuss.frappe.io/images/emoji/twitter/thailand.png?v=12" title=":thailand:" class="emoji" alt=":thailand:" loading="lazy" width="20" height="20"></a></li>
+<li><a href="https://frappecloud.com/marketplace/apps/burundi_compliance">Burundi <img src="https://discuss.frappe.io/images/emoji/twitter/burundi.png?v=12" title=":burundi:" class="emoji" alt=":burundi:" loading="lazy" width="20" height="20"></a></li>
+</ul>
+<h2><a name="why-should-you-contribute-to-regional-localisation-4" class="anchor" href="#why-should-you-contribute-to-regional-localisation-4"></a>Why should you contribute to regional localisation?</h2>
+<p>As suggested above, the availability of regional compliance is a basic customer expectation of a potential ERPNext customer. To ensure the success of the Frappe ecosystem, guaranteeing it’s coverage becomes extremely important. Only when we ensure comprehensive coverage on the regional level, will we be able to boost the adoption of the Frappe app (esp. ERPNext in this case), eventually leading to more business for all of us.</p>
+<p>Hence, if you belong to a country for which ERPNext localisation is yet to be contributed, I encourage you to plan to develop and contribute one.  If you already have a regional localisation and wish to contribute, learn how to <a href="https://frappecloud.com/docs/marketplace/publishing-an-app-to-marketplace">get your open-source app published on the Frappe Cloud Marketplace</a>. Request to keep me in loop via DM.</p>
+<p>Credits to Frappe Cloud team, esp. <a class="mention" href="/u/suhail">@Suhail</a> for driving the technical front.</p>
+<p>Regards,<br>
+Umair Sayed<br>
+umair [at] frappe [dot] io</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="13" />
+              <span class='post-likes'>13 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/design-request-middle-east-payroll-and-hr/74937/26">[Design Request] Middle East Payroll and HR</a>
+                        <meta itemprop='position' content='11'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/TurkerTunali'><span itemprop='name'>TurkerTunali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-09-24T11:41:23Z' class='post-time'>
+                    September 24, 2024, 11:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-09-24T11:41:23Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Localisation of Accounting and Financial stuff is a must.</p>
+<p>We are also working hard on Türkiye localization.</p>
+<p>Interested people can start from <a href="https://github.com/logedosoft/ERPNext-Turkish-Delight" rel="noopener nofollow ugc">here</a> or <a href="https://logedosoft.com/blog/erpnext/erpnext-ile-ilgili-%C3%B6nemli-adresler" rel="noopener nofollow ugc">here</a>.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/umair'><span itemprop='name'>umair</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-09-25T07:04:49Z' class='post-time'>
+                    September 25, 2024,  7:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-09-25T07:04:49Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>+10 <a class="mention" href="/u/turkertunali">@TurkerTunali</a></p>
+<p>Let’s plan publishing this on Marketplace, and eventually add in the FC’s site creation flow.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kittiu'><span itemprop='name'>kittiu</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-09-27T08:31:19Z' class='post-time'>
+                    September 27, 2024,  8:31am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-09-27T08:45:50Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/umair">@umair</a></p>
+<p>Should I use this thread to ask quesiton on good practice in location? Let me know if I should move the discuss elsewhere.</p>
+<p>In our case (Thailand). localizaiton is relating to, i.e., Sales Invoice, Purchase invoice which is in <strong>ERPNext</strong> and Expense Claim which is in module <strong>HRMS</strong></p>
+<p>What is the good design decision.</p>
+<ol>
+<li>Split into 2 modules, i.e.,<br>
+1.1 thai_tax_base, with hooks.py required_apps = [“erpnext”]<br>
+1.2 thai_tax_hrms, required_apps = [“hrms”]</li>
+<li>Stick to 1 module, i.e., thai_tax, required_apps = [“erpnext”, “hrms”]</li>
+<li>Stick to 1 module, i.e., thai_tax, but required = [“erpnext”] only (and try to write the app in the way it works even no hrms installed.</li>
+</ol>
+<p>1st method wil be more modular, but then, how the frappe cloud will handle?<br>
+2nd method, I am now using, but it will always required hrms installed too.<br>
+3rd method, May have problem technically, i.e., custom fields of Expense Claim can’t be imported.</p>
+<p><strong>Extra question</strong>, should we have good naming convention for localizaed modules. I.e., l10n_thailand, l10n_turkiye. Or may be it is too late now <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/umair'><span itemprop='name'>umair</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-09-30T05:45:16Z' class='post-time'>
+                    September 30, 2024,  5:45am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-09-30T05:54:21Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <blockquote>
+<p>1st method wil be more modular, but then, how the frappe cloud will handle?</p>
+</blockquote>
+<p>Since Frappe HR is a separate app, the HR localisation should also be separate. On Frappe Cloud, the UI for localisation app selection is just the first version. It might evolve in future to handle more use-cases. <a class="mention" href="/u/suhail">@Suhail</a></p>
+<blockquote>
+<p>2nd method, I am now using, but it will always required hrms installed too.</p>
+</blockquote>
+<p>I guess this is fine for now, as the volume of localised HR feature isn’t much. Perhaps you can handle error message better. It could include an instruction, to ensure user also install Frappe HR, and then re-try that those features.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Smit_Vora'><span itemprop='name'>Smit_Vora</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-10-01T10:11:37Z' class='post-time'>
+                    October 1, 2024, 10:11am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-10-01T10:11:37Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Option 3 should be preferred.</p>
+<p>This hook could be useful:</p>
+<p><code>after_app_install</code> and <code>before_app_uninstall</code> which can be handy for fixtures specific to HRMS app.</p>
+<p>This is how we implemented it:</p><aside class="onebox githubblob" data-onebox-src="https://github.com/resilient-tech/india-compliance/blob/develop/india_compliance/install.py#L107">
+  <header class="source">
+
+      <a href="https://github.com/resilient-tech/india-compliance/blob/develop/india_compliance/install.py#L107" target="_blank" rel="noopener">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/resilient-tech/india-compliance/blob/develop/india_compliance/install.py#L107" target="_blank" rel="noopener">resilient-tech/india-compliance/blob/develop/india_compliance/install.py#L107</a></h4>
+
+
+
+    <pre class="onebox"><code class="lang-py">
+      <ol class="start lines" start="97" style="counter-reset: li-counter 96 ;">
+          <li>    """</li>
+          <li></li>
+          <li>    if not frappe.conf.ic_api_secret or frappe.db.exists(</li>
+          <li>        "Custom Role", {"page": "india-compliance-account"}</li>
+          <li>    ):</li>
+          <li>        return</li>
+          <li></li>
+          <li>    frappe.get_doc(doctype="Custom Role", page="india-compliance-account").insert()</li>
+          <li></li>
+          <li></li>
+          <li class="selected">def after_app_install(app_name):</li>
+          <li>    if app_name == "hrms":</li>
+          <li>        create_hrms_custom_fields()</li>
+      </ol>
+    </code></pre>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kittiu'><span itemprop='name'>kittiu</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-10-01T11:42:42Z' class='post-time'>
+                    October 1, 2024, 11:42am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-10-01T11:42:42Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, agreed. Thanks for sharing your recipe. <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kittiu'><span itemprop='name'>kittiu</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-10-12T15:29:49Z' class='post-time'>
+                    October 12, 2024,  3:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-10-12T16:19:33Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/umair">@umair</a> side topic, in Thailand, shown more interest about ERPNext and in the local meet up, I have proposed to use this <strong><a href="http://discuss.frappe.io">discuss.frappe.io</a> forum</strong> instead of create Thailand only forum else where.</p>
+<p>Is it possibile and advisable to create a new category <strong>Thailand Community</strong> here and use local language?</p>
+<p>Please advice. Thanks!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kittiu'><span itemprop='name'>kittiu</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-26T08:41:16Z' class='post-time'>
+                    February 26, 2025,  8:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-26T08:41:16Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear community,<br>
+cc <a class="mention" href="/u/umair">@umair</a>, <a class="mention" href="/u/anndream">@anndream</a>, <a class="mention" href="/u/nnnpooh">@nnnpooh</a>, <a class="mention" href="/u/jengwarunee">@jengwarunee</a></p>
+<p>Anyone know how to add more language (Thai) to this repo?</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://crowdin.com/project/frappe">
+  <header class="source">
+      <img src="https://crowdin.com/favicon.ico" class="site-icon" width="48" height="48">
+
+      <a href="https://crowdin.com/project/frappe" target="_blank" rel="noopener nofollow ugc">Crowdin</a>
+  </header>
+
+  <article class="onebox-body">
+    <img width="48" height="48" src="https://crowdin-static.cf-downloads.crowdin.com/images/project-logo/639578/small/7078ebf1e4cac354f7a8b9d27fce7341441.png" class="thumbnail onebox-avatar">
+
+<h3><a href="https://crowdin.com/project/frappe" target="_blank" rel="noopener nofollow ugc">Frappe — Translation Project on Crowdin</a></h3>
+
+  <p>Help us translate Frappe and bring it to the world!</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Many thanks!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/rmeyer'><span itemprop='name'>rmeyer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-03-21T08:44:34Z' class='post-time'>
+                    March 21, 2025,  8:44am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-03-21T09:27:11Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Sorry for the delay, I’ve added it last week.</p>
+<p><a href="https://crowdin.com/editor/frappe/97/en-th?view=side-by-side&amp;filter=basic&amp;value=0" class="onebox" target="_blank" rel="noopener">https://crowdin.com/editor/frappe/97/en-th?view=side-by-side&amp;filter=basic&amp;value=0</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/waiminn'><span itemprop='name'>waiminn</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-02T08:05:04Z' class='post-time'>
+                    October 2, 2025,  8:05am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-02T08:05:04Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello community,</p>
+<p>I just requested to add Burmese language in Crowdin Translation project to start contribution on our country, Myanmar, localisation.</p>
+<p>Thanks in advance.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/waiminn'><span itemprop='name'>waiminn</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-02T11:34:40Z' class='post-time'>
+                    October 2, 2025, 11:34am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-02T11:34:40Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We have also started developing apps for Myanmar localisation.  The first one will be <a href="https://github.com/bcncl/bcn_myanmar_hr_compliance" rel="noopener nofollow ugc">Myanmar HR  Compliance</a>.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/santhida'><span itemprop='name'>santhida</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-02T11:39:13Z' class='post-time'>
+                    October 2, 2025, 11:39am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-02T11:39:13Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>cool, very exciting</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/umair'><span itemprop='name'>umair</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-08T05:06:17Z' class='post-time'>
+                    October 8, 2025,  5:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-08T05:06:17Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The Burmese translation for ERPNext is enabled <a class="mention" href="/u/waiminn">@waiminn</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/waiminn'><span itemprop='name'>waiminn</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-10T09:46:00Z' class='post-time'>
+                    October 10, 2025,  9:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-10T09:46:00Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you <a class="mention" href="/u/umair">@umair</a>, we will start working on it.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

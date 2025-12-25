@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>App module name collide with other apps - App Development - Frappe Forum</title>
+    <meta name="description" content="I have two apps A and B which both have a module named XYZ inside them. when I install them I got the following error: 
+(&amp;#39;Module Def&amp;#39;, &amp;#39;XYZ&amp;#39;, IntegrityError(1062, &amp;quot;Duplicate entry &amp;#39;XYZ&amp;#39; for key &amp;#39;PRIMARY&amp;#39;&amp;quot;)) 
+It seems lik&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/app-module-name-collide-with-other-apps/68229" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;App module name collide with other apps&#39;" href="https://discuss.frappe.io/t/app-module-name-collide-with-other-apps/68229.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/app-module-name-collide-with-other-apps/68229" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/app-module-name-collide-with-other-apps/68229" />
+<meta property="og:title" content="App module name collide with other apps" />
+<meta name="twitter:title" content="App module name collide with other apps" />
+<meta property="og:description" content="I have two apps A and B which both have a module named XYZ inside them. when I install them I got the following error:  (&#39;Module Def&#39;, &#39;XYZ&#39;, IntegrityError(1062, &quot;Duplicate entry &#39;XYZ&#39; for key &#39;PRIMARY&#39;&quot;))  It seems like if the module name needs to be unique for the whole platform. Debugging a bit I found code on file frappe/frappe/installer.py line 290 version 12  def add_module_defs(app): 	modules = frappe.get_module_list(app) 	for module in modules: 		d = frappe.new_doc(&quot;Module Def&quot;) 		d.app..." />
+<meta name="twitter:description" content="I have two apps A and B which both have a module named XYZ inside them. when I install them I got the following error:  (&#39;Module Def&#39;, &#39;XYZ&#39;, IntegrityError(1062, &quot;Duplicate entry &#39;XYZ&#39; for key &#39;PRIMARY&#39;&quot;))  It seems like if the module name needs to be unique for the whole platform. Debugging a bit I found code on file frappe/frappe/installer.py line 290 version 12  def add_module_defs(app): 	modules = frappe.get_module_list(app) 	for module in modules: 		d = frappe.new_doc(&quot;Module Def&quot;) 		d.app..." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:section" content="App Development" />
+<meta property="og:article:section:color" content="0E76BD" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2020-11-24T00:46:32+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"App module name collide with other apps","mainEntity":{"@type":"Question","name":"App module name collide with other apps","text":"I have two apps A and B which both have a module named XYZ inside them. when I install them I got the following error:\n\n(&#39;Module Def&#39;, &#39;XYZ&#39;, IntegrityError(1062, &quot;Duplicate entry &#39;XYZ&#39; for key &#39;PRIMARY&#39;&quot;))\n\nIt seems like if the module name needs to be unique for the whole platform. Debugging a bit &hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2020-11-24T00:46:32.284Z","author":{"@type":"Person","name":"bitgandtter","url":"https://discuss.frappe.io/u/bitgandtter"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/app-module-name-collide-with-other-apps/68229">App module name collide with other apps</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/app-development/24" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0E76BD'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>App Development</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='App module name collide with other apps'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/app-module-name-collide-with-other-apps/68229'>
+      <meta itemprop='datePublished' content='2020-11-24T00:46:32Z'>
+        <meta itemprop='articleSection' content='App Development'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/bitgandtter'><span itemprop='name'>bitgandtter</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/app-module-name-collide-with-other-apps/68229">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2020-11-24T00:46:32Z' class='post-time'>
+                    November 24, 2020, 12:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-11-24T00:46:32Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have two apps A and B which both have a module named XYZ inside them. when I install them I got the following error:</p>
+<p><code>('Module Def', 'XYZ', IntegrityError(1062, "Duplicate entry 'XYZ' for key 'PRIMARY'"))</code></p>
+<p>It seems like if the module name needs to be unique for the whole platform. Debugging a bit I found code on file frappe/frappe/installer.py line 290 version 12</p>
+<pre><code>def add_module_defs(app):
+	modules = frappe.get_module_list(app)
+	for module in modules:
+		d = frappe.new_doc("Module Def")
+		d.app_name = app
+		d.module_name = module
+		d.save(ignore_permissions=True)
+</code></pre>
+<p>There is something I’m missing here or indeed the modules need to be unique for the whole platform?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Mohammad_Hasnain'><span itemprop='name'>Mohammad_Hasnain</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-11-27T07:12:24Z' class='post-time'>
+                    November 27, 2020,  7:12am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-11-27T07:12:24Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The Module name needs to be unique per frappe site<br>
+If you are installing app A on site A and app B on site B there should not be an issue</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/bitgandtter'><span itemprop='name'>bitgandtter</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-11-27T12:21:53Z' class='post-time'>
+                    November 27, 2020, 12:21pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-11-27T12:21:53Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for your reply <a class="mention" href="/u/mohammad_hasnain">@Mohammad_Hasnain</a>  the main reason is that there is no reason at all, or say in other words there is no known restriction, at least I could not find any on the official doc or any other doc.</p>
+<p>I think that this can be an issue given that any other developer could choose to use the same name as me for his module. In our case, we tried to organize our app’s modules so each app has a core module for better onboarding developers and DX</p>
+<p>I also think that it’s a restriction that can easily drop if we just concatenate the app’s name with the module’s name.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/tamburro'><span itemprop='name'>tamburro</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-29T10:01:22Z' class='post-time'>
+                    November 29, 2025, 10:01am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-29T10:01:22Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I just opened an issue;</p>
+<p>I discovered that model name should be unique for bench and not only for site.</p>
+<p>I have 2 different sites on the same bench and 2 different apps that have the same name module, and during bench install console raises module conflict also if in the site only 1 app has been installed …</p>
+<p>If I manage multiple apps and multiple sites chances to get a conflict  are higher</p>
+<aside class="quote quote-modified" data-post="1" data-topic="157420">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img alt="" width="24" height="24" src="https://discuss.frappe.io/letter_avatar_proxy/v4/letter/t/dec6dc/48.png" class="avatar">
+    <div class="quote-title__text-content">
+      <a href="https://discuss.frappe.io/t/module-name-collision-when-different-apps-share-module-names/157420">Module name collision when different apps share module names</a> <a class="badge-category__wrapper " href="/c/framework/bug/32"><span data-category-id="32" style="--category-badge-color: #F1592A; --category-badge-text-color: #FFFFFF; --parent-category-badge-color: #F7941D;" data-parent-category-id="5" data-drop-close="true" class="badge-category --style-square --has-parent"><span class="badge-category__name">Bug</span></span></a>
+    </div>
+  </div>
+  <blockquote>
+    I’ve encountered a critical issue with Frappe’s module mapping system and wanted to bring it to the community’s attention. I’ve also opened a GitHub issue for tracking. 
+GitHub Issue: <a href="https://github.com/frappe/frappe/issues/34895" class="inline-onebox" rel="noopener nofollow ugc">Module name collision on different apps installed in different sites · Issue #34895 · frappe/frappe · GitHub</a> 
+<a name="p-487653-the-problem-1" class="anchor" href="#p-487653-the-problem-1"></a>The Problem
+When two independent apps declare a module with the same name in their modules.txt, Frappe’s setup_module_map() function overwrites the module→app mapping, causing the last app in apps.txt to “w…
+  </blockquote>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

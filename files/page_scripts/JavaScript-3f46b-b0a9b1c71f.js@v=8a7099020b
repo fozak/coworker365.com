@@ -1,0 +1,2 @@
+window.addEventListener("DOMContentLoaded",function(){const user_region=page_data.country
+document.querySelectorAll(".inr-pricing").forEach(function(el){el.style.display=user_region==="India"?"flex":"none";});document.querySelectorAll(".usd-pricing").forEach(function(el){el.style.display=user_region!=="India"?"flex":"none";});})

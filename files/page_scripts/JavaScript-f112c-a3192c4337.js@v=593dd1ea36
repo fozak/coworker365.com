@@ -1,0 +1,3 @@
+document.addEventListener('DOMContentLoaded',()=>{const bodyContainer=document.querySelector('.body-container');let ticking=false;function handleScroll(){if(ticking)return;ticking=true;requestAnimationFrame(()=>{if(window.innerWidth<=768)return ticking=false;const secondaryBtn=document.querySelector('.crm-cta-btn-secondary');const primaryBtn=document.querySelector('.crm-cta-btn-primary');if(secondaryBtn&&primaryBtn){const isScrolled=bodyContainer.scrollTop>window.innerHeight;secondaryBtn.style.display=isScrolled?'none':'flex';primaryBtn.style.display=isScrolled?'flex':'none';}
+ticking=false;});}
+bodyContainer?.addEventListener('scroll',handleScroll,{passive:true});});

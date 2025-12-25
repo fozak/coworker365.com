@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Intermittent 404 Errors for Static Assets After Custom Apps Build on macOS (Even with Single App) - Frappe Framework - Frappe Forum</title>
+    <meta name="description" content="Hi everyone, 
+I’m experiencing an intermittent issue when deploying a Docker image built using the official frappe_docker setup with custom apps building, even when installing only one app like erpnext. I share the most &amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/intermittent-404-errors-for-static-assets-after-custom-apps-build-on-macos-even-with-single-app/148081" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Intermittent 404 Errors for Static Assets After Custom Apps Build on macOS (Even with Single App)&#39;" href="https://discuss.frappe.io/t/intermittent-404-errors-for-static-assets-after-custom-apps-build-on-macos-even-with-single-app/148081.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/intermittent-404-errors-for-static-assets-after-custom-apps-build-on-macos-even-with-single-app/148081" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/intermittent-404-errors-for-static-assets-after-custom-apps-build-on-macos-even-with-single-app/148081" />
+<meta property="og:title" content="Intermittent 404 Errors for Static Assets After Custom Apps Build on macOS (Even with Single App)" />
+<meta name="twitter:title" content="Intermittent 404 Errors for Static Assets After Custom Apps Build on macOS (Even with Single App)" />
+<meta property="og:description" content="Hi everyone,  I’m experiencing an intermittent issue when deploying a Docker image built using the official frappe_docker setup with custom apps building, even when installing only one app like erpnext. I share the most relevants parts.  Dev environment macOS (Apple M4-pro, Docker Desktop ~3 months old)  custom_apps.json [   {     &quot;url&quot;: &quot;https://github.com/frappe/erpnext.git&quot;,     &quot;branch&quot;: &quot;version-15&quot;   } ]  build_image.sh #!/bin/bash  #Ruta a file RUTA_FILE=&quot;../frappe_docker/&quot;  # Verifica si..." />
+<meta name="twitter:description" content="Hi everyone,  I’m experiencing an intermittent issue when deploying a Docker image built using the official frappe_docker setup with custom apps building, even when installing only one app like erpnext. I share the most relevants parts.  Dev environment macOS (Apple M4-pro, Docker Desktop ~3 months old)  custom_apps.json [   {     &quot;url&quot;: &quot;https://github.com/frappe/erpnext.git&quot;,     &quot;branch&quot;: &quot;version-15&quot;   } ]  build_image.sh #!/bin/bash  #Ruta a file RUTA_FILE=&quot;../frappe_docker/&quot;  # Verifica si..." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:tag" content="docker" />
+<meta property="og:article:tag" content="custom-app" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="4 ❤" />
+<meta property="article:published_time" content="2025-06-03T16:59:07+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Intermittent 404 Errors for Static Assets After Custom Apps Build on macOS (Even with Single App)","mainEntity":{"@type":"Question","name":"Intermittent 404 Errors for Static Assets After Custom Apps Build on macOS (Even with Single App)","text":"Hi everyone,\n\nI’m experiencing an intermittent issue when deploying a Docker image built using the <a href=\"https://github.com/frappe/frappe_docker\" rel=\"noopener nofollow ugc\">official frappe_docker setup<\/a> with custom apps building, even when installing only one app like erpnext. I share the most relevants parts.\n\n<a name=\"dev-environment-1\" class=\"anchor\" href=\"#dev-environment-1\"><\/a>Dev environment\n\nmacOS (Apple M4-pro, Docker Desktop ~3 months &hellip;","upvoteCount":0,"answerCount":1,"datePublished":"2025-06-03T16:59:07.057Z","author":{"@type":"Person","name":"jlfernandez83","url":"https://discuss.frappe.io/u/jlfernandez83"},"acceptedAnswer":{"@type":"Answer","text":"Update\n\nI finally resolved the instability of Docker Compose by switching to Kubernetes. It provides proper isolation and a much more effective production environment. There’s a <a href=\"https://github.com/frappe/helm\" rel=\"noopener nofollow ugc\">Helm chart<\/a> you can use as a base for deployments. Everything works like a charm now :slightly_smiling_face:.","upvoteCount":3,"datePublished":"2025-06-19T17:47:24.590Z","url":"https://discuss.frappe.io/t/intermittent-404-errors-for-static-assets-after-custom-apps-build-on-macos-even-with-single-app/148081/9","author":{"@type":"Person","name":"jlfernandez83","url":"https://discuss.frappe.io/u/jlfernandez83"}}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/intermittent-404-errors-for-static-assets-after-custom-apps-build-on-macos-even-with-single-app/148081">Intermittent 404 Errors for Static Assets After Custom Apps Build on macOS (Even with Single App)</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/docker' class='discourse-tag' rel="tag">docker</a>, 
+            <a href='https://discuss.frappe.io/tag/custom-app' class='discourse-tag' rel="tag">custom-app</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Intermittent 404 Errors for Static Assets After Custom Apps Build on macOS (Even with Single App)'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/intermittent-404-errors-for-static-assets-after-custom-apps-build-on-macos-even-with-single-app/148081'>
+      <meta itemprop='datePublished' content='2025-06-03T16:59:07Z'>
+        <meta itemprop='articleSection' content='Frappe Framework'>
+      <meta itemprop='keywords' content='docker, custom-app'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jlfernandez83'><span itemprop='name'>jlfernandez83</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/intermittent-404-errors-for-static-assets-after-custom-apps-build-on-macos-even-with-single-app/148081">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-06-03T16:59:07Z' class='post-time'>
+                    June 3, 2025,  4:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-03T17:51:26Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi everyone,</p>
+<p>I’m experiencing an intermittent issue when deploying a Docker image built using the <a href="https://github.com/frappe/frappe_docker" rel="noopener nofollow ugc">official <code>frappe_docker</code> setup</a> with <strong>custom apps building</strong>, even when installing only <strong>one app like <code>erpnext</code></strong>. I share the most relevants parts.</p>
+<h2><a name="dev-environment-1" class="anchor" href="#dev-environment-1"></a>Dev environment</h2>
+<p>macOS (Apple M4-pro, Docker Desktop ~3 months old)</p>
+<h3><a name="custom_appsjson-2" class="anchor" href="#custom_appsjson-2"></a>custom_apps.json</h3>
+<pre><code class="lang-auto">[
+  {
+    "url": "https://github.com/frappe/erpnext.git",
+    "branch": "version-15"
+  }
+]
+</code></pre>
+<h3><a name="build_imagesh-3" class="anchor" href="#build_imagesh-3"></a>build_image.sh</h3>
+<pre><code class="lang-auto">#!/bin/bash
+
+#Ruta a file
+RUTA_FILE="../frappe_docker/"
+
+# Verifica si se proporcionó un argumento
+if [ -z "$1" ]; then
+  echo "Use: $0 &lt;image_name&gt;"
+  exit 1
+fi
+
+# Asigna el tag proporcionado como parámetro
+IMAGE_TAG=$1
+
+# Verifica si la variable APPS_JSON_BASE64 está definida
+if [ -z "$APPS_JSON_BASE64" ]; then
+  echo "Error: La variable de entorno APPS_JSON_BASE64 no está definida."
+  echo "Ejecuta primero el script para configurarla."
+  exit 1
+fi
+
+# Construcción de la imagen Docker
+docker buildx build --no-cache --platform=linux/amd64 \
+  --build-arg FRAPPE_BRANCH=version-15 \
+  --build-arg APPS_JSON_BASE64=$APPS_JSON_BASE64 \
+  --tag=$IMAGE_TAG \
+  --file="${RUTA_FILE}images/layered/Containerfile" .
+
+# Verifica si la construcción fue exitosa
+if [ $? -eq 0 ]; then
+  echo "✅ Imagen construida con éxito: $IMAGE_TAG"
+else
+  echo "❌ Error en la construcción de la imagen."
+  exit 1
+fi
+</code></pre>
+<h2><a name="production-environment-4" class="anchor" href="#production-environment-4"></a>Production environment</h2>
+<p><em><strong>Linux ubuntu-8gb-nbg1-1 6.8.0-55-generic <span class="hashtag-raw">#57-Ubuntu</span> SMP PREEMPT_DYNAMIC Wed Feb 12 23:42:21 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux</strong></em></p>
+<p>Everything seems to work fine. After that, I push the image in the repo, and deploy in production.</p>
+<pre><code class="lang-auto"># Reference: https://github.com/frappe/frappe_docker/blob/main/docs/environment-variables.md
+
+ERPNEXT_VERSION=v15.63.0
+
+DB_PASSWORD=pwd
+
+# Only if you use external database
+DB_HOST=mariadb-database
+DB_PORT=3306
+
+# Only if you use external Redis
+REDIS_CACHE=
+REDIS_QUEUE=
+
+# Only with HTTPS override
+LETSENCRYPT_EMAIL=admin@mycompany.net
+
+# These environment variables are not required.
+
+# Default value is `$$host` which resolves site by host. For example, if your host is `example.com`,
+# site's name should be `example.com`, or if host is `127.0.0.1` (local debugging), it should be `127.0.0.1`.
+# This variable allows to override described behavior. Let's say you create site named `mysite`
+# and do want to access it by `127.0.0.1` host. Than you would set this variable to `mysite`.
+FRAPPE_SITE_NAME_HEADER=test04.mycompany.net
+
+# Default value is `8080`.
+HTTP_PUBLISH_PORT=
+
+# Default value is `127.0.0.1`. Set IP address as our trusted upstream address.
+UPSTREAM_REAL_IP_ADDRESS=
+
+# Default value is `X-Forwarded-For`. Set request header field whose value will be used to replace the client address
+UPSTREAM_REAL_IP_HEADER=
+
+# Allowed values are on|off. Default value is `off`. If recursive search is disabled,
+# the original client address that matches one of the trusted addresses
+# is replaced by the last address sent in the request header field defined by the real_ip_header directive.
+# If recursive search is enabled, the original client address that matches one of the trusted addresses is replaced by the last non-trusted address sent in the request header field.
+UPSTREAM_REAL_IP_RECURSIVE=
+
+# All Values Allowed by nginx proxy_read_timeout are allowed, default value is 120s
+# Useful if you have longrunning print formats or slow loading sites
+PROXY_READ_TIMEOUT=
+
+# All Values allowed by nginx client_max_body_size are allowed, default value is 50m
+# Necessary if the upload limit in the frappe application is increased
+CLIENT_MAX_BODY_SIZE=
+
+# List of sites for letsencrypt certificates quoted with backtick (`) and separated by comma (,)
+# More https://doc.traefik.io/traefik/routing/routers/#rule
+# About acme https://doc.traefik.io/traefik/https/acme/#domain-definition
+SITES=`test04.mycompany.net`
+ROUTER=test04
+BENCH_NETWORK=test04
+
+CUSTOM_IMAGE='app_imagen_name'
+CUSTOM_TAG='v0.0.1'
+</code></pre>
+<p>I then use:</p>
+<pre><code class="lang-auto">docker compose --project-name "$PROJECT_NAME" \
+  --env-file "$ENV_FILE" \
+  -f ../frappe_docker/compose.yaml \
+  -f ../frappe_docker/overrides/compose.redis.yaml \
+  -f ../frappe_docker/overrides/compose.multi-bench.yaml \
+  -f ../frappe_docker/overrides/compose.multi-bench-ssl.yaml \
+  config &gt; "$OUTPUT_YAML"
+</code></pre>
+<p>To generate the yaml in production, deploy with:</p>
+<pre><code class="lang-auto">docker compose --project-name "$PROJECT_NAME" -f "$YAML_FILE" up -d
+</code></pre>
+<p>and init site with something like:</p>
+<pre><code class="lang-auto">INSTALL_APPS_ARGS=()
+for APP in "${APPS[@]}"; do
+  INSTALL_APPS_ARGS+=(--install-app "$APP")
+done
+
+# Ejecuta el comando de creación del sitio con todas las apps
+docker compose --project-name "$PROJECT_NAME" exec backend \
+  bench new-site --mariadb-user-host-login-scope=% \
+  --db-root-password "$DB_ROOT_PASSWORD" \
+  "${INSTALL_APPS_ARGS[@]}" \
+  --admin-password "$ADMIN_PASSWORD" \
+  "$SITE_NAME"
+
+</code></pre>
+<p><strong>Key behaviors:</strong></p>
+<ul>
+<li>The <strong>first load of the site</strong> fails to load some assets (CSS/JS).</li>
+<li>A second reload <strong>sometimes</strong> loads assets correctly, but other times reverts to missing files again.</li>
+<li>Hashes in the asset filenames change unexpectedly between reloads.</li>
+<li>Happens <strong>even with only <code>erpnext</code></strong> in the custom build.</li>
+<li><strong>No issue when using the default frappe/erpnext image</strong>, only when using a custom image via <code>APPS_JSON_BASE64</code>.</li>
+<li>There are other benches/sites beeing served in the same production host.</li>
+<li>When I was using the previous docker for frappe library, and I deployed a new bench, the old ones got broken. Now, under this new version, the rest of the benches keep on working properly.</li>
+</ul>
+<p>If you read all of this — thank you so much! Let me know if you need any more info or want me to test something. I’ll continue debugging until I find the root cause.</p>
+<p>Thanks again <img src="https://discuss.frappe.io/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jlfernandez83'><span itemprop='name'>jlfernandez83</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-04T09:18:24Z' class='post-time'>
+                    June 4, 2025,  9:18am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-04T09:18:24Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><strong>Updates:</strong></p>
+<ul>
+<li>Removed all container in host, built an image in dev environment with develop branch in frappe, erpnext and builder, and deployed in production. <em><strong>It works like a charm</strong></em>.  Now I can add as many benches as I like in production host.</li>
+<li>When I added a “no custom image container” it fails. It’s <em><strong>ERPNEXT_VERSION=v15.63.0</strong></em></li>
+</ul>
+<p><strong>Thereby I suspect problem has nothing to do with the building process, but with versions and branches in apps/frappe.</strong></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-04T15:45:22Z' class='post-time'>
+                    June 4, 2025,  3:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-04T15:45:22Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="jlfernandez83" data-post="1" data-topic="148081">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/jlfernandez83/48/85229_2.png" class="avatar"> jlfernandez83:</div>
+<blockquote>
+<pre><code class="lang-auto">docker buildx build --no-cache --platform=linux/amd64 \
+  --build-arg FRAPPE_BRANCH=version-15 \
+  --build-arg APPS_JSON_BASE64=$APPS_JSON_BASE64 \
+  --tag=$IMAGE_TAG \
+  --file="${RUTA_FILE}images/layered/Containerfile" .
+</code></pre>
+</blockquote>
+</aside>
+<p><code>--file</code> is located in <code>../frappe_docker</code> then context needs to be <code>../frappe_docker</code> instead of <code>.</code></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jlfernandez83'><span itemprop='name'>jlfernandez83</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-04T19:00:06Z' class='post-time'>
+                    June 4, 2025,  7:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-04T19:00:06Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Sorry for the confusion, <a class="mention" href="/u/revant_one">@revant_one</a>. Let me clarify.</p>
+<p>I’m running that command from a custom shell script located at same level as frappe_docker (that is, they share the same parent directory). So my RUTA_FILE var is “…/frappe_docker/”. Images seems to build properly. It seems the issue is related with versioning.</p>
+<p>In the begining of <a href="https://www.youtube.com/watch?v=c9RgvPz4KhM" rel="noopener nofollow ugc">this video</a> you mention there has to be some kind of match between FRAPPE_BRANCH and branches in custom_apps, so you can’t use develop branch in erpnext apps.json , for example, unless you use FRAPPE_BRANCH=develop as well when building. I suspect the error comes from there, but I need to confirm yet. Could you elaborate on that?</p>
+<p>Thanks for your time.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jlfernandez83'><span itemprop='name'>jlfernandez83</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-05T09:45:50Z' class='post-time'>
+                    June 5, 2025,  9:45am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-05T10:53:44Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><strong>Updates:</strong></p>
+<ul>
+<li>I tried different combinations of version branches in <code>apps.json</code>. Sometimes assets are built properly when deployed, sometimes they aren’t. At first, I thought the issue was caused by using <code>'develop'</code> in any app branch, but that doesn’t seem to be the case. Also at first, benches working properly seemed to be isolated from the benches with errors. But that was not the case at the end, when they started to fail as well on building assets.</li>
+<li>You can find here the <a href="https://github.com/jlfernandez83/linkingclouds_images/pkgs/container/linkingclouds%2Fbase" rel="noopener nofollow ugc">images used until now</a>.</li>
+</ul>
+<p><strong>In summary:</strong> Asset building is unstable when multiple benches run on the same host. <em><strong>Any ideas on what could be causing this?</strong></em></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jlfernandez83'><span itemprop='name'>jlfernandez83</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-05T15:52:48Z' class='post-time'>
+                    June 5, 2025,  3:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-05T16:02:39Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><strong>Updates:</strong></p>
+<ul>
+<li>After some research, I’ve found some ‘sleeping’ connections in Mariadb process list (after running show processlist command in the failing site) in a site of a bench. The connection appears after internal server error, on first site visit.</li>
+<li><strong>It’s the fourth bench in host. Is there any limit to this?</strong></li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jlfernandez83'><span itemprop='name'>jlfernandez83</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-06T18:19:55Z' class='post-time'>
+                    June 6, 2025,  6:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-06T18:19:55Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><strong>Update</strong>:</p>
+<ul>
+<li><a href="https://github.com/frappe/frappe_docker/issues/1361#issuecomment-2949837455" rel="noopener nofollow ugc">This</a> could fix part of the problem, but unestability remains with custom images.</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jlfernandez83'><span itemprop='name'>jlfernandez83</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-06T18:32:41Z' class='post-time'>
+                    June 6, 2025,  6:32pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-06T18:32:41Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="jlfernandez83" data-post="1" data-topic="148081">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/jlfernandez83/48/85229_2.png" class="avatar"> jlfernandez83:</div>
+<blockquote>
+<pre><code class="lang-auto">docker buildx build --no-cache --platform=linux/amd64 \
+  --build-arg FRAPPE_BRANCH=version-15 \
+  --build-arg APPS_JSON_BASE64=$APPS_JSON_BASE64 \
+  --tag=$IMAGE_TAG \
+  --file="${RUTA_FILE}images/layered/Containerfile" .
+</code></pre>
+</blockquote>
+</aside>
+<p>Sorry, I missunderstood this.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jlfernandez83'><span itemprop='name'>jlfernandez83</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-19T17:47:24Z' class='post-time'>
+                    June 19, 2025,  5:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-19T17:47:24Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><strong>Update</strong></p>
+<p>I finally resolved the instability of Docker Compose by switching to Kubernetes. It provides proper isolation and a much more effective production environment. There’s a <a href="https://github.com/frappe/helm" rel="noopener nofollow ugc">Helm chart</a> you can use as a base for deployments. Everything works like a charm now <img src="https://discuss.frappe.io/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20">.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

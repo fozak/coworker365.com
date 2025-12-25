@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HRMS for the US region - Frappe HR - Frappe Forum</title>
+    <meta name="description" content="Hey folks, 
+I’m part of the Frappe team, and we’re currently working on bridging the gap in our HRMS to make it truly usable in the US, right out of the box. To do this well, we’d love to hear directly from people who ar&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/hrms-for-the-us-region/153509" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;HRMS for the US region&#39;" href="https://discuss.frappe.io/t/hrms-for-the-us-region/153509.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/hrms-for-the-us-region/153509" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/hrms-for-the-us-region/153509" />
+<meta property="og:title" content="HRMS for the US region" />
+<meta name="twitter:title" content="HRMS for the US region" />
+<meta property="og:description" content="Hey folks,  I’m part of the Frappe team, and we’re currently working on bridging the gap in our HRMS to make it truly usable in the US, right out of the box. To do this well, we’d love to hear directly from people who are already using it (or have tried using it) in the US.  If you’re based in the US and open to sharing your perspective, I’d be happy to connect. We want to understand:   What’s missing today? Where do you face friction in day-to-day use? What features or compliance requirements a..." />
+<meta name="twitter:description" content="Hey folks,  I’m part of the Frappe team, and we’re currently working on bridging the gap in our HRMS to make it truly usable in the US, right out of the box. To do this well, we’d love to hear directly from people who are already using it (or have tried using it) in the US.  If you’re based in the US and open to sharing your perspective, I’d be happy to connect. We want to understand:   What’s missing today? Where do you face friction in day-to-day use? What features or compliance requirements a..." />
+<meta property="og:article:section" content="Frappe HR" />
+<meta property="og:article:section:color" content="ffd478" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="3 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="6 ❤" />
+<meta property="article:published_time" content="2025-09-13T13:12:51+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"HRMS for the US region","mainEntity":{"@type":"Question","name":"HRMS for the US region","text":"Hey folks,\n\nI’m part of the Frappe team, and we’re currently working on bridging the gap in our HRMS to make it truly usable in the US, right out of the box. To do this well, we’d love to hear directly from people who are already using it (or have tried using it) in the US.\n\nIf you’re based in the U&hellip;","upvoteCount":1,"answerCount":0,"datePublished":"2025-09-13T13:12:51.812Z","author":{"@type":"Person","name":"tejas","url":"https://discuss.frappe.io/u/tejas"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/hrms-for-the-us-region/153509">HRMS for the US region</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/hr/22" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #ffd478'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe HR</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='HRMS for the US region'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/hrms-for-the-us-region/153509'>
+      <meta itemprop='datePublished' content='2025-09-13T13:12:51Z'>
+        <meta itemprop='articleSection' content='Frappe HR'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/tejas'><span itemprop='name'>tejas</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/hrms-for-the-us-region/153509">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-09-13T13:12:51Z' class='post-time'>
+                    September 13, 2025,  1:12pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-13T13:12:51Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey folks,</p>
+<p>I’m part of the Frappe team, and we’re currently working on bridging the gap in our HRMS to make it truly usable in the US, right out of the box. To do this well, we’d love to hear directly from people who are already using it (or have tried using it) in the US.</p>
+<p>If you’re based in the US and open to sharing your perspective, I’d be happy to connect. We want to understand:</p>
+<ul>
+<li>What’s missing today?</li>
+<li>Where do you face friction in day-to-day use?</li>
+<li>What features or compliance requirements are absolutely essential for the US market?</li>
+</ul>
+<p>Your input will directly shape what we build next, and help us make HRMS a stronger product for everyone.</p>
+<p>Would anyone here be willing to hop on a quick call or chat? feel free to book a slot here - <a href="https://calendar.app.google/KyxvsQhvSixEimEr8" rel="noopener nofollow ugc">https://calendar.app.google/KyxvsQhvSixEimEr8</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/trustedcomputer'><span itemprop='name'>trustedcomputer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-16T19:52:11Z' class='post-time'>
+                    September 16, 2025,  7:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-16T19:52:11Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/tejas">@tejas</a> There are a couple of really big missing pieces in the payroll module from my perspective as a small US-based business related to taxation.</p>
+<ol>
+<li>
+<p>You may want to take a look at this very long thread starting <a href="https://discuss.frappe.io/t/multiple-problems-with-payroll/147931/32">here</a>. It describes the lack of any way to reference Gross Year to Date pay prior to the current payroll run in a formula. This is crucial because there are several taxes that have YTD thresholds in them.</p>
+</li>
+<li>
+<p>In most of the US, there is a need for two Income Tax slabs instead of just one because income is taxed similarly at the federal and state level. Frappe HR currently only allows one tax slab. That means most of us in the US have to define complicated custom forumlae instead of using tax slabs. Please reference this <a href="https://discuss.frappe.io/t/payroll-not-usable-in-the-united-states/99805">thread</a> and this github <a href="https://github.com/frappe/hrms/issues/111" rel="noopener nofollow ugc">issue</a>.</p>
+</li>
+</ol>
+<p>I’m open to discussing further in a call/chat if you think that would be helpful.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/surajkumar'><span itemprop='name'>surajkumar</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-17T06:39:42Z' class='post-time'>
+                    September 17, 2025,  6:39am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-17T06:39:42Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/tejas">@tejas</a> We successfully implemented Payroll  for a US client using the existing Payroll module, with a few customizations to make it functional for their needs. I can walk you through our implementation to give you an idea of the approach. There may still be gaps that other community members can help refine, but the solution has been in use by the client for last few months now.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/volkswagner'><span itemprop='name'>volkswagner</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-17T14:04:28Z' class='post-time'>
+                    September 17, 2025,  2:04pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-17T14:04:28Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In addition to what <a class="mention" href="/u/trustedcomputer">@trustedcomputer</a> mentioned/linked, here are some areas that need improvement.</p>
+<p>As mentioned, the feature request for allowing multiple income tax slabs would be great. I think this can further be enhanced as to how we “assign” the tax slab. I think it would be helpful to be able to use the tax slab like we use variables/components. We don’t want to “blindly” apply the tax to “gross income”. There are other tax jurisdictions or tax authorities that have more complex computations. If we could “call” or “assign” the tax slab inside a formula, that would give great flexibility.</p>
+<p>I also think the limitation of only two types of Salary Components is not sufficient. Consider Employer Contributions and Employer Taxes. While we can use the existing system for these types of components, it’s not straightforward. See <a href="https://discuss.frappe.io/t/guide-integrating-employer-contributions-in-erpnext/143067">this thread</a> for reference. You can also search “<a href="https://discuss.frappe.io/search?q=employer%20contributions%20order%3Alatest_topic">employer contributions</a>” for others.</p>
+<p>In the above mentioned “mega thread”, I think we can confirm there is a bug in the use of condition + formula. If they are not intented to work together, when filling one out, the other should be visibly disabled or there should be a note stating that they can’t be used together. We should be able to use both condition and formula, but it does not work.</p>
+<p>Also discussed in the “mega thread”… Year To Date Gross Pay calculation is a sticking point. I understand it’s a catch-22, how do we generate formulas considering YTD_gross_pay, when the current period’s pay is not submitted yet. Saving the Salary Slip then Submitting the Salary Slip changes the values. As mentioned this makes it impossible to verify the amounts before submitting. This also makes “testing” salary components difficult. There are two built-in tests, but they are inadequet and behave differently.</p>
+<ol>
+<li>In Salary Structure Assignment there is a feature in the actions menu “Preview Salary Slip”. This only generates a preview of the first salary slip for the year. This is not useful to test components that rely on YTD numbers.</li>
+<li>In Salary Structure, there is a feature in the actions menu, “Preview Salary Slip”. This generates a preview for the next (or current) pay period. This is great if the YTD_gross is within the range I’d like to test.<br>
+What’s really needed is a fully capable test where the user can input fictitious numbers for ‘pay_period/date’, ‘ytd_gross’, etc, to accurately test the Salary Components. We tried creating such a test, but with the validations used in HRMS, we haven’t been able to replicate the behavior.</li>
+</ol>
+<p>In the USA, there are many tax jurisdictions, employee benefit types, etc. I think we should start by perfecting Federal Income tax, as that’s the low hanging fruit. Take a look at the <a href="https://www.irs.gov/pub/irs-pdf/fw4.pdf" rel="noopener nofollow ugc">W4 Form</a> that employees fill out to determine their tax withholdings. How nice would it be to have a form in HRMS that captures the values and builds a Salary Component Deduction. I’ve built something outside of ERPNext that considers these values, and builds a complex formula using other Salary Components, including statistical components. Again, it’s not easy to test them (without going through a long process of running a test payroll run).</p>
+<p>Better documentation on how Salary Components work, and how/when YTD values are calculated, would be a great help. Some of this seems mysterious, especially using conditions + formulas.</p>
+<p>Other areas where I’ve struggled are related to the limitations within the formula. We can’t use important functions like MIN, MAX, and more. I’m sure blocking their use is for security reasons, but it is severely limiting (makes for much more complex formulas).</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/peterg'><span itemprop='name'>peterg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-18T02:49:54Z' class='post-time'>
+                    September 18, 2025,  2:49am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-18T02:55:08Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,</p>
+<p>Great to see you’re looking into this. Over the last year or two, HRMS payroll has actually become much <em>less</em> usable with US payroll, so I’m glad there’s interest to reverse that trend.</p>
+<p>My 2c:</p>
+<ul>
+<li>As mentioned by others, <strong>Tax Slabs</strong> should be associated to Salary Components, not Salary Structure Assignments. A typical US salary slip has multiple components based on marginal brackets. It is not currently possible to express this without brittle hacks.</li>
+<li>Salary Slip Deductions should work with <strong>payable accounts</strong>. At present, it is only possible to make the single payroll payable account work this way. Other deductions don’t work with party-based accounting.</li>
+<li>The relationship between Salary Structures and Salary Structure Components should be refactored to <strong>eliminate data redundancy</strong>. For example, formula based components store calculation details in  both the Salary Structure document and the Salary Structure Component document, and it is structurally ambiguous which is being read.</li>
+</ul>
+<p>Common requests that, in my opinion, <em>shouldn’t</em> be implemented:</p>
+<ul>
+<li><strong>Don’t add new component types</strong>. I understand that this is a convenience that people want, but it will create more ambiguity than benefit. Earnings and Deductions have clear, well-understood, direct correspondences to accounting entries. Things like Employer Contributions do not.</li>
+<li><strong>Make formulas do less, not more.</strong> US jurisdictions often need calculated values like <code>gross_year_to_date</code> to determine earnings and deductions, but there is no safe way to make these values available to formulas without creating circular references. These values need to be applied at the Salary Slip level, not the Component level. Clear error messages should be thrown if people try to use them in formulas.</li>
+</ul>
+<p>Thanks again for the work on this! If I can clarify anything, please let me know.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/tejas'><span itemprop='name'>tejas</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-19T12:01:56Z' class='post-time'>
+                    September 19, 2025, 12:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-19T12:01:56Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you folks for sharing your thoughts here, i’m gonna go over these and set up some calls with y’all. Looking forward, thank you!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/teharris1'><span itemprop='name'>teharris1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-24T20:11:35Z' class='post-time'>
+                    November 24, 2025,  8:11pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-24T20:11:35Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Can you highlight what you did to make this work for your client?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/surajkumar'><span itemprop='name'>surajkumar</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-25T12:50:00Z' class='post-time'>
+                    November 25, 2025, 12:50pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-25T12:50:00Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/teharris1">@teharris1</a><br>
+We are currently developing a separate custom app specifically for US payroll compliance, and it may take some time to fully standardize it.<br>
+The requirements are quite extensive which we have achieved and client is using it without any issue, but if you’re facing any specific challenges, I’d be happy to help, chances are we’ve already solved something similar. If you have any ongoing projects, feel free to reach out with any questions.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/antgel'><span itemprop='name'>antgel</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-16T17:53:13Z' class='post-time'>
+                    December 16, 2025,  5:53pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-16T17:53:13Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/tejas">@tejas</a> Hi, any chance of an update on the outcomes here following your discussions with users?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/tejas'><span itemprop='name'>tejas</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-17T07:17:29Z' class='post-time'>
+                    December 17, 2025,  7:17am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-17T07:17:29Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey <a class="mention" href="/u/antgel">@antgel</a>  this is WIP rn, we’re highly inclined on integrating with a payroll provider and then building the workflows around it within a custom app. Were you looking to use the US payroll? or do you have any ideas?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/trustedcomputer'><span itemprop='name'>trustedcomputer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-18T01:38:48Z' class='post-time'>
+                    December 18, 2025,  1:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-18T01:38:48Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/tejas">@tejas</a> while using a payroll provider will likely be the best route for many, I hope the existing structure that allows us to run payroll through the HRMS app as it stands will not be removed. In my case, I have payroll fully functional through a server script, and have been using internally for more than a year.</p>
+<p>IMHO, it’s good to add some integrations with the payroll providers for those who want it (maybe similar to how the payments app was spun off from erpnext in v14), but I also believe, that running payroll through the app should be within reach for the HRMS app. I’m not a real software developer, but if my setup is functional with a server script, I think with some modest additions to the code, or a US-Payroll app that  provides those customizations/overrides to the payroll module, the HRMS app could do this out of the box.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

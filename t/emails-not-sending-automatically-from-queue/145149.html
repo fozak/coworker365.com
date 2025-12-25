@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Emails Not Sending Automatically from Queue - Customize ERPNext - Frappe Forum</title>
+    <meta name="description" content="Hi community, 
+I’m facing an issue with the email queue in my ERPNext setup using Docker. Here are the details: 
+Environment:
+
+ERPNext Version: v15.52.0
+Frappe Version: v15.56.0
+Deployment: Docker (using frappe_docker)
+S&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/emails-not-sending-automatically-from-queue/145149" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Emails Not Sending Automatically from Queue&#39;" href="https://discuss.frappe.io/t/emails-not-sending-automatically-from-queue/145149.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/emails-not-sending-automatically-from-queue/145149" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/emails-not-sending-automatically-from-queue/145149" />
+<meta property="og:title" content="Emails Not Sending Automatically from Queue" />
+<meta name="twitter:title" content="Emails Not Sending Automatically from Queue" />
+<meta property="og:description" content="Hi community,  I’m facing an issue with the email queue in my ERPNext setup using Docker. Here are the details:  Environment:  ERPNext Version: v15.52.0 Frappe Version: v15.56.0 Deployment: Docker (using frappe_docker) Scheduler Status: Enabled (checked with bench doctor) Email Account: Gmail SMTP (configured and tested, works when flushed manually)  Issue: Emails are being queued correctly in Email Queue (status = “Not Sent”), but they are not being sent automatically.  However, when I run the ..." />
+<meta name="twitter:description" content="Hi community,  I’m facing an issue with the email queue in my ERPNext setup using Docker. Here are the details:  Environment:  ERPNext Version: v15.52.0 Frappe Version: v15.56.0 Deployment: Docker (using frappe_docker) Scheduler Status: Enabled (checked with bench doctor) Email Account: Gmail SMTP (configured and tested, works when flushed manually)  Issue: Emails are being queued correctly in Email Queue (status = “Not Sent”), but they are not being sent automatically.  However, when I run the ..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:section" content="Customize ERPNext" />
+<meta property="og:article:section:color" content="0088CC" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="frappe" />
+<meta property="og:article:tag" content="customization" />
+<meta property="article:published_time" content="2025-04-04T06:55:59+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Emails Not Sending Automatically from Queue","mainEntity":{"@type":"Question","name":"Emails Not Sending Automatically from Queue","text":"Hi community,\n\nI’m facing an issue with the email queue in my ERPNext setup using Docker. Here are the details:\n\n<a name=\"environment-1\" class=\"anchor\" href=\"#environment-1\"><\/a>Environment:\n\nERPNext Version: v15.52.0\n\nFrappe Version: v15.56.0\n\nDeployment: Docker (using frappe_docker)\n\nScheduler Status: Enabled (checked with bench doctor)\n\nEmail Account: Gmail SMTP (&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-04-04T06:55:59.068Z","author":{"@type":"Person","name":"Mohammadsami_Bakhtya","url":"https://discuss.frappe.io/u/Mohammadsami_Bakhtya"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/emails-not-sending-automatically-from-queue/145149">Emails Not Sending Automatically from Queue</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/customize-erpnext/57" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0088CC'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Customize ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
+            <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag' rel="tag">customization</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Emails Not Sending Automatically from Queue'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/emails-not-sending-automatically-from-queue/145149'>
+      <meta itemprop='datePublished' content='2025-04-04T06:55:59Z'>
+        <meta itemprop='articleSection' content='Customize ERPNext'>
+      <meta itemprop='keywords' content='erpnext, frappe, customization'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Mohammadsami_Bakhtya'><span itemprop='name'>Mohammadsami_Bakhtya</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/emails-not-sending-automatically-from-queue/145149">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-04-04T06:55:59Z' class='post-time'>
+                    April 4, 2025,  6:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-04-04T06:55:59Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi community,</p>
+<p>I’m facing an issue with the email queue in my ERPNext setup using Docker. Here are the details:</p>
+<h3><a name="environment-1" class="anchor" href="#environment-1"></a><strong>Environment:</strong></h3>
+<ul>
+<li><strong>ERPNext Version:</strong> v15.52.0</li>
+<li><strong>Frappe Version:</strong> v15.56.0</li>
+<li><strong>Deployment:</strong> Docker (using <code>frappe_docker</code>)</li>
+<li><strong>Scheduler Status:</strong> Enabled (checked with <code>bench doctor</code>)</li>
+<li><strong>Email Account:</strong> Gmail SMTP (configured and tested, works when flushed manually)</li>
+</ul>
+<h3><a name="issue-2" class="anchor" href="#issue-2"></a><strong>Issue:</strong></h3>
+<p>Emails are being queued correctly in <strong>Email Queue</strong> (status = “Not Sent”), but they are <strong>not being sent automatically</strong>.</p>
+<p>However, when I run the following command manually inside the container, the emails are sent successfully:</p>
+<pre><code class="lang-auto">bench --site [my-site-name] execute frappe.email.queue.flush
+</code></pre>
+<p>So the queue system works, but the background job that should flush the queue doesn’t seem to be triggered automatically.</p>
+<p>Why isn’t the “Email Queue” being processed automatically, even though:</p>
+<ul>
+<li>Scheduler is running</li>
+<li>Emails are queued correctly</li>
+<li>Manual flush works fine</li>
+<li>Verified that the scheduler is <strong>enabled and running</strong> using <code>bench doctor</code></li>
+</ul>
+<p>Is there anything I’m missing in Docker-based setups to ensure background jobs (like email flush) are triggered?</p>
+<p>Thanks in advance for your help!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Sudh33r'><span itemprop='name'>Sudh33r</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/8/6/86cd197f998edf4c43341c8706ea342387785e78.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-04-11T14:07:26Z' class='post-time'>
+                    April 11, 2025,  2:07pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-04-11T14:07:26Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This is due to long and short queue containers might not be running.<br>
+You can start them it will work to send automatically<br>
+In docker-compose file which is pwd.yml which is used in frappe-docker repo it needs a small correction as below. depends on need to be set for queue-long and queue-short as these are starting before the redis-queue started and could not able to connect to it.</p>
+<pre><code class="lang-auto">queue-long:
+    # ... other configurations ...
+    **depends_on:**
+**      - redis-queue**
+
+  queue-short:
+    # ... other configurations ...
+    **depends_on:**
+**      - redis-queue**
+</code></pre>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/8/6/86cd197f998edf4c43341c8706ea342387785e78.png" data-download-href="https://discuss.frappe.io/uploads/default/86cd197f998edf4c43341c8706ea342387785e78" title="Screenshot 2025-04-11 at 2.19.39 PM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/8/6/86cd197f998edf4c43341c8706ea342387785e78_2_690x116.png" alt="Screenshot 2025-04-11 at 2.19.39 PM" data-base62-sha1="jevp6uf2QJHizGXdHo07aA8qe0g" width="690" height="116" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/8/6/86cd197f998edf4c43341c8706ea342387785e78_2_690x116.png, https://discuss.frappe.io/uploads/default/optimized/3X/8/6/86cd197f998edf4c43341c8706ea342387785e78_2_1035x174.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/8/6/86cd197f998edf4c43341c8706ea342387785e78_2_1380x232.png 2x" data-dominant-color="E8E5E4"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot 2025-04-11 at 2.19.39 PM</span><span class="informations">2222×374 257 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Let me see if I can raise a PR for it.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Mohammadsami_Bakhtya'><span itemprop='name'>Mohammadsami_Bakhtya</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/7/1/71241d439f33a3cbaa0e141feec4c65518305b8a.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-04-22T07:18:10Z' class='post-time'>
+                    April 22, 2025,  7:18am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-04-22T07:18:10Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="Sudh33r" data-post="2" data-topic="145149">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/sudh33r/48/86028_2.png" class="avatar"> Sudh33r:</div>
+<blockquote>
+<p><code>redis-queue</code></p>
+</blockquote>
+</aside>
+<p>In my case both containers are running.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/1/71241d439f33a3cbaa0e141feec4c65518305b8a.png" data-download-href="https://discuss.frappe.io/uploads/default/71241d439f33a3cbaa0e141feec4c65518305b8a" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/1/71241d439f33a3cbaa0e141feec4c65518305b8a_2_690x250.png" alt="image" data-base62-sha1="g8TknB6dDU2UOdaYQc8tBWFo48W" width="690" height="250" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/1/71241d439f33a3cbaa0e141feec4c65518305b8a_2_690x250.png, https://discuss.frappe.io/uploads/default/optimized/3X/7/1/71241d439f33a3cbaa0e141feec4c65518305b8a_2_1035x375.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/7/1/71241d439f33a3cbaa0e141feec4c65518305b8a_2_1380x500.png 2x" data-dominant-color="3E1B33"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1488×541 89.3 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Adeel_Siddiqui'><span itemprop='name'>Adeel_Siddiqui</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-05-01T01:42:38Z' class='post-time'>
+                    May 1, 2025,  1:42am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-05-01T01:42:38Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Did you find a solution for this?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Mohammadsami_Bakhtya'><span itemprop='name'>Mohammadsami_Bakhtya</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-05-12T07:41:17Z' class='post-time'>
+                    May 12, 2025,  7:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-05-12T07:41:17Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, you can follow the steps below:</p>
+<ol>
+<li>Access the Redis queue container (replace the container name accordingly):</li>
+</ol>
+<pre><code class="lang-auto">docker exec -it erp-redis-queue sh
+</code></pre>
+<ol start="2">
+<li>Inside the container, open the Redis console:</li>
+</ol>
+<pre><code class="lang-auto">redis-cli
+</code></pre>
+<ol start="3">
+<li>Run the following command to clear all queues:</li>
+</ol>
+<pre><code class="lang-auto">FLUSHALL
+</code></pre>
+<ol start="4">
+<li>Exit the Redis CLI and container.</li>
+</ol>
+<p><strong>Next:</strong></p>
+<ol>
+<li>Access your backend container (replace the container name):</li>
+</ol>
+<pre><code class="lang-auto">docker exec -it erp-backend-1 bash
+</code></pre>
+<ol start="2">
+<li>Disable the scheduler for your site:</li>
+</ol>
+<pre><code class="lang-auto">bench --site SITENAME scheduler disable
+</code></pre>
+<ol start="3">
+<li>Then re-enable it:</li>
+</ol>
+<pre><code class="lang-auto">bench --site SITENAME scheduler enable
+</code></pre>
+<p>Finally, <strong>restart the server</strong>.</p>
+<p><strong>Note:</strong> This will clear all old queued tasks that are still pending in your Redis queue.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/email-queue-not-sending-mails/148707">Email queue not sending mails</a>
+                        <meta itemprop='position' content='1'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Vsbehter'><span itemprop='name'>Vsbehter</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-03T09:28:20Z' class='post-time'>
+                    December 3, 2025,  9:28am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-03T09:28:20Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I also have same issue. Fix it by adding cronies. But original shoulder  not working</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

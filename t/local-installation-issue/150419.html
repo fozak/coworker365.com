@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Local installation issue - Insights - Frappe Forum</title>
+    <meta name="description" content="Hi All, 
+try install it on VM with: 
+ubuntu 22.04 LTS 
+bench-frappe@vps-c6c53df8:~/bench-frappe/sites$ bench version 
+erpnext 15.70.2 
+frappe 15.74.1 
+payments 0.0.1 
+I try make new installation on new VM but get same er&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/local-installation-issue/150419" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Local installation issue&#39;" href="https://discuss.frappe.io/t/local-installation-issue/150419.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/local-installation-issue/150419" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/local-installation-issue/150419" />
+<meta property="og:title" content="Local installation issue" />
+<meta name="twitter:title" content="Local installation issue" />
+<meta property="og:description" content="Hi All,  try install it on VM with:  ubuntu 22.04 LTS  bench-frappe@vps-c6c53df8:~/bench-frappe/sites$ bench version  erpnext 15.70.2  frappe 15.74.1  payments 0.0.1  I try make new installation on new VM but get same error.   Deprecation Warning [legacy-js-api]: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.  More info: Sass: Breaking Change: Legacy JS API  &lt;— Last few GCs —&gt;  [11234:0x350edeb0]   155927 ms: Mark-Compact 1419.1 (1457.2) → 1417.1 (1459.2) MB, 9592.01 / 0..." />
+<meta name="twitter:description" content="Hi All,  try install it on VM with:  ubuntu 22.04 LTS  bench-frappe@vps-c6c53df8:~/bench-frappe/sites$ bench version  erpnext 15.70.2  frappe 15.74.1  payments 0.0.1  I try make new installation on new VM but get same error.   Deprecation Warning [legacy-js-api]: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.  More info: Sass: Breaking Change: Legacy JS API  &lt;— Last few GCs —&gt;  [11234:0x350edeb0]   155927 ms: Mark-Compact 1419.1 (1457.2) → 1417.1 (1459.2) MB, 9592.01 / 0..." />
+<meta property="og:article:section" content="Business Apps" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Insights" />
+<meta property="og:article:section:color" content="0088CC" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="4 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2025-07-20T04:02:36+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Local installation issue","mainEntity":{"@type":"Question","name":"Local installation issue","text":"Hi All,\n\ntry install it on VM with:\n\nubuntu 22.04 LTS\n\nbench-frappe@vps-c6c53df8:~/bench-frappe/sites$ bench version\n\nerpnext 15.70.2\n\nfrappe 15.74.1\n\npayments 0.0.1\n\nI try make new installation on new VM but get same error.\n\nDeprecation Warning [legacy-js-api]: The legacy JS API is deprecated and &hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-07-20T04:02:36.697Z","author":{"@type":"Person","name":"EduRoman","url":"https://discuss.frappe.io/u/EduRoman"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/local-installation-issue/150419">Local installation issue</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/business-apps/89" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Business Apps</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/business-apps/insights/74" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0088CC'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Insights</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Local installation issue'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/local-installation-issue/150419'>
+      <meta itemprop='datePublished' content='2025-07-20T04:02:36Z'>
+        <meta itemprop='articleSection' content='Insights'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/EduRoman'><span itemprop='name'>EduRoman</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/local-installation-issue/150419">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-07-20T04:02:36Z' class='post-time'>
+                    July 20, 2025,  4:02am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-20T04:02:36Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi All,</p>
+<p>try install it on VM with:</p>
+<p>ubuntu 22.04 LTS<br>
+bench-frappe@vps-c6c53df8:~/bench-frappe/sites$ bench version<br>
+erpnext 15.70.2<br>
+frappe 15.74.1<br>
+payments 0.0.1</p>
+<p>I try make new installation on new VM but get same error.</p>
+<hr>
+<p>Deprecation Warning [legacy-js-api]: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.</p>
+<p>More info: <a href="https://sass-lang.com/d/legacy-js-api" class="inline-onebox" rel="noopener nofollow ugc">Sass: Breaking Change: Legacy JS API</a></p>
+<p>&lt;— Last few GCs —&gt;</p>
+<p>[11234:0x350edeb0]   155927 ms: Mark-Compact 1419.1 (1457.2) → 1417.1 (1459.2) MB, 9592.01 / 0.00 ms  (average mu = 0.398, current mu = 0.010) allocation failure; scavenge might not succeed<br>
+[11234:0x350edeb0]   162951 ms: Mark-Compact 1421.2 (1459.2) → 1418.8 (1460.7) MB, 6908.60 / 0.00 ms  (average mu = 0.249, current mu = 0.016) allocation failure; scavenge might not succeed</p>
+<p>&lt;— JS stacktrace —&gt;</p>
+<p>FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory<br>
+----- Native stack trace -----</p>
+<p>1: 0xb8cf03 node::OOMErrorHandler(char const*, v8::OOMDetails const&amp;) [/home/bench-frappe/.nvm/versions/node/v20.19.4/bin/node]<br>
+2: 0xf060d0 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, v8::OOMDetails const&amp;) [/home/bench-frappe/.nvm/versions/node/v20.19.4/bin/node]<br>
+3: 0xf063b7 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, v8::OOMDetails const&amp;) [/home/bench-frappe/.nvm/versions/node/v20.19.4/bin/node]<br>
+4: 0x1118005  [/home/bench-frappe/.nvm/versions/node/v20.19.4/bin/node]<br>
+5: 0x112fe88 v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/home/bench-frappe/.nvm/versions/node/v20.19.4/bin/node]<br>
+6: 0x1105fa1 v8::internal::HeapAllocator::AllocateRawWithLightRetrySlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/home/bench-frappe/.nvm/versions/node/v20.19.4/bin/node]<br>
+7: 0x1107135 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/home/bench-frappe/.nvm/versions/node/v20.19.4/bin/node]<br>
+8: 0x10e4786 v8::internal:<img src="https://discuss.frappe.io/images/emoji/twitter/factory.png?v=12" title=":factory:" class="emoji" alt=":factory:" loading="lazy" width="20" height="20">:NewFillerObject(int, v8::internal::AllocationAlignment, v8::internal::AllocationType, v8::internal::AllocationOrigin) [/home/bench-frappe/.nvm/versions/node/v20.19.4/bin/node]<br>
+9: 0x15402c6 v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [/home/bench-frappe/.nvm/versions/node/v20.19.4/bin/node]<br>
+10: 0x1979ef6  [/home/bench-frappe/.nvm/versions/node/v20.19.4/bin/node]<br>
+Aborted (core dumped)<br>
+error Command failed with exit code 134.<br>
+info Visit <a href="https://yarnpkg.com/en/docs/cli/run" class="inline-onebox" rel="noopener nofollow ugc">yarn run | Yarn</a> for documentation about this command.<br>
+error Command failed with exit code 134.<br>
+info Visit <a href="https://yarnpkg.com/en/docs/cli/run" class="inline-onebox" rel="noopener nofollow ugc">yarn run | Yarn</a> for documentation about this command.<br>
+Error: Command failed: yarn build<br>
+at genericNodeError (node:internal/errors:984:15)<br>
+at wrappedFn (node:internal/errors:538:14)<br>
+at checkExecSyncError (node:child_process:891:11)<br>
+at execSync (node:child_process:963:15)<br>
+at run_build_command_for_apps (/home/bench-frappe/bench-frappe/apps/frappe/esbuild/esbuild.js:448:5)<br>
+at execute (/home/bench-frappe/bench-frappe/apps/frappe/esbuild/esbuild.js:125:23)<br>
+at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {<br>
+status: 134,<br>
+signal: null,<br>
+output: [ null, null, null ],<br>
+pid: 11209,<br>
+stdout: null,<br>
+stderr: null<br>
+}<br>
+error Command failed with exit code 1.<br>
+info Visit <a href="https://yarnpkg.com/en/docs/cli/run" class="inline-onebox" rel="noopener nofollow ugc">yarn run | Yarn</a> for documentation about this command.<br>
+Traceback (most recent call last):<br>
+File “/usr/lib/python3.10/runpy.py”, line 196, in _run_module_as_main<br>
+return _run_code(code, main_globals, None,<br>
+File “/usr/lib/python3.10/runpy.py”, line 86, in _run_code<br>
+exec(code, run_globals)<br>
+File “/home/bench-frappe/bench-frappe/apps/frappe/frappe/utils/bench_helper.py”, line 114, in <br>
+main()<br>
+File “/home/bench-frappe/bench-frappe/apps/frappe/frappe/utils/bench_helper.py”, line 20, in main<br>
+click.Group(commands=commands)(prog_name=“bench”)<br>
+File “/home/bench-frappe/bench-frappe/env/lib/python3.10/site-packages/click/core.py”, line 1442, in <strong>call</strong><br>
+return self.main(*args, **kwargs)<br>
+File “/home/bench-frappe/bench-frappe/env/lib/python3.10/site-packages/click/core.py”, line 1363, in main<br>
+rv = self.invoke(ctx)<br>
+File “/home/bench-frappe/bench-frappe/env/lib/python3.10/site-packages/click/core.py”, line 1830, in invoke<br>
+return _process_result(sub_ctx.command.invoke(sub_ctx))<br>
+File “/home/bench-frappe/bench-frappe/env/lib/python3.10/site-packages/click/core.py”, line 1830, in invoke<br>
+return <em>process_result(sub_ctx.command.invoke(sub_ctx))<br>
+File “/home/bench-frappe/bench-frappe/env/lib/python3.10/site-packages/click/core.py”, line 1226, in invoke<br>
+return ctx.invoke(self.callback, **ctx.params)<br>
+File “/home/bench-frappe/bench-frappe/env/lib/python3.10/site-packages/click/core.py”, line 794, in invoke<br>
+return callback(*args, **kwargs)<br>
+File “/home/bench-frappe/bench-frappe/apps/frappe/frappe/commands/utils.py”, line 77, in build<br>
+bundle(<br>
+File “/home/bench-frappe/bench-frappe/apps/frappe/frappe/build.py”, line 255, in bundle<br>
+frappe.commands.popen(command, cwd=frappe_app_path, env=get_node_env(), raise_err=True)<br>
+File “/home/bench-frappe/bench-frappe/apps/frappe/frappe/commands/<strong>init</strong>.py”, line 97, in popen<br>
+raise subprocess.CalledProcessError(return</em>, command)<br>
+subprocess.CalledProcessError: Command ‘yarn run production --apps insights --run-build-command’ returned non-zero exit status 1.<br>
+ERROR: bench build --app insights<br>
+subprocess.CalledProcessError: Command ‘bench build --app insights’ returned non-zero exit status 1.</p>
+<p>The above exception was the direct cause of the following exception:</p>
+<p>Traceback (most recent call last):<br>
+File “/usr/local/bin/bench”, line 8, in <br>
+sys.exit(cli())<br>
+File “/usr/local/lib/python3.10/dist-packages/bench/cli.py”, line 132, in cli<br>
+bench_command()<br>
+File “/usr/local/lib/python3.10/dist-packages/bench/commands/make.py”, line 181, in get_app<br>
+get_app(<br>
+File “/usr/local/lib/python3.10/dist-packages/bench/app.py”, line 781, in get_app<br>
+app.install(verbose=verbose, skip_assets=skip_assets, restart_bench=restart_bench)<br>
+File “/usr/local/lib/python3.10/dist-packages/bench/utils/render.py”, line 126, in wrapper_fn<br>
+return fn(*args, **kwargs)<br>
+File “/usr/local/lib/python3.10/dist-packages/bench/app.py”, line 253, in install<br>
+install_app(<br>
+File “/usr/local/lib/python3.10/dist-packages/bench/app.py”, line 948, in install_app<br>
+build_assets(bench_path=bench_path, app=app, using_cached=using_cached)<br>
+File “/usr/local/lib/python3.10/dist-packages/bench/utils/bench.py”, line 404, in build_assets<br>
+exec_cmd(command, cwd=bench_path, env=env)<br>
+File “/usr/local/lib/python3.10/dist-packages/bench/utils/<strong>init</strong>.py”, line 184, in exec_cmd<br>
+raise CommandFailedError(cmd) from subprocess.CalledProcessError(return_code, cmd)<br>
+bench.exceptions.CommandFailedError: bench build --app insights</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/smino'><span itemprop='name'>smino</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-20T04:29:37Z' class='post-time'>
+                    July 20, 2025,  4:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-20T04:29:37Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,</p>
+<p>How much memory does the VM have allocated to it?</p>
+<aside class="quote no-group" data-username="EduRoman" data-post="1" data-topic="150419">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/eduroman/48/40085_2.png" class="avatar"> EduRoman:</div>
+<blockquote>
+<p>FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory</p>
+</blockquote>
+</aside>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mitexleo'><span itemprop='name'>mitexleo</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-20T11:20:07Z' class='post-time'>
+                    July 20, 2025, 11:20am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-20T11:20:07Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="EduRoman" data-post="1" data-topic="150419">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/eduroman/48/40085_2.png" class="avatar"> EduRoman:</div>
+<blockquote>
+<p>FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory</p>
+</blockquote>
+</aside>
+<p>Increase or Add swap space. You don’t have enough ram.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/EduRoman'><span itemprop='name'>EduRoman</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-20T23:22:10Z' class='post-time'>
+                    July 20, 2025, 11:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-20T23:22:10Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>thanks <a class="mention" href="/u/smino">@smino</a> ans <a class="mention" href="/u/mitexleo">@mitexleo</a></p>
+<p>I added more swap memori, but now stop with error “node”.<br>
+Do you have any idea what happened?</p>
+<pre><code class="lang-auto">curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+source ~/.profile
+nvm install 20
+</code></pre>
+<p>and</p>
+<pre><code class="lang-auto">npm install npm@latest
+</code></pre>
+<p>when I checked version see this, but get same error.</p>
+<pre><code class="lang-auto">root@vps-c6c53df8:/home/bench-frappe/bench-frappe# npm list --depth=0
+bench-frappe@ /home/bench-frappe/bench-frappe
+├── node-sass@9.0.0
+└── npm@11.4.2
+
+root@vps-c6c53df8:/home/bench-frappe/bench-frappe# node -v
+v20.19.4
+root@vps-c6c53df8:/home/bench-frappe/bench-frappe#
+</code></pre>
+<p>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<pre><code class="lang-auto">INFO: App moved from apps/insights to archived/apps/insights-2025-07-20_2
+Getting insights
+$ git clone https://github.com/frappe/insights.git --branch develop --depth 1 --origin upstream
+Cloning into 'insights'...
+remote: Enumerating objects: 1002, done.
+remote: Counting objects: 100% (1002/1002), done.
+remote: Compressing objects: 100% (928/928), done.
+remote: Total 1002 (delta 152), reused 482 (delta 64), pack-reused 0 (from 0)
+Receiving objects: 100% (1002/1002), 24.15 MiB | 10.80 MiB/s, done.
+Resolving deltas: 100% (152/152), done.
+Ignoring dependencies of insights. To install dependencies use --resolve-deps
+Installing insights
+$ /home/bench-frappe/bench-frappe/env/bin/python -m pip install --quiet --upgrade -e /home/bench-frappe/bench-frappe/apps/insights
+$ yarn install --check-files
+yarn install v1.22.22
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+warning Pattern ["string-width@^4.1.0"] is trying to unpack in the same destination "/home/bench-frappe/.cache/yarn/v6/npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity/node_modules/string-width-cjs" as pattern ["string-width-cjs@npm:string-width@^4.2.0"]. This could result in non-deterministic behavior, skipping.
+error insights-frontend@0.0.0: The engine "node" is incompatible with this module. Expected version "&gt;=18.17.0". Got "12.22.9"
+error Found incompatible module.
+info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.
+ERROR: yarn install --check-files
+subprocess.CalledProcessError: Command 'yarn install --check-files' returned non-zero exit status 1.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/bin/bench", line 8, in &lt;module&gt;
+    sys.exit(cli())
+  File "/usr/local/lib/python3.10/dist-packages/bench/cli.py", line 132, in cli
+    bench_command()
+  File "/usr/local/lib/python3.10/dist-packages/bench/commands/make.py", line 181, in get_app
+    get_app(
+  File "/usr/local/lib/python3.10/dist-packages/bench/app.py", line 781, in get_app
+    app.install(verbose=verbose, skip_assets=skip_assets, restart_bench=restart_bench)
+  File "/usr/local/lib/python3.10/dist-packages/bench/utils/render.py", line 126, in wrapper_fn
+    return fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/bench/app.py", line 253, in install
+    install_app(
+  File "/usr/local/lib/python3.10/dist-packages/bench/app.py", line 943, in install_app
+    bench.run(yarn_install, cwd=app_path)
+  File "/usr/local/lib/python3.10/dist-packages/bench/bench.py", line 49, in run
+    return exec_cmd(cmd, cwd=cwd or self.cwd, _raise=_raise, env=env)
+  File "/usr/local/lib/python3.10/dist-packages/bench/utils/__init__.py", line 184, in exec_cmd
+    raise CommandFailedError(cmd) from subprocess.CalledProcessError(return_code, cmd)
+bench.exceptions.CommandFailedError: yarn install --check-files
+</code></pre>
+<p>PD:_</p>
+<p>*************************** past *******************************</p>
+<p>System information as of Sun Jul 20 20:22:11 UTC 2025</p>
+<p>System load:           0.46<br>
+Usage of /:            66.0% of 19.20GB<br>
+Memory usage:          27%<br>
+Swap usage:            34%<br>
+Processes:             115</p>
+<p>ubuntu@vps-c6c53df8:~$ free -h<br>
+total        used        free      shared  buff/cache   available<br>
+Mem:           1.9Gi       482Mi       394Mi       0.0Ki       1.0Gi       1.2Gi<br>
+Swap:          2.0Gi       702Mi       1.3Gi</p>
+<p>+++++++++++++++++++++++ new ++++++++++++++++++++++</p>
+<p>ubuntu@vps-c6c53df8:~$ free -h<br>
+total        used        free      shared  buff/cache   available<br>
+Mem:           1.9Gi       513Mi       903Mi       1.0Mi       499Mi       1.2Gi<br>
+Swap:          5.0Gi          0B       5.0Gi</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/smino'><span itemprop='name'>smino</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-21T02:55:16Z' class='post-time'>
+                    July 21, 2025,  2:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-21T02:55:16Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Memory is still insufficient to run Frappe comfortably,  4G is recommended , 8 for production.</p>
+<p>What does <code>which node</code>  or<code> node -v</code> return when run as the non-root user?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/EduRoman'><span itemprop='name'>EduRoman</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-23T00:04:19Z' class='post-time'>
+                    July 23, 2025, 12:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-23T00:04:19Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/smino">@smino</a>,</p>
+<p>this is my version of node, I install last version too and same problem.</p>
+<p>User</p>
+<pre><code class="lang-auto">ubuntu@vps-c6c53df8:/home/bench-frappe/bench-frappe$ node -v
+v20.19.4
+</code></pre>
+<p>Root</p>
+<pre><code class="lang-auto">root@vps-c6c53df8:/home/bench-frappe/bench-frappe# node -v
+v20.19.4
+</code></pre>
+<p>add 8 GB of swap for check if it the problem</p>
+<pre><code class="lang-auto">root@vps-c6c53df8:/home/bench-frappe/bench-frappe# free -h
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       784Mi       105Mi       1.0Mi       1.0Gi       940Mi
+Swap:          8.0Gi        18Mi       8.0Gi
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/smino'><span itemprop='name'>smino</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-23T04:16:15Z' class='post-time'>
+                    July 23, 2025,  4:16am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-23T04:16:15Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Does <code>yarn --check-files</code> return the same message as the script?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/EduRoman'><span itemprop='name'>EduRoman</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-24T18:44:35Z' class='post-time'>
+                    July 24, 2025,  6:44pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-24T18:44:35Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>give this log on directory of insights</p>
+<pre><code class="lang-auto">root@vps-c6c53df8:/home/bench-frappe/bench-frappe/apps/insights# yarn install --check-files
+yarn install v1.22.22
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+warning Pattern ["string-width@^4.1.0"] is trying to unpack in the same destination "/usr/local/share/.cache/yarn/v6/npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity/node_modules/string-width-cjs" as pattern ["string-width-cjs@npm:string-width@^4.2.0"]. This could result in non-deterministic behavior, skipping.
+[3/4] Linking dependencies...
+warning "workspace-aggregator-0f662bb8-e78e-4a45-aba4-a6878ccfd0da &gt; insights-frontend &gt; @tiptap/suggestion@2.12.0" has unmet peer dependency "@tiptap/core@^2.7.0".
+warning "workspace-aggregator-0f662bb8-e78e-4a45-aba4-a6878ccfd0da &gt; insights-frontend &gt; @tiptap/suggestion@2.12.0" has unmet peer dependency "@tiptap/pm@^2.7.0".
+warning "workspace-aggregator-0f662bb8-e78e-4a45-aba4-a6878ccfd0da &gt; insights-frontend &gt; @tiptap/vue-3@2.12.0" has unmet peer dependency "@tiptap/core@^2.7.0".
+warning "workspace-aggregator-0f662bb8-e78e-4a45-aba4-a6878ccfd0da &gt; insights-frontend &gt; @tiptap/vue-3@2.12.0" has unmet peer dependency "@tiptap/pm@^2.7.0".
+warning "workspace-aggregator-0f662bb8-e78e-4a45-aba4-a6878ccfd0da &gt; insights-frontend &gt; thememirror@2.0.1" has unmet peer dependency "@codemirror/language@^6.0.0".
+warning "workspace-aggregator-0f662bb8-e78e-4a45-aba4-a6878ccfd0da &gt; insights-frontend &gt; thememirror@2.0.1" has unmet peer dependency "@codemirror/state@^6.0.0".
+warning "workspace-aggregator-0f662bb8-e78e-4a45-aba4-a6878ccfd0da &gt; insights-frontend &gt; thememirror@2.0.1" has unmet peer dependency "@codemirror/view@^6.0.0".
+warning "workspace-aggregator-0f662bb8-e78e-4a45-aba4-a6878ccfd0da &gt; insights-frontend &gt; @tiptap/vue-3 &gt; @tiptap/extension-bubble-menu@2.12.0" has unmet peer dependency "@tiptap/core@^2.7.0".
+warning "workspace-aggregator-0f662bb8-e78e-4a45-aba4-a6878ccfd0da &gt; insights-frontend &gt; @tiptap/vue-3 &gt; @tiptap/extension-bubble-menu@2.12.0" has unmet peer dependency "@tiptap/pm@^2.7.0".
+warning "workspace-aggregator-0f662bb8-e78e-4a45-aba4-a6878ccfd0da &gt; insights-frontend &gt; @tiptap/vue-3 &gt; @tiptap/extension-floating-menu@2.12.0" has unmet peer dependency "@tiptap/core@^2.7.0".
+warning "workspace-aggregator-0f662bb8-e78e-4a45-aba4-a6878ccfd0da &gt; insights-frontend &gt; @tiptap/vue-3 &gt; @tiptap/extension-floating-menu@2.12.0" has unmet peer dependency "@tiptap/pm@^2.7.0".
+warning "workspace-aggregator-0f662bb8-e78e-4a45-aba4-a6878ccfd0da &gt; insights-frontend &gt; frappe-ui &gt; @tiptap/extension-code-block-lowlight@2.12.0" has unmet peer dependency "highlight.js@^11".
+warning Workspaces can only be enabled in private projects.
+[4/4] Building fresh packages...
+success Saved lockfile.
+$ cd frontend &amp;&amp; yarn install --check-files
+yarn install v1.22.22
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 6.06s.
+Done in 45.52s.
+root@vps-c6c53df8:/home/bench-frappe/bench-frappe/apps/insights#
+</code></pre>
+<p>when check with bench version I dont see the app install</p>
+<pre><code class="lang-auto">erpnext 15.70.2
+frappe 15.74.1
+frappe_whatsapp 1.0.7
+payments 0.0.1
+root@vps-c6c53df8:/home/bench-frappe/bench-frappe#
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

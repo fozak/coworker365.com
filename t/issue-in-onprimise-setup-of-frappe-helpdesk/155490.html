@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Issue in Onprimise Setup of Frappe HelpDesk  - Setup - Frappe Forum</title>
+    <meta name="description" content="Hi Team, 
+I’m setting up Frappe Cloud locally and trying to build the Helpdesk app. 
+I get the following error in the output: 
+Command: bench get-app file:///home/frappe/context/apps/helpdesk 
+command Output: 
+Getting he&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/issue-in-onprimise-setup-of-frappe-helpdesk/155490" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Issue in Onprimise Setup of Frappe HelpDesk &#39;" href="https://discuss.frappe.io/t/issue-in-onprimise-setup-of-frappe-helpdesk/155490.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/issue-in-onprimise-setup-of-frappe-helpdesk/155490" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/issue-in-onprimise-setup-of-frappe-helpdesk/155490" />
+<meta property="og:title" content="Issue in Onprimise Setup of Frappe HelpDesk " />
+<meta name="twitter:title" content="Issue in Onprimise Setup of Frappe HelpDesk " />
+<meta property="og:description" content="Hi Team,  I’m setting up Frappe Cloud locally and trying to build the Helpdesk app.  I get the following error in the output:  Command: bench get-app file:///home/frappe/context/apps/helpdesk  command Output:  Getting helpdesk  $ git clone file:///home/frappe/context/apps/helpdesk  --depth 1 --origin upstream  Cloning into ‘helpdesk’…  Ignoring dependencies of file:///home/frappe/context/apps/helpdesk. To install dependencies use --resolve-deps  Installing helpdesk  $ /home/frappe/frappe-bench/e..." />
+<meta name="twitter:description" content="Hi Team,  I’m setting up Frappe Cloud locally and trying to build the Helpdesk app.  I get the following error in the output:  Command: bench get-app file:///home/frappe/context/apps/helpdesk  command Output:  Getting helpdesk  $ git clone file:///home/frappe/context/apps/helpdesk  --depth 1 --origin upstream  Cloning into ‘helpdesk’…  Ignoring dependencies of file:///home/frappe/context/apps/helpdesk. To install dependencies use --resolve-deps  Installing helpdesk  $ /home/frappe/frappe-bench/e..." />
+<meta property="og:article:section" content="Install / Update" />
+<meta property="og:article:section:color" content="B3B5B4" />
+<meta property="og:article:section" content="Setup" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:tag" content="installation_problem" />
+<meta property="og:article:tag" content="setup_issues" />
+<meta property="article:published_time" content="2025-10-14T11:36:59+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Issue in Onprimise Setup of Frappe HelpDesk ","mainEntity":{"@type":"Question","name":"Issue in Onprimise Setup of Frappe HelpDesk ","text":"Hi Team,\n\nI’m setting up Frappe Cloud locally and trying to build the Helpdesk app.\n\nI get the following error in the output:\n\nCommand: bench get-app file:///home/frappe/context/apps/helpdesk\n\ncommand Output:\n\nGetting helpdesk\n\n$ git clone file:///home/frappe/context/apps/helpdesk  --depth 1 --origi&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-10-14T11:36:59.739Z","author":{"@type":"Person","name":"sanket.chalke","url":"https://discuss.frappe.io/u/sanket.chalke"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/issue-in-onprimise-setup-of-frappe-helpdesk/155490">Issue in Onprimise Setup of Frappe HelpDesk </a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/bench/13" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #B3B5B4'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Install / Update</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/bench/setup/33" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Setup</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/installation_problem' class='discourse-tag' rel="tag">installation_problem</a>, 
+            <a href='https://discuss.frappe.io/tag/setup_issues' class='discourse-tag' rel="tag">setup_issues</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Issue in Onprimise Setup of Frappe HelpDesk '>
+      <link itemprop='url' href='https://discuss.frappe.io/t/issue-in-onprimise-setup-of-frappe-helpdesk/155490'>
+      <meta itemprop='datePublished' content='2025-10-14T11:36:59Z'>
+        <meta itemprop='articleSection' content='Setup'>
+      <meta itemprop='keywords' content='installation_problem, setup_issues'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/sanket.chalke'><span itemprop='name'>sanket.chalke</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/issue-in-onprimise-setup-of-frappe-helpdesk/155490">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-10-14T11:36:59Z' class='post-time'>
+                    October 14, 2025, 11:36am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-14T11:36:59Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Team,</p>
+<p>I’m setting up Frappe Cloud locally and trying to build the Helpdesk app.</p>
+<p>I get the following error in the output:</p>
+<p>Command: bench get-app file:///home/frappe/context/apps/helpdesk<br>
+command Output:<br>
+Getting helpdesk<br>
+$ git clone file:///home/frappe/context/apps/helpdesk  --depth 1 --origin upstream<br>
+Cloning into ‘helpdesk’…<br>
+Ignoring dependencies of file:///home/frappe/context/apps/helpdesk. To install dependencies use --resolve-deps<br>
+Installing helpdesk<br>
+$ /home/frappe/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /home/frappe/frappe-bench/apps/helpdesk<br>
+$ yarn install --check-files<br>
+yarn install v1.22.22<br>
+[1/4] Resolving packages…<br>
+[2/4] Fetching packages…<br>
+[3/4] Linking dependencies…<br>
+warning “workspace-aggregator-0758a22f-fb81-4260-b217-4550055f2c41 &gt; helpdesk-ui &gt; <span class="mention">@tiptap</span>/core@2.26.1” has unmet peer dependency “<span class="mention">@tiptap</span>/pm@^2.7.0”.<br>
+warning “workspace-aggregator-0758a22f-fb81-4260-b217-4550055f2c41 &gt; helpdesk-ui &gt; vite-plugin-pwa@0.20.5” has unmet peer dependency “workbox-build@^7.1.0”.<br>
+warning “workspace-aggregator-0758a22f-fb81-4260-b217-4550055f2c41 &gt; helpdesk-ui &gt; vite-plugin-pwa@0.20.5” has unmet peer dependency “workbox-window@^7.1.0”.<br>
+[4/4] Building fresh packages…<br>
+success Saved lockfile.<br>
+$ cd desk &amp;&amp; yarn install<br>
+yarn install v1.22.22<br>
+[1/4] Resolving packages…<br>
+success Already up-to-date.<br>
+Done in 0.61s.<br>
+Done in 24.32s.<br>
+$ bench build --app helpdesk<br>
+Linking /home/frappe/frappe-bench/apps/frappe/frappe/public to ./assets/frappe<br>
+/home/frappe/frappe-bench/apps/frappe/node_modules to ./assets/frappe/node_modules<br>
+/home/frappe/frappe-bench/apps/helpdesk/helpdesk/public to ./assets/helpdesk<br>
+/home/frappe/frappe-bench/apps/helpdesk/node_modules to ./assets/helpdesk/node_modules<br>
+Application Assets Linked</p>
+<p>yarn run v1.22.22<br>
+$ node esbuild --production --apps helpdesk --run-build-command<br>
+File                                                        Size</p>
+<p>DONE  Total Build Time: 324.396ms</p>
+<p>Running build command for helpdesk<br>
+$ cd desk &amp;&amp; yarn build<br>
+$ vite build<br>
+[unplugin-vue-components] component “Autocomplete”(/home/frappe/frappe-bench/apps/helpdesk/desk/src/components/frappe-ui/Autocomplete.vue) has naming conflicts with other components, ignored.<br>
+[unplugin-vue-components] component “Autocomplete”(/home/frappe/frappe-bench/apps/helpdesk/desk/src/components/frappe-ui/Autocomplete.vue) has naming conflicts with other components, ignored.<br>
+vite v4.5.14 building for production…<br>
+transforming…</p>
+<p>Inter-DisplayRegular.woff2?v=3.19 referenced in /home/frappe/frappe-bench/apps/helpdesk/desk/src/index.css didn’t resolve at build time, it will remain unchanged to be resolved at runtime</p>
+<p>Inter-DisplayRegular.woff2?v=3.19 referenced in /home/frappe/frappe-bench/apps/helpdesk/desk/src/index.css?used&amp;inline didn’t resolve at build time, it will remain unchanged to be resolved at runtime<br>
+✓ 2735 modules transformed.<br>
+Export “ImageExtension” of module “…/node_modules/frappe-ui/src/components/TextEditor/extensions/image/image-extension.ts” was reexported through module “…/node_modules/frappe-ui/src/components/TextEditor/extensions/image/index.ts” while both modules are dependencies of each other and will end up in different chunks by current Rollup settings. This scenario is not well supported at the moment as it will produce a circular dependency between chunks and will likely lead to broken execution order.<br>
+Either change the import in “…/node_modules/frappe-ui/src/components/TextEditor/TextEditor.vue?vue&amp;type=script&amp;setup=true&amp;lang.ts” to point directly to the exporting module or reconfigure “output.manualChunks” to ensure these modules end up in the same chunk.<br>
+rendering chunks…<br>
+Killed<br>
+error Command failed with exit code 137.<br>
+info Visit <a href="https://yarnpkg.com/en/docs/cli/run" class="inline-onebox" rel="noopener nofollow ugc">yarn run | Yarn</a> for documentation about this command.<br>
+error Command failed with exit code 137.<br>
+info Visit <a href="https://yarnpkg.com/en/docs/cli/run" class="inline-onebox" rel="noopener nofollow ugc">yarn run | Yarn</a> for documentation about this command.<br>
+Error: Command failed: yarn build<br>
+at checkExecSyncError (node:child_process:885:11)<br>
+at execSync (node:child_process:957:15)<br>
+at run_build_command_for_apps (/home/frappe/frappe-bench/apps/frappe/esbuild/esbuild.js:453:5)<br>
+at execute (/home/frappe/frappe-bench/apps/frappe/esbuild/esbuild.js:125:23) {<br>
+status: 137,<br>
+signal: null,<br>
+output: [ null, null, null ],<br>
+pid: 147,<br>
+stdout: null,<br>
+stderr: null<br>
+}<br>
+error Command failed with exit code 1.<br>
+info Visit <a href="https://yarnpkg.com/en/docs/cli/run" class="inline-onebox" rel="noopener nofollow ugc">yarn run | Yarn</a> for documentation about this command.<br>
+Traceback (most recent call last):<br>
+File “”, line 198, in _run_module_as_main<br>
+File “”, line 88, in _run_code<br>
+File “/home/frappe/frappe-bench/apps/frappe/frappe/utils/bench_helper.py”, line 114, in <br>
+main()<br>
+File “/home/frappe/frappe-bench/apps/frappe/frappe/utils/bench_helper.py”, line 20, in main<br>
+click.Group(commands=commands)(prog_name=“bench”)<br>
+File “/home/frappe/frappe-bench/env/lib/python3.11/site-packages/click/core.py”, line 1442, in <strong>call</strong><br>
+return self.main(*args, **kwargs)<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/env/lib/python3.11/site-packages/click/core.py”, line 1363, in main<br>
+rv = self.invoke(ctx)<br>
+^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/env/lib/python3.11/site-packages/click/core.py”, line 1830, in invoke<br>
+return _process_result(sub_ctx.command.invoke(sub_ctx))<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/env/lib/python3.11/site-packages/click/core.py”, line 1830, in invoke<br>
+return <em>process_result(sub_ctx.command.invoke(sub_ctx))<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/env/lib/python3.11/site-packages/click/core.py”, line 1226, in invoke<br>
+return ctx.invoke(self.callback, **ctx.params)<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/env/lib/python3.11/site-packages/click/core.py”, line 794, in invoke<br>
+return callback(*args, **kwargs)<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/frappe-bench/apps/frappe/frappe/commands/utils.py”, line 77, in build<br>
+bundle(<br>
+File “/home/frappe/frappe-bench/apps/frappe/frappe/build.py”, line 255, in bundle<br>
+frappe.commands.popen(command, cwd=frappe_app_path, env=get_node_env(), raise_err=True)<br>
+File “/home/frappe/frappe-bench/apps/frappe/frappe/commands/<strong>init</strong>.py”, line 97, in popen<br>
+raise subprocess.CalledProcessError(return</em>, command)<br>
+subprocess.CalledProcessError: Command ‘yarn run production --apps helpdesk --run-build-command’ returned non-zero exit status 1.<br>
+ERROR: bench build --app helpdesk<br>
+subprocess.CalledProcessError: Command ‘bench build --app helpdesk’ returned non-zero exit status 1.</p>
+<p>The above exception was the direct cause of the following exception:</p>
+<p>Traceback (most recent call last):<br>
+File “/home/frappe/.local/bin/bench”, line 7, in <br>
+sys.exit(cli())<br>
+^^^^^<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/cli.py”, line 132, in cli<br>
+bench_command()<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/commands/make.py”, line 181, in get_app<br>
+get_app(<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/app.py”, line 778, in get_app<br>
+app.install(verbose=verbose, skip_assets=skip_assets, restart_bench=restart_bench)<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/utils/render.py”, line 126, in wrapper_fn<br>
+return fn(*args, **kwargs)<br>
+^^^^^^^^^^^^^^^^^^^<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/app.py”, line 253, in install<br>
+install_app(<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/app.py”, line 940, in install_app<br>
+build_assets(bench_path=bench_path, app=app, using_cached=using_cached)<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/utils/bench.py”, line 384, in build_assets<br>
+exec_cmd(command, cwd=bench_path, env=env)<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/utils/<strong>init</strong>.py”, line 181, in exec_cmd<br>
+raise CommandFailedError(cmd) from subprocess.CalledProcessError(return_code, cmd)<br>
+bench.exceptions.CommandFailedError: bench build --app helpdesk</p>
+<h2><a name="p-483944-info-a-newer-version-of-bench-is-available-5251-52511-process-binsh-c-bench-get-app-filehomefrappecontextappshelpdesk-stage-apps-helpdesk-did-not-complete-successfully-exit-code-1-1" class="anchor" href="#p-483944-info-a-newer-version-of-bench-is-available-5251-52511-process-binsh-c-bench-get-app-filehomefrappecontextappshelpdesk-stage-apps-helpdesk-did-not-complete-successfully-exit-code-1-1"></a>INFO: A newer version of bench is available: 5.25.1 → 5.25.11<br>
+process “/bin/sh -c bench get-app file:///home/frappe/context/apps/helpdesk   <code>#stage-apps-helpdesk</code>” did not complete successfully: exit code: 1</h2>
+<h2><a name="p-483944-stage-0-2629-run-mounttypecachesharinglockedtargethomefrappecacheuid1000gid1000-mounttypebindsourceappshelpdesktargethomefrappecontextappshelpdesk-bench-get-app-filehomefrappecontextappshelpdesk-stage-apps-helpdesk-install_app-file-homefrappelocallibpython311site-packagesbenchapppy-line-940-in-install_app-build_assetsbench_pathbench_path-appapp-using_cachedusing_cached-file-homefrappelocallibpython311site-packagesbenchutilsbenchpy-line-384-in-build_assets-exec_cmdcommand-cwdbench_path-envenv-file-homefrappelocallibpython311site-packagesbenchutils__init__py-line-181-in-exec_cmd-raise-commandfailederrorcmd-from-subprocesscalledprocesserrorreturn_code-cmd-benchexceptionscommandfailederror-bench-build-app-helpdesk-1320-info-a-newer-version-of-bench-is-available-5251-52511-2" class="anchor" href="#p-483944-stage-0-2629-run-mounttypecachesharinglockedtargethomefrappecacheuid1000gid1000-mounttypebindsourceappshelpdesktargethomefrappecontextappshelpdesk-bench-get-app-filehomefrappecontextappshelpdesk-stage-apps-helpdesk-install_app-file-homefrappelocallibpython311site-packagesbenchapppy-line-940-in-install_app-build_assetsbench_pathbench_path-appapp-using_cachedusing_cached-file-homefrappelocallibpython311site-packagesbenchutilsbenchpy-line-384-in-build_assets-exec_cmdcommand-cwdbench_path-envenv-file-homefrappelocallibpython311site-packagesbenchutils__init__py-line-181-in-exec_cmd-raise-commandfailederrorcmd-from-subprocesscalledprocesserrorreturn_code-cmd-benchexceptionscommandfailederror-bench-build-app-helpdesk-1320-info-a-newer-version-of-bench-is-available-5251-52511-2"></a>[stage-0 26/29] RUN --mount=type=cache,sharing=locked,target=/home/frappe/.cache,uid=1000,gid=1000   --mount=type=bind,source=apps/helpdesk,target=/home/frappe/context/apps/helpdesk   bench get-app file:///home/frappe/context/apps/helpdesk   <code>#stage-apps-helpdesk</code>:<br>
+install_app(<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/app.py”, line 940, in install_app<br>
+build_assets(bench_path=bench_path, app=app, using_cached=using_cached)<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/utils/bench.py”, line 384, in build_assets<br>
+exec_cmd(command, cwd=bench_path, env=env)<br>
+File “/home/frappe/.local/lib/python3.11/site-packages/bench/utils/<strong>init</strong>.py”, line 181, in exec_cmd<br>
+raise CommandFailedError(cmd) from subprocess.CalledProcessError(return_code, cmd)<br>
+bench.exceptions.CommandFailedError: bench build --app helpdesk<br>
+132.0<br>
+INFO: A newer version of bench is available: 5.25.1 → 5.25.11</h2>
+<p>failed to build: failed to solve: process “/bin/sh -c bench get-app file:///home/frappe/context/apps/helpdesk   <code>#stage-apps-helpdesk</code>” did not complete successfully: exit code: 1</p>
+<p>Could anyone please guide what might be missing or misconfigured in the Helpdesk app build setup?</p>
+<p>Thanks in advance for your help.</p>
+<p>Sanket</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

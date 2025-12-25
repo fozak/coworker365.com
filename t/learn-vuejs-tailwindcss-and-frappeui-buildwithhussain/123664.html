@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Learn VueJS, TailwindCSS and FrappeUI! | #BuildWithHussain - Announcements - Frappe Forum</title>
+    <meta name="description" content="At Frappe, we are building a lot of new products: Frappe Insights, Learning , Builder, and more! They all have one thing in common: the tech stack. Frappe Framework already allows you to build full-stack web applications&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/learn-vuejs-tailwindcss-and-frappeui-buildwithhussain/123664" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Learn VueJS, TailwindCSS and FrappeUI! | #BuildWithHussain&#39;" href="https://discuss.frappe.io/t/learn-vuejs-tailwindcss-and-frappeui-buildwithhussain/123664.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/learn-vuejs-tailwindcss-and-frappeui-buildwithhussain/123664" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/learn-vuejs-tailwindcss-and-frappeui-buildwithhussain/123664" />
+<meta property="og:title" content="Learn VueJS, TailwindCSS and FrappeUI! | #BuildWithHussain" />
+<meta name="twitter:title" content="Learn VueJS, TailwindCSS and FrappeUI! | #BuildWithHussain" />
+<meta property="og:description" content="At Frappe, we are building a lot of new products: Frappe Insights, Learning , Builder, and more! They all have one thing in common: the tech stack. Frappe Framework already allows you to build full-stack web applications with low-code and in record time. It is now time to build sleek and modern front-ends with tailored User Interfaces and Experiences. This is where FrappeUI, a set of pre-built UI components and libraries, comes in. FrappeUI is built on top of VueJS.  I am going to conduct a live..." />
+<meta name="twitter:description" content="At Frappe, we are building a lot of new products: Frappe Insights, Learning , Builder, and more! They all have one thing in common: the tech stack. Frappe Framework already allows you to build full-stack web applications with low-code and in record time. It is now time to build sleek and modern front-ends with tailored User Interfaces and Experiences. This is where FrappeUI, a set of pre-built UI components and libraries, comes in. FrappeUI is built on top of VueJS.  I am going to conduct a live..." />
+<meta property="og:article:section" content="Announcements" />
+<meta property="og:article:section:color" content="283890" />
+<meta property="og:article:tag" content="frappeui" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="19 ❤" />
+<meta property="article:published_time" content="2024-05-21T09:22:12+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Learn VueJS, TailwindCSS and FrappeUI! | #BuildWithHussain","mainEntity":{"@type":"Question","name":"Learn VueJS, TailwindCSS and FrappeUI! | #BuildWithHussain","text":"At Frappe, we are building a lot of new products: Frappe <a href=\"https://frappe.io/insights\">Insights<\/a>, <a href=\"https://frappe.io/learning\">Learning <\/a>, <a href=\"https://frappe.io/builder\">Builder<\/a>, and <a href=\"https://frappe.io/products\">more<\/a>! They all have one thing in common: the tech stack. Frappe Framework already allows you to build full-stack web applications with low-code and in record time. It is now time to build sleek and modern fron&hellip;","upvoteCount":9,"answerCount":0,"datePublished":"2024-05-21T09:22:12.056Z","author":{"@type":"Person","name":"buildwithhussain","url":"https://discuss.frappe.io/u/buildwithhussain"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/learn-vuejs-tailwindcss-and-frappeui-buildwithhussain/123664">Learn VueJS, TailwindCSS and FrappeUI! | #BuildWithHussain</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/announcement/20" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #283890'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Announcements</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/frappeui' class='discourse-tag' rel="tag">frappeui</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Learn VueJS, TailwindCSS and FrappeUI! | #BuildWithHussain'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/learn-vuejs-tailwindcss-and-frappeui-buildwithhussain/123664'>
+      <meta itemprop='datePublished' content='2024-05-21T09:22:12Z'>
+        <meta itemprop='articleSection' content='Announcements'>
+      <meta itemprop='keywords' content='frappeui'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/buildwithhussain'><span itemprop='name'>buildwithhussain</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/learn-vuejs-tailwindcss-and-frappeui-buildwithhussain/123664">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2024-05-21T09:22:12Z' class='post-time'>
+                    May 21, 2024,  9:22am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-21T09:22:12Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>At Frappe, we are building a lot of new products: Frappe <a href="https://frappe.io/insights">Insights</a>, <a href="https://frappe.io/learning">Learning </a>, <a href="https://frappe.io/builder">Builder</a>, and <a href="https://frappe.io/products">more</a>! They all have one thing in common: the tech stack. Frappe Framework already allows you to build full-stack web applications with low-code and in record time. It is now time to build sleek and modern front-ends with tailored User Interfaces and Experiences. This is where FrappeUI, <strong>a set of pre-built UI components and libraries, comes in.</strong> FrappeUI is built on top of VueJS.</p>
+<p>I am going to conduct a live 4-day training on these topics starting from scratch:</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://frappe.school/lms/batches/details/CLS-04853">
+  <header class="source">
+      <img src="https://frappe.school/assets/lms/frontend/favicon.png" class="site-icon" width="144" height="144">
+
+      <a href="https://frappe.school/lms/batches/details/CLS-04853" target="_blank" rel="noopener">frappe.school</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/362;"><img src="https://frappe.school/files/vue-training-card.png" class="thumbnail" width="690" height="362"></div>
+
+<h3><a href="https://frappe.school/lms/batches/details/CLS-04853" target="_blank" rel="noopener">VueJS, TailwindCSS and FrappeUI Training</a></h3>
+
+  <p>Learn the foundations to build modern single page applications with VueJS and FrappeUI</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<p>
+(<em>btw 16 out of 25 seats left</em>)</p>
+<p>In this training program, I will teach you the foundations you need to build front-end apps with VueJS and FrappeUI. <strong>Whether you want to build your own products or want to contribute to Frappe products like</strong> <a href="https://frappe.io/crm"><strong>Frappe CRM</strong></a><strong>, this training is for you!</strong></p>
+<h3><a name="i-will-let-you-in-on-a-secret-1" class="anchor" href="#i-will-let-you-in-on-a-secret-1"></a>I will let you in on a secret…</h3>
+<p>Frappe Framework’s frontend is being re-written using VueJS and FrappeUI <img src="https://discuss.frappe.io/images/emoji/twitter/shushing_face.png?v=12" title=":shushing_face:" class="emoji" alt=":shushing_face:" loading="lazy" width="20" height="20">. In my opinion, this is the best time to learn this stack!</p>
+<p>Enroll here: <a href="https://frappe.school/lms/batches/details/CLS-04853" class="inline-onebox">Frappe Learning</a> (built on FrappeUI as well <img src="https://discuss.frappe.io/images/emoji/twitter/laughing.png?v=12" title=":laughing:" class="emoji" alt=":laughing:" loading="lazy" width="20" height="20">)</p>
+<hr>
+<p>Hussain<br>
+<img src="https://discuss.frappe.io/images/emoji/twitter/v/3.png?v=12" title=":v:t3:" class="emoji only-emoji" alt=":v:t3:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="9" />
+              <span class='post-likes'>9 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Prasant_Pant'><span itemprop='name'>Prasant_Pant</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-21T11:59:48Z' class='post-time'>
+                    May 21, 2024, 11:59am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-21T11:59:48Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/buildwithhussain">@buildwithhussain</a> ,</p>
+<p>I’m really enthusiastic about learning from your program but can’t afford it right now. Could I please enroll for free?</p>
+<p>Thank you for considering my request!</p>
+<p>Best,<br>
+Prasant Pant</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/DCRob'><span itemprop='name'>DCRob</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-21T21:00:52Z' class='post-time'>
+                    May 21, 2024,  9:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-21T21:00:52Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="buildwithhussain" data-post="1" data-topic="123664">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/buildwithhussain/48/62765_2.png" class="avatar"> buildwithhussain:</div>
+<blockquote>
+<p>Frappe Framework’s frontend is being re-written using VueJS and FrappeUI</p>
+</blockquote>
+</aside>
+<p>Some of the new VueJS apps, like CRM, don’t work well on a mobile device like traditional Frappe apps (such as ERPNext) do. I sure hope after the Frappe Framework is re-written, they’ve figured out a way to make the new UI more responsive, or you’ll have a lot of unhappy ERPNext users who won’t be able to work using their phones anymore.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/buildwithhussain'><span itemprop='name'>buildwithhussain</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-23T04:40:44Z' class='post-time'>
+                    May 23, 2024,  4:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-23T04:40:44Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="Prasant_Pant" data-post="3" data-topic="123664">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/prasant_pant/48/58560_2.png" class="avatar"> Prasant_Pant:</div>
+<blockquote>
+<p>I’m really enthusiastic about learning from your program but can’t afford it right now. Could I please enroll for free?</p>
+</blockquote>
+</aside>
+<p>Drop me an email at <a href="mailto:hussain@frappe.io">hussain@frappe.io</a>, happy to help!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/buildwithhussain'><span itemprop='name'>buildwithhussain</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-23T04:47:36Z' class='post-time'>
+                    May 23, 2024,  4:47am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-23T04:47:36Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Have you tried Frappe HR mobile (PWA) or Gameplan? <img src="https://discuss.frappe.io/images/emoji/twitter/smile.png?v=12" title=":smile:" class="emoji" alt=":smile:" loading="lazy" width="20" height="20"> The desk will be getting that level of mobile responsiveness.</p>
+<p>Even Frappe CRM and other new products which are not yet mobile responsive will get it in the near future (come visit us at Frappeverse this year)!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Prasant_Pant'><span itemprop='name'>Prasant_Pant</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-23T14:14:12Z' class='post-time'>
+                    May 23, 2024,  2:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-23T14:14:12Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ve forwarded an email to you. <a class="mention" href="/u/buildwithhussain">@buildwithhussain</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/DCRob'><span itemprop='name'>DCRob</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-23T20:36:34Z' class='post-time'>
+                    May 23, 2024,  8:36pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-23T20:36:34Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hopefully that will be the case.</p>
+<p>I was a bit surprised to see the CRM released without mobile support. It would seem outside salespeople travel often, and would need frequent access to their CRM system from a smartphone.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/federico_calvo'><span itemprop='name'>federico_calvo</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-24T19:09:22Z' class='post-time'>
+                    May 24, 2024,  7:09pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-24T19:09:22Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="buildwithhussain" data-post="1" data-topic="123664">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/buildwithhussain/48/62765_2.png" class="avatar"> buildwithhussain:</div>
+<blockquote>
+<p>Frappe Framework’s frontend is being re-written using VueJS and FrappeUI <img src="https://discuss.frappe.io/images/emoji/twitter/shushing_face.png?v=12" title=":shushing_face:" class="emoji" alt=":shushing_face:" loading="lazy" width="20" height="20">. In my opinion, this is the best time to learn this stack!</p>
+</blockquote>
+</aside>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/exploding_head.png?v=12" title=":exploding_head:" class="emoji only-emoji" alt=":exploding_head:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kisg'><span itemprop='name'>kisg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-24T19:49:15Z' class='post-time'>
+                    May 24, 2024,  7:49pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-24T19:49:15Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>FYI: This is where I found it (it’s still WIP): <a href="https://github.com/ruchamahabal/frappe/tree/client-rewrite" class="inline-onebox" rel="noopener nofollow ugc">GitHub - ruchamahabal/frappe at client-rewrite</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/yousef.p'><span itemprop='name'>yousef.p</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-27T16:43:52Z' class='post-time'>
+                    May 27, 2024,  4:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-27T16:43:52Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The timing is bit hard for me to attend. will there be recording to watch it later ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/buildwithhussain'><span itemprop='name'>buildwithhussain</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-27T16:57:52Z' class='post-time'>
+                    May 27, 2024,  4:57pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-27T16:57:52Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="yousef.p" data-post="11" data-topic="123664">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/letter_avatar_proxy/v4/letter/y/edb3f5/48.png" class="avatar"> yousef.p:</div>
+<blockquote>
+<p>will there be recording to watch it later ?</p>
+</blockquote>
+</aside>
+<p>Yes, the sessions will be recorded and shared.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/yousef.p'><span itemprop='name'>yousef.p</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-27T17:17:07Z' class='post-time'>
+                    May 27, 2024,  5:17pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-27T17:17:07Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Perfect ! will join</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/zulfi007'><span itemprop='name'>zulfi007</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-11-14T08:07:15Z' class='post-time'>
+                    November 14, 2024,  8:07am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-11-14T08:14:45Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,<br>
+How to deploy frappe-ui based PWA app to frappe Cloud (private bench). Do I need to create custom-page to access this frontend? <a class="mention" href="/u/buildwithhussain">@buildwithhussain</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

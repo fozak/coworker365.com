@@ -1,0 +1,2 @@
+window.onload=function(){const script=document.createElement('script');script.src='https://unpkg.com/@popperjs/core@2';script.type='text/javascript';document.head.appendChild(script);script.onload=function(){const link=document.querySelector('.link');console.log(link)
+Popper.createPopper(link,"Works",{placement:'right',});}}

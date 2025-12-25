@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Integrating FCRM and Lending and getting a unique error bug - Frappe CRM - Frappe Forum</title>
+    <meta name="description" content="Hi there, 
+I’m currently working on an integration involving ERPNext, Frappe CRM, and Lending. In older versions of Frappe, we were able to switch between apps directly from the sidebar. However, in the newer versions, t&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Integrating FCRM and Lending and getting a unique error bug&#39;" href="https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_1024x576.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_1024x576.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282" />
+<meta property="og:title" content="Integrating FCRM and Lending and getting a unique error bug" />
+<meta name="twitter:title" content="Integrating FCRM and Lending and getting a unique error bug" />
+<meta property="og:description" content="Hi there,  I’m currently working on an integration involving ERPNext, Frappe CRM, and Lending. In older versions of Frappe, we were able to switch between apps directly from the sidebar. However, in the newer versions, this behavior seems to have changed — instead of app switching, the desk now shows icons based on modules (as I understand it).  Since the CRM portal uses a separate Vue-based frontend, it still displays the older-style app switcher and allows switching between apps (as shown in I..." />
+<meta name="twitter:description" content="Hi there,  I’m currently working on an integration involving ERPNext, Frappe CRM, and Lending. In older versions of Frappe, we were able to switch between apps directly from the sidebar. However, in the newer versions, this behavior seems to have changed — instead of app switching, the desk now shows icons based on modules (as I understand it).  Since the CRM portal uses a separate Vue-based frontend, it still displays the older-style app switcher and allows switching between apps (as shown in I..." />
+<meta property="og:article:section" content="Business Apps" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Frappe CRM" />
+<meta property="og:article:section:color" content="ED207B" />
+<meta property="article:published_time" content="2025-12-24T06:40:47+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Integrating FCRM and Lending and getting a unique error bug","mainEntity":{"@type":"Question","name":"Integrating FCRM and Lending and getting a unique error bug","text":"Hi there,\n\nI’m currently working on an integration involving ERPNext, Frappe CRM, and Lending. In older versions of Frappe, we were able to switch between apps directly from the sidebar. However, in the newer versions, this behavior seems to have changed — instead of app switching, the desk now show&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-12-24T06:40:47.212Z","author":{"@type":"Person","name":"Heshan_Karunaratne","url":"https://discuss.frappe.io/u/Heshan_Karunaratne"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282">Integrating FCRM and Lending and getting a unique error bug</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/business-apps/89" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Business Apps</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/business-apps/frappe-crm/82" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #ED207B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe CRM</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Integrating FCRM and Lending and getting a unique error bug'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282'>
+      <meta itemprop='datePublished' content='2025-12-24T06:40:47Z'>
+        <meta itemprop='articleSection' content='Frappe CRM'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Heshan_Karunaratne'><span itemprop='name'>Heshan_Karunaratne</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-12-24T06:40:47Z' class='post-time'>
+                    December 24, 2025,  6:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-24T06:40:47Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi there,</p>
+<p>I’m currently working on an integration involving ERPNext, Frappe CRM, and Lending. In older versions of Frappe, we were able to switch between apps directly from the sidebar. However, in the newer versions, this behavior seems to have changed — instead of app switching, the desk now shows icons based on modules (as I understand it).</p>
+<p>Since the CRM portal uses a separate Vue-based frontend, it still displays the older-style app switcher and allows switching between apps (as shown in <em>Image 1</em>).</p>
+<p>The issue arises when I select the Lending app from this list — I get redirected to the Lending app, but it immediately throws an error (as shown in <em>Image 2</em>).</p>
+<p>I’d appreciate some insight into whether this is:<br>
+<em><strong>an expected behavior due to changes in how app/module navigation works in newer Frappe versions,<br>
+a configuration issue on my side, or<br>
+a known bug on the Frappe/Lending side.</strong></em></p>
+<p>Any guidance on how to properly handle app switching in this setup, or how to resolve this error, would be greatly appreciated.</p>
+<p>Error Message:</p>
+<h3><a name="p-489460-app-versions-1" class="anchor" href="#p-489460-app-versions-1"></a>App Versions</h3>
+<pre><code class="lang-auto">{
+	"frappe": "16.0.0-dev",
+	"crm": "2.0.0-dev",
+	"erpnext": "16.0.0-dev",
+	"lending": "0.0.1",
+	"dreamlink": "0.0.1"
+}
+</code></pre>
+<h3><a name="p-489460-route-2" class="anchor" href="#p-489460-route-2"></a>Route</h3>
+<pre><code class="lang-auto">Workspaces/Lending
+</code></pre>
+<h3><a name="p-489460-traceback-3" class="anchor" href="#p-489460-traceback-3"></a>Traceback</h3>
+<pre><code class="lang-auto">Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "apps/frappe/frappe/__init__.py", line 1126, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/utils/dashboard.py", line 26, in wrapper
+    results = generate_and_cache_results(kwargs, function, cache_key, chart)
+  File "apps/frappe/frappe/utils/dashboard.py", line 41, in generate_and_cache_results
+    results = function(
+  File "apps/frappe/frappe/desk/doctype/dashboard_chart/dashboard_chart.py", line 136, in get
+    chart_config = get_chart_config(chart, filters, timespan, timegrain, from_date, to_date)
+  File "apps/frappe/frappe/desk/doctype/dashboard_chart/dashboard_chart.py", line 202, in get_chart_config
+    data = frappe.get_list(
+  File "apps/frappe/frappe/__init__.py", line 1359, in get_list
+    return frappe.model.qb_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "apps/frappe/frappe/model/qb_query.py", line 203, in execute
+    query = frappe.qb.get_query(**kwargs)
+  File "apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+  File "apps/frappe/frappe/database/query.py", line 294, in get_query
+    self.apply_filters(filters)
+  File "apps/frappe/frappe/database/query.py", line 442, in apply_filters
+    self.apply_list_filters(
+  File "apps/frappe/frappe/database/query.py", line 496, in apply_list_filters
+    raise ValueError(f"Unknown filter format: {filter}")
+ValueError: Unknown filter format: ['Loan', 'docstatus', '=', '1', False]
+</code></pre>
+<h3><a name="p-489460-request-data-4" class="anchor" href="#p-489460-request-data-4"></a>Request Data</h3>
+<pre><code class="lang-auto">{
+	"type": "POST",
+	"args": {
+		"chart_name": "New Loans",
+		"refresh": 1,
+		"time_interval": null,
+		"timespan": null,
+		"from_date": null,
+		"to_date": null,
+		"heatmap_year": null
+	},
+	"headers": {},
+	"error_handlers": {},
+	"url": "/api/method/frappe.desk.doctype.dashboard_chart.dashboard_chart.get",
+	"request_id": null
+}
+</code></pre>
+<h3><a name="p-489460-response-data-5" class="anchor" href="#p-489460-response-data-5"></a>Response Data</h3>
+<pre><code class="lang-auto">{
+	"exception": "ValueError: Unknown filter format: ['Loan', 'docstatus', '=', '1', False]",
+	"exc_type": "ValueError"
+}
+</code></pre>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88.png" data-download-href="https://discuss.frappe.io/uploads/default/e755448edd84ac3af562aa65822c9db778495d88" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_690x388.png" alt="image" data-base62-sha1="x0sYPmo4aKmwAUaSdd89W2pMpGE" width="690" height="388" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_690x388.png, https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_1035x582.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_1380x776.png 2x" data-dominant-color="121212"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1920×1080 116 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d.png" data-download-href="https://discuss.frappe.io/uploads/default/2d39c77dde336fa6de681d082dd83916e268da3d" title="image (1)"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_690x388.png" alt="image (1)" data-base62-sha1="6s5hdnhDBQOg3ReGESdEq32AcNf" width="690" height="388" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_690x388.png, https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_1035x582.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_1380x776.png 2x" data-dominant-color="222222"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image (1)</span><span class="informations">1920×1080 149 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Thank you</p>
+<p>Heshan K</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

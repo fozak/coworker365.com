@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Managing prices for 2000+ Items based on frequent price data imports - ERPNext - Frappe Forum</title>
+    <meta name="description" content="Hi all, I’d like your insights on the following. 
+We are buying, selling and using (for projects) the following generic “raw” materials. 
+Plywood 6mm 
+Plywood 9mm 
+Plywood 12mm 
+Plywood 19mm 
+Plywood 25mm 
+Plywood 6mm - &amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/managing-prices-for-2000-items-based-on-frequent-price-data-imports/141726" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Managing prices for 2000+ Items based on frequent price data imports&#39;" href="https://discuss.frappe.io/t/managing-prices-for-2000-items-based-on-frequent-price-data-imports/141726.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/managing-prices-for-2000-items-based-on-frequent-price-data-imports/141726" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/managing-prices-for-2000-items-based-on-frequent-price-data-imports/141726" />
+<meta property="og:title" content="Managing prices for 2000+ Items based on frequent price data imports" />
+<meta name="twitter:title" content="Managing prices for 2000+ Items based on frequent price data imports" />
+<meta property="og:description" content="Hi all, I’d like your insights on the following.  We are buying, selling and using (for projects) the following generic “raw” materials.  Plywood 6mm  Plywood 9mm  Plywood 12mm  Plywood 19mm  Plywood 25mm  Plywood 6mm - Moisture resistant  Plywood 9mm - Moisture resistant  Plywood 12mm - Moisture resistant  Plywood 19mm - Moisture resistant  Plywood 25mm - Moisture resistant  Plywood 6mm - Fire resistant  Plywood 9mm - Fire resistant  Plywood 12mm - Fire resistant  Plywood 19mm - Fire resistant  ..." />
+<meta name="twitter:description" content="Hi all, I’d like your insights on the following.  We are buying, selling and using (for projects) the following generic “raw” materials.  Plywood 6mm  Plywood 9mm  Plywood 12mm  Plywood 19mm  Plywood 25mm  Plywood 6mm - Moisture resistant  Plywood 9mm - Moisture resistant  Plywood 12mm - Moisture resistant  Plywood 19mm - Moisture resistant  Plywood 25mm - Moisture resistant  Plywood 6mm - Fire resistant  Plywood 9mm - Fire resistant  Plywood 12mm - Fire resistant  Plywood 19mm - Fire resistant  ..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:tag" content="pricelist" />
+<meta property="og:article:tag" content="quotation" />
+<meta property="og:article:tag" content="item-variation" />
+<meta property="og:article:tag" content="itemprice" />
+<meta property="og:article:tag" content="item" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="4 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="3 ❤" />
+<meta property="article:published_time" content="2025-02-02T17:45:05+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Managing prices for 2000+ Items based on frequent price data imports","mainEntity":{"@type":"Question","name":"Managing prices for 2000+ Items based on frequent price data imports","text":"Hi all, I’d like your insights on the following.\n\nWe are buying, selling and using (for projects) the following generic “raw” materials.\n\nPlywood 6mm\n\nPlywood 9mm\n\nPlywood 12mm\n\nPlywood 19mm\n\nPlywood 25mm\n\nPlywood 6mm - Moisture resistant\n\nPlywood 9mm - Moisture resistant\n\nPlywood 12mm - Moisture re&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-02-02T17:45:05.883Z","author":{"@type":"Person","name":"Synctax","url":"https://discuss.frappe.io/u/Synctax"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/managing-prices-for-2000-items-based-on-frequent-price-data-imports/141726">Managing prices for 2000+ Items based on frequent price data imports</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/pricelist' class='discourse-tag' rel="tag">pricelist</a>, 
+            <a href='https://discuss.frappe.io/tag/quotation' class='discourse-tag' rel="tag">quotation</a>, 
+            <a href='https://discuss.frappe.io/tag/item-variation' class='discourse-tag' rel="tag">item-variation</a>, 
+            <a href='https://discuss.frappe.io/tag/itemprice' class='discourse-tag' rel="tag">itemprice</a>, 
+            <a href='https://discuss.frappe.io/tag/item' class='discourse-tag' rel="tag">item</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Managing prices for 2000+ Items based on frequent price data imports'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/managing-prices-for-2000-items-based-on-frequent-price-data-imports/141726'>
+      <meta itemprop='datePublished' content='2025-02-02T17:45:05Z'>
+        <meta itemprop='articleSection' content='ERPNext'>
+      <meta itemprop='keywords' content='pricelist, quotation, item-variation, itemprice, item'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Synctax'><span itemprop='name'>Synctax</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/managing-prices-for-2000-items-based-on-frequent-price-data-imports/141726">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-02-02T17:45:05Z' class='post-time'>
+                    February 2, 2025,  5:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-02T21:51:05Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi all, I’d like your insights on the following.</p>
+<p>We are buying, selling and using (for projects) the following generic “raw” materials.</p>
+<p>Plywood 6mm<br>
+Plywood 9mm<br>
+Plywood 12mm<br>
+Plywood 19mm<br>
+Plywood 25mm<br>
+Plywood 6mm - Moisture resistant<br>
+Plywood 9mm - Moisture resistant<br>
+Plywood 12mm - Moisture resistant<br>
+Plywood 19mm - Moisture resistant<br>
+Plywood 25mm - Moisture resistant<br>
+Plywood 6mm - Fire resistant<br>
+Plywood 9mm - Fire resistant<br>
+Plywood 12mm - Fire resistant<br>
+Plywood 19mm - Fire resistant<br>
+Plywood 25mm - Fire resistant<br>
+Plywood 6mm - Fire resistant - Single sided primer<br>
+Plywood 9mm - Fire resistant - Single sided primer<br>
+Plywood 12mm - Fire resistant - Single sided primer<br>
+Plywood 6mm - Fire resistant - Double sided primer<br>
+Plywood 9mm - Fire resistant - Double sided primer<br>
+Plywood 12mm - Fire resistant - Double sided primer<br>
+Plywood 6mm - Perforated<br>
+Plywood 9mm - Perforated<br>
+Plywood 12mm - Perforated<br>
+Plywood 19mm - Perforated<br>
+Plywood 25mm - Perforated<br>
+OSB [sort of the same layout as plywood]<br>
+Etc… 750 main and sub-types more.</p>
+<ul>
+<li>All of them are coming form 3 main resellers offering multiple brands and types.</li>
+<li>We just keep small stock for a couple of them. Let’s say 75 types. The rest we are buying for a specific project.</li>
+<li>I’m getting clean CSV/EXEL sheets with price updates of every Item from the 3 suppliers. It’s a list of 5000 records containing: Reseller, MPN (or other unique reseller nummer), the price per square meter and the price per full sheet.</li>
+<li>We only buy full sheets and sheet size for every brand and type is different. Let’s say there are 100 different sizes of sheets.</li>
+<li>General profit: 150% for full sheets. 200% for cut sheets.</li>
+<li>Selling price is basically the above calculation plus our own input per item: we don’t want it to drop to much</li>
+</ul>
+<p>Questions / goals:<br>
+How do we get the info into ERPNext consedering:</p>
+<ul>
+<li>keeping track of suppliers price history. And company price history.</li>
+<li>quickly finding (filtering) raw material prices from all manufacturers based on multiple relevant propperties (stated above like thickness, fire resistance etc). This would be used for quick calculations for customer re quests.</li>
+<li>Having the same pricing info at hand for the items we sell. Allso these same propperties should the the filters to get to the right item (price) fast. And add it to a quote or manufacturing order.</li>
+<li>Having our “items for sale” (at least the ones we are keeping on stock) linked to the right Supplier, MPN and latest price.</li>
+</ul>
+<p>We’re OK with using the import data feature to mass-update the prices every few months.</p>
+<p>How should we fit these items, prices and links into ERPNext? Your insights are verrywell appreciated.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/szufisher'><span itemprop='name'>szufisher</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-03T02:54:17Z' class='post-time'>
+                    February 3, 2025,  2:54am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-03T02:54:17Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>would you mind to provide some sample data(mock data of course)?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/volkswagner'><span itemprop='name'>volkswagner</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-03T03:34:03Z' class='post-time'>
+                    February 3, 2025,  3:34am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-03T03:39:44Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Item price has a valid_from and valid_to date to keep track of historical pricing (for any price list).</p>
+<p>The import tool is useful here but it would be a good idea to use several smaller imports vs 5,000 rows in a single file.</p>
+<p>If prices change often you might consider “moving” no longer valid prices to some other price list like hist_selling or archived_buying, to keep pricing queries performing optimally.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Synctax'><span itemprop='name'>Synctax</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-03T22:24:03Z' class='post-time'>
+                    February 3, 2025, 10:24pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-03T22:24:03Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We have “bought” ourselves a year to find, tryout and implement a shadow ERP system before we go live in januari 2026. We have been collecting price lists in Google sheets for de last years. Unfortunately I can’t share them with you. It’s basically containing all generic information about 5000 “items”. We use the sheet to quickly finding the best prices for project quotes. To get down to the right material we simply use the column filters. Like… material, thickness, type, surface finish, certificates, sheet size and then there are a few options left from 3 suppliers. We then can make a quick decision where to buy the sheet based on price brand, quality, etc.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Synctax'><span itemprop='name'>Synctax</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-03T22:44:40Z' class='post-time'>
+                    February 3, 2025, 10:44pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-03T22:44:40Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>What I’m getting from your feedback:</p>
+<ul>
+<li>
+<p>One “item” in ERPNext should be “one specific type of sheet” we <em>buy</em> from one manufacturer? This might imply that if we <em>sell</em> this sheet or a cut sheet under our own name as retailer of raw materials. I need to create a new item, with a new bom, that contains one item. “the item we buy from the manufacturer”. Richt? Seems like quite some bookkeeping to sell a sheet.</p>
+</li>
+<li>
+<p>Or we have both branded “items” we buy and abstract “items” we sell listed. I can imagine just keeping the 100 types we frequently sell up to date. But how do I simply link these “abstract” items to their (multiple) Manufacturers, MPNs and its latest/current Prices?</p>
+</li>
+<li>
+<p>Thx for the advice of having no more than 1000 rows imported at ones.</p>
+</li>
+<li>
+<p>Thx for the “offloading old prices” advice.</p>
+</li>
+<li>
+<p>You in sights on the above are welcome.</p>
+</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/szufisher'><span itemprop='name'>szufisher</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-03T22:59:01Z' class='post-time'>
+                    February 3, 2025, 10:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-03T22:59:01Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, I understand, I need mock data other than real data to better understanding the details, how to design the solution accordingly.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/volkswagner'><span itemprop='name'>volkswagner</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/8/d/8d04713fde01ca6e75735a0947c90e9b410fd475.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-03T23:05:57Z' class='post-time'>
+                    February 3, 2025, 11:05pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-03T23:15:02Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The system is flexible and robust. Without knowing your inventory, process or desires, it’s a considerable amount of work to list all the possibilities.</p>
+<p>Start with a small scale of examples, ask specific questions and provide detailed desires.</p>
+<p>A single Item can have multiple associated suppliers part numbers.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/8/d/8d04713fde01ca6e75735a0947c90e9b410fd475.png" data-download-href="https://discuss.frappe.io/uploads/default/8d04713fde01ca6e75735a0947c90e9b410fd475" title="Screenshot 2025-02-03 at 6.00.34 PM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/8/d/8d04713fde01ca6e75735a0947c90e9b410fd475_2_690x429.png" alt="Screenshot 2025-02-03 at 6.00.34 PM" data-base62-sha1="k7uQ99me12XSZPHezvJgZk005DL" width="690" height="429" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/8/d/8d04713fde01ca6e75735a0947c90e9b410fd475_2_690x429.png, https://discuss.frappe.io/uploads/default/optimized/3X/8/d/8d04713fde01ca6e75735a0947c90e9b410fd475_2_1035x643.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/8/d/8d04713fde01ca6e75735a0947c90e9b410fd475.png 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot 2025-02-03 at 6.00.34 PM</span><span class="informations">1125×701 45.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>A single Item can have multiple prices (Standard Selling, Standard Buying, Custom List A, Custom List 2, etc). If you can simply use the two defaults, you won’t have<br>
+to alter purchasing and selling doctypes.</p>
+<p>If Each manufacturer has unique pricing and you want to track costs and selling prices, you’ll need items and prices for how finely you’d like to track or assign prices.</p>
+<p>If you purchase or sell (3) items from supplier A, (4) items from supplier B, and 2 Items from supplier c, do you want your inventory to reflect the quantity from each supplier? Perhaps Batch numbers may help if you don’t want to list unique items when the only difference is the supplier, brand, or price???</p>
+<p>When you have three brands to choose from, how do you decide which you’ll sell to your customer? Do you provide the brand name, or do various brands also<br>
+relate to unique quality or features?</p>
+<p>How are you handling these items before ERPNext was considered?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Synctax'><span itemprop='name'>Synctax</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-04T00:08:48Z' class='post-time'>
+                    February 4, 2025, 12:08am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-04T00:08:48Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a href="/u/volkswagner">volkswagner</a> Thx for your feedback.</p>
+<p>The company is using printed out (yes paper) 3 supplier price lists. A worked has a list of stock items and manually keeps an EXEL sheet of “current” prices every few months. Our ERP system just handles orders with abstract descriptions of materials used. We don’t keep track of stock, only counting ones a year. We roughly “know” what’s in the warehouse and mainly buy from supplier on project base or raw materials on specific customer requests.</p>
+<p>So yea… current status is not realy reflecting what we’re aiming for. We’re looking for an easy to maintain system to find and keep all supplier prices, to quickly add them to a quote of BOM. Or have prices live at hand when a customer “asks” for it behind the countertop or on the phone.</p>
+<p>It seems to me that “at least” I need to find a way to get the 5000 “Items” from 3 different suppliers into ERPNext as unique Items. I’ll have the properties (attributes) manually embedded/code in the ID and/or Item name. And I have to find a way to update these massive list of items every few months with the Data import function from the “Items” interface and the “Price list” interface. Then I have to do the “manual work” in excel of Google sheets.</p>
+<p>Would this be a straigtforward and logical first step? I guess from here we can at least start creating BOMs, POs.</p>
+<p>Second step would be to add our own company branded Items with are actually rebranded cut pieces of material from several suppliers. I can list those abstract items on a website, or name them in a quote without exposing the name of my manufacturers. In listing them in a quote or website I DO need the items to have full description of properties (item attributes?!?) listed. So, it should be better create those items form item templates with the right set of attributes?</p>
+<p>Does this sound like a plan?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/volkswagner'><span itemprop='name'>volkswagner</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-04T00:32:12Z' class='post-time'>
+                    February 4, 2025, 12:32am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-04T00:32:12Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Perhaps consider Buying and Selling separately to determine your best path.</p>
+<p>You can assign a default price list to a supplier. When you purchase “sheet-a” from Supplier-X, you’ll use the price-list “supplier-x”. For purchasing purposes, you only<br>
+need one item (which will be associated with up to three supplier specific price lists).</p>
+<p>If you sell or use “sheet-a” in a BOM, you’ll know the price based on inventory on hand or method (LIFO, FIFO, etc). If you’re comfortable with a single sell price no matter who you purchased from (always base pricing on the highest of the three) then you can likely use a single item for all three suppliers.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Synctax'><span itemprop='name'>Synctax</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-04T12:13:08Z' class='post-time'>
+                    February 4, 2025, 12:13pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-04T12:13:08Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Sounds straightforward. Thx again.</p>
+<p>Before I’m going to implement this. I need to be sure…<br>
+Where is the link between: Item-[sheet-a] and “a specific line” in price-list “supplier-x”.</p>
+<p>If I mass update “items” and “price-lists” with data import. I need to be sure in both tables they share at least a common value. Richt?</p>
+<p>Looking forward to your input again. <img src="https://discuss.frappe.io/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/volkswagner'><span itemprop='name'>volkswagner</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-04T13:03:04Z' class='post-time'>
+                    February 4, 2025,  1:03pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-04T13:03:04Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The Item ID (aka name) will be your unique identifier for item and item_price.<br>
+The link between Item-[sheet-a] and “a specific line” in price-list “supplier-x” is<br>
+the item ID. Please realize <code>price-list “supplier-x” </code> is a Price List named “supplier-x”.</p>
+<p>If your suppplier-x supplies you with 10 unique products, you’ll have a purchase price<br>
+list name “purch_Supplier-x” and a “sell_Supplier-x”. These two price lists are where you’ll<br>
+maintain pricing for the ten items you source from supplier-x. You can use the valid dates to<br>
+track pricing over time. You can then create an archive price list for both buy and sell prices.<br>
+When the regular lists have “too many” out-of-date prices, you can perform a bulk edit on those<br>
+item prices and move them to an archive price list.</p>
+<p>The above assumes you’ll create a single item and multiple price lists (two for each supplier, one for sell, and one for buy). Alternatively, you can create unique item IDs by supplier and maintain only one sell price list and one buy price list.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Synctax'><span itemprop='name'>Synctax</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-04T15:33:02Z' class='post-time'>
+                    February 4, 2025,  3:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-04T15:36:45Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Ok, looking at our stock (in reality) we have (all together) 1pc of “sheet-a” and all together 4m2 of lose phases of “sheet-a”. We sell it as a generic PLYWOOD-12MM-FIRERET-WHITE.</p>
+<p>In case stock runs low, or is not sufficient for a new project. We want to search for this specific type of plywood, find the items from the different suppliers that offer this type of material. Discover the best price for the project and use this info for quote/calculation and perhaps a PO.</p>
+<p>Reflecting on your last comment. Wouldn’t this imply that the Item ID/Name above is stated multiple times in the pricelists of several suppliers that deliver material that match these properties? So wouldn’t I then have just one price list per supplier? The only “set” value of the raw price lists I get from my supplier contain a MPN of similar UID. Ofcourse not our “Item ID/Name”. Do I need to match this in excel before importing?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/volkswagner'><span itemprop='name'>volkswagner</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-04T16:14:29Z' class='post-time'>
+                    February 4, 2025,  4:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-04T16:24:07Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>First you need to decide if you are going to create three entries in the Item table for item “sheet-a”. If you create three items (one for each supplier) then yes, you’ll have<br>
+one price list because you have unique item IDs.</p>
+<p>If you don’t want to create three Items, then you’ll create additional price lists (one for each supplier).</p>
+<p>I don’t want to lead your direction, so It’s difficult to be impartial. There are many ways to accomplish the same goal. I’m still not sure what your goal is.</p>
+<p>For example, if you look at the Item Price docType, there are several fields like ‘Note’ or ‘Reference’. You can use these fields to indicate your supplier, but this<br>
+will be subject to user error. Alternatively you can customize the Item Price docType and add a link field to Supplier. You’ll need to name it something other than “Supplier” because there already is a field from supplier but that comes from<br>
+the price list link.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Synctax'><span itemprop='name'>Synctax</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-04T20:35:34Z' class='post-time'>
+                    February 4, 2025,  8:35pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-04T20:35:34Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>While investigating the pros and cons of both option… We’d lose the “sheet size” propperty/info if we would go for “generic items + three price lists” route. This propperty belongs to the “item” not the “price list”. If we need to accuire material for a specific project. Cut pieces need to come out of a full sheet as economic as possible. This also desides from which supplier we are sourcing the sheets. Sheet size also determins internal handling/operation routines.</p>
+<p>So that would be one price list for all items and one Item for each type of full sheet the suppiers offer under their own UID.</p>
+<p>For example I’ll have an Item: PLYWOOD-19-1220-2440-FIRERET-BLACK-SX(Supplier X) I don’t want the MPN/UID in my Item ID/Name to prevent tracability in case we put this item directly on a quote.</p>
+<p>So woudn’t it be a great idea to also have a postfix for ourself as a supplier? So we’d get -SX -SY -SZ and -S1 (our company). We’d use this item to maintain stock of cut pieces. So we’d get: PLYWOOD-19-FIRERET-BLACK-S1. (Where sheet size and supplier is not relevant) We later can figure out how to quantify stock: total square meter or perhaps even sizes of each cut piece in stock.</p>
+<p>How does this sound?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/volkswagner'><span itemprop='name'>volkswagner</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-04T21:29:05Z' class='post-time'>
+                    February 4, 2025,  9:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-04T21:29:05Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Sounds like a solid plan.</p>
+<p>Experiment with your ID naming scheme. Consider autocomplete while the user types the ID.</p>
+<p>What’s the most important characteristic “plywood”, “thickness”, or overall sheet dimension?</p>
+<p>Consider abbreviations as well (“PW” or “PLY” for plywood). If the user can type 4-8 characters<br>
+and get a short list of choices, that would make them happy <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Synctax'><span itemprop='name'>Synctax</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-04T21:51:00Z' class='post-time'>
+                    February 4, 2025,  9:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-04T21:51:00Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thx again, I’d better be doing bit of experimenting now with all the knowledge. <img src="https://discuss.frappe.io/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

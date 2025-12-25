@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Overriding Plugin Method</title>
+    <link>https://discuss.frappe.io/t/overriding-plugin-method/158245</link>
+    <description>Hello all!
+
+I have been trying to create a hook to replace the functionality of an erpnext method, “calculate_taxes_and_totals”, found in “erpnext/erpnext/controllers/taxes_and_totals.calculate_taxes_and_totals”.
+
+As far as I can see, the hook lists “override_whitelisted_methods” (to replace the method directly) and “override_doctype_class” (to replace the entire class) are only for core DocType classes, not those introduced by plugins.
+
+I’d prefer to avoid monkey patching, as it seems to be used for a quick fix, not for permanent use.
+
+Summary: How can I override a method in a plugin?</description>
+    
+    <lastBuildDate>Wed, 24 Dec 2025 08:04:20 +0000</lastBuildDate>
+    <category>App Development</category>
+    <atom:link href="https://discuss.frappe.io/t/overriding-plugin-method/158245.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Overriding Plugin Method</title>
+        <dc:creator><![CDATA[Yamen_Zakhour]]></dc:creator>
+        <description><![CDATA[
+            <p>Please go through this discussion</p><aside class="quote quote-modified" data-post="3" data-topic="148237">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/mohamed-ameer/48/82406_2.png" class="avatar">
+    <div class="quote-title__text-content">
+      <a href="https://discuss.frappe.io/t/frappe-monkey-patching-guide-overriding-change-core-code-without-touching-it/148237/3">Frappe Monkey Patching Guide: Overriding/Change Core Code Without Touching it</a> <a class="badge-category__wrapper " href="https://discuss.frappe.io/c/erpnext/6"><span data-category-id="6" style="--category-badge-color: #BF1E2E; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category --style-square "><span class="badge-category__name">ERPNext</span></span></a>
+    </div>
+  </div>
+  <blockquote>
+    thanks alooot for your opinion <img width="20" height="20" src="https://discuss.frappe.io/images/emoji/twitter/heart.png?v=14" title="heart" alt="heart" class="emoji"> <img width="20" height="20" src="https://discuss.frappe.io/images/emoji/twitter/heart.png?v=14" title="heart" alt="heart" class="emoji"> <img width="20" height="20" src="https://discuss.frappe.io/images/emoji/twitter/heart.png?v=14" title="heart" alt="heart" class="emoji"> 
+don’t worry i had mention the cases that we need to use monkey-patching and i did warn that it must be used in major needs 
+as example in my work we had a lot of business needs that force us to use monkey patch. 
+the problem was "i don’t know how to do monkey patch properly <img width="20" height="20" src="https://discuss.frappe.io/images/emoji/twitter/joy.png?v=14" title="joy" alt="joy" class="emoji"> " 
+so i collected parts from my experience and parts from others experience and ofc uncle chatgpt 
+btw i hope you read this file to understand what i want to do ex…
+  </blockquote>
+</aside>
+
+          <p><a href="https://discuss.frappe.io/t/overriding-plugin-method/158245/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/overriding-plugin-method/158245/6</link>
+        <pubDate>Wed, 24 Dec 2025 08:04:20 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158245-6</guid>
+        <source url="https://discuss.frappe.io/t/overriding-plugin-method/158245.rss">Overriding Plugin Method</source>
+      </item>
+      <item>
+        <title>Overriding Plugin Method</title>
+        <dc:creator><![CDATA[TSping1]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello Yamen,</p>
+<p>Just wanting to get some clarification on this message - is this some sort of intrinsic Frappe file that disallows coding faux pas, or is it a check people can run on installed plugins to make sure they behave?</p>
+<p>I’m not sure what this message means as a whole.</p>
+          <p><a href="https://discuss.frappe.io/t/overriding-plugin-method/158245/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/overriding-plugin-method/158245/5</link>
+        <pubDate>Wed, 24 Dec 2025 01:08:39 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158245-5</guid>
+        <source url="https://discuss.frappe.io/t/overriding-plugin-method/158245.rss">Overriding Plugin Method</source>
+      </item>
+      <item>
+        <title>Overriding Plugin Method</title>
+        <dc:creator><![CDATA[Sudhanshu]]></dc:creator>
+        <description><![CDATA[
+            <p>you can use this patching from hooks.</p>
+<p>just add same import code in hooks and it will work.</p>
+          <p><a href="https://discuss.frappe.io/t/overriding-plugin-method/158245/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/overriding-plugin-method/158245/4</link>
+        <pubDate>Tue, 23 Dec 2025 09:30:59 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158245-4</guid>
+        <source url="https://discuss.frappe.io/t/overriding-plugin-method/158245.rss">Overriding Plugin Method</source>
+      </item>
+      <item>
+        <title>Overriding Plugin Method</title>
+        <dc:creator><![CDATA[Yamen_Zakhour]]></dc:creator>
+        <description><![CDATA[
+            <aside class="onebox githubblob" data-onebox-src="https://github.com/frappe/semgrep-rules/blob/d01e207b1fc6e9cd400fc465db3ef55507bb4c1e/rules/frappe_correctness.yml#L304-L337">
+  <header class="source">
+
+      <a href="https://github.com/frappe/semgrep-rules/blob/d01e207b1fc6e9cd400fc465db3ef55507bb4c1e/rules/frappe_correctness.yml#L304-L337" target="_blank" rel="noopener nofollow ugc">github.com/frappe/semgrep-rules</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/frappe/semgrep-rules/blob/d01e207b1fc6e9cd400fc465db3ef55507bb4c1e/rules/frappe_correctness.yml#L304-L337" target="_blank" rel="noopener nofollow ugc">rules/frappe_correctness.yml</a></h4>
+
+<div class="git-blob-info">
+  <a href="https://github.com/frappe/semgrep-rules/blob/d01e207b1fc6e9cd400fc465db3ef55507bb4c1e/rules/frappe_correctness.yml#L304-L337" rel="noopener nofollow ugc"><code>d01e207b1</code></a>
+</div>
+
+
+
+    <pre class="onebox"><code class="lang-yml">
+      <ol class="start lines" start="304" style="counter-reset: li-counter 303 ;">
+          <li>- id: frappe-monkey-patching-not-allowed</li>
+          <li>  patterns:</li>
+          <li>    - pattern-either:</li>
+          <li>      - pattern: |</li>
+          <li>          from $X import $Y</li>
+          <li>          ...</li>
+          <li>          $Y.$PROPERTY = ...</li>
+          <li>      - pattern: |</li>
+          <li>          from $X import $Y</li>
+          <li>          ...</li>
+          <li>          $Y.$Z.$PROPERTY = ...</li>
+          <li>      - pattern: |</li>
+          <li>          from $X import $Y</li>
+          <li>          ...</li>
+          <li>          $Y.$Z.$F.$PROPERTY = ...</li>
+          <li>      - pattern: |</li>
+          <li>          from $X import $Y</li>
+          <li>          ...</li>
+          <li>          $Y.$Z.$F.$K.$PROPERTY = ...</li>
+          <li>      - pattern: |</li>
+      </ol>
+    </code></pre>
+
+
+  This file has been truncated. <a href="https://github.com/frappe/semgrep-rules/blob/d01e207b1fc6e9cd400fc465db3ef55507bb4c1e/rules/frappe_correctness.yml#L304-L337" target="_blank" rel="noopener nofollow ugc">show original</a>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://discuss.frappe.io/t/overriding-plugin-method/158245/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/overriding-plugin-method/158245/3</link>
+        <pubDate>Tue, 23 Dec 2025 07:21:37 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158245-3</guid>
+        <source url="https://discuss.frappe.io/t/overriding-plugin-method/158245.rss">Overriding Plugin Method</source>
+      </item>
+      <item>
+        <title>Overriding Plugin Method</title>
+        <dc:creator><![CDATA[Sudhanshu]]></dc:creator>
+        <description><![CDATA[
+            <p>there is no harm to use monkey patch if you use it properly.<br>
+and for your scenario monkey patch is the solution.</p>
+          <p><a href="https://discuss.frappe.io/t/overriding-plugin-method/158245/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/overriding-plugin-method/158245/2</link>
+        <pubDate>Tue, 23 Dec 2025 04:20:26 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158245-2</guid>
+        <source url="https://discuss.frappe.io/t/overriding-plugin-method/158245.rss">Overriding Plugin Method</source>
+      </item>
+      <item>
+        <title>Overriding Plugin Method</title>
+        <dc:creator><![CDATA[TSping1]]></dc:creator>
+        <description><![CDATA[
+            <p>Hello all!</p>
+<p>I have been trying to create a hook to replace the functionality of an erpnext method, “calculate_taxes_and_totals”, found in “erpnext/erpnext/controllers/taxes_and_totals.calculate_taxes_and_totals”.</p>
+<p>As far as I can see, the hook lists “override_whitelisted_methods” (to replace the method directly) and “override_doctype_class” (to replace the entire class) are only for core DocType classes, not those introduced by plugins.</p>
+<p>I’d prefer to avoid monkey patching, as it seems to be used for a quick fix, not for permanent use.</p>
+<p>Summary: How can I override a method in a plugin?</p>
+          <p><a href="https://discuss.frappe.io/t/overriding-plugin-method/158245/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/overriding-plugin-method/158245/1</link>
+        <pubDate>Tue, 23 Dec 2025 03:33:14 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158245-1</guid>
+        <source url="https://discuss.frappe.io/t/overriding-plugin-method/158245.rss">Overriding Plugin Method</source>
+      </item>
+  </channel>
+</rss>

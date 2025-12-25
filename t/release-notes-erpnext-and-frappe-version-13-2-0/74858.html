@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[Release Notes] ERPNext and Frappe Version 13.2.0 - ERPNext - Frappe Forum</title>
+    <meta name="description" content="ERPNext Version 13.2.0 Release Notes
+Features &amp;amp; Enhancements
+
+Employee Hours Utilization Report (#25209)
+Delayed Tasks Summary Report (#25024)
+Project Profitability Report (#24944)
+Timer in LMS Quiz (#24246)
+Role to allo&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/release-notes-erpnext-and-frappe-version-13-2-0/74858" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[Release Notes] ERPNext and Frappe Version 13.2.0&#39;" href="https://discuss.frappe.io/t/release-notes-erpnext-and-frappe-version-13-2-0/74858.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/release-notes-erpnext-and-frappe-version-13-2-0/74858" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/release-notes-erpnext-and-frappe-version-13-2-0/74858" />
+<meta property="og:title" content="[Release Notes] ERPNext and Frappe Version 13.2.0" />
+<meta name="twitter:title" content="[Release Notes] ERPNext and Frappe Version 13.2.0" />
+<meta property="og:description" content="ERPNext Version 13.2.0 Release Notes Features &amp; Enhancements  Employee Hours Utilization Report (#25209) Delayed Tasks Summary Report (#25024) Project Profitability Report (#24944) Timer in LMS Quiz (#24246) Role to allow over billing, delivery, receipt (#24854) Auto calculate distance for e-way bill generations (#25480) Add total available stock field in PO (#24878) Refactored Setup Taxes and Charges (#24805) Inpatient Occupancy Table Editable for Healthcare Admin (#24989) Added Disable Rounded..." />
+<meta name="twitter:description" content="ERPNext Version 13.2.0 Release Notes Features &amp; Enhancements  Employee Hours Utilization Report (#25209) Delayed Tasks Summary Report (#25024) Project Profitability Report (#24944) Timer in LMS Quiz (#24246) Role to allow over billing, delivery, receipt (#24854) Auto calculate distance for e-way bill generations (#25480) Add total available stock field in PO (#24878) Refactored Setup Taxes and Charges (#24805) Inpatient Occupancy Table Editable for Healthcare Admin (#24989) Added Disable Rounded..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:tag" content="release" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="frappe" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="6 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="31 ❤" />
+<meta property="article:published_time" content="2021-05-01T09:40:24+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="/t/release-notes-erpnext-and-frappe-version-13-2-0/74858?page=2">
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"[Release Notes] ERPNext and Frappe Version 13.2.0","mainEntity":{"@type":"Question","name":"[Release Notes] ERPNext and Frappe Version 13.2.0","text":"<a name=\"p-283668-erpnext-version-1320-release-notes-1\" class=\"anchor\" href=\"#p-283668-erpnext-version-1320-release-notes-1\"><\/a>ERPNext Version 13.2.0 Release Notes\n\n<a name=\"p-283668-features-enhancements-2\" class=\"anchor\" href=\"#p-283668-features-enhancements-2\"><\/a>Features &amp; Enhancements\n\nEmployee Hours Utilization Report (<a href=\"https://github.com/frappe/erpnext/pull/25209\">#25209<\/a>)\n\nDelayed Tasks Summary Report (<a href=\"https://github.com/frappe/erpnext/pull/25024\">#25024<\/a>)\n\nProject Profitability Report (<a href=\"https://github.com/frappe/erpnext/pull/24944\">#24944<\/a>)\n\nTimer in LMS Quiz (<a href=\"https://github.com/frappe/erpnext/pull/24246\">#24246<\/a>)\n\nRole to allow over billing, delivery, receipt (<a href=\"https://github.com/frappe/erpnext/pull/24854\">#24854<\/a>)\n\nAuto calculate distance for e-way bil&hellip;","upvoteCount":16,"answerCount":0,"datePublished":"2021-05-01T09:40:23.878Z","author":{"@type":"Person","name":"nabinhait","url":"https://discuss.frappe.io/u/nabinhait"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/release-notes-erpnext-and-frappe-version-13-2-0/74858">[Release Notes] ERPNext and Frappe Version 13.2.0</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/release' class='discourse-tag' rel="tag">release</a>, 
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[Release Notes] ERPNext and Frappe Version 13.2.0'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/release-notes-erpnext-and-frappe-version-13-2-0/74858'>
+      <meta itemprop='datePublished' content='2021-05-01T09:40:23Z'>
+        <meta itemprop='articleSection' content='ERPNext'>
+      <meta itemprop='keywords' content='release, erpnext, frappe'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nabinhait'><span itemprop='name'>nabinhait</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/release-notes-erpnext-and-frappe-version-13-2-0/74858">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2021-05-01T09:40:24Z' class='post-time'>
+                    May 1, 2021,  9:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-14T05:25:31Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h1><a name="p-283668-erpnext-version-1320-release-notes-1" class="anchor" href="#p-283668-erpnext-version-1320-release-notes-1"></a>ERPNext Version 13.2.0 Release Notes</h1>
+<h3><a name="p-283668-features-enhancements-2" class="anchor" href="#p-283668-features-enhancements-2"></a>Features &amp; Enhancements</h3>
+<ul>
+<li>Employee Hours Utilization Report (<a href="https://github.com/frappe/erpnext/pull/25209">#25209</a>)</li>
+<li>Delayed Tasks Summary Report (<a href="https://github.com/frappe/erpnext/pull/25024">#25024</a>)</li>
+<li>Project Profitability Report (<a href="https://github.com/frappe/erpnext/pull/24944">#24944</a>)</li>
+<li>Timer in LMS Quiz (<a href="https://github.com/frappe/erpnext/pull/24246">#24246</a>)</li>
+<li>Role to allow over billing, delivery, receipt (<a href="https://github.com/frappe/erpnext/pull/24854">#24854</a>)</li>
+<li>Auto calculate distance for e-way bill generations (<a href="https://github.com/frappe/erpnext/pull/25480">#25480</a>)</li>
+<li>Add total available stock field in PO (<a href="https://github.com/frappe/erpnext/pull/24878">#24878</a>)</li>
+<li>Refactored Setup Taxes and Charges (<a href="https://github.com/frappe/erpnext/pull/24805">#24805</a>)</li>
+<li>Inpatient Occupancy Table Editable for Healthcare Admin (<a href="https://github.com/frappe/erpnext/pull/24989">#24989</a>)</li>
+<li>Added Disable Rounded Total in sales transactions (<a href="https://github.com/frappe/erpnext/pull/25362">#25362</a>)</li>
+</ul>
+<h3><a name="p-283668-fixes-3" class="anchor" href="#p-283668-fixes-3"></a>Fixes</h3>
+<ul>
+<li>Incorrect GL Entry validation (<a href="https://github.com/frappe/erpnext/pull/25474">#25474</a>)</li>
+<li>Cannot create item variants (<a href="https://github.com/frappe/erpnext/pull/25433">#25433</a>)</li>
+<li>Leave policy in leave allocation (<a href="https://github.com/frappe/erpnext/pull/25334">#25334</a>)</li>
+<li>Let Administrator delete company transactions (<a href="https://github.com/frappe/erpnext/pull/25300">#25300</a>)</li>
+<li>Display reconcile tool when closing balance 0 (<a href="https://github.com/frappe/erpnext/pull/25417">#25417</a>)</li>
+<li>Bulk Salary Structure Assignment (<a href="https://github.com/frappe/erpnext/pull/25389">#25389</a>)</li>
+<li>Payment amount showing in foreign currency (<a href="https://github.com/frappe/erpnext/pull/25518">#25518</a>)</li>
+<li>Commit changes to shipment status in database (<a href="https://github.com/frappe/erpnext/pull/25374">#25374</a>)</li>
+<li>Add amend perm for loan and system manager for loan doctypes (<a href="https://github.com/frappe/erpnext/pull/25393">#25393</a>)</li>
+<li>Cashier query in POS Opening/Closing Entry (<a href="https://github.com/frappe/erpnext/pull/25398">#25398</a>)</li>
+<li>Apply single transaction threshold on net_total instead of supplier credit amount (<a href="https://github.com/frappe/erpnext/pull/25243">#25243</a>)</li>
+<li>Update allocated amount after paid amount is changed in PE (<a href="https://github.com/frappe/erpnext/pull/25528">#25528</a>)</li>
+<li>Remove non-standard module cards from Home Workspace (<a href="https://github.com/frappe/erpnext/pull/25391">#25391</a>)</li>
+<li>Cannot scan spacebar character in pos (<a href="https://github.com/frappe/erpnext/pull/25479">#25479</a>)</li>
+<li>Permission error after submitting exchange rate revaluation (<a href="https://github.com/frappe/erpnext/pull/25432">#25432</a>)</li>
+<li>Equality check instead of assignment in cart (<a href="https://github.com/frappe/erpnext/pull/25372">#25372</a>)</li>
+<li>Disable auto naming of customer during import (<a href="https://github.com/frappe/erpnext/pull/25152">#25152</a>)</li>
+<li>Additional Salary component amount not getting set (<a href="https://github.com/frappe/erpnext/pull/25355">#25355</a>)</li>
+<li>Round off values near to zero (<a href="https://github.com/frappe/erpnext/pull/25304">#25304</a>)</li>
+<li>Allow to cancel loan with cancelled repayment entry (<a href="https://github.com/frappe/erpnext/pull/25508">#25508</a>)</li>
+<li>Currency symbol in bank transaction list view (<a href="https://github.com/frappe/erpnext/pull/25336">#25336</a>)</li>
+<li>Incorrect batch picked in subcontracted purchase receipt (<a href="https://github.com/frappe/erpnext/pull/25186">#25186</a>)</li>
+<li>Issue in project custom status (<a href="https://github.com/frappe/erpnext/pull/25452">#25452</a>)</li>
+<li>Shipment pickup_to, pickup_from functionality. (<a href="https://github.com/frappe/erpnext/pull/25359">#25359</a>)</li>
+<li>Stock ledger entry created against draft stock entry (<a href="https://github.com/frappe/erpnext/pull/25539">#25539</a>)</li>
+<li>Ageing errors in PSOA (<a href="https://github.com/frappe/erpnext/pull/25529">#25529</a>)</li>
+<li>Permission error while adding weekly holidays (<a href="https://github.com/frappe/erpnext/pull/25450">#25450</a>)</li>
+<li>Filter for employees in salary slip (<a href="https://github.com/frappe/erpnext/pull/25360">#25360</a>)</li>
+<li>Backward compatibility for GSTR-1 report (<a href="https://github.com/frappe/erpnext/pull/25444">#25444</a>)</li>
+<li>Incorrect incoming rate for the sales return (<a href="https://github.com/frappe/erpnext/pull/25145">#25145</a>)</li>
+<li>POS print receipt (<a href="https://github.com/frappe/erpnext/pull/25328">#25328</a>)</li>
+<li>Laboratory Module patch (<a href="https://github.com/frappe/erpnext/pull/25431">#25431</a>)</li>
+<li>Performance: fetching exchange rate on every line item slows down PO (<a href="https://github.com/frappe/erpnext/pull/25345">#25345</a>)</li>
+<li>Presentation currency in statement of accounts (<a href="https://github.com/frappe/erpnext/pull/25367">#25367</a>)</li>
+<li>Serial No not updated correctly via Inter Company Stock Transfer (<a href="https://github.com/frappe/erpnext/pull/25006">#25006</a>)</li>
+<li>Ignore Customer Group Perm on All Products page (<a href="https://github.com/frappe/erpnext/pull/25396">#25396</a>)</li>
+<li>Change subcontracted item display (<a href="https://github.com/frappe/erpnext/pull/25425">#25425</a>)</li>
+<li>Add company validation for e-invoicing (<a href="https://github.com/frappe/erpnext/pull/25348">#25348</a>)</li>
+</ul>
+<hr>
+<h1><a name="p-283668-frappe-version-1320-release-notes-4" class="anchor" href="#p-283668-frappe-version-1320-release-notes-4"></a>Frappe Version 13.2.0 Release Notes</h1>
+<h3><a name="p-283668-features-enhancements-5" class="anchor" href="#p-283668-features-enhancements-5"></a>Features &amp; Enhancements</h3>
+<ul>
+<li>Add option to mention a group of users (<a href="https://github.com/frappe/frappe/pull/12844">#12844</a>)</li>
+<li>Copy DocType / documents across sites (<a href="https://github.com/frappe/frappe/pull/12872">#12872</a>)</li>
+<li>Scheduler log in notifications (<a href="https://github.com/frappe/frappe/pull/1135">#1135</a>)</li>
+<li>Add Enable/Disable Webhook via Check Field (<a href="https://github.com/frappe/frappe/pull/12842">#12842</a>)</li>
+<li>Allow query/custom reports to save custom data in the json field (<a href="https://github.com/frappe/frappe/pull/12534">#12534</a>)</li>
+</ul>
+<h3><a name="p-283668-fixes-6" class="anchor" href="#p-283668-fixes-6"></a>Fixes</h3>
+<ul>
+<li>Load server translations in boot (backport <span class="hashtag-raw">#12848</span>) (<a href="https://github.com/frappe/frappe/pull/12852">#12852</a>)</li>
+<li>Allow to override dashboard chart properties type/color (<a href="https://github.com/frappe/frappe/pull/12846">#12846</a>)</li>
+<li>Multi-column paste in grid (<a href="https://github.com/frappe/frappe/pull/12861">#12861</a>)</li>
+<li>Add log_error and FrappeClient to restricted python (<a href="https://github.com/frappe/frappe/pull/12857">#12857</a>)</li>
+<li>Redirect Web Form user directly to success URL, if no amount is due (<a href="https://github.com/frappe/frappe/pull/12661">#12661</a>)</li>
+<li>Attachment pill lock icon redirects to File (<a href="https://github.com/frappe/frappe/pull/12864">#12864</a>)</li>
+<li>Redirect Web Form user directly to success URL, if no amount is due (backport <span class="hashtag-raw">#12661</span>) (<a href="https://github.com/frappe/frappe/pull/12856">#12856</a>)</li>
+<li>Remove events to redraw charts (<a href="https://github.com/frappe/frappe/pull/12973">#12973</a>)</li>
+<li>Don’t allow user to remove/change data source file in data import (<a href="https://github.com/frappe/frappe/pull/12827">#12827</a>)</li>
+<li>Load server translations in boot (<a href="https://github.com/frappe/frappe/pull/12848">#12848</a>)</li>
+<li>Newly created Workspace not being accessible unless a shortcut u… (<a href="https://github.com/frappe/frappe/pull/12866">#12866</a>)</li>
+<li>Currency labels in grids (<a href="https://github.com/frappe/frappe/pull/12974">#12974</a>)</li>
+<li>Handle error while session start (<a href="https://github.com/frappe/frappe/pull/12933">#12933</a>)</li>
+<li>Add field type check in custom field validation (<a href="https://github.com/frappe/frappe/pull/12858">#12858</a>)</li>
+<li>Make language select optional and fix breakpoint issues (<a href="https://github.com/frappe/frappe/pull/12860">#12860</a>)</li>
+<li>Form Dashboard reference link (<a href="https://github.com/frappe/frappe/pull/12945">#12945</a>)</li>
+<li>Invalid HTML generated by the base template (<a href="https://github.com/frappe/frappe/pull/12953">#12953</a>)</li>
+<li>Default values were not triggering change event (<a href="https://github.com/frappe/frappe/pull/12975">#12975</a>)</li>
+<li>Make strings translatable (<a href="https://github.com/frappe/frappe/pull/12877">#12877</a>)</li>
+<li>Added build-message-files command (<a href="https://github.com/frappe/frappe/pull/12950">#12950</a>)</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="16" />
+              <span class='post-likes'>16 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/zerodiscount'><span itemprop='name'>zerodiscount</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-01T13:36:19Z' class='post-time'>
+                    May 1, 2021,  1:36pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-01T20:46:13Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>complete error message - wondering of somehow related to python / environment. My environment was already python3 - I checked with python -V command. Also did a bench migrate-env python3. Is anybody else seeing this error? Why is it pointing to another repo named frappe at <a href="https://github.com/grafos-ml/frappe" class="inline-onebox" rel="noopener nofollow ugc">GitHub - grafos-ml/frappe: Recommendations Serving Engine using python</a> ?</p>
+<pre><code>WARNING: Discarding https://files.pythonhosted.org/packages/f6/9d/658c5c54186e860bde0a3c1425bbd65b9d31e0bc212e780520746cd4f9ce/frappe-2.0.1.tar.gz#sha256=7ce96e27fd85398cc198fd1b3273f729f7d92abce8adb25db5b0bd30f080105e (from https://pypi.org/simple/frappe/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+    ERROR: Command errored out with exit status 1:
+     command: /home/frappe/frappe-bench/env/bin/python -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-2r6hj1aq/frappe_522e79095c85422a912e29afb66f5fd6/setup.py'"'"'; __file__='"'"'/tmp/pip-install-2r6hj1aq/frappe_522e79095c85422a912e29afb66f5fd6/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-s6q6gj5q
+         cwd: /tmp/pip-install-2r6hj1aq/frappe_522e79095c85422a912e29afb66f5fd6/
+    Complete output (12 lines):
+    Traceback (most recent call last):
+      File "/tmp/pip-install-2r6hj1aq/frappe_522e79095c85422a912e29afb66f5fd6/setup.py", line 7, in &lt;module&gt;
+        import testfm
+    ModuleNotFoundError: No module named 'testfm'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "&lt;string&gt;", line 1, in &lt;module&gt;
+      File "/tmp/pip-install-2r6hj1aq/frappe_522e79095c85422a912e29afb66f5fd6/setup.py", line 9, in &lt;module&gt;
+        raise LookupError("You must have test.fm &gt;= 1.0.4 installed before (https://github.com/grafos-ml/frappe)")
+    LookupError: You must have test.fm &gt;= 1.0.4 installed before (https://github.com/grafos-ml/frappe)
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/noc'><span itemprop='name'>noc</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-01T14:57:10Z' class='post-time'>
+                    May 1, 2021,  2:57pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-01T14:57:10Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>working for me. try doing a hard git reset.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/zerodiscount'><span itemprop='name'>zerodiscount</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-01T15:00:01Z' class='post-time'>
+                    May 1, 2021,  3:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-02T23:23:23Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Resolved this issue by manually pulling the update on an instance where bench update was not applied (failed update to v13.2). I was able to restore an earlier snapshot (lxd) and then do the manual update as below… For my reference (and in case anyone else faces this error)…</p>
+<p>For install without customizations:</p>
+<pre><code>cd ~/frappe-bench/apps/frappe
+git reset --hard HEAD
+git checkout version-13
+git pull
+
+cd ~/frappe-bench/apps/erpnext
+git reset --hard HEAD
+git checkout version-13
+git pull
+
+cd ~/frappe-bench  (in frappe-bench directory)
+bench setup requirements
+bench build
+bench --site all migrate
+bench restart
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Aditya_Bagarka'><span itemprop='name'>Aditya_Bagarka</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-01T20:06:34Z' class='post-time'>
+                    May 1, 2021,  8:06pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-01T20:06:34Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="zerodiscount" data-post="7" data-topic="74858">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/letter_avatar_proxy/v4/letter/z/a587f6/48.png" class="avatar"> zerodiscount:</div>
+<blockquote>
+<p>bench setup requirements</p>
+</blockquote>
+</aside>
+<p>What does this mean?</p>
+<p>Already on ‘version-13’<br>
+Your branch and ‘upstream/version-13’ have diverged,<br>
+and have 1 and 1 different commits each, respectively.<br>
+(use “git pull” to merge the remote branch into yours)</p>
+<p>when i use <code>git pull</code></p>
+<p>fatal: refusing to merge unrelated histories</p>
+<p>same for both Frappe &amp; ERPNext</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/zerodiscount'><span itemprop='name'>zerodiscount</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-01T20:17:44Z' class='post-time'>
+                    May 1, 2021,  8:17pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-01T20:17:44Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/aditya_bagarka">@Aditya_Bagarka</a> I had the exact same issue - in the frappe directory after I had run the failed bench update command. I think it is something due to an earlier branch being V13 pre-release somehow - even though we were always on version-13 beta and then version-13.</p>
+<p>I had to revert back to an earlier snapshot (v13.1 without the bench update) and then run the above commands to manually update frappe and erpnext apps. I do not know why the local and git are divergent - our production instance is clean and has no customizations, etc…</p>
+<p>I suggest updating erpnext using above manual method first (as that is where the bench update was failing) and then try running <code>bench update --reset</code> (is same as above manual commands)  and see if that somehow resolves this issue. Sorry cant help further…Hopefully the “experts” can guide you further…</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/usmanalikhan'><span itemprop='name'>usmanalikhan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-01T21:19:44Z' class='post-time'>
+                    May 1, 2021,  9:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-01T21:19:44Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><em>Copy DocType / documents across sites</em></p>
+<p>This seems like an interesting addition. any details on how this works and how to use it?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/TurkerTunali'><span itemprop='name'>TurkerTunali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-01T22:00:30Z' class='post-time'>
+                    May 1, 2021, 10:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-01T22:00:30Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>You may check it here <a href="https://github.com/frappe/frappe/pull/12872" class="inline-onebox" rel="noopener nofollow ugc">feat: Copy DocType / documents across sites by surajshetty3416 · Pull Request #12872 · frappe/frappe · GitHub</a> and my reactions here <a href="https://youtu.be/SYol5NEUV08?t=136" class="inline-onebox" rel="noopener nofollow ugc">ERPNext v13.2.0 Review - YouTube</a> .</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jschussmuller'><span itemprop='name'>jschussmuller</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-01T23:13:15Z' class='post-time'>
+                    May 1, 2021, 11:13pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-01T23:13:15Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>hi! I cannot update either! I have the same problem posted on top!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Akram_Mutaher'><span itemprop='name'>Akram_Mutaher</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-01T23:46:42Z' class='post-time'>
+                    May 1, 2021, 11:46pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-01T23:46:42Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>same issue with me</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/CA_B.C_Chechani'><span itemprop='name'>CA_B.C_Chechani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-02T01:40:14Z' class='post-time'>
+                    May 2, 2021,  1:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-02T01:40:14Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It’s a good feature and I experienced it as follows:</p>
+<p>Go to a record of any document type, there is a menu copy to the clipboard. then go to another site and in the awesome bar and paste it. the doctype should be same, the record will be created</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nextgen'><span itemprop='name'>nextgen</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-02T04:01:01Z' class='post-time'>
+                    May 2, 2021,  4:01am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-02T04:01:01Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We thank you and the team for your continuous efforts and for your wonderful work <img src="https://discuss.frappe.io/images/emoji/twitter/heart_eyes.png?v=12" title=":heart_eyes:" class="emoji" alt=":heart_eyes:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/moe01325'><span itemprop='name'>moe01325</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-02T07:20:32Z' class='post-time'>
+                    May 2, 2021,  7:20am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-02T07:20:32Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>thanks a lot for all the effort for providing updates and fixes! I really like it.</p>
+<p>One question: In the erpnext release notes, there are quite a lot of fixes that do not link to a checkin/merge?<br>
+how are you actually defining this information?<br>
+and how can I check if this is something that may have an impact/improvement? e.g. * fix: multicurrency</p>
+<p>thanks a lot!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/CA_B.C_Chechani'><span itemprop='name'>CA_B.C_Chechani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-02T08:25:09Z' class='post-time'>
+                    May 2, 2021,  8:25am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-02T08:30:55Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>When some features are added in ERPnext, a thorough cross-check points needs attention of frappe team.</p>
+<ol>
+<li>
+<p>ERP Next allows to auto name instead of series but one can not hide series filed as its mandatory condition is not being removed.</p>
+</li>
+<li>
+<p>Doctype layout is a fantastic feature but column name and section name filed requires labels mandatory, which means you can not create a layout at all. Even one can define fields ignoring column break and section break, doc does not open on route defined. As default route still need to be correct.</p>
+</li>
+<li>
+<p>Auto name for patient allowed but in the healthcare setting, you can not choose the auto name as the option is still not there. so no meaning in this feature.</p>
+</li>
+<li>
+<p>Custom Script has been renamed to client script but no check to take care for migration of existing custom script. One can not have smooth migration from beta to final version at least. though it should take care reverse migration too. Similar is the case for desk to workspace. No backward compatibility to migrate custom desk designed .</p>
+</li>
+<li>
+<p>Virtual doctype feature added, extremely powerful feature a test document is there to experience it but no data.json available to experience it.</p>
+</li>
+<li>
+<p>Customdoc has been added in patient history but bound them with healthcare domain though new custom, in general, will be designed in a different module so you can not add them in patient history.</p>
+</li>
+</ol>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/usmanalikhan'><span itemprop='name'>usmanalikhan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-02T10:48:19Z' class='post-time'>
+                    May 2, 2021, 10:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-02T10:48:19Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>When I updated, it deleted all the git stash and thereby I can not restore the customizations done. Thankfully i have a backup that i’ll restore it but this can be dangerous. Please be careful when updating.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/wale'><span itemprop='name'>wale</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-02T13:48:37Z' class='post-time'>
+                    May 2, 2021,  1:48pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-02T13:48:37Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/ca_b.c_chechani">@CA_B.C_Chechani</a></p>
+<p>Thanks for listing these out. Could you possibly create Github Issues for these as well ?</p>
+<p>Cheers</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/TurkerTunali'><span itemprop='name'>TurkerTunali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-02T14:40:16Z' class='post-time'>
+                    May 2, 2021,  2:40pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-02T14:40:16Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="CA_B.C_Chechani" data-post="17" data-topic="74858">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/ca_b.c_chechani/48/55107_2.png" class="avatar"> CA_B.C_Chechani:</div>
+<blockquote>
+<p>Doctype layout is a fantastic feature but column name and section name filed requires labels mandatory, which means you can not create a layout at all. Even one can define fields ignoring column break and section break, doc does not open on route defined. As default route still need to be correct.</p>
+</blockquote>
+</aside>
+<p>I belive that you can remove the labels after field is created.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_21' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/CA_B.C_Chechani'><span itemprop='name'>CA_B.C_Chechani</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/f/0/f0b7a40e549f72b06409e240d3f3387f6eda7d92.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-02T15:45:19Z' class='post-time'>
+                    May 2, 2021,  3:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-02T15:45:19Z'>
+              <span itemprop='position'>21</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thx for suggestion, Yes I could save doctype layout as suggested but on editing it does not allow to remove labels for column and section.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/0/f0b7a40e549f72b06409e240d3f3387f6eda7d92.png" data-download-href="https://discuss.frappe.io/uploads/default/f0b7a40e549f72b06409e240d3f3387f6eda7d92" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/f/0/f0b7a40e549f72b06409e240d3f3387f6eda7d92_2_690x388.png" alt="image" data-base62-sha1="ylu2zUCR3e5waRBqIL3ha6HsyJk" width="690" height="388" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/f/0/f0b7a40e549f72b06409e240d3f3387f6eda7d92_2_690x388.png, https://discuss.frappe.io/uploads/default/optimized/3X/f/0/f0b7a40e549f72b06409e240d3f3387f6eda7d92_2_1035x582.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/f/0/f0b7a40e549f72b06409e240d3f3387f6eda7d92_2_1380x776.png 2x" data-dominant-color="BCC3CC"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1920×1080 200 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_22' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/CA_B.C_Chechani'><span itemprop='name'>CA_B.C_Chechani</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/c/0/c00cbc2e6e22cf6d14dc95f62e24e9d0e2556223.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-05-02T16:09:28Z' class='post-time'>
+                    May 2, 2021,  4:09pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-05-02T16:09:28Z'>
+              <span itemprop='position'>22</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Now when we click new doctype layout, it opens at a path with a blank page like the below image</p>
+<p>It open s at following the path with not found page</p>
+<p><a href="https://online.sahajhospital.com/app/enquire/enquire" class="onebox" target="_blank" rel="noopener nofollow ugc">https://online.sahajhospital.com/app/enquire/enquire</a></p>
+<p>on removing one enquire like</p>
+<p><a href="https://online.sahajhospital.com/app/enquire" class="onebox" target="_blank" rel="noopener nofollow ugc">https://online.sahajhospital.com/app/enquire</a></p>
+<p>Open doctype layout, app path for doctype layout needs to be fixed too</p>
+<p><a href="https://online.sahajhospital.com/app/enquire" class="onebox" target="_blank" rel="noopener nofollow ugc">https://online.sahajhospital.com/app/enquire</a></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/c/0/c00cbc2e6e22cf6d14dc95f62e24e9d0e2556223.png" data-download-href="https://discuss.frappe.io/uploads/default/c00cbc2e6e22cf6d14dc95f62e24e9d0e2556223" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/c/0/c00cbc2e6e22cf6d14dc95f62e24e9d0e2556223_2_690x388.png" alt="image" data-base62-sha1="roWXsQmPACad1xWVzppuUmjE8IH" width="690" height="388" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/c/0/c00cbc2e6e22cf6d14dc95f62e24e9d0e2556223_2_690x388.png, https://discuss.frappe.io/uploads/default/optimized/3X/c/0/c00cbc2e6e22cf6d14dc95f62e24e9d0e2556223_2_1035x582.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/c/0/c00cbc2e6e22cf6d14dc95f62e24e9d0e2556223_2_1380x776.png 2x" data-dominant-color="E3E7EB"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1920×1080 134 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="/t/release-notes-erpnext-and-frappe-version-13-2-0/74858?page=2">next page →</a></b></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

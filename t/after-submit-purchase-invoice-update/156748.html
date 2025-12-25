@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>After Submit purchase invoice, Update - erpnext - Frappe Forum</title>
+    <meta name="description" content="I have a custom script in my app for purchase invoice which add incentive and do other things, but when trying to submit the doc, i’m getting update after submit, The Script Add a amount in a custom feild when update, 
+d&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/after-submit-purchase-invoice-update/156748" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;After Submit purchase invoice, Update&#39;" href="https://discuss.frappe.io/t/after-submit-purchase-invoice-update/156748.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/after-submit-purchase-invoice-update/156748" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/after-submit-purchase-invoice-update/156748" />
+<meta property="og:title" content="After Submit purchase invoice, Update" />
+<meta name="twitter:title" content="After Submit purchase invoice, Update" />
+<meta property="og:description" content="I have a custom script in my app for purchase invoice which add incentive and do other things, but when trying to submit the doc, i’m getting update after submit, The Script Add a amount in a custom feild when update,  def update_commission(doc, change):  new_total = (doc.custom_commison or 0) + change  frappe.db.set_value(      &quot;Purchase Invoice&quot;,      doc.name,      &quot;custom_commison&quot;,      new_total,      update_modified=False  )  why is it not working ? in my server script." />
+<meta name="twitter:description" content="I have a custom script in my app for purchase invoice which add incentive and do other things, but when trying to submit the doc, i’m getting update after submit, The Script Add a amount in a custom feild when update,  def update_commission(doc, change):  new_total = (doc.custom_commison or 0) + change  frappe.db.set_value(      &quot;Purchase Invoice&quot;,      doc.name,      &quot;custom_commison&quot;,      new_total,      update_modified=False  )  why is it not working ? in my server script." />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="custom_script" />
+<meta property="og:article:tag" content="customization" />
+<meta property="article:published_time" content="2025-11-12T12:09:57+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"After Submit purchase invoice, Update","mainEntity":{"@type":"Question","name":"After Submit purchase invoice, Update","text":"I have a custom script in my app for purchase invoice which add incentive and do other things, but when trying to submit the doc, i’m getting update after submit, The Script Add a amount in a custom feild when update,\n\ndef update_commission(doc, change):\n\nnew_total = (doc.custom_commison or 0) + cha&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-11-12T12:09:57.639Z","author":{"@type":"Person","name":"Abubakar_Falah","url":"https://discuss.frappe.io/u/Abubakar_Falah"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/after-submit-purchase-invoice-update/156748">After Submit purchase invoice, Update</a>
+    </h1>
+
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/custom_script' class='discourse-tag' rel="tag">custom_script</a>, 
+            <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag' rel="tag">customization</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='After Submit purchase invoice, Update'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/after-submit-purchase-invoice-update/156748'>
+      <meta itemprop='datePublished' content='2025-11-12T12:09:57Z'>
+        <meta itemprop='articleSection' content='Uncategorized'>
+      <meta itemprop='keywords' content='erpnext, custom_script, customization'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abubakar_Falah'><span itemprop='name'>Abubakar_Falah</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/after-submit-purchase-invoice-update/156748">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-11-12T12:09:57Z' class='post-time'>
+                    November 12, 2025, 12:09pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-12T12:09:57Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have a custom script in my app for purchase invoice which add incentive and do other things, but when trying to submit the doc, i’m getting update after submit, The Script Add a amount in a custom feild when update,</p>
+<p>def update_commission(doc, change):</p>
+<pre><code>new_total = (doc.custom_commison or 0) + change
+
+frappe.db.set_value(
+
+    "Purchase Invoice",
+
+    doc.name,
+
+    "custom_commison",
+
+    new_total,
+
+    update_modified=False
+
+)
+</code></pre>
+<p>why is it not working ? in my server script.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/PRaful_9898'><span itemprop='name'>PRaful_9898</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-13T04:29:17Z' class='post-time'>
+                    November 13, 2025,  4:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-13T04:29:17Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Actually, something is working or some value is being updated in a field (either in Python or JavaScript). Please check all your code in the Purchase Invoice and its related events as well. Its coming from your code.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nikitadattapawar06'><span itemprop='name'>nikitadattapawar06</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-13T05:39:25Z' class='post-time'>
+                    November 13, 2025,  5:39am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-13T05:39:25Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Have you marked “custom_commison” allow on submit in customization if you have to update the value after the document is submitted</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abubakar_Falah'><span itemprop='name'>Abubakar_Falah</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-13T12:12:14Z' class='post-time'>
+                    November 13, 2025, 12:12pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-14T07:14:47Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>the below code runs on the Purchase Invoice Submission.</p>
+<ol>
+<li>We generate 500rs incentive for each Pur Invoice for the Person namein the field custom_purchase_by- this is working fine.</li>
+<li>but after the creation of incentive, the current Pur Invoice Document changes to ‘<em><strong>Update’</strong></em> state from ‘<em><strong>Submit’</strong></em> State - Why this is happening as we are posting the data direclty in database using frappe.db.set_value</li>
+</ol>
+<blockquote>
+<p>import frappe</p>
+<p>from frappe import _</p>
+<p>from frappe.utils import getdate, nowdate, add_days</p>
+<p>import calendar</p>
+<p>frappe.utils.logger.set_log_level(“DEBUG”)</p>
+<p>logger = frappe.logger(“api”, allow_site=True, file_count=50)</p>
+<p>def on_submit_purchase_invoice(doc, method):</p>
+<pre><code>"""
+
+Create purchase Incentive when Purchase Invoice is submitted
+
+"""
+
+if doc.custom_docsfine_status == "Completed" and doc.custom_purchase_by:
+
+    if not frappe.db.exists("Purchase Incentive", {"purchase_invoice": doc.name}):
+
+        incentive = frappe.new_doc("Purchase Incentive")
+
+        incentive.purchase_user = doc.custom_purchase_by
+
+        incentive.purchase_invoice = doc.name
+
+        incentive.amount = 500
+
+        incentive.insert() 
+
+
+
+        \# Update submitted document field
+
+        frappe.db.set_value(
+
+            "Purchase Invoice",
+
+            doc.name,
+
+            "custom_commison",
+
+            (doc.custom_commison or 0) + (incentive.amount or 0),
+
+        )
+
+        frappe.msgprint(f"Purchase Incentive {incentive.name} created for {doc.custom_purchase_by} with amount {incentive.amount}.")
+</code></pre>
+</blockquote>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abubakar_Falah'><span itemprop='name'>Abubakar_Falah</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-13T12:14:25Z' class='post-time'>
+                    November 13, 2025, 12:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-13T12:14:25Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes i marked it Allow on submit</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abubakar_Falah'><span itemprop='name'>Abubakar_Falah</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-14T07:15:36Z' class='post-time'>
+                    November 14, 2025,  7:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-14T07:15:36Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Pls check my comments and code, all support will be highly appreciated.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Mohammadali'><span itemprop='name'>Mohammadali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-17T12:55:59Z' class='post-time'>
+                    November 17, 2025, 12:55pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-17T12:55:59Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/abubakar_falah">@Abubakar_Falah</a></p>
+<p>I can suggest two possible solutions that may work:</p>
+<ol>
+<li>
+<p><strong>Enable the “Allow Submit” option</strong> for that field.</p>
+</li>
+<li>
+<p><strong>Use <code>frappe.db.commit()</code></strong> after performing the necessary operations.</p>
+</li>
+</ol>
+<p>Thank You!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

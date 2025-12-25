@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[Guide] Installing Press and get it up and running - Part 1 - Frappe Cloud - Frappe Forum</title>
+    <meta name="description" content="I have come to see many users are willing to get Press running in their own cloud and be able to run their own Frappe Cloud. 
+I am writing this tutorial to help any one install and get Frappe Press up and running on thei&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/guide-installing-press-and-get-it-up-and-running-part-1/152576" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[Guide] Installing Press and get it up and running - Part 1&#39;" href="https://discuss.frappe.io/t/guide-installing-press-and-get-it-up-and-running-part-1/152576.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/0/e/0e85343230a9dc9fa315d0fcaef5af8de8892dbe_2_1024x209.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/0/e/0e85343230a9dc9fa315d0fcaef5af8de8892dbe_2_1024x209.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/guide-installing-press-and-get-it-up-and-running-part-1/152576" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/guide-installing-press-and-get-it-up-and-running-part-1/152576" />
+<meta property="og:title" content="[Guide] Installing Press and get it up and running - Part 1" />
+<meta name="twitter:title" content="[Guide] Installing Press and get it up and running - Part 1" />
+<meta property="og:description" content="I have come to see many users are willing to get Press running in their own cloud and be able to run their own Frappe Cloud.  I am writing this tutorial to help any one install and get Frappe Press up and running on their own servers.   Disclaimer: These steps worked for me but it could vary for you. I suggest you take expert advise for any major issues. I am in no way associated with Frappe Team. So, these steps are unofficial but based on official documents released by Frappe.    Edit 1: Also ..." />
+<meta name="twitter:description" content="I have come to see many users are willing to get Press running in their own cloud and be able to run their own Frappe Cloud.  I am writing this tutorial to help any one install and get Frappe Press up and running on their own servers.   Disclaimer: These steps worked for me but it could vary for you. I suggest you take expert advise for any major issues. I am in no way associated with Frappe Team. So, these steps are unofficial but based on official documents released by Frappe.    Edit 1: Also ..." />
+<meta property="og:article:section" content="Frappe Cloud" />
+<meta property="og:article:section:color" content="0088CC" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="12 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="22 ❤" />
+<meta property="article:published_time" content="2025-08-24T11:46:01+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="/t/guide-installing-press-and-get-it-up-and-running-part-1/152576?page=2">
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"[Guide] Installing Press and get it up and running - Part 1","mainEntity":{"@type":"Question","name":"[Guide] Installing Press and get it up and running - Part 1","text":"I have come to see many users are willing to get Press running in their own cloud and be able to run their own Frappe Cloud.\n\nI am writing this tutorial to help any one install and get Frappe Press up and running on their own servers.\n\nDisclaimer: These steps worked for me but it could vary for you&hellip;","upvoteCount":16,"answerCount":0,"datePublished":"2025-08-24T11:46:01.489Z","author":{"@type":"Person","name":"anupd","url":"https://discuss.frappe.io/u/anupd"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/guide-installing-press-and-get-it-up-and-running-part-1/152576">[Guide] Installing Press and get it up and running - Part 1</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/frappe-cloud/77" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0088CC'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Cloud</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[Guide] Installing Press and get it up and running - Part 1'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/guide-installing-press-and-get-it-up-and-running-part-1/152576'>
+      <meta itemprop='datePublished' content='2025-08-24T11:46:01Z'>
+        <meta itemprop='articleSection' content='Frappe Cloud'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/anupd'><span itemprop='name'>anupd</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/guide-installing-press-and-get-it-up-and-running-part-1/152576">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/0/e/0e85343230a9dc9fa315d0fcaef5af8de8892dbe.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-08-24T11:46:01Z' class='post-time'>
+                    August 24, 2025, 11:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-25T08:03:45Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have come to see many users are willing to get Press running in their own cloud and be able to run their own Frappe Cloud.</p>
+<p>I am writing this tutorial to help any one install and get Frappe Press up and running on their own servers.</p>
+<blockquote>
+<p>Disclaimer: These steps worked for me but it could vary for you. I suggest you take expert advise for any major issues. I am in no way associated with Frappe Team. So, these steps are unofficial but based on official documents released by Frappe.</p>
+</blockquote>
+<blockquote>
+<p>Edit 1: Also note that this will work for Press before the below commit on evelop branch of frappe press repo. I have noticed that the way servers are created in newer versions have changed abit.<br>
+Commit Hash: 7c2069324ea20c40fd54e2d37a42e08ec3179a27 (Aug. 12, 2025)</p>
+</blockquote>
+<p>In case you want to follow the official document, here’s the link: <a href="https://frappecloud.com/docs/local-fc-setup" class="inline-onebox" rel="noopener nofollow ugc">Local Development Environment Setup</a>. Also, here’s another resource, a video by Arun Mathai: <a href="https://www.youtube.com/watch?v=TjrQsHHeRqk&amp;ab_channel=ArunMathai" rel="noopener nofollow ugc">https://www.youtube.com/watch?v=TjrQsHHeRqk&amp;ab_channel=ArunMathai</a>. Although very detailed, this video and the frappe cloud doc assumes that you already know what you are doing and have already setup basics. It is not always the case.</p>
+<p>So, I attempted to write everything down to help anyone willing to install Frappe Cloud with all detailed step by step breakdown.</p>
+<p>Keep in mind, this is going to be hectic.</p>
+<p>Lets begin:</p>
+<h1><a name="p-478742-lets-assume-these-1" class="anchor" href="#p-478742-lets-assume-these-1"></a>Lets assume these:</h1>
+<ol>
+<li>Your public website/base url for this tutorial is <code>example.com</code>. Your users when they enter <code>example.com</code> on the browser, they will see something like in <code>frappecloud.com</code>.</li>
+<li>Press UI will be accessible to users at <code>example.com/dashboard</code> after they signup in your <a href="http://example.com" rel="noopener nofollow ugc">example.com</a>.</li>
+<li>Users will get their sites accessible at <code>subdomain1.example.com</code>, <code>subdomain2.example.com</code>, <code>subdomain3.example.com</code> and so on.</li>
+<li>You are using AWS EC2 instances for all servers.</li>
+</ol>
+<blockquote>
+<p>FYI: You will need 4 EC2 instances (2vCPU and 4GB RAM with each 40GB disk space should work for testing purposes). We will cover creation of these instances later in this guide.</p>
+</blockquote>
+<blockquote>
+<p><strong>Prerequisites</strong>:</p>
+<ol>
+<li>AWS account with root user.</li>
+<li>AWS IAM User with full access to ECR.</li>
+<li>Access to AWS Route 53.</li>
+</ol>
+</blockquote>
+<p>==========================================</p>
+<h1><a name="p-478742-preparation-2" class="anchor" href="#p-478742-preparation-2"></a><strong>Preparation</strong>:</h1>
+<p><strong>A. Create an IAM user in aws. Lets name the IAM user: <code>press-user</code>. And provide a permission/policy <code>AmazonElasticContainerRegistryPublicFullAccess</code>.</strong></p>
+<p>If you don’t know how to create IAM user:</p>
+<ol>
+<li>Login to your AWS account with root user.</li>
+<li>Search for Users and select Users.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/e/0e85343230a9dc9fa315d0fcaef5af8de8892dbe.png" data-download-href="https://discuss.frappe.io/uploads/default/0e85343230a9dc9fa315d0fcaef5af8de8892dbe" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/e/0e85343230a9dc9fa315d0fcaef5af8de8892dbe_2_690x141.png" alt="image" data-base62-sha1="24s4v65QlHfIMAOzWlbXnzlVE74" width="690" height="141" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/e/0e85343230a9dc9fa315d0fcaef5af8de8892dbe_2_690x141.png, https://discuss.frappe.io/uploads/default/optimized/3X/0/e/0e85343230a9dc9fa315d0fcaef5af8de8892dbe_2_1035x211.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/0/e/0e85343230a9dc9fa315d0fcaef5af8de8892dbe_2_1380x282.png 2x" data-dominant-color="2D3640"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2671×547 41.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></li>
+<li>Click on <code>Create User</code>.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/e/c/ecb5e9466e7a46eb5beb17e5dd3eed8dab93c22c.png" data-download-href="https://discuss.frappe.io/uploads/default/ecb5e9466e7a46eb5beb17e5dd3eed8dab93c22c" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/e/c/ecb5e9466e7a46eb5beb17e5dd3eed8dab93c22c_2_690x112.png" alt="image" data-base62-sha1="xM2qpHsbtA2a6MaWb2ziX5YVPdy" width="690" height="112" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/e/c/ecb5e9466e7a46eb5beb17e5dd3eed8dab93c22c_2_690x112.png, https://discuss.frappe.io/uploads/default/optimized/3X/e/c/ecb5e9466e7a46eb5beb17e5dd3eed8dab93c22c_2_1035x168.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/e/c/ecb5e9466e7a46eb5beb17e5dd3eed8dab93c22c_2_1380x224.png 2x" data-dominant-color="D8D9DA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">3691×600 173 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></li>
+<li>Name it <code>press-user</code>,<br>
+check <code>Provide user access to AWS Management Console</code>,<br>
+select <code>I want to create and IAM user</code>,<br>
+select <code>Create password</code> and create your password for the user <code>press-user</code> that you are currently creating and<br>
+check off <code>Users must create and new password at next sign-in</code><br>
+then select Next.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/d/0d27843652d64e4d59f0019c2c725af8690a45af.png" data-download-href="https://discuss.frappe.io/uploads/default/0d27843652d64e4d59f0019c2c725af8690a45af" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/d/0d27843652d64e4d59f0019c2c725af8690a45af_2_690x379.png" alt="image" data-base62-sha1="1SmRZ4PIytfLlxfiBXhyZNlO7fh" width="690" height="379" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/d/0d27843652d64e4d59f0019c2c725af8690a45af_2_690x379.png, https://discuss.frappe.io/uploads/default/optimized/3X/0/d/0d27843652d64e4d59f0019c2c725af8690a45af_2_1035x568.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/0/d/0d27843652d64e4d59f0019c2c725af8690a45af_2_1380x758.png 2x" data-dominant-color="F2F7FA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1383×760 69.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></li>
+<li>In the next page, select<code>Attach policies directly</code>.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/b/db28054a48792ee7026b72ee5ba69ff9280b6e66.png" data-download-href="https://discuss.frappe.io/uploads/default/db28054a48792ee7026b72ee5ba69ff9280b6e66" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/b/db28054a48792ee7026b72ee5ba69ff9280b6e66_2_690x156.png" alt="image" data-base62-sha1="vgKjdhwPzCdbJHFcW4u0UFt0YjI" width="690" height="156" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/b/db28054a48792ee7026b72ee5ba69ff9280b6e66_2_690x156.png, https://discuss.frappe.io/uploads/default/optimized/3X/d/b/db28054a48792ee7026b72ee5ba69ff9280b6e66_2_1035x234.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/d/b/db28054a48792ee7026b72ee5ba69ff9280b6e66_2_1380x312.png 2x" data-dominant-color="F3F5F7"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2917×660 90.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></li>
+<li>Then just below that, type this in search: <code>AmazonElasticContainerRegistryPublicFullAccess</code>. Click on little plus icon and select Next.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/6/76141b27c0cbefeadb4c8dee4b3d51adef8253dd.png" data-download-href="https://discuss.frappe.io/uploads/default/76141b27c0cbefeadb4c8dee4b3d51adef8253dd" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/6/76141b27c0cbefeadb4c8dee4b3d51adef8253dd_2_690x303.png" alt="image" data-base62-sha1="gQzpX1voYtCtRF9RsYXSXrbP69v" width="690" height="303" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/6/76141b27c0cbefeadb4c8dee4b3d51adef8253dd_2_690x303.png, https://discuss.frappe.io/uploads/default/optimized/3X/7/6/76141b27c0cbefeadb4c8dee4b3d51adef8253dd_2_1035x454.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/7/6/76141b27c0cbefeadb4c8dee4b3d51adef8253dd_2_1380x606.png 2x" data-dominant-color="F6F7F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1549×682 62.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></li>
+<li>Click on <code>Create User</code>. And you are done.</li>
+</ol>
+<p><strong>B. Create Access key for programmatic access.</strong><br>
+Steps:</p>
+<ol>
+<li>Click on newly created IAM User and go to <code>security credentials</code>.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/8/6/867f68674363ea7e68fac1df8166c5bdfaa6d637.png" data-download-href="https://discuss.frappe.io/uploads/default/867f68674363ea7e68fac1df8166c5bdfaa6d637" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/8/6/867f68674363ea7e68fac1df8166c5bdfaa6d637_2_690x147.png" alt="image" data-base62-sha1="jbOWXPj7KrJkQWkqPfcwPVdxBOv" width="690" height="147" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/8/6/867f68674363ea7e68fac1df8166c5bdfaa6d637_2_690x147.png, https://discuss.frappe.io/uploads/default/optimized/3X/8/6/867f68674363ea7e68fac1df8166c5bdfaa6d637_2_1035x220.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/8/6/867f68674363ea7e68fac1df8166c5bdfaa6d637_2_1380x294.png 2x" data-dominant-color="F6F6F6"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2951×632 62.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/4/24f4cb4cc3e96ba8202ca5f42628545112fa5b3b.png" data-download-href="https://discuss.frappe.io/uploads/default/24f4cb4cc3e96ba8202ca5f42628545112fa5b3b" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/4/24f4cb4cc3e96ba8202ca5f42628545112fa5b3b_2_690x340.png" alt="image" data-base62-sha1="5gVENcSTDNXQiKOAUEqq13iXqMb" width="690" height="340" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/4/24f4cb4cc3e96ba8202ca5f42628545112fa5b3b_2_690x340.png, https://discuss.frappe.io/uploads/default/optimized/3X/2/4/24f4cb4cc3e96ba8202ca5f42628545112fa5b3b_2_1035x510.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/2/4/24f4cb4cc3e96ba8202ca5f42628545112fa5b3b_2_1380x680.png 2x" data-dominant-color="F6F6F7"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2915×1440 305 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></li>
+<li>Scroll down to Access Keys and Select <code>Create access key</code>.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/6/96d78f431990007951d6c656a9d232f31584048f.png" data-download-href="https://discuss.frappe.io/uploads/default/96d78f431990007951d6c656a9d232f31584048f" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/9/6/96d78f431990007951d6c656a9d232f31584048f_2_690x75.png" alt="image" data-base62-sha1="lwpscHJdRDHKQZO7WWGW9BUCc5V" width="690" height="75" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/9/6/96d78f431990007951d6c656a9d232f31584048f_2_690x75.png, https://discuss.frappe.io/uploads/default/optimized/3X/9/6/96d78f431990007951d6c656a9d232f31584048f_2_1035x112.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/9/6/96d78f431990007951d6c656a9d232f31584048f_2_1380x150.png 2x" data-dominant-color="F5F6F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2913×317 40.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></li>
+<li>Select as shown and click on Next.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/e/febe10d4ae1f4c8c09dbf0e57fecb1ce7675f51b.png" data-download-href="https://discuss.frappe.io/uploads/default/febe10d4ae1f4c8c09dbf0e57fecb1ce7675f51b" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/f/e/febe10d4ae1f4c8c09dbf0e57fecb1ce7675f51b_2_690x454.png" alt="image" data-base62-sha1="AlyuteiwWEDoIKYnDO9gZvYdXPt" width="690" height="454" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/f/e/febe10d4ae1f4c8c09dbf0e57fecb1ce7675f51b_2_690x454.png, https://discuss.frappe.io/uploads/default/optimized/3X/f/e/febe10d4ae1f4c8c09dbf0e57fecb1ce7675f51b_2_1035x681.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/f/e/febe10d4ae1f4c8c09dbf0e57fecb1ce7675f51b_2_1380x908.png 2x" data-dominant-color="F2F4F5"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2444×1609 313 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+Note: If your Press server (base url) is running from other service providers you have to select the option: <code>Application Running outside AWS</code></li>
+<li>Provide a description for future reference and click on Create access key.</li>
+<li>Access key and secret will be created. Make sure you download the .csv and save it somewhere safe. You can’t access it later. We will need these later. Make sure to recall it later when I say something like “IAM user access key and secret”.</li>
+</ol>
+<p><strong>C. Create EC2 instances.</strong></p>
+<p>Here we will create 4 EC2 instances - 1 for installing Press, and 3 for <code>n, m and f servers</code> as <a href="https://frappecloud.com/docs/local-fc-setup" rel="noopener nofollow ugc">described here</a>.</p>
+<p>Steps:</p>
+<ol>
+<li>
+<p>Go to AWS EC2 and click on launch instances.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/b/1bcb95b9ce9530ddeb775198d1c971aeada91dbb.png" data-download-href="https://discuss.frappe.io/uploads/default/1bcb95b9ce9530ddeb775198d1c971aeada91dbb" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/1/b/1bcb95b9ce9530ddeb775198d1c971aeada91dbb_2_690x142.png" alt="image" data-base62-sha1="3XT4m6yo1cNAYytTjLQfi3dQLpx" width="690" height="142" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/1/b/1bcb95b9ce9530ddeb775198d1c971aeada91dbb_2_690x142.png, https://discuss.frappe.io/uploads/default/optimized/3X/1/b/1bcb95b9ce9530ddeb775198d1c971aeada91dbb_2_1035x213.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/1/b/1bcb95b9ce9530ddeb775198d1c971aeada91dbb_2_1380x284.png 2x" data-dominant-color="F4F4F5"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">3048×629 71.1 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+</li>
+<li>
+<p>Name it <code>press</code>, select <code>Ubuntu</code> in OS images section and select Ubuntu 22.04 LTS. Click on <code>confirm changes</code> if prompted.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/7/f7df6f9195db4dfc7afc6dc23779f5225f3233a0.png" data-download-href="https://discuss.frappe.io/uploads/default/f7df6f9195db4dfc7afc6dc23779f5225f3233a0" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/f/7/f7df6f9195db4dfc7afc6dc23779f5225f3233a0_2_690x308.png" alt="image" data-base62-sha1="zmMDWpnLOUEL5HLPzf4Vw6Ieo92" width="690" height="308" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/f/7/f7df6f9195db4dfc7afc6dc23779f5225f3233a0_2_690x308.png, https://discuss.frappe.io/uploads/default/optimized/3X/f/7/f7df6f9195db4dfc7afc6dc23779f5225f3233a0_2_1035x462.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/f/7/f7df6f9195db4dfc7afc6dc23779f5225f3233a0_2_1380x616.png 2x" data-dominant-color="F4F5F6"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2553×1140 324 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+</li>
+<li>
+<p>Scroll further down and select <code>t2.medium</code> or <code>t3.medium</code>. You can select others as required.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/6/763c54842393898fdcd6072119330bb65ad3e209.png" data-download-href="https://discuss.frappe.io/uploads/default/763c54842393898fdcd6072119330bb65ad3e209" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/6/763c54842393898fdcd6072119330bb65ad3e209_2_690x168.png" alt="image" data-base62-sha1="gRXB5EqzHL2YpAETIDM0y09sUJj" width="690" height="168" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/6/763c54842393898fdcd6072119330bb65ad3e209_2_690x168.png, https://discuss.frappe.io/uploads/default/optimized/3X/7/6/763c54842393898fdcd6072119330bb65ad3e209_2_1035x252.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/7/6/763c54842393898fdcd6072119330bb65ad3e209_2_1380x336.png 2x" data-dominant-color="F6F8F9"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2523×615 77.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+</li>
+<li>
+<p>Under key-pair section, click on create new key pair.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/a/a/aa9118931a98accc88b99842e205b56a0999f2bf.png" data-download-href="https://discuss.frappe.io/uploads/default/aa9118931a98accc88b99842e205b56a0999f2bf" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/a/a/aa9118931a98accc88b99842e205b56a0999f2bf_2_690x120.png" alt="image" data-base62-sha1="okU2h7hVJuNOGX9OmEysX2cJyKX" width="690" height="120" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/a/a/aa9118931a98accc88b99842e205b56a0999f2bf_2_690x120.png, https://discuss.frappe.io/uploads/default/optimized/3X/a/a/aa9118931a98accc88b99842e205b56a0999f2bf_2_1035x180.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/a/a/aa9118931a98accc88b99842e205b56a0999f2bf_2_1380x240.png 2x" data-dominant-color="F8F8F9"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2490×436 37.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+Name it <code>key_pair_for_press</code> and settings as shown below and Click on <code>Create key pair</code>. Key pairs are required for ssh access to servers. A file “key_pair_for_press.pem” will automatically be downloaded that contains private key for the server you are creating. Make sure you keep it safe.</p>
+</li>
+<li>
+<p>Scroll further down and select as shown:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/f/7f9a3cd6343e07711e362dc2982eba5f6ce7c6c4.png" data-download-href="https://discuss.frappe.io/uploads/default/7f9a3cd6343e07711e362dc2982eba5f6ce7c6c4" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/f/7f9a3cd6343e07711e362dc2982eba5f6ce7c6c4_2_690x395.png" alt="image" data-base62-sha1="icP5Ff1FPlnE9Q8g6AMGzmZKJnu" width="690" height="395" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/f/7f9a3cd6343e07711e362dc2982eba5f6ce7c6c4_2_690x395.png, https://discuss.frappe.io/uploads/default/optimized/3X/7/f/7f9a3cd6343e07711e362dc2982eba5f6ce7c6c4_2_1035x592.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/7/f/7f9a3cd6343e07711e362dc2982eba5f6ce7c6c4_2_1380x790.png 2x" data-dominant-color="F7F8F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2432×1395 280 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+</li>
+<li>
+<p>Under storage, select required storage.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/6/d/6d8caf7930c71e7fca3694a2851e5a6016adc5bb.png" data-download-href="https://discuss.frappe.io/uploads/default/6d8caf7930c71e7fca3694a2851e5a6016adc5bb" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/6/d/6d8caf7930c71e7fca3694a2851e5a6016adc5bb_2_690x166.png" alt="image" data-base62-sha1="fD7sBOy1jawfu5q5CkMhSHowh9F" width="690" height="166" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/6/d/6d8caf7930c71e7fca3694a2851e5a6016adc5bb_2_690x166.png, https://discuss.frappe.io/uploads/default/optimized/3X/6/d/6d8caf7930c71e7fca3694a2851e5a6016adc5bb_2_1035x249.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/6/d/6d8caf7930c71e7fca3694a2851e5a6016adc5bb_2_1380x332.png 2x" data-dominant-color="F2F6FA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2505×604 45.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+</li>
+<li>
+<p>Leave others as it is.</p>
+</li>
+<li>
+<p>On the right side, in Summary section, select <code>4</code> in <code>number of instances</code>.</p>
+</li>
+<li>
+<p>And then finally click on <code>Launch Instance</code>.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/f/df9a9883944c42c57d5c822e55ec137d1907a5dd.png" data-download-href="https://discuss.frappe.io/uploads/default/df9a9883944c42c57d5c822e55ec137d1907a5dd" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/f/df9a9883944c42c57d5c822e55ec137d1907a5dd_2_434x500.png" alt="image" data-base62-sha1="vU5H8D4XBmPISzXgluNQcRqZh25" width="434" height="500" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/f/df9a9883944c42c57d5c822e55ec137d1907a5dd_2_434x500.png, https://discuss.frappe.io/uploads/default/optimized/3X/d/f/df9a9883944c42c57d5c822e55ec137d1907a5dd_2_651x750.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/d/f/df9a9883944c42c57d5c822e55ec137d1907a5dd_2_868x1000.png 2x" data-dominant-color="F5F6F7"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1179×1357 69.1 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+</li>
+</ol>
+<p>Now wait until instances are created.</p>
+<p>After instances are launched you will see something like this:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/6/c/6c3ccc40cfe98b3a1e46cf56091e8f3cd539a454.png" data-download-href="https://discuss.frappe.io/uploads/default/6c3ccc40cfe98b3a1e46cf56091e8f3cd539a454" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/6/c/6c3ccc40cfe98b3a1e46cf56091e8f3cd539a454_2_690x198.png" alt="image" data-base62-sha1="frvPbJ37mivIMLakW0CQnmXz7zC" width="690" height="198" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/6/c/6c3ccc40cfe98b3a1e46cf56091e8f3cd539a454_2_690x198.png, https://discuss.frappe.io/uploads/default/optimized/3X/6/c/6c3ccc40cfe98b3a1e46cf56091e8f3cd539a454_2_1035x297.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/6/c/6c3ccc40cfe98b3a1e46cf56091e8f3cd539a454_2_1380x396.png 2x" data-dominant-color="F0F2F6"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2241×646 95.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Go ahead and rename 3 of them to n1, m1 and f1. Leave the last one as it is.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/b/fb3aa543862de35903130f12a27cebfea5980eb7.png" data-download-href="https://discuss.frappe.io/uploads/default/fb3aa543862de35903130f12a27cebfea5980eb7" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/f/b/fb3aa543862de35903130f12a27cebfea5980eb7_2_690x263.png" alt="image" data-base62-sha1="zQtuxCSQC41O23oXcSP7ncX5lBB" width="690" height="263" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/f/b/fb3aa543862de35903130f12a27cebfea5980eb7_2_690x263.png, https://discuss.frappe.io/uploads/default/optimized/3X/f/b/fb3aa543862de35903130f12a27cebfea5980eb7_2_1035x394.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/f/b/fb3aa543862de35903130f12a27cebfea5980eb7_2_1380x526.png 2x" data-dominant-color="EBF0F4"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1860×710 88 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Then, go and connect to each instances and set their timezone to your preferred timezone.</p>
+<pre><code class="lang-auto">timedatectl set-timezone "Asia/Kathmandu"
+</code></pre>
+<p>If you forget it later, there might be issues with date and time mismatch. I assume you already know how to connect to instances and you know basic terminal commands.</p>
+<p>Also, if you are using AWS, then all servers must already have a default user <code>ubuntu</code> already created.</p>
+<p>For uniformity, lets create user: <code>press</code> in press server, by running these commands:<br>
+This user will act as frappe user for us. Before that set password for user <code>ubuntu</code>.</p>
+<pre><code class="lang-auto">sudo passwd ubuntu #not set password for user ubuntu
+sudo adduser press
+sudo usermod -aG sudo press
+su press
+cd /home/press/
+</code></pre>
+<p>[ That step is optional. You can use user <code>ubuntu</code> instead of <code>press</code>. I prefer press, to know what I am working on.]<br>
+For other servers - n,m and f, lets use the default user <code>ubuntu</code>. We will need this later while setting up ssh access.</p>
+<p><strong>D. Setting up AWS Route 53</strong><br>
+I hope you already know the concepts of Nameserver and A records.</p>
+<ol>
+<li>
+<p>Goto AWS Route 53.</p>
+</li>
+<li>
+<p>Create a hosted zone with your domain.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/c/0c224e7f350174a506e3c03e69beca74f351cd2a.png" data-download-href="https://discuss.frappe.io/uploads/default/0c224e7f350174a506e3c03e69beca74f351cd2a" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/c/0c224e7f350174a506e3c03e69beca74f351cd2a_2_689x358.png" alt="image" data-base62-sha1="1JlekXgbNAtqzOtLCCAwCFOqOUy" width="689" height="358" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/c/0c224e7f350174a506e3c03e69beca74f351cd2a_2_689x358.png, https://discuss.frappe.io/uploads/default/optimized/3X/0/c/0c224e7f350174a506e3c03e69beca74f351cd2a_2_1033x537.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/0/c/0c224e7f350174a506e3c03e69beca74f351cd2a_2_1378x716.png 2x" data-dominant-color="F7F8FA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2551×1327 249 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+</li>
+<li>
+<p>Create the following records: But before that, make sure to get elastic IP from AWS and assign to respective servers. The Elastic IPs make sure your IP addresses don’t change on reboot/stop-start events.</p>
+</li>
+</ol>
+<blockquote>
+<p><a href="http://example.com" rel="noopener nofollow ugc">example.com</a> : IP of press server (from EC2 instance)<br>
+<a href="http://n1.example.com" rel="noopener nofollow ugc">n1.example.com</a> : IP of n1 server<br>
+*.example.com: IP of n1 server (be careful to use n1 server’s ip, not press server)<br>
+<a href="http://m1.example.com" rel="noopener nofollow ugc">m1.example.com</a> : IP of m1 server<br>
+<a href="http://f1.example.com" rel="noopener nofollow ugc">f1.example.com</a> : IP of f1 server<br>
+See this image from EC2 for reference. Use public IPs not Private IPs.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/3/934d3535864727f26bde68dcb21da90658b6246a.png" data-download-href="https://discuss.frappe.io/uploads/default/934d3535864727f26bde68dcb21da90658b6246a" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/9/3/934d3535864727f26bde68dcb21da90658b6246a_2_690x120.png" alt="image" data-base62-sha1="l15BwpRK7UkTseemeLkrkqKKrCq" width="690" height="120" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/9/3/934d3535864727f26bde68dcb21da90658b6246a_2_690x120.png, https://discuss.frappe.io/uploads/default/optimized/3X/9/3/934d3535864727f26bde68dcb21da90658b6246a_2_1035x180.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/9/3/934d3535864727f26bde68dcb21da90658b6246a_2_1380x240.png 2x" data-dominant-color="E8EBED"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2993×523 143 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+</blockquote>
+<h1><a name="p-478742-setting-up-ssh-access-to-all-servers-most-crucial-3" class="anchor" href="#p-478742-setting-up-ssh-access-to-all-servers-most-crucial-3"></a>Setting up ssh access to all servers (most crucial)</h1>
+<p>You need to be able to ssh into press server from your local pc to run operations in press server. You can use AWS’s connect feature (as shown in image),<br>
+<img src="https://discuss.frappe.io/uploads/default/optimized/3X/e/4/e47257f79c6439727fe68b4c76d3130ea1b7738e_2_690x29.png" alt="image" data-base62-sha1="wAVQhOaBXv4nCoV3OeUImgpdlYa" width="690" height="29" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/e/4/e47257f79c6439727fe68b4c76d3130ea1b7738e_2_690x29.png, https://discuss.frappe.io/uploads/default/optimized/3X/e/4/e47257f79c6439727fe68b4c76d3130ea1b7738e_2_1035x43.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/e/4/e47257f79c6439727fe68b4c76d3130ea1b7738e_2_1380x58.png 2x" data-dominant-color="F2F4F7"><br>
+but I prefer WSL in windows.</p>
+<p>Lets first setup ssh access to press server from WSL. If you remember from previous step, a file <code>key_pair_for_press.pem</code> has been downloaded into your PC (assuming it is windows PC, the file is saved to<br>
+<code>C:\Users\your_user\Downloads\key_pair_for_press.pem</code></p>
+<p>Step1: Open Ubuntu terminal.</p>
+<p>Step2:</p>
+<blockquote>
+<p>Now you need to copy that downloaded file (which contains your press servers’ private keys) to your ubuntu wsl (local file system).</p>
+</blockquote>
+<p>For that,</p>
+<pre><code class="lang-auto"># Create a directory for your keys if you don't have one
+mkdir -p ~/.ssh
+
+# Copy the .pem file from your Windows drive to your WSL home .ssh directory
+cp /mnt/c/Users/your_user/Downloads/key_pair_for_press.pem ~/.ssh/
+
+# Now, change permissions on the copy in your WSL home directory
+chmod 400 ~/.ssh/key_pair_for_press.pem
+
+# Verify the permissions (should now show -r--------)
+ls -l ~/.ssh/key_pair_for_press.pem
+</code></pre>
+<p>You should now be able to ssh into your press server with this command:</p>
+<blockquote>
+<p>ssh -i ~/.ssh/key_pair_for_press.pem ubuntu@your_press_public_ip_from_aws</p>
+</blockquote>
+<p>But we need to access press user also, so lets copy the keys. Run these from your wsl:</p>
+<pre><code class="lang-auto">ssh -i ~/.ssh/key_pair_for_press.pem ubuntu@example.com
+su press #enter your password when prompted
+cd
+mkdir .ssh
+chmod 700 ~/.ssh
+sudo cp /home/ubuntu/.ssh/authorized_keys /home/press/.ssh/authorized_keys
+sudo chmod 600 ~/.ssh/authorized_keys
+sudo chown press:press ~/.ssh/authorized_keys
+</code></pre>
+<p>Now you must be able to ssh into press user of press server by:</p>
+<pre><code class="lang-auto">ssh -i ~/.ssh/key_pair_for_press.pem press@example.com
+</code></pre>
+<p>Lets setup so that you don’t have to specify private key path and your ip all the time.<br>
+In your wsl, run</p>
+<pre><code class="lang-auto">sudo nano ~/.ssh/config
+</code></pre>
+<p>Add these lines (change as per your server’s ip):</p>
+<pre><code class="lang-auto">Host press
+    HostName example.com
+    User press
+    IdentityFile ~/.ssh/key_pair_for_press.pem
+
+</code></pre>
+<p>Now you should be able to ssh into your press server just by:</p>
+<blockquote>
+<p>ssh press</p>
+</blockquote>
+<h1><a name="p-478742-following-up-until-now-great-4" class="anchor" href="#p-478742-following-up-until-now-great-4"></a>Following up until now?<br>
+Great</h1>
+<p>Now that you can ssh into your press server from your local pc, we will install Frappe and Press app in that server.</p>
+<p>Connect to the <code>press</code> instance (by <code>ssh press</code>) and  Install Frappe and then install Press app in the <code>press</code> server.</p>
+<p>If you don’t know how to install Press, <a href="https://discuss.frappe.io/t/guide-how-to-install-erpnext-v15-on-linux-ubuntu-step-by-step-instructions/111706">follow this guide.</a> Just make sure <strong>NOT</strong> to install ERPNext/HRMS and other apps.</p>
+<p>Replace the commands from that guide by these in:<br>
+Step 5.5:</p>
+<pre><code class="lang-auto">bench new-site example.com # use your domain here
+</code></pre>
+<p>Step 6:</p>
+<pre><code class="lang-auto">bench get-app press
+bench --site example.com install-app press
+</code></pre>
+<p>All other steps are as they are explained in that guide.</p>
+<p>I hope by now, you have installed press and can see press console in <a href="http://example.com" rel="noopener nofollow ugc">example.com</a>.<br>
+If you can’t access your press site, thats because you have not set the A records for <a href="http://example.com" rel="noopener nofollow ugc">example.com</a> in AWS Route 53. I hope you can do that on your own.</p>
+<h1><a name="p-478742-lets-move-on-now-5" class="anchor" href="#p-478742-lets-move-on-now-5"></a>Lets move on now.</h1>
+<p>Now that you can access press at <a href="http://example.com" rel="noopener nofollow ugc">example.com</a>, lets setup other servers - n,m,f first.</p>
+<p>Its complicated , so bear with me here.</p>
+<p>For press to run properly, the press server must be able to ssh into all three n, m, f server. Confused ? Well in previous steps, we made sure you can ssh into press server from your local pc. That’s so that we can install press in press server (in AWS). Since you have now installed press, the press application must be able to interact will n, m, f servers. It does so via ssh access. Lets setup root ssh access to n, m, f servers.</p>
+<blockquote>
+<p>Lets recall what we did in previous step to ssh into press server from local pc.<br>
+We copied the private key (of press server/destination server) into our pc (origin) at ~/.ssh/ folder of local pc.</p>
+</blockquote>
+<blockquote>
+<p>Lets do the same for n,m,f server. We need to copy the private keys of all three servers (which happens to be the same, since we chose same key-pair during instance creation in aws) into the /root/.ssh/ folder of press server (origin).</p>
+</blockquote>
+<p>Lets do that now.</p>
+<p>Open Ubuntu terminal in windows and run these commands.</p>
+<pre><code class="lang-auto">ssh press
+
+# copy private key from your pc to ~/.ssh/ folder
+# first make dir ~/.ssh
+
+mkdir -p ~/.ssh # if the folder .ssh doesnot exist
+exit # to make sure you are logged in back to local pc, not press server
+</code></pre>
+<p>Use scp command to transfer files from local to press server.</p>
+<pre><code class="lang-auto">scp -i ~/.ssh/key_pair_for_press.pem ~/.ssh/key_pair_for_press.pem  press@example.com:~/.ssh/
+ssh press #ssh into press server
+chmod 400 ~/.ssh/key_pair_for_press.pem
+# Verify the permissions (should now show -r--------)
+ls -l ~/.ssh/key_pair_for_press.pem
+</code></pre>
+<p>You should now be able to ssh into f1 server like this:</p>
+<pre><code class="lang-auto">ssh -i ~/.ssh/key_pair_for_press.pem ubuntu@f1.example.com  #your username might be different if you are not using AWS.
+</code></pre>
+<p>SImilarly for n1 and m1 servers</p>
+<pre><code class="lang-auto">ssh -i ~/.ssh/key_pair_for_press.pem ubuntu@n1.example.com  
+</code></pre>
+<p>and</p>
+<pre><code class="lang-auto">ssh -i ~/.ssh/key_pair_for_press.pem ubuntu@m1.example.com  
+</code></pre>
+<p>must work if you ssh from press server.<br>
+By these commands you can ssh into ubuntu user. But press needs root access via ssh.</p>
+<pre><code class="lang-auto">exit # to come back to press server.
+sudo nano ~/.ssh/config
+</code></pre>
+<p>Add these lines (in press server) for making sure you can ssh into root user:</p>
+<pre><code class="lang-auto">Host f1_public_ip #from aws
+    HostName f1_public_ip
+    User root
+    IdentityFile ~/.ssh/key_pair_for_press.pem
+
+Host n1_public_ip #from aws
+    HostName n1_public_ip
+    User root
+    IdentityFile ~/.ssh/key_pair_for_press.pem
+
+Host m1_public_ip #from aws
+    HostName m1_public_ip
+    User root
+    IdentityFile ~/.ssh/key_pair_for_press.pem
+
+Host f1.example.com
+    HostName f1.example.com
+    User root
+    IdentityFile ~/.ssh/key_pair_for_press.pem
+
+Host m1.example.com
+    HostName m1.example.com
+    User root
+    IdentityFile ~/.ssh/key_pair_for_press.pem
+
+Host n1.example.com
+    HostName n1.example.com
+    User root
+    IdentityFile ~/.ssh/key_pair_for_press.pem
+
+</code></pre>
+<p>Now run <code>ssh root@f1.example.com</code> or <code>ssh root@f1_public_ip</code> :<br>
+I am sure that you failed here. You can’t ssh into root user that easily. SSH by default blocks access to root via ssh/port 22.<br>
+Lets change that.<br>
+First ssh into f1 server as default user <code>ubuntu</code> in our case.</p>
+<pre><code class="lang-auto">ssh -i ~/.ssh/key_pair_for_press.pem ubuntu@f1.example.com
+sudo -i # this take you to root user without asking for password
+nano /etc/ssh/sshd_config
+</code></pre>
+<p>Scroll down to make correction or add these lines:</p>
+<pre><code class="lang-auto">PermitRootLogin yes
+PasswordAuthentication no
+</code></pre>
+<p>Save the file.<br>
+To ensure root login with same key run these lines:</p>
+<pre><code class="lang-auto">cp /home/ubuntu/.ssh/authorized_keys /root/.ssh/authorized_keys
+chmod 700 /root/.ssh
+chmod 600 /root/.ssh/authorized_keys
+systemctl restart sshd
+exit #goback to ubuntu user if f1 server
+exit #goback to press user of press server
+</code></pre>
+<p>Now you should be able to ssh into root user of f1 server directly. Run this line from press server:</p>
+<pre><code class="lang-auto">ssh root@f1_public_ip
+</code></pre>
+<p>This is needed for press server. You must also be able to ssh like this:</p>
+<pre><code class="lang-auto">ssh root@f1.example.com
+</code></pre>
+<p>This will be easier for us if we manually need to ssh into f, m ,n server for some task.</p>
+<h1><a name="p-478742-now-do-this-for-m1-and-n1-servers-as-well-6" class="anchor" href="#p-478742-now-do-this-for-m1-and-n1-servers-as-well-6"></a>Now do this for m1 and n1 servers as well:</h1>
+<p>Run this in press server:</p>
+<pre><code class="lang-auto">ssh ubuntu@n1.example.com
+sudo -i
+nano /etc/ssh/sshd_config
+</code></pre>
+<p>Add these lines:</p>
+<blockquote>
+<p>PermitRootLogin yes<br>
+PasswordAuthentication no</p>
+</blockquote>
+<p>Run these:</p>
+<pre><code class="lang-auto">cp /home/ubuntu/.ssh/authorized_keys /root/.ssh/authorized_keys
+chmod 700 /root/.ssh
+chmod 600 /root/.ssh/authorized_keys
+systemctl restart sshd
+</code></pre>
+<p>Again in press server:<br>
+Run repeat the same steps with:</p>
+<pre><code class="lang-auto">ssh ubuntu@m1.example.com
+sudo -i
+nano /etc/ssh/sshd_config
+</code></pre>
+<p>Add these lines:</p>
+<blockquote>
+<p>PermitRootLogin yes<br>
+PasswordAuthentication no</p>
+</blockquote>
+<p>Run these:</p>
+<pre><code class="lang-auto">cp /home/ubuntu/.ssh/authorized_keys /root/.ssh/authorized_keys
+chmod 700 /root/.ssh
+chmod 600 /root/.ssh/authorized_keys
+systemctl restart sshd
+</code></pre>
+<p>Now finally you should be able to ssh into all f1,  n1 and m1 server from f1 server like this:</p>
+<pre><code class="lang-auto">ssh root@f1.example.com # from press server
+ssh root@n1.example.com # from press server
+ssh root@m1.example.com # from press server
+ssh root@f1_ip_address # from press server
+ssh root@m1_ip_address # from press server
+ssh root@n1_ip_address # from press server
+</code></pre>
+<p>Now lets make some subtle changes.</p>
+<p>While in f1, n1 and m1 server, take a moment to change UID of default user from 1000 to 1001 because during Press setup, press will create a new user with UID 1000. But as <code>ubuntu</code> already has 1000 UID, it will through error.</p>
+<pre><code class="lang-auto">ssh root@f1.example.com
+usermod -u 1001 ubuntu
+exit
+ssh root@n1.example.com
+usermod -u 1001 ubuntu
+exit
+ssh root@m1.example.com
+usermod -u 1001 ubuntu
+exit
+</code></pre>
+<h1><a name="p-478742-finally-7" class="anchor" href="#p-478742-finally-7"></a>Finally,</h1>
+<h1><a name="p-478742-lets-setup-press-8" class="anchor" href="#p-478742-lets-setup-press-8"></a>Lets setup Press.</h1>
+<p>ssh into press server with press user, run these:</p>
+<pre><code class="lang-auto">cd
+mkdir .certbot
+cd .certbot
+mkdir .webroot
+cd
+cd press-bench # or whatever your bench directory is
+mkdir .clones
+mkdir .docker-builds
+cd
+sudo pip3 install certbot-dns-route53 # run this outside bench directory, don't miss the sudo
+</code></pre>
+<p>Login to <a href="http://example.com" rel="noopener nofollow ugc">example.com</a> with Administrator account.<br>
+You can access dashboard at <a href="http://example.com/dashboard" rel="noopener nofollow ugc">example.com/dashboard</a>.</p>
+<p>Go to Press UI and search for Root Domain.<br>
+Create a new root domain and fill in like this:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/9/d9ad11f14b25740071c4d87b517f4afaa997ea8c.png" data-download-href="https://discuss.frappe.io/uploads/default/d9ad11f14b25740071c4d87b517f4afaa997ea8c" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/9/d9ad11f14b25740071c4d87b517f4afaa997ea8c_2_690x268.png" alt="image" data-base62-sha1="v3EpxSVoUb7BS4M96KR7qFXBb40" width="690" height="268" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/9/d9ad11f14b25740071c4d87b517f4afaa997ea8c_2_690x268.png, https://discuss.frappe.io/uploads/default/optimized/3X/d/9/d9ad11f14b25740071c4d87b517f4afaa997ea8c_2_1035x402.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/d/9/d9ad11f14b25740071c4d87b517f4afaa997ea8c_2_1380x536.png 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">3237×1260 190 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+In AWS access key and secret, generate your root user access key and secret and paste there. (not press-user that we created with permission AmazonElasticContainerRegistryPublicFullAccess but root user)</p>
+<p>After you save this, a TLS certificate is automatically created.<br>
+Go to TLS certificate.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/f/df585b75be6e979b35d70845e8844cdc91ccb599.png" data-download-href="https://discuss.frappe.io/uploads/default/df585b75be6e979b35d70845e8844cdc91ccb599" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/f/df585b75be6e979b35d70845e8844cdc91ccb599_2_690x245.png" alt="image" data-base62-sha1="vRNMo9NnMayMyrGlFg0nZkvAWQ9" width="690" height="245" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/f/df585b75be6e979b35d70845e8844cdc91ccb599_2_690x245.png, https://discuss.frappe.io/uploads/default/optimized/3X/d/f/df585b75be6e979b35d70845e8844cdc91ccb599_2_1035x367.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/d/f/df585b75be6e979b35d70845e8844cdc91ccb599_2_1380x490.png 2x" data-dominant-color="FCFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2713×964 133 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>You will probably get this error:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/2/92e248c7ea22dcb74f1a8b5c8f6105c744e88d61.png" data-download-href="https://discuss.frappe.io/uploads/default/92e248c7ea22dcb74f1a8b5c8f6105c744e88d61" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/9/2/92e248c7ea22dcb74f1a8b5c8f6105c744e88d61_2_689x203.png" alt="image" data-base62-sha1="kXowoJtKuh3GUU4CX7IE2FGYqR3" width="689" height="203" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/9/2/92e248c7ea22dcb74f1a8b5c8f6105c744e88d61_2_689x203.png, https://discuss.frappe.io/uploads/default/optimized/3X/9/2/92e248c7ea22dcb74f1a8b5c8f6105c744e88d61_2_1033x304.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/9/2/92e248c7ea22dcb74f1a8b5c8f6105c744e88d61_2_1378x406.png 2x" data-dominant-color="FCFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2641×778 84.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>To solve this, go to press setting (awesome bar to the rescue):<br>
+In Details section set the following:</p>
+<blockquote>
+<p>Domain: <a href="http://example.com" rel="noopener nofollow ugc">example.com</a><br>
+Cluster: Default<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/3/e/3ed84a5eebd70e4737aaf779f9f2bc159086b0da.png" data-download-href="https://discuss.frappe.io/uploads/default/3ed84a5eebd70e4737aaf779f9f2bc159086b0da" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/3/e/3ed84a5eebd70e4737aaf779f9f2bc159086b0da_2_690x324.png" alt="image" data-base62-sha1="8XX0dghKFgOHAdnUquMdNlPy9qG" width="690" height="324" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/3/e/3ed84a5eebd70e4737aaf779f9f2bc159086b0da_2_690x324.png, https://discuss.frappe.io/uploads/default/optimized/3X/3/e/3ed84a5eebd70e4737aaf779f9f2bc159086b0da_2_1035x486.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/3/e/3ed84a5eebd70e4737aaf779f9f2bc159086b0da_2_1380x648.png 2x" data-dominant-color="F8F8F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2664×1254 136 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+</blockquote>
+<p>In Infrastructure Section set the following:</p>
+<blockquote>
+<p>Certbot Directory: /home/press/.certbot<br>
+Webroot Directory: /home/press/.certbot/.webroot<br>
+EFF Registration Email: your_email_address</p>
+</blockquote>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/a/8/a8d46df0729783cbe8237716c9bb90489f2aab6e.png" data-download-href="https://discuss.frappe.io/uploads/default/a8d46df0729783cbe8237716c9bb90489f2aab6e" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/a/8/a8d46df0729783cbe8237716c9bb90489f2aab6e_2_690x287.png" alt="image" data-base62-sha1="o5xlgCtqL6kCAw5u1z0iJP0wyx8" width="690" height="287" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/a/8/a8d46df0729783cbe8237716c9bb90489f2aab6e_2_690x287.png, https://discuss.frappe.io/uploads/default/optimized/3X/a/8/a8d46df0729783cbe8237716c9bb90489f2aab6e_2_1035x430.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/a/8/a8d46df0729783cbe8237716c9bb90489f2aab6e_2_1380x574.png 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2682×1117 179 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Go back to TLS certificate list, open the previous TLS certificate and click on <code>Obtain Certificate</code> and wait for a few minutes.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/4/3/434c53fc199cf7f9630af60df11ebc1c98160060.png" data-download-href="https://discuss.frappe.io/uploads/default/434c53fc199cf7f9630af60df11ebc1c98160060" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/4/3/434c53fc199cf7f9630af60df11ebc1c98160060_2_690x38.png" alt="image" data-base62-sha1="9Blwp3dRmqivmulinsFviQR7BC0" width="690" height="38" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/4/3/434c53fc199cf7f9630af60df11ebc1c98160060_2_690x38.png, https://discuss.frappe.io/uploads/default/optimized/3X/4/3/434c53fc199cf7f9630af60df11ebc1c98160060_2_1035x57.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/4/3/434c53fc199cf7f9630af60df11ebc1c98160060_2_1380x76.png 2x" data-dominant-color="F4F4F4"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2729×153 13 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>You might get this error:</p>
+<blockquote>
+<p>Saving debug log to /home/press/.certbot/logs/letsencrypt.log<br>
+The requested dns-route53 plugin does not appear to be installed<br>
+Ask for help or search for solutions at <a href="https://community.letsencrypt.org" rel="noopener nofollow ugc">https://community.letsencrypt.org</a>. See the logfile /home/press/.certbot/logs/letsencrypt.log or re-run Certbot with -v for more details.<br>
+This means that  dns-route53 plugin was not properly installed or there was permission error.</p>
+</blockquote>
+<p>In that case in terminal (press server):</p>
+<pre><code class="lang-auto">cd ~
+sudo pip3 install certbot-dns-route53
+</code></pre>
+<p>Then go  back to TLS certificate and Click on Obtain Certificate again and wait for a few minutes.<br>
+This should now fetch a certificate for <code>*.example.com</code>.</p>
+<h1><a name="p-478742-great-9" class="anchor" href="#p-478742-great-9"></a>Great</h1>
+<p>Now go back to Root Domain and click on Plus sign after Proxy Server (under connections)<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/8/d85974f20f61830dde8a128da45c8195fd26bbc5.png" data-download-href="https://discuss.frappe.io/uploads/default/d85974f20f61830dde8a128da45c8195fd26bbc5" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/8/d85974f20f61830dde8a128da45c8195fd26bbc5_2_690x262.png" alt="image" data-base62-sha1="uRUNe0wawME9vPQjXT020Z6WavH" width="690" height="262" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/8/d85974f20f61830dde8a128da45c8195fd26bbc5_2_690x262.png, https://discuss.frappe.io/uploads/default/optimized/3X/d/8/d85974f20f61830dde8a128da45c8195fd26bbc5_2_1035x393.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/d/8/d85974f20f61830dde8a128da45c8195fd26bbc5_2_1380x524.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2654×1008 143 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+This should open a add new proxy server window. Fill in as shown:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/5/15b09f0504bfab7787ea333a934947da9f2a7411.png" data-download-href="https://discuss.frappe.io/uploads/default/15b09f0504bfab7787ea333a934947da9f2a7411" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/1/5/15b09f0504bfab7787ea333a934947da9f2a7411_2_690x302.png" alt="image" data-base62-sha1="35Sr1X18v0MDCQG6ThLx50C8y6R" width="690" height="302" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/1/5/15b09f0504bfab7787ea333a934947da9f2a7411_2_690x302.png, https://discuss.frappe.io/uploads/default/optimized/3X/1/5/15b09f0504bfab7787ea333a934947da9f2a7411_2_1035x453.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/1/5/15b09f0504bfab7787ea333a934947da9f2a7411_2_1380x604.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">3197×1401 196 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+Then,<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/4/3/43aae5c9150a80606c5a3de2ba587c3c0ea84b09.png" data-download-href="https://discuss.frappe.io/uploads/default/43aae5c9150a80606c5a3de2ba587c3c0ea84b09" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/4/3/43aae5c9150a80606c5a3de2ba587c3c0ea84b09_2_690x344.png" alt="image" data-base62-sha1="9EC8uofXTgv3r9KfKReg44xIRoR" width="690" height="344" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/4/3/43aae5c9150a80606c5a3de2ba587c3c0ea84b09_2_690x344.png, https://discuss.frappe.io/uploads/default/optimized/3X/4/3/43aae5c9150a80606c5a3de2ba587c3c0ea84b09_2_1035x516.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/4/3/43aae5c9150a80606c5a3de2ba587c3c0ea84b09_2_1380x688.png 2x" data-dominant-color="FCFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">3241×1620 228 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+And,<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/3/e/3ea572742b421f9788105b472ed24209dd63049c.png" data-download-href="https://discuss.frappe.io/uploads/default/3ea572742b421f9788105b472ed24209dd63049c" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/3/e/3ea572742b421f9788105b472ed24209dd63049c_2_690x255.png" alt="image" data-base62-sha1="8Wc4sqQKq3EqZfUzaUZSV4RKg32" width="690" height="255" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/3/e/3ea572742b421f9788105b472ed24209dd63049c_2_690x255.png, https://discuss.frappe.io/uploads/default/optimized/3X/3/e/3ea572742b421f9788105b472ed24209dd63049c_2_1035x382.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/3/e/3ea572742b421f9788105b472ed24209dd63049c_2_1380x510.png 2x" data-dominant-color="FDFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">3151×1169 138 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Now create on Actions and Setup Server.</p>
+<p>If you get any Broken status, its probably because of ssh into n1 server as root has failed.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/1/f1126796b81fcfabde703d51ebf554d332037f2c.png" data-download-href="https://discuss.frappe.io/uploads/default/f1126796b81fcfabde703d51ebf554d332037f2c" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/f/1/f1126796b81fcfabde703d51ebf554d332037f2c_2_690x263.png" alt="image" data-base62-sha1="yoCv8ffxcBzzLvEAKCaotwxi5uk" width="690" height="263" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/f/1/f1126796b81fcfabde703d51ebf554d332037f2c_2_690x263.png, https://discuss.frappe.io/uploads/default/optimized/3X/f/1/f1126796b81fcfabde703d51ebf554d332037f2c_2_1035x394.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/f/1/f1126796b81fcfabde703d51ebf554d332037f2c_2_1380x526.png 2x" data-dominant-color="FCFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2766×1058 135 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>to debug, check <code>ssh root@n1.example.com</code> and <code>ssh root@server_ip_address</code> from press server. If you can’t ssh then your setup is wrong. Correct it and run <code>Setup server</code> again .</p>
+<p>To check what tasks are completed, open <code>Ansible Play</code> list.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/e/5/e50f085fdafad9bceb67e4d510ffd57ebb146070.png" data-download-href="https://discuss.frappe.io/uploads/default/e50f085fdafad9bceb67e4d510ffd57ebb146070" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/e/5/e50f085fdafad9bceb67e4d510ffd57ebb146070_2_690x283.png" alt="image" data-base62-sha1="wGlxZawDO4knNpzNmoxAbX8jKXC" width="690" height="283" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/e/5/e50f085fdafad9bceb67e4d510ffd57ebb146070_2_690x283.png, https://discuss.frappe.io/uploads/default/optimized/3X/e/5/e50f085fdafad9bceb67e4d510ffd57ebb146070_2_1035x424.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/e/5/e50f085fdafad9bceb67e4d510ffd57ebb146070_2_1380x566.png 2x" data-dominant-color="FCFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2751×1130 144 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/a/da2e46ece6429966bfb5519946d29dc715268d5c.png" data-download-href="https://discuss.frappe.io/uploads/default/da2e46ece6429966bfb5519946d29dc715268d5c" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/a/da2e46ece6429966bfb5519946d29dc715268d5c_2_690x246.png" alt="image" data-base62-sha1="v87eFOHHTpuogOxErIt4D84NaUI" width="690" height="246" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/a/da2e46ece6429966bfb5519946d29dc715268d5c_2_690x246.png, https://discuss.frappe.io/uploads/default/optimized/3X/d/a/da2e46ece6429966bfb5519946d29dc715268d5c_2_1035x369.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/d/a/da2e46ece6429966bfb5519946d29dc715268d5c_2_1380x492.png 2x" data-dominant-color="F9F9F9"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1697×607 31.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+and open <code>Ansible Task</code>.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/5/f/5f2ce6eed14f150bd4d09a50942952a509c2fb11.png" data-download-href="https://discuss.frappe.io/uploads/default/5f2ce6eed14f150bd4d09a50942952a509c2fb11" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/5/f/5f2ce6eed14f150bd4d09a50942952a509c2fb11_2_690x161.png" alt="image" data-base62-sha1="dzXyQav8xKPb2qfJZ7RRvorWzGV" width="690" height="161" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/5/f/5f2ce6eed14f150bd4d09a50942952a509c2fb11_2_690x161.png, https://discuss.frappe.io/uploads/default/optimized/3X/5/f/5f2ce6eed14f150bd4d09a50942952a509c2fb11_2_1035x241.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/5/f/5f2ce6eed14f150bd4d09a50942952a509c2fb11_2_1380x322.png 2x" data-dominant-color="FCFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">3302×772 148 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>You might run into another problem here. You might see a Broken status in <code>Create Frappe User</code> task if you are using AWS EC2 instances.</p>
+<p>Check error:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/b/7be30b5b3636afbb097932f255367d0066b09e8d.png" data-download-href="https://discuss.frappe.io/uploads/default/7be30b5b3636afbb097932f255367d0066b09e8d" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/b/7be30b5b3636afbb097932f255367d0066b09e8d_2_690x326.png" alt="image" data-base62-sha1="hFXaugzxQc2AssaIHWY9HRRkmol" width="690" height="326" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/b/7be30b5b3636afbb097932f255367d0066b09e8d_2_690x326.png, https://discuss.frappe.io/uploads/default/optimized/3X/7/b/7be30b5b3636afbb097932f255367d0066b09e8d_2_1035x489.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/7/b/7be30b5b3636afbb097932f255367d0066b09e8d.png 2x" data-dominant-color="F7F7F6"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1316×623 65 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Open the Broken task and check the error. This is the most common error:</p>
+<blockquote>
+<p>useradd: UID 1000 is not unique</p>
+</blockquote>
+<p>This is because agent tries to create a new user in n1 server with UID 1000. But in aws, the default user already has UID 1000. Go to n1 server and change the UID of <code>ubuntu</code> user to <code>1001</code>. Follow this:<br>
+From press server:</p>
+<pre><code class="lang-auto">ssh root@n1.example.com
+usermod -u 1001 ubuntu
+sudo find /home/ubuntu -uid 1000 -exec chown ubuntu {} +
+exit
+</code></pre>
+<p>Make sure user <code>ubuntu</code> is not logged in in n1 server.<br>
+Repeat these steps for f1 and m1 servers as well.</p>
+<p>After making corrections, re-run the Setup Server from Proxy Server doctype.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/8/1/8156ee565469ded48d46b3481930b0e6ac7b7030.png" data-download-href="https://discuss.frappe.io/uploads/default/8156ee565469ded48d46b3481930b0e6ac7b7030" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/8/1/8156ee565469ded48d46b3481930b0e6ac7b7030_2_690x357.png" alt="image" data-base62-sha1="isbQeAWi7Rz8nfq4cF70zaOeDmg" width="690" height="357" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/8/1/8156ee565469ded48d46b3481930b0e6ac7b7030_2_690x357.png, https://discuss.frappe.io/uploads/default/optimized/3X/8/1/8156ee565469ded48d46b3481930b0e6ac7b7030_2_1035x535.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/8/1/8156ee565469ded48d46b3481930b0e6ac7b7030_2_1380x714.png 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2458×1272 221 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<blockquote>
+<p>You will not get this error if you followed the setup properly and already changed the UID of default user to 1001.</p>
+</blockquote>
+<p>If you run in to any problem like:</p>
+<blockquote>
+<p>Failed to lock apt for exclusive operation: Failed to lock directory /var/lib/apt/lists/: E:Could not get lock /var/lib/apt/lists/lock. It is held by process 13432 (apt-get)</p>
+</blockquote>
+<p>Or any other process might be causing error.<br>
+To solve, ssh into n1 server and kill the process id causing problem.<br>
+And sometimes you might need to remove the lock files.</p>
+<pre><code class="lang-auto">sudo rm /var/lib/apt/lists/lock
+sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock
+sudo rm /var/lib/dpkg/lock-frontend
+</code></pre>
+<p>Re run Setup Server.<br>
+Wait for it to Succeed.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/6/f/6f97096955b88f5774691d7eddbb0cee61d1ecc8.png" data-download-href="https://discuss.frappe.io/uploads/default/6f97096955b88f5774691d7eddbb0cee61d1ecc8" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/6/f/6f97096955b88f5774691d7eddbb0cee61d1ecc8_2_690x163.png" alt="image" data-base62-sha1="fVaAPjeISAiVYr31xpVPYUX0LVe" width="690" height="163" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/6/f/6f97096955b88f5774691d7eddbb0cee61d1ecc8_2_690x163.png, https://discuss.frappe.io/uploads/default/optimized/3X/6/f/6f97096955b88f5774691d7eddbb0cee61d1ecc8_2_1035x244.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/6/f/6f97096955b88f5774691d7eddbb0cee61d1ecc8_2_1380x326.png 2x" data-dominant-color="FCFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">3195×757 148 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p><strong>Now setup Database Server</strong><br>
+Goto Root Domain and add a new Database server.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/a/4/a489fdd145c5c763a0a9becefd99515a5b053581.png" data-download-href="https://discuss.frappe.io/uploads/default/a489fdd145c5c763a0a9becefd99515a5b053581" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/a/4/a489fdd145c5c763a0a9becefd99515a5b053581_2_690x190.png" alt="image" data-base62-sha1="ntzWVOxGU2NEATaAJyBlsZX7tfj" width="690" height="190" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/a/4/a489fdd145c5c763a0a9becefd99515a5b053581_2_690x190.png, https://discuss.frappe.io/uploads/default/optimized/3X/a/4/a489fdd145c5c763a0a9becefd99515a5b053581_2_1035x285.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/a/4/a489fdd145c5c763a0a9becefd99515a5b053581_2_1380x380.png 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">3360×928 169 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Enter public and private IP of m1 server (from AWS EC2).</p>
+<p>Click on Save and then Actions-&gt;Setup Server.</p>
+<p>I hope Database Server setup is now complete.</p>
+<p><strong>Setup App Server</strong></p>
+<ol>
+<li>Goto Root domain</li>
+<li>Click on Plus sign after Server<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/5/8/5801eea1e41f25419e649dc8e19080ec21777431.png" data-download-href="https://discuss.frappe.io/uploads/default/5801eea1e41f25419e649dc8e19080ec21777431" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/5/8/5801eea1e41f25419e649dc8e19080ec21777431_2_690x237.png" alt="image" data-base62-sha1="cyy9JCgQy4s6oIXbt2YI8mKKktH" width="690" height="237" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/5/8/5801eea1e41f25419e649dc8e19080ec21777431_2_690x237.png, https://discuss.frappe.io/uploads/default/optimized/3X/5/8/5801eea1e41f25419e649dc8e19080ec21777431_2_1035x355.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/5/8/5801eea1e41f25419e649dc8e19080ec21777431.png 2x" data-dominant-color="FCFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1146×394 18.1 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></li>
+<li>Fill in details as shown:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/a/a/aa5e0b93c016b4a171e717dc6c7457227be7a4ae.png" data-download-href="https://discuss.frappe.io/uploads/default/aa5e0b93c016b4a171e717dc6c7457227be7a4ae" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/a/a/aa5e0b93c016b4a171e717dc6c7457227be7a4ae_2_690x364.png" alt="image" data-base62-sha1="oj8EYE007VH8lhJIVmqGc7mxegu" width="690" height="364" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/a/a/aa5e0b93c016b4a171e717dc6c7457227be7a4ae_2_690x364.png, https://discuss.frappe.io/uploads/default/optimized/3X/a/a/aa5e0b93c016b4a171e717dc6c7457227be7a4ae_2_1035x546.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/a/a/aa5e0b93c016b4a171e717dc6c7457227be7a4ae.png 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1300×686 36 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/1/21f0eef287dfc41a549eaa4c708df4304eb57931.png" data-download-href="https://discuss.frappe.io/uploads/default/21f0eef287dfc41a549eaa4c708df4304eb57931" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/1/21f0eef287dfc41a549eaa4c708df4304eb57931_2_689x220.png" alt="image" data-base62-sha1="4QfX8TQMIeSvjUlEEorXZfOjr5D" width="689" height="220" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/1/21f0eef287dfc41a549eaa4c708df4304eb57931_2_689x220.png, https://discuss.frappe.io/uploads/default/optimized/3X/2/1/21f0eef287dfc41a549eaa4c708df4304eb57931_2_1033x330.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/2/1/21f0eef287dfc41a549eaa4c708df4304eb57931.png 2x" data-dominant-color="FCFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1268×405 15.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+In IP, fill in public and private IP for f1 server from EC2 or your provider.</li>
+</ol>
+<blockquote>
+<p>Set Proxy Server to <code>n1.example.com</code><br>
+Set Database Server to <code>m1.example.com</code><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/f/fff06ce81f3998046ba127867c91db28e8c1b484.png" data-download-href="https://discuss.frappe.io/uploads/default/fff06ce81f3998046ba127867c91db28e8c1b484" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/f/f/fff06ce81f3998046ba127867c91db28e8c1b484_2_690x327.png" alt="image" data-base62-sha1="Aw8Rzo0JmVzFT06yPKF5GO7uFzC" width="690" height="327" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/f/f/fff06ce81f3998046ba127867c91db28e8c1b484_2_690x327.png, https://discuss.frappe.io/uploads/default/optimized/3X/f/f/fff06ce81f3998046ba127867c91db28e8c1b484_2_1035x490.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/f/f/fff06ce81f3998046ba127867c91db28e8c1b484.png 2x" data-dominant-color="FDFDFD"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1324×629 22.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+Leave others as it is.</p>
+</blockquote>
+<p>Now save and Actions → Setup Server<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/d/fd48c1620d809c2d149c05d3cc7c81a1ebd37c75.png" data-download-href="https://discuss.frappe.io/uploads/default/fd48c1620d809c2d149c05d3cc7c81a1ebd37c75" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/f/d/fd48c1620d809c2d149c05d3cc7c81a1ebd37c75_2_690x420.png" alt="image" data-base62-sha1="A8EG1hQxyDKR29vaJWbyKedfT6d" width="690" height="420" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/f/d/fd48c1620d809c2d149c05d3cc7c81a1ebd37c75_2_690x420.png, https://discuss.frappe.io/uploads/default/optimized/3X/f/d/fd48c1620d809c2d149c05d3cc7c81a1ebd37c75_2_1035x630.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/f/d/fd48c1620d809c2d149c05d3cc7c81a1ebd37c75.png 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1100×671 43.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>I hope everything goes smooth and you have an active f1 server.<br>
+Open this <a href="http://f1.example.com" rel="noopener nofollow ugc">f1.example.com</a> server and tick <code>Use for Build</code> in SSH section.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/6/9691960138bf9bb3e1cadadd22b0e68e510c4f08.png" data-download-href="https://discuss.frappe.io/uploads/default/9691960138bf9bb3e1cadadd22b0e68e510c4f08" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/9/6/9691960138bf9bb3e1cadadd22b0e68e510c4f08_2_690x201.png" alt="image" data-base62-sha1="ltZxinDe9IvhmtWEulM6RfzpZhK" width="690" height="201" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/9/6/9691960138bf9bb3e1cadadd22b0e68e510c4f08_2_690x201.png, https://discuss.frappe.io/uploads/default/optimized/3X/9/6/9691960138bf9bb3e1cadadd22b0e68e510c4f08_2_1035x301.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/9/6/9691960138bf9bb3e1cadadd22b0e68e510c4f08.png 2x" data-dominant-color="FBFBFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1058×309 13.3 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<h1><a name="p-478742-great-congratulations-you-are-half-way-through-10" class="anchor" href="#p-478742-great-congratulations-you-are-half-way-through-10"></a>Great ! Congratulations, you are half way through !!</h1>
+<p>Lets go to Press settings now and under Docker tab, fill these in.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/4/24b836bccde41a69659f8f8a032ef8a5a4b90d2e.png" data-download-href="https://discuss.frappe.io/uploads/default/24b836bccde41a69659f8f8a032ef8a5a4b90d2e" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/4/24b836bccde41a69659f8f8a032ef8a5a4b90d2e_2_690x434.png" alt="image" data-base62-sha1="5ePRDUBHbyLCfDNBYIhJeC38S4K" width="690" height="434" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/4/24b836bccde41a69659f8f8a032ef8a5a4b90d2e_2_690x434.png, https://discuss.frappe.io/uploads/default/optimized/3X/2/4/24b836bccde41a69659f8f8a032ef8a5a4b90d2e_2_1035x651.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/2/4/24b836bccde41a69659f8f8a032ef8a5a4b90d2e_2_1380x868.png 2x" data-dominant-color="F7F7F7"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2021×1272 161 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+If you had not created those folders as you see in Clone Directory and Build Directory, create them now.</p>
+<p>Select your build server : <a href="http://f1.example.com" rel="noopener nofollow ugc">f1.example.com</a></p>
+<p>Lets move to the upper part where you fill in Docker Registry URL, namespace, username and password.</p>
+<p>I will do it for AWS, if you use other docker registry provider, you can fill in accordingly.</p>
+<ol>
+<li>Go to AWS Elastic Container Registry.</li>
+<li>Create a new registry (public or private as per your choice, public gives more free storage.</li>
+<li>I will do Public.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/3/73852795049b2680bfc5d8e03784cb489f02236e.png" data-download-href="https://discuss.frappe.io/uploads/default/73852795049b2680bfc5d8e03784cb489f02236e" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/3/73852795049b2680bfc5d8e03784cb489f02236e_2_690x304.png" alt="image" data-base62-sha1="gtWbSkHQ3GbJ4QRdkF5Eg7HRzvU" width="690" height="304" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/3/73852795049b2680bfc5d8e03784cb489f02236e_2_690x304.png, https://discuss.frappe.io/uploads/default/optimized/3X/7/3/73852795049b2680bfc5d8e03784cb489f02236e_2_1035x456.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/7/3/73852795049b2680bfc5d8e03784cb489f02236e_2_1380x608.png 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2081×918 78 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></li>
+</ol>
+<blockquote>
+<p>Take note/copy your URL- something like this: <code>public.ecr.aws/v1b2n3m4/</code> and paste it in Registry URL and <code>my_namespace</code> in Docker Registry Namespace.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/9/79bb2fd5d9f74f0d33b7a907dd21f22b9a52fc62.png" data-download-href="https://discuss.frappe.io/uploads/default/79bb2fd5d9f74f0d33b7a907dd21f22b9a52fc62" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/9/79bb2fd5d9f74f0d33b7a907dd21f22b9a52fc62_2_690x151.png" alt="image" data-base62-sha1="hmSOPKPPLTxzdDjHAoY2SRD7h06" width="690" height="151" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/9/79bb2fd5d9f74f0d33b7a907dd21f22b9a52fc62_2_690x151.png, https://discuss.frappe.io/uploads/default/optimized/3X/7/9/79bb2fd5d9f74f0d33b7a907dd21f22b9a52fc62_2_1035x226.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/7/9/79bb2fd5d9f74f0d33b7a907dd21f22b9a52fc62.png 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1159×254 13.3 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+</blockquote>
+<p>For Username and Password, remember the <code>press-user</code> IAM account that you created in AWS at the beginning ?<br>
+You had downloaded a file that contains AWS access key and secret for <code>press-user</code>.<br>
+Yes, open that file and copy-paste values in respective fields.<br>
+Fill in those info and save.</p>
+<p><strong>Next Create an APP</strong></p>
+<ol>
+<li>Go to App list. And create a new App.<br>
+First app in any Release group must be Frappe.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/e/1/e19d0fef7191f19c86cc9bc065a2c7d74b5cc68c.png" data-download-href="https://discuss.frappe.io/uploads/default/e19d0fef7191f19c86cc9bc065a2c7d74b5cc68c" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/e/1/e19d0fef7191f19c86cc9bc065a2c7d74b5cc68c_2_690x280.png" alt="image" data-base62-sha1="wbRVYLMKaw2tmcLZudoaS4Jf4Sg" width="690" height="280" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/e/1/e19d0fef7191f19c86cc9bc065a2c7d74b5cc68c_2_690x280.png, https://discuss.frappe.io/uploads/default/original/3X/e/1/e19d0fef7191f19c86cc9bc065a2c7d74b5cc68c.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/e/1/e19d0fef7191f19c86cc9bc065a2c7d74b5cc68c.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">798×324 9.1 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></li>
+<li>Save</li>
+<li>Create an App Source for the app.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/c/5/c5abc7e2b185fff3c0a3dba993227b7cbffb79af.png" data-download-href="https://discuss.frappe.io/uploads/default/c5abc7e2b185fff3c0a3dba993227b7cbffb79af" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/c/5/c5abc7e2b185fff3c0a3dba993227b7cbffb79af_2_690x202.png" alt="image" data-base62-sha1="scG6dKtViYQw5RfF1QW6VhJUUj5" width="690" height="202" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/c/5/c5abc7e2b185fff3c0a3dba993227b7cbffb79af_2_690x202.png, https://discuss.frappe.io/uploads/default/optimized/3X/c/5/c5abc7e2b185fff3c0a3dba993227b7cbffb79af_2_1035x303.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/c/5/c5abc7e2b185fff3c0a3dba993227b7cbffb79af_2_1380x404.png 2x" data-dominant-color="F9F9F9"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1476×433 27.3 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/f/1f590c79c2ca14fb088fe2fcfbb1c236bf53e7e4.png" data-download-href="https://discuss.frappe.io/uploads/default/1f590c79c2ca14fb088fe2fcfbb1c236bf53e7e4" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/1/f/1f590c79c2ca14fb088fe2fcfbb1c236bf53e7e4_2_689x345.png" alt="image" data-base62-sha1="4tjAqMWxNLEeDNQgar33GEK58kQ" width="689" height="345" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/1/f/1f590c79c2ca14fb088fe2fcfbb1c236bf53e7e4_2_689x345.png, https://discuss.frappe.io/uploads/default/optimized/3X/1/f/1f590c79c2ca14fb088fe2fcfbb1c236bf53e7e4_2_1033x517.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/1/f/1f590c79c2ca14fb088fe2fcfbb1c236bf53e7e4.png 2x" data-dominant-color="FCFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1346×674 25.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></li>
+</ol>
+<p>or, you can use your own forked repo of frappe. You can also choose develop branch.</p>
+<ol start="4">
+<li>
+<p>An app release is automatically created.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/e/7efb2f031fe000fdcaf10a26ffeed8537f0bbbae.png" data-download-href="https://discuss.frappe.io/uploads/default/7efb2f031fe000fdcaf10a26ffeed8537f0bbbae" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/e/7efb2f031fe000fdcaf10a26ffeed8537f0bbbae_2_690x189.png" alt="image" data-base62-sha1="i7kjP6vT9MHmwhAOX7wOyJtlH8a" width="690" height="189" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/e/7efb2f031fe000fdcaf10a26ffeed8537f0bbbae_2_690x189.png, https://discuss.frappe.io/uploads/default/optimized/3X/7/e/7efb2f031fe000fdcaf10a26ffeed8537f0bbbae_2_1035x283.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/7/e/7efb2f031fe000fdcaf10a26ffeed8537f0bbbae.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1345×369 26.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+</li>
+<li>
+<p>Open that app release and approve it, then save it.</p>
+</li>
+</ol>
+<p>Lets also create an app source for develop version of frappe.</p>
+<ol>
+<li>Go to App list.</li>
+<li>Click on Frappe and Click on <code>+ App Source</code>.</li>
+<li>Fill in like this:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/3/c/3cde7170fcc639528a8c0ed6bc9cbcf3ff821349.png" data-download-href="https://discuss.frappe.io/uploads/default/3cde7170fcc639528a8c0ed6bc9cbcf3ff821349" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/3/c/3cde7170fcc639528a8c0ed6bc9cbcf3ff821349_2_690x425.png" alt="image" data-base62-sha1="8GtehNgqOtowtDlP1upCRG6hyNb" width="690" height="425" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/3/c/3cde7170fcc639528a8c0ed6bc9cbcf3ff821349_2_690x425.png, https://discuss.frappe.io/uploads/default/optimized/3X/3/c/3cde7170fcc639528a8c0ed6bc9cbcf3ff821349_2_1035x637.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/3/c/3cde7170fcc639528a8c0ed6bc9cbcf3ff821349.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1304×804 34.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+Our you can use your own repo.<br>
+Then open its release and approve it.</li>
+</ol>
+<blockquote>
+<p>Task for you: Similarly, create another app - ERPNext and HRMS (name must be erpnext, hrms) and create two releases for it: develop and version-15.</p>
+</blockquote>
+<h1><a name="p-478742-now-we-will-create-two-release-groups-one-for-develop-version-and-another-for-version-15-release-groups-are-also-known-as-bench-groups-11" class="anchor" href="#p-478742-now-we-will-create-two-release-groups-one-for-develop-version-and-another-for-version-15-release-groups-are-also-known-as-bench-groups-11"></a>Now we will create two release groups: one for develop version and another for version 15. Release groups are also known as Bench Groups.</h1>
+<ol>
+<li>Go to Release group and create new.</li>
+<li>Name it V-15.</li>
+<li>Version: Select Version 15</li>
+<li>Team: Administrator</li>
+<li>Tick: Emabled, Default (Lets make v15 default). You may leave Public off.</li>
+<li>Under servers, add a row and select your app server: <a href="http://f1.example.com" rel="noopener nofollow ugc">f1.example.com</a></li>
+<li>Under Build server: select <a href="http://f1.example.com" rel="noopener nofollow ugc">f1.example.com</a></li>
+<li>Go to Apps tab.</li>
+<li>Under Apps table, add new rows as required and select all the apps (in App column) that you want to make available in this release group.</li>
+<li>In Source column, carefully select the app sources for version -15. Go to app source doctype to confirm the names if necessary.<br>
+Then save.<br>
+Then click on Actions → Create Deploy Candidate.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/e/1e40bb3a3aa3e4a569d1b0b62a312a341554bd8a.png" data-download-href="https://discuss.frappe.io/uploads/default/1e40bb3a3aa3e4a569d1b0b62a312a341554bd8a" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/1/e/1e40bb3a3aa3e4a569d1b0b62a312a341554bd8a_2_690x326.png" alt="image" data-base62-sha1="4jD0E0e1fCB4eSJ8xpclej0E5JM" width="690" height="326" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/1/e/1e40bb3a3aa3e4a569d1b0b62a312a341554bd8a_2_690x326.png, https://discuss.frappe.io/uploads/default/optimized/3X/1/e/1e40bb3a3aa3e4a569d1b0b62a312a341554bd8a_2_1035x489.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/1/e/1e40bb3a3aa3e4a569d1b0b62a312a341554bd8a.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1312×621 46.3 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+Then you will see this info:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/b/3/b325ccc932ed82f79f898021d8c637032ec8b338.png" data-download-href="https://discuss.frappe.io/uploads/default/b325ccc932ed82f79f898021d8c637032ec8b338" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/b/3/b325ccc932ed82f79f898021d8c637032ec8b338_2_689x170.png" alt="image" data-base62-sha1="pyOs6aOsv1ESZgLgmbV1gBlbZuE" width="689" height="170" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/b/3/b325ccc932ed82f79f898021d8c637032ec8b338_2_689x170.png, https://discuss.frappe.io/uploads/default/optimized/3X/b/3/b325ccc932ed82f79f898021d8c637032ec8b338_2_1033x255.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/b/3/b325ccc932ed82f79f898021d8c637032ec8b338.png 2x" data-dominant-color="7B7B7B"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1308×324 25.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+Open the deploy candidate and Click on Deploy → Schedule Build and Deploy.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/d/9d4bdd22ce57f927678a2510258233f7fc8e21e5.png" data-download-href="https://discuss.frappe.io/uploads/default/9d4bdd22ce57f927678a2510258233f7fc8e21e5" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/9/d/9d4bdd22ce57f927678a2510258233f7fc8e21e5_2_690x434.png" alt="image" data-base62-sha1="mrvv1gn4OlV0jdCfWlHZYX8TSSh" width="690" height="434" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/9/d/9d4bdd22ce57f927678a2510258233f7fc8e21e5_2_690x434.png, https://discuss.frappe.io/uploads/default/optimized/3X/9/d/9d4bdd22ce57f927678a2510258233f7fc8e21e5_2_1035x651.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/9/d/9d4bdd22ce57f927678a2510258233f7fc8e21e5.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1357×854 59 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></li>
+</ol>
+<p>Open the <code>Deploy Candidate Build</code><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/a/c/ac78a3a540a2c1837080bf9fb8edb5c0d8e242ae.png" data-download-href="https://discuss.frappe.io/uploads/default/ac78a3a540a2c1837080bf9fb8edb5c0d8e242ae" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/a/c/ac78a3a540a2c1837080bf9fb8edb5c0d8e242ae_2_690x288.png" alt="image" data-base62-sha1="oBKAMDpPLMtIlg52jhGO5LXUnkG" width="690" height="288" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/a/c/ac78a3a540a2c1837080bf9fb8edb5c0d8e242ae_2_690x288.png, https://discuss.frappe.io/uploads/default/optimized/3X/a/c/ac78a3a540a2c1837080bf9fb8edb5c0d8e242ae_2_1035x432.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/a/c/ac78a3a540a2c1837080bf9fb8edb5c0d8e242ae.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1368×571 36.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/9/d9f87a02dfb0f5da1f5a7c164f994fcc05e81a46.png" data-download-href="https://discuss.frappe.io/uploads/default/d9f87a02dfb0f5da1f5a7c164f994fcc05e81a46" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/9/d9f87a02dfb0f5da1f5a7c164f994fcc05e81a46_2_690x285.png" alt="image" data-base62-sha1="v6fY7LhnGDzRur4sNEROKcgE5Tw" width="690" height="285" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/9/d9f87a02dfb0f5da1f5a7c164f994fcc05e81a46_2_690x285.png, https://discuss.frappe.io/uploads/default/optimized/3X/d/9/d9f87a02dfb0f5da1f5a7c164f994fcc05e81a46_2_1035x427.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/d/9/d9f87a02dfb0f5da1f5a7c164f994fcc05e81a46.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1319×545 43.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+And Click on Visit Dashboard to see the build progress.</p>
+<blockquote>
+<p>The status will remain Scheduled for a while and then it must switch to pending.</p>
+</blockquote>
+<p>If instead you see error, as seen here:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/3/c/3c13a34c9acddd468f54eda8faef7c440a1bf428.png" data-download-href="https://discuss.frappe.io/uploads/default/3c13a34c9acddd468f54eda8faef7c440a1bf428" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/3/c/3c13a34c9acddd468f54eda8faef7c440a1bf428_2_690x184.png" alt="image" data-base62-sha1="8zsIMabWEeeG4eott4QOCn0Vcla" width="690" height="184" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/3/c/3c13a34c9acddd468f54eda8faef7c440a1bf428_2_690x184.png, https://discuss.frappe.io/uploads/default/optimized/3X/3/c/3c13a34c9acddd468f54eda8faef7c440a1bf428_2_1035x276.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/3/c/3c13a34c9acddd468f54eda8faef7c440a1bf428.png 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1358×364 28.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+Check the error:<br>
+<img src="https://discuss.frappe.io/uploads/default/original/3X/5/5/554503850ff85414a87dcbf86bc3de3dc6dd2926.png" alt="image" data-base62-sha1="cakrFr8QBREqdQy4EcOcn6Kn18a" width="633" height="78"><br>
+The queue is <code>build</code> type.</p>
+<p>This is because queue type build is not defined in common_site_config.json.</p>
+<p>Lets change that. SSH into Press server</p>
+<pre><code class="lang-auto">ssh press # or whatever your setup was.
+cd press-bench/sites/
+sudo nano common_site_config.json
+</code></pre>
+<p>Add these line at the end.</p>
+<pre><code class="lang-auto">  "workers": {
+    "sync": {
+      "timeout": 300
+    },
+    "build": {
+      "timeout": 2400
+    }
+  }
+</code></pre>
+<p>Your common_site_config.json file must look something like this:</p>
+<pre><code class="lang-auto">{
+ "background_workers": 1,
+ "dns_multitenant": true,
+ "file_watcher_port": 6787,
+ "frappe_user": "press",
+ "gunicorn_workers": 5,
+ "live_reload": true,
+ "rebase_on_pull": false,
+ "redis_cache": "redis://127.0.0.1:13000",
+ "redis_queue": "redis://127.0.0.1:11000",
+ "redis_socketio": "redis://127.0.0.1:13000",
+ "restart_supervisor_on_update": true,
+ "restart_systemd_on_update": false,
+ "serve_default_site": true,
+ "shallow_clone": true,
+ "socketio_port": 9000,
+ "use_redis_auth": false,
+ "webserver_port": 8000,
+
+  "workers": {
+    "sync": {
+      "timeout": 300
+    },
+    "build": {
+      "timeout": 2400
+    }
+  }
+
+}
+</code></pre>
+<p>Save the file.</p>
+<p>Now ssh into f1 server:</p>
+<pre><code class="lang-auto">ssh root@f1.example.com
+chmod 666 /var/run/docker.sock 
+exit
+</code></pre>
+<p>Now go to <code>Deploy candidate</code>, (not deploy candidate build) and click on Deploy → <code>Schedule Build and Deploy</code> again.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="16" />
+              <span class='post-likes'>16 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/self-hosted-multicluster-frappe-cloud-setup/149577/5">Self hosted Multicluster Frappe cloud setup</a>
+                        <meta itemprop='position' content='10'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/yosef'><span itemprop='name'>yosef</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-24T18:26:44Z' class='post-time'>
+                    August 24, 2025,  6:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-24T18:26:44Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>this is really insightful and i will try it as soon as i can, ping me on part 2 as well</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/anupd'><span itemprop='name'>anupd</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-25T08:00:18Z' class='post-time'>
+                    August 25, 2025,  8:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-25T08:00:18Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am working on it. I had started writing that a few months ago, slowly understanding and experimenting. It appears that now the recent commits in the press repo have changed the way servers are created. So, this will need a little rewrite.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ahassoun'><span itemprop='name'>ahassoun</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-25T09:06:16Z' class='post-time'>
+                    August 25, 2025,  9:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-25T09:06:16Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you so much for taking the initiative. Please keep going!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/yogeshvachhani'><span itemprop='name'>yogeshvachhani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-25T10:13:54Z' class='post-time'>
+                    August 25, 2025, 10:13am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-25T10:13:54Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Would it be possible to setup Frappe Press without AWS?</p>
+<p>In my case I prefer to use Contabo for all my hosting.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/anupd'><span itemprop='name'>anupd</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/3/6/36dc88e4763cf2a22c994262c72507b171ceb91e.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-25T10:26:56Z' class='post-time'>
+                    August 25, 2025, 10:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-25T10:26:56Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes. It is possible to install press in all servers that provide External and Internal IPs.<br>
+But let me remind you, Frappe uses AWS and their Frappe cloud / press app is designed to handle all server activities within Frappe Press without ever leaving the press app.<br>
+For example see this:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/3/6/36dc88e4763cf2a22c994262c72507b171ceb91e.png" data-download-href="https://discuss.frappe.io/uploads/default/36dc88e4763cf2a22c994262c72507b171ceb91e" title="image"><img src="https://discuss.frappe.io/uploads/default/original/3X/3/6/36dc88e4763cf2a22c994262c72507b171ceb91e.png" alt="image" data-base62-sha1="7PkhaokUYVeU5TMW2jfJuzemk46" width="251" height="318"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">251×318 9.28 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>You can create, stop, start, resize disk sizes all from Frappe Press. But I think this is possible only with AWS (as far as I know, actually I have not tried with any other provider).</p>
+<p>Checking the cluster doctype, I can guess that this feature is available for Hetzner and Oracle as well. (need to verify the extent to which this support is provided)<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/1/d17faa7c6d54befb35c1aa60b3dc545364e1b546.png" data-download-href="https://discuss.frappe.io/uploads/default/d17faa7c6d54befb35c1aa60b3dc545364e1b546" title="image"><img src="https://discuss.frappe.io/uploads/default/original/3X/d/1/d17faa7c6d54befb35c1aa60b3dc545364e1b546.png" alt="image" data-base62-sha1="tTjjuuwk6MTBH2YTKxTSgJjlFEa" width="639" height="262"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">639×262 11 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>So, you can only confirm by trying yourself. But I believe if you use press at above mentioned commit (see Edit 1 in post), you should be able to install Press in any server you want.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/issue-when-run-database-server-server-of-press-in-docker-ecs-k8s-environment/157625">Issue when run &quot;Database Server&quot;, &quot;Server&quot; of Press in Docker, ECS, K8s environment</a>
+                        <meta itemprop='position' content='1'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/shashank_shirke'><span itemprop='name'>shashank_shirke</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-27T02:58:52Z' class='post-time'>
+                    August 27, 2025,  2:58am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-27T02:58:52Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Great work <a class="mention" href="/u/anupd">@anupd</a> keep it up. Suggestion - it would be even more helpful if you could break up the guide into clear steps like setting up AWS, setting up Press, etc. and then sub-steps within those steps.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Adam-shafey'><span itemprop='name'>Adam-shafey</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-01T12:26:01Z' class='post-time'>
+                    September 1, 2025, 12:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-01T12:26:01Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This is an awesome guide! FYI with the newest branches of develop the server forms no longer have the IP and Private IP fields. Without them, the setup server step will always break. The solution I found was to set up the server in the press UI as the guide states, then before running the setup server action add the IP and Private IP field values into the newly created docs through the db or ssh</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Adam-shafey'><span itemprop='name'>Adam-shafey</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-01T23:05:16Z' class='post-time'>
+                    September 1, 2025, 11:05pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-01T23:05:16Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Another thing that could be useful is that the press server needs to be able to ssh to the f1,m1,n1 servers through BOTH the public and private ips (not just public ip)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Adam-shafey'><span itemprop='name'>Adam-shafey</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-02T01:59:55Z' class='post-time'>
+                    September 2, 2025,  1:59am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-02T01:59:55Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If the deploy build candidate stuck at pending, can try this fix (worked for me)</p>
+<p>one of these should work:</p>
+<p>bench worker --queue build</p>
+<h1><a name="p-479669-or-a-multi-queue-worker-covering-everything-allowed-1" class="anchor" href="#p-479669-or-a-multi-queue-worker-covering-everything-allowed-1"></a>or a multi-queue worker covering everything allowed</h1>
+<p>bench worker --queue short,default,long,sync,build</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/anupd'><span itemprop='name'>anupd</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-03T09:22:47Z' class='post-time'>
+                    September 3, 2025,  9:22am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-03T09:22:47Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes the servers no longer have IP fields. They are pulled from Virtual machine. So, you have to create VM in Press and then sync/provision it to cloud.</p>
+<p>Then when you create server, Ips will be automatically pulled.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/anupd'><span itemprop='name'>anupd</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-03T09:24:40Z' class='post-time'>
+                    September 3, 2025,  9:24am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-03T09:24:40Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes. That’s correct. But if you are creating servers in the same private network, ssh via private ips are automatically possible. No extra setup is required.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/anupd'><span itemprop='name'>anupd</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-03T09:41:30Z' class='post-time'>
+                    September 3, 2025,  9:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-03T09:41:30Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I was facing this issue.<br>
+<code> bench worker --queue build</code> changed state from Pending to Preparing. But it is again stuck at Preparing. Do you have any idea what is causing this ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Thaya_Govzig'><span itemprop='name'>Thaya_Govzig</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-05T19:30:29Z' class='post-time'>
+                    September 5, 2025,  7:30pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-05T19:30:29Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Community,</p>
+<p>I’m facing an issue installing and accessing the <strong>Press app</strong> on my server.</p>
+<p><strong>Setup details:</strong></p>
+<ul>
+<li>I have a <strong>bare metal server</strong> running <strong>Proxmox</strong>.</li>
+<li>Inside Proxmox, I’ve created multiple <strong>VMs</strong> with <strong>internal private IPs</strong>.</li>
+<li>I mapped each VM to a <strong>subdomain</strong> using a <strong>reverse proxy</strong> pointing to my public IP.</li>
+<li>Example: <code>press.futoflex.com</code> should connect to the VM running the Press app.</li>
+</ul>
+<p><strong>Problem:</strong><br>
+When I try to access <code>press.futoflex.com</code>, the browser shows:</p>
+<pre><code class="lang-auto">This site can’t be reached
+press.futoflex.com refused to connect.
+ERR_CONNECTION_REFUSED
+</code></pre>
+<p><strong>What I’ve checked so far:</strong></p>
+<ul>
+<li>DNS is resolving correctly to my server’s public IP.</li>
+<li>Reverse proxy rules are in place for other apps and they are working.</li>
+<li>Only the Press app fails with a connection refused error.</li>
+</ul>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>Do I need to configure anything special inside the VM for Press to bind to <code>0.0.0.0</code> instead of <code>127.0.0.1</code>?</li>
+<li>Has anyone successfully set up Press on a VM behind Proxmox with reverse proxy?</li>
+<li>What steps should I take to debug whether the issue is with the app, reverse proxy, or VM networking?</li>
+</ol>
+<p>Any guidance would be greatly appreciated <img src="https://discuss.frappe.io/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jpatelarkimetrix'><span itemprop='name'>jpatelarkimetrix</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-16T19:43:55Z' class='post-time'>
+                    September 16, 2025,  7:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-16T19:43:55Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks <a class="mention" href="/u/anupd">@anupd</a> for outlining the steps in detail.</p>
+<p>I am trying to accomplish the same but on our own server and VMs. Is it possible?<br>
+Thanks</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/anupd'><span itemprop='name'>anupd</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-17T08:42:21Z' class='post-time'>
+                    September 17, 2025,  8:42am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-17T08:42:21Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes it is possible.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jpatelarkimetrix'><span itemprop='name'>jpatelarkimetrix</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/3/8/38a93cd508e1af2786dd0f1c1b2a47deb19430b6.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-17T19:25:39Z' class='post-time'>
+                    September 17, 2025,  7:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-17T19:45:41Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for confirming <a class="mention" href="/u/anupd">@anupd</a> .</p>
+<p>I have setup the server with 4 VMs and site is also up and running. I am trying to setup the proxy server but it’s getting broken. I am not really sure why and not sure where to check for logs or the reason…?<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/3/8/38a93cd508e1af2786dd0f1c1b2a47deb19430b6.png" data-download-href="https://discuss.frappe.io/uploads/default/38a93cd508e1af2786dd0f1c1b2a47deb19430b6" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/3/8/38a93cd508e1af2786dd0f1c1b2a47deb19430b6_2_690x310.png" alt="image" data-base62-sha1="85fklVI96z4MvEZIhNrNv1zP4c6" width="690" height="310" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/3/8/38a93cd508e1af2786dd0f1c1b2a47deb19430b6_2_690x310.png, https://discuss.frappe.io/uploads/default/optimized/3X/3/8/38a93cd508e1af2786dd0f1c1b2a47deb19430b6_2_1035x465.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/3/8/38a93cd508e1af2786dd0f1c1b2a47deb19430b6_2_1380x620.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1880×846 64.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>PS: I made sure that press server is able to ssh into all other three VMs as root user by using this command: <code>ssh n1</code></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/anupd'><span itemprop='name'>anupd</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-18T11:15:37Z' class='post-time'>
+                    September 18, 2025, 11:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-18T11:15:37Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It should be able to ssh like this:<br>
+<code>ssh root@n1.erp.aishwa.in</code></p>
+<p>Also there could be many other failure points. You need to carefully check the error logs, understand them and debug them.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jpatelarkimetrix'><span itemprop='name'>jpatelarkimetrix</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-18T14:02:36Z' class='post-time'>
+                    September 18, 2025,  2:02pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-18T14:02:36Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks <a class="mention" href="/u/anupd">@anupd</a> ;</p>
+<p>I’ll check, can you please point me to right direction where to look for error logs?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/anupd'><span itemprop='name'>anupd</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-09-30T15:45:23Z' class='post-time'>
+                    September 30, 2025,  3:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-30T15:45:23Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>There are many possible locations of error to be seen based on the type of error.</p>
+<p>One of the most probable one is Error log.<br>
+Another: Console<br>
+Another: Output tab in respective doctype<br>
+Another: Ansible task : some field or response field, output tabs, etc</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="/t/guide-installing-press-and-get-it-up-and-running-part-1/152576?page=2">next page →</a></b></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

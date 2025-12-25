@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Long-term, Enterprise-focused Application Framework</title>
+    <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093</link>
+    <description>Over the years, many of us in this community have benefited from the ideas, speed, and openness that Frappe and ERPNext have brought to open-source business applications. They have enabled countless teams and individuals to build real systems quickly.
+
+At the same time, some of us working in long-lived, enterprise environments have been reflecting on a complementary but slightly different set of priorities:
+
+1. Extremely strong core invariants
+
+2. Clear ownership of foundational domain concepts
+
+3. Long support cycles and conservative change policies
+
+4. Explicit governance and decision-making processes
+
+5. Predictable upgrade paths over many years
+
+These priorities are not about speed or feature velocity, but about trust, stability, and longevity;  qualities that become increasingly important as systems grow older, larger, and more widely depended upon.
+
+With this context, I started early exploration of a clean-slate, open, enterprise-grade application framework, inspired by lessons learned from Frappe, ERPNext, and other mature platforms, but intentionally designed from day one around:
+
+1. A minimal and stable core
+
+2. Strong separation between core domains and extensions
+
+3. Governance-first development
+
+4. Conservative evolution rather than rapid iteration
+
+This effort is not a fork, and not positioned as a replacement for any existing project. Rather, it is an attempt to explore a parallel path that may better suit organisations where stability and policy matter more than rapid change.
+
+I am still in the thinking and design phase and are primarily looking for:
+
+1. People interested in long-term platform design
+
+2. Experience from enterprise or public-sector deployments
+
+3. Contributors who value documentation, review, and governance as much as code
+
+If this perspective resonates with you, or if you would like to help shape such an initiative at an early stage, I would welcome your thoughts and participation.
+
+The goal is to learn together; openly, respectfully, and with a long view in mind.</description>
+    
+    <lastBuildDate>Thu, 25 Dec 2025 17:10:56 +0000</lastBuildDate>
+    <category>Uncategorized</category>
+    <atom:link href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[Satinderpal_Singh]]></dc:creator>
+        <description><![CDATA[
+            <p>What resonates most is the clear distinction being made between <em>productivity-first frameworks</em> and <em>infrastructure-grade platforms</em>. Both are necessary, but they serve fundamentally different risk profiles.</p>
+<p>From long-lived enterprise and public-sector deployments, the hardest problems are rarely about features—they are about invariants, upgrade safety, governance, documentation, and institutional continuity when people and vendors change. In that context, prioritising explicit design, conservative evolution, and reviewable decisions makes a lot of sense.</p>
+<p>At the same time, it’s important that such an effort remains complementary, learning from ecosystems like Frappe rather than fragmenting them. Even if this exploration only results in clearer architectural principles or governance models, it would still be a meaningful contribution for the wider community.</p>
+<p>I’m interested in following and contributing to the design and governance discussion.</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/28">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/28</link>
+        <pubDate>Thu, 25 Dec 2025 17:10:56 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-28</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[hsrai]]></dc:creator>
+        <description><![CDATA[
+            <p>First, I would like to sincerely thank everyone who took the time and effort to respond. The thoughtfulness and depth of the replies are genuinely appreciated. The perspectives shared - including the experiences mentioned by <a class="mention" href="https://discuss.frappe.io/u/rmehta">@rmehta</a>  about multiple attempts at rewriting; reinforce my belief that this area is worth careful exploration, while also underlining the size and complexity of the problem. All cautions and advice shared here are being taken very seriously.</p>
+<p>In my view, most of us here share a deep appreciation for the Frappe / ERPNext ecosystem. Many of us were drawn to it early because of its clarity, speed, and openness, and it has enabled a large number of real-world systems.</p>
+<p>Over time, as systems grow and are used in more demanding, long-lived environments, it is natural to observe certain limitations or trade-offs; often the result of decisions that were absolutely right at the time they were made.</p>
+<p>Exploring whether it is possible to design a system without some of those limitations, using today’s technologies and with the benefit of hindsight, should not be seen as any form of disrespect to Frappe or ERPNext. On the contrary, such exploration is only possible because of the experience and lessons gained from these projects.</p>
+<p>I would appreciate support for this kind of “scratch your own itch” exploration. I am confident it can benefit greatly from the insights and experience of this community, and that some of the learnings may, in turn, be useful to contributors and to the broader Frappe / ERPNext ecosystem as well.</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/27">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/27</link>
+        <pubDate>Thu, 25 Dec 2025 10:35:17 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-27</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[0spinboson]]></dc:creator>
+        <description><![CDATA[
+            <p>maybe. would depend on the analysis of the major pain points and to what extent they’re addressable while staying within the frappe framework before people can commit to that, plus whether people are comfortable with the governance model, i’d say? I mean I can deal with frappe’s warts so far, and vastly prefer it over odoo community edition or tryton or whatever, so i’m committed, but I cannot speak for others, leaving aside what my commitment is worth <img src="https://discuss.frappe.io/images/emoji/twitter/upside_down_face.png?v=14" title=":upside_down_face:" class="emoji" alt=":upside_down_face:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/26">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/26</link>
+        <pubDate>Wed, 24 Dec 2025 20:20:05 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-26</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[asieftejani]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://discuss.frappe.io/u/hsrai">@hsrai</a> said:</p>
+<blockquote>
+<p>A minimal and stable core</p>
+</blockquote>
+<p><a class="mention" href="https://discuss.frappe.io/u/0spinboson">@0spinboson</a> said:</p>
+<blockquote>
+<p>it would be much better to try to improve the frappe core applications</p>
+</blockquote>
+<p><a class="mention" href="https://discuss.frappe.io/u/gagan0123">@gagan0123</a> said:</p>
+<blockquote>
+<p>Frappe needs to move away from the culture of “breaking things fast” and move toward a model where the core remains stable</p>
+</blockquote>
+<p>If this whole conversation is to lead to any kind of action can we at least agree on a small team help the leadership keep the core stable and sacred?</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/25">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/25</link>
+        <pubDate>Wed, 24 Dec 2025 15:05:56 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-25</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[rmehta]]></dc:creator>
+        <description><![CDATA[
+            <p>FWIW, I have made at least 4 separate attempts to rewrite the framework but always abandoned it and transplanted the core ideas back to the existing one.</p>
+<p>On general comments about governance, I have said before (on behalf of Frappe) that we want to onboard the best contributors and maintainers and support them however we can. But for that you have to show some skin in the game by traiging issues, fixing small bugs, connecting with core devs and then we are happy to offer merge rights based on your contributions.</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/24">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/24</link>
+        <pubDate>Tue, 23 Dec 2025 15:44:43 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-24</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[Adeel_Siddiqui]]></dc:creator>
+        <description><![CDATA[
+            <p>This is a mammoth task on its own. Every developer dealing with legacy systems wants to start from a fresh slate, but that approach has its own traps. Legacy code is often ‘ugly’ precisely because it handles ugly edge cases. Do not tear down the old, ‘ugly’ wall until you fully understand why it was built that way. While Frappe may be aging, many of its solutions simply work in the context of enterprise grade software, to which many other low-code / no-code frameworks can’t even compare. Frappe is not just a framework, it’s a platform that evolved alongside ERPNext. It gave birth to Frappe Cloud (Press) and carries the deep context of the ERP landscape, its requirements and its pitfalls. To implement an RBAC system comparable to Frappe’s, you would need significant time just to design the mechanism. The same applies to offering customizations, such as Frappe’s Custom Field system.</p>
+<p>Customization is the bread and butter of ERP, so don’t sleep on it early on. Every single tenant has unique specifications and needs, you cannot simply code a custom app and redeploy it for each tenant. That is a sourcecode nightmare that systems like Frappe solve through their built-in customization engines. I don’t know if there’s any term for it, but every enterprise software suffers from this phenomenon. The management layer wants to abstract everything out of the developer layer, and wants to design such a system that ‘non-technical’ employees can ‘design’ and configure themselves (SQL was once touted for business folks to ask questions from database in natural language), removing the need for developers altogether. That’s the crux of low-code, no-code promise. But such a system is a pipe dream especially in enterprise software. Now you can’t completely refute their reasoning, you can keep everything inside code for an erp project, but not for an erp product that you’re shipping to dozens or hundreds of customers, there has to be a delicate balance of compromises. The likes of Business Rule Engine, etc have to exist on that scale.</p>
+<p>I used to work with a legacy codebase of an enterprise application. The system was designed in C#/.Net by engineers who previously worked in Delphi and Visual Basic. To be frank, it was almost a big ball of mud. Circular dependencies that were a nightmare to untangle, and there were so many of them throughout every layer that everyone gave up. There were no tests anywhere at all. I begged senior devs and my managers, to start something fresh, but they always shut me down. At that time I hated it, but now I understand why, at the end of the day the system with all its pitfalls and shortcomings provided value to our clients, it reasoned its existence by simply working. You never know how long will it take for you to finally ship the new architecture. If you have enough cash flow and human capital, you can assign a new R&amp;D team for it but still you can’t give them a deadline. In the world of enterprise software, if you don’t ship fast enough, your ship will sink.</p>
+<p>I wish you all the best in your endeavors. Before you start, you should read Mythical Man Month (specifically the part of second system effect) and also such related works by the likes of <a href="https://www.youtube.com/watch?v=QUz10Z1AfLc" rel="noopener nofollow ugc">Grady Booch</a>, <a href="https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/" rel="noopener nofollow ugc">Joel Spolsky</a>, <a href="https://stevemcconnell.com/articles/software-quality-at-top-speed" rel="noopener nofollow ugc">Steve McConnell</a>, etc if that interests you. One thing you should do is connect with Rushabh and the foundational developers of Frappe and ERPNext. Ask them, if given the opportunity today, how would they design a new system from scratch?</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/23">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/23</link>
+        <pubDate>Mon, 22 Dec 2025 19:06:28 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-23</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[peterg]]></dc:creator>
+        <description><![CDATA[
+            <p>I am sympathetic to frustration. That doesn’t entitle any of us to be nasty. Please speak respectfully in these forums.</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/22">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/22</link>
+        <pubDate>Mon, 22 Dec 2025 18:55:31 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-22</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[brian_pond]]></dc:creator>
+        <description><![CDATA[
+            <p>I love this idea, assuming it’s a new and independent project.</p>
+<aside class="quote no-group" data-username="peterg" data-post="19" data-topic="158093">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/peterg/48/55463_2.png" class="avatar"> peterg:</div>
+<blockquote>
+<p>Your entitlement is showing.</p>
+</blockquote>
+</aside>
+<p>I didn’t interpret Volk’s reply as <em>entitled</em>.  Disappointed, frustrated, confused, and a bit angry?  Sure.  But not entitled.</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/21">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/21</link>
+        <pubDate>Mon, 22 Dec 2025 18:16:20 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-21</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[volkswagner]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group quote-modified" data-username="peterg" data-post="19" data-topic="158093">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/peterg/48/55463_2.png" class="avatar"> peterg:</div>
+<blockquote>
+<p>Your entitlement is showing.</p>
+</blockquote>
+</aside>
+<p>It’s pure frustration.</p>
+<p>I’ve invested thousands of dollars in the Frappe partnership program (with a negative return).</p>
+<p>I’ve tried to help the project in multiple avenues and I will still continue to help in the ways I know how and can afford.</p>
+<p>I can only hope Frappe management listens to user complaints. Without customer feedback no product on the planet will evolve into a satisfactory experience for the consumer.</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/20">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/20</link>
+        <pubDate>Mon, 22 Dec 2025 18:00:29 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-20</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[peterg]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="volkswagner" data-post="18" data-topic="158093">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/volkswagner/48/55461_2.png" class="avatar"> volkswagner:</div>
+<blockquote>
+<p>I don’t think Frappe is understaffed; they are underfocused. They let team members run wild, creating new products before perfecting existing apps.</p>
+</blockquote>
+</aside>
+<p>Your comment is entitled and unkind. It’s not a good look.</p>
+<p>The Frappe leadership has talked extensively both here and on its blog about how it is structured and why. If that structure is not your preference, that’s fine, but there’s absolutely no need to be rude about it.</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/19">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/19</link>
+        <pubDate>Mon, 22 Dec 2025 16:00:36 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-19</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[volkswagner]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="0spinboson" data-post="15" data-topic="158093">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/0spinboson/48/79751_2.png" class="avatar"> 0spinboson:</div>
+<blockquote>
+<p>Yet – crickets. That to me smells like an understaffed team</p>
+</blockquote>
+</aside>
+<p>I don’t think Frappe is understaffed; they are underfocused. They let team members run wild, creating new products before perfecting existing apps.</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/18">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/18</link>
+        <pubDate>Mon, 22 Dec 2025 15:04:17 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-18</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[asieftejani]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://discuss.frappe.io/u/gagan0123">@gagan0123</a> I was about to ask in this post: -<br>
+Is there some balanced middle ground sweet spot where we can satisfy both the Indie and the enterprise<br>
+I think you have pretty much answered that<br>
+Now lets hope the leaders read + agree or at least comments with the disgreement - <a class="mention" href="https://discuss.frappe.io/u/rmehta">@rmehta</a><br>
+Thanks</p>
+<blockquote>
+<p>We should focus on making Frappe’s components less “soldered” to the core.</p>
+</blockquote>
+<p>I dint understand this sentence - I thought the core (which is in this case the framework) should be stable and sacred. Do you mean erpnext should not be soldered to the framework so that people can customize it?<br>
+If not please can you provide an example for my better understanding</p>
+<p>Edit: - They just bumped up the python and node versions - does that impact the core?<br>
+Also many apps in v16 dont work with v15 - that could be a classical example of backward compatability</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/17">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/17</link>
+        <pubDate>Mon, 22 Dec 2025 13:10:40 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-17</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[gagan0123]]></dc:creator>
+        <description><![CDATA[
+            <p>The tension between Indie and Enterprise is often framed as a zero-sum game, but I believe that’s a false bifurcation. Coming from a WordPress background, I’ve seen how a stable core can serve both a $5-a-month site and a global enterprise equally. While the architectures differ, the governance lessons are universal: you don’t need to choose between speed and stability if you prioritize modularity.</p>
+<p><strong>1. Performance as a Universal Value</strong></p>
+<p>Performance isn’t an “Enterprise” feature. A faster core benefits an indie on a tiny VPS just as much as a corporation with millions of rows. Optimizing query efficiency and the Python runtime is a tide that lifts all boats. If it makes the framework faster, it should be implemented for everyone.</p>
+<p><strong>2.</strong> <strong>Core vs. Extensibility</strong></p>
+<p>In WordPress, the “core” is sacred and stable, while the “expandability” allows enterprises to build custom, complex systems on top of it.</p>
+<ul>
+<li>
+<p><strong>For the Indie:</strong> They get a functional, “batteries-included” system out of the box that just works.</p>
+</li>
+<li>
+<p><strong>For the Enterprise:</strong> They get a modular architecture where “batteries are replaceable.”</p>
+</li>
+</ul>
+<p>We should focus on making Frappe’s components less “soldered” to the core. This doesn’t hurt the Indie who uses the defaults; it just makes the framework more robust for those who need to swap them out.</p>
+<p><strong>3. Stability and Backward Compatibility</strong></p>
+<p>A critical reason for WordPress’s dominance is its legendary commitment to backward compatibility. Things stay compatible for a very long time before they are eventually deprecated and removed. This gives developers the confidence to build plugins and custom enterprise logic knowing that a minor core update won’t wreck their work.</p>
+<p>Frappe needs to move away from the culture of “breaking things fast” and move toward a model where the core remains stable. When developers don’t have to spend half their time fixing things that broke due to a framework update, they can spend that time building features that benefit the whole ecosystem.</p>
+<p><strong>4. Reducing Technical Debt</strong></p>
+<p>The “low-code debt” mentioned in this thread is real. WordPress solved this by providing clear APIs and hooks. By refining Frappe to be less “magical” and more “explicit,” we reduce the interest on that debt. Clearer abstractions help the DIY indie debugger and the enterprise consultant equally.</p>
+<p><strong>5. Predictable Release Cycles</strong></p>
+<p>The biggest benefit to the project would be a <strong>predictable release and deprecation cycle.</strong> Enterprises need this for planning, and Indie users benefit from not having their setups broken by sudden architectural shifts.</p>
+<p>Instead of choosing between Indie speed and Enterprise stability, we should focus on <strong>Performance, Modularity, and Stability.</strong> If we make the framework faster and its components more decoupled, the “target market” becomes irrelevant because the tool itself becomes fundamentally better for any use case.</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/16">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/16</link>
+        <pubDate>Mon, 22 Dec 2025 10:11:16 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-16</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[0spinboson]]></dc:creator>
+        <description><![CDATA[
+            <p>tbh as an relative newcomer with a fair bit of experience with volunteer work and some with developing for frappe (at least enough to run up against its shortcomings), I think this is an avenue worth exploring in depth, but I’m not sure I would start from zero once the exploration phase is done — I just don’t think there’s that much demand for a wholly new framework that people would have to learn and develop and migrate to on the one hand, and volunteers (or FOSS organizations who can spare a few dozen FTE for exploratory work) to develop such a framework.</p>
+<p>I say this, mindful of the fact that both odoo and tryton exist and are being developed ‘by the community’ (sort of, in the first case, as they’re constantly being rug-pulled by odoo Inc.), and none of these initiatives are likely to really get somewhere if only because of the fragmentation. Adding yet another framework besides frappe to this.. no.</p>
+<p>Also, looking at frappe framework itself, I think the issue is less one of bad choices being made per se, and more one of lacking core developers and volunteers contributing to that. Take for instance <a href="https://github.com/frappe/frappe/issues/33335" rel="noopener nofollow ugc">this bug report</a> i submitted, which struck me as pretty fundamental. Yet we’re now months in, and nobody seems to have so much as looked at it; and while the RQ improvements in frappe v16 go some way to mitigating this, I don’t really see a reason why you wouldn’t want to have this as well. Yet – crickets. That to me smells like an understaffed team. Similarly, in developing my own app, I added a system for critical operation rules; middleware to check whether the users calling APIs actually have the right to call them, and a secure operations framework, with which I’ve tried to do something similar for regular method calls (adding roles and role profiles checks). That said, I’ve mostly come up with these on my own, and I don’t doubt that there are issues with my choice of solutions.</p>
+<p>All of these strike me as shortcomings that a better system would deal with, but my sense so far is that it would be much better to try to improve the frappe core applications by pushing for better separations of concerns and the creation of best practices documentation, coupled with ways to make it easier to find, organize and catalog existing functionality than having them be spread across modules, patching code, and so on. And I also think that most of these are issues that frappe could and would adopt if there was a bigger pool of core devs that talked through issues more; and that the issue isn’t so much rapid development as it is lack of people leading to things slipping through that shouldn’t.</p>
+<p>That said, the things that puzzle me most about frappe is the lack of core audit logs.</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/15">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/15</link>
+        <pubDate>Mon, 22 Dec 2025 08:29:07 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-15</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[revant_one]]></dc:creator>
+        <description><![CDATA[
+            <ul>
+<li>There is always a clash between Indie vs Enterprise.</li>
+<li>The Indie needs quickstart, low-code, get to market fast without hasles. “batteries included”. The day 1 developer.</li>
+<li>The Enterprise want to then extend it beyond day 1 on day 100. “batteries replacable”.</li>
+<li>Generally I deal with enterprises who want the battries replaced. I’ve replaced them with our upgrade packs.</li>
+<li>This Indie vs Enterprise problem is with all low-code stuff out there. You get the 80% done (as loan/debt) and then choke on 20% (as heavy interest to clear the debt). I stopped looking at low code, because I’ll land with more or less frappe framework alternative where I will benchmark it for features with “frappe framework”.</li>
+<li>Indie is looking for one click install of ERPNext, DIY, cheap, low cost.</li>
+<li>Enterprise is looking for installs on complex environments that scales. Ready to pay, no-diy and consultants-based, They are not looking for one click install of SAP.</li>
+</ul>
+<p>I had expressed this before, the framework should be progressive. In indie-mode, you should not depend on anything other than python runtime. Mac, Windows, Linux doesn’t matter. It should be monolith, users in db, everything in one db. reports, permissions, user attributes, etc are in same db. Potentially runs on standard SQL (sqlite), so developer doesn’t even need a running db service.</p>
+<p>When enterprise want the same, they will do things that are seen as unnecessary by indie: CQRS, External authorization (OPA/SpiceDB/Cedar, etc), change the DB to postgres or something external. Add analytics (elasticsearch, clickhouse, etc) db for reporting. They will connect with their central identity provider / AD instead creating and syncing user in all apps.</p>
+<p>If we see the target market (Indie) it is for the $5 cloud instances. So the focus is: One-click installs, One screen apps, Easy hacks to code. Enterprise are not even target because each enterprise will potentially express different things and hold you accountable compared to low skin-in-the-game investment of $5.</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/14">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/14</link>
+        <pubDate>Mon, 22 Dec 2025 03:17:08 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-14</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[asieftejani]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://discuss.frappe.io/u/hsrai">@hsrai</a> so this means you want to start a fresh framework with your stated objectives<br>
+how will new_green_framework integrate/connect with erpnext?<br>
+maybe check out <a href="https://github.com/tryton/tryton" class="inline-onebox" rel="noopener nofollow ugc">GitHub - tryton/tryton: Mirror of tryton</a> which is the fork of odoo before going commercial - i believe it is community driven and focused on stability</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/13">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/13</link>
+        <pubDate>Sat, 20 Dec 2025 07:09:03 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-13</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[Yamen_Zakhour]]></dc:creator>
+        <description><![CDATA[
+            <p>Interesting.. I always find myself attempting similar projects but discontinue them halfway because I work solely and lose interest quickly.</p>
+<p>One of those attempts was with the cloudflare stack which I find is really promising and powerful (apart from sqlite but it works for 95% of businesses).</p>
+<p>The stack is something like this;</p>
+<ul>
+<li>Backend (ex; Hono) &amp; Frontend(s) (ex; Payload) : <strong>Cloudflare Workers</strong></li>
+<li>DB: <strong>Cloudflare D1 (+ Drizzle)</strong></li>
+<li>Redis: <strong>Cloudflare KV &amp; Queues</strong></li>
+<li>Storage: <strong>Cloudflare R2</strong></li>
+<li>Realtime: <strong>Cloudflare Durable Objects</strong></li>
+<li>Scheduler: <strong>Cloudflare Triggers</strong></li>
+</ul>
+<p>It might be ambitious but the concept is to build an entirely serverless and extremely scalable framework that lives on edge. There are no devops involved, and provisioning is literally few clicks (which you can automate).</p>
+<p>This stack also benefits from all Cloudflare services and tools like cdn, data localization and hints, cloudflare uptimes and speed (edge), Cloudflare for SaaS and more</p>
+<p>The most interesting part is you can literally provision hundreds of instances (clients) while still remaining on their extremely generous $5 plan and the extremely cheap zero-egress storage.</p>
+<p>Another solution which I have been recently utilizing for smaller clients is Directus with PostgreSQL which provides almost the same “batteries” as Frappe, much easier maintaining and provisioning, a more powerful permission system which makes it suitable for multitenancy, and most importantly, much more mature SDKs for frontend development with easier socket setup. You can consider this rather than rebuilding the dream framework from scratch.</p>
+<p>Things that keep me in the Frappe ecosystem;</p>
+<ul>
+<li>Reports system</li>
+<li>Customization layers (Fields, Client and Sever Scripts)</li>
+<li>Print formats</li>
+<li>Clients with “enterprise” requirements specially accounting, inventory and manufacturing. ERPNext is extremely mature and battle-tested with years of R&amp;D.</li>
+<li>Workflows</li>
+</ul>
+<p>Things I hate about it;</p>
+<ul>
+<li>Provisioning &amp; DevOps</li>
+<li>Anything related to custom frontend development and UIs (and socket)</li>
+<li>Sometimes the permission system specially for grouped resources (like teams, lead pools, etc..)</li>
+</ul>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/12">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/12</link>
+        <pubDate>Fri, 19 Dec 2025 21:24:42 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-12</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[hsrai]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="revant_one" data-post="5" data-topic="158093">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/revant_one/48/55081_2.png" class="avatar"> revant_one:</div>
+<blockquote>
+<p>If I’m starting today, I’d never fork and repeat the same decisions.</p>
+</blockquote>
+</aside>
+<p>+1</p>
+<p>This states everything. I thought many time to fork and improve it, but after thinking hard I concluded to start a green project, with no traces of any project will be good. Just take clues, good things and bad things from various project and decide on that for a new green project, with blank slate.</p>
+<aside class="quote no-group" data-username="revant_one" data-post="5" data-topic="158093">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/revant_one/48/55081_2.png" class="avatar"> revant_one:</div>
+<blockquote>
+<ul>
+<li>No global state, I’d start with dependency injection, easy to test and override.</li>
+<li>use python entry points in combination with DI to override, customize anything from the framework or any apps. <a href="https://setuptools.pypa.io/en/latest/userguide/entry_point.html" class="inline-onebox" rel="noopener nofollow ugc">Entry Points - setuptools 80.9.0 documentation</a> . NO monkeypatching or re-invented hooks.py</li>
+<li>I’d get rid of doctype jsons (15+ years ago there was no Pydantic) and dynamic doctype metadata in db is also not really preferred by me, I’ll not prefer any property change unless the tests pass. So if new field is required, I’ll prefer new release. Same with custom doctypes. I’ve made so many apps, I add doctypes and fields of my own. And for overrides, check point 2</li>
+<li>I’d not be re-inventing components if i find tools provided by larger community than ours. Use <code>uv</code>, <code>cookiecutter</code>, <code>sqlalchemy</code>, etc. don’t re-invent (most have great test coverage, assures stability)</li>
+<li>Async/Await all the way.</li>
+<li>Hexagonal Architecture, Ports are defined, Adapters are implemented, Adapters can be extended, replaced, overridden.</li>
+<li>Target good test coverage from the day 1. Begin with TDD/BDD.</li>
+</ul>
+</blockquote>
+</aside>
+<p>Your apprach is matching with mine a lot. With feedback of all who are experiencing pain because of decisions taken decades back (which were right at that time) either as developer or user, as expectations have hightened because of many new technologies. tools, and approached emerged since then, will help to pick the best for the propesed project.</p>
+<aside class="quote no-group quote-modified" data-username="revant_one" data-post="5" data-topic="158093">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/revant_one/48/55081_2.png" class="avatar"> revant_one:</div>
+<blockquote>
+<aside class="quote no-group" data-username="hsrai" data-post="4" data-topic="158093">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/hsrai/48/56696_2.png" class="avatar"> hsrai:</div>
+<blockquote>
+<p>If around 5 people are interested and can contribute 5–6 hours/week, I’ll share an initial blueprint for discussion.</p>
+</blockquote>
+</aside>
+<p>I’d like to know the blueprint irrespective of we do it or not.</p>
+</blockquote>
+</aside>
+<p>To develop an enterprise-grade open platform for building long-lived business applications, inspired by lessons learned from existing ERP and web frameworks.</p>
+<p>Vision is to provide:</p>
+<ol>
+<li>
+<p>A strong, coherent core framework that values correctness, clarity, and longevity</p>
+</li>
+<li>
+<p>A modular ecosystem that avoids duplication while encouraging reuse</p>
+</li>
+<li>
+<p>A system where architecture decisions are explicit, documented, and reviewable</p>
+</li>
+<li>
+<p>A platform suitable for serious enterprise use, not only rapid prototyping</p>
+</li>
+</ol>
+<p>A software which prioritises:</p>
+<ol>
+<li>
+<p>Stability over novelty</p>
+</li>
+<li>
+<p>Explicit design over convenience shortcuts</p>
+</li>
+<li>
+<p>Governance over personalities</p>
+</li>
+<li>
+<p>Predictability over surprise upgrades</p>
+</li>
+</ol>
+<p>It is less about coding but more about goverance and decisions taken.</p>
+<h2><a name="p-489220-tech-stack-1" class="anchor" href="https://discuss.frappe.io#p-489220-tech-stack-1"></a>Tech Stack</h2>
+<p>Proposed, may change after discussion and feedback. Anything not listed here is out of scope for now.</p>
+<p>A. Core Principles</p>
+<ol>
+<li>Enterprise-grade stability</li>
+<li>Clean core, strict ownership</li>
+<li>Governance-first</li>
+<li>Cross-platform development</li>
+<li>Linux-first production</li>
+<li>No runtime magic</li>
+<li>Composition over inheritance</li>
+<li>Deterministic builds &amp; upgrades</li>
+</ol>
+<p>B. Backend</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Area</th>
+<th style="text-align:left">Proposed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Language</td>
+<td style="text-align:left">Python 3.11+ Base 3.12, Supported 3.11 to 3.14</td>
+</tr>
+<tr>
+<td style="text-align:left">Framework</td>
+<td style="text-align:left">FastAPI (explicit, typed)</td>
+</tr>
+<tr>
+<td style="text-align:left">Starlette</td>
+<td style="text-align:left">ASGI framework</td>
+</tr>
+<tr>
+<td style="text-align:left">Uvicorn</td>
+<td style="text-align:left">Production-grade ASGI server</td>
+</tr>
+<tr>
+<td style="text-align:left">Data modeling</td>
+<td style="text-align:left">Pydantic [v2 Strong typing, validation, serialization / Config via env/files (12-factor friendly), typing-extensions: Forward compatibility ] + dataclasses</td>
+</tr>
+<tr>
+<td style="text-align:left">ORM / DB abstraction</td>
+<td style="text-align:left">SQLAlchemy 2.x  (explicit usage only, typed, async support)</td>
+</tr>
+<tr>
+<td style="text-align:left">Migrations</td>
+<td style="text-align:left">Versioned, explicit (Alembic-style)</td>
+</tr>
+<tr>
+<td style="text-align:left">API style</td>
+<td style="text-align:left">REST first (GraphQL optional later)</td>
+</tr>
+<tr>
+<td style="text-align:left">Auth</td>
+<td style="text-align:left">Core-owned, pluggable providers</td>
+</tr>
+<tr>
+<td style="text-align:left">Backend style</td>
+<td style="text-align:left">ASGI</td>
+</tr>
+</tbody>
+</table>
+</div><p>C. Database</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Area</th>
+<th style="text-align:left">Proposed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Primary DB</td>
+<td style="text-align:left">PostgreSQL</td>
+</tr>
+<tr>
+<td style="text-align:left">Schema</td>
+<td style="text-align:left">Strict constraints</td>
+</tr>
+<tr>
+<td style="text-align:left">JSON usage</td>
+<td style="text-align:left">Allowed, but not core data</td>
+</tr>
+<tr>
+<td style="text-align:left">Multi-tenancy</td>
+<td style="text-align:left">Explicit, not implicit</td>
+</tr>
+</tbody>
+</table>
+</div><p>D. Cache / Queue</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Area</th>
+<th style="text-align:left">Proposed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Default</td>
+<td style="text-align:left">Valkey</td>
+</tr>
+<tr>
+<td style="text-align:left">Role</td>
+<td style="text-align:left">Cache, jobs, locks</td>
+</tr>
+<tr>
+<td style="text-align:left">Abstraction</td>
+<td style="text-align:left">Required (no Valkey-specific code)</td>
+</tr>
+<tr>
+<td style="text-align:left">Redis</td>
+<td style="text-align:left">Compatible, not primary</td>
+</tr>
+</tbody>
+</table>
+</div><p>F. Frontend</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Area</th>
+<th style="text-align:left">Proposed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Framework</td>
+<td style="text-align:left">Vue 3</td>
+</tr>
+<tr>
+<td style="text-align:left">Language</td>
+<td style="text-align:left">TypeScript</td>
+</tr>
+<tr>
+<td style="text-align:left">UI model</td>
+<td style="text-align:left">Component-based only</td>
+</tr>
+<tr>
+<td style="text-align:left">Styling</td>
+<td style="text-align:left">likeFrappe-UI (Tailwind based. but green project)</td>
+</tr>
+<tr>
+<td style="text-align:left">State</td>
+<td style="text-align:left">Explicit (Pinia)</td>
+</tr>
+<tr>
+<td style="text-align:left">Rendering</td>
+<td style="text-align:left">SPA (no server-side HTML)</td>
+</tr>
+</tbody>
+</table>
+</div><p>G. Tooling</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Area</th>
+<th style="text-align:left">Proposed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CLI</td>
+<td style="text-align:left">Single cross-platform CLI</td>
+</tr>
+<tr>
+<td style="text-align:left">Shell scripts</td>
+<td style="text-align:left">Forbidden</td>
+</tr>
+<tr>
+<td style="text-align:left">Node usage</td>
+<td style="text-align:left">Frontend build only</td>
+</tr>
+<tr>
+<td style="text-align:left">Python pkg mgmt</td>
+<td style="text-align:left">poetry</td>
+</tr>
+<tr>
+<td style="text-align:left">JS pkg mgmt</td>
+<td style="text-align:left">pnpm</td>
+</tr>
+<tr>
+<td style="text-align:left">Build model</td>
+<td style="text-align:left">Deterministic, reproducible</td>
+</tr>
+</tbody>
+</table>
+</div><p>H. PDF / Reporting</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Area</th>
+<th style="text-align:left">Proposed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">wkhtmltopdf</td>
+<td style="text-align:left">Not used</td>
+</tr>
+<tr>
+<td style="text-align:left">PDF</td>
+<td style="text-align:left">Pluggable (WeasyPrint)</td>
+</tr>
+<tr>
+<td style="text-align:left">Reports</td>
+<td style="text-align:left">Metadata-driven, backend-owned</td>
+</tr>
+</tbody>
+</table>
+</div><p>I. OS &amp; Platform</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Area</th>
+<th style="text-align:left">Proposed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Dev OS</td>
+<td style="text-align:left">Windows / Linux / macOS</td>
+</tr>
+<tr>
+<td style="text-align:left">Prod OS</td>
+<td style="text-align:left">Linux-first</td>
+</tr>
+<tr>
+<td style="text-align:left">Containers</td>
+<td style="text-align:left">Optional, not mandatory</td>
+</tr>
+<tr>
+<td style="text-align:left">systemd/k8s</td>
+<td style="text-align:left">Infra concern, not framework</td>
+</tr>
+</tbody>
+</table>
+</div><p>J. Explicitly Excluded</p>
+<ol>
+<li>jQuery</li>
+<li>Bootstrap</li>
+<li>Server-side HTML templates</li>
+<li>Runtime schema mutation</li>
+<li>App-level core entity redefinition</li>
+<li>God tool like Bench</li>
+</ol>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/11">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/11</link>
+        <pubDate>Fri, 19 Dec 2025 17:54:47 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-11</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[revant_one]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="szufisher" data-post="7" data-topic="158093">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/letter_avatar_proxy/v4/letter/s/3ec8ea/48.png" class="avatar"> szufisher:</div>
+<blockquote>
+<p>any sample code can be referenced? currently I heavily used monkey patches to override standard functions, I would like to learn and use more elegant way to achieve the same.</p>
+</blockquote>
+</aside>
+<p>No frappe example yet. Non frappe example here: <a href="https://gitlab.com/castlecraft/citadel/-/blob/main/citadel/apps/book-keeper/examples/book_keeper_plugin/pyproject.toml?ref_type=heads">https://gitlab.com/castlecraft/citadel/-/blob/main/citadel/apps/book-keeper/examples/book_keeper_plugin/pyproject.toml?ref_type=heads</a></p>
+<aside class="quote no-group" data-username="kolate_sambhaji" data-post="8" data-topic="158093">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/kolate_sambhaji/48/42955_2.png" class="avatar"> kolate_sambhaji:</div>
+<blockquote>
+<p><strong>Event Sourcing &amp; CQRS</strong>: Store state changes as events rather than current state.<br>
+Products like Shopify use this for complete audit trails and time-travel debugging.</p>
+</blockquote>
+</aside>
+<aside class="quote no-group" data-username="kolate_sambhaji" data-post="8" data-topic="158093">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/kolate_sambhaji/48/42955_2.png" class="avatar"> kolate_sambhaji:</div>
+<blockquote>
+<p><strong>Domain-Driven Design</strong>: Clear aggregate boundaries, enforce business rules at<br>
+the domain level. Critical for complex business logic.</p>
+</blockquote>
+</aside>
+<p>That should be optional. Framework should allow to move progressively towards DDD/CQRS/ES. May not be required on the first day.</p>
+<aside class="quote no-group" data-username="kolate_sambhaji" data-post="8" data-topic="158093">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/kolate_sambhaji/48/42955_2.png" class="avatar"> kolate_sambhaji:</div>
+<blockquote>
+<p><strong>Idempotency Keys</strong>: Prevent duplicate transactions on retries. Every payment<br>
+gateway does this.</p>
+</blockquote>
+</aside>
+<p>I believe this check happens on modified field of doctype. There is no explicit “version”, does the job. We get the message to retry because doc was modified.</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/10">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/10</link>
+        <pubDate>Fri, 19 Dec 2025 13:03:29 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-10</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[asieftejani]]></dc:creator>
+        <description><![CDATA[
+            <p>If you are adding GraphQL please also include SOAP XML (Quickbooks desktop USA market &amp; Tally India)</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/9">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/9</link>
+        <pubDate>Fri, 19 Dec 2025 12:54:04 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-9</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[kolate_sambhaji]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="revant_one" data-post="5" data-topic="158093">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/revant_one/48/55081_2.png" class="avatar"> revant_one:</div>
+<blockquote>
+<p>If I’m starting today, I’d never fork and repeat the same decisions.</p>
+</blockquote>
+</aside>
+<p><a class="mention" href="https://discuss.frappe.io/u/revant_one">@revant_one</a>  You mentioned some excellent points!, I would like to add a few more patterns that other enterprise products or other companies using (just to help new developers <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=14" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> )</p>
+<p><strong>Event Sourcing &amp; CQRS</strong>: Store state changes as events rather than current state.<br>
+Products like Shopify use this for complete audit trails and time-travel debugging.</p>
+<p><strong>GraphQL APIs</strong>: Let clients request exactly what they need. GitHub, Shopify use<br>
+this to reduce over-fetching and API call overhead.</p>
+<p><strong>Message Queue Architecture</strong>: Decouple long-running tasks (RabbitMQ, Celery).<br>
+Odoo uses PostgreSQL NOTIFY, but dedicated message brokers scale better.</p>
+<p><strong>Feature Flags</strong>: Deploy code without enabling features. GitLab uses this for<br>
+gradual rollouts and A/B testing without redeployment.</p>
+<p><strong>OpenTelemetry</strong>: Distributed tracing across services. Essential once you move<br>
+beyond monoliths.</p>
+<p><strong>Contract Testing (Pact)</strong>: Test service integrations without running all<br>
+services. Netflix uses this extensively.</p>
+<p><strong>Domain-Driven Design</strong>: Clear aggregate boundaries, enforce business rules at<br>
+the domain level. Critical for complex business logic.</p>
+<p><strong>API Versioning</strong>: Stripe’s approach of maintaining multiple API versions with<br>
+clear deprecation timelines is gold standard.</p>
+<p><strong>Idempotency Keys</strong>: Prevent duplicate transactions on retries. Every payment<br>
+gateway does this.</p>
+<p>Currently in Frappe, we work around these with creative solutions, but native<br>
+framework support would be transformative for enterprise deployments, also it will help both developers and framework.</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/8">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/8</link>
+        <pubDate>Fri, 19 Dec 2025 08:52:24 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-8</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[szufisher]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="revant_one" data-post="5" data-topic="158093">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/revant_one/48/55081_2.png" class="avatar"> revant_one:</div>
+<blockquote>
+<p>use python entry points in combination with DI to override, customize anything from the framework or any apps. <a href="https://setuptools.pypa.io/en/latest/userguide/entry_point.html">Entry Points - setuptools 80.9.0 documentation</a>. NO monkeypatching or re-invented hooks.py</p>
+</blockquote>
+</aside>
+<p>any sample code can be referenced? currently I heavily used monkey patches to override standard functions, I would like to learn and use more elegant way to achieve the same.</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/7">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/7</link>
+        <pubDate>Fri, 19 Dec 2025 08:28:26 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-7</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[asieftejani]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://discuss.frappe.io/u/revant_one">@revant_one</a>  these are excellent points - now thats called experience</p>
+<p>so if I can ask the leadership or anyone else to help me understand: -<br>
+why are we trying to de-google (e.g. drive, slides, mail) when these tools are available free for us and battle tested<br>
+wouldnt it be better to stablize as <a class="mention" href="https://discuss.frappe.io/u/hsrai">@hsrai</a> says , improvement documents/translations and try to implement some of the above points by <a class="mention" href="https://discuss.frappe.io/u/revant_one">@revant_one</a></p>
+<p>then again maybe this is what the gold partners or enterprise customers want so in the end “Customer is King” then only can “Community gets FOSS”</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/6">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/6</link>
+        <pubDate>Fri, 19 Dec 2025 06:09:56 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-6</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[revant_one]]></dc:creator>
+        <description><![CDATA[
+            <aside class="quote no-group" data-username="hsrai" data-post="4" data-topic="158093">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/hsrai/48/56696_2.png" class="avatar"> hsrai:</div>
+<blockquote>
+<p>To clarify, this is not a fork and not a rejection of Frappe or ERPNext. These projects have empowered a large community and deserve respect.</p>
+</blockquote>
+</aside>
+<p>If I’m starting today, I’d never fork and repeat the same decisions.</p>
+<ul>
+<li>No global state, I’d start with dependency injection, easy to test and override.</li>
+<li>use python entry points in combination with DI to override, customize anything from the framework or any apps. <a href="https://setuptools.pypa.io/en/latest/userguide/entry_point.html" class="inline-onebox">Entry Points - setuptools 80.9.0 documentation</a>. NO monkeypatching or re-invented hooks.py</li>
+<li>I’d get rid of doctype jsons (15+ years ago there was no Pydantic) and dynamic doctype metadata in db is also not really preferred by me, I’ll not prefer any property change unless the tests pass. So if new field is required, I’ll prefer new release. Same with custom doctypes. I’ve made so many apps, I add doctypes and fields of my own. And for overrides, check point 2</li>
+<li>I’d not be re-inventing components if i find tools provided by larger community than ours. Use <code>uv</code>, <code>cookiecutter</code>, <code>sqlalchemy</code>, etc. don’t re-invent (most have great test coverage, assures stability)</li>
+<li>Async/Await all the way.</li>
+<li>Hexagonal Architecture, Ports are defined, Adapters are implemented, Adapters can be extended, replaced, overridden.</li>
+<li>Target good test coverage from the day 1. Begin with TDD/BDD.</li>
+</ul>
+<aside class="quote no-group" data-username="hsrai" data-post="4" data-topic="158093">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/hsrai/48/56696_2.png" class="avatar"> hsrai:</div>
+<blockquote>
+<p>If around 5 people are interested and can contribute 5–6 hours/week, I’ll share an initial blueprint for discussion.</p>
+</blockquote>
+</aside>
+<p>I’d like to know the blueprint irrespective of we do it or not.</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/5">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/5</link>
+        <pubDate>Fri, 19 Dec 2025 05:42:09 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-5</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+      <item>
+        <title>Long-term, Enterprise-focused Application Framework</title>
+        <dc:creator><![CDATA[hsrai]]></dc:creator>
+        <description><![CDATA[
+            <p>Thank you for the thoughtful replies <a class="mention" href="https://discuss.frappe.io/u/peer">@Peer</a> and <a class="mention" href="https://discuss.frappe.io/u/asieftejani">@asieftejani</a>  I appreciate the time and perspective shared.</p>
+<p>To clarify, this is not a fork and not a rejection of Frappe or ERPNext. These projects have empowered a large community and deserve respect.</p>
+<p>The intent is to explore a complementary approach for environments that prioritise long-term stability, conservative change, and clear governance.</p>
+<p>This is an early, exploratory phase focused on learning and dialogue, not division or replacement.</p>
+<p>If around 5 people are interested and can contribute 5–6 hours/week, I’ll share an initial blueprint for discussion.</p>
+<p>The effort would be slow, transparent, community-driven, and openly documented, no timelines or expectations of quick outcomes.</p>
+<p>I welcome continued discussion and input.</p>
+          <p><a href="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/4">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093/4</link>
+        <pubDate>Fri, 19 Dec 2025 01:07:00 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158093-4</guid>
+        <source url="https://discuss.frappe.io/t/long-term-enterprise-focused-application-framework/158093.rss">Long-term, Enterprise-focused Application Framework</source>
+      </item>
+  </channel>
+</rss>

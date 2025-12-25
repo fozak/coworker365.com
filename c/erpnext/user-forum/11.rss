@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:discourse="http://www.discourse.org/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>User Forum - Frappe Forum</title>
+    <link>https://discuss.frappe.io/c/erpnext/user-forum/11</link>
+    <description>Topics in the &#39;User Forum&#39; category </description>
+    
+      <lastBuildDate>Fri, 05 Dec 2025 06:31:30 +0000</lastBuildDate>
+      <atom:link href="https://discuss.frappe.io/c/erpnext/user-forum/11.rss" rel="self" type="application/rss+xml" />
+        <item>
+          <title>How to safely change the date of delivery note transaction from 02/05/2025 to 12/31/2024?</title>
+          <dc:creator><![CDATA[Pejay]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>I’m working on a case where we need to update the <strong>Delivery Note date</strong> to reflect the correct posting month—specifically, to move the entry back to <strong>December 2024</strong>. This adjustment is purely for correction purposes to ensure the report shows accurate figures for that month. No other values or linked transactions need to be changed.</p>
+<p>Best Regards,<br>
+Peter</p>
+            <p><small>12 posts - 5 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/how-to-safely-change-the-date-of-delivery-note-transaction-from-02-05-2025-to-12-31-2024/157668">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/how-to-safely-change-the-date-of-delivery-note-transaction-from-02-05-2025-to-12-31-2024/157668</link>
+          <pubDate>Fri, 05 Dec 2025 06:31:30 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-157668</guid>
+          <source url="https://discuss.frappe.io/t/how-to-safely-change-the-date-of-delivery-note-transaction-from-02-05-2025-to-12-31-2024/157668.rss">How to safely change the date of delivery note transaction from 02/05/2025 to 12/31/2024?</source>
+        </item>
+        <item>
+          <title>Stock Entry (Manufacture): Understanding How Total Outgoing Value Is Calculated</title>
+          <dc:creator><![CDATA[Pejay]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>In the example image below, I’m a bit confused. Based on my understanding, the total outgoing value should be the sum of the Raw Materials in the document. However, while the total Raw Materials is 15,476, the total outgoing value shows 27,635.42. I’m trying to understand why there is such a difference.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/a/6/a6fbef9c9b8d201cf8c3263cd17943f9d0abb3df.png" data-download-href="https://discuss.frappe.io/uploads/default/a6fbef9c9b8d201cf8c3263cd17943f9d0abb3df" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/a/6/a6fbef9c9b8d201cf8c3263cd17943f9d0abb3df_2_586x500.png" alt="image" data-base62-sha1="nPd1T2Z2qtG8mtLhVILzrZ42Ii3" width="586" height="500" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/a/6/a6fbef9c9b8d201cf8c3263cd17943f9d0abb3df_2_586x500.png, https://discuss.frappe.io/uploads/default/original/3X/a/6/a6fbef9c9b8d201cf8c3263cd17943f9d0abb3df.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/a/6/a6fbef9c9b8d201cf8c3263cd17943f9d0abb3df.png 2x" data-dominant-color="212121"></a></div><p></p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/stock-entry-manufacture-understanding-how-total-outgoing-value-is-calculated/157621">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/stock-entry-manufacture-understanding-how-total-outgoing-value-is-calculated/157621</link>
+          <pubDate>Thu, 04 Dec 2025 03:24:11 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-157621</guid>
+          <source url="https://discuss.frappe.io/t/stock-entry-manufacture-understanding-how-total-outgoing-value-is-calculated/157621.rss">Stock Entry (Manufacture): Understanding How Total Outgoing Value Is Calculated</source>
+        </item>
+        <item>
+          <title>Erpnext to Erpnext Sync</title>
+          <dc:creator><![CDATA[Arianguy]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>Is the below pattern possible ?<br>
+Checking as some places go slow during peak concurrent hours .</p>
+<p>I tried speaking with some partners , but doesn’t get concrete answers .</p>
+<p>* If there are cross company transaction like Stock transfer from Company 1 to Company 3 , will it Sync automatically in Company 3 ?</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/5/7/5707b1d04c53f4507f3a393c52be1c7736ce9061.png" data-download-href="https://discuss.frappe.io/uploads/default/5707b1d04c53f4507f3a393c52be1c7736ce9061" title="image"><img src="https://discuss.frappe.io/uploads/default/original/3X/5/7/5707b1d04c53f4507f3a393c52be1c7736ce9061.png" alt="image" data-base62-sha1="cpU1A1vsp0Iwoa1jh6JZ2FzUyeB" width="690" height="393" data-dominant-color="F8F8F8"></a></div><p></p>
+            <p><small>3 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/erpnext-to-erpnext-sync/157079">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/erpnext-to-erpnext-sync/157079</link>
+          <pubDate>Thu, 20 Nov 2025 09:41:21 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-157079</guid>
+          <source url="https://discuss.frappe.io/t/erpnext-to-erpnext-sync/157079.rss">Erpnext to Erpnext Sync</source>
+        </item>
+        <item>
+          <title>Asking if how difficult it is to upgrade version from v15.45.4 to v-16?</title>
+          <dc:creator><![CDATA[Pejay]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>Drop your thoughts that others might consider also to upgrade from v-15 to v-16.<br>
+List all the expected might happen before and after upgrading to v-16.</p>
+<p>This might be a good topic for those who plan to upgrade.</p>
+<p>Thank you</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/asking-if-how-difficult-it-is-to-upgrade-version-from-v15-45-4-to-v-16/157052">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/asking-if-how-difficult-it-is-to-upgrade-version-from-v15-45-4-to-v-16/157052</link>
+          <pubDate>Thu, 20 Nov 2025 03:53:21 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-157052</guid>
+          <source url="https://discuss.frappe.io/t/asking-if-how-difficult-it-is-to-upgrade-version-from-v15-45-4-to-v-16/157052.rss">Asking if how difficult it is to upgrade version from v15.45.4 to v-16?</source>
+        </item>
+        <item>
+          <title>Question about Accounting Report in ERPNext</title>
+          <dc:creator><![CDATA[furkanayyildiz]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>Hello, I’m new to ERPNext and I have a question.</p>
+<p>When I try to generate a report in the general accounting section, it only shows sales invoices and payment entries. What I actually need is a more detailed report — one that lists every product sold along with every payment entry related to it. In short, I want to combine the product-wise sales records with the payment entry records and display them as a single report. Is it possible to do this?</p>
+            <p><small>8 posts - 5 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/question-about-accounting-report-in-erpnext/156907">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/question-about-accounting-report-in-erpnext/156907</link>
+          <pubDate>Sun, 16 Nov 2025 18:45:50 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156907</guid>
+          <source url="https://discuss.frappe.io/t/question-about-accounting-report-in-erpnext/156907.rss">Question about Accounting Report in ERPNext</source>
+        </item>
+        <item>
+          <title>Decimal Difference in Input VAT Total vs. Item Total in Purchase Transactions</title>
+          <dc:creator><![CDATA[Pejay]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>Hi everyone,</p>
+<p>I’m encountering a recurring issue in <strong>Purchase Order → Purchase Receipt → Purchase Invoice</strong> where there’s always a <strong>small decimal difference (₱0.01 or ₱0.02)</strong> between the <strong>total item amount</strong> and the <strong>Input VAT total</strong>.</p>
+<p>Here’s a recent example:</p>
+<ul>
+<li>
+<p><strong>Total Items (Gross Amount):</strong> ₱23,205.00</p>
+</li>
+<li>
+<p><strong>Net Total:</strong> ₱20,718.76</p>
+</li>
+<li>
+<p><strong>Input VAT (12%):</strong> ₱2,486.25</p>
+<ul>
+<li><strong>Computed Total:</strong> ₱23,205.01 (should be ₱23,205.00)</li>
+</ul>
+</li>
+<li>
+<p><strong>Withholding Tax (1%):</strong> ₱207.19</p>
+<ul>
+<li><strong>Total after EWT:</strong> ₱22,997.82</li>
+</ul>
+</li>
+</ul>
+<p>As shown in the screenshot, the <strong>Input VAT total differs by ₱0.01</strong> from the total items amount.<br>
+This happens quite often, especially when VAT and EWT are both applied.</p>
+<h4><a name="p-486121-issue-1" class="anchor" href="https://discuss.frappe.io#p-486121-issue-1"></a>Issue:</h4>
+<p>The decimal difference appears during rounding — either on the <strong>per-line item level</strong> or when ERPNext computes <strong>tax on net totals</strong>.<br>
+When multiple taxes are involved, these rounding discrepancies accumulate, causing mismatches between:</p>
+<ul>
+<li>
+<p>Purchase Order</p>
+</li>
+<li>
+<p>Purchase Receipt</p>
+</li>
+<li>
+<p>Purchase Invoice</p>
+</li>
+</ul>
+<h4><a name="p-486121-expected-behavior-2" class="anchor" href="https://discuss.frappe.io#p-486121-expected-behavior-2"></a>Expected Behavior:</h4>
+<p>The <strong>Input VAT total</strong> should match the <strong>gross total of items</strong> exactly (no decimal difference).</p>
+<h4><a name="p-486121-steps-to-reproduce-3" class="anchor" href="https://discuss.frappe.io#p-486121-steps-to-reproduce-3"></a>Steps to Reproduce:</h4>
+<ol>
+<li>
+<p>Create a Purchase Order with a total of ₱23,205.00 and apply 12% Input VAT and 1% EWT.</p>
+</li>
+<li>
+<p>Save and check the computed tax totals.</p>
+</li>
+<li>
+<p>You’ll see the Input VAT total becomes ₱23,205.01 instead of ₱23,205.00.</p>
+</li>
+</ol>
+<h4><a name="p-486121-environment-4" class="anchor" href="https://discuss.frappe.io#p-486121-environment-4"></a>Environment:</h4>
+<ul>
+<li>
+<p>ERPNext Version: (v15.45.4)</p>
+</li>
+<li>
+<p>Frappe Version: (v15.81.0)</p>
+</li>
+<li>
+<p>Currency Precision: 2</p>
+</li>
+<li>
+<p>Global Defaults:  Checked: Disable Rounded Total</p>
+</li>
+</ul>
+<h4><a name="p-486121-question-5" class="anchor" href="https://discuss.frappe.io#p-486121-question-5"></a>Question:</h4>
+<p>Is there a <strong>way to synchronize rounding precision</strong> between the item total and computed tax total so that all documents (PO, PR, PI) remain consistent?</p>
+<p>I’ve attached a screenshot showing the discrepancy.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/3/738dc69ddf2ee2cc1b4c7c2fb7f4aaf419980fc2.png" data-download-href="https://discuss.frappe.io/uploads/default/738dc69ddf2ee2cc1b4c7c2fb7f4aaf419980fc2" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/3/738dc69ddf2ee2cc1b4c7c2fb7f4aaf419980fc2_2_690x323.png" alt="image" data-base62-sha1="gueF4sNjfKdCcTpa9miRu8hmi4y" width="690" height="323" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/3/738dc69ddf2ee2cc1b4c7c2fb7f4aaf419980fc2_2_690x323.png, https://discuss.frappe.io/uploads/default/optimized/3X/7/3/738dc69ddf2ee2cc1b4c7c2fb7f4aaf419980fc2_2_1035x484.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/7/3/738dc69ddf2ee2cc1b4c7c2fb7f4aaf419980fc2.png 2x" data-dominant-color="1B1B1B"></a></div><p></p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/decimal-difference-in-input-vat-total-vs-item-total-in-purchase-transactions/156664">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/decimal-difference-in-input-vat-total-vs-item-total-in-purchase-transactions/156664</link>
+          <pubDate>Tue, 11 Nov 2025 01:50:35 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156664</guid>
+          <source url="https://discuss.frappe.io/t/decimal-difference-in-input-vat-total-vs-item-total-in-purchase-transactions/156664.rss">Decimal Difference in Input VAT Total vs. Item Total in Purchase Transactions</source>
+        </item>
+        <item>
+          <title>&quot;Sales Invoice Posting Date Time cannot be before Delivery Note Posting Date&quot; Error</title>
+          <dc:creator><![CDATA[anant.acharya]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>Hi, I’m facing a unique problem. I am getting the following error while creating a sales invoice from a delivery note.</p>
+<p><strong>Sales Invoice Posting Date Time (08/11/2025 14:53:03) cannot be before Delivery Note Posting Date.</strong><br>
+DN # : DCH/S/2526/00680<br>
+DN Posting Date &amp; Time: 08/11/2025 09:41:22</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/b/fbe3b72c0d06a1283be3a56c30de70b96dd53984.png" data-download-href="https://discuss.frappe.io/uploads/default/fbe3b72c0d06a1283be3a56c30de70b96dd53984" title="image"><img src="https://discuss.frappe.io/uploads/default/original/3X/f/b/fbe3b72c0d06a1283be3a56c30de70b96dd53984.png" alt="image" data-base62-sha1="zWjIQsIpML9F0m381XBFWR1srY0" width="662" height="260"></a></div><p></p>
+<p>However, as the message shows, the delivery note posting is before the Sales Invoice posting date. (In our instance, the users are not allowed to create backdated invoices.) Hence, technically the issue shouldnt come.</p>
+<p>I tried going through the source code but I could not find where this error is coming from.</p>
+<p>We tried this throughout the same day but same error kept coming. Then the next day, we tried again and in the first attempt, the invoice got created without any issues.</p>
+<p>This made me think that while the message shows both date and time, only the date parts are being compared, and the time parts are being ignored.</p>
+<p>Am I bonkers in thinking like this? Has anyone else faced this problem? and if so, Is there a solution for this? I’d really appreciate some help here.</p>
+            <p><small>8 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/sales-invoice-posting-date-time-cannot-be-before-delivery-note-posting-date-error/156626">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/sales-invoice-posting-date-time-cannot-be-before-delivery-note-posting-date-error/156626</link>
+          <pubDate>Mon, 10 Nov 2025 07:03:16 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156626</guid>
+          <source url="https://discuss.frappe.io/t/sales-invoice-posting-date-time-cannot-be-before-delivery-note-posting-date-error/156626.rss">&quot;Sales Invoice Posting Date Time cannot be before Delivery Note Posting Date&quot; Error</source>
+        </item>
+        <item>
+          <title>Transfer Asset Between Companies with Related Accounting Entries (Depreciation JEs, etc.)</title>
+          <dc:creator><![CDATA[Pejay]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>Hi everyone,</p>
+<p>I’m exploring whether ERPNext has a built-in feature or workflow that supports <strong>transferring an Asset from one Company to another</strong> — specifically, along with all its <strong>linked accounting entries</strong> (such as Depreciation Journal Entries).</p>
+<p>Here’s the use case:</p>
+<ul>
+<li>
+<p>An asset is created under <strong>Company A</strong> and has already gone through <strong>depreciation posting</strong>.</p>
+</li>
+<li>
+<p>The asset has multiple <strong>Journal Entries</strong> linked to it (depreciation, adjustments, etc.).</p>
+</li>
+<li>
+<p>When performing an <strong>Asset Transfer</strong>, I’d like the system to also reflect the transfer in accounting — meaning:</p>
+<ul>
+<li>
+<p>The <strong>company field</strong> in all related accounting entries (e.g., Journal Entries) should change to <strong>Company B</strong>.</p>
+</li>
+<li>
+<p>The <strong>accounts</strong> used should also map to Company B’s chart of accounts.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Essentially, I want to ensure that the asset and its entire accounting trail are properly reflected under the new company after transfer.</p>
+<p>I’ve checked the existing <strong>Asset Transfer</strong> workflow but it seems to only handle asset-level movement (location, cost center, etc.), not the associated GL entries.</p>
+<p>Is there an existing feature, hook, or best practice for this type of <strong>cross-company asset transfer with accounting adjustments</strong>?<br>
+Or would this require a <strong>custom implementation</strong> (e.g., a script to re-create or re-map the JEs under the target company)?</p>
+<p>Any reference, documentation, or implementation insight would be greatly appreciated.</p>
+<p>Thanks in advance!</p>
+            <p><small>5 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/transfer-asset-between-companies-with-related-accounting-entries-depreciation-jes-etc/156530">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/transfer-asset-between-companies-with-related-accounting-entries-depreciation-jes-etc/156530</link>
+          <pubDate>Fri, 07 Nov 2025 03:26:23 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156530</guid>
+          <source url="https://discuss.frappe.io/t/transfer-asset-between-companies-with-related-accounting-entries-depreciation-jes-etc/156530.rss">Transfer Asset Between Companies with Related Accounting Entries (Depreciation JEs, etc.)</source>
+        </item>
+        <item>
+          <title>After login is this the right start page and how to continue?</title>
+          <dc:creator><![CDATA[GentleRV]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>Searching on inter net I see that older version have. after login as administrator, colored icons on the page</p>
+<p>I get this as first screen after login as Administrator with branch 15, using crmapp.localhost:8000 or <a href="http://crmapp.localhost" rel="noopener nofollow ugc">http://crmapp.localhost</a> give the same screen.</p>
+<p>Also looking for the manufacturing part in nexterp but unable to find it.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/6/8/685442847bc05b964af48869dc514f9091622258.png" data-download-href="https://discuss.frappe.io/uploads/default/685442847bc05b964af48869dc514f9091622258" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/6/8/685442847bc05b964af48869dc514f9091622258_2_690x311.png" alt="image" data-base62-sha1="eSWbkDD06fnmH682WjlaCaCrQ36" width="690" height="311" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/6/8/685442847bc05b964af48869dc514f9091622258_2_690x311.png, https://discuss.frappe.io/uploads/default/optimized/3X/6/8/685442847bc05b964af48869dc514f9091622258_2_1035x466.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/6/8/685442847bc05b964af48869dc514f9091622258.png 2x" data-dominant-color="FDFDFD"></a></div><p></p>
+<p>Please advice how to continue.</p>
+<p>Thanks</p>
+            <p><small>4 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/after-login-is-this-the-right-start-page-and-how-to-continue/156516">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/after-login-is-this-the-right-start-page-and-how-to-continue/156516</link>
+          <pubDate>Thu, 06 Nov 2025 15:12:29 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156516</guid>
+          <source url="https://discuss.frappe.io/t/after-login-is-this-the-right-start-page-and-how-to-continue/156516.rss">After login is this the right start page and how to continue?</source>
+        </item>
+        <item>
+          <title>No Permitted Charts</title>
+          <dc:creator><![CDATA[Dfordev]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>I have been working in setting up a erpnext test project. I created multiple users with a custom created role. For the same, I gave the following permissions:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/3/8/380be89780ad103fa6b3329deb31768477727f68.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/380be89780ad103fa6b3329deb31768477727f68" title="4cd3d794-54fe-480f-b31e-9830495cdda0"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/3/8/380be89780ad103fa6b3329deb31768477727f68_2_690x330.jpeg" alt="4cd3d794-54fe-480f-b31e-9830495cdda0" data-base62-sha1="7ZOfDVaaXykVLAHWoEYIhNDMfS8" width="690" height="330" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/3/8/380be89780ad103fa6b3329deb31768477727f68_2_690x330.jpeg, https://discuss.frappe.io/uploads/default/optimized/3X/3/8/380be89780ad103fa6b3329deb31768477727f68_2_1035x495.jpeg 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/3/8/380be89780ad103fa6b3329deb31768477727f68_2_1380x660.jpeg 2x" data-dominant-color="FAFAFA"></a></div><p></p>
+<p><img src="" alt="" role="presentation" width="" height="">Role permissions</p>
+<p>But when i logged in the user with the custom role, I don’t see the charts visible in the workspace and when try to open dashboards, I am seeing this:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/4/3/4393a084cef5f690391b59f8a8dfea825fb869bb.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/4393a084cef5f690391b59f8a8dfea825fb869bb" title="28e8d9c5-239d-4fbf-a49d-ada9eb3bf2af"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/4/3/4393a084cef5f690391b59f8a8dfea825fb869bb_2_690x330.jpeg" alt="28e8d9c5-239d-4fbf-a49d-ada9eb3bf2af" data-base62-sha1="9DOhmbEpiQ2wMTEYngySU5ZcZ87" width="690" height="330" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/4/3/4393a084cef5f690391b59f8a8dfea825fb869bb_2_690x330.jpeg, https://discuss.frappe.io/uploads/default/optimized/3X/4/3/4393a084cef5f690391b59f8a8dfea825fb869bb_2_1035x495.jpeg 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/4/3/4393a084cef5f690391b59f8a8dfea825fb869bb_2_1380x660.jpeg 2x" data-dominant-color="696969"></a></div><p></p>
+<p><img src="" alt="" role="presentation" width="" height="">Error Image</p>
+<p>Kindly guide me what’s the fix.<br>
+(PS: Even default charts not working)</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/no-permitted-charts/156396">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/no-permitted-charts/156396</link>
+          <pubDate>Tue, 04 Nov 2025 06:36:37 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156396</guid>
+          <source url="https://discuss.frappe.io/t/no-permitted-charts/156396.rss">No Permitted Charts</source>
+        </item>
+        <item>
+          <title>Executing child-doc code</title>
+          <dc:creator><![CDATA[trainingacademy]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>Hi</p>
+<p>I have two parent docs utilizing the same child doc as a table.</p>
+<p>Parent_Doc_1 : with table child_doc</p>
+<p>Parent_Doc_2 : with table child_doc</p>
+<p>I can execute code for the child doc by placing the code in the parent JS-file but then</p>
+<p>I would have to put the code in both the JS-file for Parent_Doc_1 and Parent_Doc_2.</p>
+<p>I tried putting the code that is executed for the child_doc in the JS-file in the child_doc folder on</p>
+<p>the server, but it does not trigger ?</p>
+<p>Please if I can ask for some guidance ?</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/executing-child-doc-code/156343">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/executing-child-doc-code/156343</link>
+          <pubDate>Mon, 03 Nov 2025 08:58:11 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156343</guid>
+          <source url="https://discuss.frappe.io/t/executing-child-doc-code/156343.rss">Executing child-doc code</source>
+        </item>
+        <item>
+          <title>How to set fixed valuation rate in Stock Entry purpose = Material Issue</title>
+          <dc:creator><![CDATA[Pejay]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>Currently we are using Moving Average, but I want a specific item to set a fixed valuation rate and that will serve as the basic rate when creating Material Issue for that Item. Is there any setting that would fix my problem? Thank you</p>
+<p>Best Regards,</p>
+<p>Peter John</p>
+            <p><small>4 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/how-to-set-fixed-valuation-rate-in-stock-entry-purpose-material-issue/156151">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/how-to-set-fixed-valuation-rate-in-stock-entry-purpose-material-issue/156151</link>
+          <pubDate>Wed, 29 Oct 2025 02:17:43 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156151</guid>
+          <source url="https://discuss.frappe.io/t/how-to-set-fixed-valuation-rate-in-stock-entry-purpose-material-issue/156151.rss">How to set fixed valuation rate in Stock Entry purpose = Material Issue</source>
+        </item>
+        <item>
+          <title>How to hide specific role in custom html block?</title>
+          <dc:creator><![CDATA[Pejay]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>I have created an UI for doctypes navigation and created custom html block for specific role and then I have placed all the custom html block in the home dashboard. It applies the UI for specific role but the problem is when using System Manager or Administrator it display all custom html block since it has all the roles applied.</p>
+<p>That’s why I want to hide these custom html block for System Manager and Administrator.</p>
+<p>Best Regards,<br>
+Peter John</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/how-to-hide-specific-role-in-custom-html-block/156023">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/how-to-hide-specific-role-in-custom-html-block/156023</link>
+          <pubDate>Mon, 27 Oct 2025 03:07:06 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156023</guid>
+          <source url="https://discuss.frappe.io/t/how-to-hide-specific-role-in-custom-html-block/156023.rss">How to hide specific role in custom html block?</source>
+        </item>
+        <item>
+          <title>How to set default to collapse the sidebar menu in /app/home page</title>
+          <dc:creator><![CDATA[Pejay]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>I would like to set default to collapse the sidebar menu, I have already tried overriding the page.js for sidebar function, but it doesn’t work for me. Maybe someone could guide me on how to solve my problem. Thank you</p>
+<p>Best Regards,<br>
+Peter John</p>
+            <p><small>6 posts - 4 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/how-to-set-default-to-collapse-the-sidebar-menu-in-app-home-page/155944">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/how-to-set-default-to-collapse-the-sidebar-menu-in-app-home-page/155944</link>
+          <pubDate>Fri, 24 Oct 2025 07:39:25 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155944</guid>
+          <source url="https://discuss.frappe.io/t/how-to-set-default-to-collapse-the-sidebar-menu-in-app-home-page/155944.rss">How to set default to collapse the sidebar menu in /app/home page</source>
+        </item>
+        <item>
+          <title>Serial No not available after transactions</title>
+          <dc:creator><![CDATA[trainingacademy]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>Hi</p>
+<p>It seems that, after creating an item and transactions are processed against that item, the “Has serial No” cannot be changed.</p>
+<p>Just wondering if anyone knows what the logic behind this is? To a certain extent I can understand if there</p>
+<p>were preciously serial nos logged on the system, to not allow it to be disabled. It does however make sense</p>
+<p>that the other direction should be possible i.e. if there weren’t any serial nos and the user wants to now</p>
+<p>have serial nos, that this be possible ? Or am I missing something ?</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/serial-no-not-available-after-transactions/155823">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/serial-no-not-available-after-transactions/155823</link>
+          <pubDate>Tue, 21 Oct 2025 12:17:54 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155823</guid>
+          <source url="https://discuss.frappe.io/t/serial-no-not-available-after-transactions/155823.rss">Serial No not available after transactions</source>
+        </item>
+        <item>
+          <title>Giving only view permission to a particular warehouse</title>
+          <dc:creator><![CDATA[mohi-khan]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>Hi,</p>
+<p>I want to give a user  full control over a certain warehouse(s) and only view permission on certain warehouse(s).</p>
+<p>Can anyone help me.</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/giving-only-view-permission-to-a-particular-warehouse/155807">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/giving-only-view-permission-to-a-particular-warehouse/155807</link>
+          <pubDate>Tue, 21 Oct 2025 07:52:58 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155807</guid>
+          <source url="https://discuss.frappe.io/t/giving-only-view-permission-to-a-particular-warehouse/155807.rss">Giving only view permission to a particular warehouse</source>
+        </item>
+        <item>
+          <title>🚀 Introducing Frappe/ERPNext Docker Manager – a fully automated solution to set up and manage your </title>
+          <dc:creator><![CDATA[devinvento]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p><img src="https://discuss.frappe.io/images/emoji/twitter/link.png?v=12" title=":link:" class="emoji" alt=":link:" loading="lazy" width="20" height="20"> <strong>GitHub:</strong> <a href="https://github.com/devinvento/frappe-erpnext-docker-manager" class="inline-onebox" rel="noopener nofollow ugc">GitHub - devinvento/frappe-erpnext-docker-manager</a></p>
+<hr>
+<h3><a name="p-484392-what-it-does-1" class="anchor" href="https://discuss.frappe.io#p-484392-what-it-does-1"></a><img src="https://discuss.frappe.io/images/emoji/twitter/jigsaw.png?v=12" title=":jigsaw:" class="emoji" alt=":jigsaw:" loading="lazy" width="20" height="20"> What It Does</h3>
+<p>This project automates the entire process of installing, configuring, and managing <strong>Frappe/ERPNext using Docker</strong> — with a single, interactive script.<br>
+No more manual setup or long commands — just run it, and your stack is ready!</p>
+<h3><a name="p-484392-key-features-2" class="anchor" href="https://discuss.frappe.io#p-484392-key-features-2"></a><img src="https://discuss.frappe.io/images/emoji/twitter/gear.png?v=12" title=":gear:" class="emoji" alt=":gear:" loading="lazy" width="20" height="20"> Key Features</h3>
+<ul>
+<li><img src="https://discuss.frappe.io/images/emoji/twitter/whale.png?v=12" title=":whale:" class="emoji" alt=":whale:" loading="lazy" width="20" height="20"> <strong>Fully Automated Setup:</strong> Installs Docker, Bench, and dependencies automatically.</li>
+<li><img src="https://discuss.frappe.io/images/emoji/twitter/bulb.png?v=12" title=":bulb:" class="emoji" alt=":bulb:" loading="lazy" width="20" height="20"> <strong>Simple Commands:</strong> Start, stop, restart, or update containers easily.</li>
+<li><img src="https://discuss.frappe.io/images/emoji/twitter/building_construction.png?v=12" title=":building_construction:" class="emoji" alt=":building_construction:" loading="lazy" width="20" height="20"> <strong>Multi-Site &amp; App Support:</strong> Create multiple sites and install custom apps in seconds.</li>
+<li><img src="https://discuss.frappe.io/images/emoji/twitter/closed_lock_with_key.png?v=12" title=":closed_lock_with_key:" class="emoji" alt=":closed_lock_with_key:" loading="lazy" width="20" height="20"> <strong>Environment Isolation:</strong> Keeps your ERPNext instance stable and clean.</li>
+<li><img src="https://discuss.frappe.io/images/emoji/twitter/toolbox.png?v=12" title=":toolbox:" class="emoji" alt=":toolbox:" loading="lazy" width="20" height="20"> <strong>Backup &amp; Restore Tools:</strong> Easy data safety options included.</li>
+</ul>
+<h3><a name="p-484392-perfect-for-3" class="anchor" href="https://discuss.frappe.io#p-484392-perfect-for-3"></a><img src="https://discuss.frappe.io/images/emoji/twitter/computer.png?v=12" title=":computer:" class="emoji" alt=":computer:" loading="lazy" width="20" height="20"> Perfect For</h3>
+<p>Developers, DevOps engineers, and ERPNext administrators who want:</p>
+<ul>
+<li>Faster deployment on any server (Ubuntu-based)</li>
+<li>Hassle-free updates and maintenance</li>
+<li>A reliable, repeatable installation experience</li>
+</ul>
+<h3><a name="p-484392-open-source-actively-developed-4" class="anchor" href="https://discuss.frappe.io#p-484392-open-source-actively-developed-4"></a><img src="https://discuss.frappe.io/images/emoji/twitter/earth_africa.png?v=12" title=":earth_africa:" class="emoji" alt=":earth_africa:" loading="lazy" width="20" height="20"> Open Source &amp; Actively Developed</h3>
+<p>I’m continuously improving the project — feedback, issues, and contributions are very welcome!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/introducing-frappe-erpnext-docker-manager-a-fully-automated-solution-to-set-up-and-manage-your/155752">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/introducing-frappe-erpnext-docker-manager-a-fully-automated-solution-to-set-up-and-manage-your/155752</link>
+          <pubDate>Sun, 19 Oct 2025 02:22:14 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155752</guid>
+          <source url="https://discuss.frappe.io/t/introducing-frappe-erpnext-docker-manager-a-fully-automated-solution-to-set-up-and-manage-your/155752.rss">🚀 Introducing Frappe/ERPNext Docker Manager – a fully automated solution to set up and manage your </source>
+        </item>
+        <item>
+          <title>How to configure combined item in production</title>
+          <dc:creator><![CDATA[trainingacademy]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>Hi</p>
+<p>Here is the setup…</p>
+<p>An item is sold as a combined item i.e. male and female connector. Sold in a pack.<br>
+My BOM requires that they be two separate items i.e. “male” and “female”. Yes, I can<br>
+use STE = Repack to split the combined item into two items, but that us then done<br>
+manually before the production. Is there a way to handle this via a BOM configuration ?</p>
+<p>One way i was thinking is to set up a BOM that renders the combined item as the input item ( raw material ) and the “male” as the “produced” item with the “female” landing up in the scrap store. In which case a STE transfer is required to put the “female” into the main Store. So its not ideal but can work.</p>
+<p>Any suggestions please ?</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/how-to-configure-combined-item-in-production/155657">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/how-to-configure-combined-item-in-production/155657</link>
+          <pubDate>Fri, 17 Oct 2025 06:18:12 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155657</guid>
+          <source url="https://discuss.frappe.io/t/how-to-configure-combined-item-in-production/155657.rss">How to configure combined item in production</source>
+        </item>
+        <item>
+          <title>Insights app installed but not visible in Workspace on Frappe Cloud site</title>
+          <dc:creator><![CDATA[ssnraju]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>Insights app installed but not visible in Workspace on Frappe Cloud site</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/insights-app-installed-but-not-visible-in-workspace-on-frappe-cloud-site/155398">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/insights-app-installed-but-not-visible-in-workspace-on-frappe-cloud-site/155398</link>
+          <pubDate>Sun, 12 Oct 2025 19:05:42 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155398</guid>
+          <source url="https://discuss.frappe.io/t/insights-app-installed-but-not-visible-in-workspace-on-frappe-cloud-site/155398.rss">Insights app installed but not visible in Workspace on Frappe Cloud site</source>
+        </item>
+        <item>
+          <title>Auto Repeat task returns OK, but no entries are created (Bug?)</title>
+          <dc:creator><![CDATA[ChipwizBen]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>Suddenly, and without any apparent change, all Auto Repeat jobs of all kinds have stopped working. The version of ERPNext has not changed between the successful creation and the unsuccessful creation, and the system has not been updated either. I first noticed it today after September’s month-end invoices did not auto-create.</p>
+<p>If I run “Execute” on the frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_repeat_entry job, the “Scheduled Job Log” shows a successful execution, and the log file also has some entries that are relevant to the files that would otherwise get created:</p>
+<pre><code class="lang-auto">2025-10-04 15:45:15,511 home-erp-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_r..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erp', user='me') (erp::scheduled_job::frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_repeat_entry)
+2025-10-04 15:45:15,898 home-erp-frappe-bench:default: Job OK (erp::scheduled_job::frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_repeat_entry)
+2025-10-04 15:45:15,899 Result is kept for 600 seconds
+2025-10-04 15:45:15,903 home-erp-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.automation.doctype.auto_repeat.auto_repeat.create_repeated_entries', kwargs={'data': [{'name': 'OnCall Transfer'}, {'name': 'Vultr'}, {'name': 'AUT-AR-..., method='frappe.automation.doctype.auto_repeat.auto_repeat.create_repeated_entries', site='erp', user='me') (352a1570-583a-4639-b535-63dba295f32d)
+2025-10-04 15:45:16,220 home-erp-frappe-bench:default: Job OK (352a1570-583a-4639-b535-63dba295f32d)
+2025-10-04 15:45:16,220 Result is kept for 600 seconds
+</code></pre>
+<p>I reverted back to several old backups just to make sure that the system hadn’t been changed, even as far back as April, but oddly no new Auto Repeat entries are created even when I run Execute from a backup job in April. So either I don’t understand what that “Execute” button does, or there’s something else going on.</p>
+<p>Can somebody please tell me how to run an execution task to create missed Auto Repeat tasks?</p>
+<p>And can somebody offer some insight into what the heck is going on and why the system would suddenly stop behaving correctly without any change to it?</p>
+<p>ERPNext: v14.74.7 (version-14)<br>
+Frappe Framework: v14.83.0 (version-14)<br>
+Frappe HR: v14.34.1 (version-14)</p>
+            <p><small>10 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/auto-repeat-task-returns-ok-but-no-entries-are-created-bug/155051">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/auto-repeat-task-returns-ok-but-no-entries-are-created-bug/155051</link>
+          <pubDate>Sat, 04 Oct 2025 02:50:10 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155051</guid>
+          <source url="https://discuss.frappe.io/t/auto-repeat-task-returns-ok-but-no-entries-are-created-bug/155051.rss">Auto Repeat task returns OK, but no entries are created (Bug?)</source>
+        </item>
+        <item>
+          <title>After adding a UOM ‘Drum’ (1 Drum = 235 kg) for itemA (base UOM = kg), posting 2 Drums in Sto</title>
+          <dc:creator><![CDATA[Hashik]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>The base UOM of the item A is <strong>KG</strong>. I added an additional UOM, <strong>Drum</strong>, with a conversion factor of <strong>235</strong>.</p>
+<p>I then created a stock entry for <strong>2 Drums</strong>, which correctly reflected as <strong>470 kg</strong> in stock</p>
+<p>Subsequently, I prepared a <strong>Delivery Note</strong> based on the Sales Order, entering a quantity of <strong>2 Drums</strong></p>
+<p>However, after posting the Delivery Note, the stock balance incorrectly shows <strong>468 kg</strong> instead of zero.<br>
+Any one can help</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/after-adding-a-uom-drum-1-drum-235-kg-for-itema-base-uom-kg-posting-2-drums-in-sto/154594">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/after-adding-a-uom-drum-1-drum-235-kg-for-itema-base-uom-kg-posting-2-drums-in-sto/154594</link>
+          <pubDate>Fri, 26 Sep 2025 17:40:58 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-154594</guid>
+          <source url="https://discuss.frappe.io/t/after-adding-a-uom-drum-1-drum-235-kg-for-itema-base-uom-kg-posting-2-drums-in-sto/154594.rss">After adding a UOM ‘Drum’ (1 Drum = 235 kg) for itemA (base UOM = kg), posting 2 Drums in Sto</source>
+        </item>
+        <item>
+          <title>When master data changes, which values should forms display?</title>
+          <dc:creator><![CDATA[Saralrat]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p><strong>Problem statement</strong></p>
+<p>Users often update <strong>master data</strong> (e.g., customer name, billing/shipping address, item name/description) while transactions (quotations, sales orders, invoices, delivery notes, etc.) are being created or after they’ve been submitted.</p>
+<p><strong>Question</strong></p>
+<p>When master data changes, which values should forms use?</p>
+<ul>
+<li><strong>A. Latest master data</strong> — always pull current values at render</li>
+<li><strong>B. Document snapshot</strong> — use values saved on the document; never auto-refresh after submit</li>
+</ul>
+<p>Thank you.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/when-master-data-changes-which-values-should-forms-display/154424">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/when-master-data-changes-which-values-should-forms-display/154424</link>
+          <pubDate>Thu, 25 Sep 2025 04:10:00 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-154424</guid>
+          <source url="https://discuss.frappe.io/t/when-master-data-changes-which-values-should-forms-display/154424.rss">When master data changes, which values should forms display?</source>
+        </item>
+        <item>
+          <title>Installing V16 on local server</title>
+          <dc:creator><![CDATA[trainingacademy]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>Hi<br>
+I need to replace my V15 local dev-server with V16 and was doing some searching.</p>
+<pre><code class="lang-auto">python 3.10+
+node.js 16+
+mariadb 10.3+
+</code></pre>
+<p>Seems like Ubuntu 22.04 will still work ???<br>
+Perhaps Ubuntu 24.04 a better option ?</p>
+<p>I used to use this install script</p>
+<pre><code class="lang-auto">https://github.com/flexcomng/erpnext_quick_install
+</code></pre>
+<p>Anyone aware of a similar install script fro V16 ?</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/installing-v16-on-local-server/153775">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/installing-v16-on-local-server/153775</link>
+          <pubDate>Fri, 19 Sep 2025 08:20:29 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-153775</guid>
+          <source url="https://discuss.frappe.io/t/installing-v16-on-local-server/153775.rss">Installing V16 on local server</source>
+        </item>
+        <item>
+          <title>Anyone know how to use print format in script reports?</title>
+          <dc:creator><![CDATA[Pejay]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>I currently updated the frappe framework to the latest version and I notice that there is an option in script reports that enables you to create print format. I wanted to explore but I can’t find a documentation to it. Thanks for the help.</p>
+<p>Best Regards,<br>
+Pejay</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/anyone-know-how-to-use-print-format-in-script-reports/153753">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/anyone-know-how-to-use-print-format-in-script-reports/153753</link>
+          <pubDate>Fri, 19 Sep 2025 01:38:32 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-153753</guid>
+          <source url="https://discuss.frappe.io/t/anyone-know-how-to-use-print-format-in-script-reports/153753.rss">Anyone know how to use print format in script reports?</source>
+        </item>
+        <item>
+          <title>Strategy to move to V16 from V15</title>
+          <dc:creator><![CDATA[trainingacademy]]></dc:creator>
+          <category>User Forum</category>
+          <description><![CDATA[
+            <p>Hi<br>
+Interesting to work through the changes / improvements / features of V16.</p>
+<p>My perception is that , while moving from V13 / 14 to V15 was relatively<br>
+easy and smooth, it looks like one will have to be a bit more deliberate when moving<br>
+from V15 to V16.</p>
+<p>Fortunately . some of the options have been made select able ( to choose legacy<br>
+behavior ) so that one can “opt-out” of the new behavior.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/strategy-to-move-to-v16-from-v15/153730">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/strategy-to-move-to-v16-from-v15/153730</link>
+          <pubDate>Thu, 18 Sep 2025 08:55:33 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-153730</guid>
+          <source url="https://discuss.frappe.io/t/strategy-to-move-to-v16-from-v15/153730.rss">Strategy to move to V16 from V15</source>
+        </item>
+  </channel>
+</rss>

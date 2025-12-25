@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Get Sub-assembly Item Valuation Rate from it&#39;s BOM Total Cost - Manufacturing - Frappe Forum</title>
+    <meta name="description" content="Hi all 
+At the moment we have multiple sub-assemblies with 0 valuation rate, with BOM’s built out of purchased items. Now I can’t start any production orders, because the sub-assemblies’ valuations rates are 0. Does this&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/get-sub-assembly-item-valuation-rate-from-its-bom-total-cost/24553" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Get Sub-assembly Item Valuation Rate from it&#39;s BOM Total Cost&#39;" href="https://discuss.frappe.io/t/get-sub-assembly-item-valuation-rate-from-its-bom-total-cost/24553.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/get-sub-assembly-item-valuation-rate-from-its-bom-total-cost/24553" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/get-sub-assembly-item-valuation-rate-from-its-bom-total-cost/24553" />
+<meta property="og:title" content="Get Sub-assembly Item Valuation Rate from it&#39;s BOM Total Cost" />
+<meta name="twitter:title" content="Get Sub-assembly Item Valuation Rate from it&#39;s BOM Total Cost" />
+<meta property="og:description" content="Hi all  At the moment we have multiple sub-assemblies with 0 valuation rate, with BOM’s built out of purchased items. Now I can’t start any production orders, because the sub-assemblies’ valuations rates are 0. Does this mean I have to manually go and look at the total cost for each sub-assembly BOM, and copy that to the sub-assembly item’s valuation rate? Why can’t it grab the valuation rate from the total cost of it’s BOM?  Kind regards,  Dirk" />
+<meta name="twitter:description" content="Hi all  At the moment we have multiple sub-assemblies with 0 valuation rate, with BOM’s built out of purchased items. Now I can’t start any production orders, because the sub-assemblies’ valuations rates are 0. Does this mean I have to manually go and look at the total cost for each sub-assembly BOM, and copy that to the sub-assembly item’s valuation rate? Why can’t it grab the valuation rate from the total cost of it’s BOM?  Kind regards,  Dirk" />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:section" content="Manufacturing" />
+<meta property="og:article:section:color" content="808281" />
+<meta property="article:published_time" content="2017-06-04T19:43:26+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Get Sub-assembly Item Valuation Rate from it's BOM Total Cost","mainEntity":{"@type":"Question","name":"Get Sub-assembly Item Valuation Rate from it's BOM Total Cost","text":"Hi all\n\nAt the moment we have multiple sub-assemblies with 0 valuation rate, with BOM’s built out of purchased items. Now I can’t start any production orders, because the sub-assemblies’ valuations rates are 0. Does this mean I have to manually go and look at the total cost for each sub-assembly BOM&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2017-06-04T19:43:26.228Z","author":{"@type":"Person","name":"dirkvdl16","url":"https://discuss.frappe.io/u/dirkvdl16"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/get-sub-assembly-item-valuation-rate-from-its-bom-total-cost/24553">Get Sub-assembly Item Valuation Rate from it&#39;s BOM Total Cost</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/manufacturing/19" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #808281'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Manufacturing</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Get Sub-assembly Item Valuation Rate from it&#39;s BOM Total Cost'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/get-sub-assembly-item-valuation-rate-from-its-bom-total-cost/24553'>
+      <meta itemprop='datePublished' content='2017-06-04T19:43:26Z'>
+        <meta itemprop='articleSection' content='Manufacturing'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/dirkvdl16'><span itemprop='name'>dirkvdl16</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/get-sub-assembly-item-valuation-rate-from-its-bom-total-cost/24553">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2017-06-04T19:43:26Z' class='post-time'>
+                    June 4, 2017,  7:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-06-04T19:43:26Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi all</p>
+<p>At the moment we have multiple sub-assemblies with 0 valuation rate, with BOM’s built out of purchased items. Now I can’t start any production orders, because the sub-assemblies’ valuations rates are 0. Does this mean I have to manually go and look at the total cost for each sub-assembly BOM, and copy that to the sub-assembly item’s valuation rate? Why can’t it grab the valuation rate from the total cost of it’s BOM?</p>
+<p>Kind regards,<br>
+Dirk</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/umair'><span itemprop='name'>umair</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-06-06T12:23:01Z' class='post-time'>
+                    June 6, 2017, 12:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-06-06T12:23:01Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If you have stock of raw-material item’s available, and if BOM for the sub-assembly item’s valuation is set to be calculated on “Valuation Rate”, then clicking on “Update Cost” will update raw-material and BOM prices. Following this approach, go on updating cost from raw-material to sub-assembly to FG item’s BOM.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/dirkvdl16'><span itemprop='name'>dirkvdl16</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-06-07T17:09:17Z' class='post-time'>
+                    June 7, 2017,  5:09pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-06-07T17:09:17Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you so much for your reply <strong>umair</strong>. I completely understand that, and what you described is exactly the process I follow. My problem is that a manufactured part’s valuation rate on its item page is not automatically set to the part’s BOM Total Cost.</p>
+<p>Kind regards,<br>
+Dirk</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/umair'><span itemprop='name'>umair</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-06-08T05:06:00Z' class='post-time'>
+                    June 8, 2017,  5:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2017-06-08T05:06:00Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello Dirk,</p>
+<p>Is BOM for the sub-assembly item Submitted?</p>
+<p>In the finished Item’s BOM, what is the value selected in the field “Rate Of Materials Based On”?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/dirkvdl16'><span itemprop='name'>dirkvdl16</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/2X/5/5a5e2a32bab0a28c524ad75418a143b683af4e2a.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-06-08T19:35:31Z' class='post-time'>
+                    June 8, 2017,  7:35pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-06-08T19:41:10Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <blockquote>
+<p>Is BOM for the sub-assembly item Submitted?</p>
+</blockquote>
+<p>Yes</p>
+<blockquote>
+<p>In the finished Item’s BOM, what is the value selected in the field “Rate Of Materials Based On”?</p>
+</blockquote>
+<p>All of our BOM’s are set to Valuation rate, as we want it to grab the latest purchase prices of received items.</p>
+<hr>
+<p>Here are some screenshots (all in one image, as I’m only allowed one image per post):</p>
+<ol>
+<li>So, I’ve got a sub-assembly called LBOTMARG1KG, with Valuation Rate = 0 (this is my issue):</li>
+<li>This is the sub-assembly’s BOM, with two items in it. Item 1KGCR243 now has a valuation of 0:</li>
+<li>When I click on Update Cost, it updates all this BOM’s materials’ valuation rates correctly:</li>
+<li>This BOM now has a new total cost:</li>
+<li>BUT, and this is where my issue comes in, the sub-assembly item (with new BOM cost as seen in 4.) still has a valuation rate of 0:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/2X/5/5a5e2a32bab0a28c524ad75418a143b683af4e2a.png" data-download-href="https://discuss.frappe.io/uploads/default/5a5e2a32bab0a28c524ad75418a143b683af4e2a" title="112.png"><img src="https://discuss.frappe.io/uploads/default/optimized/2X/5/5a5e2a32bab0a28c524ad75418a143b683af4e2a_2_270x500.png" width="270" height="500" srcset="https://discuss.frappe.io/uploads/default/optimized/2X/5/5a5e2a32bab0a28c524ad75418a143b683af4e2a_2_270x500.png, https://discuss.frappe.io/uploads/default/optimized/2X/5/5a5e2a32bab0a28c524ad75418a143b683af4e2a_2_405x750.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/2X/5/5a5e2a32bab0a28c524ad75418a143b683af4e2a_2_540x1000.png 2x" data-dominant-color="FAFBFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">112.png</span><span class="informations">736×1362 292 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></li>
+</ol>
+<p>Does this make sense? Or am I missing something completely? Sure I can copy the total cost from the BOM manually to the sub-assembly’s valuation rate, but it seems then that with any BOM cost updates, the valuation rate won’t change?</p>
+<p>Thanks in advance for spending your time on this</p>
+<p>Kind regards</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Alissa_Rice'><span itemprop='name'>Alissa_Rice</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2017-06-21T16:44:00Z' class='post-time'>
+                    June 21, 2017,  4:44pm
+                  </time>
+                  <meta itemprop='dateModified' content='2017-06-21T16:44:00Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am also struggling with this issue, especially since my BOMs pull from the Price List. How can I populate the total cost of a sub-assembly in its parent BOM?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/dirkvdl16'><span itemprop='name'>dirkvdl16</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-03-17T19:55:35Z' class='post-time'>
+                    March 17, 2018,  7:55pm
+                  </time>
+                  <meta itemprop='dateModified' content='2018-03-17T19:55:35Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/umair">@umair</a>, I’m mentioning you as you replied earlier to this thread. Can you maybe take a few seconds and have a look at this one?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/aha'><span itemprop='name'>aha</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-12-20T08:58:32Z' class='post-time'>
+                    December 20, 2018,  8:58am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-12-20T08:58:32Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi all, bringing this back to life since I have the same problem. Anyone have a solution for this?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Hame_Ghorbani'><span itemprop='name'>Hame_Ghorbani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-01T08:13:25Z' class='post-time'>
+                    January 1, 2020,  8:13am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-01T08:13:25Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Any update on this?<br>
+Our products is combined of different sub assemblies, and unfortunately the price of the sub assembly is not taken from the BOM total price.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Ugur_Dogan'><span itemprop='name'>Ugur_Dogan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-06-26T07:16:50Z' class='post-time'>
+                    June 26, 2020,  7:16am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-06-26T07:16:50Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>any update on this ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/thelahera'><span itemprop='name'>thelahera</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-03-08T15:15:53Z' class='post-time'>
+                    March 8, 2022,  3:15pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-03-08T15:15:53Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Im also facing the same issue. Value of sub-assemblies not update on main BOM</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/andrew.sulisthio'><span itemprop='name'>andrew.sulisthio</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-05-22T09:52:55Z' class='post-time'>
+                    May 22, 2023,  9:52am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-05-22T09:52:55Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I encountered this issue also just now, can somebody help with a solution regarding this?</p>
+<p>The “Update Cost” button just won’t be able to update the sub-assembly item’s rate based on their default BOM (created &amp; submitted prior to the creation of the new BOM).</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/cornerstonegear'><span itemprop='name'>cornerstonegear</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-09-24T14:07:34Z' class='post-time'>
+                    September 24, 2024,  2:07pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-09-24T14:07:34Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Exact same issue here!!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/rabrab'><span itemprop='name'>rabrab</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-02-07T14:49:35Z' class='post-time'>
+                    February 7, 2025,  2:49pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-02-07T14:49:35Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>+1 same here</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/chris86'><span itemprop='name'>chris86</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/4/5/4515d0dd70b0fbfc500b054d93d07bdf2ed149fe.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-24T19:04:09Z' class='post-time'>
+                    November 24, 2025,  7:04pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-24T19:04:09Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have the exact same issue here, it’s very frustrating and seems like it should be a simple fix (and an important part of an ERP system).</p>
+<p>I tried to create a new field in the Item form “BOM cost” which fetched the value from the BOM form, Total cost, but this didn’t work either. Anyone have any ideas why even that doesn’t work?</p>
+<p>I also found that if you don’t have any stock for items in a BOM, it will update the BOM cost correctly after changing the item valuation rate. But if you have stock, you need to go and also update the Stock Entry that contains the items, because the BOM cost will calculate based on the stock entry number, not the latest item number. Hope that makes sense to everyone.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/4/5/4515d0dd70b0fbfc500b054d93d07bdf2ed149fe.png" data-download-href="https://discuss.frappe.io/uploads/default/4515d0dd70b0fbfc500b054d93d07bdf2ed149fe" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/4/5/4515d0dd70b0fbfc500b054d93d07bdf2ed149fe_2_690x155.png" alt="image" data-base62-sha1="9R9Gw5eAToQiPJdtg9f2aKqlrMW" width="690" height="155" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/4/5/4515d0dd70b0fbfc500b054d93d07bdf2ed149fe_2_690x155.png, https://discuss.frappe.io/uploads/default/optimized/3X/4/5/4515d0dd70b0fbfc500b054d93d07bdf2ed149fe_2_1035x232.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/4/5/4515d0dd70b0fbfc500b054d93d07bdf2ed149fe_2_1380x310.png 2x" data-dominant-color="F7F7F4"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1414×319 30.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

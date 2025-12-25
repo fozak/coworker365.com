@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[Release] Instructions for updating to/staying on v10/v11 - Announcements - Frappe Forum</title>
+    <meta name="description" content="V11 will be release to master branch soon. Here are the instructions you need to follow based on the scenario applicable to you: 
+
+Scenario One: You want to upgrade to v11 from v10 (master ==&amp;gt; master)
+bench update
+
+
+Scen&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/release-instructions-for-updating-to-staying-on-v10-v11/44966" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[Release] Instructions for updating to/staying on v10/v11&#39;" href="https://discuss.frappe.io/t/release-instructions-for-updating-to-staying-on-v10-v11/44966.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/release-instructions-for-updating-to-staying-on-v10-v11/44966" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/release-instructions-for-updating-to-staying-on-v10-v11/44966" />
+<meta property="og:title" content="[Release] Instructions for updating to/staying on v10/v11" />
+<meta name="twitter:title" content="[Release] Instructions for updating to/staying on v10/v11" />
+<meta property="og:description" content="V11 will be release to master branch soon. Here are the instructions you need to follow based on the scenario applicable to you:   Scenario One: You want to upgrade to v11 from v10 (master ==&gt; master) bench update   Scenario Two: You want to stay on v11 (staging ==&gt; master) bench switch-to-branch master frappe erpnext --upgrade bench update --patch   Scenario Three: You want to stay on v10 (master ==&gt; v10.x.x) bench switch-to-branch v10.x.x frappe erpnext bench update --patch   OPTIONAL: Remove f..." />
+<meta name="twitter:description" content="V11 will be release to master branch soon. Here are the instructions you need to follow based on the scenario applicable to you:   Scenario One: You want to upgrade to v11 from v10 (master ==&gt; master) bench update   Scenario Two: You want to stay on v11 (staging ==&gt; master) bench switch-to-branch master frappe erpnext --upgrade bench update --patch   Scenario Three: You want to stay on v10 (master ==&gt; v10.x.x) bench switch-to-branch v10.x.x frappe erpnext bench update --patch   OPTIONAL: Remove f..." />
+<meta property="og:article:section" content="Announcements" />
+<meta property="og:article:section:color" content="283890" />
+<meta property="og:article:tag" content="release" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="17 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="52 ❤" />
+<meta property="article:published_time" content="2019-01-29T09:55:41+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="/t/release-instructions-for-updating-to-staying-on-v10-v11/44966?page=2">
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"[Release] Instructions for updating to/staying on v10/v11","mainEntity":{"@type":"Question","name":"[Release] Instructions for updating to/staying on v10/v11","text":"V11 will be release to master branch soon. Here are the instructions you need to follow based on the scenario applicable to you:\n\n<a name=\"scenario-one-you-want-to-upgrade-to-v11-from-v10-master-master-1\" class=\"anchor\" href=\"#scenario-one-you-want-to-upgrade-to-v11-from-v10-master-master-1\"><\/a>Scenario One: You want to upgrade to v11 from v10 (master ==&gt; master)\n\nbench update\n\n<a name=\"scenario-two-you-want-to-stay-on-v11-staging-master-2\" class=\"anchor\" href=\"#scenario-two-you-want-to-stay-on-v11-staging-master-2\"><\/a>Scenario Two: You want to stay on v11 (staging ==&gt; master)\n\nbench switch-to-branch ma&hellip;","upvoteCount":19,"answerCount":0,"datePublished":"2019-01-29T09:55:41.009Z","author":{"@type":"Person","name":"snv","url":"https://discuss.frappe.io/u/snv"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/release-instructions-for-updating-to-staying-on-v10-v11/44966">[Release] Instructions for updating to/staying on v10/v11</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/announcement/20" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #283890'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Announcements</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/release' class='discourse-tag' rel="tag">release</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[Release] Instructions for updating to/staying on v10/v11'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/release-instructions-for-updating-to-staying-on-v10-v11/44966'>
+      <meta itemprop='datePublished' content='2019-01-29T09:55:41Z'>
+        <meta itemprop='articleSection' content='Announcements'>
+      <meta itemprop='keywords' content='release'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/snv'><span itemprop='name'>snv</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/release-instructions-for-updating-to-staying-on-v10-v11/44966">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2019-01-29T09:55:41Z' class='post-time'>
+                    January 29, 2019,  9:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-30T05:14:09Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>V11 will be release to <code>master</code> branch soon. Here are the instructions you need to follow based on the scenario applicable to you:</p>
+<h3>
+<a name="scenario-one-you-want-to-upgrade-to-v11-from-v10-master-master-1" class="anchor" href="#scenario-one-you-want-to-upgrade-to-v11-from-v10-master-master-1"></a>Scenario One: You want to upgrade to v11 from v10 (<code>master ==&gt; master</code>)</h3>
+<pre><code class="lang-bash">bench update
+</code></pre>
+<h3>
+<a name="scenario-two-you-want-to-stay-on-v11-staging-master-2" class="anchor" href="#scenario-two-you-want-to-stay-on-v11-staging-master-2"></a>Scenario Two: You want to stay on v11 (<code>staging ==&gt; master</code>)</h3>
+<pre><code class="lang-bash">bench switch-to-branch master frappe erpnext --upgrade
+bench update --patch
+</code></pre>
+<h3>
+<a name="scenario-three-you-want-to-stay-on-v10-master-v10xx-3" class="anchor" href="#scenario-three-you-want-to-stay-on-v10-master-v10xx-3"></a>Scenario Three: You want to stay on v10 (<code>master ==&gt; v10.x.x</code>)</h3>
+<pre><code class="lang-bash">bench switch-to-branch v10.x.x frappe erpnext
+bench update --patch
+</code></pre>
+<hr>
+<p><strong>OPTIONAL:</strong> Remove <code>foundation</code> and <code>frappe_io</code> apps (run only if they exist in your bench’s app directory):</p>
+<pre><code class="lang-bash">bench remove-app frappe_io
+bench remove-app foundation
+</code></pre>
+<p><strong>IMPORTANT:</strong> Please clear your browser’s cache too: <code>Ctrl + Shift + R</code><br>
+If after clearing your browser cache you cannot see the chat icon (v11), run <code>bench build</code> and clear cache again.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="19" />
+              <span class='post-likes'>19 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/can-i-stay-on-v10-and-update-to-the-latest-v10-release/46076/2">Can I stay on v10 and update to the latest v10 release?</a>
+                        <meta itemprop='position' content='1'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/error-encountered-while-migrating-from-v11-staging-to-v11-master/45762">Error encountered while migrating from V11 (Staging) to V11 (Master)</a>
+                        <meta itemprop='position' content='2'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/getting-typeerror-a-bytes-like-object-is-required-not-list-on-switching-from-staging-to-master-v11/45101/3">Getting TypeError: a bytes-like object is required, not ‘list’ on switching from staging to master v11</a>
+                        <meta itemprop='position' content='3'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/general-ledger-not-showing-after-update-to-ver11-master/45120/2">General Ledger not showing after update to ver11 master</a>
+                        <meta itemprop='position' content='4'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/update-to-v11-master-the-resource-you-are-looking-for-is-not-available/45020/3">Update to V11 master; The resource you are looking for is not available</a>
+                        <meta itemprop='position' content='5'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/release-notes-version-11-1-0/44973">[Release Notes] Version 11.1.0!</a>
+                        <meta itemprop='position' content='6'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/can-i-stay-on-v10-and-update-to-the-latest-v10-release-other-thread-was-closed-without-a-solution/46082">Can I stay on v10 and update to the latest v10 release? (Other thread was closed without a solution)</a>
+                        <meta itemprop='position' content='7'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/getting-typeerror-a-bytes-like-object-is-required-not-list-on-switching-from-staging-to-master-v11/45101/7">Getting TypeError: a bytes-like object is required, not ‘list’ on switching from staging to master v11</a>
+                        <meta itemprop='position' content='8'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/upgrade-from-v9-to-v11/49874/14">Upgrade from V9 to V11</a>
+                        <meta itemprop='position' content='9'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/same-problem-after-10-tries-of-reinstalling/47028/6">Same problem after 10 tries of reinstalling!</a>
+                        <meta itemprop='position' content='10'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/snv'><span itemprop='name'>snv</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-29T13:57:06Z' class='post-time'>
+                    January 29, 2019,  1:57pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-29T13:57:06Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>You can refer to the release notes and a list of contributors <a href="https://discuss.frappe.io/t/release-notes-version-11-1-0/44973">here</a>.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/is-there-any-way-to-install-erpnext-v10-now/45995/2">Is there any way to install erpnext v10 now?</a>
+                        <meta itemprop='position' content='2'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vrms'><span itemprop='name'>vrms</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-29T14:02:49Z' class='post-time'>
+                    January 29, 2019,  2:02pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-29T14:02:49Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="snv" data-post="1" data-topic="44966">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/snv/48/55121_2.png" class="avatar"> snv:</div>
+<blockquote>
+<h3>Scenario Two: You want to stay on v11 ( <code>staging ==&gt; master</code> )</h3>
+</blockquote>
+</aside>
+<p>tried to do this as follows:</p>
+<pre><code class="lang-auto">cd frappe-bench
+bench update --reset
+bench switch-to-branch master frappe
+bench switch-to-branch master erpnext
+bench update --patch
+bench setup requirements
+bench --site mysite.local migrate
+bench restart
+</code></pre>
+<p>result … frappe has switched to <code>master</code>, but erpnext remains on <code>staging</code></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Manan_Shah'><span itemprop='name'>Manan_Shah</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-29T14:17:39Z' class='post-time'>
+                    January 29, 2019,  2:17pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-29T14:17:39Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Are the instructions same for updating my VM instance?<br>
+I tried running the command in the terminal but there was some error</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/snv'><span itemprop='name'>snv</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-29T14:18:03Z' class='post-time'>
+                    January 29, 2019,  2:18pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-29T14:18:03Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/manan_shah">@Manan_Shah</a>  Can you please post the error log here?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/oxwivi'><span itemprop='name'>oxwivi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-29T14:23:02Z' class='post-time'>
+                    January 29, 2019,  2:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-29T14:23:58Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Are you sure <code>--upgrade</code> is a real switch?</p>
+<pre><code class="lang-auto">/frappe-bench$ bench update --upgrade
+
+Usage: bench update [OPTIONS]
+Try "bench update --help" for help.
+
+Error: no such option: --upgrade
+$ bench update --help
+Usage: bench update [OPTIONS]
+
+  Update bench
+
+Options:
+  --pull                Pull changes in all the apps in bench
+  --patch               Run migrations for all sites in the bench
+  --build               Build JS and CSS artifacts for the bench
+  --bench               Update bench
+  --requirements        Update requirements
+  --restart-supervisor  restart supervisor processes after update
+  --restart-systemd     restart systemd units after update
+  --auto
+  --no-backup
+  --force
+  --reset               Hard resets git branch's to their new states
+                        overriding any changes and overriding rebase on pull
+  --help                Show this message and exit.
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/snv'><span itemprop='name'>snv</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-29T14:29:21Z' class='post-time'>
+                    January 29, 2019,  2:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-29T14:29:21Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Apologies, I’ve updated the instructions. This used to be a flag.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/snv'><span itemprop='name'>snv</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-29T14:35:29Z' class='post-time'>
+                    January 29, 2019,  2:35pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-29T14:35:29Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, sorry for late reply.</p>
+<aside class="quote no-group" data-username="snv" data-post="1" data-topic="44966">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/snv/48/55121_2.png" class="avatar"> snv:</div>
+<blockquote>
+<h3>Scenario Two: You want to stay on v11 ( <code>staging ==&gt; master</code> )</h3>
+<pre><code class="lang-auto">bench switch-to-branch master frappe erpnext --upgrade
+</code></pre>
+</blockquote>
+</aside>
+<p>This worked perfectly on a client instance of mine.</p>
+<p>Try this manually:</p>
+<pre><code class="lang-auto">cd apps/erpnext
+git checkout master
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Manan_Shah'><span itemprop='name'>Manan_Shah</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/d/3/d3bcfc015343d71983976fe4d66015a683ea9fce.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-29T14:41:42Z' class='post-time'>
+                    January 29, 2019,  2:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-29T14:41:42Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/3/d3bcfc015343d71983976fe4d66015a683ea9fce.png" data-download-href="https://discuss.frappe.io/uploads/default/d3bcfc015343d71983976fe4d66015a683ea9fce" title="59%20PM"><img src="https://discuss.frappe.io/uploads/default/original/3X/d/3/d3bcfc015343d71983976fe4d66015a683ea9fce.png" alt="59%20PM" data-base62-sha1="ud7DTtwreJ7FGjM9zXAKKVzBWTI" width="623" height="500" data-dominant-color="1D1D1E"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">59%20PM</span><span class="informations">797×639 31.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div><br>
+I am trying to update from v10 to v11<br>
+I tried command bench update</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/snv'><span itemprop='name'>snv</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-29T14:42:51Z' class='post-time'>
+                    January 29, 2019,  2:42pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-29T14:42:51Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>you must run the command from your <code>frappe-bench</code> directory <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Manan_Shah'><span itemprop='name'>Manan_Shah</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-29T14:49:48Z' class='post-time'>
+                    January 29, 2019,  2:49pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-29T14:49:48Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks. Worked!<img src="https://discuss.frappe.io/images/emoji/twitter/+1.png?v=12" title=":+1:" class="emoji" alt=":+1:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vrms'><span itemprop='name'>vrms</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-29T14:57:41Z' class='post-time'>
+                    January 29, 2019,  2:57pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-29T14:57:41Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>upon the <code>switch-to-branch master erpnext</code> I just noted that I got a<br>
+“<em>Branch master does not exist in Upstream for erpnext</em>”</p>
+<hr>
+<aside class="quote no-group" data-username="snv" data-post="13" data-topic="44966">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/snv/48/55121_2.png" class="avatar"> snv:</div>
+<blockquote>
+<p>Try this manually:</p>
+<pre><code class="lang-auto">cd apps/erpnext
+git checkout master
+</code></pre>
+</blockquote>
+</aside>
+<p>throws <em>“error: pathspec ‘master’ did not match any file(s) known to git.”</em> back at me</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/chdecultot'><span itemprop='name'>chdecultot</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-29T15:04:54Z' class='post-time'>
+                    January 29, 2019,  3:04pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-29T15:04:54Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/vrms">@vrms</a>,</p>
+<p>Go to ERPNext’s folder, open .git/config and make sure it is set up to fetch all branches in upstream:</p>
+<p><code>fetch = +refs/heads/*:refs/remotes/upstream/*</code></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/snv'><span itemprop='name'>snv</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-29T15:14:17Z' class='post-time'>
+                    January 29, 2019,  3:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-29T15:14:17Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>After this run <code>git fetch</code> too.<br>
+Then you will be able to run <code>bench switch-to-branch ...</code></p>
+<p>This happens due to shallow cloning.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_21' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vrms'><span itemprop='name'>vrms</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-29T15:16:13Z' class='post-time'>
+                    January 29, 2019,  3:16pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-29T15:16:13Z'>
+              <span itemprop='position'>21</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>thanks <a class="mention" href="/u/chdecultot">@chdecultot</a></p>
+<p>my <code>erpnext/.git.config</code> (after replacing the <code>staging</code> with <code>*</code> looks like this now</p>
+<pre><code class="lang-auto">[core]
+       repositoryformatversion = 0
+       filemode = true
+       bare = false
+       logallrefupdates = true
+[remote "upstream"]
+       url = https://github.com/frappe/erpnext
+       fetch = +refs/heads/staging:refs/remotes/upstream/*
+[branch "staging"]
+       remote = upstream
+       merge = refs/heads/staging
+</code></pre>
+<p>even though this is the same as in the config file of frappe it is still not working out</p>
+<pre><code class="lang-auto">~/frappe-bench$ bench switch-to-branch master erpnext --upgrade
+fatal: Invalid refspec '+refs/heads/staging:refs/remotes/upstream/*'
+Branch master does not exist in Upstream for erpnext
+Switched to master
+Please run `bench update --patch` to be safe from any differences in database schema
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_22' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/snv'><span itemprop='name'>snv</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-29T15:17:44Z' class='post-time'>
+                    January 29, 2019,  3:17pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-29T15:17:44Z'>
+              <span itemprop='position'>22</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <pre><code class="lang-plaintext">[core]
+       repositoryformatversion = 0
+       filemode = true
+       bare = false
+       logallrefupdates = true
+[remote "upstream"]
+       url = https://github.com/frappe/erpnext
+       fetch = +refs/heads/*:refs/remotes/upstream/*
+[branch "staging"]
+       remote = upstream
+       merge = refs/heads/staging
+</code></pre>
+<p><a class="mention" href="/u/vrms">@vrms</a>  this is what you want</p>
+<p>and this too:</p>
+<aside class="quote no-group" data-username="snv" data-post="20" data-topic="44966">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/snv/48/55121_2.png" class="avatar"> snv:</div>
+<blockquote>
+<p>After this run <code>git fetch</code> too.</p>
+</blockquote>
+</aside>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_23' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vrms'><span itemprop='name'>vrms</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-29T15:19:46Z' class='post-time'>
+                    January 29, 2019,  3:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-29T15:19:46Z'>
+              <span itemprop='position'>23</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>looks like this is what I have (see above)</p>
+<pre><code class="lang-auto">~/frappe-bench/apps/erpnext$ git fetch
+fatal: Invalid refspec '+refs/heads/staging:refs/remotes/upstream/*'
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_24' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/snv'><span itemprop='name'>snv</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-29T15:21:04Z' class='post-time'>
+                    January 29, 2019,  3:21pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-29T15:21:04Z'>
+              <span itemprop='position'>24</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>use the config from here:</p>
+<aside class="quote no-group" data-username="snv" data-post="22" data-topic="44966">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/snv/48/55121_2.png" class="avatar"> snv:</div>
+<blockquote>
+<pre><code class="lang-plaintext">[core]
+       repositoryformatversion = 0
+       filemode = true
+       bare = false
+       logallrefupdates = true
+[remote "upstream"]
+       url = https://github.com/frappe/erpnext
+       fetch = +refs/heads/*:refs/remotes/upstream/*
+[branch "staging"]
+       remote = upstream
+       merge = refs/heads/staging
+</code></pre>
+</blockquote>
+</aside>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/release-note-erpnext-version-12/50986/16">[Release Note] ERPNext Version 12</a>
+                        <meta itemprop='position' content='1'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_25' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/flexy2ky'><span itemprop='name'>flexy2ky</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-01-29T15:37:32Z' class='post-time'>
+                    January 29, 2019,  3:37pm
+                  </time>
+                  <meta itemprop='dateModified' content='2019-01-29T15:37:32Z'>
+              <span itemprop='position'>25</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This worked for me. Thank you!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="/t/release-instructions-for-updating-to-staying-on-v10-v11/44966?page=2">next page →</a></b></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

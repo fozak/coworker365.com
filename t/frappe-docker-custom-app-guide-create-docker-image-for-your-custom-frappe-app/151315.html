@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Frappe Docker Custom App Guide (Create Docker Image For Your Custom Frappe App) - Frappe Framework - Frappe Forum</title>
+    <meta name="description" content="Table of Contents
+
+
+Introduction 
+
+
+Step 1: Create apps.json File 
+
+
+Step 2: Generate Base64-Encoded apps.json 
+
+
+Step 3: Build Custom Docker Image 
+
+
+Step 4: Push Image to Docker Hub 
+
+
+Step 5: Run Your Custom Image 
+
+
+
+&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/frappe-docker-custom-app-guide-create-docker-image-for-your-custom-frappe-app/151315" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Frappe Docker Custom App Guide (Create Docker Image For Your Custom Frappe App)&#39;" href="https://discuss.frappe.io/t/frappe-docker-custom-app-guide-create-docker-image-for-your-custom-frappe-app/151315.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/frappe-docker-custom-app-guide-create-docker-image-for-your-custom-frappe-app/151315" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/frappe-docker-custom-app-guide-create-docker-image-for-your-custom-frappe-app/151315" />
+<meta property="og:title" content="Frappe Docker Custom App Guide (Create Docker Image For Your Custom Frappe App)" />
+<meta name="twitter:title" content="Frappe Docker Custom App Guide (Create Docker Image For Your Custom Frappe App)" />
+<meta property="og:description" content="Table of Contents   Introduction    Step 1: Create apps.json File    Step 2: Generate Base64-Encoded apps.json    Step 3: Build Custom Docker Image    Step 4: Push Image to Docker Hub    Step 5: Run Your Custom Image     Introduction This guide walks you through the complete process of:    Adding your custom app via an apps.json file    Generating a Base64-encoded version of that file    Building a custom Docker image using frappe_docker    Pushing the image to Docker Hub    Running the image wi..." />
+<meta name="twitter:description" content="Table of Contents   Introduction    Step 1: Create apps.json File    Step 2: Generate Base64-Encoded apps.json    Step 3: Build Custom Docker Image    Step 4: Push Image to Docker Hub    Step 5: Run Your Custom Image     Introduction This guide walks you through the complete process of:    Adding your custom app via an apps.json file    Generating a Base64-encoded version of that file    Building a custom Docker image using frappe_docker    Pushing the image to Docker Hub    Running the image wi..." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:tag" content="frappe" />
+<meta property="og:article:tag" content="docker" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="8 ❤" />
+<meta property="article:published_time" content="2025-08-07T14:17:25+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Frappe Docker Custom App Guide (Create Docker Image For Your Custom Frappe App)","mainEntity":{"@type":"Question","name":"Frappe Docker Custom App Guide (Create Docker Image For Your Custom Frappe App)","text":"<a name=\"p-476674-table-of-contents-1\" class=\"anchor\" href=\"#p-476674-table-of-contents-1\"><\/a>Table of Contents\n\n<a href=\"#introduction\">Introduction<\/a>\n\n<a href=\"#step-1-create-appsjson-file\">Step 1: Create apps.json File<\/a>\n\n<a href=\"#step-2-generate-base64-encoded-appsjson\">Step 2: Generate Base64-Encoded apps.json<\/a>\n\n<a href=\"#step-3-build-custom-docker-image\">Step 3: Build Custom Docker Image<\/a>\n\n<a href=\"#step-4-push-image-to-docker-hub\">Step 4: Push Image to Docker Hub<\/a>\n\n<a href=\"#step-5-run-your-custom-image\">Step 5: Run Your Custom Image<\/a>\n\n<a name=\"p-476674-introduction-2\" class=\"anchor\" href=\"#p-476674-introduction-2\"><\/a>Introduction\n\nThis guide walks you through the complete process of:\n\nAdding yo&hellip;","upvoteCount":8,"answerCount":0,"datePublished":"2025-08-07T14:17:25.179Z","author":{"@type":"Person","name":"mohamed-ameer","url":"https://discuss.frappe.io/u/mohamed-ameer"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/frappe-docker-custom-app-guide-create-docker-image-for-your-custom-frappe-app/151315">Frappe Docker Custom App Guide (Create Docker Image For Your Custom Frappe App)</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
+            <a href='https://discuss.frappe.io/tag/docker' class='discourse-tag' rel="tag">docker</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Frappe Docker Custom App Guide (Create Docker Image For Your Custom Frappe App)'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/frappe-docker-custom-app-guide-create-docker-image-for-your-custom-frappe-app/151315'>
+      <meta itemprop='datePublished' content='2025-08-07T14:17:25Z'>
+        <meta itemprop='articleSection' content='Frappe Framework'>
+      <meta itemprop='keywords' content='frappe, docker'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mohamed-ameer'><span itemprop='name'>mohamed-ameer</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/frappe-docker-custom-app-guide-create-docker-image-for-your-custom-frappe-app/151315">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-08-07T14:17:25Z' class='post-time'>
+                    August 7, 2025,  2:17pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-07T14:17:25Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h2><a name="p-476674-table-of-contents-1" class="anchor" href="#p-476674-table-of-contents-1"></a>Table of Contents</h2>
+<ul>
+<li>
+<p><a href="#introduction">Introduction</a></p>
+</li>
+<li>
+<p><a href="#step-1-create-appsjson-file">Step 1: Create apps.json File</a></p>
+</li>
+<li>
+<p><a href="#step-2-generate-base64-encoded-appsjson">Step 2: Generate Base64-Encoded apps.json</a></p>
+</li>
+<li>
+<p><a href="#step-3-build-custom-docker-image">Step 3: Build Custom Docker Image</a></p>
+</li>
+<li>
+<p><a href="#step-4-push-image-to-docker-hub">Step 4: Push Image to Docker Hub</a></p>
+</li>
+<li>
+<p><a href="#step-5-run-your-custom-image">Step 5: Run Your Custom Image</a></p>
+</li>
+</ul>
+<hr>
+<h2><a name="p-476674-introduction-2" class="anchor" href="#p-476674-introduction-2"></a>Introduction</h2>
+<p>This guide walks you through the complete process of:</p>
+<ul>
+<li>
+<p>Adding your custom app via an <code>apps.json</code> file</p>
+</li>
+<li>
+<p>Generating a Base64-encoded version of that file</p>
+</li>
+<li>
+<p>Building a custom Docker image using <code>frappe_docker</code></p>
+</li>
+<li>
+<p>Pushing the image to Docker Hub</p>
+</li>
+<li>
+<p>Running the image with a custom docker-compose setup</p>
+</li>
+</ul>
+<p>All steps follow the official frappe/frappe_docker documentation.</p>
+<hr>
+<h2><a name="p-476674-step-1-create-appsjson-file-3" class="anchor" href="#p-476674-step-1-create-appsjson-file-3"></a>Step 1: Create apps.json File</h2>
+<p>Frappe Docker allows you to install additional apps (like ERPNext and your own custom app) during the image build process by providing an <code>apps.json</code> configuration file.</p>
+<p>This file tells the builder which Git repositories and branches to clone and install.</p>
+<h3><a name="p-476674-create-the-appsjson-file-4" class="anchor" href="#p-476674-create-the-appsjson-file-4"></a>Create the apps.json File</h3>
+<pre data-code-wrap="bash"><code class="lang-bash">nano apps.json
+</code></pre>
+<p>Paste this JSON structure into the file:</p>
+<pre data-code-wrap="json"><code class="lang-json">[
+  {
+    "url": "https://github.com/frappe/erpnext",
+    "branch": "version-15"
+  },
+  {
+    "url": "https://{{ PAT }}@git.example.com/project/repository.git",
+    "branch": "main"
+  },
+  {
+    "url": "https://github.com/&lt;github-username&gt;/&lt;your-public-repo-name&gt;",
+    "branch": "main"
+  }
+]
+</code></pre>
+<blockquote>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li>The first entry installs ERPNext from the version-15 branch</li>
+<li>The second entry is your private custom app hosted on a Git server</li>
+<li>Replace {{ PAT }} with a valid Personal Access Token (PAT) that has read access</li>
+<li>Replace the URL with your actual Git repository URL</li>
+<li>The third entry is for any public GitHub repositories you want to include</li>
+<li>Ensure you specify the correct branch name that exists in the repository</li>
+<li>Remove any trailing spaces in URLs (they can cause build failures)</li>
+<li>Verify your JSON is valid using a tool like JSONLint (optional)</li>
+</ul>
+</blockquote>
+<hr>
+<h2><a name="p-476674-step-2-generate-base64-encoded-appsjson-5" class="anchor" href="#p-476674-step-2-generate-base64-encoded-appsjson-5"></a>Step 2: Generate Base64-Encoded apps.json</h2>
+<p>Frappe expects the contents of <code>apps.json</code> to be passed as a Base64-encoded string via the <code>APPS_JSON_BASE64</code> argument.</p>
+<h3><a name="p-476674-generate-base64-string-6" class="anchor" href="#p-476674-generate-base64-string-6"></a>Generate Base64 String</h3>
+<pre data-code-wrap="bash"><code class="lang-bash">export APPS_JSON_BASE64=$(base64 -w 0 apps.json)
+echo ${APPS_JSON_BASE64}
+</code></pre>
+<h3><a name="p-476674-verify-encoding-7" class="anchor" href="#p-476674-verify-encoding-7"></a>Verify Encoding</h3>
+<p>To ensure the encoding was successful, decode it back and check if it matches the original:</p>
+<pre data-code-wrap="bash"><code class="lang-bash">echo -n ${APPS_JSON_BASE64} | base64 -d &gt; apps-test-output.json
+cat apps-test-output.json
+</code></pre>
+<p>Compare the output with your original apps.json file. If they match, the encoding is correct.</p>
+<hr>
+<h2><a name="p-476674-step-3-build-custom-docker-image-8" class="anchor" href="#p-476674-step-3-build-custom-docker-image-8"></a>Step 3: Build Custom Docker Image</h2>
+<h3><a name="p-476674-clone-frappe_docker-9" class="anchor" href="#p-476674-clone-frappe_docker-9"></a>Clone frappe_docker</h3>
+<pre data-code-wrap="bash"><code class="lang-bash">git clone https://github.com/frappe/frappe_docker
+cd frappe_docker
+</code></pre>
+<h3><a name="p-476674-build-your-image-10" class="anchor" href="#p-476674-build-your-image-10"></a>Build Your Image</h3>
+<pre data-code-wrap="bash"><code class="lang-bash">docker build \
+  --no-cache \
+  --progress=plain \
+  --build-arg FRAPPE_BRANCH=version-15 \
+  --build-arg APPS_JSON_BASE64=$APPS_JSON_BASE64 \
+  --file images/layered/Containerfile \
+  --tag &lt;your-dockerhub-username&gt;/&lt;your-image-name&gt;:latest \
+  .
+</code></pre>
+<blockquote>
+<p>"Explanation of Flags: "</p>
+<ul>
+<li><code>--no-cache</code>: Ensures a fresh build (recommended for first-time builds)</li>
+<li><code>--progress=plain</code>: Shows detailed output during build (useful for debugging)</li>
+<li><code>--build-arg FRAPPE_BRANCH=version-15</code>: Specifies the Frappe framework branch</li>
+<li><code>--build-arg APPS_JSON_BASE64=$APPS_JSON_BASE64</code>: Injects your app list securely</li>
+<li><code>--file images/layered/Containerfile</code>: Points to the correct Dockerfile</li>
+<li><code>--tag &lt;your-dockerhub-username&gt;/&lt;your-image-name&gt;:latest</code>: Tags your image for easy reference</li>
+</ul>
+</blockquote>
+<h3><a name="p-476674-verify-image-11" class="anchor" href="#p-476674-verify-image-11"></a>Verify Image</h3>
+<p>After the build completes, list your images:</p>
+<pre data-code-wrap="bash"><code class="lang-bash">docker images
+</code></pre>
+<p>You should see your newly built image in the list:</p>
+<pre data-code-wrap="bash"><code class="lang-bash">&lt;your-dockerhub-username&gt;/&lt;your-image-name&gt; latest &lt;image_id&gt; ... Created XX minutes ago
+</code></pre>
+<hr>
+<h2><a name="p-476674-step-4-push-image-to-docker-hub-12" class="anchor" href="#p-476674-step-4-push-image-to-docker-hub-12"></a>Step 4: Push Image to Docker Hub</h2>
+<h3><a name="p-476674-setup-credentials-first-time-13" class="anchor" href="#p-476674-setup-credentials-first-time-13"></a>Setup Credentials (First Time)</h3>
+<p>Docker doesn’t store your Docker Hub password in plain text by default. You need to set up a credential helper:</p>
+<pre data-code-wrap="bash"><code class="lang-bash">sudo apt update &amp;&amp; sudo apt install pass gnupg2 -y
+gpg --full-generate-key
+</code></pre>
+<p>Follow the prompts:</p>
+<ul>
+<li>Key type: RSA and RSA (default)</li>
+<li>Key size: 4096</li>
+<li>Expiration: 0 (never)</li>
+<li>Real name: Your Name</li>
+<li>Email: <a href="mailto:your-email@example.com">your-email@example.com</a> (can be anything)</li>
+<li>Leave passphrase empty (or set one and remember it)</li>
+</ul>
+<p>Then initialize pass:</p>
+<pre data-code-wrap="bash"><code class="lang-bash">pass init your-email@example.com
+</code></pre>
+<h3><a name="p-476674-login-to-docker-hub-14" class="anchor" href="#p-476674-login-to-docker-hub-14"></a>Login to Docker Hub</h3>
+<pre data-code-wrap="bash"><code class="lang-bash">docker login -u &lt;your-dockerhub-username&gt;
+</code></pre>
+<blockquote>
+<p>“Important: When prompted for password, use a Personal Access Token (PAT), not your account password.” How to create a PAT:</p>
+<ol>
+<li>Go to <a href="https://app.docker.com/settings" rel="noopener nofollow ugc">Docker Account Settings</a></li>
+<li>Sign in</li>
+<li>Go to Security → New Access Token</li>
+<li>Give it a descriptive name (e.g., “frappe-docker-deployment”)</li>
+<li>Select appropriate permissions (at minimum: “Read, Write, Delete”)</li>
+<li>Copy the token immediately (you won’t see it again)</li>
+<li>Use this token as your password when running docker login</li>
+</ol>
+</blockquote>
+<h3><a name="p-476674-push-image-15" class="anchor" href="#p-476674-push-image-15"></a>Push Image</h3>
+<pre data-code-wrap="bash"><code class="lang-bash">docker push &lt;your-dockerhub-username&gt;/&lt;your-image-name&gt;:latest
+</code></pre>
+<blockquote>
+<p>Because The tag to be pushed must follow this format:<br>
+<code>&lt;your-dockerhub-username&gt;/&lt;repository-name&gt;:&lt;tag&gt;</code></p>
+<p>Note: If you need to retag your image:</p>
+<pre data-code-wrap="bash"><code class="lang-bash">docker tag &lt;local-image-name&gt; &lt;your-dockerhub-username&gt;/&gt; &lt;your-image-name&gt;:latest
+</code></pre>
+</blockquote>
+<hr>
+<h2><a name="p-476674-step-5-run-your-custom-image-16" class="anchor" href="#p-476674-step-5-run-your-custom-image-16"></a>Step 5: Run Your Custom Image</h2>
+<h3><a name="p-476674-create-compose-file-17" class="anchor" href="#p-476674-create-compose-file-17"></a>Create Compose File</h3>
+<pre data-code-wrap="bash"><code class="lang-bash">cd frappe_docker
+nano pwd.yml
+</code></pre>
+<h3><a name="p-476674-modify-the-configuration-18" class="anchor" href="#p-476674-modify-the-configuration-18"></a>Modify the Configuration:</h3>
+<p>Replace all instances of <code>frappe/erpnext:v15.60.1</code> in the <code>pwd.yml</code> with your custom image:<code>&lt;your-dockerhub-username&gt;/&lt;your-image-name&gt;:latest</code></p>
+<pre data-code-wrap="yaml"><code class="lang-yaml">image: &lt;your-dockerhub-username&gt;/&lt;your-image-name&gt;:latest
+</code></pre>
+<p>Update the site initialization command to include your custom app:</p>
+<pre data-code-wrap="yaml"><code class="lang-yaml">command: &gt;-
+--install-app erpnext --install-app &lt;your-app-name&gt;
+</code></pre>
+<blockquote>
+<p>Note: The app name should match the folder name of your app.</p>
+</blockquote>
+<h3><a name="p-476674-start-containers-19" class="anchor" href="#p-476674-start-containers-19"></a>Start Containers</h3>
+<pre data-code-wrap="bash"><code class="lang-bash">docker compose -f pwd.yml up -d
+</code></pre>
+<h3><a name="p-476674-monitor-site-creation-20" class="anchor" href="#p-476674-monitor-site-creation-20"></a>Monitor Site Creation</h3>
+<pre data-code-wrap="bash"><code class="lang-bash">docker logs frappe_container-create-site-1 -f
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="8" />
+              <span class='post-likes'>8 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/niraj_regmi'><span itemprop='name'>niraj_regmi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-18T03:48:01Z' class='post-time'>
+                    August 18, 2025,  3:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-18T03:48:01Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Is it mandatory to install erpnext app? I just want frappe and custom app… how can i do that?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mohamed-ameer'><span itemprop='name'>mohamed-ameer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-18T10:33:23Z' class='post-time'>
+                    August 18, 2025, 10:33am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-18T10:33:23Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>no it’s not mandatory,<br>
+only write the apps that you need</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

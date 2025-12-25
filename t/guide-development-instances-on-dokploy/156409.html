@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[Guide] Development Instances on Dokploy - Frappe Framework - Frappe Forum</title>
+    <meta name="description" content="Note 
+This guide is for setting up Development instance on Dokploy. 
+For Production instance on Dokploy check this. 
+To setup development containers locally on your PC use this. 
+
+Setting up Dokploy
+To setup Dokploy on &amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/guide-development-instances-on-dokploy/156409" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[Guide] Development Instances on Dokploy&#39;" href="https://discuss.frappe.io/t/guide-development-instances-on-dokploy/156409.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/guide-development-instances-on-dokploy/156409" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/guide-development-instances-on-dokploy/156409" />
+<meta property="og:title" content="[Guide] Development Instances on Dokploy" />
+<meta name="twitter:title" content="[Guide] Development Instances on Dokploy" />
+<meta property="og:description" content="Note  This guide is for setting up Development instance on Dokploy.  For Production instance on Dokploy check this.  To setup development containers locally on your PC use this.   Setting up Dokploy To setup Dokploy on your server, follow the official guide.  Personally, I like to create a project called Frappe which includes two environments Production &amp; Development. However you can setup a separate project for development.  Then add a service to your environment, and choose compose. Name does..." />
+<meta name="twitter:description" content="Note  This guide is for setting up Development instance on Dokploy.  For Production instance on Dokploy check this.  To setup development containers locally on your PC use this.   Setting up Dokploy To setup Dokploy on your server, follow the official guide.  Personally, I like to create a project called Frappe which includes two environments Production &amp; Development. However you can setup a separate project for development.  Then add a service to your environment, and choose compose. Name does..." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:tag" content="installation" />
+<meta property="og:article:tag" content="developer" />
+<meta property="og:article:tag" content="customization" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="3 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="3 ❤" />
+<meta property="article:published_time" content="2025-11-04T11:26:25+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"[Guide] Development Instances on Dokploy","mainEntity":{"@type":"Question","name":"[Guide] Development Instances on Dokploy","text":"Note\n\nThis guide is for setting up Development instance on Dokploy.\n\nFor Production instance on Dokploy check <a href=\"https://discuss.frappe.io/t/how-to-setup-frappe-benches-sites-and-custom-domains-with-dokploy/141521/15\">this<\/a>.\n\nTo setup development containers locally on your PC use <a href=\"https://github.com/yamenzak/FrappeDev\" rel=\"noopener nofollow ugc\">this<\/a>.\n\n<a name=\"p-485590-setting-up-dokploy-1\" class=\"anchor\" href=\"#p-485590-setting-up-dokploy-1\"><\/a>Setting up Dokploy\n\nTo setup Dokploy on your server, follow the <a href=\"https://docs.dokploy.com/docs/core/installation\" rel=\"noopener nofollow ugc\">official guide<\/a>.\n\nPersonally, I like to create a project &hellip;","upvoteCount":3,"answerCount":0,"datePublished":"2025-11-04T11:26:25.877Z","author":{"@type":"Person","name":"Yamen_Zakhour","url":"https://discuss.frappe.io/u/Yamen_Zakhour"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/guide-development-instances-on-dokploy/156409">[Guide] Development Instances on Dokploy</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/installation' class='discourse-tag' rel="tag">installation</a>, 
+            <a href='https://discuss.frappe.io/tag/developer' class='discourse-tag' rel="tag">developer</a>, 
+            <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag' rel="tag">customization</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[Guide] Development Instances on Dokploy'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/guide-development-instances-on-dokploy/156409'>
+      <meta itemprop='datePublished' content='2025-11-04T11:26:25Z'>
+        <meta itemprop='articleSection' content='Frappe Framework'>
+      <meta itemprop='keywords' content='installation, developer, customization'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Yamen_Zakhour'><span itemprop='name'>Yamen_Zakhour</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/guide-development-instances-on-dokploy/156409">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-11-04T11:26:25Z' class='post-time'>
+                    November 4, 2025, 11:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-04T12:14:04Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <blockquote>
+<p><strong>Note</strong><br>
+This guide is for setting up <strong>Development</strong> instance on Dokploy.<br>
+For <strong>Production</strong> instance on Dokploy check <a href="https://discuss.frappe.io/t/how-to-setup-frappe-benches-sites-and-custom-domains-with-dokploy/141521/15">this</a>.</p>
+<p>To setup development containers locally on your PC use <a href="https://github.com/yamenzak/FrappeDev" rel="noopener nofollow ugc">this</a>.</p>
+</blockquote>
+<h2><a name="p-485590-setting-up-dokploy-1" class="anchor" href="#p-485590-setting-up-dokploy-1"></a>Setting up Dokploy</h2>
+<p>To setup Dokploy on your server, follow the <a href="https://docs.dokploy.com/docs/core/installation" rel="noopener nofollow ugc">official guide</a>.</p>
+<p>Personally, I like to create a project called <code>Frappe</code> which includes two environments <code>Production</code> &amp; <code>Development</code>. However you can setup a separate project for development.</p>
+<p>Then add a service to your environment, and choose <strong>compose</strong>. Name doesn’t matter, call it bench or whatever project/app you are working on.</p>
+<h3><a name="p-485590-steps-2" class="anchor" href="#p-485590-steps-2"></a>Steps</h3>
+<ol>
+<li>Fill in the compose file.</li>
+<li>Fill in your environment variables</li>
+<li>Add in your domains</li>
+<li>If you are planning to spin up multiple development instances (services) then <strong>Enable Isolated Deployment</strong> from Advanced tab.</li>
+<li>Deploy</li>
+<li>From logs wait until init-bench container finishes the automated setup (5-10minutes).</li>
+<li>Access your development instance on the configured domain.</li>
+</ol>
+<h3><a name="p-485590-what-it-does-3" class="anchor" href="#p-485590-what-it-does-3"></a>What it does</h3>
+<ul>
+<li><strong>Pulls from frappe/bench:latest</strong>
+<ul>
+<li>Only Frappe Framework is installed. If you want ERPNext (or other Frappe app) as part of your development you can install it later via bench.</li>
+</ul>
+</li>
+<li><strong>Initializes development setup</strong>
+<ul>
+<li>Initializes bench</li>
+<li>Administrator user, password as per environment variable.</li>
+<li>Creates a site (as per environment variable)
+<ul>
+<li>Enables developer mode</li>
+<li>Allows CORS</li>
+<li>Ignores CSRF <strong>(warning)</strong></li>
+</ul>
+</li>
+<li>Enables <code>CHOKIDAR_USEPOLLING</code> for file watching in Docker</li>
+</ul>
+</li>
+<li><strong>Sets up additional development tools</strong>
+<ul>
+<li>Github CLI</li>
+<li>ZSH + theme</li>
+</ul>
+</li>
+<li><strong>Patches frappe’s realtime (socket)</strong>
+<ul>
+<li>There might be better solutions, but this is the only solution I figured.</li>
+<li>Patching is required for socket to work correctly behind Dokploy’s reverse proxy (Traefik).</li>
+<li><strong>How it works:</strong>
+<ul>
+<li>Backs up original files on first run (`.original` files)</li>
+<li>Restores and re-applies patches on each deployment</li>
+</ul>
+</li>
+<li><strong>What it patches:</strong>
+<ul>
+<li><code>utils.js</code>: Forces API calls to use internal service name (`<a href="http://backend:8000" rel="noopener nofollow ugc">http://backend:8000</a>`) instead of external domain</li>
+<li><code>authenticate.js</code>: Disables strict origin/host matching to allow requests through reverse proxy</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3><a name="p-485590-compose-file-4" class="anchor" href="#p-485590-compose-file-4"></a>Compose File</h3>
+<pre data-code-wrap="yaml"><code class="lang-yaml">services:
+  mariadb:
+    image: mariadb:10.6
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_ROOT_HOST: '%'
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --skip-character-set-client-handshake
+      - --skip-innodb-read-only-compressed
+    volumes:
+      - mariadb-data:/var/lib/mysql
+    networks:
+      - frappe-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-p${DB_ROOT_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  redis-cache:
+    image: redis:6.2-alpine
+    restart: always
+    volumes:
+      - redis-cache-data:/data
+    networks:
+      - frappe-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  redis-queue:
+    image: redis:6.2-alpine
+    restart: always
+    volumes:
+      - redis-queue-data:/data
+    networks:
+      - frappe-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  redis-socketio:
+    image: redis:6.2-alpine
+    restart: always
+    volumes:
+      - redis-socketio-data:/data
+    networks:
+      - frappe-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  init-bench:
+    image: frappe/bench:latest
+    command: &gt;
+      bash -c "
+      if [ -f /home/frappe/frappe-bench/sites/common_site_config.json ]; then
+        echo 'Bench already initialized';
+        exit 0;
+      fi;
+      echo 'Initializing bench...';
+      cd /home/frappe;
+      bench init --skip-redis-config-generation --frappe-branch ${FRAPPE_BRANCH} frappe-bench;
+      cd frappe-bench;
+      bench set-config -g db_host mariadb;
+      bench set-config -g redis_cache redis://redis-cache:6379;
+      bench set-config -g redis_queue redis://redis-queue:6379;
+      bench set-config -g redis_socketio redis://redis-socketio:6379;
+      bench set-config -gp socketio_port 9000;
+      bench new-site ${SITE_NAME} --mariadb-root-password ${DB_ROOT_PASSWORD} --admin-password ${ADMIN_PASSWORD} --no-mariadb-socket --db-root-username root;
+      bench --site ${SITE_NAME} set-config developer_mode 1;
+      bench --site ${SITE_NAME} set-config ignore_csrf 1;
+      bench --site ${SITE_NAME} set-config allow_cors '*';
+      bench use ${SITE_NAME};
+      echo 'Initialization complete';
+      "
+    environment:
+      - FRAPPE_BRANCH=${FRAPPE_BRANCH}
+      - SITE_NAME=${SITE_NAME}
+      - DB_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+    volumes:
+      - frappe-home:/home/frappe
+    depends_on:
+      mariadb:
+        condition: service_healthy
+      redis-cache:
+        condition: service_healthy
+      redis-queue:
+        condition: service_healthy
+      redis-socketio:
+        condition: service_healthy
+    networks:
+      - frappe-network
+    restart: "no"
+
+  patch-socketio:
+    image: frappe/bench:latest
+    command:
+      - bash
+      - -c
+      - |
+        echo 'Waiting for bench initialization...'
+        until [ -f /home/frappe/frappe-bench/apps/frappe/socketio.js ]; do
+          sleep 5
+        done
+        
+        echo 'Applying socket.io patches for Dokploy reverse proxy...'
+        cd /home/frappe/frappe-bench/apps/frappe/realtime
+        
+        # backup original files on first run
+        if [ ! -f utils.js.original ]; then
+          cp utils.js utils.js.original
+        fi
+        
+        if [ ! -f middlewares/authenticate.js.original ]; then
+          cp middlewares/authenticate.js middlewares/authenticate.js.original
+        fi
+        
+        # always restore from originals before patching
+        cp utils.js.original utils.js
+        cp middlewares/authenticate.js.original middlewares/authenticate.js
+        
+        # patch utils.js to use internal service
+        echo 'Patching utils.js to use internal backend service...'
+        cat &gt; utils.js &lt;&lt; 'EOFPATCH'
+        const { get_conf } = require("../node_utils");
+        const conf = get_conf();
+        
+        function get_url(socket, path) {
+        	if (!path) {
+        		path = "";
+        	}
+        	// Dokploy patch: Always use internal service name
+        	return "http://backend:8000" + path;
+        }
+        
+        module.exports = {
+        	get_url,
+        };
+        EOFPATCH
+        
+        echo 'Patching authenticate.js to allow reverse proxy...'
+        sed -i '/if (get_hostname(socket.request.headers.host) != get_hostname(socket.request.headers.origin))/,+3 s|^\([^/]\)|// Dokploy: \1|' middlewares/authenticate.js
+        
+        echo 'Socket.io patches applied successfully!'
+    volumes:
+      - frappe-home:/home/frappe
+    depends_on:
+      init-bench:
+        condition: service_completed_successfully
+    networks:
+      - frappe-network
+    restart: "no"
+
+  backend:
+    image: frappe/bench:latest
+    restart: always
+    user: frappe
+    entrypoint: []
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: &gt;
+      bash -c "
+      sudo bash -c '
+      if [ ! -f /tmp/.devtools-installed ]; then
+        echo \"Installing dev tools...\";
+        apt-get update;
+        apt-get install -y zsh curl git;
+        curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg;
+        echo \"deb [arch=amd64 signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main\" | tee /etc/apt/sources.list.d/github-cli.list &gt; /dev/null;
+        apt-get update;
+        apt-get install -y gh;
+        touch /tmp/.devtools-installed;
+        echo \"Dev tools installed!\";
+      fi
+      ';
+      if [ ! -f /home/frappe/.zshrc ]; then
+        echo \"Installing oh-my-zsh...\";
+        sh -c \"\$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\" \"\" --unattended;
+        sudo chsh -s \$(which zsh) frappe;
+        echo \"oh-my-zsh installed!\";
+      fi;
+      if [ ! -f /home/frappe/.starship-installed ]; then
+        echo \"Installing Starship prompt...\";
+        sudo bash -c 'curl -sS https://starship.rs/install.sh | sh -s -- -y';
+        echo 'eval \"\$(starship init zsh)\"' &gt;&gt; /home/frappe/.zshrc;
+        touch /home/frappe/.starship-installed;
+        echo \"Starship installed!\";
+      fi;
+      until [ -f /home/frappe/frappe-bench/sites/common_site_config.json ]; do
+        echo 'Waiting for initialization...';
+        sleep 5;
+      done;
+      cd /home/frappe/frappe-bench;
+      source env/bin/activate;
+      exec bench serve --port 8000;
+      "
+    volumes:
+      - frappe-home:/home/frappe
+    depends_on:
+      patch-socketio:
+        condition: service_completed_successfully
+      redis-cache:
+        condition: service_healthy
+      redis-queue:
+        condition: service_healthy
+      redis-socketio:
+        condition: service_healthy
+    networks:
+      - frappe-network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.vite.rule=Host(`vite.${SITE_NAME}`)"
+      - "traefik.http.services.vite.loadbalancer.server.port=8080"
+
+  socketio:
+    image: frappe/bench:latest
+    restart: always
+    command: &gt;
+      bash -c "
+      until [ -f /home/frappe/frappe-bench/apps/frappe/socketio.js ]; do
+        echo 'Waiting for bench initialization...';
+        sleep 5;
+      done;
+      cd /home/frappe/frappe-bench;
+      echo 'Starting Socket.IO server...';
+      node apps/frappe/socketio.js;
+      "
+    volumes:
+      - frappe-home:/home/frappe
+    depends_on:
+      patch-socketio:
+        condition: service_completed_successfully
+      redis-socketio:
+        condition: service_healthy
+    networks:
+      - frappe-network
+
+  worker-short:
+    image: frappe/bench:latest
+    restart: always
+    command: &gt;
+      bash -c "
+      until [ -f /home/frappe/frappe-bench/sites/common_site_config.json ]; do
+        echo 'Waiting for initialization...';
+        sleep 5;
+      done;
+      cd /home/frappe/frappe-bench;
+      source env/bin/activate;
+      exec bench worker --queue short;
+      "
+    volumes:
+      - frappe-home:/home/frappe
+    depends_on:
+      patch-socketio:
+        condition: service_completed_successfully
+      redis-queue:
+        condition: service_healthy
+    networks:
+      - frappe-network
+
+  worker-default:
+    image: frappe/bench:latest
+    restart: always
+    command: &gt;
+      bash -c "
+      until [ -f /home/frappe/frappe-bench/sites/common_site_config.json ]; do
+        echo 'Waiting for initialization...';
+        sleep 5;
+      done;
+      cd /home/frappe/frappe-bench;
+      source env/bin/activate;
+      exec bench worker --queue default;
+      "
+    volumes:
+      - frappe-home:/home/frappe
+    depends_on:
+      patch-socketio:
+        condition: service_completed_successfully
+      redis-queue:
+        condition: service_healthy
+    networks:
+      - frappe-network
+
+  worker-long:
+    image: frappe/bench:latest
+    restart: always
+    command: &gt;
+      bash -c "
+      until [ -f /home/frappe/frappe-bench/sites/common_site_config.json ]; do
+        echo 'Waiting for initialization...';
+        sleep 5;
+      done;
+      cd /home/frappe/frappe-bench;
+      source env/bin/activate;
+      exec bench worker --queue long;
+      "
+    volumes:
+      - frappe-home:/home/frappe
+    depends_on:
+      patch-socketio:
+        condition: service_completed_successfully
+      redis-queue:
+        condition: service_healthy
+    networks:
+      - frappe-network
+
+  scheduler:
+    image: frappe/bench:latest
+    restart: always
+    command: &gt;
+      bash -c "
+      until [ -f /home/frappe/frappe-bench/sites/common_site_config.json ]; do
+        echo 'Waiting for initialization...';
+        sleep 5;
+      done;
+      cd /home/frappe/frappe-bench;
+      source env/bin/activate;
+      exec bench schedule;
+      "
+    volumes:
+      - frappe-home:/home/frappe
+    depends_on:
+      patch-socketio:
+        condition: service_completed_successfully
+      redis-queue:
+        condition: service_healthy
+    networks:
+      - frappe-network
+
+volumes:
+  mariadb-data:
+  redis-cache-data:
+  redis-queue-data:
+  redis-socketio-data:
+  frappe-home:
+
+networks:
+  frappe-network:
+</code></pre>
+<h3><a name="p-485590-environment-variables-5" class="anchor" href="#p-485590-environment-variables-5"></a>Environment Variables</h3>
+<pre data-code-wrap="yaml"><code class="lang-yaml">SITE_NAME=frappe.dev.base-dokploy-domain.com # or whatever domain you added into domains
+FRAPPE_BRANCH=develop # or version-15
+DB_ROOT_PASSWORD=StrongPassword123
+ADMIN_PASSWORD=admin
+</code></pre>
+<h3><a name="p-485590-domains-configuration-6" class="anchor" href="#p-485590-domains-configuration-6"></a>Domains Configuration</h3>
+<ul>
+<li><strong>Main Site</strong>
+<ul>
+<li>Service: <code>backend</code></li>
+<li>Host: <code>frappe.dev.base-dokploy-domain.com</code> ~ or whatever domain (make sure it’s similar to site_name in environment)</li>
+<li>Path: <code>/</code></li>
+<li>Port: <code>8000</code></li>
+<li>Enable SSL</li>
+</ul>
+</li>
+<li><strong>Socket</strong>
+<ul>
+<li>Service: <code>socketio</code></li>
+<li>Host: <strong>exactly similar to your main site host.</strong></li>
+<li>Path: <code>/socket.io</code></li>
+<li>Port: <code>9000</code></li>
+<li>Enable SSL</li>
+</ul>
+</li>
+<li><strong>Vite (only needed for custom app frontend development)</strong>
+<ul>
+<li>Service: <code>backend</code></li>
+<li>Host: <code>vite.frappe.dev.base-dokploy-domain.com</code></li>
+<li>Path: <code>/</code></li>
+<li>Port: <code>8080</code></li>
+<li>Enable SSL</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2><a name="p-485590-backend-development-7" class="anchor" href="#p-485590-backend-development-7"></a>Backend Development</h2>
+<p>Bench starts automatically on deployment.</p>
+<p>Volume <code>frappe-home</code> persists across redeployments and includes database, sites and apps. Install apps normally via bench.</p>
+<h4><a name="p-485590-connecting-to-container-8" class="anchor" href="#p-485590-connecting-to-container-8"></a>Connecting to container</h4>
+<ul>
+<li>SSH to your server</li>
+<li>Attach to the <code>backend</code> container.</li>
+<li>Run <code>zsh</code> for a better terminal experience.</li>
+<li>Setup Github CLI: <code>gh auth login</code> / <code>gh auth setup-git</code></li>
+<li>Interact with bench directly to create/install apps, migrate, build, etc…</li>
+</ul>
+<hr>
+<h2><a name="p-485590-frontend-development-9" class="anchor" href="#p-485590-frontend-development-9"></a>Frontend Development</h2>
+<p>This setup is also ready to develop custom frontends (react/vue) for your custom apps. Use <a href="https://github.com/NagariaHussain/doppio" rel="noopener nofollow ugc">doppio</a> to setup SPAs and custom desk pages. Then configure hosts and hmr in your <code>vite.config</code>.</p>
+<p><code>CHOKIDAR POLLING</code> was added to detect file changes within docker. However, hot reloads are of-course slower than developing locally.</p>
+<blockquote>
+<p>Remember to run <code>yarn dev –host</code> from your frontend directory to run vite development and access your vite domain.</p>
+<p>After building, the <strong>built version</strong> is accessible on your backend domain.</p>
+</blockquote>
+<h4><a name="p-485590-viteconfig-example-10" class="anchor" href="#p-485590-viteconfig-example-10"></a><code>vite.config</code> Example</h4>
+<pre data-code-wrap="typescript"><code class="lang-typescript">export default defineConfig({
+	plugins: [react(), tailwindcss()],
+	server: {
+		port: 8080,
+		host: '0.0.0.0',
+		proxy: proxyOptions,
+		allowedHosts: [
+			'vite.frappe.dev.base-dokploy-domain.com', 
+            // the vite domain you entered in domain configuration
+            // or simply
+			'base-dokploy-domain.com'
+		],
+		hmr: {
+			host: 'vite.frappe.dev.base-dokploy-domain.com',
+            // the vite domain you entered in domain configuration
+			protocol: 'wss',
+			clientPort: 443
+		}
+	},
+	resolve: {
+		alias: {
+			'@': path.resolve(__dirname, 'src')
+		}
+	},
+	build: {
+		outDir: '../your_app/public/your_frontend',
+		emptyOutDir: true,
+		target: 'es2015',
+	},
+});
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/how-to-setup-frappe-benches-sites-and-custom-domains-with-dokploy/141521/19">How to setup frappe benches, sites and custom domains with dokploy</a>
+                        <meta itemprop='position' content='6'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/setup-frappe-development-environment-in-a-few-minutes-frappe-docker/153480/10">Setup Frappe development environment in a few minutes (frappe_docker)</a>
+                        <meta itemprop='position' content='7'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/does-frappe-s-default-socket-io-server-allow-external-service-connections/157794/4">Does Frappe’s default socket.io server allow external service connections?</a>
+                        <meta itemprop='position' content='8'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ptrmtb'><span itemprop='name'>ptrmtb</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-09T12:30:28Z' class='post-time'>
+                    November 9, 2025, 12:30pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-09T12:30:28Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you for your awesome work! <img src="https://discuss.frappe.io/images/emoji/twitter/clinking_beer_mugs.png?v=14" title=":clinking_beer_mugs:" class="emoji" alt=":clinking_beer_mugs:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

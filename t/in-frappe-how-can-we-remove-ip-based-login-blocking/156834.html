@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>In Frappe, how can we remove IP-based login blocking? - Frappe Framework - Frappe Forum</title>
+    <meta name="description" content="I have a question. Can we remove IP-based login blocking? 
+On my site, there are two users: User A and User B. Both are using the same Wi-Fi. If User A enters the wrong password and gets blocked, then at the same time Us&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/in-frappe-how-can-we-remove-ip-based-login-blocking/156834" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;In Frappe, how can we remove IP-based login blocking?&#39;" href="https://discuss.frappe.io/t/in-frappe-how-can-we-remove-ip-based-login-blocking/156834.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/in-frappe-how-can-we-remove-ip-based-login-blocking/156834" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/in-frappe-how-can-we-remove-ip-based-login-blocking/156834" />
+<meta property="og:title" content="In Frappe, how can we remove IP-based login blocking?" />
+<meta name="twitter:title" content="In Frappe, how can we remove IP-based login blocking?" />
+<meta property="og:description" content="I have a question. Can we remove IP-based login blocking?  On my site, there are two users: User A and User B. Both are using the same Wi-Fi. If User A enters the wrong password and gets blocked, then at the same time User B also sees the message “Your account is blocked, please try again after 120 seconds,” even though User B is entering the correct password." />
+<meta name="twitter:description" content="I have a question. Can we remove IP-based login blocking?  On my site, there are two users: User A and User B. Both are using the same Wi-Fi. If User A enters the wrong password and gets blocked, then at the same time User B also sees the message “Your account is blocked, please try again after 120 seconds,” even though User B is entering the correct password." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:tag" content="developer" />
+<meta property="og:article:tag" content="security" />
+<meta property="og:article:tag" content="frappe" />
+<meta property="og:article:tag" content="customization" />
+<meta property="og:article:tag" content="bug" />
+<meta property="article:published_time" content="2025-11-14T06:23:15+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"In Frappe, how can we remove IP-based login blocking?","mainEntity":{"@type":"Question","name":"In Frappe, how can we remove IP-based login blocking?","text":"I have a question. Can we remove IP-based login blocking?\n\nOn my site, there are two users: User A and User B. Both are using the same Wi-Fi. If User A enters the wrong password and gets blocked, then at the same time User B also sees the message “Your account is blocked, please try again after 120 &hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-11-14T06:23:15.430Z","author":{"@type":"Person","name":"bhaveshmidocean","url":"https://discuss.frappe.io/u/bhaveshmidocean"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/in-frappe-how-can-we-remove-ip-based-login-blocking/156834">In Frappe, how can we remove IP-based login blocking?</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/developer' class='discourse-tag' rel="tag">developer</a>, 
+            <a href='https://discuss.frappe.io/tag/security' class='discourse-tag' rel="tag">security</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
+            <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag' rel="tag">customization</a>, 
+            <a href='https://discuss.frappe.io/tag/bug' class='discourse-tag' rel="tag">bug</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='In Frappe, how can we remove IP-based login blocking?'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/in-frappe-how-can-we-remove-ip-based-login-blocking/156834'>
+      <meta itemprop='datePublished' content='2025-11-14T06:23:15Z'>
+        <meta itemprop='articleSection' content='Frappe Framework'>
+      <meta itemprop='keywords' content='developer, security, frappe, customization, bug'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/bhaveshmidocean'><span itemprop='name'>bhaveshmidocean</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/in-frappe-how-can-we-remove-ip-based-login-blocking/156834">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-11-14T06:23:15Z' class='post-time'>
+                    November 14, 2025,  6:23am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-14T06:23:15Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have a question. Can we remove IP-based login blocking?</p>
+<p>On my site, there are two users: User A and User B. Both are using the same Wi-Fi. If User A enters the wrong password and gets blocked, then at the same time User B also sees the message “Your account is blocked, please try again after 120 seconds,” even though User B is entering the correct password.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kolate_sambhaji'><span itemprop='name'>kolate_sambhaji</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/b/5/b5c80605b8861b1dc8ec54c8e290d78b4e342ea1.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-14T07:09:53Z' class='post-time'>
+                    November 14, 2025,  7:09am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-14T07:09:53Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>its a better security feature, you can increase count of Allow Consecutive Login Attempts in System settings to add some more flexibility.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/b/5/b5c80605b8861b1dc8ec54c8e290d78b4e342ea1.png" data-download-href="https://discuss.frappe.io/uploads/default/b5c80605b8861b1dc8ec54c8e290d78b4e342ea1" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/b/5/b5c80605b8861b1dc8ec54c8e290d78b4e342ea1_2_690x328.png" alt="image" data-base62-sha1="pW6YaTBsRN4gn4zNfMxPzfYdhrr" width="690" height="328" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/b/5/b5c80605b8861b1dc8ec54c8e290d78b4e342ea1_2_690x328.png, https://discuss.frappe.io/uploads/default/optimized/3X/b/5/b5c80605b8861b1dc8ec54c8e290d78b4e342ea1_2_1035x492.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/b/5/b5c80605b8861b1dc8ec54c8e290d78b4e342ea1_2_1380x656.png 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2736×1302 249 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/bhaveshmidocean'><span itemprop='name'>bhaveshmidocean</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-14T09:18:44Z' class='post-time'>
+                    November 14, 2025,  9:18am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-14T09:18:44Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="kolate_sambhaji" data-post="2" data-topic="156834">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/kolate_sambhaji/48/42955_2.png" class="avatar"> kolate_sambhaji:</div>
+<blockquote>
+<p>its a better security feature, you can increase count of Allow Consecutive Login Attempts in System settings to add some more flexibility.</p>
+</blockquote>
+</aside>
+<p>No, it will not help for my further task</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kolate_sambhaji'><span itemprop='name'>kolate_sambhaji</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-14T09:48:58Z' class='post-time'>
+                    November 14, 2025,  9:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-14T09:48:58Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Can you share what error you are getting/ traceback?<br>
+Also please note after changing settings you might need to clear cache.</p>
+<p>you can also add rate_limiter in site config for ip based restriction<br>
+Code for  rate_limiter  <a href="https://github.com/frappe/frappe/blob/develop/frappe/rate_limiter.py#L23" class="inline-onebox">frappe/frappe/rate_limiter.py at develop · frappe/frappe · GitHub</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

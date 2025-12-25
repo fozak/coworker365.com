@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How to Send Notification Only to Assigned Practitioner (Doctor) in Patient Appointment? - Healthcare - Frappe Forum</title>
+    <meta name="description" content="Hi all, 
+I’m trying to send a system notification in Frappe when a Patient Appointment is created with status &amp;quot;Open&amp;quot;, but I want the notification to go only to the assigned doctor (Healthcare Practitioner). 
+What I’ve Do&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/how-to-send-notification-only-to-assigned-practitioner-doctor-in-patient-appointment/148109" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;How to Send Notification Only to Assigned Practitioner (Doctor) in Patient Appointment?&#39;" href="https://discuss.frappe.io/t/how-to-send-notification-only-to-assigned-practitioner-doctor-in-patient-appointment/148109.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/how-to-send-notification-only-to-assigned-practitioner-doctor-in-patient-appointment/148109" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/how-to-send-notification-only-to-assigned-practitioner-doctor-in-patient-appointment/148109" />
+<meta property="og:title" content="How to Send Notification Only to Assigned Practitioner (Doctor) in Patient Appointment?" />
+<meta name="twitter:title" content="How to Send Notification Only to Assigned Practitioner (Doctor) in Patient Appointment?" />
+<meta property="og:description" content="Hi all,  I’m trying to send a system notification in Frappe when a Patient Appointment is created with status &quot;Open&quot;, but I want the notification to go only to the assigned doctor (Healthcare Practitioner).  What I’ve Done:  Created a notification on the Patient Appointment DocType. Condition:  doc.status == &quot;Open&quot;   Recipient:  Role: Physician Condition:    doc.practitioner == frappe.session.user  Problem: Even with this condition, all users with the Physician role are getting notified — not ju..." />
+<meta name="twitter:description" content="Hi all,  I’m trying to send a system notification in Frappe when a Patient Appointment is created with status &quot;Open&quot;, but I want the notification to go only to the assigned doctor (Healthcare Practitioner).  What I’ve Done:  Created a notification on the Patient Appointment DocType. Condition:  doc.status == &quot;Open&quot;   Recipient:  Role: Physician Condition:    doc.practitioner == frappe.session.user  Problem: Even with this condition, all users with the Physician role are getting notified — not ju..." />
+<meta property="og:article:section" content="Healthcare" />
+<meta property="og:article:section:color" content="0088CC" />
+<meta property="og:article:tag" content="healthcare" />
+<meta property="og:article:tag" content="frappe" />
+<meta property="og:article:tag" content="customization" />
+<meta property="article:published_time" content="2025-06-04T06:55:29+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="/t/how-to-send-notification-only-to-assigned-practitioner-doctor-in-patient-appointment/148109?page=2">
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"How to Send Notification Only to Assigned Practitioner (Doctor) in Patient Appointment?","mainEntity":{"@type":"Question","name":"How to Send Notification Only to Assigned Practitioner (Doctor) in Patient Appointment?","text":"Hi all,\n\nI’m trying to send a system notification in Frappe when a Patient Appointment is created with status &quot;Open&quot;, but I want the notification to go only to the assigned doctor (Healthcare Practitioner).\n\n<a name=\"what-ive-done-1\" class=\"anchor\" href=\"#what-ive-done-1\"><\/a>What I’ve Done:\n\nCreated a notification on the Patient Appointment DocType.\n\nCondition:\n\ndoc.&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-06-04T06:55:28.892Z","author":{"@type":"Person","name":"RanganathanM","url":"https://discuss.frappe.io/u/RanganathanM"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/how-to-send-notification-only-to-assigned-practitioner-doctor-in-patient-appointment/148109">How to Send Notification Only to Assigned Practitioner (Doctor) in Patient Appointment?</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/healthcare/58" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0088CC'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Healthcare</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/healthcare' class='discourse-tag' rel="tag">healthcare</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
+            <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag' rel="tag">customization</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='How to Send Notification Only to Assigned Practitioner (Doctor) in Patient Appointment?'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/how-to-send-notification-only-to-assigned-practitioner-doctor-in-patient-appointment/148109'>
+      <meta itemprop='datePublished' content='2025-06-04T06:55:28Z'>
+        <meta itemprop='articleSection' content='Healthcare'>
+      <meta itemprop='keywords' content='healthcare, frappe, customization'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/RanganathanM'><span itemprop='name'>RanganathanM</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/how-to-send-notification-only-to-assigned-practitioner-doctor-in-patient-appointment/148109">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-06-04T06:55:29Z' class='post-time'>
+                    June 4, 2025,  6:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-04T09:05:40Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi all,</p>
+<p>I’m trying to send a <strong>system notification</strong> in <strong>Frappe</strong> when a <strong>Patient Appointment</strong> is created with status <code>"Open"</code>, but I want the notification to go <strong>only to the assigned doctor (Healthcare Practitioner)</strong>.</p>
+<h3><a name="what-ive-done-1" class="anchor" href="#what-ive-done-1"></a>What I’ve Done:</h3>
+<ul>
+<li>Created a notification on the <strong>Patient Appointment</strong> DocType.</li>
+<li>Condition:</li>
+</ul>
+<pre><code class="lang-auto">doc.status == "Open"
+</code></pre>
+<ul>
+<li>Recipient:
+<ul>
+<li>Role: <strong>Physician</strong></li>
+<li>Condition:</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-auto">doc.practitioner == frappe.session.user
+</code></pre>
+<h3><a name="problem-2" class="anchor" href="#problem-2"></a>Problem:</h3>
+<p>Even with this condition, <strong>all users with the Physician role</strong> are getting notified — not just the one assigned in <code>doc.practitioner</code>.</p>
+<p>I tried using:</p>
+<ul>
+<li><code>doc.practitioner == frappe.session.user</code></li>
+<li>“Receiver By Role” + Condition</li>
+<li>“Receiver By Document Field”</li>
+</ul>
+<p>But <code>doc.practitioner</code> is a <strong>Link to Healthcare Practitioner</strong>, not directly to a <strong>User</strong>, so notifications are not correctly scoped to the specific user.</p>
+<hr>
+<h3><a name="what-i-want-3" class="anchor" href="#what-i-want-3"></a>What I Want:</h3>
+<p>I want the notification to be sent <strong>only to the User account of the assigned Healthcare Practitioner</strong> (i.e., <code>doc.practitioner</code>).</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ashiucristo'><span itemprop='name'>ashiucristo</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-04T09:16:02Z' class='post-time'>
+                    June 4, 2025,  9:16am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-04T09:27:51Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>You can use  <code>**Notification</code> DocType** to send system or email notifications.<br>
+or you can use frappe.sendmail()</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/RanganathanM'><span itemprop='name'>RanganathanM</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/0/a/0a719537cf1a545ef011f4d2632bf8a1dd75cc71.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-04T09:51:54Z' class='post-time'>
+                    June 4, 2025,  9:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-04T09:58:04Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Actually, I’m using that only. If I book an appointment for one doctor, it shows a system notification for all doctors who are assigned the role of physician. But if I book an appointment for Dr. Raju means I need to<br>
+Send a notification for Dr.Raju, not for other doctors who have the role of physician. Please find below attached screenshot.Here i tried add a condition of frappe.session.user.Can you guide me achieve the above scenario ?<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/a/0a719537cf1a545ef011f4d2632bf8a1dd75cc71.png" data-download-href="https://discuss.frappe.io/uploads/default/0a719537cf1a545ef011f4d2632bf8a1dd75cc71" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/a/0a719537cf1a545ef011f4d2632bf8a1dd75cc71_2_690x442.png" alt="image" data-base62-sha1="1uo7K9dSIIV1u2LBBhgotKjarzH" width="690" height="442" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/a/0a719537cf1a545ef011f4d2632bf8a1dd75cc71_2_690x442.png, https://discuss.frappe.io/uploads/default/optimized/3X/0/a/0a719537cf1a545ef011f4d2632bf8a1dd75cc71_2_1035x663.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/0/a/0a719537cf1a545ef011f4d2632bf8a1dd75cc71.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1328×852 49.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ashiucristo'><span itemprop='name'>ashiucristo</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/b/b/bbe73e3839e8c84fb72761c4bb59bb596cdb6d63.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-04T10:08:25Z' class='post-time'>
+                    June 4, 2025, 10:08am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-04T10:08:25Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>You have to set Send Alert On on Value Change.<br>
+or refer to this or use frappe.sendmail<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/b/b/bbe73e3839e8c84fb72761c4bb59bb596cdb6d63.png" data-download-href="https://discuss.frappe.io/uploads/default/bbe73e3839e8c84fb72761c4bb59bb596cdb6d63" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/b/b/bbe73e3839e8c84fb72761c4bb59bb596cdb6d63_2_690x450.png" alt="image" data-base62-sha1="qOgIOSCPW7gGCJmq5jNgoXQdVFp" width="690" height="450" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/b/b/bbe73e3839e8c84fb72761c4bb59bb596cdb6d63_2_690x450.png, https://discuss.frappe.io/uploads/default/optimized/3X/b/b/bbe73e3839e8c84fb72761c4bb59bb596cdb6d63_2_1035x675.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/b/b/bbe73e3839e8c84fb72761c4bb59bb596cdb6d63_2_1380x900.png 2x" data-dominant-color="1C1C1D"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1590×1039 93.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/RanganathanM'><span itemprop='name'>RanganathanM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-04T12:59:00Z' class='post-time'>
+                    June 4, 2025, 12:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-04T12:59:00Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>No, if any appointment is booked, I need to send a system notification to that particular doctor and not for all doctors. I don’t want to send an email notification</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abdeali'><span itemprop='name'>Abdeali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-04T13:51:44Z' class='post-time'>
+                    June 4, 2025,  1:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-04T13:51:44Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>There are some options with that you can achieve this:</p>
+<ol>
+<li>
+<p>Use <code>Custom</code> and send notification on <code>on_insert()</code> means status = “Open”</p>
+</li>
+<li>
+<p>Create Custom field with fieldtype <code>Data</code> and in options <code>Email</code> and set that <code>Doctor</code>’s email_id from user (Your custom logic) and set this custom field in Notification</p>
+</li>
+</ol>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/519_Hamza_Habeeb'><span itemprop='name'>519_Hamza_Habeeb</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-04T13:53:20Z' class='post-time'>
+                    June 4, 2025,  1:53pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-04T13:53:20Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>in reciever by document field set the healthcare practitioner</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/RanganathanM'><span itemprop='name'>RanganathanM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-05T04:52:56Z' class='post-time'>
+                    June 5, 2025,  4:52am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-05T04:52:56Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>But it only shows the owner as an option, it doesn’t show another field. Is there any way to add those fields as options?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/519_Hamza_Habeeb'><span itemprop='name'>519_Hamza_Habeeb</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-05T04:55:48Z' class='post-time'>
+                    June 5, 2025,  4:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-05T04:55:48Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>you can add an email field in the appointment doctype and autofill it when a doctor is selected.</p>
+<p>that email field will be visible in the dropdown to select in notifications</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/RanganathanM'><span itemprop='name'>RanganathanM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-05T05:38:40Z' class='post-time'>
+                    June 5, 2025,  5:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-05T05:38:40Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This will work for email notification, I need to send system notification only not Email Notification</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/RanganathanM'><span itemprop='name'>RanganathanM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-05T05:41:08Z' class='post-time'>
+                    June 5, 2025,  5:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-05T05:41:08Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This will work for email notification, I need to send system notification only not Email Notification for doctors</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Mubasher'><span itemprop='name'>Mubasher</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/9/f/9f9605e698e0fd72ccf1d17171e142fa71b8dca2.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-05T06:15:03Z' class='post-time'>
+                    June 5, 2025,  6:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-05T06:15:03Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi there how are you the right way to solve this is to add another field in the appoitment doctype email<br>
+and fetch if from practitoiner document email<br>
+and send the notification based on that email<br>
+then it will only send notification to that practitioner and alos you can hide that field if neccesarry it will still work fine<br>
+and select the type system notification not email notification<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/f/9f9605e698e0fd72ccf1d17171e142fa71b8dca2.png" data-download-href="https://discuss.frappe.io/uploads/default/9f9605e698e0fd72ccf1d17171e142fa71b8dca2" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/9/f/9f9605e698e0fd72ccf1d17171e142fa71b8dca2_2_690x215.png" alt="image" data-base62-sha1="mLLl7F9KwuHNRWBjvlAzurncL50" width="690" height="215" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/9/f/9f9605e698e0fd72ccf1d17171e142fa71b8dca2_2_690x215.png, https://discuss.frappe.io/uploads/default/original/3X/9/f/9f9605e698e0fd72ccf1d17171e142fa71b8dca2.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/9/f/9f9605e698e0fd72ccf1d17171e142fa71b8dca2.png 2x" data-dominant-color="E4EAF3"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">816×255 8.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/RanganathanM'><span itemprop='name'>RanganathanM</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/1/d/1da2d69d9392c07cc0d140b1cd65fcf18ee72af6.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-05T09:18:52Z' class='post-time'>
+                    June 5, 2025,  9:18am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-05T09:18:52Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/d/1da2d69d9392c07cc0d140b1cd65fcf18ee72af6.png" data-download-href="https://discuss.frappe.io/uploads/default/1da2d69d9392c07cc0d140b1cd65fcf18ee72af6" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/1/d/1da2d69d9392c07cc0d140b1cd65fcf18ee72af6_2_690x153.png" alt="image" data-base62-sha1="4eaJ1rp4NUhKn2YnkXaZe48EXSS" width="690" height="153" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/1/d/1da2d69d9392c07cc0d140b1cd65fcf18ee72af6_2_690x153.png, https://discuss.frappe.io/uploads/default/optimized/3X/1/d/1da2d69d9392c07cc0d140b1cd65fcf18ee72af6_2_1035x229.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/1/d/1da2d69d9392c07cc0d140b1cd65fcf18ee72af6_2_1380x306.png 2x" data-dominant-color="FCFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1440×321 17.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+If I choose System notification, I won’t show the email option on the receiver by the user; it shows only owner as option</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Raghvendra_Aditya'><span itemprop='name'>Raghvendra_Aditya</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-05T09:23:09Z' class='post-time'>
+                    June 5, 2025,  9:23am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-05T09:23:09Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Mark Email in Reciver mail field then it show it in drop down of notifcation</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/RanganathanM'><span itemprop='name'>RanganathanM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-05T09:24:13Z' class='post-time'>
+                    June 5, 2025,  9:24am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-05T09:24:13Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Can you explain this?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Raghvendra_Aditya'><span itemprop='name'>Raghvendra_Aditya</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/6/a/6a39ca8ede150d053132328dfffb489148dc68ef.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-05T09:46:13Z' class='post-time'>
+                    June 5, 2025,  9:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-05T09:46:13Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/6/a/6a39ca8ede150d053132328dfffb489148dc68ef.png" data-download-href="https://discuss.frappe.io/uploads/default/6a39ca8ede150d053132328dfffb489148dc68ef" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/6/a/6a39ca8ede150d053132328dfffb489148dc68ef_2_690x140.png" alt="image" data-base62-sha1="f9IqBcIpFuCmCQBwnHOVhvT1IVF" width="690" height="140" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/6/a/6a39ca8ede150d053132328dfffb489148dc68ef_2_690x140.png, https://discuss.frappe.io/uploads/default/optimized/3X/6/a/6a39ca8ede150d053132328dfffb489148dc68ef_2_1035x210.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/6/a/6a39ca8ede150d053132328dfffb489148dc68ef.png 2x" data-dominant-color="F3F3F3"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1117×228 9.21 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>As image attached create data field in Customimizing  doctype with filling email using custom code/ or maunal whom you want to send it  and with marking Email in option filed</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/b/2be77552b82bc2193d40a15441ecfbbd4ad60ad4.png" data-download-href="https://discuss.frappe.io/uploads/default/2be77552b82bc2193d40a15441ecfbbd4ad60ad4" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/b/2be77552b82bc2193d40a15441ecfbbd4ad60ad4_2_690x146.png" alt="image" data-base62-sha1="6goqywscl65MXmmHqcVCRxl4MEk" width="690" height="146" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/b/2be77552b82bc2193d40a15441ecfbbd4ad60ad4_2_690x146.png, https://discuss.frappe.io/uploads/default/optimized/3X/2/b/2be77552b82bc2193d40a15441ecfbbd4ad60ad4_2_1035x219.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/2/b/2be77552b82bc2193d40a15441ecfbbd4ad60ad4_2_1380x292.png 2x" data-dominant-color="F2F5F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1869×396 32.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+while creating notification select custom email option to whom you want to send it</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/RanganathanM'><span itemprop='name'>RanganathanM</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/3/9/39d7913abbd57601d70ed65a4a96ce1a3fd2ea02.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-05T10:00:00Z' class='post-time'>
+                    June 5, 2025, 10:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-05T10:00:00Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>What channel are you using in the notification doctype?<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/3/9/39d7913abbd57601d70ed65a4a96ce1a3fd2ea02.png" data-download-href="https://discuss.frappe.io/uploads/default/39d7913abbd57601d70ed65a4a96ce1a3fd2ea02" title="image"><img src="https://discuss.frappe.io/uploads/default/original/3X/3/9/39d7913abbd57601d70ed65a4a96ce1a3fd2ea02.png" alt="image" data-base62-sha1="8fH48838qna9S4p8BNaTgUbZ5f4" width="690" height="110" data-dominant-color="FDFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">721×115 2.03 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Raghvendra_Aditya'><span itemprop='name'>Raghvendra_Aditya</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-05T10:03:42Z' class='post-time'>
+                    June 5, 2025, 10:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-05T10:03:42Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Email</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/RanganathanM'><span itemprop='name'>RanganathanM</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-05T10:19:33Z' class='post-time'>
+                    June 5, 2025, 10:19am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-05T10:19:33Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Here I don’t want to send the email, for I just need to show system notification only</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Mubasher'><span itemprop='name'>Mubasher</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-11T12:17:48Z' class='post-time'>
+                    June 11, 2025, 12:17pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-11T12:17:48Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>hi there how are you</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="/t/how-to-send-notification-only-to-assigned-practitioner-doctor-in-patient-appointment/148109?page=2">next page →</a></b></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

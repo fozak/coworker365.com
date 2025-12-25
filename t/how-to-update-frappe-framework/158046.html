@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How to update Frappe Framework - Frappe Forum</title>
+    <meta name="description" content="Hello There, 
+I am using Frappe HelpDesk by docker-compose built via command python3 easyinstall.py 
+Currently frappe framework: v15.90.1 
+  
+How to update frappe framework to latest? 
+Thanks so much :heart: 
+Thong Nguye&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/how-to-update-frappe-framework/158046" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;How to update Frappe Framework&#39;" href="https://discuss.frappe.io/t/how-to-update-frappe-framework/158046.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/6/a/6a668e41e5383f05b9ecd4cc93c6ef7a60daa3a8.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/6/a/6a668e41e5383f05b9ecd4cc93c6ef7a60daa3a8.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/how-to-update-frappe-framework/158046" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/how-to-update-frappe-framework/158046" />
+<meta property="og:title" content="How to update Frappe Framework" />
+<meta name="twitter:title" content="How to update Frappe Framework" />
+<meta property="og:description" content="Hello There,  I am using Frappe HelpDesk by docker-compose built via command python3 easyinstall.py  Currently frappe framework: v15.90.1     How to update frappe framework to latest?  Thanks so much ❤  Thong Nguyen" />
+<meta name="twitter:description" content="Hello There,  I am using Frappe HelpDesk by docker-compose built via command python3 easyinstall.py  Currently frappe framework: v15.90.1     How to update frappe framework to latest?  Thanks so much ❤  Thong Nguyen" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="3 ❤" />
+<meta property="article:published_time" content="2025-12-16T08:06:46+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"How to update Frappe Framework","mainEntity":{"@type":"Question","name":"How to update Frappe Framework","text":"Hello There,\n\nI am using Frappe HelpDesk by docker-compose built via command python3 easyinstall.py\n\nCurrently frappe framework: v15.90.1\n\n<a class=\"lightbox\" href=\"https://discuss.frappe.io/uploads/default/original/3X/6/a/6a668e41e5383f05b9ecd4cc93c6ef7a60daa3a8.png\" data-download-href=\"https://discuss.frappe.io/uploads/default/6a668e41e5383f05b9ecd4cc93c6ef7a60daa3a8\" title=\"image\">[image]<\/a>\n\nHow to update frappe framework to latest?\n\nThanks so much :heart:\n\nThong Nguyen","upvoteCount":0,"answerCount":1,"datePublished":"2025-12-16T08:06:46.485Z","author":{"@type":"Person","name":"thong838","url":"https://discuss.frappe.io/u/thong838"},"acceptedAnswer":{"@type":"Answer","text":"follow instructions in <a href=\"https://github.com/frappe/frappe_docker/issues/1640#issuecomment-3303368460\" class=\"inline-onebox\" rel=\"noopener nofollow ugc\">Creating new custom app in the dockerized instance is not possible · Issue #1640 · frappe/frappe_docker · GitHub<\/a>\n\nPut this in apps.json instead: -\n\n{ “url”: &quot;<a href=\"https://github.com/frappe/frappe\" class=\"inline-onebox\" rel=\"noopener nofollow ugc\">GitHub - frappe/frappe: Low code web framework for real world applications, in Python and Javascript<\/a>, “tag”: “v16.0.0-b&hellip;","upvoteCount":1,"datePublished":"2025-12-16T08:53:32.246Z","url":"https://discuss.frappe.io/t/how-to-update-frappe-framework/158046/3","author":{"@type":"Person","name":"asieftejani","url":"https://discuss.frappe.io/u/asieftejani"}}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/how-to-update-frappe-framework/158046">How to update Frappe Framework</a>
+    </h1>
+
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='How to update Frappe Framework'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/how-to-update-frappe-framework/158046'>
+      <meta itemprop='datePublished' content='2025-12-16T08:06:46Z'>
+        <meta itemprop='articleSection' content='Uncategorized'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/thong838'><span itemprop='name'>thong838</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/how-to-update-frappe-framework/158046">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/6/a/6a668e41e5383f05b9ecd4cc93c6ef7a60daa3a8.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-12-16T08:06:46Z' class='post-time'>
+                    December 16, 2025,  8:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-16T08:06:46Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello There,</p>
+<p>I am using Frappe HelpDesk by docker-compose built via command python3 easyinstall.py</p>
+<p>Currently frappe framework: v15.90.1</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/6/a/6a668e41e5383f05b9ecd4cc93c6ef7a60daa3a8.png" data-download-href="https://discuss.frappe.io/uploads/default/6a668e41e5383f05b9ecd4cc93c6ef7a60daa3a8" title="image"><img src="https://discuss.frappe.io/uploads/default/original/3X/6/a/6a668e41e5383f05b9ecd4cc93c6ef7a60daa3a8.png" alt="image" data-base62-sha1="fbgkRdQonkdAnAeEUW5NB6kHjPq" width="231" height="163"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">231×163 5.64 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>How to update frappe framework to latest?</p>
+<p>Thanks so much <img src="https://discuss.frappe.io/images/emoji/twitter/heart.png?v=14" title=":heart:" class="emoji" alt=":heart:" loading="lazy" width="20" height="20"></p>
+<p>Thong Nguyen</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/thong838'><span itemprop='name'>thong838</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-16T08:14:18Z' class='post-time'>
+                    December 16, 2025,  8:14am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-16T08:14:18Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I tried edit version in apps.json but unsuccessful!</p>
+<pre><code class="lang-auto">[root@support ~]# docker ps -a
+CONTAINER ID   IMAGE                            COMMAND                  CREATED         STATUS                     PORTS                                                                          NAMES
+50898213cbb6   mcuadros/ofelia:latest           "/usr/bin/ofelia dae…"   9 minutes ago   Up 9 minutes                                                                                              docker-cron-1
+3441479a5de2   ghcr.io/frappe/helpdesk:stable   "nginx-entrypoint.sh"    9 minutes ago   Up 9 minutes                                                                                              docker-frontend-1
+d1237663bd58   ghcr.io/frappe/helpdesk:stable   "bench schedule"         9 minutes ago   Up 9 minutes                                                                                              docker-scheduler-1
+b693c0058594   ghcr.io/frappe/helpdesk:stable   "node /home/frappe/f…"   9 minutes ago   Up 9 minutes                                                                                              docker-websocket-1
+39d1b55e5ebf   ghcr.io/frappe/helpdesk:stable   "/home/frappe/frappe…"   9 minutes ago   Up 9 minutes                                                                                              docker-backend-1
+4be0959f2f9e   ghcr.io/frappe/helpdesk:stable   "bench worker --queu…"   9 minutes ago   Up 9 minutes                                                                                              docker-queue-short-1
+2633bbed02e3   ghcr.io/frappe/helpdesk:stable   "bench worker --queu…"   9 minutes ago   Up 9 minutes                                                                                              docker-queue-long-1
+17215af06127   ghcr.io/frappe/helpdesk:stable   "bash -c 'ls -1 apps…"   9 minutes ago   Exited (0) 9 minutes ago                                                                                  docker-configurator-1
+a3d60149a816   redis:alpine                     "docker-entrypoint.s…"   9 minutes ago   Up 9 minutes               6379/tcp                                                                       docker-redis-queue-1
+6b6746396164   redis:alpine                     "docker-entrypoint.s…"   9 minutes ago   Up 9 minutes               6379/tcp                                                                       docker-redis-cache-1
+fde9ce1b4f38   traefik                          "/entrypoint.sh --pr…"   9 minutes ago   Up 9 minutes               0.0.0.0:80-&gt;80/tcp, [::]:80-&gt;80/tcp, 0.0.0.0:443-&gt;443/tcp, [::]:443-&gt;443/tcp   docker-proxy-1
+bda9cf1ee947   mariadb:10.6                     "docker-entrypoint.s…"   9 minutes ago   Up 9 minutes (healthy)     3306/tcp                                                                       docker-db-1
+[root@support ~]# 
+[root@support ~]# 
+[root@support ~]# cat frappe_docker/sites/apps.json 
+{
+    "frappe": {
+        "resolution": {
+            "commit_hash": "329243f6467d6856e12a8af430ec9d4054d99816",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 1,
+        "version": "15.91.3"
+    },
+    "telephony": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "00ca23964ac5847464ce9e03f8f9b32543dff006",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 2,
+        "version": "0.0.1"
+    },
+    "hrms": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "440d8b64ac358cf74c7379c9ea6d2a058ec216d8",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 3,
+        "version": "15.53.0"
+    },
+    "helpdesk": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "99682ad5fdf8bf0ef90df46e4ead7ae6d48ea52c",
+            "branch": "main"
+        },
+        "required": [],
+        "idx": 4,
+        "version": "1.17.4"
+    }
+}
+
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/asieftejani'><span itemprop='name'>asieftejani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-16T08:53:32Z' class='post-time'>
+                    December 16, 2025,  8:53am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-16T08:53:32Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>follow instructions in <a href="https://github.com/frappe/frappe_docker/issues/1640#issuecomment-3303368460" class="inline-onebox" rel="noopener nofollow ugc">Creating new custom app in the dockerized instance is not possible · Issue #1640 · frappe/frappe_docker · GitHub</a><br>
+Put this in apps.json instead: -<br>
+{ “url”: "<a href="https://github.com/frappe/frappe" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/frappe: Low code web framework for real world applications, in Python and Javascript</a>, “tag”: “v16.0.0-beta.2” }<br>
+Remember v16 is in beta so things will break</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/thong838'><span itemprop='name'>thong838</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-16T09:25:34Z' class='post-time'>
+                    December 16, 2025,  9:25am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-16T09:25:34Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks so much for your reply <img src="https://discuss.frappe.io/images/emoji/twitter/heart.png?v=14" title=":heart:" class="emoji" alt=":heart:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/asieftejani'><span itemprop='name'>asieftejani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-16T13:28:27Z' class='post-time'>
+                    December 16, 2025,  1:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-16T13:28:27Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>sorry made a mistake…<br>
+the apps.json is for all the apps you want to install<br>
+however for the main framework there is a line in the easy-install.py at line 607</p>
+<aside class="onebox githubblob" data-onebox-src="https://github.com/frappe/bench/blob/78832a880b74ba8a53b770f1e1506c25b0042792/easy-install.py#L607">
+  <header class="source">
+
+      <a href="https://github.com/frappe/bench/blob/78832a880b74ba8a53b770f1e1506c25b0042792/easy-install.py#L607" target="_blank" rel="noopener nofollow ugc">github.com/frappe/bench</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/frappe/bench/blob/78832a880b74ba8a53b770f1e1506c25b0042792/easy-install.py#L607" target="_blank" rel="noopener nofollow ugc">easy-install.py</a></h4>
+
+<div class="git-blob-info">
+  <a href="https://github.com/frappe/bench/blob/78832a880b74ba8a53b770f1e1506c25b0042792/easy-install.py#L607" rel="noopener nofollow ugc"><code>78832a880</code></a>
+</div>
+
+
+
+    <pre class="onebox"><code class="lang-py">
+      <ol class="start lines" start="597" style="counter-reset: li-counter 596 ;">
+          <li>parser.add_argument(</li>
+          <li>    "-r",</li>
+          <li>    "--frappe-path",</li>
+          <li>    help="Frappe Repository to use, default: https://github.com/frappe/frappe",</li>
+          <li>    default="https://github.com/frappe/frappe",</li>
+          <li>)</li>
+          <li>parser.add_argument(</li>
+          <li>    "-b",</li>
+          <li>    "--frappe-branch",</li>
+          <li>    help="Frappe branch to use, default: version-15",</li>
+          <li class="selected">    default="version-15",</li>
+          <li>)</li>
+          <li>parser.add_argument(</li>
+          <li>    "-j",</li>
+          <li>    "--apps-json",</li>
+          <li>    help="Path to apps json, default: frappe_docker/development/apps-example.json",</li>
+          <li>    default="frappe_docker/development/apps-example.json",</li>
+          <li>)</li>
+          <li>parser.add_argument(</li>
+          <li>    "-t",</li>
+          <li>    "--tag",</li>
+      </ol>
+    </code></pre>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>you need to change that to a tag and not a branch (have not experimented with it yet)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/thong838'><span itemprop='name'>thong838</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-17T03:19:48Z' class='post-time'>
+                    December 17, 2025,  3:19am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-17T03:19:48Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This means that if I change version-15 to HEAD or main, then after running the python3 easy.py command, it will use the latest GitHub source to build. Right?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/thong838'><span itemprop='name'>thong838</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-17T03:54:59Z' class='post-time'>
+                    December 17, 2025,  3:54am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-17T03:54:59Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I tried changing to develop or another. but Frappe Framework is still version 15.90.1, not 15.92.0 latest.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/asieftejani'><span itemprop='name'>asieftejani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-17T06:13:29Z' class='post-time'>
+                    December 17, 2025,  6:13am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-17T06:24:16Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>try this - in line 607 change to default=”v15.92.0”<br>
+let me know if it works otherwise you will have wait for frappe team to link version-15/develop branch to v15.92.0 tag</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/thong838'><span itemprop='name'>thong838</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-17T06:51:22Z' class='post-time'>
+                    December 17, 2025,  6:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-17T06:51:22Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="asieftejani" data-post="5" data-topic="158046">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/asieftejani/48/86086_2.png" class="avatar"> asieftejani:</div>
+<blockquote>
+<p><code>version-15</code></p>
+</blockquote>
+</aside>
+<p>I tried. Tool still runs with v15.90.1 <img src="https://discuss.frappe.io/images/emoji/twitter/smiling_face_with_tear.png?v=14" title=":smiling_face_with_tear:" class="emoji" alt=":smiling_face_with_tear:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/asieftejani'><span itemprop='name'>asieftejani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-17T11:25:36Z' class='post-time'>
+                    December 17, 2025, 11:25am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-17T11:25:36Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>One more thing… at the root directory there are 3 files frappe-compose, frappe-passwords and frappe.env<br>
+delete them manually and then try again</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/thong838'><span itemprop='name'>thong838</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-18T02:29:15Z' class='post-time'>
+                    December 18, 2025,  2:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-18T02:29:15Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Ya! I have tried, but the same. I think in <a href="http://image=ghcr.io/frappe/helpdesk:stable" rel="noopener nofollow ugc">image=ghcr.io/frappe/helpdesk:stable</a> installed v15.90.1</p>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/joy.png?v=14" title=":joy:" class="emoji only-emoji" alt=":joy:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/asieftejani'><span itemprop='name'>asieftejani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-22T12:49:40Z' class='post-time'>
+                    December 22, 2025, 12:49pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-22T12:49:40Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Try now.. i saw in github it was updated</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

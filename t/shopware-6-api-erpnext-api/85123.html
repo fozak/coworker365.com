@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Shopware 6 API &lt;&gt; ERPNext API - German Community - Frappe Forum</title>
+    <meta name="description" content="Hallo ich schaue mir nach über 1,5 Jahren ERPNext wieder an. 
+Gibt es jemanden der schonmal probiert hat Shopware 6 an ERPNext anzubinden über die beiden API’s? 
+Kennt jemand ein Projekt das das schon vorhat?">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/shopware-6-api-erpnext-api/85123" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Shopware 6 API &lt;&gt; ERPNext API&#39;" href="https://discuss.frappe.io/t/shopware-6-api-erpnext-api/85123.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/shopware-6-api-erpnext-api/85123" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/shopware-6-api-erpnext-api/85123" />
+<meta property="og:title" content="Shopware 6 API &lt;&gt; ERPNext API" />
+<meta name="twitter:title" content="Shopware 6 API &lt;&gt; ERPNext API" />
+<meta property="og:description" content="Hallo ich schaue mir nach über 1,5 Jahren ERPNext wieder an.  Gibt es jemanden der schonmal probiert hat Shopware 6 an ERPNext anzubinden über die beiden API’s?  Kennt jemand ein Projekt das das schon vorhat?" />
+<meta name="twitter:description" content="Hallo ich schaue mir nach über 1,5 Jahren ERPNext wieder an.  Gibt es jemanden der schonmal probiert hat Shopware 6 an ERPNext anzubinden über die beiden API’s?  Kennt jemand ein Projekt das das schon vorhat?" />
+<meta property="og:article:section" content="Community" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:section" content="German Community" />
+<meta property="og:article:section:color" content="8C6238" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="5 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="6 ❤" />
+<meta property="article:published_time" content="2022-01-21T20:10:35+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="/t/shopware-6-api-erpnext-api/85123?page=2">
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Shopware 6 API <> ERPNext API","mainEntity":{"@type":"Question","name":"Shopware 6 API <> ERPNext API","text":"Hallo ich schaue mir nach über 1,5 Jahren ERPNext wieder an.\n\nGibt es jemanden der schonmal probiert hat Shopware 6 an ERPNext anzubinden über die beiden API’s?\n\nKennt jemand ein Projekt das das schon vorhat?","upvoteCount":2,"answerCount":0,"datePublished":"2022-01-21T20:10:35.779Z","author":{"@type":"Person","name":"csaeum","url":"https://discuss.frappe.io/u/csaeum"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/shopware-6-api-erpnext-api/85123">Shopware 6 API &lt;&gt; ERPNext API</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/community/37" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Community</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/community/german-community/50" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #8C6238'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>German Community</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Shopware 6 API &lt;&gt; ERPNext API'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/shopware-6-api-erpnext-api/85123'>
+      <meta itemprop='datePublished' content='2022-01-21T20:10:35Z'>
+        <meta itemprop='articleSection' content='German Community'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/csaeum'><span itemprop='name'>csaeum</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/shopware-6-api-erpnext-api/85123">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2022-01-21T20:10:35Z' class='post-time'>
+                    January 21, 2022,  8:10pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-01-21T20:10:35Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hallo ich schaue mir nach über 1,5 Jahren ERPNext wieder an.</p>
+<p>Gibt es jemanden der schonmal probiert hat Shopware 6 an ERPNext anzubinden über die beiden API’s?</p>
+<p>Kennt jemand ein Projekt das das schon vorhat?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Okiprooler'><span itemprop='name'>Okiprooler</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-03-16T14:37:49Z' class='post-time'>
+                    March 16, 2022,  2:37pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-03-16T14:37:49Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hallo, mich würde das auch interessieren, falls es noch jemanden in der Community gibt, der hierauf antworten könnte <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/markusbln'><span itemprop='name'>markusbln</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-04-20T19:07:46Z' class='post-time'>
+                    April 20, 2022,  7:07pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-04-20T19:07:46Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Auch bei uns aktuell ein Thema.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Namekkural'><span itemprop='name'>Namekkural</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-04-30T19:39:39Z' class='post-time'>
+                    April 30, 2022,  7:39pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-04-30T19:39:39Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Das wäre auch für uns hochinteressant!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/fgiering'><span itemprop='name'>fgiering</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-05-30T17:30:03Z' class='post-time'>
+                    May 30, 2022,  5:30pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-05-30T17:30:03Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hier auch Interesse!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/csaeum'><span itemprop='name'>csaeum</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-06-04T11:00:32Z' class='post-time'>
+                    June 4, 2022, 11:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-06-04T11:00:32Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Ein erster Ansatz wäre ja das man die “Bestellungen” importieren könnte.</p>
+<p>Ich bin kein Entwickler und schon gar nicht Python aber ich werde mal schauen was man hinbekommt. Ich will schon lange mich mit Python beschäftigen und vielleicht ist das ein passender Ansatz es zu machen.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/byte_thomas'><span itemprop='name'>byte_thomas</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-07-07T08:17:54Z' class='post-time'>
+                    July 7, 2022,  8:17am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-07-07T08:17:54Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Für uns wäre eine Integration zwischen Shopware 6 und ERPNext zukünftig auch interessant.</p>
+<p>Wir können gerne an der Entwicklung mitarbeiten.<br>
+Mit Shopware 6 kennen wir uns sehr gut aus, sowohl bei den Schnittstellen (Admin API, Storefront API) als auch bei der Entwicklung von Plugins / Apps.<br>
+In ERPNext haben wir uns bisher nur an kleineren PoCs probiert, allerdings entwickeln wir all unsere Microservices in Python (Flask) daher sollte ERPNext auch machbar sein.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/fgiering'><span itemprop='name'>fgiering</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-03T17:20:57Z' class='post-time'>
+                    August 3, 2022,  5:20pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-03T17:20:57Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Vielleicht würde ein einfaches Shopware-Plugin schon reichen, welches einen Webhook von ERPNext aufruft und die Daten (Kunde, Bestellung, Artikel…) weitergibt, sobald die Entität angelegt wurde oder einen bestimmten Status erreicht hat.<br>
+Mit den Flows und der Shopware Enterprise Edition quasi schon möglich.<br>
+Oder übersehe ich da etwas?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Peer'><span itemprop='name'>Peer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-08-03T16:24:32Z' class='post-time'>
+                    August 3, 2023,  4:24pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-08-03T16:24:32Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Gibt es reusable Code für solcherlei Connector?</p>
+<p>Inkl. für Shopware 5, das ja bald endgültig EOL ist? =&gt; Opportunities?</p>
+<p>Bei einer Datenbank mit 364 Tabellen (reales Shopware Beispiel) mit je X Feldern, oder alternativ die APIs mit ihren leicht abweichend zusammengestellten DB-Strukturen (inkl. Sub-Abfragen wie Detaillisten usw.), da wären schon Beschreibungen der Tabellen, Felder, Datenstrukturen/Entitäten und Abhängigkeiten hilfreich, oder sogar bloße Mapping-Beispiele.</p>
+<p>Z.B. enthält ein Export einer Bestellung komplette Artikelbeschreibungen, Kunden- und Lieferantendaten, vmtl. weil es als Dokumentation der Willenserklärung des bestellenden Kunden eine Bedeutung hat.<br>
+Ein Datenwust, der sich gewaschen hat. Aus den Bestelldaten könnten man womöglich sogar die Geschichte von Änderungen der Artikelbeschreibungen rekonstruieren.</p>
+<p>Tabellen ganz ohne Inhalte. Oder komplett nie genutzte Felder. =&gt; Was muss überhaupt übernommen werden?</p>
+<p>Viel Arbeit, Erfahrung hilft, Einarbeitung braucht Zeit, alles irgendwie mühselig.</p>
+<p>Kennt jemand Tools, die solche Arbeit unterstützen?<br>
+Z.B. Tools zur Datenbankexploration, also was man real in Tabellen und Feldern findet, aber übersichtlich und zeitschonend – nicht bloß sowas wie DBxyzAdmin?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/fgiering'><span itemprop='name'>fgiering</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-08-04T09:30:06Z' class='post-time'>
+                    August 4, 2023,  9:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-08-04T09:30:06Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Die Export Funktionalität könnte da schon manch eine Frage beantworten: <a href="https://docs.shopware.com/de/shopware6-de/einstellungen/importexport" class="inline-onebox" rel="noopener nofollow ugc">Shopware 6 - Einstellungen - Import/Export</a><br>
+Und die API Reference für Orders: <a href="https://shopware.stoplight.io/docs/admin-api/5b186f92280bc-detailed-information-about-a-order-resource" class="inline-onebox" rel="noopener nofollow ugc">Detailed information about a Order resource. | Admin API</a></p>
+<p>In Shopware 6 könnte man mit dem Flowbuilder im Paid-Plan auch Webhooks callen.</p>
+<p>Über die API könnte man sicher auch den Order-Status mit ERPNext in Shopware updaten: <a href="https://shopware.stoplight.io/docs/admin-api/3cc867261ff28-partially-update-information-about-a-order-resource" class="inline-onebox" rel="noopener nofollow ugc">Partially update information about a Order resource. | Admin API</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Peer'><span itemprop='name'>Peer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-08-04T11:01:09Z' class='post-time'>
+                    August 4, 2023, 11:01am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-08-04T11:01:09Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Danke für die Infos!<br>
+Die dev-Doku für Shopware 5 und 6 nutze ich schon.<br>
+Die Webhooks kannte ich noch nicht. Was machen die, wenn das Zielsystem mal nicht erreichbar ist: Retry / Abort / Fehlermeldung – geht die Bestellung dann erstmal unter, bis man im SW-Backend checkt?</p>
+<p>Ich bin ein Freund der APIs. Erster Zugriff (Auth) und genaues Protokoll (Entity-Namen, Filter, Order, …) sind manchmal etwas fummelig, aber ich komme schon an alles ran, was ich will.</p>
+<p>Mein momentanes Projekt ist, eingehende (über SW5) Bestellungen mit einem eigenen Tool auszulesen (cron oder/und auf Anfrage), zu speichern und bei ERPnext als eingehenden Auftrag einzuspielen.<br>
+Damit kann dann das ERP-System mit realen und aktuellen Daten (parallel zum aktuellen System) von den Mitarbeitern getestet (und konfiguriert) werden.</p>
+<p>Da eine abgerufene Bestellung über die SW5-API ziemlich geschwätzig daherkommt, könnte man gleichzeitig nach und nach die Lagerdaten (Warehouses, Bins, Artikel, Preise, Kundenkategorie, Bestand, Lieferant) sammeln. Ggf. sogar verschiedene Analysen fahren.</p>
+<p>Als Start so eines Vorgehens müssten an sich also erstmal <strong>nur</strong> ein API-Passwort und die IPs konfiguriert werden. – Wenn so ein Tool intelligent mit den Daten umgeht, könnte das vielleicht viele Leute interessieren und die Hürde für eine ERPnext-Installation senken.</p>
+<p>Wenn das funktioniert, dann wäre praktisch fast eine komplette Auftragsverarbeitung und sozusagen eine Art sanfte Übernahme ganzer Systemteile möglich. (Man könnte sie sogar parallel laufen lassen und die Ergebnisse automatisch vergleichen, zur Bestätigung der Richtigkeit der Verfahren.)</p>
+<p>Dann fehlen aber noch die Einbindungen der Auslieferungsdienste (DHL / Spedition), und die Anbindung von Buchhaltung, idealerweise auch Bank, wg. Vorkassen und SEPA-Lastschriften.</p>
+<p>Was mir bei ERPnext schnell aufgefallen ist, sind die teilweise schlechten Übersetzungen. Der aktuelle Stand der Methodik würde mich mal interessieren. Forum-Posts dazu habe ich schon gesehen, aber keine wirklich aktuellen.<br>
+Übersetzung ohne Kontextberücksichtigung kann nicht gut funktionieren, und das sieht man sofort (vielleicht ist das derzeit sogar ein oder gar <em>der</em> Show-Stopper für viele Interessenten). Übersetzen ist immer direkt damit verbunden, Mehrdeutigkeiten aufzulösen (disambiguation), was maschinell oft misslingt.<br>
+Ich vermute, dass jetzt vor der Konferenz in Mumbai (bzw. der offiziellen Freigabe von Version 15) noch eifrig einiges poliert wird und danach vielleicht der aktuelle Stand sichtbar(er) wird?</p>
+<p>Ansonsten würde mich interessieren, ob unsere vorhandenen Picker (d.h. kleine Geräte am Unterarm mit den abzuarbeitenden Picklisten, die im Lager verwendet werden zum Packen der Sendungen, läuft über WLAN) weiterverwendet werden können, die laufen derzeit über ein SW-Plugin (“Pickware ERP”).<br>
+Gibt es dazu Erfahrungen?<br>
+Alternativen?<br>
+Oder müsste man sich selbst eine kleine Web-App machen, die die Picker ersetzen können? Oder einen eigenen Connector zur direkten Weiternutzung der Geräte mit ERPnext?<br>
+Barcode scannen können die auch, wird in der Praxis aber nicht genutzt, außer für Umlageraufträge.<br>
+Als Picker würde ein einfaches Smartphone im Prinzip schon reichen, und eine Barcode-API gibt es bei denen ja auch längst. Rugged =&gt; Baustellen-Smartphone.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Udo'><span itemprop='name'>Udo</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-10-13T08:22:38Z' class='post-time'>
+                    October 13, 2024,  8:22am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-10-13T08:22:38Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Peer,</p>
+<p>ist da mit ERPNext und Shopware 6 schon was weitergegangen?</p>
+<p>Wer hat da schon Erfahrungen gesammelt?</p>
+<p>Viele Grüße<br>
+Udo</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Peer'><span itemprop='name'>Peer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-10-13T11:36:14Z' class='post-time'>
+                    October 13, 2024, 11:36am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-10-13T11:36:14Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Es geht voran, aber so eine ERP-Einführung usw. ist nicht ganz ohne.</p>
+<p>Es gibt viele unterschiedliche Möglichkeiten je nach Setup der jeweiligen IT und der gewünschten Datenströme.</p>
+<p>Um es mal auf die Anbindung runterzubrechen:</p>
+<ul>
+<li>Eine Anbindung über die Shopware-API ist relativ leicht herzustellen: API-Key für einen geeigneten Benutzer in Shopware einrichten und dann von ERPNext über ein Skript (kann ein Server-Script sein) darauf zugreifen.</li>
+<li>Hiermit kann man dann eingehende Bestellungen abrufen, Artikel u.a. hochladen und somit den Shop als Anhängsel/Außenstelle vom ERPNext System betreiben. Die SW6 API ist gut dokumentiert auf Seiten von Shopware. Mit der ERPNext API kann man kreative Dinge machen, die für einen Entwickler cool sind. Mit bench kommt man auf einer Dev-Instanz sehr leicht an die Datenbank ran und kann alles bequem sozusagen von innen erkunden, und wenn man sich auch auf ERPNext einen API-Zugang einrichtet, hat man eine zweite bequeme Möglichkeit, mit den ERPNext Daten erkundend (z.B. durch den Browser oder auch eigene Skripte oder eine Flask-Instanz als Bedienoberfläche/C&amp;C-Instanz) umzugehen. Man kann so z.B. auch (mit einem kurzen Server-Script) die ERPNext API ansprechen und von SW6 abgerufene Daten einfach durchreichen, so kann man bequem entwickeln und schnell sehen, wie alles zusammenpasst.<br>
+Damit kommt man schon weit genug, dass man Erfolge sieht und es Spaß macht, damit zu entwickeln.</li>
+<li>Das Mapping der Felder ist etwas fummelig, weil man die Datenstrukturen in SW6 <em>und</em> ERPNext gut genug verstehen muss, damit dann alles genau passt und wie gewünscht läuft. An sich alles nichts Besonderes, aber eine Menge Holz, da muss man nun mal durch. Was man mappen will bzw. muss hängt natürlich von der gewünschten Nutzung des Shop sowie des ERPNext-Systems ab (d.h. genutzte Funktionalitäten, erforderliche Datenfelder, Pflichtinformationen in dieser immer mehr Pflichtdigitalisierten Welt).</li>
+<li>Eine Dosis Robustheit, Fehler abfangen, Retries usw.  gehört natürlich auch dazu, wie bei jedem solchen Projekt. Dazu muss man sich halt in ERPNext einarbeiten, was je nach Vorkenntnissen und erforderlicher Entwicklungstiefe unterschiedlich schnell gehen kann.</li>
+<li>Aus den PoCs dann eine eigene App (im Sinne von Frappeframework-App) zur bequemen Integration auch über Updates hinweg machen, wäre je nach Setup wohl der nächste sinnvolle Schritt, ggf. aber unnötig, wenn man die gewünschten Funktionalitäten schon mit Server-Scripten erzielen kann, was von den gewünschten Prozessen und Funktionalitätsumfang abhängt.</li>
+</ul>
+<p>Es scheint schon Leute zu geben, die Lösungen haben, aber es sieht so aus, als hielten sich alle sehr bedeckt, was sowas angeht, insbesondere in der deutsch(sprachig)en (also DACH-) Community. Ich habe mich schon manches Mal gewundert und verstehe die Situation nicht wirklich, kann mir aber auch viele legitime und/oder nachvollziehbare Gründe dafür vorstellen, je nach Situation der jeweiligen Protagonisten.<br>
+Die Lernkurve für ERPNext ist nicht ganz ohne, also braucht es eine gewisse persönliche Investition (d.h. Lernen, aber es gibt auch einiges an Material: die Dokumentation, den Sourcecode, die Videos von frappeschool und BuildWithHussain).<br>
+Allerdings hat das System auch echt was, mir ist damit noch nicht langweilig geworden, und je mehr man entdeckt, desto mehr staunt und schätzt man es.<br>
+Das Frappe-Team selbst beeindruckt durch vielerlei menschliche Qualitäten und seine gelebten Werte (s. Frappe Blog, Frappeverse Konferenz, insbesondere vor Ort).</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Marcel1'><span itemprop='name'>Marcel1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-01-17T19:12:31Z' class='post-time'>
+                    January 17, 2025,  7:12pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-01-17T19:12:31Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Guten Abend, ich bin gerade dabei mich in ERPNext etwas reinzubegeben und zu sehen ob es unsere nächste WaWi wird. Für mich ist es aber sehr wichtig eine Anbindung an Shopware 6 zu haben ist hier evtl. ein Funding geplant um so eine Erweiterung umzusetzten?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/felix_will'><span itemprop='name'>felix_will</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-05-15T09:34:24Z' class='post-time'>
+                    May 15, 2025,  9:34am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-05-15T09:34:24Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Mahlzeit zusammen,</p>
+<p>gibt es inzwischen Neuigkeiten zum Thema Shopware 6 x ERPNext Connector?<br>
+Ich könnte mir vorstellen, dass sich hier über ein Crowdfunding eine gute und komfortable Lösung realisieren ließe.</p>
+<p>Um herauszufinden, wie groß das allgemeine Interesse in der Community ist, habe ich eine kleine Umfrage erstellt. Ich freue mich über eure Teilnahme!</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://de.surveymonkey.com/r/7BZLGQT">
+  <header class="source">
+      <img src="https://prod.smassets.net/assets/static/images/surveymonkey/favicon.svg" class="site-icon" width="16" height="16">
+
+      <a href="https://de.surveymonkey.com/r/7BZLGQT" target="_blank" rel="noopener nofollow ugc">SurveyMonkey</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/313;"><img src="https://prod.smassets.net/assets/content/sm/surveymonkey-blog.png" class="thumbnail" width="690" height="313"></div>
+
+<h3><a href="https://de.surveymonkey.com/r/7BZLGQT" target="_blank" rel="noopener nofollow ugc">Was ist SurveyMonkey und wie funktioniert's | SurveyMonkey</a></h3>
+
+  <p>So hilft SurveyMonkey Ihnen bei der Erstellung kostenloser Online-Umfragen und -Formulare, damit Ihre Organisation fundierte Insights gewinnen kann.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Neshik'><span itemprop='name'>Neshik</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-28T09:02:50Z' class='post-time'>
+                    July 28, 2025,  9:02am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-28T09:02:50Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <hr>
+<h2><a name="p-475495-zusammenarbeit-bei-erp-next-integration-gesucht-1" class="anchor" href="#p-475495-zusammenarbeit-bei-erp-next-integration-gesucht-1"></a>Zusammenarbeit bei ERP-NEXT Integration gesucht</h2>
+<p>Hallo zusammen,</p>
+<p>ich bin ein erfahrener Schnittstellenentwickler mit über 20 Jahren Expertise in der Anbindung verschiedener Plattformen, darunter bereits vier WaWi-Systeme. Meine Lösungen, wie <strong><a href="http://sync2shop.de" rel="noopener nofollow ugc">sync2shop.de</a></strong> und <strong><a href="http://sync2ship.de" rel="noopener nofollow ugc">sync2ship.de</a></strong>, zeichnen sich durch eine modulare und entkoppelte Architektur aus.</p>
+<p>Ich sehe großes Potenzial darin, meine bestehende Schnittstellenlösung zu nutzen, um <strong>ERP-NEXT</strong> nahtlos an weitere Marktplätze anzubinden. Obwohl ich bisher noch keine spezifische Erfahrung mit ERP-NEXT habe, bin ich überzeugt, dass meine bestehende Architektur die Entwicklungszeit erheblich verkürzen kann.</p>
+<p>Um dies umzusetzen, benötige ich Unterstützung im Bereich <strong>ERP-NEXT Know-how</strong>, insbesondere:</p>
+<ul>
+<li><strong>Datenexport:</strong> Wie können Daten aus ERP-NEXT effizient exportiert werden, um sie in meiner Konfiguration bereitzustellen? Beispielsweise benötige ich alle Artikelfelder für das Mapping mit Systemen wie Shopware 6.</li>
+<li><strong>API-Nutzung:</strong> Kennt sich jemand mit der ERP-NEXT API aus oder weiß, wie Daten am besten in ERP-NEXT importiert und exportiert werden können?</li>
+</ul>
+<p>Sollte jemand Expertise in diesem Bereich besitzen und Interesse an einer Zusammenarbeit haben, würde ich mich über eine Kontaktaufnahme freuen. Gemeinsam könnten wir die Integration von ERP-NEXT deutlich beschleunigen.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Peer'><span itemprop='name'>Peer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-28T10:56:45Z' class='post-time'>
+                    July 28, 2025, 10:56am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-28T10:56:45Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Wo sind Deine genannten Lösungen auf github verfügbar?</p>
+<p>Deine Fragen zeigen, dass Du dich praktisch noch gar nicht mit ERPNext beschäftigt hast.</p>
+<p>Es gibt schon eine Menge Integrationen für FrappeFramework:<br>
+<a href="https://cloud.frappe.io/marketplace/search" rel="noopener nofollow ugc">Frappe Cloud Marketplace</a></p>
+<p>ERPNext verfügt über ein sehr flexibles DocType und DocField-System mit einer API out-of-the box, siehe:</p>
+<p><a href="https://docs.frappe.io/framework/user/en/basics/doctypes" rel="noopener nofollow ugc">Understanding DocTypes</a><br>
+<a href="https://docs.frappe.io/framework/user/en/api/rest" rel="noopener nofollow ugc">REST API</a></p>
+<p>Auch wie das ERPNext-Ökosystem zusammenarbeitet, ist nicht ohne Bedeutung, aber nicht in einem einfachen Post zu beschreiben.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Peer'><span itemprop='name'>Peer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-28T11:10:26Z' class='post-time'>
+                    July 28, 2025, 11:10am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-28T11:10:26Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hier noch ein paar Links zum schnelleren Einstieg:</p>
+<p><a href="https://frappe.io/vision" rel="noopener nofollow ugc">Frappe’s Vision</a><br>
+<a href="https://frappe.io/values" rel="noopener nofollow ugc">Frappe’s Values</a><br>
+<a href="https://frappe.io/blog" rel="noopener nofollow ugc">Stories behind the magic | Frappe Blog</a><br>
+<a href="https://frappe.io/democracy-at-work" rel="noopener nofollow ugc">Democracy at Work Conference 2025 by Frappe</a></p>
+<p>FrappeFramework ist die Grundlage, auf der ERPNext aufbaut. Dokumentation:<br>
+FrameWork: <a href="https://docs.frappe.io/framework/user/en/introduction" rel="noopener nofollow ugc">Introduction</a><br>
+ERPNext: <a href="https://docs.frappe.io/erpnext/user/manual/en/introduction" rel="noopener nofollow ugc">Introduction</a></p>
+<p>Hier noch ein nützlicher Link:<br>
+<a href="https://school.frappe.io/home" rel="noopener nofollow ugc">Frappe School</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Neshik'><span itemprop='name'>Neshik</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-28T12:36:58Z' class='post-time'>
+                    July 28, 2025, 12:36pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-28T12:36:58Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hallo,</p>
+<p>vielen Dank für deine Rückmeldung und die Links zu deinen Lösungen:</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://sync2shop.de">
+  <header class="source">
+      <img src="https://sync2shop.de/media/favicon.png" class="site-icon" width="64" height="64">
+
+      <a href="https://sync2shop.de" target="_blank" rel="noopener nofollow ugc">sync2shop.de</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://sync2shop.de" target="_blank" rel="noopener nofollow ugc">Schnittstelle zu vielen Marktplätzen von Ihrer Warenwirtschaft</a></h3>
+
+  <p>Synchronisieren Sie von Büro Plus zu allen gängigen Shopsystemen wie Magento und Shopware sowie allen gängigen Marktplätzen wie Amazon, Ebay und Kaufland.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<p><a href="http://sync2ship.de" class="onebox" target="_blank" rel="noopener nofollow ugc">sync2ship.de</a></p>
+<p>Wie bereits erwähnt, hatte ich bisher noch keine Gelegenheit, mich tiefergehend mit ERPNext auseinanderzusetzen. Ich kenne lediglich das Frontend und konnte mich dort ein wenig umsehen. **Daher auch meine Frage, ob es hier jemanden mit tiefgehenden Kenntnissen gibt, der sich zu einem Austausch bereit erklärt.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/maydo7777'><span itemprop='name'>maydo7777</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-28T13:23:01Z' class='post-time'>
+                    July 28, 2025,  1:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-28T13:23:01Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>ja gibt es, wir nutzen Erpnext und haben bereits verschiedene plattformen angebunden u.a. ebay amazon kaufland, dhl, etc.<br>
+an einer shopware anbindung arbeiten wir gerade.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="/t/shopware-6-api-erpnext-api/85123?page=2">next page →</a></b></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

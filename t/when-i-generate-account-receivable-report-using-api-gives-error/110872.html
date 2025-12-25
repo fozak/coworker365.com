@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>When I Generate Account Receivable Report Using Api Gives Error - Stock/Inventory - Frappe Forum</title>
+    <meta name="description" content="When i try to generate account receivable report using api its return data but when i pass filter party_type = ‘Customer’ and party = party_name is return error. 
+My Code 
+def get_receivable_report_content(name): 
+filter&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/when-i-generate-account-receivable-report-using-api-gives-error/110872" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;When I Generate Account Receivable Report Using Api Gives Error&#39;" href="https://discuss.frappe.io/t/when-i-generate-account-receivable-report-using-api-gives-error/110872.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/when-i-generate-account-receivable-report-using-api-gives-error/110872" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/when-i-generate-account-receivable-report-using-api-gives-error/110872" />
+<meta property="og:title" content="When I Generate Account Receivable Report Using Api Gives Error" />
+<meta name="twitter:title" content="When I Generate Account Receivable Report Using Api Gives Error" />
+<meta property="og:description" content="When i try to generate account receivable report using api its return data but when i pass filter party_type = ‘Customer’ and party = party_name is return error.  My Code  def get_receivable_report_content(name):  filters = {‘company’: ‘My Private Limited’, ‘ageing_based_on’: ‘Due Date’, ‘range1’: ‘30’, ‘range2’: ‘60’, ‘range3’: ‘90’, ‘range4’: ‘120’, ‘party_type’: ‘Customer’, ‘party’: ‘India-02’}  “”“Returns file in for the report in given format”“”  report = frappe.get_doc(&quot;Report&quot;, &quot;Accounts ..." />
+<meta name="twitter:description" content="When i try to generate account receivable report using api its return data but when i pass filter party_type = ‘Customer’ and party = party_name is return error.  My Code  def get_receivable_report_content(name):  filters = {‘company’: ‘My Private Limited’, ‘ageing_based_on’: ‘Due Date’, ‘range1’: ‘30’, ‘range2’: ‘60’, ‘range3’: ‘90’, ‘range4’: ‘120’, ‘party_type’: ‘Customer’, ‘party’: ‘India-02’}  “”“Returns file in for the report in given format”“”  report = frappe.get_doc(&quot;Report&quot;, &quot;Accounts ..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:section" content="Stock/Inventory" />
+<meta property="og:article:section:color" content="AB9364" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="customization" />
+<meta property="og:article:tag" content="bug" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="3 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2023-10-05T10:48:59+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"When I Generate Account Receivable Report Using Api Gives Error","mainEntity":{"@type":"Question","name":"When I Generate Account Receivable Report Using Api Gives Error","text":"When i try to generate account receivable report using api its return data but when i pass filter party_type = ‘Customer’ and party = party_name is return error.\n\nMy Code\n\ndef get_receivable_report_content(name):\n\nfilters = {‘company’: ‘My Private Limited’, ‘ageing_based_on’: ‘Due Date’, ‘range1’: ‘&hellip;","upvoteCount":1,"answerCount":0,"datePublished":"2023-10-05T10:48:59.779Z","author":{"@type":"Person","name":"pithiya_Nilesh","url":"https://discuss.frappe.io/u/pithiya_Nilesh"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/when-i-generate-account-receivable-report-using-api-gives-error/110872">When I Generate Account Receivable Report Using Api Gives Error</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/stock/9" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #AB9364'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Stock/Inventory</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag' rel="tag">customization</a>, 
+            <a href='https://discuss.frappe.io/tag/bug' class='discourse-tag' rel="tag">bug</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='When I Generate Account Receivable Report Using Api Gives Error'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/when-i-generate-account-receivable-report-using-api-gives-error/110872'>
+      <meta itemprop='datePublished' content='2023-10-05T10:48:59Z'>
+        <meta itemprop='articleSection' content='Stock/Inventory'>
+      <meta itemprop='keywords' content='erpnext, customization, bug'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/pithiya_Nilesh'><span itemprop='name'>pithiya_Nilesh</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/when-i-generate-account-receivable-report-using-api-gives-error/110872">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2023-10-05T10:48:59Z' class='post-time'>
+                    October 5, 2023, 10:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-10-05T10:48:59Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>When i try to generate account receivable report using api its return data but when i pass filter party_type = ‘Customer’ and party = party_name is return error.</p>
+<p><strong>My Code</strong></p>
+<p>def get_receivable_report_content(name):<br>
+filters = {‘company’: ‘My Private Limited’, ‘ageing_based_on’: ‘Due Date’, ‘range1’: ‘30’, ‘range2’: ‘60’, ‘range3’: ‘90’, ‘range4’: ‘120’, ‘party_type’: ‘Customer’, ‘party’: ‘India-02’}<br>
+“”“Returns file in for the report in given format”“”</p>
+<pre><code>report = frappe.get_doc("Report", "Accounts Receivable")
+
+filters = frappe.parse_json(filters) if filters else {}
+
+columns, data = report.get_data(
+    limit= 100,
+    user= frappe.session.user,
+    filters= filters,
+    as_dict=True,
+    ignore_prepared_report=True,
+    are_default_filters=False,
+) 
+</code></pre>
+<p><strong>Error</strong></p>
+<p>Traceback (most recent call last):<br>
+File “apps/frappe/frappe/app.py”, line 95, in application<br>
+response = frappe.api.handle()<br>
+File “apps/frappe/frappe/api.py”, line 54, in handle<br>
+return frappe.handler.handle()<br>
+File “apps/frappe/frappe/handler.py”, line 47, in handle<br>
+data = execute_cmd(cmd)<br>
+File “apps/frappe/frappe/handler.py”, line 85, in execute_cmd<br>
+return frappe.call(method, **frappe.form_dict)<br>
+File “apps/frappe/frappe/<strong>init</strong>.py”, line 1622, in call<br>
+return fn(*args, **newargs)<br>
+File “apps/vijay_whatsapp/vijay_whatsapp/report.py”, line 15, in get_receivable_report_content<br>
+columns, data = report.get_data(<br>
+File “apps/frappe/frappe/core/doctype/report/report.py”, line 169, in get_data<br>
+columns, result = self.run_query_report(<br>
+File “apps/frappe/frappe/core/doctype/report/report.py”, line 184, in run_query_report<br>
+data = frappe.desk.query_report.run(<br>
+File “apps/frappe/frappe/<strong>init</strong>.py”, line 802, in wrapper_fn<br>
+retval = fn(*args, **get_newargs(fn, kwargs))<br>
+File “apps/frappe/frappe/desk/query_report.py”, line 239, in run<br>
+result = generate_report_result(report, filters, user, custom_columns, is_tree, parent_field)<br>
+File “apps/frappe/frappe/<strong>init</strong>.py”, line 802, in wrapper_fn<br>
+retval = fn(*args, **get_newargs(fn, kwargs))<br>
+File “apps/frappe/frappe/desk/query_report.py”, line 89, in generate_report_result<br>
+res = get_report_result(report, filters) or []<br>
+File “apps/frappe/frappe/desk/query_report.py”, line 70, in get_report_result<br>
+res = report.execute_script_report(filters)<br>
+File “apps/frappe/frappe/core/doctype/report/report.py”, line 131, in execute_script_report<br>
+res = self.execute_module(filters)<br>
+File “apps/frappe/frappe/core/doctype/report/report.py”, line 148, in execute_module<br>
+return frappe.get_attr(method_name)(frappe.<em>dict(filters))<br>
+File “apps/erpnext/erpnext/accounts/report/accounts_receivable/accounts_receivable.py”, line 40, in execute<br>
+return ReceivablePayableReport(filters).run(args)<br>
+File “apps/erpnext/erpnext/accounts/report/accounts_receivable/accounts_receivable.py”, line 62, in run<br>
+self.get_data()<br>
+File “apps/erpnext/erpnext/accounts/report/accounts_receivable/accounts_receivable.py”, line 88, in get_data<br>
+self.get_ple_entries()<br>
+File “apps/erpnext/erpnext/accounts/report/accounts_receivable/accounts_receivable.py”, line 737, in get_ple_entries<br>
+.where(Criterion.all(self.qb_selection_filter))<br>
+File “env/lib/python3.10/site-packages/pypika/utils.py”, line 50, in <em>copy<br>
+result = func(self_copy, args, *kwargs)<br>
+File “env/lib/python3.10/site-packages/pypika/queries.py”, line 930, in where<br>
+if not self.<em>validate_table(criterion):<br>
+File “env/lib/python3.10/site-packages/pypika/queries.py”, line 1155, in <em>validate_table<br>
+for field in term.fields</em>():<br>
+File “env/lib/python3.10/site-packages/pypika/terms.py”, line 57, in fields</em><br>
+return set(self.find</em>(Field))<br>
+File “env/lib/python3.10/site-packages/pypika/terms.py”, line 37, in find</em><br>
+return [node for node in self.nodes_() if isinstance(node, type)]<br>
+File “env/lib/python3.10/site-packages/pypika/terms.py”, line 37, in <br>
+return [node for node in self.nodes_() if isinstance(node, type)]<br>
+File “env/lib/python3.10/site-packages/pypika/terms.py”, line 743, in nodes_<br>
+yield from self.left.nodes_()<br>
+File “env/lib/python3.10/site-packages/pypika/terms.py”, line 743, in nodes_<br>
+yield from self.left.nodes_()<br>
+File “env/lib/python3.10/site-packages/pypika/terms.py”, line 742, in nodes_<br>
+yield from self.right.nodes_()<br>
+File “env/lib/python3.10/site-packages/pypika/terms.py”, line 795, in nodes_<br>
+yield from self.container.nodes_()<br>
+AttributeError: ‘str’ object has no attribute ‘nodes_’</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/NCP'><span itemprop='name'>NCP</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-10-05T16:17:29Z' class='post-time'>
+                    October 5, 2023,  4:17pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-10-05T16:17:29Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/pithiya_nilesh">@pithiya_Nilesh</a>,</p>
+<p>Please check the syntax and try it.</p>
+<pre><code class="lang-auto">import frappe
+
+def generate_accounts_receivable_report():
+    filters = {
+        'company': 'My Private Limited',
+        'ageing_based_on': 'Due Date',
+        'range1': '30',
+        'range2': '60',
+        'range3': '90',
+        'range4': '120',
+        'party_type': 'Customer',
+        'party': 'India-02',
+    }
+
+    # Convert the filters to JSON format
+    filters_json = frappe.as_json(filters)
+
+    try:
+        # Call API to generate the report
+        result = frappe.get_all("Report", filters=filters_json, as_list=True)
+
+        columns = result[0]
+        data = result[1:]
+
+        # For the testing
+        print("Columns:", columns)
+        print("Data:", data)
+
+    except Exception as e:
+        print("Error:", str(e))
+
+generate_accounts_receivable_report()
+</code></pre>
+<p>First, define the filters as a dictionary containing criteria such as company name, aging criteria, and party information.<br>
+convert these filters into JSON format. Then, make an API call using the filters and retrieve the report results. It handles the report data, separating column names and data rows, which can be further processed or displayed as needed. Any errors during the API call are also caught and displayed.</p>
+<p>I hope this helps.</p>
+<p>Thank You!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/pithiya_Nilesh'><span itemprop='name'>pithiya_Nilesh</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-10-06T06:41:25Z' class='post-time'>
+                    October 6, 2023,  6:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-10-06T06:41:25Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>its not works</p>
+<p>it create proble only when i send <strong>party</strong> in filter otherwise is work fine.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Prashanta_Mahato'><span itemprop='name'>Prashanta_Mahato</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-03-27T08:29:07Z' class='post-time'>
+                    March 27, 2024,  8:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-03-27T08:29:07Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am getting the same error in version 15.18, if your issue is solved can you help me to resolve the same.Thank You.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/RWEMA_Aimable'><span itemprop='name'>RWEMA_Aimable</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-06-04T08:13:15Z' class='post-time'>
+                    June 4, 2024,  8:13am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-06-04T08:13:15Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Did you get the issue fixed. I am getting a similar one while trying to get stock_balance with inventory_dimension field (customer), not issue when the field customer is not passed</p>
+<p><code>erpnext version = "15.17.1"</code></p>
+<p><code>from erpnext.stock.report.stock_balance.stock_balance import execute</code></p>
+<pre><code class="lang-auto">In [11]: execute(frappe._dict({'company':'NNNN','customer':'AAAAA'}))
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[11], line 1
+----&gt; 1 execute(frappe._dict({'company':'NNNN','customer':'AAAA'}))
+
+File /workspace/frappe-15/apps/erpnext/erpnext/stock/report/stock_balance/stock_balance.py:39, in execute(filters)
+     38 def execute(filters: Optional[StockBalanceFilter] = None):
+---&gt; 39         return StockBalanceReport(filters).run()
+
+File /workspace/frappe-15/apps/erpnext/erpnext/stock/report/stock_balance/stock_balance.py:65, in StockBalanceReport.run(self)
+     63 self.inventory_dimensions = self.get_inventory_dimension_fields()
+     64 self.prepare_opening_data_from_closing_balance()
+---&gt; 65 self.prepare_stock_ledger_entries()
+     66 self.prepare_new_data()
+     68 if not self.columns:
+
+File /workspace/frappe-15/apps/erpnext/erpnext/stock/report/stock_balance/stock_balance.py:308, in StockBalanceReport.prepare_stock_ledger_entries(self)
+    277 item_table = frappe.qb.DocType("Item")
+    279 query = (
+    280         frappe.qb.from_(sle)
+    281         .inner_join(item_table)
+   (...)
+    305         .orderby(sle.actual_qty)
+    306 )
+--&gt; 308 query = self.apply_inventory_dimensions_filters(query, sle)
+    309 query = self.apply_warehouse_filters(query, sle)
+    310 query = self.apply_items_filters(query, item_table)
+
+File /workspace/frappe-15/apps/erpnext/erpnext/stock/report/stock_balance/stock_balance.py:324, in StockBalanceReport.apply_inventory_dimensions_filters(self, query, sle)
+    322                 query = query.select(fieldname)
+    323                 if self.filters.get(fieldname):
+--&gt; 324                         query = query.where(sle[fieldname].isin(self.filters.get(fieldname)))
+    326 return query
+
+File /workspace/frappe-15/env/lib/python3.11/site-packages/pypika/utils.py:50, in builder.&lt;locals&gt;._copy(self, *args, **kwargs)
+     48 def _copy(self, *args, **kwargs):
+     49     self_copy = copy.copy(self) if getattr(self, "immutable", True) else self
+---&gt; 50     result = func(self_copy, *args, **kwargs)
+     52     # Return self if the inner function returns None.  This way the inner function can return something
+     53     # different (for example when creating joins, a different builder is returned).
+     54     if result is None:
+
+File /workspace/frappe-15/env/lib/python3.11/site-packages/pypika/queries.py:930, in QueryBuilder.where(self, criterion)
+    927 if isinstance(criterion, EmptyCriterion):
+    928     return
+--&gt; 930 if not self._validate_table(criterion):
+    931     self._foreign_table = True
+    933 if self._wheres:
+
+File /workspace/frappe-15/env/lib/python3.11/site-packages/pypika/queries.py:1155, in QueryBuilder._validate_table(self, term)
+   1149 """
+   1150 Returns False if the term references a table not already part of the
+   1151 FROM clause or JOINS and True otherwise.
+   1152 """
+   1153 base_tables = self._from + [self._update_table]
+-&gt; 1155 for field in term.fields_():
+   1156     table_in_base_tables = field.table in base_tables
+   1157     table_in_joins = field.table in [join.item for join in self._joins]
+
+File /workspace/frappe-15/env/lib/python3.11/site-packages/pypika/terms.py:57, in Term.fields_(self)
+     56 def fields_(self) -&gt; Set["Field"]:
+---&gt; 57     return set(self.find_(Field))
+
+File /workspace/frappe-15/env/lib/python3.11/site-packages/pypika/terms.py:37, in Node.find_(self, type)
+     36 def find_(self, type: Type[NodeT]) -&gt; List[NodeT]:
+---&gt; 37     return [node for node in self.nodes_() if isinstance(node, type)]
+
+File /workspace/frappe-15/env/lib/python3.11/site-packages/pypika/terms.py:37, in &lt;listcomp&gt;(.0)
+     36 def find_(self, type: Type[NodeT]) -&gt; List[NodeT]:
+---&gt; 37     return [node for node in self.nodes_() if isinstance(node, type)]
+
+File /workspace/frappe-15/env/lib/python3.11/site-packages/pypika/terms.py:795, in ContainsCriterion.nodes_(self)
+    793 yield self
+    794 yield from self.term.nodes_()
+--&gt; 795 yield from self.container.nodes_()
+
+AttributeError: 'str' object has no attribute 'nodes_'
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/RWEMA_Aimable'><span itemprop='name'>RWEMA_Aimable</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-06-05T13:14:13Z' class='post-time'>
+                    June 5, 2024,  1:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-06-05T13:14:13Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="RWEMA_Aimable" data-post="5" data-topic="110872">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/rwema_aimable/48/28198_2.png" class="avatar"> RWEMA_Aimable:</div>
+<blockquote>
+<p><code>execute(frappe._dict({'company':'NNNN','customer':'AAAA'}))</code></p>
+</blockquote>
+</aside>
+<p>this is my workaround for anyone having the same issue: I passed the inventory dimension parameter as a list as as pypika is expecting something as a list or tuple</p>
+<aside class="quote no-group quote-modified" data-username="RWEMA_Aimable" data-post="5" data-topic="110872">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/rwema_aimable/48/28198_2.png" class="avatar"> RWEMA_Aimable:</div>
+<blockquote>
+<p><code>execute(frappe._dict({'company':'NNNN','customer':['AAAAA']}))</code></p>
+</blockquote>
+</aside>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Chethank1407'><span itemprop='name'>Chethank1407</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-10T17:54:25Z' class='post-time'>
+                    December 10, 2025,  5:54pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-10T17:54:25Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This is a simple syntax issue. <strong>We should pass the party filter as<code> List</code> option.</strong></p>
+<p>Breakdown of core Accounts Receivable report handling (accounts_receivable.py) [V15]:</p>
+<pre><code class="lang-auto">if self.filters.get("party"):
+	self.qb_selection_filter.append(self.ple.party.isin(self.filters.party))
+</code></pre>
+<p>Here, the filter option is getting checked using <code>isin</code> method. This expects an iterable (tuple/list), not a string.<br>
+So as per your filter:</p>
+<blockquote>
+<p>‘party’: ‘India-02’</p>
+</blockquote>
+<p>PyPika interprets that as:</p>
+<ul>
+<li>a sequence of characters: <code>"I"</code>, <code>"n"</code>, <code>"d"</code>, <code>"i"</code>, <code>"a"</code>,  <code>"-"</code>, <code>"0"</code>, <code>"2"</code></li>
+<li>AND THEN tries to treat them as <strong>Field nodes</strong></li>
+</ul>
+<p>This is why we get:</p>
+<blockquote>
+<p>AttributeError: ‘str’ object has no attribute ‘nodes_’</p>
+</blockquote>
+<p>Try executing with your filters as:</p>
+<pre><code class="lang-auto">filters = {
+        'company': 'My Private Limited',
+        'ageing_based_on': 'Due Date',
+        'range1': '30',
+        'range2': '60',
+        'range3': '90',
+        'range4': '120',
+        'party_type': 'Customer',
+        'party': ['India-02'] //Pass party as list
+    }
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Wkhtmltopdf Fontconfig error: “No writable cache directories” on ERPNext v15 (Jammy)</title>
+    <link>https://discuss.frappe.io/t/wkhtmltopdf-fontconfig-error-no-writable-cache-directories-on-erpnext-v15-jammy/158253</link>
+    <description>Hi everyone,
+
+I’m facing a persistent PDF generation error in **ERPNext / Frappe v15** when downloading print formats or sending emails with PDF attachments.
+
+---
+
+### **Environment**
+
+* **OS**: Ubuntu 22.04 (Jammy)
+
+* **Python**: 3.12
+
+* **Frappe**: 15.56.0
+
+* **ERPNext**: 15.50.1
+
+* **wkhtmltopdf**: 0.12.6.1 (with patched Qt)
+
+* Installed via: `wkhtmltox_0.12.6.1-2.jammy_amd64.deb`
+
+* Binary location: `/usr/local/bin/wkhtmltopdf`
+
+---
+
+### **Error**
+
+When downloading a PDF or sending Email Queue with print attachment:
+
+```
+OSError: wkhtmltopdf reported an error:
+Fontconfig error: No writable cache directoriesExit with code 1 due to network error: SslHandshakeFailedError
+```
+
+---
+
+### **Traceback (shortened)**
+
+```
+frappe.utils.pdf.get_pdf → pdfkit.from_string → wkhtmltopdf → Fontconfig error: No writable cache directories 
+```
+
+---
+
+### **What I’ve already verified / tried**
+
+* ✅ Correct wkhtmltopdf version (patched Qt)
+
+* ✅ `fontconfig` installed
+
+* ✅ `/var/cache/fontconfig` exists and is writable
+
+* ✅ Cache files present in `/var/cache/fontconfig`
+
+* ✅ Fonts installed (`fonts-dejavu`)
+
+* ✅ `fc-cache -fv` runs successfully
+
+* ✅ Permissions fixed:
+
+* ✅ Same error occurs when running via Frappe (print format / email queue)
+
+Despite this, wkhtmltopdf still fails with **“No writable cache directories”**.
+
+---
+
+### **Question**
+
+Has anyone encountered this issue on **Ubuntu 22.04 + Python 3.12 + Frappe v15**?
+
+* Is there a known fontconfig path issue?
+
+* Does wkhtmltopdf need explicit `FONTCONFIG_PATH` or `XDG_CACHE_HOME` for Frappe?
+
+* Any known fixes specific to Jammy or Python 3.12?
+
+Any guidance would be appreciated 🙏
+
+Thanks!</description>
+    
+    <lastBuildDate>Wed, 24 Dec 2025 15:09:08 +0000</lastBuildDate>
+    <category>ERPNext</category>
+    <atom:link href="https://discuss.frappe.io/t/wkhtmltopdf-fontconfig-error-no-writable-cache-directories-on-erpnext-v15-jammy/158253.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Wkhtmltopdf Fontconfig error: “No writable cache directories” on ERPNext v15 (Jammy)</title>
+        <dc:creator><![CDATA[asieftejani]]></dc:creator>
+        <description><![CDATA[
+            <p>This was an issue for me in docker so give it a shot if you are still stuck - no harm in trying, right?</p>
+<aside class="onebox githubissue" data-onebox-src="https://github.com/frappe/frappe_docker/issues/1680">
+  <header class="source">
+
+      <a href="https://github.com/frappe/frappe_docker/issues/1680" target="_blank" rel="noopener nofollow ugc">github.com/frappe/frappe_docker</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="github-row">
+  <div class="github-icon-container" title="Issue" data-github-private-repo="false">
+	  <svg width="60" height="60" class="github-icon" viewBox="0 0 14 16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg>
+  </div>
+
+  <div class="github-info-container">
+    <h4>
+      <a href="https://github.com/frappe/frappe_docker/issues/1680" target="_blank" rel="noopener nofollow ugc">wkhtmltopdf error everytime i compose</a>
+    </h4>
+
+    <div class="github-info">
+      <div class="date">
+        opened <span class="discourse-local-date" data-format="ll" data-date="2025-08-20" data-time="13:56:28" data-timezone="UTC">01:56PM - 20 Aug 25 UTC</span>
+      </div>
+
+        <div class="date">
+          closed <span class="discourse-local-date" data-format="ll" data-date="2025-12-05" data-time="00:11:19" data-timezone="UTC">12:11AM - 05 Dec 25 UTC</span>
+        </div>
+
+      <div class="user">
+        <a href="https://github.com/asieftejani" target="_blank" rel="noopener nofollow ugc">
+          <img alt="" src="https://avatars.githubusercontent.com/u/90562883?v=4" class="onebox-avatar-inline" width="20" height="20">
+          asieftejani
+        </a>
+      </div>
+    </div>
+
+    <div class="labels">
+        <span style="display:inline-block;margin-top:2px;background-color: #B8B8B8;padding: 2px;border-radius: 4px;color: #fff;margin-left: 3px;">
+          enhancement
+        </span>
+        <span style="display:inline-block;margin-top:2px;background-color: #B8B8B8;padding: 2px;border-radius: 4px;color: #fff;margin-left: 3px;">
+          no-issue-activity
+        </span>
+    </div>
+  </div>
+</div>
+
+  <div class="github-row">
+    <p class="github-body-container">Everytime I spin up the containers for production and need pdf i need to fix thi<span class="show-more-container"><a href="" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden">s error which I get: -
+
+OSError: wkhtmltopdf reported an error:
+Exit with code 1 due to network error: ConnectionRefusedError
+
+Need to add "host_name": "http://frontend:8080" as key:value to sites/frontend/site_config.json
+
+Please do you think you can automate this in future releases in case it effects others also
+
+Thanks for an amazing product</span></p>
+  </div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://discuss.frappe.io/t/wkhtmltopdf-fontconfig-error-no-writable-cache-directories-on-erpnext-v15-jammy/158253/3">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/wkhtmltopdf-fontconfig-error-no-writable-cache-directories-on-erpnext-v15-jammy/158253/3</link>
+        <pubDate>Wed, 24 Dec 2025 15:09:08 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158253-3</guid>
+        <source url="https://discuss.frappe.io/t/wkhtmltopdf-fontconfig-error-no-writable-cache-directories-on-erpnext-v15-jammy/158253.rss">Wkhtmltopdf Fontconfig error: “No writable cache directories” on ERPNext v15 (Jammy)</source>
+      </item>
+      <item>
+        <title>Wkhtmltopdf Fontconfig error: “No writable cache directories” on ERPNext v15 (Jammy)</title>
+        <dc:creator><![CDATA[smino]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi,</p>
+<p>it may help to say the hosting environment, how Frappe/Erpnext was installed and whether this is happening on first use or if PDF generation was working at one time.</p>
+<p>wkhtmltppdf generally works OOB when standard installation method is used, the error suggests a permission error that may be traceable to the method used to install the apps.</p>
+          <p><a href="https://discuss.frappe.io/t/wkhtmltopdf-fontconfig-error-no-writable-cache-directories-on-erpnext-v15-jammy/158253/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/wkhtmltopdf-fontconfig-error-no-writable-cache-directories-on-erpnext-v15-jammy/158253/2</link>
+        <pubDate>Tue, 23 Dec 2025 12:26:43 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158253-2</guid>
+        <source url="https://discuss.frappe.io/t/wkhtmltopdf-fontconfig-error-no-writable-cache-directories-on-erpnext-v15-jammy/158253.rss">Wkhtmltopdf Fontconfig error: “No writable cache directories” on ERPNext v15 (Jammy)</source>
+      </item>
+      <item>
+        <title>Wkhtmltopdf Fontconfig error: “No writable cache directories” on ERPNext v15 (Jammy)</title>
+        <dc:creator><![CDATA[274mariselvi]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi everyone,</p>
+<p>I’m facing a persistent PDF generation error in <strong>ERPNext / Frappe v15</strong> when downloading print formats or sending emails with PDF attachments.</p>
+<hr>
+<h3><a name="p-489406-environment-1" class="anchor" href="https://discuss.frappe.io#p-489406-environment-1"></a><strong>Environment</strong></h3>
+<ul>
+<li>
+<p><strong>OS</strong>: Ubuntu 22.04 (Jammy)</p>
+</li>
+<li>
+<p><strong>Python</strong>: 3.12</p>
+</li>
+<li>
+<p><strong>Frappe</strong>: 15.56.0</p>
+</li>
+<li>
+<p><strong>ERPNext</strong>: 15.50.1</p>
+</li>
+<li>
+<p><strong>wkhtmltopdf</strong>: 0.12.6.1 (with patched Qt)</p>
+</li>
+<li>
+<p>Installed via: <code>wkhtmltox_0.12.6.1-2.jammy_amd64.deb</code></p>
+</li>
+<li>
+<p>Binary location: <code>/usr/local/bin/wkhtmltopdf</code></p>
+</li>
+</ul>
+<hr>
+<h3><a name="p-489406-error-2" class="anchor" href="https://discuss.frappe.io#p-489406-error-2"></a><strong>Error</strong></h3>
+<p>When downloading a PDF or sending Email Queue with print attachment:</p>
+<pre><code class="lang-auto">OSError: wkhtmltopdf reported an error:
+Fontconfig error: No writable cache directoriesExit with code 1 due to network error: SslHandshakeFailedError
+</code></pre>
+<hr>
+<h3><a name="p-489406-traceback-shortened-3" class="anchor" href="https://discuss.frappe.io#p-489406-traceback-shortened-3"></a><strong>Traceback (shortened)</strong></h3>
+<pre><code class="lang-auto">frappe.utils.pdf.get_pdf → pdfkit.from_string → wkhtmltopdf → Fontconfig error: No writable cache directories 
+</code></pre>
+<hr>
+<h3><a name="p-489406-what-ive-already-verified-tried-4" class="anchor" href="https://discuss.frappe.io#p-489406-what-ive-already-verified-tried-4"></a><strong>What I’ve already verified / tried</strong></h3>
+<ul>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> Correct wkhtmltopdf version (patched Qt)</p>
+</li>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> <code>fontconfig</code> installed</p>
+</li>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> <code>/var/cache/fontconfig</code> exists and is writable</p>
+</li>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> Cache files present in <code>/var/cache/fontconfig</code></p>
+</li>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> Fonts installed (<code>fonts-dejavu</code>)</p>
+</li>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> <code>fc-cache -fv</code> runs successfully</p>
+</li>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> Permissions fixed:</p>
+</li>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> Same error occurs when running via Frappe (print format / email queue)</p>
+</li>
+</ul>
+<p>Despite this, wkhtmltopdf still fails with <strong>“No writable cache directories”</strong>.</p>
+<hr>
+<h3><a name="p-489406-question-5" class="anchor" href="https://discuss.frappe.io#p-489406-question-5"></a><strong>Question</strong></h3>
+<p>Has anyone encountered this issue on <strong>Ubuntu 22.04 + Python 3.12 + Frappe v15</strong>?</p>
+<ul>
+<li>
+<p>Is there a known fontconfig path issue?</p>
+</li>
+<li>
+<p>Does wkhtmltopdf need explicit <code>FONTCONFIG_PATH</code> or <code>XDG_CACHE_HOME</code> for Frappe?</p>
+</li>
+<li>
+<p>Any known fixes specific to Jammy or Python 3.12?</p>
+</li>
+</ul>
+<p>Any guidance would be appreciated <img src="https://discuss.frappe.io/images/emoji/twitter/folded_hands.png?v=14" title=":folded_hands:" class="emoji" alt=":folded_hands:" loading="lazy" width="20" height="20"></p>
+<p>Thanks!</p>
+          <p><a href="https://discuss.frappe.io/t/wkhtmltopdf-fontconfig-error-no-writable-cache-directories-on-erpnext-v15-jammy/158253/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/wkhtmltopdf-fontconfig-error-no-writable-cache-directories-on-erpnext-v15-jammy/158253/1</link>
+        <pubDate>Tue, 23 Dec 2025 08:12:56 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158253-1</guid>
+        <source url="https://discuss.frappe.io/t/wkhtmltopdf-fontconfig-error-no-writable-cache-directories-on-erpnext-v15-jammy/158253.rss">Wkhtmltopdf Fontconfig error: “No writable cache directories” on ERPNext v15 (Jammy)</source>
+      </item>
+  </channel>
+</rss>

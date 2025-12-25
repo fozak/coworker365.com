@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Configuration of ERPNext - Customize ERPNext - Frappe Forum</title>
+    <meta name="description" content="Hello everyone. 
+We are new in the ERPNext, and would like your assistant. How can we fix that kind of messages/error in each of the modules: BUYING, SELLING, STOCK and CRM. 
+Many thanks!">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/configuration-of-erpnext/156731" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Configuration of ERPNext&#39;" href="https://discuss.frappe.io/t/configuration-of-erpnext/156731.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/d/7/d7f8741a909be21425aafd24d626a19ba63e1ce8_2_1024x302.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/d/7/d7f8741a909be21425aafd24d626a19ba63e1ce8_2_1024x302.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/configuration-of-erpnext/156731" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/configuration-of-erpnext/156731" />
+<meta property="og:title" content="Configuration of ERPNext" />
+<meta name="twitter:title" content="Configuration of ERPNext" />
+<meta property="og:description" content="Hello everyone.  We are new in the ERPNext, and would like your assistant. How can we fix that kind of messages/error in each of the modules: BUYING, SELLING, STOCK and CRM.  Many thanks!" />
+<meta name="twitter:description" content="Hello everyone.  We are new in the ERPNext, and would like your assistant. How can we fix that kind of messages/error in each of the modules: BUYING, SELLING, STOCK and CRM.  Many thanks!" />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:section" content="Customize ERPNext" />
+<meta property="og:article:section:color" content="0088CC" />
+<meta property="og:article:tag" content="erpnext" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2025-11-12T06:39:17+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Configuration of ERPNext","mainEntity":{"@type":"Question","name":"Configuration of ERPNext","text":"Hello everyone.\n\nWe are new in the ERPNext, and would like your assistant. How can we fix that kind of messages/error in each of the modules: BUYING, SELLING, STOCK and CRM.\n\nMany thanks!\n\n<a class=\"lightbox\" href=\"https://discuss.frappe.io/uploads/default/original/3X/d/7/d7f8741a909be21425aafd24d626a19ba63e1ce8.png\" data-download-href=\"https://discuss.frappe.io/uploads/default/d7f8741a909be21425aafd24d626a19ba63e1ce8\" title=\"image\">[image]<\/a>\n\n<a class=\"lightbox\" href=\"https://discuss.frappe.io/uploads/default/original/3X/4/4/4415ea4f6002059b377bee3b541e2317d2937ef6.png\" data-download-href=\"https://discuss.frappe.io/uploads/default/4415ea4f6002059b377bee3b541e2317d2937ef6\" title=\"image\">[image]<\/a>\n\n<a class=\"lightbox\" href=\"https://discuss.frappe.io/uploads/default/original/3X/9/0/90b6555a220e15a6a4ed09e75e7764034872f59b.png\" data-download-href=\"https://discuss.frappe.io/uploads/default/90b6555a220e15a6a4ed09e75e7764034872f59b\" title=\"image\">[image]<\/a>\n\n<a class=\"lightbox\" href=\"https://discuss.frappe.io/uploads/default/original/3X/1/4/14d7717d439c0c5933ce887cc4ec1ab6d5b95e8d.png\" data-download-href=\"https://discuss.frappe.io/uploads/default/14d7717d439c0c5933ce887cc4ec1ab6d5b95e8d\" title=\"image\">[image]<\/a>","upvoteCount":0,"answerCount":0,"datePublished":"2025-11-12T06:39:17.085Z","author":{"@type":"Person","name":"ITSV","url":"https://discuss.frappe.io/u/ITSV"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/configuration-of-erpnext/156731">Configuration of ERPNext</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/customize-erpnext/57" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0088CC'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Customize ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Configuration of ERPNext'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/configuration-of-erpnext/156731'>
+      <meta itemprop='datePublished' content='2025-11-12T06:39:17Z'>
+        <meta itemprop='articleSection' content='Customize ERPNext'>
+      <meta itemprop='keywords' content='erpnext'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ITSV'><span itemprop='name'>ITSV</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/configuration-of-erpnext/156731">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/d/7/d7f8741a909be21425aafd24d626a19ba63e1ce8.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-11-12T06:39:17Z' class='post-time'>
+                    November 12, 2025,  6:39am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-12T06:39:17Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello everyone.</p>
+<p>We are new in the ERPNext, and would like your assistant. How can we fix that kind of messages/error in each of the modules: BUYING, SELLING, STOCK and CRM.</p>
+<p>Many thanks!</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/7/d7f8741a909be21425aafd24d626a19ba63e1ce8.png" data-download-href="https://discuss.frappe.io/uploads/default/d7f8741a909be21425aafd24d626a19ba63e1ce8" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/7/d7f8741a909be21425aafd24d626a19ba63e1ce8_2_690x203.png" alt="image" data-base62-sha1="uOyXQVaailEO9CuNqVmUHVkyAHu" width="690" height="203" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/7/d7f8741a909be21425aafd24d626a19ba63e1ce8_2_690x203.png, https://discuss.frappe.io/uploads/default/optimized/3X/d/7/d7f8741a909be21425aafd24d626a19ba63e1ce8_2_1035x304.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/d/7/d7f8741a909be21425aafd24d626a19ba63e1ce8_2_1380x406.png 2x" data-dominant-color="7B7B7B"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1456×430 23.1 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/4/4/4415ea4f6002059b377bee3b541e2317d2937ef6.png" data-download-href="https://discuss.frappe.io/uploads/default/4415ea4f6002059b377bee3b541e2317d2937ef6" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/4/4/4415ea4f6002059b377bee3b541e2317d2937ef6_2_690x196.png" alt="image" data-base62-sha1="9Ijq7h9kYzf2cOLydirwF57bTdY" width="690" height="196" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/4/4/4415ea4f6002059b377bee3b541e2317d2937ef6_2_690x196.png, https://discuss.frappe.io/uploads/default/optimized/3X/4/4/4415ea4f6002059b377bee3b541e2317d2937ef6_2_1035x294.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/4/4/4415ea4f6002059b377bee3b541e2317d2937ef6_2_1380x392.png 2x" data-dominant-color="7C7C7C"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1491×424 22.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/0/90b6555a220e15a6a4ed09e75e7764034872f59b.png" data-download-href="https://discuss.frappe.io/uploads/default/90b6555a220e15a6a4ed09e75e7764034872f59b" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/9/0/90b6555a220e15a6a4ed09e75e7764034872f59b_2_690x233.png" alt="image" data-base62-sha1="kEbp09IHo1aTwJ7fefE2aANHOl5" width="690" height="233" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/9/0/90b6555a220e15a6a4ed09e75e7764034872f59b_2_690x233.png, https://discuss.frappe.io/uploads/default/optimized/3X/9/0/90b6555a220e15a6a4ed09e75e7764034872f59b_2_1035x349.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/9/0/90b6555a220e15a6a4ed09e75e7764034872f59b_2_1380x466.png 2x" data-dominant-color="878787"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1490×504 32.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/4/14d7717d439c0c5933ce887cc4ec1ab6d5b95e8d.png" data-download-href="https://discuss.frappe.io/uploads/default/14d7717d439c0c5933ce887cc4ec1ab6d5b95e8d" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/1/4/14d7717d439c0c5933ce887cc4ec1ab6d5b95e8d_2_690x204.png" alt="image" data-base62-sha1="2Yn8lm8lyimZnS5wO25j6BRWX37" width="690" height="204" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/1/4/14d7717d439c0c5933ce887cc4ec1ab6d5b95e8d_2_690x204.png, https://discuss.frappe.io/uploads/default/optimized/3X/1/4/14d7717d439c0c5933ce887cc4ec1ab6d5b95e8d_2_1035x306.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/1/4/14d7717d439c0c5933ce887cc4ec1ab6d5b95e8d_2_1380x408.png 2x" data-dominant-color="8F8F8F"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1463×434 28.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/saaad_asiiif'><span itemprop='name'>saaad_asiiif</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-12T07:07:35Z' class='post-time'>
+                    November 12, 2025,  7:07am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-12T07:15:24Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hii there !</p>
+<p>The messages you’re seeing are very common for new implementations, so nothing to worry this is just a standard part of the setup process. These are not system errors but <strong>permission issues</strong>.</p>
+<p>Essentially, your user account <strong>it@esai.sv</strong> in your example pictures does not have the necessary roles assigned to it to view specific documents (like Opportunity, Bin, Sales Order, etc.).</p>
+<p>In ERPNext, access to documents and reports is controlled by <strong>Roles</strong> and <strong>Role Permissions Manager</strong>. Your user needs the correct roles, and those roles need to have permissions defined for the specific documents.</p>
+<p>A quick way to get started is to assign the <strong>System Manager</strong> role to your primary admin user. This role typically has access to everything. However, for production, it’s best practice to assign only the necessary roles for security.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ITSV'><span itemprop='name'>ITSV</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/c/6/c6f5097b47cc934481611275d9ad98dfe6fc6d4d.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-12T14:03:16Z' class='post-time'>
+                    November 12, 2025,  2:03pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-12T14:03:16Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="saaad_asiiif" data-post="2" data-topic="156731">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/saaad_asiiif/48/90603_2.png" class="avatar"> saaad_asiiif:</div>
+<blockquote>
+<p>System Manager</p>
+</blockquote>
+</aside>
+<p>Thank you for your update. Could you please detail the necessary steps to modify the user?</p>
+<p>This is what we have in this moment: **<br>
+<a href="https://erp.esai.sv/app/user/it%40esai.sv" title="IT - Admin" rel="noopener nofollow ugc">IT - Admin</a>** —&gt; Active —&gt; System User</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/c/6/c6f5097b47cc934481611275d9ad98dfe6fc6d4d.png" data-download-href="https://discuss.frappe.io/uploads/default/c6f5097b47cc934481611275d9ad98dfe6fc6d4d" title="ERPNext-5"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/c/6/c6f5097b47cc934481611275d9ad98dfe6fc6d4d_2_690x268.png" alt="ERPNext-5" data-base62-sha1="so3wLRt7aoKgvnTwV3FpGFb15b7" width="690" height="268" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/c/6/c6f5097b47cc934481611275d9ad98dfe6fc6d4d_2_690x268.png, https://discuss.frappe.io/uploads/default/optimized/3X/c/6/c6f5097b47cc934481611275d9ad98dfe6fc6d4d_2_1035x402.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/c/6/c6f5097b47cc934481611275d9ad98dfe6fc6d4d.png 2x" data-dominant-color="FCFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">ERPNext-5</span><span class="informations">1110×432 17.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/6/f/6f80fbf4065f31991ebb76db6f36a13595b0bb8e.png" data-download-href="https://discuss.frappe.io/uploads/default/6f80fbf4065f31991ebb76db6f36a13595b0bb8e" title="ERPNext-6"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/6/f/6f80fbf4065f31991ebb76db6f36a13595b0bb8e_2_690x203.png" alt="ERPNext-6" data-base62-sha1="fUpluf4wgZGxO0O8gP2dMpSKOXI" width="690" height="203" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/6/f/6f80fbf4065f31991ebb76db6f36a13595b0bb8e_2_690x203.png, https://discuss.frappe.io/uploads/default/optimized/3X/6/f/6f80fbf4065f31991ebb76db6f36a13595b0bb8e_2_1035x304.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/6/f/6f80fbf4065f31991ebb76db6f36a13595b0bb8e_2_1380x406.png 2x" data-dominant-color="F9F9F9"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">ERPNext-6</span><span class="informations">1414×417 23.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/saaad_asiiif'><span itemprop='name'>saaad_asiiif</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-12T15:47:22Z' class='post-time'>
+                    November 12, 2025,  3:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-12T15:47:22Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>yesh, it is basically a 2 step process:</p>
+<p><strong>Step 1: Assign the Correct Roles to Your User</strong></p>
+<p>You need to ensure your user has the appropriate roles for their job function (e.g., Sales User, Stock User, Purchase User).</p>
+<ol>
+<li>
+<p>Go to the Awesome Bar (search bar at the top) and type “User”.</p>
+</li>
+<li>
+<p>Find and open the User record you are logging in with (e.g., <code>it@esai.sv</code>).</p>
+</li>
+<li>
+<p>In the user form, scroll down to the “Roles” section.</p>
+</li>
+<li>
+<p>Add the necessary roles. For the modules you mentioned, you will likely need:</p>
+<ul>
+<li>
+<p>CRM: <code>Sales Manager</code> or <code>Sales User</code></p>
+</li>
+<li>
+<p>Selling: <code>Sales Manager</code> or <code>Sales User</code></p>
+</li>
+<li>
+<p>Buying: <code>Purchase Manager</code> or <code>Purchase User</code></p>
+</li>
+<li>
+<p>Stock: <code>Stock User</code> or <code>Stock Manager</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click “Save”.</p>
+</li>
+</ol>
+<p><strong>Step 2: Verify and Update Role Permissions (If Needed)</strong></p>
+<p>Sometimes, even with the correct role, specific permissions might be missing. This is often the case with custom roles or after updates.</p>
+<ol>
+<li>
+<p>Go to the Awesome Bar and search for “Role Permissions Manager”.</p>
+</li>
+<li>
+<p>Here, you can check and update what each role is allowed to do.</p>
+</li>
+<li>
+<p>Use the filters to find the specific Document Type (e.g., “Opportunity”, “Sales Order”, “Bin”).</p>
+</li>
+<li>
+<p>Ensure that the roles you assigned in Step 1 (like <code>Sales User</code>, <code>Stock User</code>) have the permissions “Read”, “Write”, “Create”, “Submit”, “Cancel”, “Report”, “Import”, and “Export” as required for your business.</p>
+</li>
+<li>
+<p>If a permission is missing, you can add it by selecting the Role and Document Type and applying the permissions.</p>
+</li>
+</ol>
+<p>After making these changes, log out and log back in for the new permissions to take effect. You should find that those error messages are gone, and you can access the modules seamlessly.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ITSV'><span itemprop='name'>ITSV</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/9/1/91fb0accd97044f0ee138fd7f738e2a8e1e0c687.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-13T05:15:22Z' class='post-time'>
+                    November 13, 2025,  5:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-13T05:15:22Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="saaad_asiiif" data-post="2" data-topic="156731">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/saaad_asiiif/48/90603_2.png" class="avatar"> saaad_asiiif:</div>
+<blockquote>
+<p>System Manager</p>
+</blockquote>
+</aside>
+<p>Dear Saaad,</p>
+<p>Thank you for your help. I found it somewhat difficult to follow the steps you provided. I may need some time to get familiar with the application.</p>
+<p>Currently, I selected all (see the screenshot), saved, and logged in again. As a result, the messages disappeared from each of the modules I mentioned earlier. So, they no longer show the messages. Is this the correct process, or should I follow the steps you provided?</p>
+<p>I also have another question:</p>
+<ol>
+<li>I attached some new screenshots, but it seems that the width of my ERP window is cut off. What could be the reason for this and how to fix it?</li>
+<li>I attempted to change from System User to System Manager but struggled to follow the steps. Perhaps my ERPNext needs further configuration, or the version might be outdated? Is there a video available that I can follow easily to change to System Manager?</li>
+</ol>
+<p>Thank you for your assistance!</p>
+<p>Best regards,</p>
+<p>IT</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/1/91fb0accd97044f0ee138fd7f738e2a8e1e0c687.png" data-download-href="https://discuss.frappe.io/uploads/default/91fb0accd97044f0ee138fd7f738e2a8e1e0c687" title="ERPNext-7"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/9/1/91fb0accd97044f0ee138fd7f738e2a8e1e0c687_2_690x410.png" alt="ERPNext-7" data-base62-sha1="kPp5uFjuFrUISYwiNZdXnKJc0rd" width="690" height="410" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/9/1/91fb0accd97044f0ee138fd7f738e2a8e1e0c687_2_690x410.png, https://discuss.frappe.io/uploads/default/optimized/3X/9/1/91fb0accd97044f0ee138fd7f738e2a8e1e0c687_2_1035x615.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/9/1/91fb0accd97044f0ee138fd7f738e2a8e1e0c687.png 2x" data-dominant-color="F5F5F5"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">ERPNext-7</span><span class="informations">1082×643 53.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/2/0281b217525c0c9057effccdd8cb2d3c0793398a.png" data-download-href="https://discuss.frappe.io/uploads/default/0281b217525c0c9057effccdd8cb2d3c0793398a" title="ERPNext-9"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/2/0281b217525c0c9057effccdd8cb2d3c0793398a_2_690x365.png" alt="ERPNext-9" data-base62-sha1="maPfyNmlhOlMC2PMHhgmEm547g" width="690" height="365" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/2/0281b217525c0c9057effccdd8cb2d3c0793398a_2_690x365.png, https://discuss.frappe.io/uploads/default/optimized/3X/0/2/0281b217525c0c9057effccdd8cb2d3c0793398a_2_1035x547.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/0/2/0281b217525c0c9057effccdd8cb2d3c0793398a_2_1380x730.png 2x" data-dominant-color="F8F8F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">ERPNext-9</span><span class="informations">1570×831 71.3 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/saaad_asiiif'><span itemprop='name'>saaad_asiiif</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/6/2/625a7ccf8702d3069180277559765e7b77ea3525.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-13T05:40:41Z' class='post-time'>
+                    November 13, 2025,  5:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-13T05:40:41Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>yesh the messages are gone bcz you assigned the “System Manager“ role to the user, and that role has access to everything in the ERP, but the right approach should be what i told in the steps above, first go to that user and then go to the Role and Permissions Tab and select the roles that you want to assign him/her, as i have attached the pic 1 see that for reference and each role you see here has specific permissions you can see that by going to the Role Permisssions Manager, there you can select the document type as that documnet that you want the permissions on or want the access to and the second field is the Role i.e the role which you want to give the access and permissions on that specific document, i have attached the 2nd pic for reference, in that you can see the document type as “Opportunity“ and you see the roles as Sales Manager and Sales User, that are by default and you can add new roles from here… right know these 2 roles have permissions on the Opportunity doctype and you can also set the permission from these checkboxes.</p>
+<p>Also the second picture you have shown is basically the workspce of your ERP at the time of pic is in editing mode you can save that adn then refesh the page additionally you can toggle the side bar by the 3 ☰ lines alogside with Home or you can click on the user profile icon and in drop down you can set the Toggle Full Width.</p>
+<p>Hope it help knows.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/6/2/625a7ccf8702d3069180277559765e7b77ea3525.png" data-download-href="https://discuss.frappe.io/uploads/default/625a7ccf8702d3069180277559765e7b77ea3525" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/6/2/625a7ccf8702d3069180277559765e7b77ea3525_2_690x250.png" alt="image" data-base62-sha1="e24EXZt9kQyJxskqRJaszGvz07r" width="690" height="250" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/6/2/625a7ccf8702d3069180277559765e7b77ea3525_2_690x250.png, https://discuss.frappe.io/uploads/default/optimized/3X/6/2/625a7ccf8702d3069180277559765e7b77ea3525_2_1035x375.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/6/2/625a7ccf8702d3069180277559765e7b77ea3525_2_1380x500.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1734×629 39.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/6/5/65a789868c14c2bec29090e4786c91c196d62516.png" data-download-href="https://discuss.frappe.io/uploads/default/65a789868c14c2bec29090e4786c91c196d62516" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/6/5/65a789868c14c2bec29090e4786c91c196d62516_2_690x276.png" alt="image" data-base62-sha1="evhaCAVg24ecNpSYOThB0ERA65o" width="690" height="276" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/6/5/65a789868c14c2bec29090e4786c91c196d62516_2_690x276.png, https://discuss.frappe.io/uploads/default/optimized/3X/6/5/65a789868c14c2bec29090e4786c91c196d62516_2_1035x414.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/6/5/65a789868c14c2bec29090e4786c91c196d62516_2_1380x552.png 2x" data-dominant-color="F6F6F6"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1395×559 60.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ITSV'><span itemprop='name'>ITSV</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-13T07:08:48Z' class='post-time'>
+                    November 13, 2025,  7:08am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-13T07:08:48Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Dear Saaad,</p>
+<p>I appreciate your support.</p>
+<p>It will take some time for me to become familiar with the functionality of the system. I know ERPNext is a powerful tool, and we chose it because it meets all the necessary modules we need.</p>
+<p>This ticket is almost closed, but I have two important points I would like to verify:</p>
+<p>In El Salvador, we will operate both for-profit and non-profit businesses. The new regulations from the Ministry of Finance state that individuals or companies must adopt an electronic invoicing system through the Ministry’s portal. The Ministry of Finance offers two options:</p>
+<ol>
+<li>
+<p><strong>Ministry Systems</strong>: Taxpayers can choose to use the free electronic billing system provided by the Ministry of Finance (the only condition is that they have around 100 bills per month).</p>
+</li>
+<li>
+<p><strong>Use of Third-Party Software</strong>: Companies can also use commercial software solutions that integrate with the Ministry’s system.</p>
+</li>
+</ol>
+<p>I wonder if ERPNext has the functionality to develop our own electronic billing system (we want to centralize our own) that can integrate with the Ministry of Finance’s servers (e.g., using a JSON script) for transaction validation. This way, we could centralize our process, saving cost, instead of paying a third-party company. Does ERPNext include any manual about this particular case?</p>
+<p>I look forward to hearing about your experiences with similar cases or any suggestions you might have.</p>
+<p>Many thanks!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

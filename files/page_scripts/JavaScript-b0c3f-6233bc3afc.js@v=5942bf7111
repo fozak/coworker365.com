@@ -1,0 +1,2 @@
+window.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".card").forEach(card=>{card.onmouseover=function(){this.querySelector(".arrow").style.transform="translateX(1px)";}
+card.onmouseout=function(){this.querySelector(".arrow").style.transform="translateX(-1px)";}})})

@@ -1,0 +1,33 @@
+const blank_slots=[".slot-d1t2",".slot-d2t2"]
+d1t1_blank_slot=document.querySelectorAll(".slot-d1t1")[6]
+d1t2_blank_slot=document.querySelector(".slot-d1t2")
+d2t1_blank_slot=document.querySelectorAll(".slot-d2t1")[7]
+d2t2_blank_slot=document.querySelector(".slot-d2t2")
+d2t2_blank_slot3=document.querySelectorAll(".slot-d2t2")[4]
+d1t1_blank_slot.innerHTML=""
+d1t2_blank_slot.innerHTML=""
+d2t2_blank_slot.innerHTML=""
+d2t1_blank_slot.innerHTML=""
+d1t1_blank_slot.style.display="none"
+d2t1_blank_slot.style.display="none"
+d1t2_blank_slot.style.height="420px"
+d2t2_blank_slot.style.height="588px"
+const after_lunch_break_day1_t2=document.querySelectorAll(".slot-d1t2")[4]
+console.log(after_lunch_break_day1_t2)
+const new_slot=document.createElement("div")
+const before_lunch_slot=document.createElement("div")
+new_slot.style.height="612px"
+before_lunch_slot.style.height="81px"
+after_lunch_break_day1_t2.insertAdjacentElement("afterend",new_slot)
+after_lunch_break_day1_t2.insertAdjacentElement("beforebegin",before_lunch_slot)
+const d2t2_blank_slot4=document.querySelectorAll(".slot-d2t2")[2]
+const d2t2_blank_slot5=document.querySelectorAll(".slot-d2t2")[4]
+const new_slot4=document.createElement("div")
+new_slot4.style.height="473px"
+if(window.innerWidth<=532){d1t2_blank_slot.style.height="340px"
+d2t2_blank_slot.style.height="490px"
+d2t2_blank_slot2.style.height="150px"
+d2t1_blank_slot.style.height="24px"
+new_slot.style.height="220px"
+new_slot3.style.height="55px"
+new_slot4.style.height="382px"}

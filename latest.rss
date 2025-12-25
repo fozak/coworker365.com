@@ -1,0 +1,1563 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:discourse="http://www.discourse.org/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Frappe Forum - Latest topics</title>
+    <link>https://discuss.frappe.io/latest</link>
+    <description>Latest topics</description>
+    
+      <lastBuildDate>Thu, 25 Dec 2025 16:55:19 +0000</lastBuildDate>
+      <atom:link href="https://discuss.frappe.io/latest.rss" rel="self" type="application/rss+xml" />
+        <item>
+          <title>Does FrappeHealthcare supports multiple healtcare center on one installation ??</title>
+          <dc:creator><![CDATA[puzzo-dev]]></dc:creator>
+          <category>Uncategorized</category>
+          <description><![CDATA[
+            <p>I’m setting up ERPNext for a healthcare that has multiple hospitals and clinics across the country, like mapping one healthcare center to one Company ?</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/does-frappehealthcare-supports-multiple-healtcare-center-on-one-installation/158318">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/does-frappehealthcare-supports-multiple-healtcare-center-on-one-installation/158318</link>
+          <pubDate>Thu, 25 Dec 2025 16:55:19 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158318</guid>
+          <source url="https://discuss.frappe.io/t/does-frappehealthcare-supports-multiple-healtcare-center-on-one-installation/158318.rss">Does FrappeHealthcare supports multiple healtcare center on one installation ??</source>
+        </item>
+        <item>
+          <title>Accounts Receivable (AR) report using Query Report in ERPNext</title>
+          <dc:creator><![CDATA[Iftikhar]]></dc:creator>
+          <category>Uncategorized</category>
+          <description><![CDATA[
+            <h3><a name="p-489509-need-help-accounts-receivable-ar-using-query-report-in-erpnext-1" class="anchor" href="https://discuss.frappe.io#p-489509-need-help-accounts-receivable-ar-using-query-report-in-erpnext-1"></a>Need Help: Accounts Receivable (AR) using <strong>Query Report</strong> in ERPNext</h3>
+<p>Hi everyone <img src="https://discuss.frappe.io/images/emoji/twitter/waving_hand.png?v=14" title=":waving_hand:" class="emoji" alt=":waving_hand:" loading="lazy" width="20" height="20"></p>
+<p>I’m currently working on a <strong>Query Report</strong> in <strong>ERPNext</strong> and need some guidance regarding <strong>Accounts Receivable (AR)</strong> reporting.</p>
+<h3><a name="p-489509-what-im-trying-to-do-2" class="anchor" href="https://discuss.frappe.io#p-489509-what-im-trying-to-do-2"></a>What I’m trying to do</h3>
+<p>I want to build an <strong>AR / Accounts Receivable Summary–type report</strong> using a <strong>Query Report (SQL)</strong>, similar to the standard <em>Accounts Receivable Summary</em> report.</p>
+<p>I’m aware that ERPNext internally uses <strong>Payment Ledger Entry</strong>, but I’m struggling to implement this correctly in a Query Report.</p>
+<hr>
+<h3><a name="p-489509-what-i-need-help-with-3" class="anchor" href="https://discuss.frappe.io#p-489509-what-i-need-help-with-3"></a><img src="https://discuss.frappe.io/images/emoji/twitter/folded_hands.png?v=14" title=":folded_hands:" class="emoji" alt=":folded_hands:" loading="lazy" width="20" height="20"> What I need help with</h3>
+<ol>
+<li>
+<p><strong>Has anyone successfully built an AR / Accounts Receivable report using a Query Report (SQL)?</strong><br>
+If yes, could you please share the approach or logic you followed?</p>
+</li>
+<li>
+<p><strong>Is it recommended to avoid Query Reports for AR and use Script Reports only?</strong><br>
+From your experience, is AR too complex for SQL-only reports?</p>
+</li>
+<li>
+<p><strong>How do you safely handle optional filters</strong> like:</p>
+<ul>
+<li>
+<p><code>customer_group</code></p>
+</li>
+<li>
+<p><code>sales_person</code><br>
+in Query Reports <strong>without getting <code>KeyError</code> or “not enough arguments for format string” errors</strong> when filters are empty?</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Is there any official or recommended SQL example</strong> for AR using <strong><code>Payment Ledger Entry</code></strong>?<br>
+I couldn’t find a clean reference that matches the standard report output.</p>
+</li>
+<li>
+<p><strong>If anyone has already implemented a Query Report version of AR Summary</strong>, I’d really appreciate it if you could share or guide me.</p>
+</li>
+</ol>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/accounts-receivable-ar-report-using-query-report-in-erpnext/158306">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/accounts-receivable-ar-report-using-query-report-in-erpnext/158306</link>
+          <pubDate>Wed, 24 Dec 2025 16:25:48 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158306</guid>
+          <source url="https://discuss.frappe.io/t/accounts-receivable-ar-report-using-query-report-in-erpnext/158306.rss">Accounts Receivable (AR) report using Query Report in ERPNext</source>
+        </item>
+        <item>
+          <title>Restrict employee Write permission to only their own profile?</title>
+          <dc:creator><![CDATA[sakuyii]]></dc:creator>
+          <category>Frappe HR</category>
+          <description><![CDATA[
+            <p>Hi there,</p>
+<p>I would like my employees to have access to update their own profiles but only Read access on other employees’ profiles.</p>
+<p>First, I remove the “User permission” so that employee A can see the Employee list with all other employees.</p>
+<p>Now, if I go to Roles Permission Manager &gt; Doctype: Employee &gt; Enable Employee Write access, they are able to make changes to their own profile as well as other people’s profiles.</p>
+<p><strong>Question 1: How can I enable Write access to their own profile but only Read access to other’s?</strong></p>
+<p>I also want to hide sensitive information that Employee A cannot see from Employee B, but can see their own sensitive information - like address or phone number.</p>
+<p>I can customize the fields in the Employee page and adjust the perm levels but an employee-level user will not be able to see those fields on their OWN page.</p>
+<p><strong>Question 2: How can an employee see all fields in their own profile but hide sensitive information in other employee’s profiles?</strong></p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/restrict-employee-write-permission-to-only-their-own-profile/158305">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/restrict-employee-write-permission-to-only-their-own-profile/158305</link>
+          <pubDate>Wed, 24 Dec 2025 16:25:21 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158305</guid>
+          <source url="https://discuss.frappe.io/t/restrict-employee-write-permission-to-only-their-own-profile/158305.rss">Restrict employee Write permission to only their own profile?</source>
+        </item>
+        <item>
+          <title>Frappe Full Width Theme</title>
+          <dc:creator><![CDATA[dynovative]]></dc:creator>
+          <category>Frappe Framework</category>
+          <description><![CDATA[
+            <p>HI there I am searching Theme full width, custom color set is there anyhave?</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/frappe-full-width-theme/158296">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/frappe-full-width-theme/158296</link>
+          <pubDate>Wed, 24 Dec 2025 11:40:14 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158296</guid>
+          <source url="https://discuss.frappe.io/t/frappe-full-width-theme/158296.rss">Frappe Full Width Theme</source>
+        </item>
+        <item>
+          <title>Customer or Supplier with multiple GSTIN</title>
+          <dc:creator><![CDATA[akhilkp]]></dc:creator>
+          <category>India Compliance</category>
+          <description><![CDATA[
+            <p>if the supplier or client having multiple GSTIN with respect to warehouse or branch , then what is the standard rule to differentiate them as multiple customer/supplier  ,  or a single person with multiple address having different GSTIN.</p>
+            <p><small>4 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/customer-or-supplier-with-multiple-gstin/158294">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/customer-or-supplier-with-multiple-gstin/158294</link>
+          <pubDate>Wed, 24 Dec 2025 10:20:28 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158294</guid>
+          <source url="https://discuss.frappe.io/t/customer-or-supplier-with-multiple-gstin/158294.rss">Customer or Supplier with multiple GSTIN</source>
+        </item>
+        <item>
+          <title>How to install the Frappe Lending app locally (no README available)</title>
+          <dc:creator><![CDATA[patelpkm]]></dc:creator>
+          <category>Setup</category>
+          <description><![CDATA[
+            <p>The Frappe Lending GitHub repository currently does not include a README file, which makes it unclear how to install and set up the app locally.<br>
+This post explains the <strong>step-by-step process to install the Frappe Lending app on a local Frappe/Bench setup</strong>.</p>
+            <p><small>3 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/how-to-install-the-frappe-lending-app-locally-no-readme-available/158291">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/how-to-install-the-frappe-lending-app-locally-no-readme-available/158291</link>
+          <pubDate>Wed, 24 Dec 2025 09:31:31 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158291</guid>
+          <source url="https://discuss.frappe.io/t/how-to-install-the-frappe-lending-app-locally-no-readme-available/158291.rss">How to install the Frappe Lending app locally (no README available)</source>
+        </item>
+        <item>
+          <title>Integrating FCRM and Lending and getting a unique error bug</title>
+          <dc:creator><![CDATA[Heshan_Karunaratne]]></dc:creator>
+          <category>Frappe CRM</category>
+          <description><![CDATA[
+            <p>Hi there,</p>
+<p>I’m currently working on an integration involving ERPNext, Frappe CRM, and Lending. In older versions of Frappe, we were able to switch between apps directly from the sidebar. However, in the newer versions, this behavior seems to have changed — instead of app switching, the desk now shows icons based on modules (as I understand it).</p>
+<p>Since the CRM portal uses a separate Vue-based frontend, it still displays the older-style app switcher and allows switching between apps (as shown in <em>Image 1</em>).</p>
+<p>The issue arises when I select the Lending app from this list — I get redirected to the Lending app, but it immediately throws an error (as shown in <em>Image 2</em>).</p>
+<p>I’d appreciate some insight into whether this is:<br>
+<em><strong>an expected behavior due to changes in how app/module navigation works in newer Frappe versions,<br>
+a configuration issue on my side, or<br>
+a known bug on the Frappe/Lending side.</strong></em></p>
+<p>Any guidance on how to properly handle app switching in this setup, or how to resolve this error, would be greatly appreciated.</p>
+<p>Error Message:</p>
+<h3><a name="p-489460-app-versions-1" class="anchor" href="https://discuss.frappe.io#p-489460-app-versions-1"></a>App Versions</h3>
+<pre><code class="lang-auto">{
+	"frappe": "16.0.0-dev",
+	"crm": "2.0.0-dev",
+	"erpnext": "16.0.0-dev",
+	"lending": "0.0.1",
+	"dreamlink": "0.0.1"
+}
+</code></pre>
+<h3><a name="p-489460-route-2" class="anchor" href="https://discuss.frappe.io#p-489460-route-2"></a>Route</h3>
+<pre><code class="lang-auto">Workspaces/Lending
+</code></pre>
+<h3><a name="p-489460-traceback-3" class="anchor" href="https://discuss.frappe.io#p-489460-traceback-3"></a>Traceback</h3>
+<pre><code class="lang-auto">Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 63, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 40, in handle_rpc_call
+    return frappe.handler.handle()
+  File "apps/frappe/frappe/handler.py", line 53, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "apps/frappe/frappe/__init__.py", line 1126, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/utils/dashboard.py", line 26, in wrapper
+    results = generate_and_cache_results(kwargs, function, cache_key, chart)
+  File "apps/frappe/frappe/utils/dashboard.py", line 41, in generate_and_cache_results
+    results = function(
+  File "apps/frappe/frappe/desk/doctype/dashboard_chart/dashboard_chart.py", line 136, in get
+    chart_config = get_chart_config(chart, filters, timespan, timegrain, from_date, to_date)
+  File "apps/frappe/frappe/desk/doctype/dashboard_chart/dashboard_chart.py", line 202, in get_chart_config
+    data = frappe.get_list(
+  File "apps/frappe/frappe/__init__.py", line 1359, in get_list
+    return frappe.model.qb_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "apps/frappe/frappe/model/qb_query.py", line 203, in execute
+    query = frappe.qb.get_query(**kwargs)
+  File "apps/frappe/frappe/query_builder/utils.py", line 65, in get_query
+    return Engine().get_query(*args, **kwargs)
+  File "apps/frappe/frappe/database/query.py", line 294, in get_query
+    self.apply_filters(filters)
+  File "apps/frappe/frappe/database/query.py", line 442, in apply_filters
+    self.apply_list_filters(
+  File "apps/frappe/frappe/database/query.py", line 496, in apply_list_filters
+    raise ValueError(f"Unknown filter format: {filter}")
+ValueError: Unknown filter format: ['Loan', 'docstatus', '=', '1', False]
+</code></pre>
+<h3><a name="p-489460-request-data-4" class="anchor" href="https://discuss.frappe.io#p-489460-request-data-4"></a>Request Data</h3>
+<pre><code class="lang-auto">{
+	"type": "POST",
+	"args": {
+		"chart_name": "New Loans",
+		"refresh": 1,
+		"time_interval": null,
+		"timespan": null,
+		"from_date": null,
+		"to_date": null,
+		"heatmap_year": null
+	},
+	"headers": {},
+	"error_handlers": {},
+	"url": "/api/method/frappe.desk.doctype.dashboard_chart.dashboard_chart.get",
+	"request_id": null
+}
+</code></pre>
+<h3><a name="p-489460-response-data-5" class="anchor" href="https://discuss.frappe.io#p-489460-response-data-5"></a>Response Data</h3>
+<pre><code class="lang-auto">{
+	"exception": "ValueError: Unknown filter format: ['Loan', 'docstatus', '=', '1', False]",
+	"exc_type": "ValueError"
+}
+</code></pre>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88.png" data-download-href="https://discuss.frappe.io/uploads/default/e755448edd84ac3af562aa65822c9db778495d88" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_690x388.png" alt="image" data-base62-sha1="x0sYPmo4aKmwAUaSdd89W2pMpGE" width="690" height="388" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_690x388.png, https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_1035x582.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_1380x776.png 2x" data-dominant-color="121212"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d.png" data-download-href="https://discuss.frappe.io/uploads/default/2d39c77dde336fa6de681d082dd83916e268da3d" title="image (1)"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_690x388.png" alt="image (1)" data-base62-sha1="6s5hdnhDBQOg3ReGESdEq32AcNf" width="690" height="388" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_690x388.png, https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_1035x582.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_1380x776.png 2x" data-dominant-color="222222"></a></div><p></p>
+<p>Thank you</p>
+<p>Heshan K</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282</link>
+          <pubDate>Wed, 24 Dec 2025 06:40:47 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158282</guid>
+          <source url="https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282.rss">Integrating FCRM and Lending and getting a unique error bug</source>
+        </item>
+        <item>
+          <title>Generate some custom fields on Delivery note While Filling Items from Get Items</title>
+          <dc:creator><![CDATA[mohi-khan]]></dc:creator>
+          <category>ERPNext</category>
+          <description><![CDATA[
+            <p>Hi,</p>
+<p>I have a scenerio where I created two master field on sales order named style and brand.</p>
+<p>Now, I need to pull this style and brand on delivery notes item level while I pull the data from Sales Order.</p>
+<p>I have write down a script to puopulate this feilds as below:</p>
+<p>function populate_so_related_fields(frm) {</p>
+<pre><code class="lang-auto">if (!frm.doc.items || !frm.doc.items.length) return;
+
+frm.doc.items.forEach(row =&gt; {
+
+    // Must be mapped from Sales Order
+    if (!row.sales_order) return;
+
+    if (!row.custom_po_no) {
+        frappe.call({
+        method: "getPOandStyle",
+    args: {
+        sales_order: row.sales_order
+    },
+      callback: function (r) {
+                if (r) {
+                    frappe.model.set_value(row.doctype, row.name, "custom_po_no", r.message.po_no);
+                    frappe.model.set_value(row.doctype, row.name, "custom_style", r.message.custom_style);
+                     frappe.model.set_value(row.doctype, row.name, "custom_brand", r.message.custom_brand);
+                }
+            }
+       
+    })
+</code></pre>
+<p>}<br>
+})<br>
+}</p>
+<p>Now I am wondering on which event I will call this function.</p>
+<p>any idea?</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/generate-some-custom-fields-on-delivery-note-while-filling-items-from-get-items/158281">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/generate-some-custom-fields-on-delivery-note-while-filling-items-from-get-items/158281</link>
+          <pubDate>Wed, 24 Dec 2025 06:35:20 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158281</guid>
+          <source url="https://discuss.frappe.io/t/generate-some-custom-fields-on-delivery-note-while-filling-items-from-get-items/158281.rss">Generate some custom fields on Delivery note While Filling Items from Get Items</source>
+        </item>
+        <item>
+          <title>100% process loss stock entry error</title>
+          <dc:creator><![CDATA[madcheese]]></dc:creator>
+          <category>Manufacturing</category>
+          <description><![CDATA[
+            <p>When submitting a 100% process loss stock entry against a sales order, I get an error saying that I can’t set the product QTY to 0. All I did was set the process loss percentage field to 100 and hit save.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/5/d/5db666c7fcd28011dcd2d03c652a309e80a1f31c.png" data-download-href="https://discuss.frappe.io/uploads/default/5db666c7fcd28011dcd2d03c652a309e80a1f31c" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/5/d/5db666c7fcd28011dcd2d03c652a309e80a1f31c_2_690x384.png" alt="image" data-base62-sha1="dn1chEfPJhCBY82fEV2mzlDeG5u" width="690" height="384" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/5/d/5db666c7fcd28011dcd2d03c652a309e80a1f31c_2_690x384.png, https://discuss.frappe.io/uploads/default/optimized/3X/5/d/5db666c7fcd28011dcd2d03c652a309e80a1f31c_2_1035x576.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/5/d/5db666c7fcd28011dcd2d03c652a309e80a1f31c_2_1380x768.png 2x" data-dominant-color="1B1B1B"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/4/24e3e8d8d13f586b157a6b70985dd1c35b924e0f.png" data-download-href="https://discuss.frappe.io/uploads/default/24e3e8d8d13f586b157a6b70985dd1c35b924e0f" title="image"><img src="https://discuss.frappe.io/uploads/default/original/3X/2/4/24e3e8d8d13f586b157a6b70985dd1c35b924e0f.png" alt="image" data-base62-sha1="5gltWjGyxIBPsyTELwBlf4AcQ6H" width="634" height="130"></a></div><p></p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/100-process-loss-stock-entry-error/158280">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/100-process-loss-stock-entry-error/158280</link>
+          <pubDate>Wed, 24 Dec 2025 06:28:10 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158280</guid>
+          <source url="https://discuss.frappe.io/t/100-process-loss-stock-entry-error/158280.rss">100% process loss stock entry error</source>
+        </item>
+        <item>
+          <title>How to manage &quot;attribution&quot; standart page?</title>
+          <dc:creator><![CDATA[moistcity999]]></dc:creator>
+          <category>Website</category>
+          <description><![CDATA[
+            <p>I’ve updated to version 15. Menu “Help” / “About” now includes new line “Dependencies and Licenses”. When I click it, go to the [my domain]/<strong>attribution</strong> page</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/6/765bb1b40acee89f01d72e6403aecfed2f7578a1.png" data-download-href="https://discuss.frappe.io/uploads/default/765bb1b40acee89f01d72e6403aecfed2f7578a1" title="Снимок экрана 2025-12-24 в 02.26.58"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/6/765bb1b40acee89f01d72e6403aecfed2f7578a1_2_690x310.png" alt="Снимок экрана 2025-12-24 в 02.26.58" data-base62-sha1="gT2NjfAM20k0aLesYpgvMz3fHO1" width="690" height="310" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/6/765bb1b40acee89f01d72e6403aecfed2f7578a1_2_690x310.png, https://discuss.frappe.io/uploads/default/optimized/3X/7/6/765bb1b40acee89f01d72e6403aecfed2f7578a1_2_1035x465.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/7/6/765bb1b40acee89f01d72e6403aecfed2f7578a1_2_1380x620.png 2x" data-dominant-color="A5A5A5"></a></div><p></p>
+<p>On my system I get a 404 error:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/3/232431a44c439de8dcc512cb3d9f34596a7338ca.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/232431a44c439de8dcc512cb3d9f34596a7338ca" title="Снимок экрана 2025-12-24 в 02.27.07"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/3/232431a44c439de8dcc512cb3d9f34596a7338ca_2_690x312.jpeg" alt="Снимок экрана 2025-12-24 в 02.27.07" data-base62-sha1="50SfUf93hjmyzMi3Xs5uKxxjzL4" width="690" height="312" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/3/232431a44c439de8dcc512cb3d9f34596a7338ca_2_690x312.jpeg, https://discuss.frappe.io/uploads/default/optimized/3X/2/3/232431a44c439de8dcc512cb3d9f34596a7338ca_2_1035x468.jpeg 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/2/3/232431a44c439de8dcc512cb3d9f34596a7338ca_2_1380x624.jpeg 2x" data-dominant-color="F8F6F4"></a></div><p></p>
+<p>I can’t find a description or a new document that would allow me to manage this page. It will be great if it is standart page for Privacy Policy or something similar to use that is mandatory for web sites.</p>
+<p>Should there be something displayed on this page? How to manage it’s contents?</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/how-to-manage-attribution-standart-page/158275">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/how-to-manage-attribution-standart-page/158275</link>
+          <pubDate>Tue, 23 Dec 2025 23:38:58 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158275</guid>
+          <source url="https://discuss.frappe.io/t/how-to-manage-attribution-standart-page/158275.rss">How to manage &quot;attribution&quot; standart page?</source>
+        </item>
+        <item>
+          <title>Server Error submitting the pick list</title>
+          <dc:creator><![CDATA[igor-k]]></dc:creator>
+          <category>ERPNext</category>
+          <description><![CDATA[
+            <p>Hello,</p>
+<p>I am still learning the ERPNext, studying now the WO process. when I submit the WO and try to submit the pick list, i get the following error: MySQLdb.OperationalError: (1054, “Unknown column ‘tabDelivery Note.pick_list’ in ‘WHERE’”):</p>
+<p>App Versions</p>
+<pre><code class="lang-auto">{
+	"frappe": "16.0.0-dev",
+	"erpnext": "16.0.0-dev"
+}
+</code></pre>
+<h3><a name="p-489443-route-1" class="anchor" href="https://discuss.frappe.io#p-489443-route-1"></a>Route</h3>
+<pre><code class="lang-auto">Form/Pick List/STO-PICK-2025-00001
+</code></pre>
+<h3><a name="p-489443-traceback-2" class="anchor" href="https://discuss.frappe.io#p-489443-traceback-2"></a>Traceback</h3>
+<pre><code class="lang-auto">Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 121, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 60, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 36, in handle_rpc_call
+    return frappe.handler.handle()
+  File "apps/frappe/frappe/handler.py", line 52, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 85, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "apps/frappe/frappe/__init__.py", line 1127, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 36, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 489, in wrapper_fn
+    retval = fn(*args, **get_newargs(fn, kwargs))
+  File "apps/frappe/frappe/desk/notifications.py", line 259, in get_open_count
+    return _get_linked_document_counts(doctype, name, items)
+  File "apps/frappe/frappe/desk/notifications.py", line 301, in _get_linked_document_counts
+    external_links_data_for_d = get_external_links(d, name, links)
+  File "apps/frappe/frappe/desk/notifications.py", line 348, in get_external_links
+    total_count = get_doc_count(doctype, filters)
+  File "apps/frappe/frappe/desk/notifications.py", line 360, in get_doc_count
+    docs = frappe.get_all(
+  File "apps/frappe/frappe/__init__.py", line 1385, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "apps/frappe/frappe/__init__.py", line 1360, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "apps/frappe/frappe/model/db_query.py", line 210, in execute
+    result = self.build_and_run()
+  File "apps/frappe/frappe/model/db_query.py", line 251, in build_and_run
+    return frappe.db.sql(
+  File "apps/frappe/frappe/database/database.py", line 271, in sql
+    self.execute_query(query, values)
+  File "apps/frappe/frappe/database/database.py", line 365, in execute_query
+    return self._cursor.execute(query, values)
+  File "env/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "env/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "env/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'tabDelivery Note.pick_list' in 'WHERE'")
+
+</code></pre>
+<h3><a name="p-489443-request-data-3" class="anchor" href="https://discuss.frappe.io#p-489443-request-data-3"></a>Request Data</h3>
+<pre><code class="lang-auto">{
+	"type": "GET",
+	"args": {
+		"doctype": "Pick List",
+		"name": "STO-PICK-2025-00001",
+		"items": "[\"Stock Entry\",\"Sales Order\",\"Delivery Note\",\"Stock Reservation Entry\"]"
+	},
+	"headers": {},
+	"error_handlers": {},
+	"url": "/api/method/frappe.desk.notifications.get_open_count",
+	"request_id": null
+}
+</code></pre>
+<h3><a name="p-489443-response-data-4" class="anchor" href="https://discuss.frappe.io#p-489443-response-data-4"></a>Response Data</h3>
+<pre><code class="lang-auto">{
+	"exception": "MySQLdb.OperationalError: (1054, \"Unknown column 'tabDelivery Note.pick_list' in 'WHERE'\")",
+	"exc_type": "OperationalError"
+}
+</code></pre>
+<p>Please advise, what is wrong?</p>
+<p>Thank you in advance,</p>
+<p>Igor.</p>
+            <p><small>2 posts - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/server-error-submitting-the-pick-list/158273">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/server-error-submitting-the-pick-list/158273</link>
+          <pubDate>Tue, 23 Dec 2025 15:34:56 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158273</guid>
+          <source url="https://discuss.frappe.io/t/server-error-submitting-the-pick-list/158273.rss">Server Error submitting the pick list</source>
+        </item>
+        <item>
+          <title>Item valuation rate change post the purchase done, stock updated and maybe partially/fully consumed.</title>
+          <dc:creator><![CDATA[Irfan123]]></dc:creator>
+          <category>ERPNext</category>
+          <description><![CDATA[
+            <p>Hi everyone,</p>
+<p>I’d like to discuss a common real-world scenario related to <strong>inventory valuation adjustments</strong> in ERPNext and understand if there’s a recommended approach.</p>
+<h3><a name="p-489442-scenario-1" class="anchor" href="https://discuss.frappe.io#p-489442-scenario-1"></a><strong>Scenario</strong></h3>
+<ul>
+<li>
+<p>A Purchase invoice is submitted with update stock enabled or the Purchase receipt is done</p>
+</li>
+<li>
+<p>Stock has already been received and may be <strong>partially or fully consumed</strong></p>
+</li>
+<li>
+<p>After some time may be month or two, the supplier provides a <strong>rebate / credit</strong> on some or many items from that invoice</p>
+</li>
+<li>
+<p>The rebate effectively <strong>reduces the actual cost of those items</strong></p>
+</li>
+</ul>
+<h3><a name="p-489442-challenge-2" class="anchor" href="https://discuss.frappe.io#p-489442-challenge-2"></a><strong>Challenge</strong></h3>
+<p>ERPNext does not allow direct modification of valuation rate once stock is updated and Stock Ledger Entries are created. However, from a business perspective the <strong>inventory valuation of the stock</strong> should also reflect the reduced cost.</p>
+<p>So wanted to know what would be the recommended approach in such a case.</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/item-valuation-rate-change-post-the-purchase-done-stock-updated-and-maybe-partially-fully-consumed/158272">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/item-valuation-rate-change-post-the-purchase-done-stock-updated-and-maybe-partially-fully-consumed/158272</link>
+          <pubDate>Tue, 23 Dec 2025 15:34:42 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158272</guid>
+          <source url="https://discuss.frappe.io/t/item-valuation-rate-change-post-the-purchase-done-stock-updated-and-maybe-partially-fully-consumed/158272.rss">Item valuation rate change post the purchase done, stock updated and maybe partially/fully consumed.</source>
+        </item>
+        <item>
+          <title>custom AI chatbot inside ERPNext</title>
+          <dc:creator><![CDATA[AbdulMajid]]></dc:creator>
+          <category>Customize ERPNext</category>
+          <description><![CDATA[
+            <p>Hi, I’m currently working on a <strong>custom AI chatbot inside ERP Next</strong>.</p>
+<p>I have implemented the <strong>Frappe AI Assistant Core</strong>, but I’m facing an issue where it is <strong>not properly fetching or understanding data from ERPNext</strong> (for example DocTypes, records, or contextual business data). The responses are either generic or not aligned with the actual data present in the system.</p>
+<p>I have already done some research and testing. From what I understand, the issue might be related to the <strong>LLM/model being used</strong>, especially its ability to:</p>
+<ul>
+<li>
+<p>Correctly understand ERPNext context</p>
+</li>
+<li>
+<p>Call or work with <strong>Frappe tools / APIs</strong></p>
+</li>
+<li>
+<p>Fetch and reason over ERP Next data instead of giving plain text answers</p>
+</li>
+</ul>
+<p>My question is:<br>
+<strong>Which ChatGPT / OpenAI model is recommended to use with ERPNext so that it can properly leverage Frappe tools and fetch real data from the system?</strong><br>
+Also, are there any best practices or configurations required to make the model work more accurately with ERPNext and Frappe AI Assistant Core?</p>
+<p>Thank you in advance, really appreciate any guidance or suggestions</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/custom-ai-chatbot-inside-erpnext/158270">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/custom-ai-chatbot-inside-erpnext/158270</link>
+          <pubDate>Tue, 23 Dec 2025 15:34:38 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158270</guid>
+          <source url="https://discuss.frappe.io/t/custom-ai-chatbot-inside-erpnext/158270.rss">custom AI chatbot inside ERPNext</source>
+        </item>
+        <item>
+          <title>Installing Correct wkhtmltopdf for ERPNext v12</title>
+          <dc:creator><![CDATA[hilalhabeeb]]></dc:creator>
+          <category>ERPNext</category>
+          <description><![CDATA[
+            <h2><a name="p-489430-installing-correct-wkhtmltopdf-for-erpnext-v12-ubuntu-1804-1" class="anchor" href="https://discuss.frappe.io#p-489430-installing-correct-wkhtmltopdf-for-erpnext-v12-ubuntu-1804-1"></a>Installing Correct wkhtmltopdf for ERPNext v12 (Ubuntu 18.04)</h2>
+<h3><a name="p-489430-purpose-2" class="anchor" href="https://discuss.frappe.io#p-489430-purpose-2"></a>Purpose</h3>
+<p>ERPNext v12 <strong>requires a patched version of wkhtmltopdf</strong> to correctly generate PDFs (Print Formats, Email Attachments, WhatsApp PDFs).</p>
+<p>Using the default Ubuntu wkhtmltopdf <strong>will fail</strong> on headless servers.</p>
+<p>This guide installs the <strong>exact version proven to work in production</strong>.</p>
+<hr>
+<h2><a name="p-489430-supported-environment-3" class="anchor" href="https://discuss.frappe.io#p-489430-supported-environment-3"></a><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> Supported Environment</h2>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ERPNext</td>
+<td>v12.x</td>
+</tr>
+<tr>
+<td>Frappe</td>
+<td>v12.x</td>
+</tr>
+<tr>
+<td>OS</td>
+<td>Ubuntu 18.04 (Bionic)</td>
+</tr>
+<tr>
+<td>wkhtmltopdf</td>
+<td><strong>0.12.5 (with patched qt)</strong></td>
+</tr>
+</tbody>
+</table>
+</div><hr>
+<h2><a name="p-489430-common-symptoms-if-wrong-version-is-installed-4" class="anchor" href="https://discuss.frappe.io#p-489430-common-symptoms-if-wrong-version-is-installed-4"></a><img src="https://discuss.frappe.io/images/emoji/twitter/cross_mark.png?v=14" title=":cross_mark:" class="emoji" alt=":cross_mark:" loading="lazy" width="20" height="20"> Common Symptoms (If Wrong Version Is Installed)</h2>
+<p>If wkhtmltopdf is incorrect, you will see:</p>
+<pre><code class="lang-auto">Could not connect to any X display
+wkhtmltopdf exited with non-zero code 1
+using unpatched qt
+
+</code></pre>
+<p>Effects:</p>
+<ul>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/cross_mark.png?v=14" title=":cross_mark:" class="emoji" alt=":cross_mark:" loading="lazy" width="20" height="20"> PDF download fails</p>
+</li>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/cross_mark.png?v=14" title=":cross_mark:" class="emoji" alt=":cross_mark:" loading="lazy" width="20" height="20"> Emails with attachments fail</p>
+</li>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/cross_mark.png?v=14" title=":cross_mark:" class="emoji" alt=":cross_mark:" loading="lazy" width="20" height="20"> Background jobs fail</p>
+</li>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/cross_mark.png?v=14" title=":cross_mark:" class="emoji" alt=":cross_mark:" loading="lazy" width="20" height="20"> WhatsApp PDF sending fails</p>
+</li>
+</ul>
+<hr>
+<h2><a name="p-489430-verify-current-version-before-installing-5" class="anchor" href="https://discuss.frappe.io#p-489430-verify-current-version-before-installing-5"></a><img src="https://discuss.frappe.io/images/emoji/twitter/magnifying_glass_tilted_left.png?v=14" title=":magnifying_glass_tilted_left:" class="emoji" alt=":magnifying_glass_tilted_left:" loading="lazy" width="20" height="20"> Verify Current Version (Before Installing)</h2>
+<pre><code class="lang-auto">wkhtmltopdf --version
+
+</code></pre>
+<h3><a name="p-489430-wrong-6" class="anchor" href="https://discuss.frappe.io#p-489430-wrong-6"></a><img src="https://discuss.frappe.io/images/emoji/twitter/cross_mark.png?v=14" title=":cross_mark:" class="emoji" alt=":cross_mark:" loading="lazy" width="20" height="20"> Wrong</h3>
+<pre><code class="lang-auto">wkhtmltopdf 0.12.4
+
+</code></pre>
+<h3><a name="p-489430-wrong-no-patched-qt-7" class="anchor" href="https://discuss.frappe.io#p-489430-wrong-no-patched-qt-7"></a><img src="https://discuss.frappe.io/images/emoji/twitter/cross_mark.png?v=14" title=":cross_mark:" class="emoji" alt=":cross_mark:" loading="lazy" width="20" height="20"> Wrong (no patched qt)</h3>
+<pre><code class="lang-auto">wkhtmltopdf 0.12.6
+
+</code></pre>
+<h3><a name="p-489430-correct-8" class="anchor" href="https://discuss.frappe.io#p-489430-correct-8"></a><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> Correct</h3>
+<pre><code class="lang-auto">wkhtmltopdf 0.12.5 (with patched qt)
+
+</code></pre>
+<hr>
+<h2><a name="p-489430-correct-installation-steps-9" class="anchor" href="https://discuss.frappe.io#p-489430-correct-installation-steps-9"></a><img src="https://discuss.frappe.io/images/emoji/twitter/hammer_and_wrench.png?v=14" title=":hammer_and_wrench:" class="emoji" alt=":hammer_and_wrench:" loading="lazy" width="20" height="20"> Correct Installation Steps</h2>
+<h3><a name="p-489430-step-1-remove-existing-wkhtmltopdf-10" class="anchor" href="https://discuss.frappe.io#p-489430-step-1-remove-existing-wkhtmltopdf-10"></a>Step 1: Remove Existing wkhtmltopdf</h3>
+<pre><code class="lang-auto">sudo apt remove wkhtmltopdf -y
+
+</code></pre>
+<p>Confirm removal:</p>
+<pre><code class="lang-auto">which wkhtmltopdf
+
+</code></pre>
+<p>Expected: <strong>no output</strong></p>
+<hr>
+<h3><a name="p-489430-step-2-download-correct-patched-package-11" class="anchor" href="https://discuss.frappe.io#p-489430-step-2-download-correct-patched-package-11"></a>Step 2: Download Correct Patched Package</h3>
+<pre><code class="lang-auto">cd /tmp
+wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb
+
+</code></pre>
+<p>Verify file:</p>
+<pre><code class="lang-auto">ls -lh wkhtmltox_0.12.5-1.bionic_amd64.deb
+
+</code></pre>
+<hr>
+<h3><a name="p-489430-step-3-install-package-use-apt-not-dpkg-12" class="anchor" href="https://discuss.frappe.io#p-489430-step-3-install-package-use-apt-not-dpkg-12"></a>Step 3: Install Package (Use apt, NOT dpkg)</h3>
+<pre><code class="lang-auto">sudo apt install ./wkhtmltox_0.12.5-1.bionic_amd64.deb -y
+
+</code></pre>
+<blockquote>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/warning.png?v=14" title=":warning:" class="emoji" alt=":warning:" loading="lazy" width="20" height="20"> <code>apt install</code> is required to resolve dependencies properly.</p>
+</blockquote>
+<hr>
+<h3><a name="p-489430-step-4-verify-installation-path-13" class="anchor" href="https://discuss.frappe.io#p-489430-step-4-verify-installation-path-13"></a>Step 4: Verify Installation Path</h3>
+<p>The binary installs to:</p>
+<pre><code class="lang-auto">/usr/local/bin/wkhtmltopdf
+
+</code></pre>
+<p>Verify:</p>
+<pre><code class="lang-auto">/usr/local/bin/wkhtmltopdf --version
+
+</code></pre>
+<p>Expected:</p>
+<pre><code class="lang-auto">wkhtmltopdf 0.12.5 (with patched qt)
+
+</code></pre>
+<hr>
+<h3><a name="p-489430-step-5-create-required-symlinks-critical-14" class="anchor" href="https://discuss.frappe.io#p-489430-step-5-create-required-symlinks-critical-14"></a>Step 5: Create Required Symlinks (CRITICAL)</h3>
+<p>ERPNext expects wkhtmltopdf in <code>/usr/bin</code>.</p>
+<pre><code class="lang-auto">sudo ln -s /usr/local/bin/wkhtmltopdf /usr/bin/wkhtmltopdf
+sudo ln -s /usr/local/bin/wkhtmltoimage /usr/bin/wkhtmltoimage
+
+</code></pre>
+<p>Verify:</p>
+<pre><code class="lang-auto">wkhtmltopdf --version
+
+</code></pre>
+<p>Expected:</p>
+<pre><code class="lang-auto">wkhtmltopdf 0.12.5 (with patched qt)
+
+</code></pre>
+<hr>
+<h3><a name="p-489430-step-6-restart-erpnext-services-15" class="anchor" href="https://discuss.frappe.io#p-489430-step-6-restart-erpnext-services-15"></a>Step 6: Restart ERPNext Services</h3>
+<pre><code class="lang-auto">cd ~/frappe-bench
+bench restart
+
+</code></pre>
+<hr>
+<h2><a name="p-489430-post-installation-verification-16" class="anchor" href="https://discuss.frappe.io#p-489430-post-installation-verification-16"></a><img src="https://discuss.frappe.io/images/emoji/twitter/test_tube.png?v=14" title=":test_tube:" class="emoji" alt=":test_tube:" loading="lazy" width="20" height="20"> Post-Installation Verification</h2>
+<h3><a name="p-489430-test-1-pdf-download-17" class="anchor" href="https://discuss.frappe.io#p-489430-test-1-pdf-download-17"></a>Test 1: PDF Download</h3>
+<p>Open any print format:</p>
+<pre><code class="lang-auto">/api/method/frappe.utils.print_format.download_pdf
+
+</code></pre>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/check_mark.png?v=14" title=":check_mark:" class="emoji" alt=":check_mark:" loading="lazy" width="20" height="20"> PDF downloads successfully<br>
+<img src="https://discuss.frappe.io/images/emoji/twitter/check_mark.png?v=14" title=":check_mark:" class="emoji" alt=":check_mark:" loading="lazy" width="20" height="20"> No X display errors</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/installing-correct-wkhtmltopdf-for-erpnext-v12/158261">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/installing-correct-wkhtmltopdf-for-erpnext-v12/158261</link>
+          <pubDate>Tue, 23 Dec 2025 13:55:21 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158261</guid>
+          <source url="https://discuss.frappe.io/t/installing-correct-wkhtmltopdf-for-erpnext-v12/158261.rss">Installing Correct wkhtmltopdf for ERPNext v12</source>
+        </item>
+        <item>
+          <title>Wkhtmltopdf Fontconfig error: “No writable cache directories” on ERPNext v15 (Jammy)</title>
+          <dc:creator><![CDATA[274mariselvi]]></dc:creator>
+          <category>ERPNext</category>
+          <description><![CDATA[
+            <p>Hi everyone,</p>
+<p>I’m facing a persistent PDF generation error in <strong>ERPNext / Frappe v15</strong> when downloading print formats or sending emails with PDF attachments.</p>
+<hr>
+<h3><a name="p-489406-environment-1" class="anchor" href="https://discuss.frappe.io#p-489406-environment-1"></a><strong>Environment</strong></h3>
+<ul>
+<li>
+<p><strong>OS</strong>: Ubuntu 22.04 (Jammy)</p>
+</li>
+<li>
+<p><strong>Python</strong>: 3.12</p>
+</li>
+<li>
+<p><strong>Frappe</strong>: 15.56.0</p>
+</li>
+<li>
+<p><strong>ERPNext</strong>: 15.50.1</p>
+</li>
+<li>
+<p><strong>wkhtmltopdf</strong>: 0.12.6.1 (with patched Qt)</p>
+</li>
+<li>
+<p>Installed via: <code>wkhtmltox_0.12.6.1-2.jammy_amd64.deb</code></p>
+</li>
+<li>
+<p>Binary location: <code>/usr/local/bin/wkhtmltopdf</code></p>
+</li>
+</ul>
+<hr>
+<h3><a name="p-489406-error-2" class="anchor" href="https://discuss.frappe.io#p-489406-error-2"></a><strong>Error</strong></h3>
+<p>When downloading a PDF or sending Email Queue with print attachment:</p>
+<pre><code class="lang-auto">OSError: wkhtmltopdf reported an error:
+Fontconfig error: No writable cache directoriesExit with code 1 due to network error: SslHandshakeFailedError
+</code></pre>
+<hr>
+<h3><a name="p-489406-traceback-shortened-3" class="anchor" href="https://discuss.frappe.io#p-489406-traceback-shortened-3"></a><strong>Traceback (shortened)</strong></h3>
+<pre><code class="lang-auto">frappe.utils.pdf.get_pdf → pdfkit.from_string → wkhtmltopdf → Fontconfig error: No writable cache directories 
+</code></pre>
+<hr>
+<h3><a name="p-489406-what-ive-already-verified-tried-4" class="anchor" href="https://discuss.frappe.io#p-489406-what-ive-already-verified-tried-4"></a><strong>What I’ve already verified / tried</strong></h3>
+<ul>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> Correct wkhtmltopdf version (patched Qt)</p>
+</li>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> <code>fontconfig</code> installed</p>
+</li>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> <code>/var/cache/fontconfig</code> exists and is writable</p>
+</li>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> Cache files present in <code>/var/cache/fontconfig</code></p>
+</li>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> Fonts installed (<code>fonts-dejavu</code>)</p>
+</li>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> <code>fc-cache -fv</code> runs successfully</p>
+</li>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> Permissions fixed:</p>
+</li>
+<li>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> Same error occurs when running via Frappe (print format / email queue)</p>
+</li>
+</ul>
+<p>Despite this, wkhtmltopdf still fails with <strong>“No writable cache directories”</strong>.</p>
+<hr>
+<h3><a name="p-489406-question-5" class="anchor" href="https://discuss.frappe.io#p-489406-question-5"></a><strong>Question</strong></h3>
+<p>Has anyone encountered this issue on <strong>Ubuntu 22.04 + Python 3.12 + Frappe v15</strong>?</p>
+<ul>
+<li>
+<p>Is there a known fontconfig path issue?</p>
+</li>
+<li>
+<p>Does wkhtmltopdf need explicit <code>FONTCONFIG_PATH</code> or <code>XDG_CACHE_HOME</code> for Frappe?</p>
+</li>
+<li>
+<p>Any known fixes specific to Jammy or Python 3.12?</p>
+</li>
+</ul>
+<p>Any guidance would be appreciated <img src="https://discuss.frappe.io/images/emoji/twitter/folded_hands.png?v=14" title=":folded_hands:" class="emoji" alt=":folded_hands:" loading="lazy" width="20" height="20"></p>
+<p>Thanks!</p>
+            <p><small>3 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/wkhtmltopdf-fontconfig-error-no-writable-cache-directories-on-erpnext-v15-jammy/158253">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/wkhtmltopdf-fontconfig-error-no-writable-cache-directories-on-erpnext-v15-jammy/158253</link>
+          <pubDate>Tue, 23 Dec 2025 08:12:56 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158253</guid>
+          <source url="https://discuss.frappe.io/t/wkhtmltopdf-fontconfig-error-no-writable-cache-directories-on-erpnext-v15-jammy/158253.rss">Wkhtmltopdf Fontconfig error: “No writable cache directories” on ERPNext v15 (Jammy)</source>
+        </item>
+        <item>
+          <title>[Bug][UX Issues] Broken Permissions in Frappe Cloud 23/12/25</title>
+          <dc:creator><![CDATA[nasir]]></dc:creator>
+          <category>Frappe Cloud</category>
+          <description><![CDATA[
+            <p>Latest change pushed to Frappe Cloud regarding permissions has broken functionality</p>
+<ol>
+<li>
+<p><strong>No option of assigning admin role to users.</strong><br>
+I had a previous role which had admin access (it has billing access). Now I have created a new role [ST Developers](pic 1) I am unable to give it admin role. Because of this, my developers are not able to create new benches. (pic 2)</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/c/9cb41cd36c71bae52fa4b3d5f0c39073f7740feb.png" data-download-href="https://discuss.frappe.io/uploads/default/9cb41cd36c71bae52fa4b3d5f0c39073f7740feb" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/9/c/9cb41cd36c71bae52fa4b3d5f0c39073f7740feb_2_690x155.png" alt="image" data-base62-sha1="mmgneXbNt1bAvUKMng78a0tvtl9" width="690" height="155" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/9/c/9cb41cd36c71bae52fa4b3d5f0c39073f7740feb_2_690x155.png, https://discuss.frappe.io/uploads/default/optimized/3X/9/c/9cb41cd36c71bae52fa4b3d5f0c39073f7740feb_2_1035x232.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/9/c/9cb41cd36c71bae52fa4b3d5f0c39073f7740feb_2_1380x310.png 2x" data-dominant-color="FAF1F1"></a></div><p></p>
+<p>Now my developers are unable to create benches.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/b/dbc9652ac9098192654197c32ed1c3fabf500fb2.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/dbc9652ac9098192654197c32ed1c3fabf500fb2" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/b/dbc9652ac9098192654197c32ed1c3fabf500fb2_2_690x431.jpeg" alt="image" data-base62-sha1="vmk3izSMR8DLH3v1HUuXQtvbRuy" width="690" height="431" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/b/dbc9652ac9098192654197c32ed1c3fabf500fb2_2_690x431.jpeg, https://discuss.frappe.io/uploads/default/original/3X/d/b/dbc9652ac9098192654197c32ed1c3fabf500fb2.jpeg 1.5x, https://discuss.frappe.io/uploads/default/original/3X/d/b/dbc9652ac9098192654197c32ed1c3fabf500fb2.jpeg 2x" data-dominant-color="F5F6F6"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/e/e/ee86bfdde97f2b15cc0d8c76e9b408db714c7439.png" data-download-href="https://discuss.frappe.io/uploads/default/ee86bfdde97f2b15cc0d8c76e9b408db714c7439" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/e/e/ee86bfdde97f2b15cc0d8c76e9b408db714c7439_2_690x312.png" alt="image" data-base62-sha1="y26kUWULhZTRYJfuumnsstUvG6R" width="690" height="312" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/e/e/ee86bfdde97f2b15cc0d8c76e9b408db714c7439_2_690x312.png, https://discuss.frappe.io/uploads/default/optimized/3X/e/e/ee86bfdde97f2b15cc0d8c76e9b408db714c7439_2_1035x468.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/e/e/ee86bfdde97f2b15cc0d8c76e9b408db714c7439_2_1380x624.png 2x" data-dominant-color="FCFCFC"></a></div><p></p>
+</li>
+<li>
+<p>No <strong>“select all”</strong> option. Lets say I have over more than 50 sites and benches, and now I have to select 50 times to give the users permissions to all sites and benches? What stupidity is this.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/9/f99d85027afb94f3f6015a66a13a032a625cfc32.png" data-download-href="https://discuss.frappe.io/uploads/default/f99d85027afb94f3f6015a66a13a032a625cfc32" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/f/9/f99d85027afb94f3f6015a66a13a032a625cfc32_2_690x381.png" alt="image" data-base62-sha1="zCcncF9e5zRkUdSyRUHJpQWstEe" width="690" height="381" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/f/9/f99d85027afb94f3f6015a66a13a032a625cfc32_2_690x381.png, https://discuss.frappe.io/uploads/default/optimized/3X/f/9/f99d85027afb94f3f6015a66a13a032a625cfc32_2_1035x571.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/f/9/f99d85027afb94f3f6015a66a13a032a625cfc32_2_1380x762.png 2x" data-dominant-color="CAC6C6"></a></div><p></p>
+</li>
+<li>
+<p><strong>No option of segregation of sites and benches:</strong><br>
+The permission to grant access to sites and benches should be segregated, so that once we assign a particular bench, all sites under it should be available.</p>
+</li>
+<li>
+<p><strong>Documentation is not updated:</strong><br>
+The system points you to docs, but when you visit docs it is the old one. You run in circles.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/b/fbf519da4add37fdf2241edf6fe937de031dea47.png" data-download-href="https://discuss.frappe.io/uploads/default/fbf519da4add37fdf2241edf6fe937de031dea47" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/f/b/fbf519da4add37fdf2241edf6fe937de031dea47_2_690x82.png" alt="image" data-base62-sha1="zWUYexNjOYDmdqxwYE87JwVJbxR" width="690" height="82" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/f/b/fbf519da4add37fdf2241edf6fe937de031dea47_2_690x82.png, https://discuss.frappe.io/uploads/default/optimized/3X/f/b/fbf519da4add37fdf2241edf6fe937de031dea47_2_1035x123.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/f/b/fbf519da4add37fdf2241edf6fe937de031dea47_2_1380x164.png 2x" data-dominant-color="F6F3E9"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/6/3/63364ba3bb75bcee61b5b0edfa098bb41a9f2fb9.png" data-download-href="https://discuss.frappe.io/uploads/default/63364ba3bb75bcee61b5b0edfa098bb41a9f2fb9" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/6/3/63364ba3bb75bcee61b5b0edfa098bb41a9f2fb9_2_449x500.png" alt="image" data-base62-sha1="e9FB19Z3vM1W57xFrG9f97KoAFX" width="449" height="500" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/6/3/63364ba3bb75bcee61b5b0edfa098bb41a9f2fb9_2_449x500.png, https://discuss.frappe.io/uploads/default/optimized/3X/6/3/63364ba3bb75bcee61b5b0edfa098bb41a9f2fb9_2_673x750.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/6/3/63364ba3bb75bcee61b5b0edfa098bb41a9f2fb9.png 2x" data-dominant-color="FBFBFB"></a></div><p></p>
+</li>
+</ol>
+<p>There are many other issues, I am too frustrated and tired to type them out. Please rollback the changes until you have fixed them. And thoroughly tested them. Then release the changes for a pilot batch of users. Take feedback from them. And update the documentation. Then notify users of the upcoming change atleast 30 days before. Then finally roll out to all the users.</p>
+<p><a class="mention" href="https://discuss.frappe.io/u/michelle">@michelle</a> <a class="mention" href="https://discuss.frappe.io/u/adityahase">@adityahase</a></p>
+            <p><small>4 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/bug-ux-issues-broken-permissions-in-frappe-cloud-23-12-25/158252">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/bug-ux-issues-broken-permissions-in-frappe-cloud-23-12-25/158252</link>
+          <pubDate>Tue, 23 Dec 2025 07:50:50 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158252</guid>
+          <source url="https://discuss.frappe.io/t/bug-ux-issues-broken-permissions-in-frappe-cloud-23-12-25/158252.rss">[Bug][UX Issues] Broken Permissions in Frappe Cloud 23/12/25</source>
+        </item>
+        <item>
+          <title>Overriding Plugin Method</title>
+          <dc:creator><![CDATA[TSping1]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>Hello all!</p>
+<p>I have been trying to create a hook to replace the functionality of an erpnext method, “calculate_taxes_and_totals”, found in “erpnext/erpnext/controllers/taxes_and_totals.calculate_taxes_and_totals”.</p>
+<p>As far as I can see, the hook lists “override_whitelisted_methods” (to replace the method directly) and “override_doctype_class” (to replace the entire class) are only for core DocType classes, not those introduced by plugins.</p>
+<p>I’d prefer to avoid monkey patching, as it seems to be used for a quick fix, not for permanent use.</p>
+<p>Summary: How can I override a method in a plugin?</p>
+            <p><small>6 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/overriding-plugin-method/158245">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/overriding-plugin-method/158245</link>
+          <pubDate>Tue, 23 Dec 2025 03:33:13 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158245</guid>
+          <source url="https://discuss.frappe.io/t/overriding-plugin-method/158245.rss">Overriding Plugin Method</source>
+        </item>
+        <item>
+          <title>ERPNext Email Delivery Service: This email was blocked as it was flagged as spam.</title>
+          <dc:creator><![CDATA[megatdanial]]></dc:creator>
+          <category>ERPNext</category>
+          <description><![CDATA[
+            <p>Hi All,</p>
+<p>I am getting this error when I try to send welcome email or any email via ERPNext Email Delivery Service</p>
+<p>This email was blocked as it was flagged as spam. Please review documentation corresponding to the error codes below: docs: <a href="https://spamassassin.apache.org/old/tests_3_3_x.html" class="inline-onebox" rel="noopener nofollow ugc">SpamAssassin: Tests Performed: v3.3.x</a> SPAMD/1.1 0 EX_OK Content-length: 164 Spam: False ; 4.2 / 5.0 DKIM_ADSP_CUSTOM_MED,FORGED_GMAIL_RCVD,FREEMAIL_FROM,HK_RANDOM_FROM,HK_RANDOM_REPLYTO,HTML_MESSAGE,NML_ADSP_CUSTOM_MED,NO_RECEIVED,NO_RELAYS,T_KAM_HTML_FONT_INVALID</p>
+<p>Please do share any steps that I might have missed to configure Email Delivery Service.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/erpnext-email-delivery-service-this-email-was-blocked-as-it-was-flagged-as-spam/158242">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/erpnext-email-delivery-service-this-email-was-blocked-as-it-was-flagged-as-spam/158242</link>
+          <pubDate>Mon, 22 Dec 2025 18:58:12 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158242</guid>
+          <source url="https://discuss.frappe.io/t/erpnext-email-delivery-service-this-email-was-blocked-as-it-was-flagged-as-spam/158242.rss">ERPNext Email Delivery Service: This email was blocked as it was flagged as spam.</source>
+        </item>
+        <item>
+          <title>Looking for Ukraine localization (Payroll + statutory reports) for ERPNext/HRMS v15 — replacing BAS</title>
+          <dc:creator><![CDATA[Stephenson]]></dc:creator>
+          <category>Frappe HR</category>
+          <description><![CDATA[
+            <p>There are strong market prospects for this localization: the entire country is looking for a solution to migrate from 1C/BAS to another ERP.</p>
+<ol>
+<li><strong>Versions:</strong> ERPNext v15 + HRMS (Frappe HR) v15 (GitHub).</li>
+<li><strong>Scale:</strong> 650 employees, 9 legal entities.</li>
+<li><strong>Pay schemes:</strong> monthly salary / hourly pay / bonuses / allowances.</li>
+<li><strong>Must-have calculations:</strong> paid leave based on average earnings, sick leave, vacation reserves/provisions, retroactive recalculations, secondary employment (multiple job holders).</li>
+<li><strong>Must-have reporting:</strong>
+<ul>
+<li>
+<p>Form 1-PV</p>
+</li>
+<li>
+<p>Average headcount (average listed number of employees)</p>
+</li>
+<li>
+<p>Staff turnover / personnel movement</p>
+</li>
+<li>
+<p>SSC/ESV reporting</p>
+</li>
+<li>
+<p>Unified reporting (combined tax &amp; SSC reporting)</p>
+</li>
+<li>
+<p>1DF (personal income reporting)</p>
+</li>
+<li>
+<p>Military tax</p>
+</li>
+<li>
+<p>Employee turnover rate</p>
+</li>
+<li>
+<p>Personnel structure</p>
+</li>
+<li>
+<p>Worked time</p>
+</li>
+<li>
+<p>Leaves/vacations</p>
+</li>
+<li>
+<p>Payroll fund (FOP)</p>
+</li>
+<li>
+<p>Average salary</p>
+</li>
+<li>
+<p>Total personnel cost</p>
+</li>
+<li>
+<p>Breakdown by responsibility centers (cost centers)</p>
+</li>
+<li>
+<p>Automatic generation of electronic payslips.</p>
+</li>
+</ul>
+</li>
+<li><strong>Integrations:</strong> M.E.Doc, Ukrainian banks, e-document exchange / e-signature.</li>
+<li><strong>Expected outcome:</strong> a separate open-source app <code>l10n_ua</code> / or a closed-source project; we are willing to contribute and publish on the Marketplace.</li>
+</ol>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/looking-for-ukraine-localization-payroll-statutory-reports-for-erpnext-hrms-v15-replacing-bas/158227">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/looking-for-ukraine-localization-payroll-statutory-reports-for-erpnext-hrms-v15-replacing-bas/158227</link>
+          <pubDate>Mon, 22 Dec 2025 14:18:22 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158227</guid>
+          <source url="https://discuss.frappe.io/t/looking-for-ukraine-localization-payroll-statutory-reports-for-erpnext-hrms-v15-replacing-bas/158227.rss">Looking for Ukraine localization (Payroll + statutory reports) for ERPNext/HRMS v15 — replacing BAS</source>
+        </item>
+        <item>
+          <title>Student import error</title>
+          <dc:creator><![CDATA[dynovative]]></dc:creator>
+          <category>Education</category>
+          <description><![CDATA[
+            <p>Hi there does anybody have an idea how to import students in bulk in erpnext education module i am using import tool but is show  me error</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+</table>
+</div><pre><code class="lang-auto">
+Traceback (most recent call last):
+  File "apps/frappe/frappe/core/doctype/data_import/importer.py", line 149, in import_data
+    doc = self.process_doc(doc)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/core/doctype/data_import/importer.py", line 251, in process_doc
+    return self.insert_record(doc)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/core/doctype/data_import/importer.py", line 270, in insert_record
+    new_doc.insert()
+  File "apps/frappe/frappe/model/document.py", line 309, in insert
+    self.run_before_save_methods()
+  File "apps/frappe/frappe/model/document.py", line 1140, in run_before_save_methods
+    self.run_method("validate")
+  File "apps/frappe/frappe/model/document.py", line 1011, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1371, in composer
+    return composed(self, method, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1353, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1008, in fn
+    return method_object(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/education/education/education/doctype/student/student.py", line 20, in validate
+    self.validate_user()
+  File "apps/education/education/education/doctype/student/student.py", line 87, in validate_user
+    student_user.add_roles("Student")
+  File "apps/frappe/frappe/core/doctype/user/user.py", line 609, in add_roles
+    self.save()
+  File "apps/frappe/frappe/model/document.py", line 378, in save
+    return self._save(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 400, in _save
+    return self.insert()
+           ^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 334, in insert
+    self.run_post_save_methods()
+  File "apps/frappe/frappe/model/document.py", line 1177, in run_post_save_methods
+    self.run_method("on_update")
+  File "apps/frappe/frappe/model/document.py", line 1011, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1371, in composer
+    return composed(self, method, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1353, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/model/document.py", line 1008, in fn
+    return method_object(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/core/doctype/user/user.py", line 229, in on_update
+    self.send_password_notification(self.__new_password)
+  File "apps/frappe/frappe/core/doctype/user/user.py", line 355, in send_password_notification
+    self.send_welcome_mail_to_user()
+  File "apps/frappe/frappe/core/doctype/user/user.py", line 425, in send_welcome_mail_to_user
+    self.send_login_mail(
+  File "apps/frappe/frappe/core/doctype/user/user.py", line 465, in send_login_mail
+    frappe.sendmail(
+  File "apps/frappe/frappe/__init__.py", line 804, in sendmail
+    return builder.process(send_now=now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/email/doctype/email_queue/email_queue.py", line 753, in process
+    queue_data = self.as_dict(include_recipients=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/email/doctype/email_queue/email_queue.py", line 798, in as_dict
+    mail = self.prepare_email_content()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/email/doctype/email_queue/email_queue.py", line 716, in prepare_email_content
+    sender=self.sender,
+           ^^^^^^^^^^^
+  File "apps/frappe/frappe/email/doctype/email_queue/email_queue.py", line 607, in sender
+    return email_account.default_sender
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/email/doctype/email_account/email_account.py", line 342, in default_sender
+    return email.utils.formataddr((self.name, self.get("email_id")))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/email/utils.py", line 92, in formataddr
+    address.encode('ascii')
+    ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+</code></pre>
+<p>As well as i used script to import but is show me error can’t create user id in short time something like that</p>
+<p>does anybody have an idea how to handle it?</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/student-import-error/158218">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/student-import-error/158218</link>
+          <pubDate>Mon, 22 Dec 2025 12:24:40 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158218</guid>
+          <source url="https://discuss.frappe.io/t/student-import-error/158218.rss">Student import error</source>
+        </item>
+        <item>
+          <title>Issue with Is Default in User Permission</title>
+          <dc:creator><![CDATA[Kiranmai_M]]></dc:creator>
+          <category>Uncategorized</category>
+          <description><![CDATA[
+            <p>I created a User Permission as below without <strong>Is Default</strong>.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/5/4/542eddd72d8af35ce4939bc08814970c2dd0f838.png" data-download-href="https://discuss.frappe.io/uploads/default/542eddd72d8af35ce4939bc08814970c2dd0f838" title="Screenshot from 2025-12-22 15-38-01"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/5/4/542eddd72d8af35ce4939bc08814970c2dd0f838_2_690x327.png" alt="Screenshot from 2025-12-22 15-38-01" data-base62-sha1="c0Iw9LpKUdgzKDp9JB5DLszA2CI" width="690" height="327" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/5/4/542eddd72d8af35ce4939bc08814970c2dd0f838_2_690x327.png, https://discuss.frappe.io/uploads/default/original/3X/5/4/542eddd72d8af35ce4939bc08814970c2dd0f838.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/5/4/542eddd72d8af35ce4939bc08814970c2dd0f838.png 2x" data-dominant-color="FBFBFB"></a></div><p></p>
+<p>But whenever i logged in with that user and trying to create records it is taking this value(RGUKT) as default value.</p>
+<p>Any solutions??</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/9/296b9a86a02c2cb4fc3a0ab2b1fc775fcd12420b.png" data-download-href="https://discuss.frappe.io/uploads/default/296b9a86a02c2cb4fc3a0ab2b1fc775fcd12420b" title="Screenshot from 2025-12-22 15-41-08"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/9/296b9a86a02c2cb4fc3a0ab2b1fc775fcd12420b_2_551x500.png" alt="Screenshot from 2025-12-22 15-41-08" data-base62-sha1="5Uq7bNQSSplYrkliDurVd68Ze55" width="551" height="500" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/9/296b9a86a02c2cb4fc3a0ab2b1fc775fcd12420b_2_551x500.png, https://discuss.frappe.io/uploads/default/optimized/3X/2/9/296b9a86a02c2cb4fc3a0ab2b1fc775fcd12420b_2_826x750.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/2/9/296b9a86a02c2cb4fc3a0ab2b1fc775fcd12420b.png 2x" data-dominant-color="FAFAFA"></a></div><p></p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/issue-with-is-default-in-user-permission/158214">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/issue-with-is-default-in-user-permission/158214</link>
+          <pubDate>Mon, 22 Dec 2025 10:12:00 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158214</guid>
+          <source url="https://discuss.frappe.io/t/issue-with-is-default-in-user-permission/158214.rss">Issue with Is Default in User Permission</source>
+        </item>
+        <item>
+          <title>I can not locate&quot; create sale invoice&quot;</title>
+          <dc:creator><![CDATA[sothyat-cell]]></dc:creator>
+          <category>Healthcare</category>
+          <description><![CDATA[
+            <ol>
+<li>
+<p>medication and item are created and linked.</p>
+</li>
+<li>
+<p>stock entry, price list, item price are set up.</p>
+</li>
+<li>
+<p>patient encounter&gt; drug prescription&gt;medication request sumitted.</p>
+</li>
+</ol>
+<blockquote>
+<blockquote>
+<p><strong>i can not locate “</strong> <strong>create sale invoice”</strong> ( i want to know the cost of my prescription, and stock reducing … work automatically.</p>
+</blockquote>
+</blockquote>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/i-can-not-locate-create-sale-invoice/158208">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/i-can-not-locate-create-sale-invoice/158208</link>
+          <pubDate>Mon, 22 Dec 2025 07:57:09 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158208</guid>
+          <source url="https://discuss.frappe.io/t/i-can-not-locate-create-sale-invoice/158208.rss">I can not locate&quot; create sale invoice&quot;</source>
+        </item>
+        <item>
+          <title>Anyone know how to change the default page of desk</title>
+          <dc:creator><![CDATA[Pejay]]></dc:creator>
+          <category>ERPNext</category>
+          <description><![CDATA[
+            <p>I want to ask for guidance if anyone know to to change the default page of desk from /app/home to app/mycustompage?</p>
+<p>What settings in ERPNext or script todo?</p>
+<p>Best Regards,<br>
+Peter John</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/anyone-know-how-to-change-the-default-page-of-desk/158203">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/anyone-know-how-to-change-the-default-page-of-desk/158203</link>
+          <pubDate>Mon, 22 Dec 2025 07:07:52 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158203</guid>
+          <source url="https://discuss.frappe.io/t/anyone-know-how-to-change-the-default-page-of-desk/158203.rss">Anyone know how to change the default page of desk</source>
+        </item>
+        <item>
+          <title>Reducing build time and Docker image size for ERPNext / Frappe v15 builds</title>
+          <dc:creator><![CDATA[cherrycharan]]></dc:creator>
+          <category>ERPNext</category>
+          <description><![CDATA[
+            <p>I’m running an ERPNext / Frappe <strong>v15</strong> setup with the following <code>apps.json</code>:</p>
+<pre><code class="lang-auto">frappe (version-15)
+erpnext (version-15)
+hrms (version-15)
+india_compliance (version-15)
+crm (main)
+builder (version-15)
+frappe_s3_attachment (version-15)
++ one private custom app (develop branch)
+
+</code></pre>
+<p>Currently, my Docker image build time is around <strong>15–20 minutes</strong>, and the resulting image size is also quite large.<br>
+Most builds are triggered by frequent changes in the private custom app, not in the core apps.</p>
+<p>I’m looking for <strong>community-recommended best practices</strong> to:</p>
+<ul>
+<li>
+<p>Reduce <strong>build time</strong> (especially during CI/CD)</p>
+</li>
+<li>
+<p>Reduce <strong>final image size</strong></p>
+</li>
+<li>
+<p>Improve <strong>cache efficiency</strong> for Frappe/ERPNext Docker builds</p>
+</li>
+</ul>
+            <p><small>4 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202</link>
+          <pubDate>Mon, 22 Dec 2025 07:00:34 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158202</guid>
+          <source url="https://discuss.frappe.io/t/reducing-build-time-and-docker-image-size-for-erpnext-frappe-v15-builds/158202.rss">Reducing build time and Docker image size for ERPNext / Frappe v15 builds</source>
+        </item>
+        <item>
+          <title>Frappe Desk UI looks different compared to another user on same Version 15 – how to align interface?</title>
+          <dc:creator><![CDATA[KAVIARASAN2012]]></dc:creator>
+          <category>Frappe Framework</category>
+          <description><![CDATA[
+            <p>Hello Team,</p>
+<p>I’m using <strong>Frappe Framework v15.92.0</strong> on my local setup.<br>
+However, my <strong>Desk interface/UI layout looks different</strong> compared to my friend’s interface attach image 1 and 2 , even though we are both on <strong>Version 15</strong>.</p>
+<p><strong>Details:</strong></p>
+<ul>
+<li>
+<p>Frappe Version: <strong>15.92.0</strong></p>
+</li>
+<li>
+<p>Bench Version: 5.27.0</p>
+</li>
+<li>
+<p>Environment: Local setup (Windows)</p>
+</li>
+<li>
+<p>Both setups are running Version 15</p>
+</li>
+<li>
+<p>My friend’s UI shows a different Desk layout, sidebar, and overall interface compared to mine</p>
+</li>
+</ul>
+<p><strong>What I have already tried:</strong></p>
+<ul>
+<li>
+<p><code>bench update</code></p>
+</li>
+<li>
+<p><code>bench migrate</code></p>
+</li>
+<li>
+<p><code>bench clear-cache</code></p>
+</li>
+<li>
+<p><code>bench restart</code></p>
+</li>
+<li>
+<p>Checked that branch is <code>version-15</code></p>
+</li>
+<li>
+<p>Verified that version is up to date</p>
+</li>
+</ul>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>
+<p>Is the UI difference caused by:</p>
+<ul>
+<li>
+<p>Workspace configuration?</p>
+</li>
+<li>
+<p>User role/permissions?</p>
+</li>
+<li>
+<p>Desk v2 / Workspace changes?</p>
+</li>
+<li>
+<p>Feature flags or System Settings?</p>
+</li>
+</ul>
+</li>
+<li>
+<p>How can I <strong>enable the same interface/UI</strong> as my friend?</p>
+</li>
+<li>
+<p>Are there any specific settings or commands to sync the Desk UI?</p>
+</li>
+</ol>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/3/e/3efc4c04ee347cfbcc6afa14c50fe0005f331eba.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/3efc4c04ee347cfbcc6afa14c50fe0005f331eba" title="WhatsApp Image 2025-12-19 at 4.22.24 PM (1)"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/3/e/3efc4c04ee347cfbcc6afa14c50fe0005f331eba_2_690x310.jpeg" alt="WhatsApp Image 2025-12-19 at 4.22.24 PM (1)" data-base62-sha1="8Zc96Eb9xQGrqWZInUmvzRqKnay" width="690" height="310" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/3/e/3efc4c04ee347cfbcc6afa14c50fe0005f331eba_2_690x310.jpeg, https://discuss.frappe.io/uploads/default/optimized/3X/3/e/3efc4c04ee347cfbcc6afa14c50fe0005f331eba_2_1035x465.jpeg 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/3/e/3efc4c04ee347cfbcc6afa14c50fe0005f331eba_2_1380x620.jpeg 2x" data-dominant-color="888888"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/3/93d305a0b801c9a47862c48e1410e91f18def604.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/93d305a0b801c9a47862c48e1410e91f18def604" title="WhatsApp Image 2025-12-19 at 4.22.24 PM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/9/3/93d305a0b801c9a47862c48e1410e91f18def604_2_690x295.jpeg" alt="WhatsApp Image 2025-12-19 at 4.22.24 PM" data-base62-sha1="l5IiDMgPBFZLVrI6j7msux2SX9q" width="690" height="295" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/9/3/93d305a0b801c9a47862c48e1410e91f18def604_2_690x295.jpeg, https://discuss.frappe.io/uploads/default/optimized/3X/9/3/93d305a0b801c9a47862c48e1410e91f18def604_2_1035x442.jpeg 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/9/3/93d305a0b801c9a47862c48e1410e91f18def604_2_1380x590.jpeg 2x" data-dominant-color="F8F9F9"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/5/d53951a6cc3102e45b43d19dbc7e44f973127c03.png" data-download-href="https://discuss.frappe.io/uploads/default/d53951a6cc3102e45b43d19dbc7e44f973127c03" title="Screenshot 2025-12-22 113030"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/5/d53951a6cc3102e45b43d19dbc7e44f973127c03_2_690x340.png" alt="Screenshot 2025-12-22 113030" data-base62-sha1="uqgvoXmWQVHV4awvOlXgc77yfpV" width="690" height="340" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/5/d53951a6cc3102e45b43d19dbc7e44f973127c03_2_690x340.png, https://discuss.frappe.io/uploads/default/optimized/3X/d/5/d53951a6cc3102e45b43d19dbc7e44f973127c03_2_1035x510.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/d/5/d53951a6cc3102e45b43d19dbc7e44f973127c03_2_1380x680.png 2x" data-dominant-color="FAFAFA"></a></div><p></p>
+            <p><small>3 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/frappe-desk-ui-looks-different-compared-to-another-user-on-same-version-15-how-to-align-interface/158200">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/frappe-desk-ui-looks-different-compared-to-another-user-on-same-version-15-how-to-align-interface/158200</link>
+          <pubDate>Mon, 22 Dec 2025 06:41:47 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158200</guid>
+          <source url="https://discuss.frappe.io/t/frappe-desk-ui-looks-different-compared-to-another-user-on-same-version-15-how-to-align-interface/158200.rss">Frappe Desk UI looks different compared to another user on same Version 15 – how to align interface?</source>
+        </item>
+        <item>
+          <title>Update Version after commit on own repository</title>
+          <dc:creator><![CDATA[reynaldi08]]></dc:creator>
+          <category>ERPNext</category>
+          <description><![CDATA[
+            <p>Hi, I’m new user here using the ERPNext.</p>
+<p>I just have my own repository on my Gitlab for my own custom ERPNext. I already did some modification in the repository to match my needed. However, i just seen the notification related to the security issue, and it required me to update the version.</p>
+<p>I already done some research and when I try to pull the latest version from the frapper github, it will automatically delete all my work on the previous version. Is there any other way to maintain my work on the version while update the ERPNext version to the latest of v15.</p>
+<p>Thank you in advance, really appreciate the reply <img src="https://discuss.frappe.io/images/emoji/twitter/slightly_smiling_face.png?v=14" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+            <p><small>3 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/update-version-after-commit-on-own-repository/158199">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/update-version-after-commit-on-own-repository/158199</link>
+          <pubDate>Mon, 22 Dec 2025 06:41:36 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158199</guid>
+          <source url="https://discuss.frappe.io/t/update-version-after-commit-on-own-repository/158199.rss">Update Version after commit on own repository</source>
+        </item>
+        <item>
+          <title>Can E-Way Bill functionality be implemented on a custom DocType?</title>
+          <dc:creator><![CDATA[tejalkumbhar]]></dc:creator>
+          <category>India Compliance</category>
+          <description><![CDATA[
+            <p>In ERPNext, E-Way Bill functionality is available by default for standard DocTypes like Sales Invoice and Delivery Note.</p>
+<p>I want to understand whether it is technically supported to implement <strong>E-Way Bill generation on a custom DocType</strong> (for example: Gate Pass / Custom Delivery Challan / Material Outward).</p>
+<p>Specifically:</p>
+<ul>
+<li>
+<p>Can we trigger E-Way Bill generation from any custom DocType?</p>
+</li>
+<li>
+<p>Is there any framework-level restriction on using E-Way Bill APIs only with standard DocTypes?</p>
+</li>
+<li>
+<p>Has anyone implemented E-Way Bill integration on a custom form using a GSP (ClearTax / Masters India, etc.)?</p>
+</li>
+</ul>
+<p>Looking for guidance or best practices from the community.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/can-e-way-bill-functionality-be-implemented-on-a-custom-doctype/158197">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/can-e-way-bill-functionality-be-implemented-on-a-custom-doctype/158197</link>
+          <pubDate>Mon, 22 Dec 2025 06:24:18 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158197</guid>
+          <source url="https://discuss.frappe.io/t/can-e-way-bill-functionality-be-implemented-on-a-custom-doctype/158197.rss">Can E-Way Bill functionality be implemented on a custom DocType?</source>
+        </item>
+        <item>
+          <title>BOM Process Loss with Stock UOM = Nos cannot accept fractional quantity</title>
+          <dc:creator><![CDATA[sfarbod]]></dc:creator>
+          <category>Manufacturing</category>
+          <description><![CDATA[
+            <p>Hi everyone,</p>
+<p>I am facing an issue with Process Loss configuration in a BOM.</p>
+<p>The Stock UOM of the production item is set to “Nos” (whole number).<br>
+When I enter a Process Loss Percentage (for example 6.5%),<br>
+ERPNext automatically calculates the Process Loss Qty as a fractional value<br>
+(e.g. 208.975) and shows the following error:</p>
+<p>“Nos can’t have fractional process loss qty as UOM Nos is a whole Number.”</p>
+<p>Since the Process Loss Item and Process Loss Qty are read-only and auto-calculated<br>
+from the percentage, there is no way to manually round or adjust the value.</p>
+<p>What is the recommended or standard approach in ERPNext for handling process loss<br>
+for count-based items (Stock UOM = Nos)?<br>
+Is changing the Stock UOM or avoiding Process Loss and using Scrap instead the only solution?</p>
+<p>Any guidance or best practice would be appreciated.</p>
+<p>Thanks in advance.</p>
+            <p><small>3 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184</link>
+          <pubDate>Sun, 21 Dec 2025 10:35:47 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158184</guid>
+          <source url="https://discuss.frappe.io/t/bom-process-loss-with-stock-uom-nos-cannot-accept-fractional-quantity/158184.rss">BOM Process Loss with Stock UOM = Nos cannot accept fractional quantity</source>
+        </item>
+        <item>
+          <title>Restrict Item Groups per Warehouse</title>
+          <dc:creator><![CDATA[Ahmedyousef15]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>Hello Frappe Community <img src="https://discuss.frappe.io/images/emoji/twitter/waving_hand.png?v=14" title=":waving_hand:" class="emoji" alt=":waving_hand:" loading="lazy" width="20" height="20">,</p>
+<p>I would like to share an app that I am currently building and get your feedback before publishing it on the <strong>Frappe Marketplace</strong>.</p>
+<h3><a name="p-489265-the-problem-1" class="anchor" href="https://discuss.frappe.io#p-489265-the-problem-1"></a><img src="https://discuss.frappe.io/images/emoji/twitter/magnifying_glass_tilted_left.png?v=14" title=":magnifying_glass_tilted_left:" class="emoji" alt=":magnifying_glass_tilted_left:" loading="lazy" width="20" height="20"> The Problem</h3>
+<p>In ERPNext today:</p>
+<ul>
+<li>
+<p>Item Groups are used only for classification</p>
+</li>
+<li>
+<p>Warehouses are independent storage locations</p>
+</li>
+<li>
+<p>There is <strong>no native way</strong> to enforce business rules such as:</p>
+<blockquote>
+<p>“Only certain Item Groups are allowed in specific Warehouses”</p>
+</blockquote>
+</li>
+</ul>
+<p>This often leads to:</p>
+<ul>
+<li>
+<p>Wrong stock placement</p>
+</li>
+<li>
+<p>Operational mistakes</p>
+</li>
+<li>
+<p>Heavy dependence on user discipline</p>
+</li>
+</ul>
+<hr>
+<h3><a name="p-489265-the-solution-new-app-2" class="anchor" href="https://discuss.frappe.io#p-489265-the-solution-new-app-2"></a><img src="https://discuss.frappe.io/images/emoji/twitter/light_bulb.png?v=14" title=":light_bulb:" class="emoji" alt=":light_bulb:" loading="lazy" width="20" height="20"> The Solution (New App)</h3>
+<p>I am building a new app that introduces <strong>Warehouse-based Item Group control</strong>.</p>
+<p><strong>Core idea:</strong></p>
+<ul>
+<li>
+<p>Define rules per <strong>Warehouse</strong></p>
+</li>
+<li>
+<p>Each rule specifies which <strong>Item Groups are allowed</strong></p>
+</li>
+<li>
+<p>Enforcement happens on stock-impacting transactions</p>
+</li>
+</ul>
+<p><strong>Supported transactions (server-side enforcement):</strong></p>
+<ul>
+<li>
+<p>Stock Entry</p>
+</li>
+<li>
+<p>Purchase Receipt</p>
+</li>
+<li>
+<p>Delivery Note</p>
+</li>
+<li>
+<p>Sales Invoice (when <code>Update Stock = 1</code>)</p>
+</li>
+<li>
+<p>Purchase Invoice (when <code>Update Stock = 1</code>)</p>
+</li>
+<li>
+<p>Stock Reconciliation</p>
+</li>
+</ul>
+<p><strong>Design principles:</strong></p>
+<ul>
+<li>
+<p>No core overrides</p>
+</li>
+<li>
+<p>No Stock Ledger manipulation</p>
+</li>
+<li>
+<p>Upgrade-safe</p>
+</li>
+<li>
+<p>Marketplace-ready</p>
+</li>
+<li>
+<p>Multi-company aware</p>
+</li>
+</ul>
+<p>If a Warehouse has no rule → behavior remains unchanged (fully backward compatible).</p>
+<hr>
+<h3><a name="p-489265-target-use-cases-3" class="anchor" href="https://discuss.frappe.io#p-489265-target-use-cases-3"></a><img src="https://discuss.frappe.io/images/emoji/twitter/bullseye.png?v=14" title=":bullseye:" class="emoji" alt=":bullseye:" loading="lazy" width="20" height="20"> Target Use Cases</h3>
+<ul>
+<li>
+<p>Raw materials restricted to raw stores</p>
+</li>
+<li>
+<p>Finished goods restricted to FG warehouses</p>
+</li>
+<li>
+<p>Chemicals / hazardous items in controlled warehouses</p>
+</li>
+<li>
+<p>Branch-specific warehouse policies</p>
+</li>
+</ul>
+<hr>
+<h3><a name="p-489265-marketplace-plan-4" class="anchor" href="https://discuss.frappe.io#p-489265-marketplace-plan-4"></a><img src="https://discuss.frappe.io/images/emoji/twitter/rocket.png?v=14" title=":rocket:" class="emoji" alt=":rocket:" loading="lazy" width="20" height="20"> Marketplace Plan</h3>
+<p>I plan to publish this app on the <strong>Frappe Marketplace</strong> once:</p>
+<ul>
+<li>
+<p>The core logic is stable</p>
+</li>
+<li>
+<p>Community feedback is incorporated</p>
+</li>
+<li>
+<p>Edge cases are reviewed</p>
+</li>
+</ul>
+<p>That’s why I’m posting here first <img src="https://discuss.frappe.io/images/emoji/twitter/raising_hands.png?v=14" title=":raising_hands:" class="emoji" alt=":raising_hands:" loading="lazy" width="20" height="20"></p>
+<hr>
+<h3><a name="p-489265-feedback-requested-5" class="anchor" href="https://discuss.frappe.io#p-489265-feedback-requested-5"></a><img src="https://discuss.frappe.io/images/emoji/twitter/speech_balloon.png?v=14" title=":speech_balloon:" class="emoji" alt=":speech_balloon:" loading="lazy" width="20" height="20"> Feedback Requested</h3>
+<p>I would really appreciate your thoughts on:</p>
+<ul>
+<li>
+<p>The overall idea</p>
+</li>
+<li>
+<p>Missing edge cases</p>
+</li>
+<li>
+<p>Similar solutions you’ve seen (if any)</p>
+</li>
+<li>
+<p>Features you’d expect in v1 vs future versions</p>
+</li>
+</ul>
+<hr>
+<h3><a name="p-489265-contact-6" class="anchor" href="https://discuss.frappe.io#p-489265-contact-6"></a><img src="https://discuss.frappe.io/images/emoji/twitter/telephone_receiver.png?v=14" title=":telephone_receiver:" class="emoji" alt=":telephone_receiver:" loading="lazy" width="20" height="20"> Contact</h3>
+<p>If you prefer a quick discussion, you can also reach me on WhatsApp:<br>
+<img src="https://discuss.frappe.io/images/emoji/twitter/backhand_index_pointing_right.png?v=14" title=":backhand_index_pointing_right:" class="emoji" alt=":backhand_index_pointing_right:" loading="lazy" width="20" height="20"> <a href="https://wa.me/201028171836" class="inline-onebox" rel="noopener nofollow ugc">Share on WhatsApp</a></p>
+<p>(Feedback here on the forum is preferred so everyone can benefit.)</p>
+<p>Thanks in advance <img src="https://discuss.frappe.io/images/emoji/twitter/folded_hands.png?v=14" title=":folded_hands:" class="emoji" alt=":folded_hands:" loading="lazy" width="20" height="20"><br>
+Looking forward to your input.</p>
+<p>— <strong>Ahmed Yousef</strong></p>
+            <p><small>3 posts - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/restrict-item-groups-per-warehouse/158182">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/restrict-item-groups-per-warehouse/158182</link>
+          <pubDate>Sat, 20 Dec 2025 22:53:55 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158182</guid>
+          <source url="https://discuss.frappe.io/t/restrict-item-groups-per-warehouse/158182.rss">Restrict Item Groups per Warehouse</source>
+        </item>
+        <item>
+          <title>Allow utility items (like water) in BOM without stock validation</title>
+          <dc:creator><![CDATA[magedbjn]]></dc:creator>
+          <category>Manufacturing</category>
+          <description><![CDATA[
+            <p>We use <strong>tap water as a direct production ingredient</strong><br>
+(e.g. Garlic + Water = Finished Product),<br>
+so water must be included in the <strong>BOM and Work Order</strong>.</p>
+<p>Due to limitations in our current ERPNext version:</p>
+<ul>
+<li>
+<p><strong>Non-Stock / Service Items are not supported</strong> in BOM and Work Orders</p>
+</li>
+<li>
+<p>Water is therefore created as a <strong>dummy Stock Item</strong> only for recipe visibility</p>
+</li>
+</ul>
+<p>The issue we are facing:<br>
+During <strong>Stock Entry (Material Transfer / Manufacture)</strong>,<br>
+the system shows an error:</p>
+<blockquote></blockquote>
+<p>Insufficient stock for item (Water)<br>
+As a workaround:</p>
+<ul>
+<li>
+<p>We manually <strong>remove water from the Stock Entry</strong></p>
+</li>
+<li>
+<p>This causes:</p>
+<ul>
+<li>
+<p>Mismatch between BOM and Stock Entry</p>
+</li>
+<li>
+<p>Loss of actual water consumption tracking</p>
+</li>
+<li>
+<p>Water cost not being included in product costing</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Business requirement:<br>
+We need a solution that:</p>
+<ul>
+<li>
+<p>Keeps water in BOM and Work Order</p>
+</li>
+<li>
+<p>Does not block production due to stock shortage</p>
+</li>
+<li>
+<p>Allows allocating the <strong>monthly water utility bill</strong> to production</p>
+</li>
+<li>
+<p>Without managing real inventory for water</p>
+</li>
+<li>
+<p>And without manual deletion during Stock Entry</p>
+</li>
+</ul>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/allow-utility-items-like-water-in-bom-without-stock-validation/158180">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/allow-utility-items-like-water-in-bom-without-stock-validation/158180</link>
+          <pubDate>Sat, 20 Dec 2025 20:32:55 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158180</guid>
+          <source url="https://discuss.frappe.io/t/allow-utility-items-like-water-in-bom-without-stock-validation/158180.rss">Allow utility items (like water) in BOM without stock validation</source>
+        </item>
+  </channel>
+</rss>

@@ -1,0 +1,5 @@
+window.addEventListener("DOMContentLoaded",function(){const filterArea=document.querySelector('.filter-area');filterArea.appendChild(createFilter('team','Team',window.page_data.teams));function createFilter(name,label,options){const filter=document.createElement('div');filter.classList.add('filter');filter.innerHTML=`
+          <select name="${name}" id="${name}" aria-label="Select ${label}">
+            ${options.map(option => `<option value="${option}">${option}</option>`).join('')}
+          </select>
+        `;filter.querySelector('select').addEventListener('change',function(e){const team=e.target.value;const cards=document.querySelectorAll(`[data-team]`);cards.forEach(card=>{card.classList.add('fade-out');});setTimeout(()=>{cards.forEach(card=>{const matches=team==="All Teams"||card.getAttribute('data-team')===team;card.style.display=matches?"flex":"none";});setTimeout(()=>{cards.forEach(card=>{if(card.style.display==="flex"){card.classList.remove('fade-out');}});},10);},300);});return filter;}});

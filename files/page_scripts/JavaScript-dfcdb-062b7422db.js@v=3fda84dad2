@@ -1,0 +1,2 @@
+window.onload=()=>{document.querySelectorAll(".button-ghost").forEach(button=>{button.onmouseover=function(){this.querySelector(".arrow").style.transform="translateX(1px)";}
+button.onmouseout=function(){this.querySelector(".arrow").style.transform="translateX(-1px)";}})}

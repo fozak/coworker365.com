@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>custom AI chatbot inside ERPNext</title>
+    <link>https://discuss.frappe.io/t/custom-ai-chatbot-inside-erpnext/158270</link>
+    <description>Hi, I’m currently working on a **custom AI chatbot inside ERP Next**.
+
+I have implemented the **Frappe AI Assistant Core**, but I’m facing an issue where it is **not properly fetching or understanding data from ERPNext** (for example DocTypes, records, or contextual business data). The responses are either generic or not aligned with the actual data present in the system.
+
+I have already done some research and testing. From what I understand, the issue might be related to the **LLM/model being used**, especially its ability to:
+
+* Correctly understand ERPNext context
+
+* Call or work with **Frappe tools / APIs**
+
+* Fetch and reason over ERP Next data instead of giving plain text answers
+
+My question is:
+**Which ChatGPT / OpenAI model is recommended to use with ERPNext so that it can properly leverage Frappe tools and fetch real data from the system?**
+Also, are there any best practices or configurations required to make the model work more accurately with ERPNext and Frappe AI Assistant Core?
+
+Thank you in advance, really appreciate any guidance or suggestions</description>
+    
+    <lastBuildDate>Wed, 24 Dec 2025 06:41:05 +0000</lastBuildDate>
+    <category>Customize ERPNext</category>
+    <atom:link href="https://discuss.frappe.io/t/custom-ai-chatbot-inside-erpnext/158270.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>custom AI chatbot inside ERPNext</title>
+        <dc:creator><![CDATA[kolate_sambhaji]]></dc:creator>
+        <description><![CDATA[
+            <p><a class="mention" href="https://discuss.frappe.io/u/abdulmajid">@AbdulMajid</a>  you can refer this post/ comment   <a href="https://discuss.frappe.io/t/ai-chatgpt-strategy-for-erpnext/103098/23" class="inline-onebox">AI/ChatGPT Strategy for ERPNext - #23 by Support-at-ERPgulf</a></p>
+          <p><a href="https://discuss.frappe.io/t/custom-ai-chatbot-inside-erpnext/158270/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/custom-ai-chatbot-inside-erpnext/158270/2</link>
+        <pubDate>Wed, 24 Dec 2025 06:41:05 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158270-2</guid>
+        <source url="https://discuss.frappe.io/t/custom-ai-chatbot-inside-erpnext/158270.rss">custom AI chatbot inside ERPNext</source>
+      </item>
+      <item>
+        <title>custom AI chatbot inside ERPNext</title>
+        <dc:creator><![CDATA[AbdulMajid]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi, I’m currently working on a <strong>custom AI chatbot inside ERP Next</strong>.</p>
+<p>I have implemented the <strong>Frappe AI Assistant Core</strong>, but I’m facing an issue where it is <strong>not properly fetching or understanding data from ERPNext</strong> (for example DocTypes, records, or contextual business data). The responses are either generic or not aligned with the actual data present in the system.</p>
+<p>I have already done some research and testing. From what I understand, the issue might be related to the <strong>LLM/model being used</strong>, especially its ability to:</p>
+<ul>
+<li>
+<p>Correctly understand ERPNext context</p>
+</li>
+<li>
+<p>Call or work with <strong>Frappe tools / APIs</strong></p>
+</li>
+<li>
+<p>Fetch and reason over ERP Next data instead of giving plain text answers</p>
+</li>
+</ul>
+<p>My question is:<br>
+<strong>Which ChatGPT / OpenAI model is recommended to use with ERPNext so that it can properly leverage Frappe tools and fetch real data from the system?</strong><br>
+Also, are there any best practices or configurations required to make the model work more accurately with ERPNext and Frappe AI Assistant Core?</p>
+<p>Thank you in advance, really appreciate any guidance or suggestions</p>
+          <p><a href="https://discuss.frappe.io/t/custom-ai-chatbot-inside-erpnext/158270/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/custom-ai-chatbot-inside-erpnext/158270/1</link>
+        <pubDate>Tue, 23 Dec 2025 15:34:38 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158270-1</guid>
+        <source url="https://discuss.frappe.io/t/custom-ai-chatbot-inside-erpnext/158270.rss">custom AI chatbot inside ERPNext</source>
+      </item>
+  </channel>
+</rss>

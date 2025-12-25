@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Frappe Insights Tools Guide - Insights - Frappe Forum</title>
+    <meta name="description" content="I am experiencing issues after installing Frappe Insights, wherein I cannot see Queries tab, and other tools in my insights, am I missing something?">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/frappe-insights-tools-guide/140202" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Frappe Insights Tools Guide&#39;" href="https://discuss.frappe.io/t/frappe-insights-tools-guide/140202.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/9/0/9071d5812963ae86164212af9aa731260a2d7b4d_2_1023x513.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/9/0/9071d5812963ae86164212af9aa731260a2d7b4d_2_1023x513.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/frappe-insights-tools-guide/140202" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/frappe-insights-tools-guide/140202" />
+<meta property="og:title" content="Frappe Insights Tools Guide" />
+<meta name="twitter:title" content="Frappe Insights Tools Guide" />
+<meta property="og:description" content="I am experiencing issues after installing Frappe Insights, wherein I cannot see Queries tab, and other tools in my insights, am I missing something?" />
+<meta name="twitter:description" content="I am experiencing issues after installing Frappe Insights, wherein I cannot see Queries tab, and other tools in my insights, am I missing something?" />
+<meta property="og:article:section" content="Business Apps" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Insights" />
+<meta property="og:article:section:color" content="0088CC" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="frappe" />
+<meta property="og:article:tag" content="customization" />
+<meta property="og:article:tag" content="bug" />
+<meta property="article:published_time" content="2025-01-07T12:52:07+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Frappe Insights Tools Guide","mainEntity":{"@type":"Question","name":"Frappe Insights Tools Guide","text":"I am experiencing issues after installing Frappe Insights, wherein I cannot see Queries tab, and other tools in my insights, am I missing something?\n\n<a class=\"lightbox\" href=\"https://discuss.frappe.io/uploads/default/original/3X/9/0/9071d5812963ae86164212af9aa731260a2d7b4d.png\" data-download-href=\"https://discuss.frappe.io/uploads/default/9071d5812963ae86164212af9aa731260a2d7b4d\" title=\"Screenshot from 2025-01-07 17-34-18\">[Screenshot from 2025-01-07 17-34-18]<\/a>","upvoteCount":0,"answerCount":1,"datePublished":"2025-01-07T12:52:07.070Z","author":{"@type":"Person","name":"SatyamS","url":"https://discuss.frappe.io/u/SatyamS"},"acceptedAnswer":{"@type":"Answer","text":"I was able to resolve the 404 issue, after -\n\nbench setup requirements\n\nbench build --app insights --force\n\nbench migrate","upvoteCount":0,"datePublished":"2025-01-09T12:45:48.591Z","url":"https://discuss.frappe.io/t/frappe-insights-tools-guide/140202/7","author":{"@type":"Person","name":"SatyamS","url":"https://discuss.frappe.io/u/SatyamS"}}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/frappe-insights-tools-guide/140202">Frappe Insights Tools Guide</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/business-apps/89" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Business Apps</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/business-apps/insights/74" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0088CC'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Insights</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
+            <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag' rel="tag">customization</a>, 
+            <a href='https://discuss.frappe.io/tag/bug' class='discourse-tag' rel="tag">bug</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Frappe Insights Tools Guide'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/frappe-insights-tools-guide/140202'>
+      <meta itemprop='datePublished' content='2025-01-07T12:52:07Z'>
+        <meta itemprop='articleSection' content='Insights'>
+      <meta itemprop='keywords' content='erpnext, frappe, customization, bug'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SatyamS'><span itemprop='name'>SatyamS</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/frappe-insights-tools-guide/140202">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/9/0/9071d5812963ae86164212af9aa731260a2d7b4d.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-01-07T12:52:07Z' class='post-time'>
+                    January 7, 2025, 12:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-01-07T12:59:37Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am experiencing issues after installing Frappe Insights, wherein I cannot see Queries tab, and other tools in my insights, am I missing something?</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/0/9071d5812963ae86164212af9aa731260a2d7b4d.png" data-download-href="https://discuss.frappe.io/uploads/default/9071d5812963ae86164212af9aa731260a2d7b4d" title="Screenshot from 2025-01-07 17-34-18"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/9/0/9071d5812963ae86164212af9aa731260a2d7b4d_2_690x345.png" alt="Screenshot from 2025-01-07 17-34-18" data-base62-sha1="kBODVpVHhsnv4ScKNKmGZAUzS5n" width="690" height="345" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/9/0/9071d5812963ae86164212af9aa731260a2d7b4d_2_690x345.png, https://discuss.frappe.io/uploads/default/optimized/3X/9/0/9071d5812963ae86164212af9aa731260a2d7b4d_2_1035x517.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/9/0/9071d5812963ae86164212af9aa731260a2d7b4d_2_1380x690.png 2x" data-dominant-color="FDFDFD"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot from 2025-01-07 17-34-18</span><span class="informations">1854×929 32.3 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/519_Hamza_Habeeb'><span itemprop='name'>519_Hamza_Habeeb</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-01-07T13:01:44Z' class='post-time'>
+                    January 7, 2025,  1:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-01-07T13:01:44Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>click the insights logo and switch to v2</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SatyamS'><span itemprop='name'>SatyamS</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-01-07T13:09:32Z' class='post-time'>
+                    January 7, 2025,  1:09pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-01-07T13:09:32Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think they have removed that option as I cannot see such option, I see Documentation, Switch to Desk, Join Telegram group and Log Out</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nextchamp.saqib'><span itemprop='name'>nextchamp.saqib</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-01-08T08:56:48Z' class='post-time'>
+                    January 8, 2025,  8:56am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-01-08T08:56:48Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This is the new version of Insights, which was released in November. You can learn more about how it works in the documentation.</p>
+<p>The “Switch to v2” button is only visible if you have any older queries on the site. Any reason you’re looking for the older version?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SatyamS'><span itemprop='name'>SatyamS</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/7/a/7a419624149be0f73f1bd1bc825d7b95b6f1d7e5.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-01-08T09:25:13Z' class='post-time'>
+                    January 8, 2025,  9:25am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-01-08T09:25:13Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am looking for the features offered by previous v2. Also ibis is not what I am used to as v3 uses it.</p>
+<p>I also found some features which are roadblocking me.<br>
+When I make charts with sql editor, which I basically use for complex querying, and then combine them to make a dashboard, when I filter, they are filtered for only specific charts for which I selected the filters. It could be better if we had a generalized filter.</p>
+<p>I also cannot write filters in form of expressions correctly, It would be really helpful if there is a separate detailed documentation on using this feature especially after a shift to ibis.</p>
+<p>Any suggestion/correction would be really helpful.<br>
+Thank You.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/a/7a419624149be0f73f1bd1bc825d7b95b6f1d7e5.png" data-download-href="https://discuss.frappe.io/uploads/default/7a419624149be0f73f1bd1bc825d7b95b6f1d7e5" title="Screenshot from 2025-01-08 14-55-05"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/a/7a419624149be0f73f1bd1bc825d7b95b6f1d7e5_2_690x341.png" alt="Screenshot from 2025-01-08 14-55-05" data-base62-sha1="hrwLJ6goh5rNfjkq1THDMCMuWxL" width="690" height="341" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/a/7a419624149be0f73f1bd1bc825d7b95b6f1d7e5_2_690x341.png, https://discuss.frappe.io/uploads/default/optimized/3X/7/a/7a419624149be0f73f1bd1bc825d7b95b6f1d7e5_2_1035x511.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/7/a/7a419624149be0f73f1bd1bc825d7b95b6f1d7e5_2_1380x682.png 2x" data-dominant-color="BEBEBE"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot from 2025-01-08 14-55-05</span><span class="informations">1853×918 109 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SatyamS'><span itemprop='name'>SatyamS</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/8/3/83d8c2e2e9c8ff6052407b47c52124e7e02b8803.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-01-08T09:38:40Z' class='post-time'>
+                    January 8, 2025,  9:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-01-08T09:38:40Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I also tried to install older version of insights using tags from github, but after successful installation, I cannot access /insights. I used version 2.2.8.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/8/3/83d8c2e2e9c8ff6052407b47c52124e7e02b8803.png" data-download-href="https://discuss.frappe.io/uploads/default/83d8c2e2e9c8ff6052407b47c52124e7e02b8803" title="Screenshot from 2025-01-08 15-05-00"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/8/3/83d8c2e2e9c8ff6052407b47c52124e7e02b8803_2_690x341.png" alt="Screenshot from 2025-01-08 15-05-00" data-base62-sha1="iOmXmHthlAxFT72qfuh3Mc9IcYr" width="690" height="341" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/8/3/83d8c2e2e9c8ff6052407b47c52124e7e02b8803_2_690x341.png, https://discuss.frappe.io/uploads/default/optimized/3X/8/3/83d8c2e2e9c8ff6052407b47c52124e7e02b8803_2_1035x511.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/8/3/83d8c2e2e9c8ff6052407b47c52124e7e02b8803_2_1380x682.png 2x" data-dominant-color="FAF9F7"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot from 2025-01-08 15-05-00</span><span class="informations">1853×918 118 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+l</p>
+<p>Bench migrate runs perfectly, but bench build gives this error-</p>
+<pre><code class="lang-auto">Running build command for insights
+$ cd frontend &amp;&amp; yarn build
+$ vite build -l warn --base=/assets/insights/frontend/ &amp;&amp; yarn copy-html-entry
+/bin/sh: 1: vite: not found
+error Command failed with exit code 127.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+error Command failed with exit code 127.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Error: Command failed: yarn build
+    at checkExecSyncError (node:child_process:890:11)
+    at execSync (node:child_process:962:15)
+    at run_build_command_for_apps (/home/ts/frappe-bench/apps/frappe/esbuild/esbuild.js:448:5)
+    at execute (/home/ts/frappe-bench/apps/frappe/esbuild/esbuild.js:125:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  status: 127,
+  signal: null,
+  output: [ null, null, null ],
+  pid: 49133,
+  stdout: null,
+  stderr: null
+}
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Traceback (most recent call last):
+  File "&lt;frozen runpy&gt;", line 198, in _run_module_as_main
+  File "&lt;frozen runpy&gt;", line 88, in _run_code
+  File "/home/ts/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 114, in &lt;module&gt;
+    main()
+  File "/home/ts/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 20, in main
+    click.Group(commands=commands)(prog_name="bench")
+  File "/home/ts/frappe-bench/env/lib/python3.12/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ts/frappe-bench/env/lib/python3.12/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/home/ts/frappe-bench/env/lib/python3.12/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ts/frappe-bench/env/lib/python3.12/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ts/frappe-bench/env/lib/python3.12/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ts/frappe-bench/env/lib/python3.12/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ts/frappe-bench/apps/frappe/frappe/commands/utils.py", line 77, in build
+    bundle(
+  File "/home/ts/frappe-bench/apps/frappe/frappe/build.py", line 257, in bundle
+    frappe.commands.popen(command, cwd=frappe_app_path, env=get_node_env(), raise_err=True)
+  File "/home/ts/frappe-bench/apps/frappe/frappe/commands/__init__.py", line 97, in popen
+    raise subprocess.CalledProcessError(return_, command)
+subprocess.CalledProcessError: Command 'yarn run build --run-build-command &amp;&amp; cd billing &amp;&amp; yarn build' returned non-zero exit status 1.
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SatyamS'><span itemprop='name'>SatyamS</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-01-09T12:45:48Z' class='post-time'>
+                    January 9, 2025, 12:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-01-09T12:45:48Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I was able to resolve the 404 issue, after -</p>
+<pre><code class="lang-auto">bench setup requirements
+
+bench build --app insights --force
+
+bench migrate
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/UsmanSanawar'><span itemprop='name'>UsmanSanawar</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-05-01T12:06:55Z' class='post-time'>
+                    May 1, 2025, 12:06pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-05-01T12:06:55Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,<br>
+Can anyone please guide me which version of insights is fully compatible with Frappe/Erpnext version 14x.<br>
+As I tried to install the latest version of Insights in my existing frappe/erpnext server but it’s giving me incompatibility and dependency mismatch errors.</p>
+<details>
+<summary>
+My current versions:</summary>
+<p>root@TPT-Demo:/home/frappe/frappe-bench# bench version<br>
+erpnext 14.74.8<br>
+frappe 14.84.0<br>
+hrms 14.35.0</p>
+</details>
+<p>I even tried the required versions by upgrade/downgrade but the issues are still same.</p>
+<details>
+<summary>
+Error Details:</summary>
+<p>root@TPT-Demo:/home/frappe/frappe-bench# bench get-app insights<br>
+Getting insights<br>
+$ git clone <a href="https://github.com/frappe/insights.git" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/insights: Open Source Business Intelligence Tool</a>  --depth 1 --origin upstream<br>
+Cloning into ‘insights’…<br>
+remote: Enumerating objects: 1000, done.<br>
+remote: Counting objects: 100% (1000/1000), done.<br>
+remote: Compressing objects: 100% (926/926), done.<br>
+remote: Total 1000 (delta 154), reused 493 (delta 64), pack-reused 0 (from 0)<br>
+Receiving objects: 100% (1000/1000), 24.14 MiB | 32.52 MiB/s, done.<br>
+Resolving deltas: 100% (154/154), done.<br>
+Ignoring dependencies of insights. To install dependencies use --resolve-deps<br>
+Installing insights<br>
+$ /home/frappe/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /                                          home/frappe/frappe-bench/apps/insights<br>
+ERROR: pip’s dependency resolver does not currently take into account all the packages that are installed. This behaviour pendency conflicts.<br>
+frappe 14.67.0 requires pytz==2022.1, but you have pytz 2025.2 which is incompatible.</p>
+<p>[notice] A new release of pip is available: 24.0 → 25.1<br>
+[notice] To update, run: /home/frappe/frappe-bench/env/bin/python -m pip install --upgrade pip<br>
+$ yarn install<br>
+yarn install v1.22.19<br>
+[1/4] Resolving packages…<br>
+[2/4] Fetching packages…<br>
+warning Pattern [“string-width@^4.1.0”] is trying to unpack in the same destination “/home/frappe/.cache/yarn/v6/npm-strind2e536830a8ec895ef9c6d010-integrity/node_modules/string-width-cjs” as pattern [“string-width-cjs@npm:string-width@^4.2.0”]inistic behavior, skipping.<br>
+error insights-frontend@0.0.0: The engine “node” is incompatible with this module. Expected version “&gt;=18.17.0”. Got "18.1<br>
+error Found incompatible module.<br>
+info Visit <a href="https://yarnpkg.com/en/docs/cli/install" class="inline-onebox" rel="noopener nofollow ugc">yarn install | Yarn</a> for documentation about this command.<br>
+ERROR:<br>
+subprocess.CalledProcessError: Command ‘yarn install’ returned non-zero exit status 1.</p>
+<p>The above exception was the direct cause of the following exception:</p>
+<p>Traceback (most recent call last):<br>
+File “/usr/local/bin/bench”, line 8, in <br>
+sys.exit(cli())<br>
+File “/usr/local/lib/python3.10/dist-packages/bench/cli.py”, line 127, in cli<br>
+bench_command()<br>
+File “/usr/lib/python3/dist-packages/click/core.py”, line 1128, in <strong>call</strong><br>
+return self.main(*args, **kwargs)<br>
+File “/usr/lib/python3/dist-packages/click/core.py”, line 1053, in main<br>
+rv = self.invoke(ctx)<br>
+File “/usr/lib/python3/dist-packages/click/core.py”, line 1659, in invoke<br>
+return _process_result(sub_ctx.command.invoke(sub_ctx))<br>
+File “/usr/lib/python3/dist-packages/click/core.py”, line 1395, in invoke<br>
+return ctx.invoke(self.callback, **ctx.params)<br>
+File “/usr/lib/python3/dist-packages/click/core.py”, line 754, in invoke<br>
+return __callback(*args, **kwargs)<br>
+File “/usr/local/lib/python3.10/dist-packages/bench/commands/make.py”, line 159, in get_app<br>
+get_app(<br>
+File “/usr/local/lib/python3.10/dist-packages/bench/app.py”, line 444, in get_app<br>
+app.install(verbose=verbose, skip_assets=skip_assets, restart_bench=restart_bench)<br>
+File “/usr/local/lib/python3.10/dist-packages/bench/utils/render.py”, line 126, in wrapper_fn<br>
+return fn(*args, **kwargs)<br>
+File “/usr/local/lib/python3.10/dist-packages/bench/app.py”, line 242, in install<br>
+install_app(<br>
+File “/usr/local/lib/python3.10/dist-packages/bench/app.py”, line 581, in install_app<br>
+bench.run(“yarn install”, cwd=app_path)<br>
+File “/usr/local/lib/python3.10/dist-packages/bench/bench.py”, line 48, in run<br>
+return exec_cmd(cmd, cwd=cwd or self.cwd, _raise=_raise)<br>
+File “/usr/local/lib/python3.10/dist-packages/bench/utils/<strong>init</strong>.py”, line 158, in exec_cmd<br>
+raise CommandFailedError from subprocess.CalledProcessError(return_code, cmd)<br>
+bench.exceptions.CommandFailedError<br>
+INFO: A newer version of bench is available: 5.16.2 → 5.24.1<br>
+root@TPT-Demo:/home/frappe/frappe-bench#</p>
+</details>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/root'><span itemprop='name'>root</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-02T06:17:22Z' class='post-time'>
+                    August 2, 2025,  6:17am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-02T06:17:22Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/usmansanawar">@UsmanSanawar</a>  Have you figured out the version compatible with version 14 ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

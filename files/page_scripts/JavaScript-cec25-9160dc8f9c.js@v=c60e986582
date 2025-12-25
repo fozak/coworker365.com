@@ -1,0 +1,12 @@
+window.addEventListener("DOMContentLoaded",function(){const filterArea=document.querySelector('.filter-area');filterArea.appendChild(createSearchInput("Search Customer"));filterArea.appendChild(createFilter('products','Products',['All Products',...page_data.products]));filterArea.appendChild(createFilter('region','Region',['All Regions',...page_data.regions]));filterArea.appendChild(createFilter('industry','Industry',['All Industries',...page_data.industries]));filterArea.appendChild(createFilter('modules','Module',['All Modules',...page_data.modules]));function createFilter(name,label,options){const filter=document.createElement('div');filter.classList.add('filter');const params=new URLSearchParams(window.location.search);const value=params.get(name);filter.innerHTML=`
+			<select name="${name}" id="${name}">
+        		<option value="" disabled>${label}</option>
+        		${options.map(
+              (option) => `<option value="${typeof option === "object" ? option.value : option}"
+${value==(typeof option==="object"?option.value:option)?"selected":""}>${typeof option==="object"?option.label:option}</option>`
+            )}
+        	</select>
+		`;filter.querySelector('select').addEventListener('change',function(){const params=new URLSearchParams(window.location.search);params.set(this.name,this.value);params.set("page",1);window.location.search=params.toString();});return filter;}
+function createSearchInput(placeholder="Search"){const searchInput=document.createElement('input');searchInput.type='text';searchInput.placeholder=placeholder;searchInput.autofocus=true;searchInput.value=new URLSearchParams(window.location.search).get('search');function updateSearchParams(){const params=new URLSearchParams(window.location.search);params.set('search',searchInput.value);window.location.search=params.toString();}
+searchInput.addEventListener("keypress",function(event){if(event.key==="Enter"){updateSearchParams()}})
+searchInput.style.gridColumnStart=1;searchInput.style.gridColumnEnd=-1;let debounceTimeout;searchInput.addEventListener("input",function(){clearTimeout(debounceTimeout);debounceTimeout=setTimeout(updateSearchParams,500);});return searchInput;}});

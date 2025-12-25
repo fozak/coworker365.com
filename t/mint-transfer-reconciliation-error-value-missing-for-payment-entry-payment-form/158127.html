@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mint &quot;Transfer&quot; reconciliation error &quot;Value missing for Payment Entry: Payment Form&quot; - ERPNext - Frappe Forum</title>
+    <meta name="description" content="System: v15 hosted by frappe + Plaid + MINT. 
+When trying to reconcile a credit card payment from bank account as ‘Transfer’, MINT successfully suggests a mirrored transaction, but when I click “Accept”, and then click T&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/mint-transfer-reconciliation-error-value-missing-for-payment-entry-payment-form/158127" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Mint &quot;Transfer&quot; reconciliation error &quot;Value missing for Payment Entry: Payment Form&quot;&#39;" href="https://discuss.frappe.io/t/mint-transfer-reconciliation-error-value-missing-for-payment-entry-payment-form/158127.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/4/9/49104e490e560f24b06341f66c3bd51f9f16ecf5.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/4/9/49104e490e560f24b06341f66c3bd51f9f16ecf5.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/mint-transfer-reconciliation-error-value-missing-for-payment-entry-payment-form/158127" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/mint-transfer-reconciliation-error-value-missing-for-payment-entry-payment-form/158127" />
+<meta property="og:title" content="Mint &quot;Transfer&quot; reconciliation error &quot;Value missing for Payment Entry: Payment Form&quot;" />
+<meta name="twitter:title" content="Mint &quot;Transfer&quot; reconciliation error &quot;Value missing for Payment Entry: Payment Form&quot;" />
+<meta property="og:description" content="System: v15 hosted by frappe + Plaid + MINT.  When trying to reconcile a credit card payment from bank account as ‘Transfer’, MINT successfully suggests a mirrored transaction, but when I click “Accept”, and then click Transfer”, an error message pops up:   There was an error.  Error: Value missing for Payment Entry: Payment Form      There are no other values / fields on this form so no immediate clue where the issue is coming from.  I will appreciate any direction to get this solved.  Thank yo..." />
+<meta name="twitter:description" content="System: v15 hosted by frappe + Plaid + MINT.  When trying to reconcile a credit card payment from bank account as ‘Transfer’, MINT successfully suggests a mirrored transaction, but when I click “Accept”, and then click Transfer”, an error message pops up:   There was an error.  Error: Value missing for Payment Entry: Payment Form      There are no other values / fields on this form so no immediate clue where the issue is coming from.  I will appreciate any direction to get this solved.  Thank yo..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="article:published_time" content="2025-12-19T06:15:47+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Mint \"Transfer\" reconciliation error \"Value missing for Payment Entry: Payment Form\"","mainEntity":{"@type":"Question","name":"Mint \"Transfer\" reconciliation error \"Value missing for Payment Entry: Payment Form\"","text":"System: v15 hosted by frappe + Plaid + MINT.\n\nWhen trying to reconcile a credit card payment from bank account as ‘Transfer’, MINT successfully suggests a mirrored transaction, but when I click “Accept”, and then click Transfer”, an error message pops up:\n\nThere was an error.\n\nError: Value missing &hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-12-19T06:15:47.861Z","author":{"@type":"Person","name":"AGS","url":"https://discuss.frappe.io/u/AGS"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/mint-transfer-reconciliation-error-value-missing-for-payment-entry-payment-form/158127">Mint &quot;Transfer&quot; reconciliation error &quot;Value missing for Payment Entry: Payment Form&quot;</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Mint &quot;Transfer&quot; reconciliation error &quot;Value missing for Payment Entry: Payment Form&quot;'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/mint-transfer-reconciliation-error-value-missing-for-payment-entry-payment-form/158127'>
+      <meta itemprop='datePublished' content='2025-12-19T06:15:47Z'>
+        <meta itemprop='articleSection' content='ERPNext'>
+      <meta itemprop='keywords' content='erpnext'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/AGS'><span itemprop='name'>AGS</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/mint-transfer-reconciliation-error-value-missing-for-payment-entry-payment-form/158127">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/4/9/49104e490e560f24b06341f66c3bd51f9f16ecf5.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-12-19T06:15:47Z' class='post-time'>
+                    December 19, 2025,  6:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-19T06:15:47Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>System: v15 hosted by frappe + Plaid + MINT.</p>
+<p>When trying to reconcile a credit card payment from bank account as ‘Transfer’, MINT successfully suggests a mirrored transaction, but when I click “Accept”, and then click Transfer”, an error message pops up:</p>
+<blockquote>
+<p><strong>There was an error.</strong></p>
+<p>Error: Value missing for Payment Entry: Payment Form</p>
+</blockquote>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/4/9/49104e490e560f24b06341f66c3bd51f9f16ecf5.png" data-download-href="https://discuss.frappe.io/uploads/default/49104e490e560f24b06341f66c3bd51f9f16ecf5" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/4/9/49104e490e560f24b06341f66c3bd51f9f16ecf5_2_561x500.png" alt="image" data-base62-sha1="aqlN09CSbqLJspGNbvmEaXB4sdf" width="561" height="500" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/4/9/49104e490e560f24b06341f66c3bd51f9f16ecf5_2_561x500.png, https://discuss.frappe.io/uploads/default/optimized/3X/4/9/49104e490e560f24b06341f66c3bd51f9f16ecf5_2_841x750.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/4/9/49104e490e560f24b06341f66c3bd51f9f16ecf5.png 2x" data-dominant-color="F1EEEE"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">859×765 94.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>There are no other values / fields on this form so no immediate clue where the issue is coming from.</p>
+<p>I will appreciate any direction to get this solved.</p>
+<p>Thank you in advance!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nikkothari22'><span itemprop='name'>nikkothari22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-19T08:32:02Z' class='post-time'>
+                    December 19, 2025,  8:32am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-19T08:32:02Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Do you have a custom field in Payment Entry Doctype called as “Payment Form” which is mandatory?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/AGS'><span itemprop='name'>AGS</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-19T09:23:06Z' class='post-time'>
+                    December 19, 2025,  9:23am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-19T09:23:06Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, thank you for responding.  I have not made any custom fields - this is a clean default installation. Where should I check for this “Payment Entry Doctype”?</p>
+<p>Thank you.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/AGS'><span itemprop='name'>AGS</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/7/9/79c1f55ceb493280b985ff81cf83d65d32b43de5.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-19T09:48:02Z' class='post-time'>
+                    December 19, 2025,  9:48am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-19T09:48:02Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Looking into the default Payment Entry under Accounts Payable shows there is a pull-down field called “Payment Form” which refers to the type of payment (03 = electronic transfer). The issue likely is related to MINT not specifying this field during reconciliation of transfer.</p>
+<p>This may be a bug?</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/9/79c1f55ceb493280b985ff81cf83d65d32b43de5.png" data-download-href="https://discuss.frappe.io/uploads/default/79c1f55ceb493280b985ff81cf83d65d32b43de5" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/9/79c1f55ceb493280b985ff81cf83d65d32b43de5_2_690x413.png" alt="image" data-base62-sha1="hn7kkM0gVCnUKt8z3ZYd31vcHqZ" width="690" height="413" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/9/79c1f55ceb493280b985ff81cf83d65d32b43de5_2_690x413.png, https://discuss.frappe.io/uploads/default/optimized/3X/7/9/79c1f55ceb493280b985ff81cf83d65d32b43de5_2_1035x619.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/7/9/79c1f55ceb493280b985ff81cf83d65d32b43de5.png 2x" data-dominant-color="FBF7F7"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1312×786 54.3 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nikkothari22'><span itemprop='name'>nikkothari22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-19T09:51:57Z' class='post-time'>
+                    December 19, 2025,  9:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-19T09:51:57Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am not sure if this field comes out of the box in ERPNext - is this on v16?<br>
+Regardless, we plan to support custom fields - especially mandatory ones on Mint soon.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/AGS'><span itemprop='name'>AGS</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/2/8/28711ebec5915fe7b6297a367df98bdd72cd147b.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-19T14:41:18Z' class='post-time'>
+                    December 19, 2025,  2:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-19T14:41:18Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>ERPNext / frappe framework v15.92; MINT v1.10.  This is the default installation hosted on <a href="http://cloud.frappe.io" rel="noopener nofollow ugc">cloud.frappe.io</a> as part of 2-week free trial.  Mint is also 1-click install from frappe app marketplace.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/8/28711ebec5915fe7b6297a367df98bdd72cd147b.png" data-download-href="https://discuss.frappe.io/uploads/default/28711ebec5915fe7b6297a367df98bdd72cd147b" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/8/28711ebec5915fe7b6297a367df98bdd72cd147b_2_690x130.png" alt="image" data-base62-sha1="5LLsmFIgOb5d9e9wnipjQr5MAgr" width="690" height="130" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/8/28711ebec5915fe7b6297a367df98bdd72cd147b_2_690x130.png, https://discuss.frappe.io/uploads/default/optimized/3X/2/8/28711ebec5915fe7b6297a367df98bdd72cd147b_2_1035x195.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/2/8/28711ebec5915fe7b6297a367df98bdd72cd147b_2_1380x260.png 2x" data-dominant-color="F9F8ED"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1675×316 42.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nikkothari22'><span itemprop='name'>nikkothari22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-19T17:14:05Z' class='post-time'>
+                    December 19, 2025,  5:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-19T17:14:05Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Ah it looks like the custom field has been added by the app which provides Mexican invoicing perhaps?</p>
+<p>For now, you would have to create the payment entry manually and then use Mint to match it against the transaction.</p>
+<p>I’ll update on this thread when we have the feature to bring in all the other custom fields on the Mint UI.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/AGS'><span itemprop='name'>AGS</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-19T17:27:30Z' class='post-time'>
+                    December 19, 2025,  5:27pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-19T17:27:30Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I honestly don’t know.  It’s behaving like this out of the box.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nikkothari22'><span itemprop='name'>nikkothari22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-19T18:20:09Z' class='post-time'>
+                    December 19, 2025,  6:20pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-19T18:20:09Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Got it. I’ll add support for it soon.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

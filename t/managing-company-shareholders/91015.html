@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Managing Company Shareholders - Accounting - Frappe Forum</title>
+    <meta name="description" content="Hello everyone, 
+I couldn’t find anywhere how to manage shareholders in terms of chart of accounts. In the equity group there are capital stock, paid dividends and retained earnings but these accounts aren’t shareholder &amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/managing-company-shareholders/91015" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Managing Company Shareholders&#39;" href="https://discuss.frappe.io/t/managing-company-shareholders/91015.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/managing-company-shareholders/91015" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/managing-company-shareholders/91015" />
+<meta property="og:title" content="Managing Company Shareholders" />
+<meta name="twitter:title" content="Managing Company Shareholders" />
+<meta property="og:description" content="Hello everyone,  I couldn’t find anywhere how to manage shareholders in terms of chart of accounts. In the equity group there are capital stock, paid dividends and retained earnings but these accounts aren’t shareholder specific (they are general and don’t belong to any shareholder).  That being said, how to manage shareholders on terms of distributing dividends, reinvesting and withdrawals? And if these accounts must be shareholder specific, how can I link a shareholder to the accounts that bel..." />
+<meta name="twitter:description" content="Hello everyone,  I couldn’t find anywhere how to manage shareholders in terms of chart of accounts. In the equity group there are capital stock, paid dividends and retained earnings but these accounts aren’t shareholder specific (they are general and don’t belong to any shareholder).  That being said, how to manage shareholders on terms of distributing dividends, reinvesting and withdrawals? And if these accounts must be shareholder specific, how can I link a shareholder to the accounts that bel..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:section" content="Accounting" />
+<meta property="og:article:section:color" content="AB9364" />
+<meta property="og:article:tag" content="erpnext" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="7 ❤" />
+<meta property="article:published_time" content="2022-06-15T16:45:44+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Managing Company Shareholders","mainEntity":{"@type":"Question","name":"Managing Company Shareholders","text":"Hello everyone,\n\nI couldn’t find anywhere how to manage shareholders in terms of chart of accounts. In the equity group there are capital stock, paid dividends and retained earnings but these accounts aren’t shareholder specific (they are general and don’t belong to any shareholder).\n\nThat being sai&hellip;","upvoteCount":1,"answerCount":1,"datePublished":"2022-06-15T16:45:44.105Z","author":{"@type":"Person","name":"kid1194","url":"https://discuss.frappe.io/u/kid1194"},"acceptedAnswer":{"@type":"Answer","text":"<a class=\"mention\" href=\"/u/araskho\">@Araskho<\/a> As far as I have understood ERPNext docs, the accounts Capital Stock, Paid Dividends and Retained Earnings doesn’t have to be changed.\n\nThe following are what I know:\n\n<a name=\"issuing-shares-1\" class=\"anchor\" href=\"#issuing-shares-1\"><\/a>Issuing Shares\n\nwe have to go to Shareholder List and create a new shareholder.\n\nThen we go to the Share Transfer List and c&hellip;","upvoteCount":5,"datePublished":"2022-06-16T13:51:22.052Z","url":"https://discuss.frappe.io/t/managing-company-shareholders/91015/4","author":{"@type":"Person","name":"kid1194","url":"https://discuss.frappe.io/u/kid1194"}}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/managing-company-shareholders/91015">Managing Company Shareholders</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/accounts/7" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #AB9364'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Accounting</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Managing Company Shareholders'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/managing-company-shareholders/91015'>
+      <meta itemprop='datePublished' content='2022-06-15T16:45:44Z'>
+        <meta itemprop='articleSection' content='Accounting'>
+      <meta itemprop='keywords' content='erpnext'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kid1194'><span itemprop='name'>kid1194</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/managing-company-shareholders/91015">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2022-06-15T16:45:44Z' class='post-time'>
+                    June 15, 2022,  4:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-06-15T16:45:44Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello everyone,</p>
+<p>I couldn’t find anywhere how to manage shareholders in terms of chart of accounts. In the equity group there are capital stock, paid dividends and retained earnings but these accounts aren’t shareholder specific (they are general and don’t belong to any shareholder).</p>
+<p>That being said, how to manage shareholders on terms of distributing dividends, reinvesting and withdrawals? And if these accounts must be shareholder specific, how can I link a shareholder to the accounts that belongs to that shareholder?</p>
+<p>I have a great accounting background and I can do all this in accounting books but not in ERPNext, so please forgive my lack of knowledge and any help will be appreciated.</p>
+<p>Best regards.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/centaur'><span itemprop='name'>centaur</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/c/7/c71030ccac49d319c725fb4bfa03e5a50e677bd7.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-06-16T05:10:07Z' class='post-time'>
+                    June 16, 2022,  5:10am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-06-16T05:10:07Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>hi</p>
+<p>Click on Accounting and scroll down</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/c/7/c71030ccac49d319c725fb4bfa03e5a50e677bd7.png" data-download-href="https://discuss.frappe.io/uploads/default/c71030ccac49d319c725fb4bfa03e5a50e677bd7" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/c/7/c71030ccac49d319c725fb4bfa03e5a50e677bd7_2_690x313.png" alt="image" data-base62-sha1="soZHHw5uokiQ3rNjRBCe6FRjr5t" width="690" height="313" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/c/7/c71030ccac49d319c725fb4bfa03e5a50e677bd7_2_690x313.png, https://discuss.frappe.io/uploads/default/optimized/3X/c/7/c71030ccac49d319c725fb4bfa03e5a50e677bd7_2_1035x469.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/c/7/c71030ccac49d319c725fb4bfa03e5a50e677bd7.png 2x" data-dominant-color="F9F9F9"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1360×617 61.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Araskho'><span itemprop='name'>Araskho</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-06-16T05:55:24Z' class='post-time'>
+                    June 16, 2022,  5:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-06-16T05:55:24Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="kid1194" data-post="1" data-topic="91015">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/kid1194/48/55105_2.png" class="avatar"> kid1194:</div>
+<blockquote>
+<p>ngs to that shareholder?</p>
+<p>I have a great accounting background and I can do all this in accounting books but not in ERPNext, so please forgive my lack o</p>
+</blockquote>
+</aside>
+<p>Welcome to erpnext forum mate.<br>
+would be great if you would make a little guide or teach us with less accounting knowledge now that you know where it is <img src="https://discuss.frappe.io/images/emoji/twitter/upside_down_face.png?v=12" title=":upside_down_face:" class="emoji" alt=":upside_down_face:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kid1194'><span itemprop='name'>kid1194</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-06-16T13:51:22Z' class='post-time'>
+                    June 16, 2022,  1:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-06-16T14:30:11Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/araskho">@Araskho</a> As far as I have understood ERPNext docs, the accounts <strong>Capital Stock</strong>, <strong>Paid Dividends</strong> and <strong>Retained Earnings</strong> doesn’t have to be changed.</p>
+<p>The following are what I know:</p>
+<h3><a name="issuing-shares-1" class="anchor" href="#issuing-shares-1"></a>Issuing Shares</h3>
+<ol>
+<li>we have to go to <strong>Shareholder List</strong> and create a new shareholder.</li>
+<li>Then we go to the <strong>Share Transfer List</strong> and create a new share transfer entry, select <strong>Issue</strong> in the <strong>Transfer Type</strong> field, then fill the other fields and then <strong>Save</strong> the entry. The save button will then change to <strong>Submit</strong> since this entry must be submitted to be confirmed.</li>
+<li>After submitting the entry, from the <strong>Other Actions</strong> button next to <strong>Cancel</strong>, we must select <strong>Create Journal Entry</strong> to add the share transfer entry to the ledgers. <em>This action will credit the <strong>Capital Stock</strong> account and will debit the <strong>Bank</strong> or <strong>Cash</strong> account, as stated in the journal entry.</em></li>
+</ol>
+<h3><a name="paying-dividends-2" class="anchor" href="#paying-dividends-2"></a>Paying Dividends</h3>
+<ol>
+<li>we must go to <strong>Bank List</strong> to create banks that will be linked to the <strong>Bank Account</strong> of the company and of each shareholder. Then we go to <strong>Bank Account List</strong> to create the bank accounts we need.</li>
+</ol>
+<ul>
+<li>We create a new bank account for the company, by simply checking the boxes <strong>Is Default Account</strong> &amp; <strong>Is Company Account</strong> in the form and filling the other fields as needed.</li>
+<li>We create a bank account for each shareholder, by simply checking the box <strong>Is Default Account</strong>, setting the <strong>Party Type</strong> as <strong>Shareholder</strong> and selecting the specific shareholder in the <strong>Party</strong> field.</li>
+</ul>
+<ol start="2">
+<li>There are two ways that we can use to pay the dividends to the shareholders and they are stated here <a href="https://docs.erpnext.com/docs/v13/user/manual/en/accounts/articles/payment-entry-for-capital-account" rel="noopener nofollow ugc">Payment Entry for Capital Account</a>. I think that the best method is to go to <strong>Journal Entry List</strong>, create a new entry and then in the <strong>Accounting Entries</strong> table add the following rows</li>
+</ol>
+<ul>
+<li><strong>Bank</strong> or <strong>Cash</strong> account to be credited with specifying the company bank</li>
+<li><strong>Paid Dividends</strong> account with specifying the shareholder bank account created earlier, selecting <strong>Shareholder</strong> as the <strong>Party Type</strong> and then selecting the shareholder we want to pay in the <strong>Party</strong> field</li>
+</ul>
+<h3><a name="withdrawals-of-capital-retained-earnings-3" class="anchor" href="#withdrawals-of-capital-retained-earnings-3"></a>Withdrawals of Capital &amp; Retained Earnings</h3>
+<blockquote>
+<p>Retained earnings represent the portion of profits that a company chooses to keep.</p>
+</blockquote>
+<p>These can be done using the information mentioned in step no.2 in the <strong>Paying Dividends</strong> section, but changing the <strong>Accounting Entries</strong> as needed.</p>
+<ol>
+<li>For <strong>Withdrawals of Capital</strong>, credit the <strong>Bank</strong> or <strong>Cash</strong> account and debit the <strong>Capital Stock</strong> account.</li>
+<li>For <strong>Retained Earnings</strong>, credit the <strong>Bank</strong> or <strong>Cash</strong> account and debit the <strong>Retained Earnings</strong> account, then when the earnings are paid to shareholders, credit the <strong>Retained Earnings</strong> account and debit the <strong>Paid Dividends</strong> account, with specifying the shareholder bank account created earlier, selecting <strong>Shareholder</strong> as the <strong>Party Type</strong> and then selecting the shareholder we want to pay in the <strong>Party</strong> field</li>
+</ol>
+<p>That’s all that I know until now regarding <strong>Managing Shareholders</strong>. I wish that someone with more experience in ERPNext will be able to correct me if I’m wrong.</p>
+<p>Best regards.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="5" />
+              <span class='post-likes'>5 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/how-to-add-journal-entry-for-companys-shares/149143">How to add journal entry for company&#39;s shares?</a>
+                        <meta itemprop='position' content='2'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kid1194'><span itemprop='name'>kid1194</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-06-16T13:57:04Z' class='post-time'>
+                    June 16, 2022,  1:57pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-06-16T14:33:06Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/centaur">@centaur</a> Thanks for your reply. But I already know that information and what I want to know is how to pay dividends throughout either creating a payment entry or a journal entry while linking the transaction to the shareholder just like the journal entry created when issuing shares.</p>
+<blockquote>
+<p>If the process I mentioned in the previous post is correct then I would have answered my own question <img src="https://discuss.frappe.io/images/emoji/twitter/blush.png?v=12" title=":blush:" class="emoji" alt=":blush:" loading="lazy" width="20" height="20"></p>
+</blockquote>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/peterg'><span itemprop='name'>peterg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-06-16T15:58:52Z' class='post-time'>
+                    June 16, 2022,  3:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-06-16T15:58:52Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>What you’ve described looks right to me. It’s not strictly necessary to use the Bank Account doctypes for any of this, but it adds a layer of abstraction above your chart of accounts that may be helpful (especially when non-accountants need to process documents).</p>
+<p>I haven’t used the Stock Transfer doctypes much, but it looks like they just create a record that can be then used to generate a journal entry. Those journal entries are linked to the shareholders via the party field. No need to make a separate account for each shareholder. Is that sufficient for the accounting requirements?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kid1194'><span itemprop='name'>kid1194</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-06-17T19:41:37Z' class='post-time'>
+                    June 17, 2022,  7:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-06-17T19:41:37Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/peterg">@peterg</a> Thank you for your confirmation. That’s all that I needed.</p>
+<p>In terms of the <strong>Bank Account</strong>, ERPNext mentioned in the Docs that doing so will help in <strong>Bank Reconciliation</strong> which I personally haven’t checked yet.</p>
+<p>Best regards.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Araskho'><span itemprop='name'>Araskho</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-06-18T06:08:06Z' class='post-time'>
+                    June 18, 2022,  6:08am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-06-18T06:08:06Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="peterg" data-post="6" data-topic="91015">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/peterg/48/55463_2.png" class="avatar"> peterg:</div>
+<blockquote>
+<p>. It’s not strictly necessary to use the Bank Account doctypes for any of this, but it adds a layer of abstraction above your chart of accounts that may be helpful (especially when non-accountants need to process documents).</p>
+<p>I haven’t used the Stock Transfer doctypes m</p>
+</blockquote>
+</aside>
+<p>Tnx, Much appreciated.<br>
+hope to see you around.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/shubhamkasar210'><span itemprop='name'>shubhamkasar210</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-12T10:11:55Z' class='post-time'>
+                    November 12, 2025, 10:11am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-12T10:11:55Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks <a class="mention" href="/u/kid1194">@kid1194</a> for your detailed explaination.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

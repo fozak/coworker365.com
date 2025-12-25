@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>403 errors and unable to access login page after clearing browser site data (Frappe v16) - Bug - Frappe Forum</title>
+    <meta name="description" content="Hi everyone, 
+I’m working locally on Frappe Framework v16.0.0-dev, developing a custom app using the Administrator account. 
+I decided to clear Site Data in Edge DevTools (which wipes cookies, localStorage, indexedDB). 
+&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/403-errors-and-unable-to-access-login-page-after-clearing-browser-site-data-frappe-v16/157417" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;403 errors and unable to access login page after clearing browser site data (Frappe v16)&#39;" href="https://discuss.frappe.io/t/403-errors-and-unable-to-access-login-page-after-clearing-browser-site-data-frappe-v16/157417.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/403-errors-and-unable-to-access-login-page-after-clearing-browser-site-data-frappe-v16/157417" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/403-errors-and-unable-to-access-login-page-after-clearing-browser-site-data-frappe-v16/157417" />
+<meta property="og:title" content="403 errors and unable to access login page after clearing browser site data (Frappe v16)" />
+<meta name="twitter:title" content="403 errors and unable to access login page after clearing browser site data (Frappe v16)" />
+<meta property="og:description" content="Hi everyone,  I’m working locally on Frappe Framework v16.0.0-dev, developing a custom app using the Administrator account.  I decided to clear Site Data in Edge DevTools (which wipes cookies, localStorage, indexedDB).  After that, I got completely stuck:    I can’t access /app, /desk, or even /login    Every request returns: 403 Not Permitted    Even /login returns 403, instead of showing the login page    I also tried:    Incognito mode    bench clear-cache    bench clear-website-cache    benc..." />
+<meta name="twitter:description" content="Hi everyone,  I’m working locally on Frappe Framework v16.0.0-dev, developing a custom app using the Administrator account.  I decided to clear Site Data in Edge DevTools (which wipes cookies, localStorage, indexedDB).  After that, I got completely stuck:    I can’t access /app, /desk, or even /login    Every request returns: 403 Not Permitted    Even /login returns 403, instead of showing the login page    I also tried:    Incognito mode    bench clear-cache    bench clear-website-cache    benc..." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:section" content="Bug" />
+<meta property="og:article:section:color" content="F1592A" />
+<meta property="og:article:tag" content="frappe" />
+<meta property="og:article:tag" content="bug" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2025-11-27T15:07:44+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"403 errors and unable to access login page after clearing browser site data (Frappe v16)","mainEntity":{"@type":"Question","name":"403 errors and unable to access login page after clearing browser site data (Frappe v16)","text":"Hi everyone,\n\nI’m working locally on Frappe Framework v16.0.0-dev, developing a custom app using the Administrator account.\n\nI decided to clear Site Data in Edge DevTools (which wipes cookies, localStorage, indexedDB).\n\nAfter that, I got completely stuck:\n\nI can’t access /app, /desk, or even /logi&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-11-27T15:07:44.282Z","author":{"@type":"Person","name":"yousif_shafee","url":"https://discuss.frappe.io/u/yousif_shafee"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/403-errors-and-unable-to-access-login-page-after-clearing-browser-site-data-frappe-v16/157417">403 errors and unable to access login page after clearing browser site data (Frappe v16)</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/bug/32" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F1592A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Bug</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
+            <a href='https://discuss.frappe.io/tag/bug' class='discourse-tag' rel="tag">bug</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='403 errors and unable to access login page after clearing browser site data (Frappe v16)'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/403-errors-and-unable-to-access-login-page-after-clearing-browser-site-data-frappe-v16/157417'>
+      <meta itemprop='datePublished' content='2025-11-27T15:07:44Z'>
+        <meta itemprop='articleSection' content='Bug'>
+      <meta itemprop='keywords' content='frappe, bug'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/yousif_shafee'><span itemprop='name'>yousif_shafee</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/403-errors-and-unable-to-access-login-page-after-clearing-browser-site-data-frappe-v16/157417">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-11-27T15:07:44Z' class='post-time'>
+                    November 27, 2025,  3:07pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-27T15:07:44Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi everyone,</p>
+<p>I’m working locally on <strong>Frappe Framework v16.0.0-dev</strong>, developing a custom app using the <em>Administrator</em> account.</p>
+<p>I decided to clear <strong>Site Data</strong> in Edge DevTools (which wipes cookies, localStorage, indexedDB).<br>
+After that, I got completely stuck:</p>
+<ul>
+<li>
+<p>I can’t access <code>/app</code>, <code>/desk</code>, or even <code>/login</code></p>
+</li>
+<li>
+<p>Every request returns: <strong>403 Not Permitted</strong></p>
+</li>
+<li>
+<p>Even <code>/login</code> returns <strong>403</strong>, instead of showing the login page</p>
+</li>
+</ul>
+<p>I also tried:</p>
+<ul>
+<li>
+<p>Incognito mode</p>
+</li>
+<li>
+<p><code>bench clear-cache</code></p>
+</li>
+<li>
+<p><code>bench clear-website-cache</code></p>
+</li>
+<li>
+<p><code>bench build --force</code></p>
+</li>
+<li>
+<p><code>bench restart</code></p>
+</li>
+<li>
+<p><code>bench --site &lt;site&gt; destroy-all-sessions</code></p>
+</li>
+</ul>
+<p>Still, the issue persists.</p>
+<hr>
+<h3><a name="p-487630-the-strange-behavior-1" class="anchor" href="#p-487630-the-strange-behavior-1"></a><strong>The Strange Behavior</strong></h3>
+<p>Even when not logged in, and even from incognito mode, the server returns <strong>403 Forbidden</strong> for URLs that should be publicly accessible, such as:</p>
+<pre data-code-wrap="shell"><code class="lang-shell">/login
+/website_script.js
+/private/files/favicon.ico
+</code></pre>
+<hr>
+<h3><a name="p-487630-has-anyone-faced-this-before-2" class="anchor" href="#p-487630-has-anyone-faced-this-before-2"></a><strong>Has anyone faced this before?</strong></h3>
+<p>Any ideas why clearing browser site data would cause Frappe to permanently return 403 for the login page itself?</p>
+<p>Appreciate any help or insights!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Zaryabqureshi'><span itemprop='name'>Zaryabqureshi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-28T06:02:53Z' class='post-time'>
+                    November 28, 2025,  6:02am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-28T06:02:53Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Please let me know what actions you’ve already performed. The <code>clear-cache</code> command is safe and does not delete any important data.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/yousif_shafee'><span itemprop='name'>yousif_shafee</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/e/4/e4fef03fb7eafac246a40b6930f257a7f5ae246b.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-28T08:04:44Z' class='post-time'>
+                    November 28, 2025,  8:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-28T08:04:44Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Here is the button I clicked earlier — the <strong>Clear Site Data</strong> action from the System Settings page.<br>
+I used this button before the issue started:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/e/4/e4fef03fb7eafac246a40b6930f257a7f5ae246b.png" data-download-href="https://discuss.frappe.io/uploads/default/e4fef03fb7eafac246a40b6930f257a7f5ae246b" title="img"><img src="https://discuss.frappe.io/uploads/default/original/3X/e/4/e4fef03fb7eafac246a40b6930f257a7f5ae246b.png" alt="img" data-base62-sha1="wFN47jMu7mYeCoWBBILMtCsQ1fB" width="444" height="500" data-dominant-color="F4F3F6"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">img</span><span class="informations">596×671 31.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Just to confirm, I also tried running these commands afterward:</p>
+<pre data-code-wrap="shell"><code class="lang-shell">bench clear-cache
+bench clear-website-cache
+bench restart
+
+</code></pre>
+<p>But the problem still happens, and I continue to get <strong>403 responses even on the /login page</strong>.</p>
+<p>Let me know if there’s any other cache or route reset method you recommend checking.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Zaryabqureshi'><span itemprop='name'>Zaryabqureshi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-30T10:14:10Z' class='post-time'>
+                    November 30, 2025, 10:14am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-30T10:14:10Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Please confirm have you checked on other browsers as well?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/yousif_shafee'><span itemprop='name'>yousif_shafee</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-30T10:19:39Z' class='post-time'>
+                    November 30, 2025, 10:19am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-30T10:19:39Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/asieftejani'><span itemprop='name'>asieftejani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-01T06:06:43Z' class='post-time'>
+                    December 1, 2025,  6:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-01T06:06:43Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Try these sollutions from ChatGPT: -</p>
+<p>Here are <strong>the exact things to check in the database + how to fix each one</strong>.<br>
+This is the fastest way to recover when <strong>/login returns 403</strong> in Frappe.</p>
+<hr>
+<h1><a name="p-487839-h-1-check-if-guest-user-is-disabled-1" class="anchor" href="#p-487839-h-1-check-if-guest-user-is-disabled-1"></a><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> 1. Check if <strong>Guest</strong> user is disabled</h1>
+<p>If Guest is disabled or missing required roles → <strong>Frappe blocks ALL public pages</strong>, including <code>/login</code>.</p>
+<p>Run:</p>
+<pre><code class="lang-auto">bench --site &lt;yoursite&gt; console
+
+</code></pre>
+<p>Then:</p>
+<pre><code class="lang-auto">guest = frappe.get_doc("User", "Guest")
+guest.enabled
+guest.roles
+
+</code></pre>
+<h3><a name="p-487839-fix-if-disabled-2" class="anchor" href="#p-487839-fix-if-disabled-2"></a><img src="https://discuss.frappe.io/images/emoji/twitter/check_mark.png?v=14" title=":check_mark:" class="emoji" alt=":check_mark:" loading="lazy" width="20" height="20"> Fix if disabled:</h3>
+<pre><code class="lang-auto">guest.enabled = 1
+guest.save()
+
+</code></pre>
+<h3><a name="p-487839-fix-if-roles-are-empty-3" class="anchor" href="#p-487839-fix-if-roles-are-empty-3"></a><img src="https://discuss.frappe.io/images/emoji/twitter/check_mark.png?v=14" title=":check_mark:" class="emoji" alt=":check_mark:" loading="lazy" width="20" height="20"> Fix if roles are empty:</h3>
+<p>Guest must have:</p>
+<ul>
+<li>
+<p><strong>Guest</strong></p>
+</li>
+<li>
+<p><strong>All</strong> (in some old versions)</p>
+</li>
+</ul>
+<p>Add:</p>
+<pre><code class="lang-auto">guest.append("roles", {"role": "Guest"})
+guest.save()
+
+</code></pre>
+<p>Restart:</p>
+<pre><code class="lang-auto">bench restart
+
+</code></pre>
+<p>Test <code>/login</code>.</p>
+<hr>
+<h1><a name="p-487839-h-2-check-if-someone-modified-website-permissions-4" class="anchor" href="#p-487839-h-2-check-if-someone-modified-website-permissions-4"></a><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> 2. Check if someone modified <strong>Website Permissions</strong></h1>
+<p>Sometimes developers accidentally deny Guest access globally.</p>
+<p>Check:</p>
+<pre><code class="lang-auto">frappe.get_all("Website Permission", fields="*")
+
+</code></pre>
+<p>If you see something like:</p>
+<pre><code class="lang-auto">role != Guest
+
+</code></pre>
+<p>or</p>
+<pre><code class="lang-auto">restrict_to_domain
+
+</code></pre>
+<p>Then login page is blocked.</p>
+<h3><a name="p-487839-delete-them-5" class="anchor" href="#p-487839-delete-them-5"></a><img src="https://discuss.frappe.io/images/emoji/twitter/check_mark.png?v=14" title=":check_mark:" class="emoji" alt=":check_mark:" loading="lazy" width="20" height="20"> Delete them:</h3>
+<pre><code class="lang-auto">for p in frappe.get_all("Website Permission"):
+    frappe.delete_doc("Website Permission", p.name)
+
+</code></pre>
+<p>Restart server → test <code>/login</code>.</p>
+<hr>
+<h1><a name="p-487839-h-3-check-if-your-custom-app-broke-auth-6" class="anchor" href="#p-487839-h-3-check-if-your-custom-app-broke-auth-6"></a><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> 3. Check if your custom app broke auth</h1>
+<p>Run:</p>
+<pre><code class="lang-auto">grep -R "on_session_creation" -n apps/
+grep -R "frappe.PermissionError" -n apps/
+grep -R "frappe.throw" -n apps/
+grep -R "before_request" -n apps/
+grep -R "whitelist" -n apps/
+
+</code></pre>
+<p>Look especially for:</p>
+<pre><code class="lang-auto">if frappe.session.user == "Guest":
+    frappe.throw("Not permitted")
+
+</code></pre>
+<p>or:</p>
+<pre><code class="lang-auto">def on_session_creation(...):
+    require_admin_only()
+
+</code></pre>
+<p>Even one such hook will break authentication.</p>
+<p>Disable hook temporarily by renaming it:</p>
+<pre><code class="lang-auto">mv apps/your_app/your_app/hooks.py apps/your_app/your_app/hooks.disabled
+bench restart
+
+</code></pre>
+<p>Try <code>/login</code>.</p>
+<hr>
+<h1><a name="p-487839-h-4-check-if-oauth-social-login-misconfigured-7" class="anchor" href="#p-487839-h-4-check-if-oauth-social-login-misconfigured-7"></a><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> 4. Check if <strong>OAuth / Social Login</strong> misconfigured</h1>
+<p>Frappe v16 is strict with OAuth.</p>
+<p>Check:</p>
+<pre><code class="lang-auto">frappe.get_site_config().get("social_login_keys")
+
+</code></pre>
+<p>If something is half-configured → login is protected.</p>
+<h3><a name="p-487839-fix-8" class="anchor" href="#p-487839-fix-8"></a><img src="https://discuss.frappe.io/images/emoji/twitter/check_mark.png?v=14" title=":check_mark:" class="emoji" alt=":check_mark:" loading="lazy" width="20" height="20"> Fix:</h3>
+<p>Rename the keys temporarily:</p>
+<pre><code class="lang-auto">mv sites/&lt;yoursite&gt;/site_config.json sites/&lt;yoursite&gt;/site_config.bak
+
+</code></pre>
+<p>Then restart:</p>
+<pre><code class="lang-auto">bench restart
+
+</code></pre>
+<p>This resets all auth settings.</p>
+<hr>
+<h1><a name="p-487839-h-5-check-if-error-pages-were-overridden-9" class="anchor" href="#p-487839-h-5-check-if-error-pages-were-overridden-9"></a><img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> 5. Check if <strong>Error Pages</strong> were overridden</h1>
+<p>If login page was overridden in your custom app, but access rules deny Guest → 403.</p>
+<p>Search overrides:</p>
+<pre><code class="lang-auto">grep -R "login.html" apps/
+grep -R "override_whitelisted_methods" apps/
+grep -R "override_doctype_class" apps/
+
+</code></pre>
+<p>If your app overrides:</p>
+<pre><code class="lang-auto">/login
+
+</code></pre>
+<p>Remove the override temporarily.</p>
+<hr>
+<h1><a name="p-487839-h-6-quick-brute-force-fix-works-90-of-the-time-10" class="anchor" href="#p-487839-h-6-quick-brute-force-fix-works-90-of-the-time-10"></a><img src="https://discuss.frappe.io/images/emoji/twitter/warning.png?v=14" title=":warning:" class="emoji" alt=":warning:" loading="lazy" width="20" height="20"> 6. Quick brute-force fix (works 90% of the time)</h1>
+<pre><code class="lang-auto">bench --site &lt;yoursite&gt; set-config allow_guest_logout true
+bench --site &lt;yoursite&gt; clear-cache
+bench restart
+
+</code></pre>
+<p>This forces Frappe to reinitialize guest session.</p>
+<hr>
+<h1><a name="p-487839-h-7-nuclear-fix-without-deleting-the-site-11" class="anchor" href="#p-487839-h-7-nuclear-fix-without-deleting-the-site-11"></a><img src="https://discuss.frappe.io/images/emoji/twitter/high_voltage.png?v=14" title=":high_voltage:" class="emoji" alt=":high_voltage:" loading="lazy" width="20" height="20"> 7. Nuclear fix (without deleting the site)</h1>
+<h3><a name="p-487839-reset-roles-12" class="anchor" href="#p-487839-reset-roles-12"></a>Reset Roles:</h3>
+<pre><code class="lang-auto">frappe.db.sql("delete from `tabHas Role` where parent='Guest'")
+frappe.db.sql("insert into `tabHas Role` (parent, role, parenttype, parentfield, parenttable) values ('Guest','Guest','User','roles','User')")
+frappe.db.commit()
+
+</code></pre>
+<h3><a name="p-487839-reset-permissions-13" class="anchor" href="#p-487839-reset-permissions-13"></a>Reset Permissions:</h3>
+<pre><code class="lang-auto">bench --site &lt;yoursite&gt; restore-site
+
+</code></pre>
+<p>(Not a restore—this rebuilds role/permission maps.)</p>
+<hr>
+<h1><a name="p-487839-if-you-tell-me-your-frappe-version-v1600-dev-is-early-beta-i-can-tell-you-exactly-which-file-and-which-permission-check-causes-this-14" class="anchor" href="#p-487839-if-you-tell-me-your-frappe-version-v1600-dev-is-early-beta-i-can-tell-you-exactly-which-file-and-which-permission-check-causes-this-14"></a>If you tell me your Frappe version (v16.0.0-dev is early beta), I can tell you exactly which file and which permission check causes this.</h1>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

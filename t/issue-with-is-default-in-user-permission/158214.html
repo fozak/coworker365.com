@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Issue with Is Default in User Permission - Frappe Forum</title>
+    <meta name="description" content="I created a User Permission as below without Is Default. 
+  
+But whenever i logged in with that user and trying to create records it is taking this value(RGUKT) as default value. 
+Any solutions??">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/issue-with-is-default-in-user-permission/158214" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Issue with Is Default in User Permission&#39;" href="https://discuss.frappe.io/t/issue-with-is-default-in-user-permission/158214.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/5/4/542eddd72d8af35ce4939bc08814970c2dd0f838.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/5/4/542eddd72d8af35ce4939bc08814970c2dd0f838.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/issue-with-is-default-in-user-permission/158214" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/issue-with-is-default-in-user-permission/158214" />
+<meta property="og:title" content="Issue with Is Default in User Permission" />
+<meta name="twitter:title" content="Issue with Is Default in User Permission" />
+<meta property="og:description" content="I created a User Permission as below without Is Default.     But whenever i logged in with that user and trying to create records it is taking this value(RGUKT) as default value.  Any solutions??" />
+<meta name="twitter:description" content="I created a User Permission as below without Is Default.     But whenever i logged in with that user and trying to create records it is taking this value(RGUKT) as default value.  Any solutions??" />
+<meta property="article:published_time" content="2025-12-22T10:12:00+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Issue with Is Default in User Permission","mainEntity":{"@type":"Question","name":"Issue with Is Default in User Permission","text":"I created a User Permission as below without Is Default.\n\n<a class=\"lightbox\" href=\"https://discuss.frappe.io/uploads/default/original/3X/5/4/542eddd72d8af35ce4939bc08814970c2dd0f838.png\" data-download-href=\"https://discuss.frappe.io/uploads/default/542eddd72d8af35ce4939bc08814970c2dd0f838\" title=\"Screenshot from 2025-12-22 15-38-01\">[Screenshot from 2025-12-22 15-38-01]<\/a>\n\nBut whenever i logged in with that user and trying to create records it is taking this value(RGUKT) as default value.\n\nAny solutions??\n\n<a class=\"lightbox\" href=\"https://discuss.frappe.io/uploads/default/original/3X/2/9/296b9a86a02c2cb4fc3a0ab2b1fc775fcd12420b.png\" data-download-href=\"https://discuss.frappe.io/uploads/default/296b9a86a02c2cb4fc3a0ab2b1fc775fcd12420b\" title=\"Screenshot from 2025-12-22 15-41-08\">[Screenshot from 2025-12-22 15-41-08]<\/a>","upvoteCount":0,"answerCount":0,"datePublished":"2025-12-22T10:12:00.040Z","author":{"@type":"Person","name":"Kiranmai_M","url":"https://discuss.frappe.io/u/Kiranmai_M"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/issue-with-is-default-in-user-permission/158214">Issue with Is Default in User Permission</a>
+    </h1>
+
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Issue with Is Default in User Permission'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/issue-with-is-default-in-user-permission/158214'>
+      <meta itemprop='datePublished' content='2025-12-22T10:12:00Z'>
+        <meta itemprop='articleSection' content='Uncategorized'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Kiranmai_M'><span itemprop='name'>Kiranmai_M</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/issue-with-is-default-in-user-permission/158214">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/5/4/542eddd72d8af35ce4939bc08814970c2dd0f838.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-12-22T10:12:00Z' class='post-time'>
+                    December 22, 2025, 10:12am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-22T10:12:00Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I created a User Permission as below without <strong>Is Default</strong>.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/5/4/542eddd72d8af35ce4939bc08814970c2dd0f838.png" data-download-href="https://discuss.frappe.io/uploads/default/542eddd72d8af35ce4939bc08814970c2dd0f838" title="Screenshot from 2025-12-22 15-38-01"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/5/4/542eddd72d8af35ce4939bc08814970c2dd0f838_2_690x327.png" alt="Screenshot from 2025-12-22 15-38-01" data-base62-sha1="c0Iw9LpKUdgzKDp9JB5DLszA2CI" width="690" height="327" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/5/4/542eddd72d8af35ce4939bc08814970c2dd0f838_2_690x327.png, https://discuss.frappe.io/uploads/default/original/3X/5/4/542eddd72d8af35ce4939bc08814970c2dd0f838.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/5/4/542eddd72d8af35ce4939bc08814970c2dd0f838.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot from 2025-12-22 15-38-01</span><span class="informations">897×426 14.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>But whenever i logged in with that user and trying to create records it is taking this value(RGUKT) as default value.</p>
+<p>Any solutions??</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/9/296b9a86a02c2cb4fc3a0ab2b1fc775fcd12420b.png" data-download-href="https://discuss.frappe.io/uploads/default/296b9a86a02c2cb4fc3a0ab2b1fc775fcd12420b" title="Screenshot from 2025-12-22 15-41-08"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/9/296b9a86a02c2cb4fc3a0ab2b1fc775fcd12420b_2_551x500.png" alt="Screenshot from 2025-12-22 15-41-08" data-base62-sha1="5Uq7bNQSSplYrkliDurVd68Ze55" width="551" height="500" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/9/296b9a86a02c2cb4fc3a0ab2b1fc775fcd12420b_2_551x500.png, https://discuss.frappe.io/uploads/default/optimized/3X/2/9/296b9a86a02c2cb4fc3a0ab2b1fc775fcd12420b_2_826x750.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/2/9/296b9a86a02c2cb4fc3a0ab2b1fc775fcd12420b.png 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot from 2025-12-22 15-41-08</span><span class="informations">1034×938 41.1 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ahsantareen'><span itemprop='name'>ahsantareen</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-22T11:10:42Z' class='post-time'>
+                    December 22, 2025, 11:10am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-22T11:10:42Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/kiranmai_m">@Kiranmai_M</a></p>
+<p>Please check one of these;</p>
+<ol>
+<li>Session Default</li>
+<li>Education Settings</li>
+<li>This field default in customization mode.</li>
+</ol>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Kiranmai_M'><span itemprop='name'>Kiranmai_M</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-22T11:23:35Z' class='post-time'>
+                    December 22, 2025, 11:23am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-22T11:23:35Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/ahsantareen">@ahsantareen</a> Hi, i have checked. but there is no default values for that field.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

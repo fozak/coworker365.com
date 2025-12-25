@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[Tutorial] How to fully localize ERPNext using AI (Custom App approach) + Fix for Bench update error - ERPNext - Frappe Forum</title>
+    <meta name="description" content="Hello Community! :waving_hand: 
+I recently faced the challenge of fully localizing ERPNext (v15) for my region. The default translations were incomplete, and manual editing was too slow. I developed a workflow that uses A&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/tutorial-how-to-fully-localize-erpnext-using-ai-custom-app-approach-fix-for-bench-update-error/157758" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[Tutorial] How to fully localize ERPNext using AI (Custom App approach) + Fix for Bench update error&#39;" href="https://discuss.frappe.io/t/tutorial-how-to-fully-localize-erpnext-using-ai-custom-app-approach-fix-for-bench-update-error/157758.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/tutorial-how-to-fully-localize-erpnext-using-ai-custom-app-approach-fix-for-bench-update-error/157758" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/tutorial-how-to-fully-localize-erpnext-using-ai-custom-app-approach-fix-for-bench-update-error/157758" />
+<meta property="og:title" content="[Tutorial] How to fully localize ERPNext using AI (Custom App approach) + Fix for Bench update error" />
+<meta name="twitter:title" content="[Tutorial] How to fully localize ERPNext using AI (Custom App approach) + Fix for Bench update error" />
+<meta property="og:description" content="Hello Community! 👋  I recently faced the challenge of fully localizing ERPNext (v15) for my region. The default translations were incomplete, and manual editing was too slow. I developed a workflow that uses AI (LLM) to translate thousands of strings in minutes and a Custom App to ensure these translations survive updates.  I also encountered a specific error in recent Bench versions (AttributeError: &#39;App&#39; object has no attribute &#39;tag&#39;) when using local apps, and found a workaround.  ..." />
+<meta name="twitter:description" content="Hello Community! 👋  I recently faced the challenge of fully localizing ERPNext (v15) for my region. The default translations were incomplete, and manual editing was too slow. I developed a workflow that uses AI (LLM) to translate thousands of strings in minutes and a Custom App to ensure these translations survive updates.  I also encountered a specific error in recent Bench versions (AttributeError: &#39;App&#39; object has no attribute &#39;tag&#39;) when using local apps, and found a workaround.  ..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="translation" />
+<meta property="og:article:tag" content="customization" />
+<meta property="article:published_time" content="2025-12-08T07:20:00+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"[Tutorial] How to fully localize ERPNext using AI (Custom App approach) + Fix for Bench update error","mainEntity":{"@type":"Question","name":"[Tutorial] How to fully localize ERPNext using AI (Custom App approach) + Fix for Bench update error","text":"Hello Community! :waving_hand:\n\nI recently faced the challenge of fully localizing ERPNext (v15) for my region. The default translations were incomplete, and manual editing was too slow. I developed a workflow that uses AI (LLM) to translate thousands of strings in minutes and a Custom App to ensure&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-12-08T07:20:00.066Z","author":{"@type":"Person","name":"McSnoozy","url":"https://discuss.frappe.io/u/McSnoozy"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/tutorial-how-to-fully-localize-erpnext-using-ai-custom-app-approach-fix-for-bench-update-error/157758">[Tutorial] How to fully localize ERPNext using AI (Custom App approach) + Fix for Bench update error</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/translation' class='discourse-tag' rel="tag">translation</a>, 
+            <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag' rel="tag">customization</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[Tutorial] How to fully localize ERPNext using AI (Custom App approach) + Fix for Bench update error'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/tutorial-how-to-fully-localize-erpnext-using-ai-custom-app-approach-fix-for-bench-update-error/157758'>
+      <meta itemprop='datePublished' content='2025-12-08T07:20:00Z'>
+        <meta itemprop='articleSection' content='ERPNext'>
+      <meta itemprop='keywords' content='erpnext, translation, customization'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/McSnoozy'><span itemprop='name'>McSnoozy</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/tutorial-how-to-fully-localize-erpnext-using-ai-custom-app-approach-fix-for-bench-update-error/157758">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-12-08T07:20:00Z' class='post-time'>
+                    December 8, 2025,  7:20am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-08T07:20:00Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello Community! <img src="https://discuss.frappe.io/images/emoji/twitter/waving_hand.png?v=14" title=":waving_hand:" class="emoji" alt=":waving_hand:" loading="lazy" width="20" height="20"></p>
+<p>I recently faced the challenge of fully localizing ERPNext (v15) for my region. The default translations were incomplete, and manual editing was too slow. I developed a workflow that uses <strong>AI (LLM)</strong> to translate thousands of strings in minutes and a <strong>Custom App</strong> to ensure these translations survive updates.</p>
+<p>I also encountered a specific error in recent Bench versions (<code>AttributeError: 'App' object has no attribute 'tag'</code>) when using local apps, and found a workaround.</p>
+<p>Here is the complete guide to replicate this setup.</p>
+<blockquote>
+<p><strong><img src="https://discuss.frappe.io/images/emoji/twitter/warning.png?v=14" title=":warning:" class="emoji" alt=":warning:" loading="lazy" width="20" height="20"> IMPORTANT NOTES:</strong></p>
+<ol>
+<li>
+<p><strong>Site Name:</strong> Replace <code>site.local</code> with your actual site name (e.g., <code>mysite.com</code>).</p>
+</li>
+<li>
+<p><strong>Language:</strong> <strong>You must edit the <code>SYSTEM_PROMPT</code></strong> inside the script to specify your target language (e.g., Spanish, German, Hindi) and your region’s specific ERP terminology.</p>
+</li>
+</ol>
+</blockquote>
+<hr>
+<h3><a name="p-488354-step-1-create-a-container-app-1" class="anchor" href="#p-488354-step-1-create-a-container-app-1"></a>Step 1: Create a Container App</h3>
+<p>Never modify core files in <code>apps/erpnext</code>. Create a dedicated app to hold your translations.</p>
+<p>Bash</p>
+<pre><code class="lang-auto">cd ~/frappe-bench
+# Create a new app (we use --no-git for speed, but we will fix the repo later)
+bench new-app custom_translations --no-git
+
+# Install it on your site
+bench --site site.local install-app custom_translations
+
+</code></pre>
+<hr>
+<h3><a name="p-488354-step-2-extract-source-strings-2" class="anchor" href="#p-488354-step-2-extract-source-strings-2"></a>Step 2: Extract Source Strings</h3>
+<p>To get a full list of translatable strings (including hidden system messages):</p>
+<p>Bash</p>
+<pre><code class="lang-auto">bench --site site.local build-message-files
+
+</code></pre>
+<p><em>Locate the generated source file (<code>all_english_strings.txt</code> or similar) and use it as your <code>INPUT_FILE</code> for the script below.</em></p>
+<hr>
+<h3><a name="p-488354-step-3-ai-translation-and-csv-formatting-script-3" class="anchor" href="#p-488354-step-3-ai-translation-and-csv-formatting-script-3"></a>Step 3: AI Translation and CSV Formatting Script</h3>
+<p>This script performs the translation, saves progress to a database, and outputs a clean, Frappe-compatible CSV file by correctly handling quotes (<code>quoting=csv.QUOTE_ALL</code>)—eliminating the need for a separate cleaning script.</p>
+<p><strong>File:</strong> <code>translate_erpnext.py</code></p>
+<p>Python</p>
+<pre><code class="lang-auto">import asyncio
+import json
+import os
+import csv
+from typing import Dict, List
+# Ensure you install the library for your chosen LLM (e.g., `pip install google-generativeai tqdm`)
+import google.generativeai as genai 
+from tqdm.asyncio import tqdm
+
+# --- CONFIGURATION ---
+API_KEY = "YOUR_API_KEY_HERE"  # Replace with your actual API key
+INPUT_FILE = 'source_strings.txt'  # File containing English strings (one per line)
+PROGRESS_DB_FILE = 'translation_db.json' # Stores progress to allow resuming
+FINAL_OUTPUT_FILE = 'ru.csv' # CHANGE THIS: Use your language code (e.g., 'es.csv', 'de.csv')
+
+BATCH_SIZE = 30
+CONCURRENCY_LIMIT = 1  # Adjust based on your API plan's concurrency limit
+RPM_DELAY = 4.5        # Delay to respect Rate Limits per minute
+
+# --- MODEL SETUP ---
+genai.configure(api_key=API_KEY)
+model = genai.GenerativeModel('gemini-2.0-flash')
+
+# --- SYSTEM PROMPT (CRITICAL: CUSTOMIZE THIS!) ---
+SYSTEM_PROMPT = """
+Role: Senior ERPNext Localization Expert.
+Context: Accounting, Supply Chain, HR, and System Administration.
+
+# !!! CHANGE THE TARGET LANGUAGE BELOW !!!
+Target Language: Russian (RF/KZ context). 
+
+RULES:
+1. Use professional terminology accepted in your region (e.g., "Submit" -&gt; "Провести").
+2. NEVER translate code tags: {{ name }}, %s, {0}, &lt;div&gt;, etc.
+3. If input is technical code or numbers only, return it as is.
+4. Output strict JSON dictionary/object format where keys match the input indices.
+"""
+
+def load_progress() -&gt; dict:
+    """Loads previously translated strings to avoid duplicates."""
+    if not os.path.exists(PROGRESS_DB_FILE):
+        return {}
+    try:
+        with open(PROGRESS_DB_FILE, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except json.JSONDecodeError:
+        print("Warning: Progress DB corrupted. Starting fresh.")
+        return {}
+
+def save_progress(new_data: dict):
+    """Saves progress to JSON database."""
+    current_db = load_progress()
+    current_db.update(new_data)
+    with open(PROGRESS_DB_FILE, 'w', encoding='utf-8') as f:
+        json.dump(current_db, f, ensure_ascii=False, indent=2)
+
+def export_to_csv(translation_db: dict):
+    """
+    Exports the database to a Frappe-compatible CSV format.
+    Crucial: Uses csv.QUOTE_ALL to handle commas/quotes inside strings.
+    """
+    print(f"\nExporting {len(translation_db)} strings to {FINAL_OUTPUT_FILE}...")
+    with open(FINAL_OUTPUT_FILE, 'w', encoding='utf-8', newline='') as f:
+        # csv.QUOTE_ALL ensures that all strings are quoted, protecting commas inside phrases.
+        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
+        for source, target in translation_db.items():
+            writer.writerow([source, target])
+    print("Export complete.")
+
+async def translate_batch(sem, batch_lines: list):
+    """Handles API call for a single batch with retry logic."""
+    async with sem:
+        # Create a dictionary payload for the LLM to process
+        batch_dict = {str(i): line for i, line in enumerate(batch_lines)}
+        text_payload = json.dumps(batch_dict, ensure_ascii=False)
+        
+        prompt = f"Translate the following dictionary values: {text_payload}"
+        
+        # Retry logic for API stability
+        for attempt in range(3):
+            try:
+                # Use to_thread for synchronous API calls within an async loop
+                response = await asyncio.to_thread(
+                    model.generate_content,
+                    contents=[SYSTEM_PROMPT, prompt],
+                    # Requesting a JSON response object
+                    generation_config={"response_mime_type": "application/json"} 
+                )
+                result_json = json.loads(response.text)
+                
+                translated_batch = {}
+                for idx_str, original_text in batch_dict.items():
+                    # Map original text to its translated version from the returned JSON
+                    # Fallback to original text if the translation is missing in the result
+                    translated_batch[original_text] = result_json.get(idx_str, original_text)
+                
+                # Delay to respect RPM limits
+                await asyncio.sleep(RPM_DELAY)
+                return translated_batch
+            except Exception as e:
+                print(f"\n[Error on attempt {attempt+1}] {e}. Retrying...")
+                await asyncio.sleep(5 * (attempt + 1))
+        
+        # Return original text for all lines if all attempts fail
+        return {line: line for line in batch_lines} 
+
+async def main():
+    if not os.path.exists(INPUT_FILE):
+        print(f"Error: Input file '{INPUT_FILE}' not found.")
+        return
+
+    with open(INPUT_FILE, 'r', encoding='utf-8') as f:
+        all_lines = [line.strip() for line in f if line.strip()]
+
+    progress_db = load_progress()
+    remaining_lines = [line for line in all_lines if line not in progress_db]
+    
+    print(f"Total strings: {len(all_lines)} | Already translated: {len(all_lines) - len(remaining_lines)} | Remaining: {len(remaining_lines)}")
+
+    if remaining_lines:
+        batches = [remaining_lines[i:i + BATCH_SIZE] for i in range(0, len(remaining_lines), BATCH_SIZE)]
+        sem = asyncio.Semaphore(CONCURRENCY_LIMIT)
+        
+        pbar = tqdm(total=len(batches), desc="Translating Batches")
+        for batch in batches:
+            result = await translate_batch(sem, batch)
+            # Save results immediately to disk after each batch
+            save_progress(result)
+            pbar.update(1)
+        pbar.close()
+
+    # Final export after all batches are processed
+    final_db = load_progress()
+    export_to_csv(final_db)
+
+if __name__ == "__main__":
+    asyncio.run(main())
+
+</code></pre>
+<hr>
+<h3><a name="p-488354-step-4-the-bench-update-fix-4" class="anchor" href="#p-488354-step-4-the-bench-update-fix-4"></a>Step 4: The “Bench Update” Fix</h3>
+<p>If you created your app with <code>--no-git</code>, running <code>bench update</code> might crash with:</p>
+<blockquote>
+<p><code>AttributeError: 'App' object has no attribute 'tag'</code></p>
+</blockquote>
+<p>This happens because Bench expects a git repository. <strong>The Fix:</strong> Initialize a dummy local git repo inside your app.</p>
+<p>Bash</p>
+<pre><code class="lang-auto">cd ~/frappe-bench/apps/custom_translations
+
+# Initialize git to satisfy Bench requirements
+git init
+git config user.email "local@admin.com"
+git config user.name "Local Admin"
+git add .
+git commit -m "Initial commit to fix bench update error"
+
+</code></pre>
+<hr>
+<h3><a name="p-488354-step-5-deployment-5" class="anchor" href="#p-488354-step-5-deployment-5"></a>Step 5: Deployment</h3>
+<ol>
+<li>
+<p><strong>Upload the CSV:</strong> Copy your generated CSV (e.g., <code>ru.csv</code>) to your server: <code>~/frappe-bench/apps/custom_translations/custom_translations/translations/</code></p>
+</li>
+<li>
+<p><strong>Apply Changes (Server-side):</strong> Translation files from Custom Apps have higher priority than core files, but you must trigger a migration to load them into the database.</p>
+<p>Bash</p>
+<pre><code class="lang-auto">cd ~/frappe-bench
+
+# 1. Force migration to parse the new CSV (Replace 'site.local')
+bench --site site.local migrate
+
+# 2. Clear Redis cache (Critical for translations)
+bench clear-cache
+
+# 3. Restart services
+sudo supervisorctl restart all
+
+</code></pre>
+</li>
+</ol>
+<h3><a name="p-488354-result-6" class="anchor" href="#p-488354-result-6"></a>Result</h3>
+<p>Your ERPNext instance is now fully localized. Since the translations live in a Custom App, they will <strong>not</strong> be overwritten when you update ERPNext framework code.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/LuHoChi'><span itemprop='name'>LuHoChi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-16T08:19:09Z' class='post-time'>
+                    December 16, 2025,  8:19am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-16T08:19:09Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="McSnoozy" data-post="1" data-topic="157758">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/mcsnoozy/48/92481_2.png" class="avatar"> McSnoozy:</div>
+<blockquote>
+<p>Step 2: Extract Source Strings</p>
+</blockquote>
+</aside>
+<p>I can’t find the files . Can you let me know where your files is located. THX</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/McSnoozy'><span itemprop='name'>McSnoozy</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-16T08:51:08Z' class='post-time'>
+                    December 16, 2025,  8:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-16T08:51:08Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi! When you run <code>bench build-message-files</code>, the command generates a CSV file (often named <code>message_files.csv</code> or similar) inside your sites folder, or it simply updates the translation JSON/CSV files within each app’s folder (e.g., <code>frappe-bench/apps/erpnext/erpnext/translations/</code>).</p>
+<p>However, the command output in the terminal usually tells you exactly where the file was saved.</p>
+<p>You can download the generated file from your server to your local machine using <code>scp</code>. For example:</p>
+<pre><code class="lang-auto"># Run in terminal on your local machine (not the server)
+scp user@your-server-ip:/home/frappe/frappe-bench/sites/site_name/message_files.csv .
+
+</code></pre>
+<p><em>(Replace paths with the actual path shown in your terminal output).</em></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/LuHoChi'><span itemprop='name'>LuHoChi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-17T09:00:19Z' class='post-time'>
+                    December 17, 2025,  9:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-17T09:00:19Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for your quickly reply.</p>
+<p>Unfortunately, no feedback was seen on the terminal screen regarding the execution of this command. Anyway I can find some csv files in apps\erpnext\erpnext\translations that has been modified after execution of this command. It would be the files i looking for.</p>
+<p>I will try to import to the python script and see what’s happen.</p>
+<p>THX again.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

@@ -1,0 +1,9 @@
+const classes=['container-day1',"container-day2","btn-day1","btn-day2"]
+const containerDay1=document.querySelector('.container-day1')
+const containerDay2=document.querySelector('.container-day2')
+const btnDay1=document.querySelector('.btn-day1')
+const btnDay2=document.querySelector('.btn-day2')
+btnDay1.addEventListener('click',()=>{containerDay1.style.display='flex'
+containerDay2.style.display='none'})
+btnDay2.addEventListener('click',()=>{containerDay1.style.display='none'
+containerDay2.style.display='flex'})

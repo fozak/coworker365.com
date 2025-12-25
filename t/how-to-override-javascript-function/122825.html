@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How to override JavaScript Function - Customization - Frappe Forum</title>
+    <meta name="description" content="Hello everyone, 
+I am using Opportunity doctype in Frappe. Whenever I create an event, emails are automatically sent to the associated contact, which is not intended. I specifically want emails to be sent only to the eve&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/how-to-override-javascript-function/122825" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;How to override JavaScript Function&#39;" href="https://discuss.frappe.io/t/how-to-override-javascript-function/122825.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/how-to-override-javascript-function/122825" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/how-to-override-javascript-function/122825" />
+<meta property="og:title" content="How to override JavaScript Function" />
+<meta name="twitter:title" content="How to override JavaScript Function" />
+<meta property="og:description" content="Hello everyone,  I am using Opportunity doctype in Frappe. Whenever I create an event, emails are automatically sent to the associated contact, which is not intended. I specifically want emails to be sent only to the event’s creator.  I’ve identified the function responsible for sending emails, which is located in form_timeline.js:  get_recipient() {  if (this.frm.email_field) {  return this.frm.doc[this.frm.email_field];  } else {  return this.frm.doc.email_id || this.frm.doc.email || “”;  }  } ..." />
+<meta name="twitter:description" content="Hello everyone,  I am using Opportunity doctype in Frappe. Whenever I create an event, emails are automatically sent to the associated contact, which is not intended. I specifically want emails to be sent only to the event’s creator.  I’ve identified the function responsible for sending emails, which is located in form_timeline.js:  get_recipient() {  if (this.frm.email_field) {  return this.frm.doc[this.frm.email_field];  } else {  return this.frm.doc.email_id || this.frm.doc.email || “”;  }  } ..." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:section" content="Customization" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:tag" content="event-hooks" />
+<meta property="og:article:tag" content="frappe" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="8 ❤" />
+<meta property="article:published_time" content="2024-05-09T11:26:50+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"How to override JavaScript Function","mainEntity":{"@type":"Question","name":"How to override JavaScript Function","text":"Hello everyone,\n\nI am using Opportunity doctype in Frappe. Whenever I create an event, emails are automatically sent to the associated contact, which is not intended. I specifically want emails to be sent only to the event’s creator.\n\nI’ve identified the function responsible for sending emails, whic&hellip;","upvoteCount":1,"answerCount":0,"datePublished":"2024-05-09T11:26:50.815Z","author":{"@type":"Person","name":"Anisha_Jain","url":"https://discuss.frappe.io/u/Anisha_Jain"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/how-to-override-javascript-function/122825">How to override JavaScript Function</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/customization/28" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Customization</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/event-hooks' class='discourse-tag' rel="tag">event-hooks</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='How to override JavaScript Function'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/how-to-override-javascript-function/122825'>
+      <meta itemprop='datePublished' content='2024-05-09T11:26:50Z'>
+        <meta itemprop='articleSection' content='Customization'>
+      <meta itemprop='keywords' content='event-hooks, frappe'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Anisha_Jain'><span itemprop='name'>Anisha_Jain</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/how-to-override-javascript-function/122825">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2024-05-09T11:26:50Z' class='post-time'>
+                    May 9, 2024, 11:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-09T11:26:50Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello everyone,</p>
+<p>I am using Opportunity doctype in Frappe. Whenever I create an event, emails are automatically sent to the associated contact, which is not intended. I specifically want emails to be sent only to the event’s creator.<br>
+I’ve identified the function responsible for sending emails, which is located in <code>form_timeline.js</code>:<br>
+get_recipient() {<br>
+if (this.frm.email_field) {<br>
+return this.frm.doc[this.frm.email_field];<br>
+} else {<br>
+return this.frm.doc.email_id || this.frm.doc.email || “”;<br>
+}<br>
+}</p>
+<p>Could someone please advise on how to override this function or suggest an alternative method to ensure emails are sent only to the event creator? Your assistance is greatly appreciated.</p>
+<p>Thank you!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/relocate-collapse-all-expand-button/157759/2">Relocate Collapse all/Expand button</a>
+                        <meta itemprop='position' content='1'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abdeali'><span itemprop='name'>Abdeali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-10T06:03:05Z' class='post-time'>
+                    May 10, 2024,  6:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-10T06:03:05Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="onebox stackexchange" data-onebox-src="https://stackoverflow.com/questions/21243790/is-it-possible-to-redefine-a-javascript-classs-method">
+  <header class="source">
+
+      <a href="https://stackoverflow.com/questions/21243790/is-it-possible-to-redefine-a-javascript-classs-method" target="_blank" rel="noopener nofollow ugc">stackoverflow.com</a>
+  </header>
+
+  <article class="onebox-body">
+      <a href="https://stackoverflow.com/users/244104/tronman" target="_blank" rel="noopener nofollow ugc">
+    <img alt="tronman" src="https://i.stack.imgur.com/rf8O7.jpg?s=256&amp;g=1" class="thumbnail onebox-avatar" width="256" height="256">
+  </a>
+
+<h4>
+  <a href="https://stackoverflow.com/questions/21243790/is-it-possible-to-redefine-a-javascript-classs-method" target="_blank" rel="noopener nofollow ugc">Is it possible to redefine a JavaScript class's method?</a>
+</h4>
+
+<div class="tags">
+  <strong>javascript, class</strong>
+</div>
+
+<div class="date">
+  asked by
+  
+  <a href="https://stackoverflow.com/users/244104/tronman" target="_blank" rel="noopener nofollow ugc">
+    tronman
+  </a>
+  on <a href="https://stackoverflow.com/questions/21243790/is-it-possible-to-redefine-a-javascript-classs-method" target="_blank" rel="noopener nofollow ugc">08:43PM - 20 Jan 14 UTC</a>
+</div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abdeali'><span itemprop='name'>Abdeali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-22T09:18:17Z' class='post-time'>
+                    May 22, 2024,  9:18am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-22T09:18:17Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>You can do monkey patching in your custom app. In your app’s hook, see the <code>app_include_js</code> list, and add your monkey patching file there. If no file is listed, you can create your own, like <code>patching.bundle.js</code>, in the <code>public/js</code> folder.</p>
+<p>The code should look like this:</p>
+<pre data-code-wrap="js"><code class="lang-js">import FormTimeline from "../frappe/frappe/public/js/frappe/form/footer/form_timeline";
+
+FormTimeline.prototype.get_recipient = function() {
+  // your code
+}
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Kiranmai'><span itemprop='name'>Kiranmai</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-03T08:00:44Z' class='post-time'>
+                    August 3, 2024,  8:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-03T09:43:41Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/abdeali">@Abdeali</a><br>
+I have one custom function <strong>make_quality_inspection</strong> in custom_app.js.</p>
+<p>i want to override the core js function by this function.</p>
+<p>That core function is : <strong>/home/kiranmai/Desktop/ERPNext/frappe-bench/apps/erpnext/erpnext/public/js/controllers/transaction.make_quality_inspection</strong></p>
+<p>Can anyone please share the steps.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Kiranmai'><span itemprop='name'>Kiranmai</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-03T08:26:09Z' class='post-time'>
+                    August 3, 2024,  8:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-03T09:43:57Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Anyone?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abdeali'><span itemprop='name'>Abdeali</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/6/6/66b0799010fbdbe31a630e51b0f6e732e2dcce78.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-03T09:51:27Z' class='post-time'>
+                    August 3, 2024,  9:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-03T09:51:27Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Make folder structure like (depends on you):<br>
+<img src="https://discuss.frappe.io/uploads/default/original/3X/6/6/66b0799010fbdbe31a630e51b0f6e732e2dcce78.png" alt="image" data-base62-sha1="eEqNs2FF9Y1NF71gDYP0BZLadoQ" width="508" height="210"></p>
+<p><strong>forum_issue.bundle.js :</strong></p>
+<pre data-code-wrap="js"><code class="lang-js">import "./monkey_patch/transaction.js";
+</code></pre>
+<p><strong>transaction.js :</strong></p>
+<pre data-code-wrap="js"><code class="lang-js">erpnext.TransactionController.prototype.make_quality_inspection = function () {
+	// Your new implementation goes here
+};
+</code></pre>
+<p><strong>hooks.py:</strong></p>
+<pre data-code-wrap="py"><code class="lang-py">app_include_js = ["forum_issue.bundle.js"]
+</code></pre>
+<p>Note: forum_issue <img src="https://discuss.frappe.io/images/emoji/twitter/arrow_right.png?v=12" title=":arrow_right:" class="emoji" alt=":arrow_right:" loading="lazy" width="20" height="20"> YOUR_APP_NAME</p>
+<p>If not works build the bench.</p>
+<pre data-code-wrap="bash"><code class="lang-bash">bench build --app YOUR_APP_NAME
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/restrict-to-do-quality-inspections-of-items-based-on-condition/129340/2">Restrict to do Quality Inspections of items based on Condition</a>
+                        <meta itemprop='position' content='1'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/how-to-override-financial-statement-js/135169/7">How to override financial_statement.js?</a>
+                        <meta itemprop='position' content='2'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Kiranmai'><span itemprop='name'>Kiranmai</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-03T09:58:13Z' class='post-time'>
+                    August 3, 2024,  9:58am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-03T09:58:13Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/abdeali">@Abdeali</a> Thanks for your reply!</p>
+<p>I followed all above mentioned steps and im getting error : GET <a href="http://127.0.0.1:8000/hilltop.bundle.js" rel="noopener nofollow ugc">http://127.0.0.1:8000/hilltop.bundle.js</a> net::ERR_ABORTED 404 (NOT FOUND)Understand this error<br>
+jquery.js:3539</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abdeali'><span itemprop='name'>Abdeali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-03T10:04:23Z' class='post-time'>
+                    August 3, 2024, 10:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-03T10:04:23Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>have you try to build?</p>
+<p>Or can you share hook and folder structure?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Kiranmai'><span itemprop='name'>Kiranmai</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-03T10:19:41Z' class='post-time'>
+                    August 3, 2024, 10:19am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-03T11:03:01Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/abdeali">@Abdeali</a> I resolved it.</p>
+<p>Is monkey_patch  a correct method to follow to override core js functions??<br>
+Is there any method to do the same??</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abdeali'><span itemprop='name'>Abdeali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-03T13:15:27Z' class='post-time'>
+                    August 3, 2024,  1:15pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-03T13:15:27Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I don’t know other than monkey patching.</p>
+<p>But you have to take care of original function/method. If Its change its behavior or signature then maybe your code can break.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/basil'><span itemprop='name'>basil</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-30T12:05:54Z' class='post-time'>
+                    October 30, 2025, 12:05pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-30T12:05:54Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/abdeali">@Abdeali</a></p>
+<p>I was trying to create override a function from healthcare app which is I need create custom code for update_status method which is originally defined in patient_appointment.js</p>
+<p>can I know how can override a function and it is not a class</p>
+<p>Thanks is advance</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abdeali'><span itemprop='name'>Abdeali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-30T12:16:24Z' class='post-time'>
+                    October 30, 2025, 12:16pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-30T12:16:24Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <ul>
+<li><strong>Monkey Patching show_alert:</strong> <code>position</code> argument for <code>show_alert()</code></li>
+</ul>
+<pre data-code-wrap="javascript"><code class="lang-javascript">const original_show_alert = frappe.show_alert;
+const VALID_POSITIONS = {
+    top: "100px",
+    bottom: "0px"
+};
+
+function alert_custom_position(message, seconds, actions) {
+    let alert_container = original_show_alert(message, seconds, actions);
+
+    if (typeof message === "object" &amp;&amp; VALID_POSITIONS.hasOwnProperty(message.position)) {
+        let alert_element = document.querySelector("#alert-container");
+        if (alert_element) {
+            Object.keys(VALID_POSITIONS).forEach(position =&gt; {
+                if (position !== message.position) {
+                    alert_element.style.removeProperty(position);
+                }
+            });
+
+            alert_element.style.setProperty(message.position, VALID_POSITIONS[message.position], 'important');
+        }
+    }
+
+    return alert_container;
+}
+
+frappe.show_alert = alert_custom_position;
+</code></pre>
+<p>In your case you have to import function.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/abhirock74'><span itemprop='name'>abhirock74</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/b/b/bb121444af5d14c2bc526cbd3b914d348472b296.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-31T02:12:05Z' class='post-time'>
+                    October 31, 2025,  2:12am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-31T02:12:05Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="Anisha_Jain" data-post="1" data-topic="122825">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/anisha_jain/48/51494_2.png" class="avatar"> Anisha_Jain:</div>
+<blockquote>
+<p>get_recipient</p>
+</blockquote>
+</aside>
+<p>Yes <a class="mention" href="/u/anisha_jain">@Anisha_Jain</a><br>
+This function is in FormTimeline class you can extend this class and overwrite the get_recipient function and the add the overwrite js file through hooks.py</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/b/b/bb121444af5d14c2bc526cbd3b914d348472b296.png" data-download-href="https://discuss.frappe.io/uploads/default/bb121444af5d14c2bc526cbd3b914d348472b296" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/b/b/bb121444af5d14c2bc526cbd3b914d348472b296_2_690x455.png" alt="image" data-base62-sha1="qGU1klQbvijQJCQuepEofxnH1k2" width="690" height="455" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/b/b/bb121444af5d14c2bc526cbd3b914d348472b296_2_690x455.png, https://discuss.frappe.io/uploads/default/optimized/3X/b/b/bb121444af5d14c2bc526cbd3b914d348472b296_2_1035x682.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/b/b/bb121444af5d14c2bc526cbd3b914d348472b296.png 2x" data-dominant-color="232425"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1164×768 117 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/basil'><span itemprop='name'>basil</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-31T05:27:32Z' class='post-time'>
+                    October 31, 2025,  5:27am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-31T05:27:32Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you for your reply!<br>
+Can you give me a hint which is how can I import a function which is not exported in the original file ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abdeali'><span itemprop='name'>Abdeali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-03T04:56:29Z' class='post-time'>
+                    November 3, 2025,  4:56am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-03T04:56:29Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,</p>
+<p>It wouldn’t work.</p>
+<p>What is your use case?</p>
+<p>I would suggest, hide that `cancel` custom button and create your own custom button and create your own logic.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

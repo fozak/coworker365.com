@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Agent jobs not running - Frappe Cloud - Frappe Forum</title>
+    <meta name="description" content="I have a production Press server that I set up about 2 months ago it’s running fine, no problems there. 
+But now I started a new project to self-host Frappe Cloud from scratch, and I’m hitting two problems: 
+
+
+Deploy Can&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/agent-jobs-not-running/151255" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Agent jobs not running&#39;" href="https://discuss.frappe.io/t/agent-jobs-not-running/151255.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/e/9/e932060cc487c2d44fe09a03b6da45b24abf51fe.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/e/9/e932060cc487c2d44fe09a03b6da45b24abf51fe.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/agent-jobs-not-running/151255" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/agent-jobs-not-running/151255" />
+<meta property="og:title" content="Agent jobs not running" />
+<meta name="twitter:title" content="Agent jobs not running" />
+<meta property="og:description" content="I have a production Press server that I set up about 2 months ago it’s running fine, no problems there.  But now I started a new project to self-host Frappe Cloud from scratch, and I’m hitting two problems:    Deploy Candidate builds → when I build &amp; deploy, the status stays stuck at “Scheduled” and never proceeds.       Update Agent task → when I try to update the agent from Press, I get this error:    requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)  Looks like th..." />
+<meta name="twitter:description" content="I have a production Press server that I set up about 2 months ago it’s running fine, no problems there.  But now I started a new project to self-host Frappe Cloud from scratch, and I’m hitting two problems:    Deploy Candidate builds → when I build &amp; deploy, the status stays stuck at “Scheduled” and never proceeds.       Update Agent task → when I try to update the agent from Press, I get this error:    requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)  Looks like th..." />
+<meta property="og:article:section" content="Frappe Cloud" />
+<meta property="og:article:section:color" content="0088CC" />
+<meta property="og:article:tag" content="installation_problem" />
+<meta property="og:article:tag" content="frappecloud" />
+<meta property="og:article:tag" content="frappe" />
+<meta property="og:article:tag" content="bug" />
+<meta property="article:published_time" content="2025-08-07T05:23:54+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Agent jobs not running","mainEntity":{"@type":"Question","name":"Agent jobs not running","text":"I have a production Press server that I set up about 2 months ago it’s running fine, no problems there.\n\nBut now I started a new project to self-host Frappe Cloud from scratch, and I’m hitting two problems:\n\nDeploy Candidate builds → when I build &amp; deploy, the status stays stuck at “Scheduled” and&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-08-07T05:23:54.350Z","author":{"@type":"Person","name":"ArunPS","url":"https://discuss.frappe.io/u/ArunPS"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/agent-jobs-not-running/151255">Agent jobs not running</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/frappe-cloud/77" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0088CC'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Cloud</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/installation_problem' class='discourse-tag' rel="tag">installation_problem</a>, 
+            <a href='https://discuss.frappe.io/tag/frappecloud' class='discourse-tag' rel="tag">frappecloud</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
+            <a href='https://discuss.frappe.io/tag/bug' class='discourse-tag' rel="tag">bug</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Agent jobs not running'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/agent-jobs-not-running/151255'>
+      <meta itemprop='datePublished' content='2025-08-07T05:23:54Z'>
+        <meta itemprop='articleSection' content='Frappe Cloud'>
+      <meta itemprop='keywords' content='installation_problem, frappecloud, frappe, bug'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ArunPS'><span itemprop='name'>ArunPS</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/agent-jobs-not-running/151255">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/e/9/e932060cc487c2d44fe09a03b6da45b24abf51fe.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-08-07T05:23:54Z' class='post-time'>
+                    August 7, 2025,  5:23am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-07T05:23:54Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have a production Press server that I set up about 2 months ago it’s running fine, no problems there.<br>
+But now I started a <strong>new project</strong> to self-host Frappe Cloud from scratch, and I’m hitting two problems:</p>
+<ol>
+<li>
+<p><strong>Deploy Candidate builds</strong> → when I build &amp; deploy, the status stays stuck at <strong>“Scheduled”</strong> and never proceeds.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/e/9/e932060cc487c2d44fe09a03b6da45b24abf51fe.png" data-download-href="https://discuss.frappe.io/uploads/default/e932060cc487c2d44fe09a03b6da45b24abf51fe" title="image"><img src="https://discuss.frappe.io/uploads/default/original/3X/e/9/e932060cc487c2d44fe09a03b6da45b24abf51fe.png" alt="image" data-base62-sha1="xgWqoALhOluKmuI3ZijaEHIvfKS" width="690" height="431"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">690×431 77.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+</li>
+<li>
+<p><strong>Update Agent task</strong> → when I try to update the agent from Press, I get this error:</p>
+</li>
+</ol>
+<pre><code class="lang-auto">requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+</code></pre>
+<p>Looks like the agent is returning an empty/invalid JSON, so <code>response.json()</code> fails.</p>
+<p>]</p>
+<p>This is weird because my older prod setup works fine, but on this new self-hosted one, both the deploy and the update agent fail.</p>
+<p>error<br>
+`</p>
+<h3><a name="p-476576-app-versions-1" class="anchor" href="#p-476576-app-versions-1"></a>App Versions</h3>
+<pre><code class="lang-auto">{"frappe": "15.75.0","press": "0.7.0"}
+</code></pre>
+<h3><a name="p-476576-route-2" class="anchor" href="#p-476576-route-2"></a>Route</h3>
+<pre><code class="lang-auto">Form/Database Server/m1.zinyecloud.com
+</code></pre>
+<h3><a name="p-476576-traceback-3" class="anchor" href="#p-476576-traceback-3"></a>Traceback</h3>
+<pre><code class="lang-auto">Traceback (most recent call last):  File "env/lib/python3.10/site-packages/requests/models.py", line 971, in json    return complexjson.loads(self.text, **kwargs)  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads    return _default_decoder.decode(s)  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode    obj, end = self.raw_decode(s, idx=_w(s, 0).end())  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode    raise JSONDecodeError("Expecting value", s, err.value) from Nonejson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)During handling of the above exception, another exception occurred:Traceback (most recent call last):  File "apps/frappe/frappe/app.py", line 115, in application    response = frappe.api.handle(request)  File "apps/frappe/frappe/api/__init__.py", line 49, in handle    data = endpoint(**arguments)  File "apps/frappe/frappe/api/v1.py", line 36, in handle_rpc_call    return frappe.handler.handle()  File "apps/frappe/frappe/handler.py", line 51, in handle    data = execute_cmd(cmd)  File "apps/frappe/frappe/handler.py", line 84, in execute_cmd    return frappe.call(method, **frappe.form_dict)  File "apps/frappe/frappe/__init__.py", line 1754, in call    return fn(*args, **newargs)  File "apps/frappe/frappe/handler.py", line 334, in run_doc_method    response = doc.run_method(method)  File "apps/frappe/frappe/model/document.py", line 1007, in run_method    out = Document.hook(fn)(self, *args, **kwargs)  File "apps/frappe/frappe/model/document.py", line 1367, in composer    return composed(self, method, *args, **kwargs)  File "apps/frappe/frappe/model/document.py", line 1349, in runner    add_to_return_value(self, fn(self, *args, **kwargs))  File "apps/frappe/frappe/model/document.py", line 1004, in fn    return method_object(*args, **kwargs)  File "apps/frappe/frappe/utils/typing_validations.py", line 32, in wrapper    return func(*args, **kwargs)  File "apps/press/press/press/doctype/server/server.py", line 475, in update_agent    return agent.update()  File "apps/press/press/agent.py", line 1173, in update    return self.post("update", data={"url": url, "branch": branch})  File "apps/press/press/agent.py", line 880, in post    return self.request("POST", path, data, raises=raises)  File "apps/press/press/agent.py", line 920, in request    self.handle_request_failure(agent_job, response)  File "apps/press/press/agent.py", line 909, in request    json_response = response.json()  File "env/lib/python3.10/site-packages/requests/models.py", line 975, in json    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0) 
+</code></pre>
+<h3><a name="p-476576-request-data-4" class="anchor" href="#p-476576-request-data-4"></a>Request Data</h3>
+<pre><code class="lang-auto">{  "type": "POST",  "args": {    "docs": "{\"name\":\"m1.zinyecloud.com\",\"owner\":\"Administrator\",\"creation\":\"2025-08-04 15:43:26.481787\",\"modified\":\"2025-08-04 15:59:24.116242\",\"modified_by\":\"Administrator\",\"docstatus\":0,\"idx\":0,\"status\":\"Active\",\"hostname\":\"m1\",\"hostname_abbreviation\":\"m1\",\"domain\":\"zinyecloud.com\",\"cluster\":\"Default\",\"provider\":\"Generic\",\"public\":1,\"is_self_hosted\":0,\"enable_physical_backup\":0,\"halt_agent_jobs\":0,\"enable_binlog_indexing\":0,\"is_server_setup\":1,\"is_server_renamed\":0,\"is_server_prepared\":0,\"team\":\"00qcv9ju74\",\"auto_add_storage_min\":25,\"auto_add_storage_max\":250,\"auto_increase_storage\":1,\"ip\":\"5.161.30.109\",\"private_ip\":\"5.161.30.109\",\"agent_password\":\"********************************\",\"self_hosted_mariadb_server\":\"5.161.30.109\",\"mariadb_root_password\":\"********************************\",\"server_id\":1,\"is_primary\":1,\"is_replication_setup\":0,\"ssh_port\":22,\"root_public_key\":\"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDE7tjtqxyuZEvKk+YbfCGZDFZ/fbkzFLwQyDwCVbhyll88XLAIFiRamF3H7DzGlv8WqXGDTc6S0+/wZecHTQQUsTGe7RzyVnSAN7/a60GPn1XzP30czDDua6Di8RmFoPrYPRM97bc9XZcMcLw1RlK7DFRbECVhr5q2uhPoGSVU4HHV8bF9PKLKzCAAr0NiNEf0rCmEBShVCWHT/Cez/B5PkDgSuTZVHT1AxhnGqw037lLAu8SYirc+UAfzgr0/cAPxsTZMcJEuiDRWfOutIno7fuDW6axNh75w/ptqfu0EFivSSwW6k/k5rjXF59XH7meh1DTwVqb7vExqWfl2/HA2qWki4veoEPYuJbijpQe0sDRUUvuXgGFScC95jT2NyLTbVoaSzYfX3U0DkoTABE2Pw49p0S9BI5hW3svX/5N5vsMPdgcd0DYUL974g+ErW/usvljejEGGj5RKG/AXx5OZqaVuHD9h6GtRqtazjgU2CK19ltoU0mBuE7zaGjFqHnc= ansible-generated on Database\",\"ram\":0,\"has_data_volume\":0,\"memory_high\":0,\"memory_max\":0,\"memory_swap_max\":0.1,\"memory_allocator\":\"TCMalloc\",\"is_performance_schema_enabled\":0,\"is_stalk_setup\":0,\"stalk_gdb_collector\":0,\"stalk_strace_collector\":0,\"stalk_function\":\"status\",\"stalk_variable\":\"Threads_running\",\"stalk_threshold\":25,\"stalk_interval\":1,\"stalk_cycles\":5,\"stalk_sleep\":300,\"binlog_retention_days\":14,\"binlogs_removed\":0,\"doctype\":\"Database Server\",\"mariadb_system_variables\":[],\"tags\":[],\"mounts\":[{\"name\":1,\"owner\":\"Administrator\",\"creation\":\"2025-08-04 15:43:26.481787\",\"modified\":\"2025-08-04 15:59:24.116242\",\"modified_by\":\"Administrator\",\"docstatus\":0,\"idx\":1,\"mount_type\":\"Volume\",\"volume_id\":\"103015637\",\"filesystem\":\"ext4\",\"status\":\"Success\",\"source\":\"/dev/disk/by-id/scsi-0HC_Volume_103015637\",\"uuid\":\"316c5b09-d2db-43e3-873b-91e71e69130c\",\"mount_point\":\"/var/lib/mysql\",\"mount_options\":\"defaults\",\"mount_point_owner\":\"root\",\"mount_point_group\":\"root\",\"mount_point_mode\":\"0755\",\"parent\":\"m1.zinyecloud.com\",\"parentfield\":\"mounts\",\"parenttype\":\"Database Server\",\"doctype\":\"Server Mount\"}],\"__last_sync_on\":\"2025-08-06T11:14:33.725Z\"}",    "method": "update_agent"  },  "headers": {},  "error_handlers": {},  "url": "/api/method/run_doc_method",  "request_id": null}
+</code></pre>
+<h3><a name="p-476576-response-data-5" class="anchor" href="#p-476576-response-data-5"></a>Response Data</h3>
+<pre><code class="lang-auto">{"exception": "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)","exc_type": "JSONDecodeError","_exc_source": "press (app)"}
+</code></pre>
+<p>`</p>
+<p>Any input will be appreciated …Also i have a small doubt whether this error is due to the new agent code…</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[uuid] Why core Doctypes lack of protected unique identifiers? - Customization - Frappe Forum</title>
+    <meta name="description" content="Hello all, I know there are some old posts about the subject, but did not found the answer I am looking for. It seems to me there is not much importance given to unique identifiers in core doctypes. I noticed the user mo&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/uuid-why-core-doctypes-lack-of-protected-unique-identifiers/61201" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[uuid] Why core Doctypes lack of protected unique identifiers?&#39;" href="https://discuss.frappe.io/t/uuid-why-core-doctypes-lack-of-protected-unique-identifiers/61201.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/uuid-why-core-doctypes-lack-of-protected-unique-identifiers/61201" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/uuid-why-core-doctypes-lack-of-protected-unique-identifiers/61201" />
+<meta property="og:title" content="[uuid] Why core Doctypes lack of protected unique identifiers?" />
+<meta name="twitter:title" content="[uuid] Why core Doctypes lack of protected unique identifiers?" />
+<meta property="og:description" content="Hello all, I know there are some old posts about the subject, but did not found the answer I am looking for. It seems to me there is not much importance given to unique identifiers in core doctypes. I noticed the user model has an idx. but generally, queries are based on .name field which can change on time.  So, 1 . how do you manage to make sure your site will not break when the user has ie: changed his name, or when an article is renamed.  2 Why the core team does not give more relevance to s..." />
+<meta name="twitter:description" content="Hello all, I know there are some old posts about the subject, but did not found the answer I am looking for. It seems to me there is not much importance given to unique identifiers in core doctypes. I noticed the user model has an idx. but generally, queries are based on .name field which can change on time.  So, 1 . how do you manage to make sure your site will not break when the user has ie: changed his name, or when an article is renamed.  2 Why the core team does not give more relevance to s..." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:section" content="Customization" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="4 ❤" />
+<meta property="article:published_time" content="2020-05-05T08:53:16+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"[uuid] Why core Doctypes lack of protected unique identifiers?","mainEntity":{"@type":"Question","name":"[uuid] Why core Doctypes lack of protected unique identifiers?","text":"Hello all, I know there are some old posts about the subject, but did not found the answer I am looking for. It seems to me there is not much importance given to unique identifiers in core doctypes. I noticed the user model has an idx. but generally, queries are based on .name field which can change&hellip;","upvoteCount":1,"answerCount":1,"datePublished":"2020-05-05T08:53:16.239Z","author":{"@type":"Person","name":"AlvaroMolano","url":"https://discuss.frappe.io/u/AlvaroMolano"},"acceptedAnswer":{"@type":"Answer","text":"There’s no real needance for UUID, except in cases where you are handling with partitionated databases.\n\nIn case of ERPNext, the hability to rename and merge, is the way to go, to solve minor issues like when it happens, and frappe framework provide events to manage renaming and merging documents, a&hellip;","upvoteCount":1,"datePublished":"2020-05-05T20:18:01.879Z","url":"https://discuss.frappe.io/t/uuid-why-core-doctypes-lack-of-protected-unique-identifiers/61201/3","author":{"@type":"Person","name":"max_morais_dmm","url":"https://discuss.frappe.io/u/max_morais_dmm"}}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/uuid-why-core-doctypes-lack-of-protected-unique-identifiers/61201">[uuid] Why core Doctypes lack of protected unique identifiers?</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/customization/28" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Customization</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[uuid] Why core Doctypes lack of protected unique identifiers?'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/uuid-why-core-doctypes-lack-of-protected-unique-identifiers/61201'>
+      <meta itemprop='datePublished' content='2020-05-05T08:53:16Z'>
+        <meta itemprop='articleSection' content='Customization'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/AlvaroMolano'><span itemprop='name'>AlvaroMolano</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/uuid-why-core-doctypes-lack-of-protected-unique-identifiers/61201">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2020-05-05T08:53:16Z' class='post-time'>
+                    May 5, 2020,  8:53am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-05T08:53:16Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello all, I know there are some old posts about the subject, but did not found the answer I am looking for. It seems to me there is not much importance given to unique identifiers in core doctypes. I noticed the user model has an idx. but generally, queries are based on .name field which can change on time.</p>
+<p>So, 1 <em>. how do you manage to make sure your site will not break when the user has ie: changed his name, or when an article is renamed.</em><br>
+2 <em>Why the core team does not give more relevance to safe queries against fields that will not change on time?</em></p>
+<p>I am working on version-12, I would add in frappe or erpnext to some core doctypes the field uid and set the naming series. But, I am afraid after an update or a migration this gets broken. 3. <em>What does the community suggest?</em><br>
+4 <em>What would be the process to persist those changes in a safe way?</em></p>
+<p>Thanks</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/neerajvkn'><span itemprop='name'>neerajvkn</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-05T19:25:09Z' class='post-time'>
+                    May 5, 2020,  7:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-05T19:25:09Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>wondered the same especially for customer doctype, would make fetching docs related to those customer a lot easy since we will not have to worry about 2 customers with same name,</p>
+<p>1 -  core docs can have custom naming series defined, 4 - create a custom app and set a naming series for that core doc.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/max_morais_dmm'><span itemprop='name'>max_morais_dmm</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/f/f/ffde021d2ad01b507ea6d73e4a649ab220788098.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-05T20:18:01Z' class='post-time'>
+                    May 5, 2020,  8:18pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-05T20:18:01Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>There’s no real needance for UUID, except in cases where you are handling with partitionated databases.</p>
+<p>In case of ERPNext, the hability to rename and merge, is the way to go, to solve minor issues like when it happens, and frappe framework provide events to manage renaming and merging documents, and what should be the behavior.</p>
+<p>Also you are right that erpnext dont comply when you change the email of the user, when it’s supposed to be renamed, it’s not. I think it’s a bit ugly, but keep things a bit consistent.</p>
+<p>Also <code>idx</code> doesn’t serve as the purpose you are thinking about.<br>
+Idx is an ordering integer field, that is used, when the <code>User</code> doctype get embbeded in a child table, so the <code>idx</code> field will be filled, to preserve the order of the rows, on the UI.</p>
+<p>You can use the doc_event, before_naming, to implement your own policy, to move all doctypes you want to make use UUID, but you will see that Link fields, have an lack of title handling, when it happens and you will end-up with screens like that one</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/f/ffde021d2ad01b507ea6d73e4a649ab220788098.png" data-download-href="https://discuss.frappe.io/uploads/default/ffde021d2ad01b507ea6d73e4a649ab220788098" title="ERPNext_Shared_Database_with_25_GB_225682f5_c32a_4048_ab64_04ae0bcea5a3"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/f/f/ffde021d2ad01b507ea6d73e4a649ab220788098_2_689x186.png" alt="ERPNext_Shared_Database_with_25_GB_225682f5_c32a_4048_ab64_04ae0bcea5a3" data-base62-sha1="Avvp8B6jgFX2OirdC6GctdJbMbm" width="689" height="186" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/f/f/ffde021d2ad01b507ea6d73e4a649ab220788098_2_689x186.png, https://discuss.frappe.io/uploads/default/optimized/3X/f/f/ffde021d2ad01b507ea6d73e4a649ab220788098_2_1033x279.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/f/f/ffde021d2ad01b507ea6d73e4a649ab220788098.png 2x" data-dominant-color="F9F9F8"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">ERPNext_Shared_Database_with_25_GB_225682f5_c32a_4048_ab64_04ae0bcea5a3</span><span class="informations">1344×364 34.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/felix'><span itemprop='name'>felix</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-05T20:53:50Z' class='post-time'>
+                    May 5, 2020,  8:53pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-05T20:53:50Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>You can disable the ability to rename by unchecking “Allow Rename” in doctype settings. This has to be done per doctype.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/AlvaroMolano'><span itemprop='name'>AlvaroMolano</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-06T05:57:12Z' class='post-time'>
+                    May 6, 2020,  5:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-06T05:57:12Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for your comments</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/AlvaroMolano'><span itemprop='name'>AlvaroMolano</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-06T06:07:58Z' class='post-time'>
+                    May 6, 2020,  6:07am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-06T06:07:58Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/max_morais_dmm">@max_morais_dmm</a>, It is taking me some time to get to understand the mind behind this framework, it is nothing like I am used too, it is very opinionated besides all that flexibility. My experience is from Java + Javascript mostly, so for someone like me coming from Spring Boot or Android or iOS or Angular or React is a huge change when trying to get into the core of Frappe.<br>
+Thak you!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/AlvaroMolano'><span itemprop='name'>AlvaroMolano</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/8/f/8fe1852f79b3094e475253b4e3caf64b95548abf.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-06T06:32:27Z' class='post-time'>
+                    May 6, 2020,  6:32am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-06T06:32:27Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h2>
+<a name="when-uuid-is-needed-1" class="anchor" href="#when-uuid-is-needed-1"></a>When UUID is needed</h2>
+<p>There are many reasons to add an id field to a document and make it a trust uuid that never changes. A .name identifier might still be useful when renaming documents.</p>
+<h2>
+<a name="uuid-2" class="anchor" href="#uuid-2"></a>UUID</h2>
+<ol>
+<li>Doctype needs to be customised by adding an (‘id’) field of type(‘data’) it can be hidden and obligatory.</li>
+<li>Create a Custom Script for the Doctype and add a JS function to assign a UUID on save. This one is based on the creation timestamp.<br>
+´´´<br>
+frappe.ui.form.on(‘’, {<br>
+validate(frm) {<br>
+function create_UUID(){<br>
+var dt = new Date().getTime();<br>
+var uuid = ‘xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx’.replace(/[xy]/g, function(c) {<br>
+var r = (dt + Math.random()*16)%16 | 0;<br>
+dt = Math.floor(dt/16);<br>
+return (c==‘x’ ? r :(r&amp;0x3|0x8)).toString(16);<br>
+});<br>
+return uuid;<br>
+}<br>
+console.log(frm.doc.id)<br>
+// your code here<br>
+if(!frm.doc.id | frm.doc.id === ‘’ | frm.doc.id === ‘None’){<br>
+frm.doc.id =  create_UUID();<br>
+}<br>
+}<br>
+})<br>
+´´´</li>
+</ol>
+<p>I should try to make it in python for performance reasons but.<br>
+Adding changes to Core is long process and something like this will probably be rejected. Maintaining code out of the official repository is not worth the effort.<br>
+The other option is to implement it trough a custom app, but in frappe_docker you can not yet install apps on existing sites.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/8/f/8fe1852f79b3094e475253b4e3caf64b95548abf.png" data-download-href="https://discuss.frappe.io/uploads/default/8fe1852f79b3094e475253b4e3caf64b95548abf" title="03"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/8/f/8fe1852f79b3094e475253b4e3caf64b95548abf_2_690x243.png" alt="03" data-base62-sha1="kwPs64IWbfnsVOGaWOSC5VX6p31" width="690" height="243" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/8/f/8fe1852f79b3094e475253b4e3caf64b95548abf_2_690x243.png, https://discuss.frappe.io/uploads/default/optimized/3X/8/f/8fe1852f79b3094e475253b4e3caf64b95548abf_2_1035x364.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/8/f/8fe1852f79b3094e475253b4e3caf64b95548abf_2_1380x486.png 2x" data-dominant-color="FBFBFC"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">03</span><span class="informations">1556×548 24.3 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/tionebrr'><span itemprop='name'>tionebrr</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-09-10T18:14:29Z' class='post-time'>
+                    September 10, 2020,  6:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-09-10T18:14:29Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m starting to use ERPNext and I was thinking exactly the same thing. I’m surprised that not all the database entries have a unique IDs.</p>
+<p>Some have a kind of ID, like the Item Alternatives.</p>
+<p>Also, isn’t parsing the fields and changing them in the database kind of frail? What happens if you change an item name and the server crashes during the parsing/change phase? Do you end up with unlinked entries and inconsistencies?</p>
+<p>Because in this case an unmodifiable UUID for each entry would at least allow to detect and correct database inconsistencies.</p>
+<p>What are your thought about all of this finally? Did you continued using ERPNext as is?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/meichthys'><span itemprop='name'>meichthys</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-13T21:22:01Z' class='post-time'>
+                    November 13, 2025,  9:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-13T21:22:01Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Frappe V16 will implement a UUID naming option: <a href="https://github.com/frappe/frappe/issues/25310" class="inline-onebox" rel="noopener nofollow ugc">UUID for name and link fields · Issue #25310 · frappe/frappe · GitHub</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

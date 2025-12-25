@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[Guide] How to install ERPNext v14 on Linux Ubuntu (step-by-step instructions) - ERPNext - Frappe Forum</title>
+    <meta name="description" content="Hi guys! :raised_hand_with_fingers_splayed: 
+ERPNext v14 has just released and I know everyone wants to try it out quickly. Installing Frappe &amp;amp; ERPNext can be a daunting task, especially when try to install it manually b&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/guide-how-to-install-erpnext-v14-on-linux-ubuntu-step-by-step-instructions/92960" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[Guide] How to install ERPNext v14 on Linux Ubuntu (step-by-step instructions)&#39;" href="https://discuss.frappe.io/t/guide-how-to-install-erpnext-v14-on-linux-ubuntu-step-by-step-instructions/92960.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/guide-how-to-install-erpnext-v14-on-linux-ubuntu-step-by-step-instructions/92960" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/guide-how-to-install-erpnext-v14-on-linux-ubuntu-step-by-step-instructions/92960" />
+<meta property="og:title" content="[Guide] How to install ERPNext v14 on Linux Ubuntu (step-by-step instructions)" />
+<meta name="twitter:title" content="[Guide] How to install ERPNext v14 on Linux Ubuntu (step-by-step instructions)" />
+<meta property="og:description" content="Hi guys! 🖐  ERPNext v14 has just released and I know everyone wants to try it out quickly. Installing Frappe &amp; ERPNext can be a daunting task, especially when try to install it manually but don’t worry! Just follow this simple step-by-step guide and you’ll sail through the installation process.  This guide might look intimidating at first but trust me it is lengthy because it is detailed and explains each step one by one.  Let’s start!  📄 Table of ..." />
+<meta name="twitter:description" content="Hi guys! 🖐  ERPNext v14 has just released and I know everyone wants to try it out quickly. Installing Frappe &amp; ERPNext can be a daunting task, especially when try to install it manually but don’t worry! Just follow this simple step-by-step guide and you’ll sail through the installation process.  This guide might look intimidating at first but trust me it is lengthy because it is detailed and explains each step one by one.  Let’s start!  📄 Table of ..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:tag" content="installation" />
+<meta property="og:article:tag" content="installation_problem" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="frappe" />
+<meta property="og:article:tag" content="customization" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="58 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="123 ❤" />
+<meta property="article:published_time" content="2022-08-06T00:30:59+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="/t/guide-how-to-install-erpnext-v14-on-linux-ubuntu-step-by-step-instructions/92960?page=2">
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"[Guide] How to install ERPNext v14 on Linux Ubuntu (step-by-step instructions)","mainEntity":{"@type":"Question","name":"[Guide] How to install ERPNext v14 on Linux Ubuntu (step-by-step instructions)","text":"Hi guys! :raised_hand_with_fingers_splayed:\n\nERPNext v14 has just released and I know everyone wants to try it out quickly. Installing Frappe &amp; ERPNext can be a daunting task, especially when try to install it manually but don’t worry! Just follow this simple step-by-step guide and you’ll sail throu&hellip;","upvoteCount":74,"answerCount":0,"datePublished":"2022-08-06T00:30:59.470Z","author":{"@type":"Person","name":"shashank_shirke","url":"https://discuss.frappe.io/u/shashank_shirke"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/guide-how-to-install-erpnext-v14-on-linux-ubuntu-step-by-step-instructions/92960">[Guide] How to install ERPNext v14 on Linux Ubuntu (step-by-step instructions)</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/installation' class='discourse-tag' rel="tag">installation</a>, 
+            <a href='https://discuss.frappe.io/tag/installation_problem' class='discourse-tag' rel="tag">installation_problem</a>, 
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
+            <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag' rel="tag">customization</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[Guide] How to install ERPNext v14 on Linux Ubuntu (step-by-step instructions)'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/guide-how-to-install-erpnext-v14-on-linux-ubuntu-step-by-step-instructions/92960'>
+      <meta itemprop='datePublished' content='2022-08-06T00:30:59Z'>
+        <meta itemprop='articleSection' content='ERPNext'>
+      <meta itemprop='keywords' content='installation, installation_problem, erpnext, frappe, customization'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/shashank_shirke'><span itemprop='name'>shashank_shirke</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/guide-how-to-install-erpnext-v14-on-linux-ubuntu-step-by-step-instructions/92960">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2022-08-06T00:30:59Z' class='post-time'>
+                    August 6, 2022, 12:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-09-02T21:17:49Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi guys! <img src="https://discuss.frappe.io/images/emoji/twitter/raised_hand_with_fingers_splayed.png?v=12" title=":raised_hand_with_fingers_splayed:" class="emoji" alt=":raised_hand_with_fingers_splayed:" loading="lazy" width="20" height="20"></p>
+<p>ERPNext v14 has just released and I know everyone wants to try it out quickly. Installing Frappe &amp; ERPNext can be a daunting task, especially when try to install it manually but don’t worry! Just follow this simple step-by-step guide and you’ll sail through the installation process.</p>
+<p>This guide might look intimidating at first but trust me it is lengthy because it is detailed and explains each step one by one.</p>
+<p>Let’s start!</p>
+<h2><a name="page_facing_up-table-of-contents-1" class="anchor" href="#page_facing_up-table-of-contents-1"></a><img src="https://discuss.frappe.io/images/emoji/twitter/page_facing_up.png?v=12" title=":page_facing_up:" class="emoji" alt=":page_facing_up:" loading="lazy" width="20" height="20"> <strong>Table of Contents:</strong></h2>
+<ul>
+<li><strong>Step 1:</strong> Server Setup</li>
+<li><strong>Step 2:</strong> Install Required Packages</li>
+<li><strong>Step 3:</strong> Configure MySQL Server</li>
+<li><strong>Step 4:</strong> Install CURL, Node, NPM, Yarn</li>
+<li><strong>Step 5:</strong> Install Frappe Bench</li>
+<li><strong>Step 6:</strong> Install ERPNext and other Apps</li>
+<li><strong>Step 7:</strong> Setup Production Server</li>
+</ul>
+<h2><a name="pre-requisites-2" class="anchor" href="#pre-requisites-2"></a><strong>PRE-REQUISITES:</strong></h2>
+<ul>
+<li>Operating System: Linux Ubuntu 22.04 LTS</li>
+<li>Minimum Recommended Hardware: 2 CPU | 2 GB RAM | 10 GB Disk</li>
+<li>Root shell access to the server (via SSH)</li>
+</ul>
+<h2><a name="one-server-setup-3" class="anchor" href="#one-server-setup-3"></a><img src="https://discuss.frappe.io/images/emoji/twitter/one.png?v=12" title=":one:" class="emoji" alt=":one:" loading="lazy" width="20" height="20"> <strong>SERVER SETUP</strong></h2>
+<hr>
+<p><strong>1.1 Login to the server as root user</strong></p>
+<p><strong>1.2 Setup correct date and timezone</strong> (important step as it impacts ERPNext usage)</p>
+<p>Check the server’s current timezone</p>
+<pre><code class="lang-auto">date
+</code></pre>
+<p>Set correct timezone as per your region</p>
+<pre><code class="lang-auto">timedatectl set-timezone "Asia/Kolkata"
+</code></pre>
+<p><strong>1.3 Update &amp; upgrade server packages</strong></p>
+<pre><code class="lang-auto">sudo apt-get update -y
+sudo apt-get upgrade -y
+</code></pre>
+<p><strong>1.4 Create a new user</strong><br>
+We create this user as a security measure to prevent root user access.<br>
+This user will be assigned admin permissions and will be used as the main Frappe Bench user</p>
+<pre><code class="lang-auto">sudo adduser [frappe-user]
+usermod -aG sudo [frappe-user]
+su [frappe-user] 
+cd /home/[frappe-user]/
+</code></pre>
+<p>Note: Replace [frappe-user] with your username. Eg. sudo adduser myname</p>
+<h2><a name="two-install-required-packages-4" class="anchor" href="#two-install-required-packages-4"></a><img src="https://discuss.frappe.io/images/emoji/twitter/two.png?v=12" title=":two:" class="emoji" alt=":two:" loading="lazy" width="20" height="20"> <strong>INSTALL REQUIRED PACKAGES</strong></h2>
+<hr>
+<p>Frappe Bench and ERPNext requires many packages to run smoothly. In this step we will install all the required packages for the system to work correctly.</p>
+<p>Note: During the installation of these packages the server might prompt you to confirm if you want to continue installing the package [Y/n]. Just hit “y” on your keyboard to continue.</p>
+<p><strong>2.1 Install GIT</strong></p>
+<pre><code class="lang-auto">sudo apt-get install git
+</code></pre>
+<p>Check if GIT is correctly installed by running <code>git --version</code></p>
+<p><strong>2.2 Install Python</strong></p>
+<pre><code class="lang-auto">sudo apt-get install python3-dev python3.10-dev python3-setuptools python3-pip python3-distutils
+</code></pre>
+<p><strong>2.3 Install Python Virtual Environment</strong></p>
+<pre><code class="lang-auto">sudo apt-get install python3.10-venv
+</code></pre>
+<p>Check if Python is correctly installed by running <code>python3 -V</code></p>
+<p><strong>2.4 Install Software Properties Common</strong> (for repository management)</p>
+<pre><code class="lang-auto">sudo apt-get install software-properties-common
+</code></pre>
+<p><strong>2.5 Install MariaDB</strong> (MySQL server)</p>
+<pre><code class="lang-auto">sudo apt install mariadb-server mariadb-client
+</code></pre>
+<p>Check if MariaDB is correctly installed by running <code>mariadb --version</code></p>
+<p><strong>2.6 Install Redis Server</strong></p>
+<pre><code class="lang-auto">sudo apt-get install redis-server
+</code></pre>
+<p><strong>2.7 Install other necessary packages</strong> (for fonts, PDFs, etc)</p>
+<pre><code class="lang-auto">sudo apt-get install xvfb libfontconfig wkhtmltopdf
+sudo apt-get install libmysqlclient-dev
+</code></pre>
+<h2><a name="three-configure-mysql-server-5" class="anchor" href="#three-configure-mysql-server-5"></a><img src="https://discuss.frappe.io/images/emoji/twitter/three.png?v=12" title=":three:" class="emoji" alt=":three:" loading="lazy" width="20" height="20"> <strong>CONFIGURE MYSQL SERVER</strong></h2>
+<hr>
+<p><strong>3.1 Setup the server</strong></p>
+<pre><code class="lang-auto">sudo mysql_secure_installation
+</code></pre>
+<p>During the setup process, the server will prompt you with a few questions as given below. Follow the instructions to continue the setup;</p>
+<ul>
+<li>
+<p>Enter current password for root: (Enter your SSH root user password)</p>
+</li>
+<li>
+<p>Switch to unix_socket authentication [Y/n]: Y</p>
+</li>
+<li>
+<p>Change the root password? [Y/n]: Y<br>
+It will ask you to set new MySQL root password at this step. This can be different from the SSH root user password.</p>
+</li>
+<li>
+<p>Remove anonymous users? [Y/n] Y</p>
+</li>
+<li>
+<p>Disallow root login remotely? [Y/n]: N<br>
+This is set as N because we might want to access the database from a remote server for using business analytics software like Metabase / PowerBI / Tableau, etc.</p>
+</li>
+<li>
+<p>Remove test database and access to it? [Y/n]: Y</p>
+</li>
+<li>
+<p>Reload privilege tables now? [Y/n]: Y</p>
+</li>
+</ul>
+<p><strong>3.2 Edit the MySQL default config file</strong></p>
+<pre><code class="lang-auto">sudo vim /etc/mysql/my.cnf
+</code></pre>
+<p>Add the below code block at the bottom of the file;</p>
+<pre><code class="lang-auto">[mysqld]
+character-set-client-handshake = FALSE
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+
+[mysql]
+default-character-set = utf8mb4
+</code></pre>
+<p>If you don’t know how to use VIM:</p>
+<ul>
+<li>Once the file is open, hit “i” key to start editing the file.</li>
+<li>After you’re done editing the file hit “Esc + :wq” to save the file</li>
+</ul>
+<p><strong>3.3 Restart the MySQL server (for the config to take effect)</strong></p>
+<pre><code class="lang-auto">sudo service mysql restart
+</code></pre>
+<h2><a name="four-instal-curl-node-npm-and-yarn-6" class="anchor" href="#four-instal-curl-node-npm-and-yarn-6"></a><img src="https://discuss.frappe.io/images/emoji/twitter/four.png?v=12" title=":four:" class="emoji" alt=":four:" loading="lazy" width="20" height="20"> <strong>Instal CURL, Node, NPM and Yarn</strong></h2>
+<hr>
+<p><strong>4.1 Install CURL</strong></p>
+<pre><code class="lang-auto">sudo apt install curl
+</code></pre>
+<p><strong>4.2 Install Node</strong></p>
+<pre><code class="lang-auto">curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+
+source ~/.profile
+
+nvm install 16.15.0
+</code></pre>
+<p><strong>4.3 Install NPM</strong></p>
+<pre><code class="lang-auto">sudo apt-get install npm
+</code></pre>
+<p><strong>4.4 Install Yarn</strong></p>
+<pre><code class="lang-auto">sudo npm install -g yarn
+</code></pre>
+<p>Check if Node is correctly installed by running <code>node --version</code></p>
+<h2><a name="five-install-frappe-bench-7" class="anchor" href="#five-install-frappe-bench-7"></a><img src="https://discuss.frappe.io/images/emoji/twitter/five.png?v=12" title=":five:" class="emoji" alt=":five:" loading="lazy" width="20" height="20"> <strong>INSTALL FRAPPE BENCH</strong></h2>
+<hr>
+<p><strong>5.1 Install Frappe Bench</strong></p>
+<pre><code class="lang-auto">sudo pip3 install frappe-bench
+</code></pre>
+<p>Check if Frappe Bench is correctly installed by running <code>bench --version</code></p>
+<p><strong>5.2 Initialize Frappe Bench</strong></p>
+<pre><code class="lang-auto">bench init --frappe-branch version-14 frappe-bench
+</code></pre>
+<p><strong>5.3 Go to Frappe Bench directory</strong><br>
+This will be the main directory from where we will be running all the commands.<br>
+The full path of this directory will be: /home/[frappe-user]/frappe-bench/</p>
+<pre><code class="lang-auto">cd frappe-bench/
+</code></pre>
+<p><strong>5.4 Change user directory permissions</strong><br>
+This will allow execution permission to the home directory of the frappe user we created in step 1.4</p>
+<pre><code class="lang-auto">chmod -R o+rx /home/[frappe-user]/
+</code></pre>
+<p><strong>5.5 Create a New Site</strong><br>
+We will use this as the default site where ERPNext and other apps will be installed.</p>
+<pre><code class="lang-auto">bench new-site site1.local
+</code></pre>
+<h2><a name="six-install-erpnext-and-other-apps-8" class="anchor" href="#six-install-erpnext-and-other-apps-8"></a><img src="https://discuss.frappe.io/images/emoji/twitter/six.png?v=12" title=":six:" class="emoji" alt=":six:" loading="lazy" width="20" height="20"> <strong>Install ERPNext and other Apps</strong></h2>
+<hr>
+<p>Finally, we’re at the last stage of the installation process!</p>
+<p><strong>6.1 Download the necessary apps to our server</strong><br>
+Download the payments apps . This app is required during ERPNext installation</p>
+<pre><code class="lang-auto">bench get-app payments
+</code></pre>
+<p>Download the main ERPNext app</p>
+<pre><code class="lang-auto">bench get-app --branch version-14 erpnext
+</code></pre>
+<p>Download the HR &amp; Payroll app (optional)</p>
+<pre><code class="lang-auto">bench get-app hrms
+</code></pre>
+<p>Download the ecommerce integrations apps (optional)</p>
+<pre><code class="lang-auto">bench get-app ecommerce_integrations --branch main
+</code></pre>
+<p>Check if all the apps are correctly downloaded by running <code>bench version --format table</code></p>
+<p><strong>6.2 Install all the Apps</strong></p>
+<p>Install the main ERPNext app</p>
+<pre><code class="lang-auto">bench --site site1.local install-app erpnext
+</code></pre>
+<p>Install the HR &amp; Payroll app (optional)</p>
+<pre><code class="lang-auto">bench --site site1.local install-app hrms
+</code></pre>
+<p>Install the ecommerce integrations apps (optional)</p>
+<pre><code class="lang-auto">bench --site site1.local install-app ecommerce_integrations
+</code></pre>
+<h2><a name="seven-setup-production-server-9" class="anchor" href="#seven-setup-production-server-9"></a><img src="https://discuss.frappe.io/images/emoji/twitter/seven.png?v=12" title=":seven:" class="emoji" alt=":seven:" loading="lazy" width="20" height="20"> <strong>SETUP PRODUCTION SERVER</strong></h2>
+<hr>
+<p><strong>7.1 Enable scheduler service</strong></p>
+<pre><code class="lang-auto">bench --site site1.local enable-scheduler
+</code></pre>
+<p><strong>7.2 Disable maintenance mode</strong></p>
+<pre><code class="lang-auto">bench --site site1.local set-maintenance-mode off
+</code></pre>
+<p><strong>7.3 Setup production config</strong></p>
+<pre><code class="lang-auto">sudo bench setup production [frappe-user]
+</code></pre>
+<p><strong>7.4 Setup NGINX web server</strong></p>
+<pre><code class="lang-auto">bench setup nginx
+</code></pre>
+<p><strong>7.5 Final server setup</strong></p>
+<pre><code class="lang-auto">sudo supervisorctl restart all
+sudo bench setup production [frappe-user]
+</code></pre>
+<p>When prompted to save new/existing config files, hit “Y”</p>
+<h2><a name="tada-ready-to-go-10" class="anchor" href="#tada-ready-to-go-10"></a><img src="https://discuss.frappe.io/images/emoji/twitter/tada.png?v=12" title=":tada:" class="emoji" alt=":tada:" loading="lazy" width="20" height="20"> <strong>Ready to Go!</strong></h2>
+<p>You can now go to your server <strong>[IP-address]:80</strong> and you will have a fresh new installation of ERPNext ready to be configured!</p>
+<p>If you are facing any issues with the ports, make sure to enable all the necessary ports on your firewall using the below commands;</p>
+<pre><code class="lang-auto">sudo ufw allow 22,25,143,80,443,3306,3022,8000/tcp
+sudo ufw enable
+</code></pre>
+<p><s>Next, I will continue to update this guide to help you setup a custom domain and install SSL certificate.</s></p>
+<p>SSL instructions updated in this post <img src="https://discuss.frappe.io/images/emoji/twitter/point_down.png?v=12" title=":point_down:" class="emoji" alt=":point_down:" loading="lazy" width="20" height="20"></p>
+<aside class="quote quote-modified" data-post="82" data-topic="92960">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/shashank_shirke/48/52479_2.png" class="avatar">
+    <a href="https://discuss.frappe.io/t/guide-how-to-install-erpnext-v14-on-linux-ubuntu-step-by-step-instructions/92960/82">[Guide] How to install ERPNext v14 on Linux Ubuntu (step-by-step instructions)</a> <a class="badge-category__wrapper " href="/c/erpnext/6"><span data-category-id="6" style="--category-badge-color: #BF1E2E; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category "><span class="badge-category__name">ERPNext</span></span></a>
+  </div>
+  <blockquote>
+    To keep up with the latest releases you can use the standard bench update method. Make sure to take a backup of all your sites, databases and files before running the bench update command as it is known to break things. 
+
+For SSL configuration, you can run the following commands; 
+Before you begin, add an A record on your domain DNS and point it to the ERPN server IP address. 
+cd /home/[frappe-user]/frappe-bench/
+
+bench config dns_multitenant on
+
+bench setup add-domain [subdomain.yourdomain.com…
+  </blockquote>
+</aside>
+
+<p>In case you get stuck during any step of this process or have any doubts, feel free to drop your messages below and I’ll try my best to answer.</p>
+<p>Thanks,<br>
+Shashank <img src="https://discuss.frappe.io/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+<p>To extend the functionality of ERPNext, if you want to integrate a data analytics software like Metabase, follow this guide:</p>
+<aside class="quote quote-modified" data-post="1" data-topic="53075">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/shashank_shirke/48/52479_2.png" class="avatar">
+    <a href="https://discuss.frappe.io/t/guide-how-to-install-metabase-dashboard-along-with-erpnext-on-ubuntu-18-04-server/53075">[Guide] How to install Metabase (dashboard) along with ERPNext on Ubuntu 18.04 server</a> <a class="badge-category__wrapper " href="/c/erpnext/6"><span data-category-id="6" style="--category-badge-color: #BF1E2E; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category "><span class="badge-category__name">ERPNext</span></span></a>
+  </div>
+  <blockquote>
+    Hi guys <img width="20" height="20" src="https://discuss.frappe.io/images/emoji/twitter/raised_hand_with_fingers_splayed.png?v=12" title="raised_hand_with_fingers_splayed" alt="raised_hand_with_fingers_splayed" class="emoji"> 
+I am using ERPNext to manage data for my business and its working great. Actually I am not using the ERPNext functionality as such but instead I have developed my custom app to suite the business needs and its running smoothly. 
+One thing I have noticed is that Frappe and ERPNext lacks advanced data analytical tools in general. I know that since v12 steps are being taken in the right direction to get more data analytical and visualization tools (like d…
+  </blockquote>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="74" />
+              <span class='post-likes'>74 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/steps-to-install-erpnext-v14-on-ubuntu-v22-04-successfully/95838/5">Steps to Install ERPNext v14 on Ubuntu v22.04 Successfully</a>
+                        <meta itemprop='position' content='2'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/guide-how-to-install-erpnext-v15-on-linux-ubuntu-step-by-step-instructions/111706">[Guide] How to install ERPNext v15 on Linux Ubuntu (step-by-step instructions)</a>
+                        <meta itemprop='position' content='3'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/erpnext-and-frappe-version-14-release/92756/24">ERPNext and Frappe Version 14 Release 🎉</a>
+                        <meta itemprop='position' content='4'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/i-have-switched-verison-13-to-verison-14-but-i-am-getting-errror-please-help-how-can-i-resolve-this/93857/16">I have switched verison 13 to verison 14.but I am getting errror..Please help..how can i resolve this</a>
+                        <meta itemprop='position' content='5'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/dropping-python-3-9-support-for-next-version-of-frappe-erpnext/84803/31">Dropping python &lt;=3.9 support for next version of Frappe/ERPNext</a>
+                        <meta itemprop='position' content='6'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/api-access-with-n8n/94434/3">API Access with n8n</a>
+                        <meta itemprop='position' content='7'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/could-not-create-server-tcp-listening-socket-127-0-0-1-bind-address-already-in-use/109831/9">Could not create server TCP listening socket 127.0.0.1:11000: bind: Address already in use</a>
+                        <meta itemprop='position' content='8'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/getting-trouble-installing-erp-next-in-a-private-cloud/110517/6">Getting trouble installing ERP Next in a private cloud</a>
+                        <meta itemprop='position' content='9'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/setting-up-erpnext-on-a-raspberry-pi-5-running-ubuntu-23-10/111399">Setting Up Erpnext on a Raspberry Pi 5 Running Ubuntu 23.10</a>
+                        <meta itemprop='position' content='10'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/guide-install-erpnext-v14-on-linux-fedora-38-server/105220">[Guide] Install ERPNext v14 on Linux Fedora 38 server</a>
+                        <meta itemprop='position' content='11'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/alibaba-cloud-instance-image-for-erpnext/123229/3">Alibaba cloud instance image for ERPNext</a>
+                        <meta itemprop='position' content='12'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/v13-db-restore-in-v14/97473">V13 DB restore in v14</a>
+                        <meta itemprop='position' content='13'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/steps-to-install-erpnext-v14-on-ubuntu-v22-04-successfully/95838/3">Steps to Install ERPNext v14 on Ubuntu v22.04 Successfully</a>
+                        <meta itemprop='position' content='14'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/how-i-will-do-multitenancy-in-my-local-machine/122358/6">How i will do multitenancy in my local machine?</a>
+                        <meta itemprop='position' content='15'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/the-link-within-a-notification-email-is-wrong/104538/16">The link within a notification email is wrong</a>
+                        <meta itemprop='position' content='16'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/user-with-all-roles-modules-having-access-issues/100525">User With All Roles &amp; Modules Having Access Issues</a>
+                        <meta itemprop='position' content='17'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/sudo-vim-command-not-found/131920">Sudo: vim: command not found</a>
+                        <meta itemprop='position' content='18'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/erpnext-production-v14-8-0-ova-download-link/96926/39">ERPNext-Production_v14.8.0 ova download link</a>
+                        <meta itemprop='position' content='19'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/erp-next-14-shows-only-updating-on-main-page/113008">ERP Next 14 shows only updating on main page</a>
+                        <meta itemprop='position' content='20'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/weird-looking-frappe-installation/105737">Weird looking frappe installation</a>
+                        <meta itemprop='position' content='21'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/please-make-sure-that-redis-queue-runs-redis-localhost-11000/105946">Please make sure that redis queue runs @redis://localhost:11000</a>
+                        <meta itemprop='position' content='22'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/getting-warning-as-performing-brute-force-attacks-while-doing-bench-build/107222/3">Getting warning as &quot;performing brute-force attacks&quot; while doing bench build</a>
+                        <meta itemprop='position' content='23'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/error-while-installing-erpnext-apps/108849/5">Error while installing ERPNext Apps</a>
+                        <meta itemprop='position' content='24'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/how-to-deploy-frappe-framework-application-on-aws/115567/3">How to deploy frappe-framework application on aws</a>
+                        <meta itemprop='position' content='25'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/rtdany10'><span itemprop='name'>rtdany10</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-06T03:50:33Z' class='post-time'>
+                    August 6, 2022,  3:50am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-06T03:50:33Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Well written! <img src="https://discuss.frappe.io/images/emoji/twitter/heart.png?v=12" title=":heart:" class="emoji" alt=":heart:" loading="lazy" width="20" height="20"></p>
+<aside class="quote no-group" data-username="shashank_shirke" data-post="1" data-topic="92960">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/shashank_shirke/48/52479_2.png" class="avatar"> shashank_shirke:</div>
+<blockquote>
+<p>Recommended Hardware: 2 CPU | 2 GB RAM | 10 GB Disk</p>
+</blockquote>
+</aside>
+<p>Although I don’t “recommend” this. This is bare minimum.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/shashank_shirke'><span itemprop='name'>shashank_shirke</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-06T04:25:00Z' class='post-time'>
+                    August 6, 2022,  4:25am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-06T04:25:00Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="rtdany10" data-post="2" data-topic="92960">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/rtdany10/48/65778_2.png" class="avatar"> rtdany10:</div>
+<blockquote>
+<p>This is bare minimum</p>
+</blockquote>
+</aside>
+<p>Yes it was meant to be minimum recommended hardware. Modified it, thanks.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Manan_Shah'><span itemprop='name'>Manan_Shah</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-06T10:16:37Z' class='post-time'>
+                    August 6, 2022, 10:16am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-06T10:16:37Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Shashank,<br>
+Thanks for this. Very detailed guide. Appreciate the effort</p>
+<p>For newbies like me, please make a small change in the below instruction,<br>
+You need to Hit <code>Esc</code> key and then :wq to save and quit Vim</p>
+<aside class="quote no-group quote-modified" data-username="shashank_shirke" data-post="1" data-topic="92960">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/shashank_shirke/48/52479_2.png" class="avatar"> shashank_shirke:</div>
+<blockquote>
+<p>After you’re done editing the file hit “:wq” to save the file</p>
+</blockquote>
+</aside>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/dineshpanchal432'><span itemprop='name'>dineshpanchal432</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-06T10:52:31Z' class='post-time'>
+                    August 6, 2022, 10:52am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-06T10:52:31Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/shashank_shirke">@shashank_shirke</a> Thank you so much for detailed info.</p>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji only-emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji only-emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/shashank_shirke'><span itemprop='name'>shashank_shirke</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-06T14:28:17Z' class='post-time'>
+                    August 6, 2022,  2:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-06T14:28:17Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="Manan_Shah" data-post="4" data-topic="92960">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/manan_shah/48/21839_2.png" class="avatar"> Manan_Shah:</div>
+<blockquote>
+<p>For newbies like me, please make a small change in the below instruction,<br>
+You need to Hit <code>Esc</code> key and then :wq to save and quit Vim</p>
+</blockquote>
+</aside>
+<p><a class="mention" href="/u/manan_shah">@Manan_Shah</a> Hahaha that’s very humble of you to call yourself a newbie <img src="https://discuss.frappe.io/images/emoji/twitter/stuck_out_tongue_winking_eye.png?v=12" title=":stuck_out_tongue_winking_eye:" class="emoji" alt=":stuck_out_tongue_winking_eye:" loading="lazy" width="20" height="20"></p>
+<p>Thanks for pointing out though, updated it!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Manan_Shah'><span itemprop='name'>Manan_Shah</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-06T14:32:15Z' class='post-time'>
+                    August 6, 2022,  2:32pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-06T14:32:15Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am a newbie for these tasks like Installation <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>On a serious note, this is the easiest installation guide I have come across so far. Thanks</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/auliabismar'><span itemprop='name'>auliabismar</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-06T15:18:22Z' class='post-time'>
+                    August 6, 2022,  3:18pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-06T15:18:22Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>MariaDB refused to start in Ubuntu 22<br>
+Please advise</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/shashank_shirke'><span itemprop='name'>shashank_shirke</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-06T16:25:00Z' class='post-time'>
+                    August 6, 2022,  4:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-06T16:25:01Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Please post the error you’re getting. Also, try rebooting the server once and then check MySQL status by <code>service mysql status</code></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jcagbay'><span itemprop='name'>jcagbay</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-07T02:33:10Z' class='post-time'>
+                    August 7, 2022,  2:33am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-07T02:33:10Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi! Followed your Ubuntu guide carefully but nothing showed on port 80 web. (Have done similar V14 install on latest Stream and Fedora releases with the same results.)<br>
+Here is the error when I bench restart:</p>
+<pre><code class="lang-auto">$ bench restart
+$ supervisorctl restart frappe:
+error: &lt;class 'PermissionError'&gt;, [Errno 13] Permission denied: file: /usr/lib/python3/dist-packages/supervisor/xmlrpc.py line: 560
+ERROR:
+Traceback (most recent call last):
+  File "/usr/local/bin/bench", line 8, in &lt;module&gt;
+    sys.exit(cli())
+  File "/usr/local/lib/python3.10/dist-packages/bench/cli.py", line 127, in cli
+    bench_command()
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/bench/commands/utils.py", line 41, in restart
+    Bench(".").reload(web, supervisor, systemd)
+  File "/usr/local/lib/python3.10/dist-packages/bench/utils/render.py", line 126, in wrapper_fn
+    return fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/bench/bench.py", line 150, in reload
+    restart_supervisor_processes(bench_path=self.name, web_workers=web)
+  File "/usr/local/lib/python3.10/dist-packages/bench/utils/bench.py", line 304, in restart_supervisor_processes
+    bench.run(f"{sudo}supervisorctl restart {group}")
+  File "/usr/local/lib/python3.10/dist-packages/bench/bench.py", line 47, in run
+    return exec_cmd(cmd, cwd=cwd or self.cwd)
+  File "/usr/local/lib/python3.10/dist-packages/bench/utils/__init__.py", line 155, in exec_cmd
+    raise CommandFailedError
+bench.exceptions.CommandFailedError
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/username-error-after-lms-install/102200/14">Username Error After LMS Install</a>
+                        <meta itemprop='position' content='1'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Usman_Ali'><span itemprop='name'>Usman_Ali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-07T06:24:24Z' class='post-time'>
+                    August 7, 2022,  6:24am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-07T06:24:24Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>try this</p><aside class="quote quote-modified" data-post="1" data-topic="92959">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/usman_ali/48/50708_2.png" class="avatar">
+    <a href="https://discuss.frappe.io/t/erpnext-frappe-dev-versions-latest-installation-development-productions-ubuntu-server-22-04/92959">Erpnext &amp; Frappe 14+ Dev - DEVELOPMENT &amp; PRODUCTION [UBUNTU/SERVER 22.04]</a> <a class="badge-category__wrapper " href="/c/bench/setup/33"><span data-category-id="33" style="--category-badge-color: #F7941D; --category-badge-text-color: #FFFFFF; --parent-category-badge-color: #B3B5B4;" data-parent-category-id="13" data-drop-close="true" class="badge-category --has-parent"><span class="badge-category__name">Setup</span></span></a>
+  </div>
+  <blockquote>
+    <a href="https://www.youtube.com/watch?v=4v4zs8TWleY" rel="noopener nofollow ugc">https://www.youtube.com/watch?v=4v4zs8TWleY</a>   <img width="20" height="20" src="https://discuss.frappe.io/images/emoji/twitter/boom.png?v=12" title="boom" alt="boom" class="emoji"> 
+<a href="https://discuss.frappe.io/t/erpnext-12-installation-development-productions-ubuntu-server-20-04/92945">ERPNext 12 Installation Guide</a> 
+<a href="https://discuss.frappe.io/t/erpnext-13-final-installation-development-productions-ubuntu-server-22-04/92925">ERPNext 13 Installation Guide</a> 
+<a href="https://discuss.frappe.io/t/erpnext-14-installation-development-productions-ubuntu-server-22-04/92922">ERPNext 14 Installation Guide</a> 
+<a href="https://discuss.frappe.io/t/debian-11-setup-guide-erpnext-frappe-13-dev14-development-production/93329">DEBIAN 11 ERPNext 13, 14+DEV</a> 
+. 
+<img width="20" height="20" src="https://discuss.frappe.io/images/emoji/twitter/boom.png?v=12" title="boom" alt="boom" class="emoji">   NOTES   <img width="20" height="20" src="https://discuss.frappe.io/images/emoji/twitter/boom.png?v=12" title="boom" alt="boom" class="emoji"> 
+<img width="20" height="20" src="https://discuss.frappe.io/images/emoji/twitter/small_blue_diamond.png?v=12" title="small_blue_diamond" alt="small_blue_diamond" class="emoji"> SHOULD USE SUGGESTED SYSTEM 
+
+because of python versions and frappe dependencies other systems might dont work 
+
+<img width="20" height="20" src="https://discuss.frappe.io/images/emoji/twitter/small_blue_diamond.png?v=12" title="small_blue_diamond" alt="small_blue_diamond" class="emoji"> SHOULD BE ONLY 2 USERS IN SYSTEM [ root &amp; frappe ] 
+
+you can use any other user other then frappe 
+
+<img width="20" height="20" src="https://discuss.frappe.io/images/emoji/twitter/small_blue_diamond.png?v=12" title="small_blue_diamond" alt="small_blue_diamond" class="emoji"> ROOT &amp; FRAPPE PASSW…
+  </blockquote>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/shashank_shirke'><span itemprop='name'>shashank_shirke</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-07T08:06:03Z' class='post-time'>
+                    August 7, 2022,  8:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-07T08:06:03Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="jcagbay" data-post="10" data-topic="92960">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/jcagbay/48/11906_2.png" class="avatar"> jcagbay:</div>
+<blockquote>
+<p>Here is the error when I bench restart:</p>
+</blockquote>
+</aside>
+<p>Hi, this looks like a user permission issues. I hope you’re running all the commands as the [frappe-user] with sudo.</p>
+<p>If you’re still facing issues, follow this to resolve the problem <img src="https://discuss.frappe.io/images/emoji/twitter/point_down/3.png?v=12" title=":point_down:t3:" class="emoji" alt=":point_down:t3:" loading="lazy" width="20" height="20"></p>
+<aside class="quote" data-post="2" data-topic="62334">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/letter_avatar_proxy/v4/letter/z/a587f6/48.png" class="avatar">
+    <a href="https://discuss.frappe.io/t/bench-update-error-production-v12-9-4/62334/2">Bench Update Error - Production V12.9.4</a> 
+  </div>
+  <blockquote>
+    Resolved this by changing permissions for user frappe on supervisord. 
+In the /etc/supervisor/supervisord.conf under add line chown… as shown below 
+[unix_http_server]
+file=/var/tmp/supervisord.sock
+chmod=0700
+chown=frappe:frappe
+  </blockquote>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jcagbay'><span itemprop='name'>jcagbay</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-07T11:18:25Z' class='post-time'>
+                    August 7, 2022, 11:18am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-07T11:18:25Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/shashank_shirke">@shashank_shirke</a>  Thank you. That corrected the problem.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/CodingRockz'><span itemprop='name'>CodingRockz</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-07T13:13:07Z' class='post-time'>
+                    August 7, 2022,  1:13pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-07T13:13:07Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/shashank_shirke">@shashank_shirke</a> - Great guide mate. I think this is probably the first correct guide for version 14 on ubuntu 22.04</p>
+<p>I am struggling with installing my positiveSSL on the ERP site, is this something you do as a service?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/shashank_shirke'><span itemprop='name'>shashank_shirke</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-08T07:50:06Z' class='post-time'>
+                    August 8, 2022,  7:50am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-08T07:50:06Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/codingrockz">@CodingRockz</a></p>
+<p>Good to know that you found the guide helpful. Regarding the SSL certificate issue, you’ll first have to first add a custom domain and then enable dns_multitenant on the default site and then install your SSL certificate on the site.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mwogi'><span itemprop='name'>mwogi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-08T10:59:54Z' class='post-time'>
+                    August 8, 2022, 10:59am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-08T10:59:54Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/shashank_shirke">@shashank_shirke</a> This is largely a perfect guide thanks. I followed it and the only error that I encountered is on Mariadb barracuda issue.</p>
+<p>It is important for the settings to be taken to <code>/etc/mysql/mariadb.conf.d/mariadb.cnf</code> instead of /etc/mysql/my.cnf.</p>
+<p>That is the only change I did and it worked.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/DrSchnagels'><span itemprop='name'>DrSchnagels</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-08T13:34:40Z' class='post-time'>
+                    August 8, 2022,  1:34pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-08T13:34:40Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>for me the mentioned one in the guide worked.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/DrSchnagels'><span itemprop='name'>DrSchnagels</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-08T13:45:05Z' class='post-time'>
+                    August 8, 2022,  1:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-08T13:56:54Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello Shashank!<br>
+Thank you so much for this guide. Recently I was able to install v13 with my own collected infos, but I never got to work production mode or the correct creation of PDF files.<br>
+I used your guide to install a new VM. I have a Proxmox server and I used the LXC Ubuntu 22.04 template.<br>
+Everything installed fine and it is much better than my own install guide.<br>
+I have one remaining issue: When i create an offer and I want to create&amp;download the offer-PDF-file, then the PDF is zoomed in and the outer edges of the page are missing.<br>
+Do you have an idea how to solve this?<br>
+Thank you very much for your work!<br>
+Edit: It might be this bug:</p><aside class="quote" data-post="18" data-topic="83123">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/bkm/48/56774_2.png" class="avatar">
+    <a href="https://discuss.frappe.io/t/pdf-generate-problem/83123/18">PDF generate problem</a> <a class="badge-category__wrapper " href="/c/community/37"><span data-category-id="37" style="--category-badge-color: #BF1E2E; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="You can post queries about the ERPNext Community (and upcoming Foundation here)"><span class="badge-category__name">Community</span></span></a>
+  </div>
+  <blockquote>
+    Can anyone shed some light on exactly how they upgraded to the latest version of wkhtmltopdf ?? 
+I thought the version in use had special changes specific to frappe framework. 
+I would like to upgrade my version as well but I am unsure exactly how. I have read so many horror stories about trying to do it from the repo that you end up with versions missing qr patches or missing frappe patches. 
+Any help or pointers to a success story would be greatly appreciated. 
+BKM <img width="20" height="20" src="https://discuss.frappe.io/images/emoji/twitter/nerd_face.png?v=12" title="nerd_face" alt="nerd_face" class="emoji">
+  </blockquote>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/shashank_shirke'><span itemprop='name'>shashank_shirke</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-08T16:25:41Z' class='post-time'>
+                    August 8, 2022,  4:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-08T16:25:41Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="mwogi" data-post="17" data-topic="92960">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/mwogi/48/28646_2.png" class="avatar"> mwogi:</div>
+<blockquote>
+<p>It is important for the settings to be taken to <code>/etc/mysql/mariadb.conf.d/mariadb.cnf</code> instead of /etc/mysql/my.cnf.</p>
+</blockquote>
+</aside>
+<p>Hi <a class="mention" href="/u/mwogi">@mwogi</a></p>
+<p>Thanks for the update on this. Some installations might require additional configuration to be done in MariaDB cnf files as well. This was required in v13 but for v14 I tried with just the my.cnf file and it did work.</p>
+<p>But I understand some server images and packages repos are different and so might require additional configs. Thanks for updating this.</p>
+<p>Also, please do share the exact config you used in the mariadb.cnf file so that it will be helpful for others facing this issue.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_21' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/shashank_shirke'><span itemprop='name'>shashank_shirke</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-08T16:28:17Z' class='post-time'>
+                    August 8, 2022,  4:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-08T16:28:17Z'>
+              <span itemprop='position'>21</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/drschnagels">@DrSchnagels</a></p>
+<p>Great to know that you found the guide useful. As for the PDF generation issue, this has been reported in the past as well.</p>
+<p>Can you confirm what version of wkhtmltopdf have you installed by running;</p>
+<pre><code class="lang-auto">wkhtmltopdf --version
+</code></pre>
+<p>Also, if possible share a screenshot of a sample PDF file that you’re facing issues with.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="/t/guide-how-to-install-erpnext-v14-on-linux-ubuntu-step-by-step-instructions/92960?page=2">next page →</a></b></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

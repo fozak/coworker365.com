@@ -1,0 +1,1 @@
+window.addEventListener("DOMContentLoaded",async()=>{const dividers=document.getElementsByClassName("frappe-divider");dividers[dividers.length-1].style.display="none";});

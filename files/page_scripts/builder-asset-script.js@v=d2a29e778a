@@ -1,0 +1,139 @@
+setup_scroll_position_restore();
+setup_sidebar_toggle();
+setup_plausible();
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const offset = 80;
+    const hash = window.location.hash;
+    if (hash) {
+        setTimeout(() => {
+            document.querySelector(".body-container").scrollBy(0, -offset);
+        }, 20);
+    }
+
+    window.addEventListener("hashchange", function() {
+        document.querySelector(".body-container").scrollBy(0, -offset);
+    });
+});
+
+window.addEventListener("DOMContentLoaded", async () => {
+    if (isMobile() || isTablet()) return;
+  document.querySelectorAll(".nav-item-title").forEach(function (el) {
+	el.style.display = "none";
+	document.querySelector(".frappe-sidebar-new").style.transition =
+	  "width .3s";
+  });
+  document.querySelector(".frappe-sidebar-new").onmouseover = function () {
+	document.querySelectorAll(".nav-item-title").forEach(function (el) {
+	  el.style.display = "flex";
+	  document.querySelector(".frappe-sidebar-new").style.transition =
+		"width .3s";
+	});
+	document.querySelector(".frappe-sidebar-new").style.transition =
+	  "width .3s";
+	document.querySelector(".frappe-sidebar-new").style.width = "200px";
+  };
+
+  document.querySelector(".frappe-sidebar-new").onmouseout = function () {
+	document.querySelectorAll(".nav-item-title").forEach(function (el) {
+	  el.style.display = "none";
+	});
+	document.querySelector(".frappe-sidebar-new").style.width = "54px";
+	document.querySelector(".frappe-sidebar-new").style.transition =
+	  "width .3s";
+  };
+});
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+	e.preventDefault();
+
+	document.querySelector(this.getAttribute("href")).scrollIntoView({
+	  behavior: "smooth",
+	});
+  });
+});
+
+
+function setup_scroll_position_restore() {
+  // Restore the scroll position when the page is loaded (standard restoration will not work, since our main scrollable container is not body)
+  function wasTraversed() {
+	const entries = performance.getEntriesByType("navigation");
+	if (entries.length === 0) {
+	  return false;
+	}
+	const entry = entries[0];
+	return entry.type === "back_forward";
+  }
+
+  function wasReloaded() {
+	const entries = performance.getEntriesByType("navigation");
+	if (entries.length === 0) {
+	  return false;
+	}
+	const entry = entries[0];
+	return entry.type === "reload";
+  }
+
+  window.addEventListener("beforeunload", function () {
+	if (wasReloaded() && !window.location.pathname.includes("/blog/")) {
+	  sessionStorage.removeItem(`scrollPosition:${window.location.pathname}`);
+	}
+	if (document.querySelector(".body-container")) {
+	  const scrollPosition =
+		document.querySelector(".body-container").scrollTop;
+	  sessionStorage.setItem(
+		`scrollPosition:${window.location.pathname}`,
+		scrollPosition
+	  );
+	}
+  });
+  window.addEventListener("DOMContentLoaded", function () {
+	const savedScrollPosition =
+	  sessionStorage.getItem(`scrollPosition:${window.location.pathname}`) || 0;
+
+	if (
+	  document.querySelector(".body-container") &&
+	  (wasTraversed() || window.location.pathname.includes("/blog/"))
+	) {
+	  document.querySelector(".body-container").scrollTop = savedScrollPosition;
+	}
+  });
+}
+
+
+function setup_sidebar_toggle() {
+  window.addEventListener("DOMContentLoaded", function () {
+	document.querySelector(".frappe-sidebar-toggle").onclick = () => {
+	  document.querySelector(".frappe-sidebar-new").style.left = "0px";
+	  document.querySelector(".sidebar-backdrop").style.display = "block";
+	};
+	document.querySelector(".sidebar-backdrop").onclick = () => {
+	  document.querySelector(".frappe-sidebar-new").style.left = "-100%";
+	  document.querySelector(".sidebar-backdrop").style.display = "none";
+	};
+  });
+  /*if (document.cookie.includes("user_id") && !document.cookie.includes("user_id=Guest") && document.querySelector(".main-cta")) {
+	document.querySelector(".main-cta").querySelector(".__text_block__").innerText = "Go to Dashboard";
+	document.querySelector(".main-cta").href = "/dashboard";
+  }*/
+}
+
+function isMobile() {
+	return window.matchMedia("(max-width: 767px)").matches;
+}
+
+function isTablet() {
+	return window.matchMedia("(max-width: 1024px) and (min-width: 768px)").matches;
+}
+
+function setup_plausible() {
+	// plausible
+	const script = document.createElement("script");
+	script.defer = true;
+	script.dataset.api = "https://frappecloud.com/api/event";
+	script.dataset.domain = "frappecloud.com";
+	script.src = "https://frappecloud.com/js/script.js";
+	document.head.appendChild(script);
+}

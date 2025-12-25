@@ -1,0 +1,1 @@
+const btn=document.querySelector('.more');const hidden=document.querySelector('.hidden');btn.addEventListener('click',()=>{hidden.style.maxHeight=hidden.scrollHeight+"px";hidden.style.display="block";setTimeout(()=>{btn.style.display='none';},1);});

@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[Release Notes] Frappe &amp; ERPNext Version 13.0.0 Beta.1 Released! - ERPNext - Frappe Forum</title>
+    <meta name="description" content="Hello Community, 
+Pleased to announce that the first beta of Frappe &amp;amp; ERPNext Version 13 has been released :tada: 
+Frappe v13.0.0 Beta.1 Release Notes
+Major Features
+
+New Desk (#9617)
+Child table pagination (#8786)
+Event&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/release-notes-frappe-erpnext-version-13-0-0-beta-1-released/61088" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[Release Notes] Frappe &amp; ERPNext Version 13.0.0 Beta.1 Released!&#39;" href="https://discuss.frappe.io/t/release-notes-frappe-erpnext-version-13-0-0-beta-1-released/61088.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/release-notes-frappe-erpnext-version-13-0-0-beta-1-released/61088" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/release-notes-frappe-erpnext-version-13-0-0-beta-1-released/61088" />
+<meta property="og:title" content="[Release Notes] Frappe &amp; ERPNext Version 13.0.0 Beta.1 Released!" />
+<meta name="twitter:title" content="[Release Notes] Frappe &amp; ERPNext Version 13.0.0 Beta.1 Released!" />
+<meta property="og:description" content="Hello Community,  Pleased to announce that the first beta of Frappe &amp; ERPNext Version 13 has been released 🎉  Frappe v13.0.0 Beta.1 Release Notes Major Features  New Desk (#9617) Child table pagination (#8786) Events Streaming (#8567)  Dashboard Enhancements  Save Dashboard Chart config per user (#9830) Dashboard permissions (#9789) Create Dashboard Charts from Reports (#9518)  Other Features  Web Page tracking (#9959) Ability to cancel all linked document with a single click (#8905) Custom..." />
+<meta name="twitter:description" content="Hello Community,  Pleased to announce that the first beta of Frappe &amp; ERPNext Version 13 has been released 🎉  Frappe v13.0.0 Beta.1 Release Notes Major Features  New Desk (#9617) Child table pagination (#8786) Events Streaming (#8567)  Dashboard Enhancements  Save Dashboard Chart config per user (#9830) Dashboard permissions (#9789) Create Dashboard Charts from Reports (#9518)  Other Features  Web Page tracking (#9959) Ability to cancel all linked document with a single click (#8905) Custom..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:tag" content="release" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="frappe" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="9 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="74 ❤" />
+<meta property="article:published_time" content="2020-05-01T16:52:31+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="/t/release-notes-frappe-erpnext-version-13-0-0-beta-1-released/61088?page=2">
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"[Release Notes] Frappe & ERPNext Version 13.0.0 Beta.1 Released!","mainEntity":{"@type":"Question","name":"[Release Notes] Frappe & ERPNext Version 13.0.0 Beta.1 Released!","text":"Hello Community,\n\nPleased to announce that the first beta of Frappe &amp; ERPNext Version 13 has been released :tada:\n\n<a name=\"p-242892-frappe-v1300-beta1httpsgithubcomfrappefrappereleasestagv1300-beta1-release-notes-1\" class=\"anchor\" href=\"#p-242892-frappe-v1300-beta1httpsgithubcomfrappefrappereleasestagv1300-beta1-release-notes-1\"><\/a><a href=\"https://github.com/frappe/frappe/releases/tag/v13.0.0-beta.1\">Frappe v13.0.0 Beta.1<\/a> Release Notes\n\n<a name=\"p-242892-major-features-2\" class=\"anchor\" href=\"#p-242892-major-features-2\"><\/a>Major Features\n\nNew Desk (<a href=\"https://github.com/frappe/frappe/pull/9617\">#9617<\/a>)\n\nChild table pagination (<a href=\"https://github.com/frappe/frappe/pull/8786\">#8786<\/a>)\n\nEvents Streaming (<a href=\"https://github.com/frappe/frappe/pull/8567\">#8567<\/a>)\n\n<a name=\"p-242892-dashboard-enhancements-3\" class=\"anchor\" href=\"#p-242892-dashboard-enhancements-3\"><\/a>Dashboard Enhancements\n\nSave Dashboard Chart config per use&hellip;","upvoteCount":36,"answerCount":0,"datePublished":"2020-05-01T16:52:31.064Z","author":{"@type":"Person","name":"surajshetty","url":"https://discuss.frappe.io/u/surajshetty"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/release-notes-frappe-erpnext-version-13-0-0-beta-1-released/61088">[Release Notes] Frappe &amp; ERPNext Version 13.0.0 Beta.1 Released!</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/release' class='discourse-tag' rel="tag">release</a>, 
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[Release Notes] Frappe &amp; ERPNext Version 13.0.0 Beta.1 Released!'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/release-notes-frappe-erpnext-version-13-0-0-beta-1-released/61088'>
+      <meta itemprop='datePublished' content='2020-05-01T16:52:31Z'>
+        <meta itemprop='articleSection' content='ERPNext'>
+      <meta itemprop='keywords' content='release, erpnext, frappe'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/surajshetty'><span itemprop='name'>surajshetty</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/release-notes-frappe-erpnext-version-13-0-0-beta-1-released/61088">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2020-05-01T16:52:31Z' class='post-time'>
+                    May 1, 2020,  4:52pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-09-14T05:25:22Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello Community,</p>
+<p>Pleased to announce that the first beta of Frappe &amp; ERPNext Version 13 has been released <img src="https://discuss.frappe.io/images/emoji/twitter/tada.png?v=12" title=":tada:" class="emoji" alt=":tada:" loading="lazy" width="20" height="20"></p>
+<h1><a name="p-242892-frappe-v1300-beta1httpsgithubcomfrappefrappereleasestagv1300-beta1-release-notes-1" class="anchor" href="#p-242892-frappe-v1300-beta1httpsgithubcomfrappefrappereleasestagv1300-beta1-release-notes-1"></a><a href="https://github.com/frappe/frappe/releases/tag/v13.0.0-beta.1">Frappe v13.0.0 Beta.1</a> Release Notes</h1>
+<h2><a name="p-242892-major-features-2" class="anchor" href="#p-242892-major-features-2"></a>Major Features</h2>
+<ul>
+<li>New Desk (<a href="https://github.com/frappe/frappe/pull/9617">#9617</a>)</li>
+<li>Child table pagination (<a href="https://github.com/frappe/frappe/pull/8786">#8786</a>)</li>
+<li>Events Streaming (<a href="https://github.com/frappe/frappe/pull/8567">#8567</a>)</li>
+</ul>
+<h3><a name="p-242892-dashboard-enhancements-3" class="anchor" href="#p-242892-dashboard-enhancements-3"></a>Dashboard Enhancements</h3>
+<ul>
+<li>Save Dashboard Chart config per user (<a href="https://github.com/frappe/frappe/pull/9830">#9830</a>)</li>
+<li>Dashboard permissions (<a href="https://github.com/frappe/frappe/pull/9789">#9789</a>)</li>
+<li>Create Dashboard Charts from Reports (<a href="https://github.com/frappe/frappe/pull/9518">#9518</a>)</li>
+</ul>
+<h3><a name="p-242892-other-features-4" class="anchor" href="#p-242892-other-features-4"></a>Other Features</h3>
+<ul>
+<li>Web Page tracking (<a href="https://github.com/frappe/frappe/pull/9959">#9959</a>)</li>
+<li>Ability to cancel all linked document with a single click (<a href="https://github.com/frappe/frappe/pull/8905">#8905</a>)</li>
+<li>Custom JS &amp; CSS support in Web Form (<a href="https://github.com/frappe/frappe/pull/9121">#9121</a>) (<a href="https://github.com/frappe/frappe/pull/9610">#9610</a>)</li>
+<li>System Setting to remove seconds from datetime field (<a href="https://github.com/frappe/frappe/pull/8531">#8531</a>)</li>
+<li>Added empty list graphics for list view (<a href="https://github.com/frappe/frappe/pull/8863">#8863</a>)</li>
+<li>Validation for Data options and Data values (<a href="https://github.com/frappe/frappe/pull/9784">#9784</a>)</li>
+<li>Introduced tnum font feature for reports (<a href="https://github.com/frappe/frappe/pull/9430">#9430</a>)</li>
+<li>Allow list structure to be changed for the web view (<a href="https://github.com/frappe/frappe/pull/9431">#9431</a>)</li>
+<li>Offsite backup (<a href="https://github.com/frappe/frappe/pull/8241">#8241</a>)</li>
+<li>Mandatory Depends On &amp; Read Only Depends On for Document Fields (<a href="https://github.com/frappe/frappe/pull/8820">#8820</a>)</li>
+<li>Added Google API Indexing (<a href="https://github.com/frappe/frappe/pull/9411">#9411</a>)</li>
+</ul>
+<hr>
+<h1><a name="p-242892-erpnext-v1300-beta1httpsgithubcomfrappeerpnextreleasestagv1300-beta1-release-notes-5" class="anchor" href="#p-242892-erpnext-v1300-beta1httpsgithubcomfrappeerpnextreleasestagv1300-beta1-release-notes-5"></a><a href="https://github.com/frappe/erpnext/releases/tag/v13.0.0-beta.1">ERPNext v13.0.0 Beta.1</a> Release Notes</h1>
+<h2><a name="p-242892-accounting-6" class="anchor" href="#p-242892-accounting-6"></a>Accounting</h2>
+<ul>
+<li><a href="https://docs.erpnext.com/docs/user/manual/en/loan-management">Loan Management and Accounting</a></li>
+<li><a href="https://github.com/frappe/erpnext/pull/19973">Accounting Dimensions in Budget Variance Report</a></li>
+<li><a href="https://docs.erpnext.com/docs/user/manual/en/accounts/pos-profile">Tax Category in POS Profile</a></li>
+<li><a href="https://github.com/frappe/erpnext/pull/19876">Custom Fields in POS</a></li>
+<li><a href="https://github.com/frappe/erpnext/pull/19478">HSN Code Wise Item Tax</a></li>
+<li>Auto State-wise Taxation for GST India
+<ul>
+<li>The Accounts entered in CGST and SGST accounts in GST Settings will be automatically skipped for Interstate Transaction and the Accounts in IGST Account will be skipped in Intrastate transaction.</li>
+</ul>
+</li>
+</ul>
+<h2><a name="p-242892-stock-7" class="anchor" href="#p-242892-stock-7"></a>Stock</h2>
+<ul>
+<li><a href="https://github.com/frappe/erpnext/pull/19498">Fetch Items from BOM in Stock Entry</a></li>
+<li><a href="https://docs.erpnext.com/docs/user/manual/en/stock/articles/material-transfer-from-delivery-note">Inter Warehouse Stock Transfer in Purchase Receipt</a></li>
+</ul>
+<h2><a name="p-242892-hr-8" class="anchor" href="#p-242892-hr-8"></a>HR</h2>
+<ul>
+<li><a href="https://github.com/frappe/erpnext/pull/20464">Work From Home in Attendance</a></li>
+<li><a href="https://github.com/frappe/erpnext/pull/20062">Bulk Mark Attendance</a></li>
+</ul>
+<h2><a name="p-242892-healthcare-9" class="anchor" href="#p-242892-healthcare-9"></a>Healthcare</h2>
+<ul>
+<li><a href="https://docs.erpnext.com/docs/user/manual/en/healthcare">Refactored Healthcare Module</a></li>
+<li><a href="https://docs.erpnext.com/docs/user/manual/en/healthcare/exercise_type">Rehabilitation Module</a></li>
+</ul>
+<h2><a name="p-242892-crm-10" class="anchor" href="#p-242892-crm-10"></a>CRM</h2>
+<ul>
+<li><a href="https://docs.erpnext.com/docs/user/manual/en/CRM/social-media-post">Social Media Post</a></li>
+<li><a href="https://docs.erpnext.com/docs/user/manual/en/selling/blanket-order">Make Quotation against Blanket Order</a></li>
+<li><a href="https://github.com/frappe/erpnext/pull/21280">Calendar View for Opportunity</a></li>
+</ul>
+<h2><a name="p-242892-new-reports-11" class="anchor" href="#p-242892-new-reports-11"></a>New Reports</h2>
+<ul>
+<li><a href="https://docs.erpnext.com/docs/user/manual/en/accounts/accounting-reports">Item-wise Sales Register</a></li>
+<li><a href="https://github.com/frappe/erpnext/pull/20428">Territory-wise Sales</a></li>
+</ul>
+<h2><a name="p-242892-other-changes-12" class="anchor" href="#p-242892-other-changes-12"></a>Other Changes</h2>
+<ul>
+<li><a href="https://github.com/frappe/erpnext/pull/20876">Report Summary in Financial Statement</a></li>
+<li><a href="https://docs.erpnext.com/docs/user/manual/en/accounts/accounting-reports">Accounts Payable Report based on Payment Terms</a></li>
+<li><a href="https://github.com/frappe/erpnext/pull/20864">Allow Purchase Invoice Creation Without Purchase Receipt Checkbox in Supplier</a></li>
+<li><a href="https://github.com/frappe/erpnext/pull/20864">Allow Purchase Invoice Creation Without Purchase Order Checkbox in Supplier</a></li>
+<li>Add / Delete Items in submitted Sales / Purchase Order</li>
+<li>Provision to edit Item Details from Marketplace</li>
+<li>Nested Set filtering for Accounting Dimension</li>
+<li>UX changes and better validation message in all Modules</li>
+<li>Scan Barcode in Purchase Receipt</li>
+<li>Disable Rounded Totals Checkbox for Salary Slips in HR Settings</li>
+</ul>
+<p>Please try out these beta releases and let us know your thoughts. Also, please report bugs if any on GitHub issues.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="36" />
+              <span class='post-likes'>36 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/when-is-erpnext-13/60646/2">When is ERPNExt 13?</a>
+                        <meta itemprop='position' content='39'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/flexy2ky'><span itemprop='name'>flexy2ky</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-01T18:07:45Z' class='post-time'>
+                    May 1, 2020,  6:07pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-01T18:07:45Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>How do you install the beta release to test?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vrms'><span itemprop='name'>vrms</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-01T18:24:49Z' class='post-time'>
+                    May 1, 2020,  6:24pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-01T18:25:19Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="flexy2ky" data-post="3" data-topic="61088" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/flexy2ky/48/55087_2.png" class="avatar"> flexy2ky:</div>
+<blockquote>
+<p>How do you install the beta release to test?</p>
+</blockquote>
+</aside>
+<p>I’d say make an installation with the <code>develop</code> branch</p>
+<p><s>or go to beta.erpnext.com</s> (seems not to exist any longer)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/flexy2ky'><span itemprop='name'>flexy2ky</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-01T18:26:56Z' class='post-time'>
+                    May 1, 2020,  6:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-01T18:26:56Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes i tried installing develop but i got v12 instead of v13. requested for help on how to install v13 but no one responded so i gave up.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vrms'><span itemprop='name'>vrms</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-01T18:29:25Z' class='post-time'>
+                    May 1, 2020,  6:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-01T18:29:25Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>seems there is a <a href="https://github.com/frappe/erpnext/tree/version-13-beta">version-13-beta branch</a>. So you’d use that branch I guess.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/flexy2ky'><span itemprop='name'>flexy2ky</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-01T18:33:42Z' class='post-time'>
+                    May 1, 2020,  6:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-01T18:33:42Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I figured as much. But for non-developers like me who would want to test to give the everyday user perspectives, there’s really no guide on how to install develop branch.  Me thinks that’s why there’s a lot of issues whenever there’s a new version or update release as not all use cases are considered.</p>
+<p>Releasing V13 in beta helps in this regard but it should come with install instructions so non-developers can also test and offer divergent user experience perspectives. It will ensure a more stable final release.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vrms'><span itemprop='name'>vrms</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-01T18:33:47Z' class='post-time'>
+                    May 1, 2020,  6:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-01T18:33:47Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>there was a <a href="https://discuss.frappe.io/t/expense-claim-multi-currency-settlement/58820/5">comment</a> by <a class="mention" href="/u/michelle">@michelle</a>  a while ago that multi-currency expense claim was going to be part of version-13. It isn’t mentioned here, so I was wondering whether that still in the works and will actually go into version-13 or whether that effort was cancelled?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vrms'><span itemprop='name'>vrms</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-01T18:38:42Z' class='post-time'>
+                    May 1, 2020,  6:38pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-01T18:38:42Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="flexy2ky" data-post="7" data-topic="61088" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/flexy2ky/48/55087_2.png" class="avatar"> flexy2ky:</div>
+<blockquote>
+<p>I figured as much. But for non-developers like me who would want to test to give the everyday user perspectives, there’s really no guide on how to install develop branch.</p>
+</blockquote>
+</aside>
+<p>I think all tutorials for installation tackle the issue of choosing a certain branch.<br>
+That does not help with the problem of installation being not an easy task and often failing since quite a while though. maintaining the <a href="http://beta.erpnext.com">beta.erpnext.com</a> instance would be a nice thing to have.</p>
+<p>you can also create an instance of V13 on the the <a href="https://frappe.cloud">https://frappe.cloud</a> platform. That would come with costs though (even though they offer some sort of credits for new account owners I believe.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-01T19:22:57Z' class='post-time'>
+                    May 1, 2020,  7:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-02T20:56:05Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If docker and docker-compose is installed, use tag v13-beta.</p>
+<pre data-code-wrap="sh"><code class="lang-plaintext">git clone https://github.com/frappe/frappe_docker.git
+
+cd frappe_docker
+
+cp env-example .env
+
+sed -i -e "s/edge/v13-beta/g" .env
+
+docker-compose --project-name frappebench00 -f installation/docker-compose-common.yml -f installation/docker-compose-erpnext.yml -f installation/erpnext-publish.yml up -d
+
+sleep 15
+
+docker run -it -e "SITE_NAME=v13beta.localhost" -e "INSTALL_APPS=erpnext" -v frappebench00_sites-vol:/home/frappe/frappe-bench/sites --network frappebench00_default frappe/erpnext-worker:v13-beta new
+</code></pre>
+<p>open in browser <a href="http://v13beta.localhost">http://v13beta.localhost</a><br>
+username: Administrator<br>
+password: admin</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="12" />
+              <span class='post-likes'>12 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/iHello'><span itemprop='name'>iHello</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-02T00:58:13Z' class='post-time'>
+                    May 2, 2020, 12:58am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-02T00:58:13Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <pre><code class="lang-auto">bench switch-to-branch version-13-beta frappe erpnext --upgrade
+bench update --patch
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="5" />
+              <span class='post-likes'>5 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vrms'><span itemprop='name'>vrms</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-02T06:13:07Z' class='post-time'>
+                    May 2, 2020,  6:13am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-02T07:24:05Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="revant_one" data-post="10" data-topic="61088">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/revant_one/48/55081_2.png" class="avatar"> revant_one:</div>
+<blockquote>
+<p><a href="https://github.com/frappe/frappe_dock">https://github.com/frappe/frappe_dock</a></p>
+</blockquote>
+</aside>
+<p>I‘ll try that for sure</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/glz'><span itemprop='name'>glz</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/2/4/24d1d9ee69f7312c466c114cb665b96050d0d046.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-02T08:05:04Z' class='post-time'>
+                    May 2, 2020,  8:05am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-02T08:05:04Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><img src="https://discuss.frappe.io/uploads/default/original/3X/2/4/24d1d9ee69f7312c466c114cb665b96050d0d046.png" alt="image" data-base62-sha1="5fINbi9psyXwhKWMyiIx3OFhnwy" width="607" height="187"></p>
+<p>During login, after switching branch to version-13-beta</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/rmeyer'><span itemprop='name'>rmeyer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-02T10:05:24Z' class='post-time'>
+                    May 2, 2020, 10:05am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-02T10:05:24Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Is there a way to contribute to the release notes? I am missing some new features.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Akram_Mutaher'><span itemprop='name'>Akram_Mutaher</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-02T13:37:39Z' class='post-time'>
+                    May 2, 2020,  1:37pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-02T13:37:39Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Same Issue with me <strong>Invalid version string: ‘13.0.0.beta.1’</strong></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/glz'><span itemprop='name'>glz</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-02T15:08:08Z' class='post-time'>
+                    May 2, 2020,  3:08pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-02T15:08:08Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If you close the error, and refresh the browser, you can access the system. Short term solution.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/surajshetty'><span itemprop='name'>surajshetty</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-02T17:11:09Z' class='post-time'>
+                    May 2, 2020,  5:11pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-02T17:11:09Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/glz">@glz</a>, <a class="mention" href="/u/akram_mutaher">@Akram_Mutaher</a> The issue has been fixed with</p>
+<aside class="onebox githubcommit" data-onebox-src="https://github.com/frappe/frappe/commit/af9250e8932442e5c83f276f4f6600d210eb6396">
+  <header class="source">
+
+      <a href="https://github.com/frappe/frappe/commit/af9250e8932442e5c83f276f4f6600d210eb6396" target="_blank" rel="noopener">github.com/frappe/frappe</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="github-row">
+  <div class="github-icon-container" title="Commit">
+    <svg width="60" height="60" class="github-icon" viewbox="0 0 14 16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"></path></svg>
+  </div>
+
+  <div class="github-info-container">
+    <h4>
+      <a href="https://github.com/frappe/frappe/commit/af9250e8932442e5c83f276f4f6600d210eb6396" target="_blank" rel="noopener">chore: Rename change log</a>
+    </h4>
+
+    <div class="github-info">
+      <div class="date">
+        committed <span class="discourse-local-date" data-format="ll" data-date="2020-05-02" data-time="17:00:44" data-timezone="UTC">05:00PM - 02 May 20 UTC</span>
+      </div>
+
+      <div class="user">
+        <a href="https://github.com/surajshetty3416" target="_blank" rel="noopener">
+          <img alt="surajshetty3416" src="https://avatars.githubusercontent.com/u/13928957?v=4" class="onebox-avatar-inline" width="20" height="20">
+          surajshetty3416
+        </a>
+      </div>
+
+      <div class="lines" title="changed 1 files with 0 additions and 0 deletions">
+        <a href="https://github.com/frappe/frappe/commit/af9250e8932442e5c83f276f4f6600d210eb6396" target="_blank" rel="noopener">
+          <span class="added">+0</span>
+          <span class="removed">-0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<aside class="onebox githubcommit" data-onebox-src="https://github.com/frappe/erpnext/commit/a367a07bf17ab617df2f8a2a079492a88256a85c">
+  <header class="source">
+
+      <a href="https://github.com/frappe/erpnext/commit/a367a07bf17ab617df2f8a2a079492a88256a85c" target="_blank" rel="noopener">github.com/frappe/erpnext</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="github-row">
+  <div class="github-icon-container" title="Commit">
+    <svg width="60" height="60" class="github-icon" viewbox="0 0 14 16" aria-hidden="true"><path fill-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"></path></svg>
+  </div>
+
+  <div class="github-info-container">
+    <h4>
+      <a href="https://github.com/frappe/erpnext/commit/a367a07bf17ab617df2f8a2a079492a88256a85c" target="_blank" rel="noopener">chore: Rename change log</a>
+    </h4>
+
+    <div class="github-info">
+      <div class="date">
+        committed <span class="discourse-local-date" data-format="ll" data-date="2020-05-02" data-time="17:01:30" data-timezone="UTC">05:01PM - 02 May 20 UTC</span>
+      </div>
+
+      <div class="user">
+        <a href="https://github.com/surajshetty3416" target="_blank" rel="noopener">
+          <img alt="surajshetty3416" src="https://avatars.githubusercontent.com/u/13928957?v=4" class="onebox-avatar-inline" width="20" height="20">
+          surajshetty3416
+        </a>
+      </div>
+
+      <div class="lines" title="changed 1 files with 0 additions and 0 deletions">
+        <a href="https://github.com/frappe/erpnext/commit/a367a07bf17ab617df2f8a2a079492a88256a85c" target="_blank" rel="noopener">
+          <span class="added">+0</span>
+          <span class="removed">-0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Please pull the latest commit for both Frappe and ERPNext using <code>git pull</code> cmd.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/version-13-beta-bugs/61121/3">Version-13-beta Bugs</a>
+                        <meta itemprop='position' content='3'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/flexy2ky'><span itemprop='name'>flexy2ky</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-02T20:03:20Z' class='post-time'>
+                    May 2, 2020,  8:03pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-02T20:03:20Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Facing this error:</p>
+<blockquote>
+<p>PS C:\Users\user\frappe_docker&gt; docker-compose <br>
+–project-name frappebench00 <br>
+-f installation/docker-compose-common.yml <br>
+-f installation/docker-compose-erpnext.yml <br>
+-f installation/erpnext-publish.yml <br>
+up -d<br>
+At line:2 char:7</p>
+<ul>
+<li>
+<pre><code>--project-name frappebench00 \
+</code></pre>
+</li>
+<li>
+<pre><code>  ~
+</code></pre>
+</li>
+</ul>
+<p>Missing expression after unary operator ‘–’.<br>
+At line:2 char:7</p>
+<ul>
+<li>
+<pre><code>--project-name frappebench00 \
+</code></pre>
+</li>
+<li>
+<pre><code>  ~~~~~~~~~~~~
+</code></pre>
+</li>
+</ul>
+<p>Unexpected token ‘project-name’ in expression or statement.<br>
++ CategoryInfo          : ParserError: (<img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> <span class="chcklst-box fa fa-square-o fa-fw"></span>, ParentContainsErrorRecordException<br>
++ FullyQualifiedErrorId : MissingExpressionAfterOperator</p>
+</blockquote>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-02T20:29:22Z' class='post-time'>
+                    May 2, 2020,  8:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-02T20:29:22Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This is a script that runs daily</p>
+<p><a href="https://github.com/frappe/frappe_docker/blob/develop/tests/docker-test.sh" class="onebox" target="_blank" rel="noopener">https://github.com/frappe/frappe_docker/blob/develop/tests/docker-test.sh</a></p>
+<p>Doesn’t seem to fail here <a href="https://travis-ci.org/github/frappe/frappe_docker/jobs/682279778" class="inline-onebox">Travis CI - Test and Deploy Your Code with Confidence</a></p>
+<p>Check the syntax, command?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_21' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/revant_one'><span itemprop='name'>revant_one</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-02T20:46:52Z' class='post-time'>
+                    May 2, 2020,  8:46pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-02T20:57:59Z'>
+              <span itemprop='position'>21</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group quote-post-not-found" data-username="flexy2ky" data-post="20" data-topic="61088">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/flexy2ky/48/55087_2.png" class="avatar"> flexy2ky:</div>
+<blockquote>
+<p>i know i may not get any support to troubleshoot why i’m getting the above error.</p>
+</blockquote>
+</aside>
+<p>Looking at <code>C:\Users\user\frappe_docker&gt;</code>. You’re on windows.</p>
+<p>You copy pasted bash script into windows terminal</p>
+<p>I don’t have windows machine to copy paste same thing into windows terminal and debug this for you.</p>
+<p>If I get access to window machine, I’ll try to solve this.</p>
+<p>Edit: I made the commands copy paste friendly. If it doesn’t work on windows try replacing forwardslash (/) with backslash (<code>\</code>) for directory separator. Check how it is in <code>C:\Users\....</code></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="/t/release-notes-frappe-erpnext-version-13-0-0-beta-1-released/61088?page=2">next page →</a></b></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

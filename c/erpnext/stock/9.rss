@@ -1,0 +1,884 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:discourse="http://www.discourse.org/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Stock/Inventory - Frappe Forum</title>
+    <link>https://discuss.frappe.io/c/erpnext/stock/9</link>
+    <description>Topics in the &#39;Stock/Inventory&#39; category For discussion about the stock module in ERPNext.  This includes discussion about any DocTypes contained in stock, errors, areas for improvement, etc.</description>
+    
+      <lastBuildDate>Sat, 20 Dec 2025 22:53:55 +0000</lastBuildDate>
+      <atom:link href="https://discuss.frappe.io/c/erpnext/stock/9.rss" rel="self" type="application/rss+xml" />
+        <item>
+          <title>Restrict Item Groups per Warehouse</title>
+          <dc:creator><![CDATA[Ahmedyousef15]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>Hello Frappe Community <img src="https://discuss.frappe.io/images/emoji/twitter/waving_hand.png?v=14" title=":waving_hand:" class="emoji" alt=":waving_hand:" loading="lazy" width="20" height="20">,</p>
+<p>I would like to share an app that I am currently building and get your feedback before publishing it on the <strong>Frappe Marketplace</strong>.</p>
+<h3><a name="p-489265-the-problem-1" class="anchor" href="https://discuss.frappe.io#p-489265-the-problem-1"></a><img src="https://discuss.frappe.io/images/emoji/twitter/magnifying_glass_tilted_left.png?v=14" title=":magnifying_glass_tilted_left:" class="emoji" alt=":magnifying_glass_tilted_left:" loading="lazy" width="20" height="20"> The Problem</h3>
+<p>In ERPNext today:</p>
+<ul>
+<li>
+<p>Item Groups are used only for classification</p>
+</li>
+<li>
+<p>Warehouses are independent storage locations</p>
+</li>
+<li>
+<p>There is <strong>no native way</strong> to enforce business rules such as:</p>
+<blockquote>
+<p>“Only certain Item Groups are allowed in specific Warehouses”</p>
+</blockquote>
+</li>
+</ul>
+<p>This often leads to:</p>
+<ul>
+<li>
+<p>Wrong stock placement</p>
+</li>
+<li>
+<p>Operational mistakes</p>
+</li>
+<li>
+<p>Heavy dependence on user discipline</p>
+</li>
+</ul>
+<hr>
+<h3><a name="p-489265-the-solution-new-app-2" class="anchor" href="https://discuss.frappe.io#p-489265-the-solution-new-app-2"></a><img src="https://discuss.frappe.io/images/emoji/twitter/light_bulb.png?v=14" title=":light_bulb:" class="emoji" alt=":light_bulb:" loading="lazy" width="20" height="20"> The Solution (New App)</h3>
+<p>I am building a new app that introduces <strong>Warehouse-based Item Group control</strong>.</p>
+<p><strong>Core idea:</strong></p>
+<ul>
+<li>
+<p>Define rules per <strong>Warehouse</strong></p>
+</li>
+<li>
+<p>Each rule specifies which <strong>Item Groups are allowed</strong></p>
+</li>
+<li>
+<p>Enforcement happens on stock-impacting transactions</p>
+</li>
+</ul>
+<p><strong>Supported transactions (server-side enforcement):</strong></p>
+<ul>
+<li>
+<p>Stock Entry</p>
+</li>
+<li>
+<p>Purchase Receipt</p>
+</li>
+<li>
+<p>Delivery Note</p>
+</li>
+<li>
+<p>Sales Invoice (when <code>Update Stock = 1</code>)</p>
+</li>
+<li>
+<p>Purchase Invoice (when <code>Update Stock = 1</code>)</p>
+</li>
+<li>
+<p>Stock Reconciliation</p>
+</li>
+</ul>
+<p><strong>Design principles:</strong></p>
+<ul>
+<li>
+<p>No core overrides</p>
+</li>
+<li>
+<p>No Stock Ledger manipulation</p>
+</li>
+<li>
+<p>Upgrade-safe</p>
+</li>
+<li>
+<p>Marketplace-ready</p>
+</li>
+<li>
+<p>Multi-company aware</p>
+</li>
+</ul>
+<p>If a Warehouse has no rule → behavior remains unchanged (fully backward compatible).</p>
+<hr>
+<h3><a name="p-489265-target-use-cases-3" class="anchor" href="https://discuss.frappe.io#p-489265-target-use-cases-3"></a><img src="https://discuss.frappe.io/images/emoji/twitter/bullseye.png?v=14" title=":bullseye:" class="emoji" alt=":bullseye:" loading="lazy" width="20" height="20"> Target Use Cases</h3>
+<ul>
+<li>
+<p>Raw materials restricted to raw stores</p>
+</li>
+<li>
+<p>Finished goods restricted to FG warehouses</p>
+</li>
+<li>
+<p>Chemicals / hazardous items in controlled warehouses</p>
+</li>
+<li>
+<p>Branch-specific warehouse policies</p>
+</li>
+</ul>
+<hr>
+<h3><a name="p-489265-marketplace-plan-4" class="anchor" href="https://discuss.frappe.io#p-489265-marketplace-plan-4"></a><img src="https://discuss.frappe.io/images/emoji/twitter/rocket.png?v=14" title=":rocket:" class="emoji" alt=":rocket:" loading="lazy" width="20" height="20"> Marketplace Plan</h3>
+<p>I plan to publish this app on the <strong>Frappe Marketplace</strong> once:</p>
+<ul>
+<li>
+<p>The core logic is stable</p>
+</li>
+<li>
+<p>Community feedback is incorporated</p>
+</li>
+<li>
+<p>Edge cases are reviewed</p>
+</li>
+</ul>
+<p>That’s why I’m posting here first <img src="https://discuss.frappe.io/images/emoji/twitter/raising_hands.png?v=14" title=":raising_hands:" class="emoji" alt=":raising_hands:" loading="lazy" width="20" height="20"></p>
+<hr>
+<h3><a name="p-489265-feedback-requested-5" class="anchor" href="https://discuss.frappe.io#p-489265-feedback-requested-5"></a><img src="https://discuss.frappe.io/images/emoji/twitter/speech_balloon.png?v=14" title=":speech_balloon:" class="emoji" alt=":speech_balloon:" loading="lazy" width="20" height="20"> Feedback Requested</h3>
+<p>I would really appreciate your thoughts on:</p>
+<ul>
+<li>
+<p>The overall idea</p>
+</li>
+<li>
+<p>Missing edge cases</p>
+</li>
+<li>
+<p>Similar solutions you’ve seen (if any)</p>
+</li>
+<li>
+<p>Features you’d expect in v1 vs future versions</p>
+</li>
+</ul>
+<hr>
+<h3><a name="p-489265-contact-6" class="anchor" href="https://discuss.frappe.io#p-489265-contact-6"></a><img src="https://discuss.frappe.io/images/emoji/twitter/telephone_receiver.png?v=14" title=":telephone_receiver:" class="emoji" alt=":telephone_receiver:" loading="lazy" width="20" height="20"> Contact</h3>
+<p>If you prefer a quick discussion, you can also reach me on WhatsApp:<br>
+<img src="https://discuss.frappe.io/images/emoji/twitter/backhand_index_pointing_right.png?v=14" title=":backhand_index_pointing_right:" class="emoji" alt=":backhand_index_pointing_right:" loading="lazy" width="20" height="20"> <a href="https://wa.me/201028171836" class="inline-onebox" rel="noopener nofollow ugc">Share on WhatsApp</a></p>
+<p>(Feedback here on the forum is preferred so everyone can benefit.)</p>
+<p>Thanks in advance <img src="https://discuss.frappe.io/images/emoji/twitter/folded_hands.png?v=14" title=":folded_hands:" class="emoji" alt=":folded_hands:" loading="lazy" width="20" height="20"><br>
+Looking forward to your input.</p>
+<p>— <strong>Ahmed Yousef</strong></p>
+            <p><small>3 posts - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/restrict-item-groups-per-warehouse/158182">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/restrict-item-groups-per-warehouse/158182</link>
+          <pubDate>Sat, 20 Dec 2025 22:53:55 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158182</guid>
+          <source url="https://discuss.frappe.io/t/restrict-item-groups-per-warehouse/158182.rss">Restrict Item Groups per Warehouse</source>
+        </item>
+        <item>
+          <title>How to import a template with multiple variant attributes?</title>
+          <dc:creator><![CDATA[grzes-business]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>TLDR: I can’t find a way to import a product template with more than one variant attribute e.g. Size, Color</p>
+<p>Hi there,</p>
+<p>I am trying to import a template for a product using a CSV file:</p>
+<pre><code class="lang-auto">item_code,item_name,item_group,stock_uom,is_stock_item,has_variants,attributes.attribute,variant_based_on
+
+SHIRT-SLOW,Shirt slow,Clothes,Szt.,0,1,"Color, Size",Item Attribute
+</code></pre>
+<p>But I can’t get through with the import because I need multiple variant attributes to be assigned to the template, which I can’t figure out how to do.</p>
+<p>I have tried many ways:</p>
+<ol>
+<li>Importing in one cell using: "Rozmiar, Kolor” (as in the example), Rozmiar|Kolor, Rozmiar;Kolor</li>
+<li>Importing using column separation, this means using attributes.attribute and attributes.attribute.1 for the two variant attributes</li>
+<li>Also I tried just a second row with only the attributes.attribute and variant_based_on filled in, which of course failed because I had to provide an item_code</li>
+<li>And lastly, of course I tried to import the template in two rows with the attributes values being different.</li>
+</ol>
+<p>And nothing I tried worked. I might just try to find the feature inside of the source code and try to get it from the very source, but come on, haven’t anybody figured that out yet?</p>
+<p>Your help and replies are highly appreciated in advance.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/how-to-import-a-template-with-multiple-variant-attributes/157291">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/how-to-import-a-template-with-multiple-variant-attributes/157291</link>
+          <pubDate>Tue, 25 Nov 2025 19:04:18 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-157291</guid>
+          <source url="https://discuss.frappe.io/t/how-to-import-a-template-with-multiple-variant-attributes/157291.rss">How to import a template with multiple variant attributes?</source>
+        </item>
+        <item>
+          <title>Add Charges for 3rd party in Landed cost voucher </title>
+          <dc:creator><![CDATA[AhamdAli]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>In Landed Cost Voucher, we intend to record transportation costs incurred by an independent transportation company. The issue is that the system does not allow for the registration of a supplier for the control account related to transportation costs. What is the solution? If the party is not registered, there is no possibility of linking the payment form to the corresponding expenses.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/add-charges-for-3rd-party-in-landed-cost-voucher/157188">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/add-charges-for-3rd-party-in-landed-cost-voucher/157188</link>
+          <pubDate>Sun, 23 Nov 2025 06:14:41 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-157188</guid>
+          <source url="https://discuss.frappe.io/t/add-charges-for-3rd-party-in-landed-cost-voucher/157188.rss">Add Charges for 3rd party in Landed cost voucher </source>
+        </item>
+        <item>
+          <title>Warehouse layers</title>
+          <dc:creator><![CDATA[Ahmad_Qenawi]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>Hello all,</p>
+<p>in my business we’re buying from householders and selling to other businesses. so, we’ve like 5000 supplier and 5 clients. our couriers collect items from suppliers (householders) then deliver it to warehouse. warehouse has 3 processes receiving, sorting and selling. how to apply this model in erpnext stock module?</p>
+            <p><small>3 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/warehouse-layers/156993">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/warehouse-layers/156993</link>
+          <pubDate>Tue, 18 Nov 2025 15:08:27 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156993</guid>
+          <source url="https://discuss.frappe.io/t/warehouse-layers/156993.rss">Warehouse layers</source>
+        </item>
+        <item>
+          <title>Warehouse Error in Purchase Invoice when trying to Purchase a Fixed Asset</title>
+          <dc:creator><![CDATA[Abel]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>Hello Everyone,</p>
+<p>erpnext : v15.77.0</p>
+<p>Frappe : v15.79.0</p>
+<p>I am facing an issue when i try to purchase a Fixed asset, the Purchase Invoice shows the following pop- up</p>
+<p><strong>“Disabled Warehouse Stores-XYZ cannot be used for this transaction“</strong></p>
+<p>The warehouse has been disabled and none of the settings (Stock Settings, Company Settings, etc..) have the Disabled Warehouse mentioned in any of the fields.</p>
+<p>NOTE: This maybe a simple fix but since i am still learning how to use the system any insights/Suggestions would be helpful.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/warehouse-error-in-purchase-invoice-when-trying-to-purchase-a-fixed-asset/156984">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/warehouse-error-in-purchase-invoice-when-trying-to-purchase-a-fixed-asset/156984</link>
+          <pubDate>Tue, 18 Nov 2025 11:57:10 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156984</guid>
+          <source url="https://discuss.frappe.io/t/warehouse-error-in-purchase-invoice-when-trying-to-purchase-a-fixed-asset/156984.rss">Warehouse Error in Purchase Invoice when trying to Purchase a Fixed Asset</source>
+        </item>
+        <item>
+          <title>Stock Inventory Data Structure</title>
+          <dc:creator><![CDATA[arvind198419]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>Need help for Database structure, which use for Stock Inventory based on Sales, Purchase Invoice</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/stock-inventory-data-structure/156963">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/stock-inventory-data-structure/156963</link>
+          <pubDate>Tue, 18 Nov 2025 05:39:33 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156963</guid>
+          <source url="https://discuss.frappe.io/t/stock-inventory-data-structure/156963.rss">Stock Inventory Data Structure</source>
+        </item>
+        <item>
+          <title>Issue with Custom Stock Balance Report – Incorrect Qty After Stock Reconciliation</title>
+          <dc:creator><![CDATA[Malashri]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>Hi everyone,</p>
+<p>I’m trying to create a custom version of the Stock Balance report that shows only quantities (no values) and includes minimal filters.</p>
+<p>I’ve set it up as a Query Report, but I’m running into an issue — the Opening Qty and Closing Qty are not calculated correctly whenever there’s a Stock Reconciliation entry.</p>
+<p>Has anyone implemented a similar report or figured out the correct way to handle stock reconciliation adjustments in custom stock reports?Any pointers on which backend logic or functions (from stock_ledger.py or elsewhere) should be referenced to get accurate quantities would be really helpful.</p>
+<p>Thanks!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/issue-with-custom-stock-balance-report-incorrect-qty-after-stock-reconciliation/156829">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/issue-with-custom-stock-balance-report-incorrect-qty-after-stock-reconciliation/156829</link>
+          <pubDate>Fri, 14 Nov 2025 04:55:08 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156829</guid>
+          <source url="https://discuss.frappe.io/t/issue-with-custom-stock-balance-report-incorrect-qty-after-stock-reconciliation/156829.rss">Issue with Custom Stock Balance Report – Incorrect Qty After Stock Reconciliation</source>
+        </item>
+        <item>
+          <title>Duplicate the Stock Entry form</title>
+          <dc:creator><![CDATA[Malashri]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>Hi everyone,</p>
+<p>I’d like to duplicate the <strong>Stock Entry</strong> form to create three separate doctypes, each functioning like an independent Stock Entry but with specific purposes. The required doctypes are:</p>
+<ol>
+<li>
+<p><strong>Goods Inward</strong> – (Material Receipt purpose)</p>
+</li>
+<li>
+<p><strong>Goods Outward</strong> – (Material Issue purpose)</p>
+</li>
+<li>
+<p><strong>Goods Transfer</strong> – (Material Transfer purpose)</p>
+</li>
+</ol>
+<p>Each of these should behave exactly like the original Stock Entry, including proper stock posting and all related functionalities.</p>
+<p>Has anyone implemented something similar or can guide on the best approach to achieve this?</p>
+<p>Thanks in advance!</p>
+            <p><small>4 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/duplicate-the-stock-entry-form/156827">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/duplicate-the-stock-entry-form/156827</link>
+          <pubDate>Fri, 14 Nov 2025 04:39:14 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156827</guid>
+          <source url="https://discuss.frappe.io/t/duplicate-the-stock-entry-form/156827.rss">Duplicate the Stock Entry form</source>
+        </item>
+        <item>
+          <title>UOM Mismatch Issue Between like Purchase PO and Receipt</title>
+          <dc:creator><![CDATA[magedbjn]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>In the <strong>Purchase Order</strong>, I request items using the <strong>Kilogram (Kg)</strong> unit.<br>
+However, during <strong>Purchase Receipt</strong>, I receive the items using different units such as <strong>Piece</strong> or <strong>Carton</strong>.</p>
+<p>I have already set up the UOM Conversion inside the Item, so that Piece and Carton convert correctly to Kilogram.<br>
+But when I try to submit the Purchase Receipt with a different UOM, I get the following error:</p>
+<p>**Incorrect value in row 1: UOM must be equal to ‘Kg’<br>
+**</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/1/91ada5576fe4f7e06c1e2a3fa01033e1d81b4b47.png" data-download-href="https://discuss.frappe.io/uploads/default/91ada5576fe4f7e06c1e2a3fa01033e1d81b4b47" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/9/1/91ada5576fe4f7e06c1e2a3fa01033e1d81b4b47_2_690x159.png" alt="image" data-base62-sha1="kMJgBi8o6Jqk5LoyIw0uVENRupp" width="690" height="159" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/9/1/91ada5576fe4f7e06c1e2a3fa01033e1d81b4b47_2_690x159.png, https://discuss.frappe.io/uploads/default/optimized/3X/9/1/91ada5576fe4f7e06c1e2a3fa01033e1d81b4b47_2_1035x238.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/9/1/91ada5576fe4f7e06c1e2a3fa01033e1d81b4b47.png 2x" data-dominant-color="FBFBFB"></a></div><p></p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/uom-mismatch-issue-between-like-purchase-po-and-receipt/156822">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/uom-mismatch-issue-between-like-purchase-po-and-receipt/156822</link>
+          <pubDate>Fri, 14 Nov 2025 00:09:36 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156822</guid>
+          <source url="https://discuss.frappe.io/t/uom-mismatch-issue-between-like-purchase-po-and-receipt/156822.rss">UOM Mismatch Issue Between like Purchase PO and Receipt</source>
+        </item>
+        <item>
+          <title>Alternate Item Handling During Material Transfer (Add to Transit) in ERPNext v15.67.0</title>
+          <dc:creator><![CDATA[Sharu]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>Hi all,</p>
+<p>I’m using <strong>ERPNext v15.67.0</strong>, and I’d like to know if there’s any default feature or standard workflow that supports the following process:</p>
+<ol>
+<li>
+<p>I raise a <strong>Material Request</strong> from my <strong>Sub Warehouse</strong> to the <strong>Main Warehouse</strong> for a required item.</p>
+</li>
+<li>
+<p>The <strong>Main Warehouse</strong> receives that Material Request and creates a <strong>Material Transfer (Stock Entry)</strong>.</p>
+</li>
+<li>
+<p>During the Material Transfer process — specifically when using <strong>“Add to Transit”</strong> — if the requested item does <strong>not have sufficient stock</strong>, I want the system to <strong>suggest or allow an alternate item</strong> (based on the <strong>Item Alternative</strong> or <strong>Item Substitute</strong> setup) and proceed with that alternate item and quantity.</p>
+</li>
+</ol>
+<p>Is there any <strong>default feature or configuration</strong> in ERPNext that supports this kind of flow?<br>
+Or would this require a <strong>custom implementation</strong>?</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/alternate-item-handling-during-material-transfer-add-to-transit-in-erpnext-v15-67-0/156398">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/alternate-item-handling-during-material-transfer-add-to-transit-in-erpnext-v15-67-0/156398</link>
+          <pubDate>Tue, 04 Nov 2025 07:22:38 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156398</guid>
+          <source url="https://discuss.frappe.io/t/alternate-item-handling-during-material-transfer-add-to-transit-in-erpnext-v15-67-0/156398.rss">Alternate Item Handling During Material Transfer (Add to Transit) in ERPNext v15.67.0</source>
+        </item>
+        <item>
+          <title>One Location and Multiple Companies</title>
+          <dc:creator><![CDATA[Maveez]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>I want to know if there is a way to keep the warehouse tree above the Company master so that a single warehouse tree structure can be reused across multiple companies.</p>
+<p>Currently, the warehouse hierarchy is tied to individual companies, which makes it difficult to maintain a common structure for all companies.</p>
+<p>Is there a recommended approach, workaround, or feature planned to allow a shared warehouse structure?</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/one-location-and-multiple-companies/156335">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/one-location-and-multiple-companies/156335</link>
+          <pubDate>Mon, 03 Nov 2025 07:31:45 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156335</guid>
+          <source url="https://discuss.frappe.io/t/one-location-and-multiple-companies/156335.rss">One Location and Multiple Companies</source>
+        </item>
+        <item>
+          <title>Peculiar UOM issue</title>
+          <dc:creator><![CDATA[frewper]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>I have a peculiar issue which I am not able  to solve. A solution would be welcome.</p>
+<p>I have a chemical for which an Item Master is defined.</p>
+<p>Now the consumption of the acid in manufactory process is in milliliter. And 1 milliliter is 1.71 grams.</p>
+<p>This item is generally purchased in 1 kg bottles.<br>
+Hence the Purchase UOM is set a Kg.<br>
+Default UOM is milliliter.</p>
+<p>Now my problem is in defining the UOM section if item master where all three uom is defined.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/c/6/c651530b6c6b474ce31488089f0f0027a9edd329.png" data-download-href="https://discuss.frappe.io/uploads/default/c651530b6c6b474ce31488089f0f0027a9edd329" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/c/6/c651530b6c6b474ce31488089f0f0027a9edd329_2_690x199.png" alt="image" data-base62-sha1="sioM6oyFpwT3vm1BIQXtPUlBPNn" width="690" height="199" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/c/6/c651530b6c6b474ce31488089f0f0027a9edd329_2_690x199.png, https://discuss.frappe.io/uploads/default/optimized/3X/c/6/c651530b6c6b474ce31488089f0f0027a9edd329_2_1035x298.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/c/6/c651530b6c6b474ce31488089f0f0027a9edd329.png 2x" data-dominant-color="FCFCFC"></a></div><p></p>
+<p>The first two rows are clear. But what should be the value of the third row for Kg.</p>
+<p>Can someone help with this ?</p>
+            <p><small>7 posts - 5 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/peculiar-uom-issue/156286">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/peculiar-uom-issue/156286</link>
+          <pubDate>Sat, 01 Nov 2025 12:34:08 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156286</guid>
+          <source url="https://discuss.frappe.io/t/peculiar-uom-issue/156286.rss">Peculiar UOM issue</source>
+        </item>
+        <item>
+          <title>how to use purchase receipt with zero valuation without affecting on valuation of goods in stock? </title>
+          <dc:creator><![CDATA[asal]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>i want to receipt my goods with zero valuation also dont want the valuation of purchase receipt has effects on my good’s value? how its possible in erp next?</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/how-to-use-purchase-receipt-with-zero-valuation-without-affecting-on-valuation-of-goods-in-stock/156276">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/how-to-use-purchase-receipt-with-zero-valuation-without-affecting-on-valuation-of-goods-in-stock/156276</link>
+          <pubDate>Sat, 01 Nov 2025 07:35:53 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156276</guid>
+          <source url="https://discuss.frappe.io/t/how-to-use-purchase-receipt-with-zero-valuation-without-affecting-on-valuation-of-goods-in-stock/156276.rss">how to use purchase receipt with zero valuation without affecting on valuation of goods in stock? </source>
+        </item>
+        <item>
+          <title>Item valuation reposting in progress. Stuck in queued for 12 months</title>
+          <dc:creator><![CDATA[eaj]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>hi. i am using erpnext v15. i have 74,614 items queued for repost item valuation and 26 in progress repost item valuation, how do i make this queueing faster or submit them all at once? since the latest that’s queued is still 12 months ago and i am not getting the correct item valuation. thanks/</p>
+            <p><small>23 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/item-valuation-reposting-in-progress-stuck-in-queued-for-12-months/155524">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/item-valuation-reposting-in-progress-stuck-in-queued-for-12-months/155524</link>
+          <pubDate>Wed, 15 Oct 2025 04:02:50 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155524</guid>
+          <source url="https://discuss.frappe.io/t/item-valuation-reposting-in-progress-stuck-in-queued-for-12-months/155524.rss">Item valuation reposting in progress. Stuck in queued for 12 months</source>
+        </item>
+        <item>
+          <title>Error Creating Product Bundle</title>
+          <dc:creator><![CDATA[Kunal4]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>we are getting the following error when creating product bundle<br>
+does your erpnext app is also having this problem.<br>
+how to resolve this issue</p>
+<h3><a name="p-483913-app-versions-1" class="anchor" href="https://discuss.frappe.io#p-483913-app-versions-1"></a>App Versions</h3>
+<pre><code class="lang-auto">{
+	"blinkit_integration": "0.0.1",
+	"email_delivery_service": "0.0.1",
+	"erpnext": "15.79.0",
+	"frappe": "15.82.1",
+	"india_compliance": "15.23.0"
+}
+</code></pre>
+<h3><a name="p-483913-route-2" class="anchor" href="https://discuss.frappe.io#p-483913-route-2"></a>Route</h3>
+<pre><code class="lang-auto">Form/Product Bundle/new-product-bundle-anglwcbgrf
+</code></pre>
+<h3><a name="p-483913-traceback-3" class="anchor" href="https://discuss.frappe.io#p-483913-traceback-3"></a>Traceback</h3>
+<pre><code class="lang-auto">Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 115, in application
+    response = frappe.api.handle(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/api/__init__.py", line 50, in handle
+    data = endpoint(**arguments)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/api/v1.py", line 36, in handle_rpc_call
+    return frappe.handler.handle()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/handler.py", line 52, in handle
+    data = execute_cmd(cmd)
+           ^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/handler.py", line 85, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1754, in call
+    return fn(*args, **newargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/typing_validations.py", line 32, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/desk/search.py", line 47, in search_link
+    results = search_widget(
+              ^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/typing_validations.py", line 32, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/desk/search.py", line 94, in search_widget
+    return frappe.call(
+           ^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 1754, in call
+    return fn(*args, **newargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/utils/typing_validations.py", line 32, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/__init__.py", line 2507, in wrapper
+    return fn(**kwargs)
+           ^^^^^^^^^^^^
+  File "apps/erpnext/erpnext/selling/doctype/product_bundle/product_bundle.py", line 128, in get_new_item_code
+    return query.run()
+           ^^^^^^^^^^^
+  File "apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "apps/frappe/frappe/database/database.py", line 230, in sql
+    self._cursor.execute(query, values)
+  File "env/lib/python3.11/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "env/lib/python3.11/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "env/lib/python3.11/site-packages/pymysql/connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "env/lib/python3.11/site-packages/pymysql/connections.py", line 825, in _read_query_result
+    result.read()
+  File "env/lib/python3.11/site-packages/pymysql/connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "env/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "env/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "env/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column ' item_code' in 'WHERE'")
+
+</code></pre>
+<h3><a name="p-483913-request-data-4" class="anchor" href="https://discuss.frappe.io#p-483913-request-data-4"></a>Request Data</h3>
+<pre><code class="lang-auto">{
+	"type": "POST",
+	"args": {
+		"txt": "",
+		"doctype": "Item",
+		"ignore_user_permissions": 0,
+		"reference_doctype": "Product Bundle",
+		"page_length": 10,
+		"query": "erpnext.selling.doctype.product_bundle.product_bundle.get_new_item_code"
+	},
+	"headers": {},
+	"error_handlers": {},
+	"url": "/api/method/frappe.desk.search.search_link",
+	"request_id": "be1a593f-adbe-4431-842f-b2bc7869d4fa"
+}
+</code></pre>
+<h3><a name="p-483913-response-data-5" class="anchor" href="https://discuss.frappe.io#p-483913-response-data-5"></a>Response Data</h3>
+<pre><code class="lang-auto">{
+	"exception": "pymysql.err.OperationalError: (1054, \"Unknown column ' item_code' in 'WHERE'\")",
+	"exc_type": "OperationalError",
+	"_exc_source": "erpnext (app)"
+}
+</code></pre>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/3/d36d8e4a1e6a1af804870a7a9261c0c5a2f4b153.png" data-download-href="https://discuss.frappe.io/uploads/default/d36d8e4a1e6a1af804870a7a9261c0c5a2f4b153" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/3/d36d8e4a1e6a1af804870a7a9261c0c5a2f4b153_2_690x325.png" alt="image" data-base62-sha1="uant30dpxDJSdURtTxgAfAI9iq7" width="690" height="325" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/3/d36d8e4a1e6a1af804870a7a9261c0c5a2f4b153_2_690x325.png, https://discuss.frappe.io/uploads/default/optimized/3X/d/3/d36d8e4a1e6a1af804870a7a9261c0c5a2f4b153_2_1035x487.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/d/3/d36d8e4a1e6a1af804870a7a9261c0c5a2f4b153_2_1380x650.png 2x" data-dominant-color="222222"></a></div><p></p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/error-creating-product-bundle/155470">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/error-creating-product-bundle/155470</link>
+          <pubDate>Tue, 14 Oct 2025 06:19:08 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155470</guid>
+          <source url="https://discuss.frappe.io/t/error-creating-product-bundle/155470.rss">Error Creating Product Bundle</source>
+        </item>
+        <item>
+          <title>🐞 Bug: Same Serial No Allowed in One Stock Entry (Material Receipt) for Different Warehouses</title>
+          <dc:creator><![CDATA[Raj_47274]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>ERPNext currently allows the <em>same Serial No</em> to be included multiple times <strong>in a single Stock Entry (Material Receipt)</strong> but linked to <strong>different Warehouses</strong>.<br>
+This behavior should not be possible — a single serial number should always exist in <strong>one warehouse at a time</strong>, otherwise it corrupts the Serial No Ledger and creates data inconsistency across stock tracking reports.</p>
+<p><strong>Example Case</strong></p>
+<p>In my case, Stock Entry <strong>SE-HO-MR-00034</strong> has two rows for the same Serial No <code>BTCENTRAL00002</code> —<br>
+one linked to <strong>“Mehul Patel - PEPL”</strong> and another to <strong>“Panchmahal - Amul Amcs Main”</strong>.</p>
+<p>Here’s the affected Serial No Ledger view <img src="https://discuss.frappe.io/images/emoji/twitter/point_down.png?v=12" title=":point_down:" class="emoji" alt=":point_down:" loading="lazy" width="20" height="20"><br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/c/1c2119a0667ffe29cf082a79b6f2ebfe39fbf55e.png" data-download-href="https://discuss.frappe.io/uploads/default/1c2119a0667ffe29cf082a79b6f2ebfe39fbf55e" title="Serial-No-Ledger-10-09-2025_12_26_PM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/1/c/1c2119a0667ffe29cf082a79b6f2ebfe39fbf55e_2_690x228.png" alt="Serial-No-Ledger-10-09-2025_12_26_PM" data-base62-sha1="40QhIGofJlRb8tHfdogvAfhfmnY" width="690" height="228" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/1/c/1c2119a0667ffe29cf082a79b6f2ebfe39fbf55e_2_690x228.png, https://discuss.frappe.io/uploads/default/optimized/3X/1/c/1c2119a0667ffe29cf082a79b6f2ebfe39fbf55e_2_1035x342.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/1/c/1c2119a0667ffe29cf082a79b6f2ebfe39fbf55e_2_1380x456.png 2x" data-dominant-color="F5EFEF"></a></div><p></p>
+<p>You can see both entries showing “Active” even though the same Serial No was used in two different warehouses in one transaction.</p>
+<hr>
+<p><strong>Impact</strong></p>
+<ul>
+<li>Serial No Ledger becomes <strong>inconsistent</strong> (duplicate rows for same Serial No)</li>
+<li>Stock reconciliation reports become <strong>incorrect</strong></li>
+<li>Traceability and audit trail <strong>breaks</strong> for serialized items</li>
+</ul>
+<p><strong>Expected Behavior</strong></p>
+<p>ERPNext should <strong>restrict the same Serial No from being used more than once in a single Stock Entry</strong>, even across multiple child rows pointing to different Warehouses.</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/bug-same-serial-no-allowed-in-one-stock-entry-material-receipt-for-different-warehouses/155289">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/bug-same-serial-no-allowed-in-one-stock-entry-material-receipt-for-different-warehouses/155289</link>
+          <pubDate>Thu, 09 Oct 2025 13:41:37 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155289</guid>
+          <source url="https://discuss.frappe.io/t/bug-same-serial-no-allowed-in-one-stock-entry-material-receipt-for-different-warehouses/155289.rss">🐞 Bug: Same Serial No Allowed in One Stock Entry (Material Receipt) for Different Warehouses</source>
+        </item>
+        <item>
+          <title>Get Available Stock Qty based on my Custom Field</title>
+          <dc:creator><![CDATA[tejalkumbhar]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>Hi everyone,</p>
+<p>I’m working on a use case where I need to manage stock availability based on a custom field in the Stock Entry doctype.</p>
+<p>Problem Statement:</p>
+<p>I’ve added a custom field called LTD to the Stock Entry. For example:</p>
+<p>I create a Stock Entry for Item A, Batch 001, with Qty = 100 and set the LTD = 11.1.</p>
+<p>Later, when creating a new Stock Entry (or another stock transaction), I want the system to show only those 100 qty as available if and only if the LTD value entered is also 11.1.</p>
+<p>If I enter a different LTD value (e.g., 12.1) for the same item and batch, it should not show the 100 qty from the previous entry as available, because the LTD values don’t match.</p>
+<p>Goal:</p>
+<p>I want the stock availability to be filtered or separated based on the custom field (LTD), in addition to the usual Item and Batch.</p>
+<p>Question:</p>
+<p>Is there a recommended way to implement this? Should I customize the Stock Ledger logic or is there a better way using existing Frappe/ERPNext features</p>
+<p>Any guidance, suggestions, or examples would be highly appreciated!</p>
+<p>Thanks in advance!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/get-available-stock-qty-based-on-my-custom-field/155272">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/get-available-stock-qty-based-on-my-custom-field/155272</link>
+          <pubDate>Thu, 09 Oct 2025 07:38:35 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155272</guid>
+          <source url="https://discuss.frappe.io/t/get-available-stock-qty-based-on-my-custom-field/155272.rss">Get Available Stock Qty based on my Custom Field</source>
+        </item>
+        <item>
+          <title>QR Code Implementation for Stock Count, Ordering &amp; Receiving</title>
+          <dc:creator><![CDATA[Adam_Scentronix]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>Hi everyone,</p>
+<p>I am looking to implement ERPNext as our new inventory management system. I was looking into Frappe School whether a tutorial for creating QR codes for our items to streamline stock ordering, receiving and counting. Is there anyone that can help me find how to set this up?<br>
+I appreciate any help possible!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/qr-code-implementation-for-stock-count-ordering-receiving/155036">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/qr-code-implementation-for-stock-count-ordering-receiving/155036</link>
+          <pubDate>Fri, 03 Oct 2025 14:23:43 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155036</guid>
+          <source url="https://discuss.frappe.io/t/qr-code-implementation-for-stock-count-ordering-receiving/155036.rss">QR Code Implementation for Stock Count, Ordering &amp; Receiving</source>
+        </item>
+        <item>
+          <title>Items Taxes Table - entered twice in Item Taxes</title>
+          <dc:creator><![CDATA[shalin]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>There are items which were at 18% GST till 11/06/2025, now it changed 28% from 12/06/2025 so we added anonther row in the :TAX TAB" of the item, now all the transactions are being done and the taxes are fetched accorong to the date of trasaction , no issues , now on 22nd of Sept 2025, it again Changed to 18%,</p>
+<p>Now the current system does not allows to have 18% entered twice with wef 22/09/2025.</p>
+<p>Any help !!!  as i dont want to remove the old records as from when to when what tax was there.</p>
+<p>why we cant have the same taxes multiple time entered and the data will be fetched in accordance to the relevant date of transaction, as these kind of changes can happen to any items in future also.</p>
+<p>and while going this sceneario, there are incidents where the HSN is also changed and why the ERPN is not having HSN date wise WEFV model too.</p>
+<p>i am using the India Compliance too for my site</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/items-taxes-table-entered-twice-in-item-taxes/155029">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/items-taxes-table-entered-twice-in-item-taxes/155029</link>
+          <pubDate>Fri, 03 Oct 2025 13:03:53 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155029</guid>
+          <source url="https://discuss.frappe.io/t/items-taxes-table-entered-twice-in-item-taxes/155029.rss">Items Taxes Table - entered twice in Item Taxes</source>
+        </item>
+        <item>
+          <title>Stock Transfer between warehouse, one user will create request and other will transfer the stock</title>
+          <dc:creator><![CDATA[gdhelp03]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>I have 2 warehouse,  Main and Retail.    2 user  manager and  staff.  Staff will create a request for the requirement material. Manager will update quantity and transfer the stock.  please let me know,  how can create above flow.</p>
+            <p><small>2 posts - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/stock-transfer-between-warehouse-one-user-will-create-request-and-other-will-transfer-the-stock/154861">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/stock-transfer-between-warehouse-one-user-will-create-request-and-other-will-transfer-the-stock/154861</link>
+          <pubDate>Tue, 30 Sep 2025 10:29:12 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-154861</guid>
+          <source url="https://discuss.frappe.io/t/stock-transfer-between-warehouse-one-user-will-create-request-and-other-will-transfer-the-stock/154861.rss">Stock Transfer between warehouse, one user will create request and other will transfer the stock</source>
+        </item>
+        <item>
+          <title>Display Live Stock Amount Easily</title>
+          <dc:creator><![CDATA[bonus-salad]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>I’m trying to either build a custom dashboard or chart that can show me “Stock at a glance”, showing stock amounts of items that I have in inventory without running a report. It could also be a table of Items that has a column showing the stock per warehouse. It’s important that this be a live amount, or at least live in the sense that it loads anytime I load the page.</p>
+<p>Thanks!</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/display-live-stock-amount-easily/154807">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/display-live-stock-amount-easily/154807</link>
+          <pubDate>Mon, 29 Sep 2025 15:31:52 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-154807</guid>
+          <source url="https://discuss.frappe.io/t/display-live-stock-amount-easily/154807.rss">Display Live Stock Amount Easily</source>
+        </item>
+        <item>
+          <title>Erpnext import item uom conversion details</title>
+          <dc:creator><![CDATA[gdhelp03]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>In my erpnext, i have approx 1k items, now i want to add UOM conversion to all the items, how can i  import  and update all the items. Thankyou</p>
+            <p><small>3 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/erpnext-import-item-uom-conversion-details/153837">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/erpnext-import-item-uom-conversion-details/153837</link>
+          <pubDate>Sat, 20 Sep 2025 09:51:16 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-153837</guid>
+          <source url="https://discuss.frappe.io/t/erpnext-import-item-uom-conversion-details/153837.rss">Erpnext import item uom conversion details</source>
+        </item>
+        <item>
+          <title>Error Facing while Creating Product Bundle</title>
+          <dc:creator><![CDATA[Kunal4]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>When we are adding the product bundle parent item<br>
+i am getting the following error<br>
+why and how can we solve this error<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/8/5/8568ad7201215d00815362afd28e85644428dfc1.png" data-download-href="https://discuss.frappe.io/uploads/default/8568ad7201215d00815362afd28e85644428dfc1" title="Screenshot 2025-09-18 130332"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/8/5/8568ad7201215d00815362afd28e85644428dfc1_2_690x388.png" alt="Screenshot 2025-09-18 130332" data-base62-sha1="j2bLZJmHKrKPyFLNAAoQ6IwCijf" width="690" height="388" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/8/5/8568ad7201215d00815362afd28e85644428dfc1_2_690x388.png, https://discuss.frappe.io/uploads/default/optimized/3X/8/5/8568ad7201215d00815362afd28e85644428dfc1_2_1035x582.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/8/5/8568ad7201215d00815362afd28e85644428dfc1_2_1380x776.png 2x" data-dominant-color="232425"></a></div><p></p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/error-facing-while-creating-product-bundle/153726">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/error-facing-while-creating-product-bundle/153726</link>
+          <pubDate>Thu, 18 Sep 2025 07:52:27 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-153726</guid>
+          <source url="https://discuss.frappe.io/t/error-facing-while-creating-product-bundle/153726.rss">Error Facing while Creating Product Bundle</source>
+        </item>
+        <item>
+          <title>nested location tracking or multi-level warehouse container logic</title>
+          <dc:creator><![CDATA[Ratman-DK]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <p>Hi all</p>
+<p>New to ERPNext, but are trying to give it a go…</p>
+<p>but one thing we need, is abaility to put items in boxes.<br>
+now these boxes will be placed on pallets for storage, these pallets with many boxes can and will be moved, and the pallets have ID’s and then alle shelfs have ID’s based on location. but not sure ERPNext can handle this out of the box.</p>
+<p>is there a nice way to handle this or should we look into creating this.</p>
+<p>our current setup uses a custom program.</p>
+<p>We have:<br>
+Locations (Warehouse, area, shelfs) items that can’t move<br>
+Containers(Pallets, boxes ) items that can contain items</p>
+<p>A item can be placed in a Item(product#) → Box(ID) → Pallet(ID) → Shelf(ID)<br>
+An item can be placed on a location  Item(product#) → Shelf(ID)</p>
+<p>now when we lookup a Item we know how many and where to find (can be multiple places)</p>
+<p>We are looking into ERPNext because of the BOM’s</p>
+<p>and we might put some effort into the storage logistic (also label printing for locations / box ID labels)</p>
+<p>/M</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/nested-location-tracking-or-multi-level-warehouse-container-logic/153550">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/nested-location-tracking-or-multi-level-warehouse-container-logic/153550</link>
+          <pubDate>Mon, 15 Sep 2025 02:02:41 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-153550</guid>
+          <source url="https://discuss.frappe.io/t/nested-location-tracking-or-multi-level-warehouse-container-logic/153550.rss">nested location tracking or multi-level warehouse container logic</source>
+        </item>
+        <item>
+          <title>Stock Reconciliation performance and validation issues with large data (500+ warehouses, 20k+ rows)</title>
+          <dc:creator><![CDATA[Mansi]]></dc:creator>
+          <category>Stock/Inventory</category>
+          <description><![CDATA[
+            <h3><a name="p-480231-description-1" class="anchor" href="https://discuss.frappe.io#p-480231-description-1"></a>Description</h3>
+<p>Stock Reconciliation in ERPNext becomes impractical in large implementations due to multiple issues:</p>
+<ol>
+<li>
+<p><strong>Performance Issue</strong></p>
+<ul>
+<li>Submitting a reconciliation with <strong>5000+ items</strong> takes <strong>10–15 minutes</strong> or more.</li>
+<li>With <strong>500+ warehouses</strong>, reconciliation files often exceed <strong>20,000 rows</strong>, which the system cannot handle.</li>
+<li>Browser becomes unresponsive and server requests time out.</li>
+</ul>
+</li>
+<li>
+<p><strong>Error Handling Issue</strong></p>
+<ul>
+<li>If multiple rows are invalid, ERPNext validates them <strong>one by one</strong>.</li>
+<li>After a long wait, only <strong>one error</strong> is displayed.</li>
+<li>Users must fix one error, re-submit, wait again, and repeat → very inefficient.</li>
+</ul>
+</li>
+<li>
+<p><strong>Concurrency Limitation</strong></p>
+<ul>
+<li>Currently, only a single Stock Reconciliation can be submitted at a time.</li>
+<li>This makes the process very lengthy for large datasets.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3><a name="p-480231-steps-to-reproduce-2" class="anchor" href="https://discuss.frappe.io#p-480231-steps-to-reproduce-2"></a>Steps to Reproduce</h3>
+<ol>
+<li>Create a Stock Reconciliation with &gt;5000 line items.</li>
+<li>Submit the document → takes 10–15 minutes, sometimes fails.</li>
+<li>Add multiple invalid rows → only one error is shown after long wait.</li>
+<li>Try to submit another reconciliation in parallel → blocked or impractical.</li>
+</ol>
+<hr>
+<h3><a name="p-480231-expected-behavior-3" class="anchor" href="https://discuss.frappe.io#p-480231-expected-behavior-3"></a>Expected Behavior</h3>
+<ul>
+<li>ERPNext should efficiently handle large reconciliations (5000+ items, 20k+ rows).</li>
+<li>All validation errors should be shown <strong>at once</strong>.</li>
+<li>Multiple Stock Reconciliations should be processed reliably without excessive delays.</li>
+</ul>
+<hr>
+<h3><a name="p-480231-actual-behavior-4" class="anchor" href="https://discuss.frappe.io#p-480231-actual-behavior-4"></a>Actual Behavior</h3>
+<ul>
+<li>Submission takes 10–15 minutes or fails.</li>
+<li>Only one error is shown after long validation.</li>
+<li>Reconciliations cannot be managed efficiently when data is very large.</li>
+</ul>
+<hr>
+<h3><a name="p-480231-impact-5" class="anchor" href="https://discuss.frappe.io#p-480231-impact-5"></a>Impact</h3>
+<ul>
+<li>Go-live stock adjustments with <strong>hundreds of warehouses and thousands of SKUs</strong> are not feasible.</li>
+<li>Users waste significant time fixing errors one by one.</li>
+<li>Overall process becomes unmanageable in enterprise-scale scenarios.</li>
+</ul>
+<hr>
+<h3><a name="p-480231-suggested-improvements-6" class="anchor" href="https://discuss.frappe.io#p-480231-suggested-improvements-6"></a>Suggested Improvements</h3>
+<ul>
+<li>Handle large reconciliations via <strong>background jobs</strong>.</li>
+<li>Split commits into <strong>batches</strong> instead of one huge transaction.</li>
+<li>Optimize child table/grid rendering for 20k+ rows.</li>
+<li>Change validation logic to show <strong>all errors in a single run</strong>.</li>
+<li>Improve concurrency handling to allow large-scale stock reconciliations without blocking.</li>
+</ul>
+<hr>
+<p><strong>Additional Question:</strong><br>
+For organizations with <strong>huge datasets</strong> (e.g., 500+ warehouses and 20,000+ opening stock rows), what is the <strong>recommended best practice</strong> to upload opening stock in ERPNext?</p>
+<ul>
+<li>Stock Reconciliation struggles with large files (5,000+ rows).</li>
+<li>Splitting warehouse-wise still results in thousands of rows and is hard to manage.</li>
+<li>Is there another <strong>scalable recommended approach</strong> (e.g., Utility or background jobs, etc.) officially advised for enterprise-scale opening stock uploads?</li>
+</ul>
+            <p><small>6 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/stock-reconciliation-performance-and-validation-issues-with-large-data-500-warehouses-20k-rows/153299">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/stock-reconciliation-performance-and-validation-issues-with-large-data-500-warehouses-20k-rows/153299</link>
+          <pubDate>Tue, 09 Sep 2025 06:47:56 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-153299</guid>
+          <source url="https://discuss.frappe.io/t/stock-reconciliation-performance-and-validation-issues-with-large-data-500-warehouses-20k-rows/153299.rss">Stock Reconciliation performance and validation issues with large data (500+ warehouses, 20k+ rows)</source>
+        </item>
+  </channel>
+</rss>

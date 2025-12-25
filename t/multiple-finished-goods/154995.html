@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Multiple Finished Goods - Manufacturing - Frappe Forum</title>
+    <meta name="description" content="Hello Community, 
+I am working on ERPNext Manufacturing implementation for a Tuna processing industry, and I faced a challenge related to cost allocation and production outputs. 
+Installed Apps
+ERPNext: v15.81.1 (version&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/multiple-finished-goods/154995" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Multiple Finished Goods&#39;" href="https://discuss.frappe.io/t/multiple-finished-goods/154995.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/1/2/12089c74c46a416375c3719fa2416d73d0f74fcb_2_1024x455.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/1/2/12089c74c46a416375c3719fa2416d73d0f74fcb_2_1024x455.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/multiple-finished-goods/154995" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/multiple-finished-goods/154995" />
+<meta property="og:title" content="Multiple Finished Goods" />
+<meta name="twitter:title" content="Multiple Finished Goods" />
+<meta property="og:description" content="Hello Community,  I am working on ERPNext Manufacturing implementation for a Tuna processing industry, and I faced a challenge related to cost allocation and production outputs.  Installed Apps ERPNext: v15.81.1 (version-15)  Frappe Framework: v15.84.0 (version-15)  Business Process (Real Example)  Input: Raw Fish (whole tuna). Outputs:  Main Finished Product: Tuna Slices. By-Product: Shredded Tuna.    This is a common case in food industries, where one raw material produces multiple outputs (ma..." />
+<meta name="twitter:description" content="Hello Community,  I am working on ERPNext Manufacturing implementation for a Tuna processing industry, and I faced a challenge related to cost allocation and production outputs.  Installed Apps ERPNext: v15.81.1 (version-15)  Frappe Framework: v15.84.0 (version-15)  Business Process (Real Example)  Input: Raw Fish (whole tuna). Outputs:  Main Finished Product: Tuna Slices. By-Product: Shredded Tuna.    This is a common case in food industries, where one raw material produces multiple outputs (ma..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:section" content="Manufacturing" />
+<meta property="og:article:section:color" content="808281" />
+<meta property="og:article:tag" content="erpnext" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="4 ❤" />
+<meta property="article:published_time" content="2025-10-02T16:28:42+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Multiple Finished Goods","mainEntity":{"@type":"Question","name":"Multiple Finished Goods","text":"Hello Community,\n\nI am working on ERPNext Manufacturing implementation for a Tuna processing industry, and I faced a challenge related to cost allocation and production outputs.\n\n<a name=\"p-482944-installed-apps-1\" class=\"anchor\" href=\"#p-482944-installed-apps-1\"><\/a>Installed Apps\n\nERPNext: v15.81.1 (version-15)\n\nFrappe Framework: v15.84.0 (version-15)\n\n<a name=\"p-482944-business-process-real-example-2\" class=\"anchor\" href=\"#p-482944-business-process-real-example-2\"><\/a>Business Process (Real Example)\n\nI&hellip;","upvoteCount":2,"answerCount":0,"datePublished":"2025-10-02T16:28:42.430Z","author":{"@type":"Person","name":"Ahmedyousef15","url":"https://discuss.frappe.io/u/Ahmedyousef15"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/multiple-finished-goods/154995">Multiple Finished Goods</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/manufacturing/19" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #808281'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Manufacturing</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Multiple Finished Goods'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/multiple-finished-goods/154995'>
+      <meta itemprop='datePublished' content='2025-10-02T16:28:42Z'>
+        <meta itemprop='articleSection' content='Manufacturing'>
+      <meta itemprop='keywords' content='erpnext'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Ahmedyousef15'><span itemprop='name'>Ahmedyousef15</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/multiple-finished-goods/154995">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/1/2/12089c74c46a416375c3719fa2416d73d0f74fcb.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-10-02T16:28:42Z' class='post-time'>
+                    October 2, 2025,  4:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-02T23:51:32Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello Community,</p>
+<p>I am working on ERPNext Manufacturing implementation for a Tuna processing industry, and I faced a challenge related to cost allocation and production outputs.</p>
+<h4><a name="p-482944-installed-apps-1" class="anchor" href="#p-482944-installed-apps-1"></a>Installed Apps</h4>
+<p><strong>ERPNext:</strong> v15.81.1 (version-15)</p>
+<p><strong>Frappe Framework:</strong> v15.84.0 (version-15)</p>
+<h3><a name="p-482944-business-process-real-example-2" class="anchor" href="#p-482944-business-process-real-example-2"></a>Business Process (Real Example)</h3>
+<ul>
+<li>Input: Raw Fish (whole tuna).</li>
+<li>Outputs:
+<ol>
+<li>Main Finished Product: Tuna Slices.</li>
+<li>By-Product: Shredded Tuna.</li>
+</ol>
+</li>
+</ul>
+<p>This is a common case in food industries, where one raw material produces <strong>multiple outputs</strong> (main products + by-products).</p>
+<h3><a name="p-482944-what-i-tried-so-far-3" class="anchor" href="#p-482944-what-i-tried-so-far-3"></a>What I tried so far</h3>
+<ol>
+<li>
+<p><strong>BOM + Work Order</strong></p>
+<ul>
+<li>ERPNext allows only one finished product in a Work Order.</li>
+<li>The Scrap table lets me define by-products, but:
+<ul>
+<li>I have to manually enter the <em>rate</em> of the by-product when creating the BOM.</li>
+<li>In reality, I don’t know the exact rate/value of shredded tuna at BOM creation.</li>
+</ul>
+</li>
+<li>So cost distribution is not automatic.</li>
+</ul>
+</li>
+<li>
+<p><strong>Stock Entry → Repack</strong></p>
+<ul>
+<li>Works well when converting raw fish → single finished product.</li>
+<li>But when converting raw fish → multiple finished products, the costing is not automatically distributed across outputs.</li>
+<li>It seems ERPNext handles <strong>one-to-one</strong> or <strong>many-to-one</strong>, but not <strong>one-to-many</strong> (or many-to-many) production very well.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example (One to One)</strong><br>
+The total value of outgoing and incoming is set correctly, with no differences.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/2/12089c74c46a416375c3719fa2416d73d0f74fcb.png" data-download-href="https://discuss.frappe.io/uploads/default/12089c74c46a416375c3719fa2416d73d0f74fcb" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/1/2/12089c74c46a416375c3719fa2416d73d0f74fcb_2_690x307.png" alt="image" data-base62-sha1="2zx2IjuPcQAakMNXGEj31rgl9ZF" width="690" height="307" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/1/2/12089c74c46a416375c3719fa2416d73d0f74fcb_2_690x307.png, https://discuss.frappe.io/uploads/default/optimized/3X/1/2/12089c74c46a416375c3719fa2416d73d0f74fcb_2_1035x460.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/1/2/12089c74c46a416375c3719fa2416d73d0f74fcb.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1312×584 36.1 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p><strong>Example (One to Many)</strong><br>
+The total value of outgoing and incoming is not set correctly, and the item rate is fetched from the Item Master and cannot be edited. However, I need it to be set according to the quantity percentage between the finished goods.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/3/934e4e30d2ddc5589e39393c02a13783490251f8.png" data-download-href="https://discuss.frappe.io/uploads/default/934e4e30d2ddc5589e39393c02a13783490251f8" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/9/3/934e4e30d2ddc5589e39393c02a13783490251f8_2_690x324.png" alt="image" data-base62-sha1="l17XjPpoVEUKmhTsmSBqLHEGogE" width="690" height="324" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/9/3/934e4e30d2ddc5589e39393c02a13783490251f8_2_690x324.png, https://discuss.frappe.io/uploads/default/optimized/3X/9/3/934e4e30d2ddc5589e39393c02a13783490251f8_2_1035x486.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/9/3/934e4e30d2ddc5589e39393c02a13783490251f8.png 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1309×616 41.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<h3><a name="p-482944-business-requirement-4" class="anchor" href="#p-482944-business-requirement-4"></a>Business Requirement</h3>
+<ul>
+<li>I need to consume 1 raw input (whole fish) and generate multiple outputs (slices + shredded).</li>
+<li>The system should:
+<ul>
+<li>Automatically distribute cost between products (e.g., based on percentage, weight, or predefined ratio).</li>
+<li>Not require me to manually set rates for by-products each time.</li>
+</ul>
+</li>
+<li>No need for automatic transfer between warehouses — only proper cost allocation and stock updates.</li>
+</ul>
+<h3><a name="p-482944-questions-to-the-community-5" class="anchor" href="#p-482944-questions-to-the-community-5"></a>Questions to the Community</h3>
+<ul>
+<li>Has anyone faced a similar scenario in food or process manufacturing (like Tuna, Dairy, Meat processing)?</li>
+<li>What approach did you take to solve the <strong>multiple outputs per Work Order</strong> issue?</li>
+<li>Is there a recommended way in ERPNext to handle this case, or should I customize the Work Order / Stock Entry logic?</li>
+<li>Would it be better to extend BOM to support multiple finished goods?</li>
+</ul>
+<p>Here’s a clear flowchart showing how <strong>one raw fish (whole tuna)</strong> can be processed into <strong>two outputs</strong>:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/5/7/57361713ed39e2739846513dda3bb9fda3658dd9.png" data-download-href="https://discuss.frappe.io/uploads/default/57361713ed39e2739846513dda3bb9fda3658dd9" title="94875aee-5f22-47a1-9472-c51a8526368c"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/5/7/57361713ed39e2739846513dda3bb9fda3658dd9_2_690x461.png" alt="94875aee-5f22-47a1-9472-c51a8526368c" data-base62-sha1="crvqvrRF2dcqcPAKATqGCw2BxfX" width="690" height="461" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/5/7/57361713ed39e2739846513dda3bb9fda3658dd9_2_690x461.png, https://discuss.frappe.io/uploads/default/optimized/3X/5/7/57361713ed39e2739846513dda3bb9fda3658dd9_2_1035x691.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/5/7/57361713ed39e2739846513dda3bb9fda3658dd9.png 2x" data-dominant-color="F5F4F3"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">94875aee-5f22-47a1-9472-c51a8526368c</span><span class="informations">1280×856 40.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Any advice, ideas, or shared experiences would be highly appreciated <img src="https://discuss.frappe.io/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+<p>Thank you in advance!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Ahmedyousef15'><span itemprop='name'>Ahmedyousef15</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/7/7/777901ec95945902d8fadeff111ec30f73b8ff84.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-03T02:39:30Z' class='post-time'>
+                    October 3, 2025,  2:39am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-03T02:39:30Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><strong>“To Whom It May Concern, I have made some customizations in Stock Entry with the type ‘Repack’:”</strong></p>
+<p><strong>“I added a Client Script and a Server Script for the ‘Before Save’ event.”</strong></p>
+<p><strong>“Here it is.”</strong></p>
+<p><strong>“Server Script.”</strong></p>
+<pre><code class="lang-auto"># Server Script: Stock Entry (Before Save)
+
+if doc.purpose == "Repack":
+
+    # 1) Cost - (Raw)
+    total_raw_cost = 0
+    for row in doc.items:
+        if not row.is_finished_item and not row.get("is_scrap_item", 0):
+            total_raw_cost = total_raw_cost + (row.qty or 0) * (row.valuation_rate or 0)
+
+    # 2) Total qt without scraped
+    total_finished_qty = 0
+    for row in doc.items:
+        if row.is_finished_item and not row.get("is_scrap_item", 0):
+            total_finished_qty = total_finished_qty + (row.qty or 0)
+
+    if total_finished_qty == 0:
+        frappe.throw(
+            f"Stock Entry {doc.name}: Cannot complete Repack because no finished goods quantity found."
+        )
+
+    # 3) allocated_cost
+    for row in doc.items:
+        if row.is_finished_item and not row.get("is_scrap_item", 0):
+            share = (row.qty or 0) / total_finished_qty
+
+            allocated_cost = total_raw_cost * share
+            basic_rate = allocated_cost / (row.qty or 1)
+
+            extra_cost = (doc.total_additional_costs or 0) * share
+            extra_rate = extra_cost / (row.qty or 1)
+
+            # update value
+            row.basic_rate = basic_rate
+            row.additional_cost = extra_cost
+            row.valuation_rate = basic_rate + extra_rate
+            row.basic_amount = (basic_rate * (row.qty or 0)) + extra_cost
+            row.amount = (basic_rate * (row.qty or 0)) + extra_cost
+
+        elif row.get("is_scrap_item", 0):
+            # Scrap = zero
+            row.basic_rate = 0
+            row.valuation_rate = 0
+            row.is_finished_item = 0
+            row.basic_amount = 0
+            row.amount = 0
+            row.additional_cost = 0
+            row.allow_zero_valuation_rate = 1
+        else:
+            row.additional_cost = 0
+
+    # 4)  Totals 
+    total_incoming = 0
+    total_outgoing = 0
+    for row in doc.items:
+        if row.t_warehouse:
+            total_incoming = total_incoming + row.basic_amount or 0
+        if row.s_warehouse:
+            total_outgoing = total_outgoing + row.basic_amount or 0
+
+    doc.total_incoming_value = total_incoming
+    doc.total_outgoing_value = total_outgoing
+    doc.total_amount = total_incoming   
+    doc.value_difference = (doc.total_incoming_value or 0) - (doc.total_outgoing_value or 0)
+</code></pre>
+<p><strong>“Client Script.”</strong></p>
+<pre><code class="lang-auto">// Custom Script For Repack Transaction:
+
+function highlight_scrap_rows(frm) {
+    if (frm.doc.purpose !== "Repack") return;
+
+    // rest css
+    $(frm.fields_dict["items"].grid.wrapper)
+        .find(".grid-row")
+        .css("background-color", "");
+
+    // if item scrap → set background-color in grey  
+    (frm.doc.items || []).forEach(row =&gt; {
+        if (row.is_scrap_item) {
+            let $row = $(frm.fields_dict["items"].grid.wrapper)
+                .find(`[data-name='${row.name}']`);
+            $row.css("background-color", "#e0e0e0"); // grey color
+        }
+    });
+}
+
+
+function recalc_cost(frm) {
+    if (frm.doc.purpose !== "Repack") return;
+
+    let total_raw_cost = 0;
+    let total_finished_qty = 0;
+
+    // 1) raw material cost
+    (frm.doc.items || []).forEach(row =&gt; {
+        if (!row.is_finished_item &amp;&amp; !row.is_scrap_item) {
+            total_raw_cost += (row.qty || 0) * (row.valuation_rate || 0);
+        }
+    });
+
+    // 2) total qt of FG
+    (frm.doc.items || []).forEach(row =&gt; {
+        if (row.is_finished_item &amp;&amp; !row.is_scrap_item) {
+            total_finished_qty += (row.qty || 0);
+        }
+    });
+
+    // 3) cost allocation for FG
+    if (total_finished_qty &gt; 0) {
+        (frm.doc.items || []).forEach(row =&gt; {
+            if (row.is_finished_item &amp;&amp; !row.is_scrap_item) {
+                let share = (row.qty || 0) / total_finished_qty;
+
+                // Rw Cost
+                let allocated_cost = total_raw_cost * share;
+                let basic_rate = allocated_cost / (row.qty || 1);
+
+                // FG Cost from Addational Cost
+                let extra_cost = (frm.doc.total_additional_costs || 0) * share;
+                let extra_rate = extra_cost / (row.qty || 1);
+
+                // Update Fields Value
+                frappe.model.set_value(row.doctype, row.name, "basic_rate", basic_rate);
+                frappe.model.set_value(row.doctype, row.name, "additional_cost", extra_cost);
+
+                frappe.model.set_value(row.doctype, row.name, "valuation_rate", basic_rate + extra_rate);
+
+                frappe.model.set_value(row.doctype, row.name, "basic_amount", (basic_rate * row.qty) + extra_cost);
+                frappe.model.set_value(row.doctype, row.name, "amount", (basic_rate * row.qty) + extra_cost);
+
+            }
+
+            //   (Scrap)
+            if (row.is_scrap_item) {
+                frappe.model.set_value(row.doctype, row.name, "basic_rate", 0);
+                frappe.model.set_value(row.doctype, row.name, "valuation_rate", 0);
+                frappe.model.set_value(row.doctype, row.name, "is_finished_item", 0);
+                frappe.model.set_value(row.doctype, row.name, "basic_amount", 0);
+                frappe.model.set_value(row.doctype, row.name, "amount", 0);
+                frappe.model.set_value(row.doctype, row.name, "allow_zero_valuation_rate", 1);
+                frappe.model.set_value(row.doctype, row.name, "additional_cost", 0);
+            }
+        });
+    }
+
+    // 4) Totals 
+    let total_incoming = 0, total_outgoing = 0;
+    (frm.doc.items || []).forEach(row =&gt; {
+        if (row.t_warehouse) total_incoming += (row.basic_amount || 0);
+        if (row.s_warehouse) total_outgoing += (row.basic_amount || 0);
+    });
+
+    frm.set_value("total_incoming_value", total_incoming);
+    frm.set_value("total_outgoing_value", total_outgoing);
+    frm.set_value("total_amount", total_incoming);
+    frm.set_value("value_difference", (total_incoming || 0) - (total_outgoing || 0));
+}
+
+// Events
+frappe.ui.form.on("Stock Entry", {
+    refresh(frm) { highlight_scrap_rows(frm); },
+    after_save(frm) { highlight_scrap_rows(frm); },
+    purpose(frm) { recalc_cost(frm); },
+    items_add(frm) { recalc_cost(frm); },
+    items_remove(frm) { recalc_cost(frm); },
+    items_on_form_rendered(frm) { recalc_cost(frm); },
+    total_additional_costs(frm) { recalc_cost(frm); }   
+});
+
+frappe.ui.form.on("Stock Entry Detail", {
+    qty(frm, cdt, cdn) { recalc_cost(frm); },
+    is_finished_item(frm, cdt, cdn) { recalc_cost(frm); },
+    is_scrap_item(frm, cdt, cdn) { recalc_cost(frm); highlight_scrap_rows(frm); },
+    valuation_rate(frm, cdt, cdn) { recalc_cost(frm); }
+});
+
+</code></pre>
+<p><strong>The Final Output is:</strong></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/7/777901ec95945902d8fadeff111ec30f73b8ff84.png" data-download-href="https://discuss.frappe.io/uploads/default/777901ec95945902d8fadeff111ec30f73b8ff84" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/7/777901ec95945902d8fadeff111ec30f73b8ff84_2_690x363.png" alt="image" data-base62-sha1="h2U4JEbuWwpcF6TjjWIQYHoiaIA" width="690" height="363" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/7/777901ec95945902d8fadeff111ec30f73b8ff84_2_690x363.png, https://discuss.frappe.io/uploads/default/optimized/3X/7/7/777901ec95945902d8fadeff111ec30f73b8ff84_2_1035x544.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/7/7/777901ec95945902d8fadeff111ec30f73b8ff84.png 2x" data-dominant-color="F8F8F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1301×686 43.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>** I also cover the addational cost:**</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/a/0aeba22494ccb62f1ef20653d5913d88c90ec3e0.png" data-download-href="https://discuss.frappe.io/uploads/default/0aeba22494ccb62f1ef20653d5913d88c90ec3e0" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/a/0aeba22494ccb62f1ef20653d5913d88c90ec3e0_2_690x464.png" alt="image" data-base62-sha1="1yBCfg4U0DdqW39nHLLay7DPlcI" width="690" height="464" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/a/0aeba22494ccb62f1ef20653d5913d88c90ec3e0_2_690x464.png, https://discuss.frappe.io/uploads/default/optimized/3X/0/a/0aeba22494ccb62f1ef20653d5913d88c90ec3e0_2_1035x696.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/0/a/0aeba22494ccb62f1ef20653d5913d88c90ec3e0.png 2x" data-dominant-color="FCFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1248×840 33.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/szufisher'><span itemprop='name'>szufisher</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-03T08:07:08Z' class='post-time'>
+                    October 3, 2025,  8:07am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-03T08:07:08Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>this is what I planned to try myself, the same can be applied to Manufacture.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Ahmedyousef15'><span itemprop='name'>Ahmedyousef15</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-03T09:55:23Z' class='post-time'>
+                    October 3, 2025,  9:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-03T09:55:23Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, each script has a condition (if doc.purpose), so you do this.</p>
+<p>However, I do not prefer to use the BOM, as it has many configurations.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

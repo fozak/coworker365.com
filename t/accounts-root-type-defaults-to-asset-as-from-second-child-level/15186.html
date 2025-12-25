@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Accounts Root type defaults to Asset as from second child level? - Accounting - Frappe Forum</title>
+    <meta name="description" content="I’m setting up ERPNext: v7.0.27, Frappe Framework: v7.0.22 and come accross a problem in accounts, root type. 
+Although other root types like Liability, Equity, Income or Expense are choosen, the root type falls back to &amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/accounts-root-type-defaults-to-asset-as-from-second-child-level/15186" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Accounts Root type defaults to Asset as from second child level?&#39;" href="https://discuss.frappe.io/t/accounts-root-type-defaults-to-asset-as-from-second-child-level/15186.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/accounts-root-type-defaults-to-asset-as-from-second-child-level/15186" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/accounts-root-type-defaults-to-asset-as-from-second-child-level/15186" />
+<meta property="og:title" content="Accounts Root type defaults to Asset as from second child level?" />
+<meta name="twitter:title" content="Accounts Root type defaults to Asset as from second child level?" />
+<meta property="og:description" content="I’m setting up ERPNext: v7.0.27, Frappe Framework: v7.0.22 and come accross a problem in accounts, root type.  Although other root types like Liability, Equity, Income or Expense are choosen, the root type falls back to asset always.  This puts a hold on further setup!  Is there any setting, which causes this unrequired situation or is this a bug?  Thanks for any help.  Gerard" />
+<meta name="twitter:description" content="I’m setting up ERPNext: v7.0.27, Frappe Framework: v7.0.22 and come accross a problem in accounts, root type.  Although other root types like Liability, Equity, Income or Expense are choosen, the root type falls back to asset always.  This puts a hold on further setup!  Is there any setting, which causes this unrequired situation or is this a bug?  Thanks for any help.  Gerard" />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:section" content="Accounting" />
+<meta property="og:article:section:color" content="AB9364" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2016-08-18T08:22:30+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Accounts Root type defaults to Asset as from second child level?","mainEntity":{"@type":"Question","name":"Accounts Root type defaults to Asset as from second child level?","text":"I’m setting up ERPNext: v7.0.27, Frappe Framework: v7.0.22 and come accross a problem in accounts, root type.\n\nAlthough other root types like Liability, Equity, Income or Expense are choosen, the root type falls back to asset always.\n\nThis puts a hold on further setup!\n\nIs there any setting, which c&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2016-08-18T08:22:30.451Z","author":{"@type":"Person","name":"Gerard","url":"https://discuss.frappe.io/u/Gerard"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/accounts-root-type-defaults-to-asset-as-from-second-child-level/15186">Accounts Root type defaults to Asset as from second child level?</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/accounts/7" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #AB9364'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Accounting</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Accounts Root type defaults to Asset as from second child level?'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/accounts-root-type-defaults-to-asset-as-from-second-child-level/15186'>
+      <meta itemprop='datePublished' content='2016-08-18T08:22:30Z'>
+        <meta itemprop='articleSection' content='Accounting'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Gerard'><span itemprop='name'>Gerard</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/accounts-root-type-defaults-to-asset-as-from-second-child-level/15186">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2016-08-18T08:22:30Z' class='post-time'>
+                    August 18, 2016,  8:22am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-06-03T11:40:05Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m setting up ERPNext: v7.0.27, Frappe Framework: v7.0.22 and come accross a problem in accounts, root type.<br>
+Although other root types like Liability, Equity, Income or Expense are choosen, the root type falls back to asset always.<br>
+This puts a hold on further setup!</p>
+<p>Is there any setting, which causes this unrequired situation or is this a bug?</p>
+<p>Thanks for any help.<br>
+Gerard</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nabinhait'><span itemprop='name'>nabinhait</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-08-19T07:42:43Z' class='post-time'>
+                    August 19, 2016,  7:42am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-08-19T07:42:43Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If you are creating an account under “Asset” root node, you cannot select other than root type Asset. What’s the use case?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Gerard'><span itemprop='name'>Gerard</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/2X/a/a044807d408ab816a6811704daf3b8cea01c8ef9.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-08-19T08:33:25Z' class='post-time'>
+                    August 19, 2016,  8:33am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-08-19T08:33:25Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In the Dutch accounts system a 10 categories (decimal system) is used, in which Ledger compaction is applied.</p>
+<p>Related ledger accounts are added together wherever possible, where the so-called decimal system of accounts is used.<br>
+The decimal accounting system ranks the ledger accounts into ten main groups, called sections. The ten categories are (google translation <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> ):</p>
+<ol start="0">
+<li>Bills of fixed assets, equity and long-term debt</li>
+<li>Accounts receivables and short-term debt and (accounts) means of payment</li>
+<li>Suspense</li>
+<li>Bills of stocks of raw materials and consumables</li>
+<li>Help Bills equity, ie the cost accounts</li>
+<li>Bills of indirect costs</li>
+<li>Manufacturing Accounts</li>
+<li>Bills Stocks of commodities (in trading)</li>
+<li>Help Accounts of equity, being the sales accounts (sales accounts)</li>
+<li>Help Bills equity, ie accounts for exceptional results</li>
+</ol>
+<p>Further distribution in sub accounts are made, which on turn belong to different Root Types. Hence the requirement for alternative root types as from the second child.</p>
+<p>Common are Dutch root types, as shown in the table, which correspond with ErpNext as show, while ErpNext is comprehensive and uses some additional types, which are usefull to us too.</p>
+<p><img src="https://discuss.frappe.io/uploads/default/original/2X/a/a044807d408ab816a6811704daf3b8cea01c8ef9.png" width="524" height="201"></p>
+<p>The second image will be sent by the following reply due to the limitation of one image for new users.</p>
+<p>I hope you can accomplish the feature of different root types as from the second level downwards.</p>
+<p>Thanks, Gerard</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Gerard'><span itemprop='name'>Gerard</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/2X/1/1d5a6e2c8bfc892d6b12852621f56a729697892c.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-08-19T08:34:02Z' class='post-time'>
+                    August 19, 2016,  8:34am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-08-19T08:34:02Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Example of setup of typical Chart of Accounts, in which the decimal system is applied.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/2X/1/1d5a6e2c8bfc892d6b12852621f56a729697892c.png" data-download-href="https://discuss.frappe.io/uploads/default/1d5a6e2c8bfc892d6b12852621f56a729697892c" title="Pasted image"><img src="https://discuss.frappe.io/uploads/default/original/2X/1/1d5a6e2c8bfc892d6b12852621f56a729697892c.png" width="332" height="500" data-dominant-color="F5F5F7"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Pasted image</span><span class="informations">431×648 14 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nabinhait'><span itemprop='name'>nabinhait</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-08-19T09:32:21Z' class='post-time'>
+                    August 19, 2016,  9:32am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-08-19T09:32:21Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It would not possible directly from erpnext.</p>
+<p>But you can contribute chart of accounts for Germany using our portal <a href="https://charts.erpnext.com">https://charts.erpnext.com</a>. There is already a template for SKR03 and SKR04, you can modify them or create your own. We will include contributed chart of accounts in the erpnext repository after some verification from other users.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/rtimagine'><span itemprop='name'>rtimagine</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2016-09-30T11:44:53Z' class='post-time'>
+                    September 30, 2016, 11:44am
+                  </time>
+                  <meta itemprop='dateModified' content='2016-09-30T11:44:53Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi folks,</p>
+<p>Same problem here in Spanish Chart of Account, we should  have different root types in child level. For instance, inside Group 4, we have an asset child and a liability child.</p>
+<p><strong>Is there any way to do this? Cause without this, it seems impossible to us to create our Chart of accounts.</strong></p>
+<p>Kind Regards,</p>
+<p>Rubén</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/os57741'><span itemprop='name'>os57741</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-06-02T09:33:35Z' class='post-time'>
+                    June 2, 2019,  9:33am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-06-02T09:33:35Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am starting implemention of ErpNext in the Netherlands. I am interested to share experience.<br>
+Are you still involved in the use of ERPNetx ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Gerard'><span itemprop='name'>Gerard</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-08-18T08:42:03Z' class='post-time'>
+                    August 18, 2019,  8:42am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-08-18T08:42:03Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Since account numbering is implemented, I started again to introduce ErpNext. Sofar installed ErpNext in a docker on our webserver and are setting up the chart of accounts. Idea is to introduce the various company processes step by step.</p>
+<p>Are you yet involved ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/os57741'><span itemprop='name'>os57741</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2019-08-18T10:24:58Z' class='post-time'>
+                    August 18, 2019, 10:24am
+                  </time>
+                  <meta itemprop='dateModified' content='2019-08-18T10:24:58Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes,</p>
+<p>I am starting again with R 12.</p>
+<p>Met vriendelijke groeten, Kind regards,</p>
+<p>``<br>
+Frank Messie</p>
+<p><strong><em>Braedius</em><br>
+<em>Medical</em></strong></p>
+<p><strong>Braedius Medical BV<br>
+Bikbergerweg 18<br>
+1272 PM Huizen,The Netherlands<br>
+Email: <a href="mailto:frank.messie@braedius.com">frank.messie@braedius.com</a><br>
+Phone: +31(0)358876100<br>
+Mobile: +31654665520<br>
+Web:    <a href="http://www.braedius.com" rel="noopener nofollow ugc">www.braedius.com</a></strong></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ayito'><span itemprop='name'>ayito</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/2/3/23cb6075494380ad9d94071c9bd4b962c7386a43.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-12T12:35:33Z' class='post-time'>
+                    June 12, 2021, 12:35pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-12T12:35:33Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi (Hola!)</p>
+<p>First of all, thanks to the team for the nice software (this is my first post and I have to say it).</p>
+<p>Spanish also here, same problem, we need child accounts to have different roots type in order to succeed in the implementation. Here is an example, the taxes the company pays when it receives an invoice from a supplier, and the taxes applied when the company bills an invoice to a customer.</p>
+<p>Here is the screenshot of that part of the account chart:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/3/23cb6075494380ad9d94071c9bd4b962c7386a43.png" data-download-href="https://discuss.frappe.io/uploads/default/23cb6075494380ad9d94071c9bd4b962c7386a43" title="imagen_coa"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/3/23cb6075494380ad9d94071c9bd4b962c7386a43_2_690x301.png" alt="imagen_coa" data-base62-sha1="56ErxBXvhxuRL7bqPT3Zzmel61R" width="690" height="301" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/3/23cb6075494380ad9d94071c9bd4b962c7386a43_2_690x301.png, https://discuss.frappe.io/uploads/default/optimized/3X/2/3/23cb6075494380ad9d94071c9bd4b962c7386a43_2_1035x451.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/2/3/23cb6075494380ad9d94071c9bd4b962c7386a43.png 2x" data-dominant-color="F9F9FA"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">imagen_coa</span><span class="informations">1325×579 77.1 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>Also, I’ve a cvs file that imports correctly into erpnext, only after following this tip:</p>
+<p><a href="https://github.com/frappe/erpnext/commit/5541aeaa82f520881ad10eee4eed1df5042ed3d8" rel="noopener nofollow ugc">https://github.com/frappe/erpnext/commit/5541aeaa82f520881ad10eee4eed1df5042ed3d8</a></p>
+<p>I have to say the columns “Account Type” and “Root Type” are still kind of messy and may need some work and revision, I was hoping that they could be edited once imported, the field “Account Type” yes, it is posible, but the field “Root Type” once created the account it cannot be changed and depends on the parent, so it needs to be worked out before importing the file.</p>
+<p>I did the job to write all ~960 accounts (more or less), account groups (9), subgroups and ledger accounts, but the issue with “Root type” account really need to be fixed. I see from other european countries that they have the same trouble.</p>
+<p>I’ll like to share the file, but I see <a href="https://charts.erpnext.com/" rel="noopener nofollow ugc">https://charts.erpnext.com/</a> still not up, if you point me to the right place (or I find it myself) I’ll share it in order to finish the job (revision of account and root types).</p>
+<p>Anyway, thanks again and I will look forward a solution to this, help with tests and hopefully contribute to the community, love to all Free/Open Source Software.</p>
+<p>Best regards to all!!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Saumyaseelan_Pv'><span itemprop='name'>Saumyaseelan_Pv</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-12T14:16:55Z' class='post-time'>
+                    June 12, 2021,  2:16pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-12T14:16:55Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We are also facing the same issue with one of our client. They are following the GAAP accounts where asset and liability is coming under one class. But ERPNext won’t allow us to create subaccounts with separate root type.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/daanl'><span itemprop='name'>daanl</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-01-20T14:01:15Z' class='post-time'>
+                    January 20, 2022,  2:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-01-20T14:01:15Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/ayito">@ayito</a>, did you actually succeed in configuring a proper chart of accounts as shown in your screenshot? And if so, do you have any pointers on how this can be achieved?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ayito'><span itemprop='name'>ayito</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/d/b/dbc85df5aee3af6be3f682a09f352ad9a4666712.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-03T14:11:56Z' class='post-time'>
+                    December 3, 2025,  2:11pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-03T14:11:56Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi daani,</p>
+<p>Sorry to have taken so long to responde, I’ve been off this for a time and now I’m kind of getting back to it.</p>
+<p>I think I’ve found a way to work with what erpnext is giving us and also accommodate the Spanish chart of accounts to fit in. Here I show some screenshots and then I’ll explain:</p>
+<p>An Example:</p>
+<p>In Spain we have (among many groups, subroups and accounts, with their numbers):</p>
+<ul>
+<li>Group 5 CUENTAS FINANCIERAS
+<ul>
+<li>Subgroup 55 OTRAS CUENTAS NO BANCARIAS
+<ul>
+<li>551 - Cuenta corriente con socios y administradores <strong>→ ASSET</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>559 - Derivados financieros a corto plazo → <strong>LIABILITY</strong></p>
+<p>So I decided to reestructure the Spanish chart of accounts to duplicate those groups and subgroups that have different root type inside (example: ASSET and LIABILITY in the same subtree) by adding a sufix to the number of the group or subgroup, such as 5-ACT (for ASSET) or 5-PAS (for LIABILITY), and so on… for groups and subgroups it is ok to have it like this, then I respect the account number as it is in the Spanish chart of accounts.  So I have a nice tree with the main root types and branches (main groups) and subranches (subgroups) of the tree may be the same but with different numbers: 5-ACT vs 5-PAS. So accounting reports calculations built in ERPNEXT works and the tree makes kind of sense to find things, while keeping the numbers of accounts as they should be (modifying only the numbers of groups by adding ACT, PAS,… )<br>
+Here some screenshots (ASSET in green, LIABILITY in red)</p>
+<p>Main groups, notice ACT, PAS for ASSET and LIABILITY (PASIVO in Spanish), grou 5 has both kinds, so it is duplicated but with 5-ACT and 5-PAS</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/b/dbc85df5aee3af6be3f682a09f352ad9a4666712.png" data-download-href="https://discuss.frappe.io/uploads/default/dbc85df5aee3af6be3f682a09f352ad9a4666712" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/b/dbc85df5aee3af6be3f682a09f352ad9a4666712_2_690x328.png" alt="image" data-base62-sha1="vmhQIYCtGUdF1deFIEycW7tYolc" width="690" height="328" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/b/dbc85df5aee3af6be3f682a09f352ad9a4666712_2_690x328.png, https://discuss.frappe.io/uploads/default/optimized/3X/d/b/dbc85df5aee3af6be3f682a09f352ad9a4666712_2_1035x492.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/d/b/dbc85df5aee3af6be3f682a09f352ad9a4666712.png 2x" data-dominant-color="F9F9F7"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1327×631 70.1 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Now we go into both branches 5-ACT and 5-PAS, I keep giving the -ACT under the ACITVO root (ASSET) to each subgroup that I know have the 2 types of accounts, then the account number remains same as the official chart of accounts but under the group that it belongs.:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/8/f8e808229eeefba714d1ba435a3484f821afdeab.png" data-download-href="https://discuss.frappe.io/uploads/default/f8e808229eeefba714d1ba435a3484f821afdeab" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/f/8/f8e808229eeefba714d1ba435a3484f821afdeab_2_690x317.png" alt="image" data-base62-sha1="zvVxnQWYGza3PiUliGqV7NSfTMD" width="690" height="317" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/f/8/f8e808229eeefba714d1ba435a3484f821afdeab_2_690x317.png, https://discuss.frappe.io/uploads/default/optimized/3X/f/8/f8e808229eeefba714d1ba435a3484f821afdeab_2_1035x475.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/f/8/f8e808229eeefba714d1ba435a3484f821afdeab.png 2x" data-dominant-color="F8F9F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1059×488 51.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>In the next picture, we can see what happens when group 5 goes under the LIABILITY root type (PASIVO in Spanish).</p>
+<p>We can see, for instance subgroup 55, it has -ACT and PAS, but root accounts still the official number.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/f/9f28c35c0b46f1d68bcf65cc5f70939e3ae6dabd.png" data-download-href="https://discuss.frappe.io/uploads/default/9f28c35c0b46f1d68bcf65cc5f70939e3ae6dabd" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/9/f/9f28c35c0b46f1d68bcf65cc5f70939e3ae6dabd_2_690x353.png" alt="image" data-base62-sha1="mHZfEbDumEy5ftayk2uTCkTHRX7" width="690" height="353" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/9/f/9f28c35c0b46f1d68bcf65cc5f70939e3ae6dabd_2_690x353.png, https://discuss.frappe.io/uploads/default/optimized/3X/9/f/9f28c35c0b46f1d68bcf65cc5f70939e3ae6dabd_2_1035x529.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/9/f/9f28c35c0b46f1d68bcf65cc5f70939e3ae6dabd.png 2x" data-dominant-color="F8F7F7"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1085×556 63.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>I’m just getting started, I expect this is loyal to ERPNEXT treatment of accounting and at the same time it helps organize the chart tree of accounts accordingly to Spanish accounting, the account numbers are loyal to it, it only adds in the group and subgroups a suffix to the number, but I think that’s ok, Same works for the other main roots, INCOME, EXPENSE and EQUITY.</p>
+<p>I hope this helps and if anyone has a different approach to it, I’m interested in learning it.</p>
+<p>Best regards to all.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

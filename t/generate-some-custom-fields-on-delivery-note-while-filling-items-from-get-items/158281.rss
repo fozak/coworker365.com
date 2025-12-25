@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Generate some custom fields on Delivery note While Filling Items from Get Items</title>
+    <link>https://discuss.frappe.io/t/generate-some-custom-fields-on-delivery-note-while-filling-items-from-get-items/158281</link>
+    <description>Hi, 
+
+I have a scenerio where I created two master field on sales order named style and brand.
+
+Now, I need to pull this style and brand on delivery notes item level while I pull the data from Sales Order.
+
+I have write down a script to puopulate this feilds as below:
+
+function populate_so_related_fields(frm) {
+
+```
+if (!frm.doc.items || !frm.doc.items.length) return;
+
+frm.doc.items.forEach(row =&gt; {
+
+    // Must be mapped from Sales Order
+    if (!row.sales_order) return;
+
+    if (!row.custom_po_no) {
+        frappe.call({
+        method: &quot;getPOandStyle&quot;,
+    args: {
+        sales_order: row.sales_order
+    },
+      callback: function (r) {
+                if (r) {
+                    frappe.model.set_value(row.doctype, row.name, &quot;custom_po_no&quot;, r.message.po_no);
+                    frappe.model.set_value(row.doctype, row.name, &quot;custom_style&quot;, r.message.custom_style);
+                     frappe.model.set_value(row.doctype, row.name, &quot;custom_brand&quot;, r.message.custom_brand);
+                }
+            }
+       
+    })
+```
+
+}
+})
+}
+
+Now I am wondering on which event I will call this function.
+
+any idea?</description>
+    
+    <lastBuildDate>Wed, 24 Dec 2025 06:35:20 +0000</lastBuildDate>
+    <category>ERPNext</category>
+    <atom:link href="https://discuss.frappe.io/t/generate-some-custom-fields-on-delivery-note-while-filling-items-from-get-items/158281.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Generate some custom fields on Delivery note While Filling Items from Get Items</title>
+        <dc:creator><![CDATA[mohi-khan]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi,</p>
+<p>I have a scenerio where I created two master field on sales order named style and brand.</p>
+<p>Now, I need to pull this style and brand on delivery notes item level while I pull the data from Sales Order.</p>
+<p>I have write down a script to puopulate this feilds as below:</p>
+<p>function populate_so_related_fields(frm) {</p>
+<pre><code class="lang-auto">if (!frm.doc.items || !frm.doc.items.length) return;
+
+frm.doc.items.forEach(row =&gt; {
+
+    // Must be mapped from Sales Order
+    if (!row.sales_order) return;
+
+    if (!row.custom_po_no) {
+        frappe.call({
+        method: "getPOandStyle",
+    args: {
+        sales_order: row.sales_order
+    },
+      callback: function (r) {
+                if (r) {
+                    frappe.model.set_value(row.doctype, row.name, "custom_po_no", r.message.po_no);
+                    frappe.model.set_value(row.doctype, row.name, "custom_style", r.message.custom_style);
+                     frappe.model.set_value(row.doctype, row.name, "custom_brand", r.message.custom_brand);
+                }
+            }
+       
+    })
+</code></pre>
+<p>}<br>
+})<br>
+}</p>
+<p>Now I am wondering on which event I will call this function.</p>
+<p>any idea?</p>
+          <p><a href="https://discuss.frappe.io/t/generate-some-custom-fields-on-delivery-note-while-filling-items-from-get-items/158281/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/generate-some-custom-fields-on-delivery-note-while-filling-items-from-get-items/158281/1</link>
+        <pubDate>Wed, 24 Dec 2025 06:35:20 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158281-1</guid>
+        <source url="https://discuss.frappe.io/t/generate-some-custom-fields-on-delivery-note-while-filling-items-from-get-items/158281.rss">Generate some custom fields on Delivery note While Filling Items from Get Items</source>
+      </item>
+  </channel>
+</rss>

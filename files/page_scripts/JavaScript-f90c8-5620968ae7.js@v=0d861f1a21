@@ -1,0 +1,3 @@
+document.addEventListener("DOMContentLoaded",function(){const videos=document.querySelectorAll("video");videos.forEach(function(video){const toggle_video_control=function(e){if(video.paused){video.setAttribute("controls","")
+video.removeEventListener("click",toggle_video_control);video.play();e.preventDefault();e.stopPropagation();}}
+video.addEventListener("click",toggle_video_control);});});

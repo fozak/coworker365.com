@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Multiple problems with Payroll - ERPNext - Frappe Forum</title>
+    <meta name="description" content="This is the first year using payroll. I thought I had everything figured out and working but I’m now seeing several issues. Any help is greatly appreciated. 
+
+When opening a Salary Structure assigned to an employee, with&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/multiple-problems-with-payroll/147931" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Multiple problems with Payroll&#39;" href="https://discuss.frappe.io/t/multiple-problems-with-payroll/147931.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/b/5/b51024556dec731f13fafc2ad61306433719c320.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/b/5/b51024556dec731f13fafc2ad61306433719c320.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/multiple-problems-with-payroll/147931" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/multiple-problems-with-payroll/147931" />
+<meta property="og:title" content="Multiple problems with Payroll" />
+<meta name="twitter:title" content="Multiple problems with Payroll" />
+<meta property="og:description" content="This is the first year using payroll. I thought I had everything figured out and working but I’m now seeing several issues. Any help is greatly appreciated.   When opening a Salary Structure assigned to an employee, with several pay periods already completed, the year_to_date field is zero for all components. Is this normal? I’m expecting to see $2,000 * 4 pay periods or $8,000.      It seems Condition statements are ignored, but perhaps the issue is related to the above missing YTD amount.  The..." />
+<meta name="twitter:description" content="This is the first year using payroll. I thought I had everything figured out and working but I’m now seeing several issues. Any help is greatly appreciated.   When opening a Salary Structure assigned to an employee, with several pay periods already completed, the year_to_date field is zero for all components. Is this normal? I’m expecting to see $2,000 * 4 pay periods or $8,000.      It seems Condition statements are ignored, but perhaps the issue is related to the above missing YTD amount.  The..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:tag" content="hr" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="15 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="12 ❤" />
+<meta property="article:published_time" content="2025-05-30T13:26:56+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="/t/multiple-problems-with-payroll/147931?page=2">
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Multiple problems with Payroll","mainEntity":{"@type":"Question","name":"Multiple problems with Payroll","text":"This is the first year using payroll. I thought I had everything figured out and working but I’m now seeing several issues. Any help is greatly appreciated.\n\nWhen opening a Salary Structure assigned to an employee, with several pay periods already completed, the year_to_date field is zero for all c&hellip;","upvoteCount":1,"answerCount":1,"datePublished":"2025-05-30T13:26:56.480Z","author":{"@type":"Person","name":"volkswagner","url":"https://discuss.frappe.io/u/volkswagner"},"acceptedAnswer":{"@type":"Answer","text":"<a class=\"mention\" href=\"/u/volkswagner\">@volkswagner<\/a> I’m a little late to the party, but I’d like to help if I can. I have what I consider to be a working v.15 setup in the US with no “state” portion so all 6% goes to the feds.\n\nYTD “should” be working in your calculations in your salary components–&gt; salary structure–&gt; salary structure &hellip;","upvoteCount":1,"datePublished":"2025-06-07T00:50:39.006Z","url":"https://discuss.frappe.io/t/multiple-problems-with-payroll/147931/11","author":{"@type":"Person","name":"trustedcomputer","url":"https://discuss.frappe.io/u/trustedcomputer"}}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/multiple-problems-with-payroll/147931">Multiple problems with Payroll</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/hr' class='discourse-tag' rel="tag">hr</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Multiple problems with Payroll'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/multiple-problems-with-payroll/147931'>
+      <meta itemprop='datePublished' content='2025-05-30T13:26:56Z'>
+        <meta itemprop='articleSection' content='ERPNext'>
+      <meta itemprop='keywords' content='hr'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/volkswagner'><span itemprop='name'>volkswagner</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/multiple-problems-with-payroll/147931">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/b/5/b51024556dec731f13fafc2ad61306433719c320.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-05-30T13:26:56Z' class='post-time'>
+                    May 30, 2025,  1:26pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-05-30T13:26:56Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This is the first year using payroll. I thought I had everything figured out and working but I’m now seeing several issues. Any help is greatly appreciated.</p>
+<ol>
+<li>When opening a Salary Structure assigned to an employee, with several pay periods already completed, the year_to_date field is zero for all components. Is this normal? I’m expecting to see $2,000 * 4 pay periods or $8,000.</li>
+</ol>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/b/5/b51024556dec731f13fafc2ad61306433719c320.png" data-download-href="https://discuss.frappe.io/uploads/default/b51024556dec731f13fafc2ad61306433719c320" title="Screenshot 2025-05-30 at 9.19.28 AM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/b/5/b51024556dec731f13fafc2ad61306433719c320_2_690x442.png" alt="Screenshot 2025-05-30 at 9.19.28 AM" data-base62-sha1="pPL0nlwXSEQtVxRPfbdmUMiMIs8" width="690" height="442" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/b/5/b51024556dec731f13fafc2ad61306433719c320_2_690x442.png, https://discuss.frappe.io/uploads/default/original/3X/b/5/b51024556dec731f13fafc2ad61306433719c320.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/b/5/b51024556dec731f13fafc2ad61306433719c320.png 2x" data-dominant-color="F9F9F9"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot 2025-05-30 at 9.19.28 AM</span><span class="informations">969×621 45.3 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<ol start="2">
+<li>It seems Condition statements are ignored, but perhaps the issue is related to the above missing YTD amount.</li>
+</ol>
+<p>The following component is still being calculated even after ‘gross_year_to_date’ is $8,000.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/4/f48a05c08aae3e05fc1acb3954647452f9fe8f5f.png" data-download-href="https://discuss.frappe.io/uploads/default/f48a05c08aae3e05fc1acb3954647452f9fe8f5f" title="Screenshot 2025-05-30 at 9.23.02 AM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/f/4/f48a05c08aae3e05fc1acb3954647452f9fe8f5f_2_690x456.png" alt="Screenshot 2025-05-30 at 9.23.02 AM" data-base62-sha1="yTidiN5K6SZRxvxhr1ZoJzP2lRR" width="690" height="456" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/f/4/f48a05c08aae3e05fc1acb3954647452f9fe8f5f_2_690x456.png, https://discuss.frappe.io/uploads/default/original/3X/f/4/f48a05c08aae3e05fc1acb3954647452f9fe8f5f.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/f/4/f48a05c08aae3e05fc1acb3954647452f9fe8f5f.png 2x" data-dominant-color="F9F9F9"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot 2025-05-30 at 9.23.02 AM</span><span class="informations">980×648 48.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>My environment:<br>
+<strong>ERPNext:</strong> v15.58.2 (version-15)<br>
+<strong>Frappe Framework:</strong> v15.65.2 (version-15)<br>
+<strong>Frappe HR:</strong> v15.43.1 (version-15)</p>
+<p>Montly payroll with one employee.</p>
+<p>I’m using the built-in workflow (Create Payroll Entry, Submit, then Submit Salary Slips from Payroll Entry docType).</p>
+<p>Salary slips and journal entries are correct.</p>
+<p>Thanks in advance for looking.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/peterg'><span itemprop='name'>peterg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-05-30T14:22:28Z' class='post-time'>
+                    May 30, 2025,  2:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-05-30T14:22:28Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="volkswagner" data-post="1" data-topic="147931">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/volkswagner/48/55461_2.png" class="avatar"> volkswagner:</div>
+<blockquote>
+<p>When opening a Salary Structure assigned to an employee, with several pay periods already completed, the year_to_date field is zero for all components. Is this normal? I’m expecting to see $2,000 * 4 pay periods or $8,000.</p>
+</blockquote>
+</aside>
+<p>Where exactly are you seeing this? The Salary Structure document a template, not specific to any particular employee, and likewise the YTD value there will always be zero. There should be, however a running total in the component child tables in the salary slips. (YTD values are, if I remember correctly, exclusive of the current month, but if you’ve run 4 months already there should be something there.)</p>
+<aside class="quote no-group" data-username="volkswagner" data-post="1" data-topic="147931">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/volkswagner/48/55461_2.png" class="avatar"> volkswagner:</div>
+<blockquote>
+<p>It seems Condition statements are ignored, but perhaps the issue is related to the above missing YTD amount.</p>
+</blockquote>
+</aside>
+<p>Very possibly. It’s worth figuring out the first issue before troubleshooting this one, I think.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/volkswagner'><span itemprop='name'>volkswagner</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-05-30T14:58:25Z' class='post-time'>
+                    May 30, 2025,  2:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-05-30T15:06:03Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you <a class="mention" href="/u/peterg">@peterg</a>.</p>
+<p>The screenshot is indeed from a Salary Component, from my Salary Structure (Submitted and assigned to a single Employee). If you are correct, it seems that field should not exist in this doctype (it would always return zero). This would mean it does not indicate an issue with my setup.</p>
+<p>I believe you are referring to <code>tabSalary Detail</code> which has all of the entries for each component including transactional detail from Salary Slips.</p>
+<p>Indeed <code>Salary Detail</code> has the field ‘year_to_date’ and it correctly is accumating the amount from each salary slip.</p>
+<p>Using the following query I can confirm gross_year_to_date is over 7000.</p>
+<p>According to ChatGPT I should be using ‘base_year_to_date’ not ‘gross_year_to_date’ in my conditional statement.</p>
+<p>Can anyone confirm, or let me know how to verify if my statement is true or false?</p>
+<p>EDIT:<br>
+I don’t think that is correct. Since I’m not using base. When I look at the most recent salary slip, base_year_to_date = 0, gross_year_to_date = 8000</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/peterg'><span itemprop='name'>peterg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-05-30T15:22:37Z' class='post-time'>
+                    May 30, 2025,  3:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-05-30T15:22:37Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="volkswagner" data-post="3" data-topic="147931">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/volkswagner/48/55461_2.png" class="avatar"> volkswagner:</div>
+<blockquote>
+<p>The screenshot is indeed from a Salary Component, from my Salary Structure (Submitted and assigned to a single Employee). If you are correct, it seems that field should not exist in this doctype (it would always return zero). This would mean it does not indicate an issue with my setup.</p>
+<p>I believe you are referring to <code>tabSalary Detail</code> which has all of the entries for each component including transactional detail from Salary Slips.</p>
+</blockquote>
+</aside>
+<p>The reason it exists there is that both <code>Salary Structure</code> (the template) and <code>Salary Slip</code> (the employee- and period-specific instance) use the Salary Detail child doctype. If you’re seeing accurate values in the salary slip components, that’s what’s being counted.</p>
+<aside class="quote no-group" data-username="volkswagner" data-post="3" data-topic="147931">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/volkswagner/48/55461_2.png" class="avatar"> volkswagner:</div>
+<blockquote>
+<p>According to ChatGPT I should be using ‘base_year_to_date’ not ‘gross_year_to_date’ in my conditional statement.</p>
+</blockquote>
+</aside>
+<p><code>gross_year_to_date</code> is a field in your salary slip, and the formula should have access to it. I have no idea what <code>base_year_to_date</code> is. I can’t find any reference to it in the source other than the field def. My hunch would be that it’s a legacy field of some sort.</p>
+<p>As for why <code>gross_year_to_date</code> isn’t being picked up correctly, it’s tricky to troubleshoot. I’ve usually had to use the debugger in my development environment to pinpoint exactly what the issue is. I’m not sure offhand, for example, when the gross_year_to_date value is populated.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/volkswagner'><span itemprop='name'>volkswagner</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-05-30T15:30:14Z' class='post-time'>
+                    May 30, 2025,  3:30pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-05-30T15:30:14Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This is not the first time the Condition statement has caused issues. I think moving forward, I will avoid using it and put all logic in the formula instead.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/fiveoaks'><span itemprop='name'>fiveoaks</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-06T19:14:39Z' class='post-time'>
+                    June 6, 2025,  7:14pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-06T19:14:39Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="peterg" data-post="4" data-topic="147931">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/peterg/48/55463_2.png" class="avatar"> peterg:</div>
+<blockquote>
+<p>The reason it exists there is that both <code>Salary Structure</code> (the template) and <code>Salary Slip</code> (the employee- and period-specific instance) use the Salary Detail child doctype. If you’re seeing accurate values in the salary slip components, that’s what’s being counted.</p>
+</blockquote>
+</aside>
+<p>This is correct. You have to use the <code>Salary Slip</code> to see the year to date. Both are sharing the same child table.</p>
+<aside class="quote no-group" data-username="volkswagner" data-post="5" data-topic="147931" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/volkswagner/48/55461_2.png" class="avatar"> volkswagner:</div>
+<blockquote>
+<p>This is not the first time the Condition statement has caused issues. I think moving forward, I will avoid using it and put all logic in the formula instead.</p>
+</blockquote>
+</aside>
+<p>I’ve never tried using the <code>gross_year_to_date</code> field in a condition but have successfully used it in a formula which both basically are using the same set of formulas. Were you trying this for the FUTA calculation? This is how I did it without use a condition. While I think I am doing it correctly, I hold no responsibility if it’s wrong.</p>
+<pre data-code-wrap="python"><code class="lang-python">0 if ( ( gross_year_to_date - BS ) &gt;= 7000 ) else ( ( 7000 - gross_year_to_date ) * ( 6 / 100 ) ) if ( ( 7000 - gross_year_to_date ) &lt; BS ) else BS * ( 6 / 100 )
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/volkswagner'><span itemprop='name'>volkswagner</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-06T19:33:32Z' class='post-time'>
+                    June 6, 2025,  7:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-06T19:33:32Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you <a class="mention" href="/u/fiveoaks">@fiveoaks</a>.</p>
+<p>Yes, my example was for FUTA. I have settled on the following formula (also no longer using the condition field as it seems to be ignored).</p>
+<pre><code class="lang-auto">0.006 * (
+    (7000 - gross_year_to_date) 
+    if gross_year_to_date &lt; 7000 and gross_pay &gt; (7000 - gross_year_to_date)
+    else gross_pay
+) if gross_year_to_date &lt; 7000 else 0
+</code></pre>
+<p>I’m curious if your formula works when the current pay period causes gross_year_to_date to cross the $7,000.00 threshold. It seems the first part<br>
+of the formula can yield true and assign zero FUTA.</p>
+<p>I think the following can be true if the gross_year_to_date is 6500 and the bs &gt; 500 as an example, the following would be true, no?</p>
+<pre><code class="lang-auto">0 if ( ( gross_year_to_date - BS ) &gt;= 7000 )
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/fiveoaks'><span itemprop='name'>fiveoaks</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-06T19:42:39Z' class='post-time'>
+                    June 6, 2025,  7:42pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-06T19:42:39Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’d have to dig into it again to confirm but I think the <code>gross_year_to_date</code> was including the current salary slip in it’s total and hence why I was removing the base salary before comparing.</p>
+<p>In your equation, I think you have an extra 0 in your percent. Shouldn’t it be <code>0.06 * </code>?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/volkswagner'><span itemprop='name'>volkswagner</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-06T20:15:18Z' class='post-time'>
+                    June 6, 2025,  8:15pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-06T20:15:18Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/fiveoaks">@fiveoaks</a> I think the FUTA rate may vary by state. In NY, our unemployment is assessed on the first 11,800. On form 940 for FUTA, every state pays .006 X 7000 of applicable earnings. If you’re in a state without state unemployment, then you’ll also add .054 * 7000 or a total of 6%.</p>
+<p>Reference <a href="https://www.irs.gov/pub/irs-pdf/f940.pdf" rel="noopener nofollow ugc">form 940</a> lines 8 &amp; 9.</p>
+<p>You had me “scared” for a minute <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/fiveoaks'><span itemprop='name'>fiveoaks</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-06T20:35:57Z' class='post-time'>
+                    June 6, 2025,  8:35pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-06T20:35:57Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="volkswagner" data-post="9" data-topic="147931">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/volkswagner/48/55461_2.png" class="avatar"> volkswagner:</div>
+<blockquote>
+<p>I think the FUTA rate may vary by state.</p>
+</blockquote>
+</aside>
+<p>Yes, your right. It varies by state. We have to pay the full 6%.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/trustedcomputer'><span itemprop='name'>trustedcomputer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-07T00:50:39Z' class='post-time'>
+                    June 7, 2025, 12:50am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-07T00:50:39Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/volkswagner">@volkswagner</a> I’m a little late to the party, but I’d like to help if I can. I have what I consider to be a working v.15 setup in the US with no “state” portion so all 6% goes to the feds.</p>
+<ol>
+<li>
+<p>YTD “should” be working in your calculations in your salary components–&gt; salary structure–&gt; salary structure assignment–&gt;salary slips. If it’s not, its a configuration issue (which is very understandable due to the complexity of it all), not a bug.</p>
+</li>
+<li>
+<p>I have never used conditions for any of the salary components, I don’t think I could ever get them to work. But happily, they all work great in the formula. Here is what I do for FUTA. After the first 7K, even in the middle of a check, it results in no more FUTA for that employee until the end of the year:</p>
+</li>
+</ol>
+<pre><code class="lang-auto">0 if ((gross_year_to_date - BS) &gt;= 7000) else 
+0.06 * (7000 - (gross_year_to_date - BS)) if (gross_year_to_date &gt; 7000) else 
+0.06 * BS
+</code></pre>
+<p>I’d be happy to share any more of my configuration with you that might be helpful, even though some of it is a bit hackish (though I try to avoid that when possible).</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/volkswagner'><span itemprop='name'>volkswagner</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-07T11:57:12Z' class='post-time'>
+                    June 7, 2025, 11:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-07T11:57:12Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/trustedcomputer">@trustedcomputer</a></p>
+<p>Who says code can’t be poetic?</p>
+<p>Love how your formula leads either the zero argument!</p>
+<p>Perhaps I should file a bug report regarding the condition being ignored.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jroyDC'><span itemprop='name'>jroyDC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-10T20:29:07Z' class='post-time'>
+                    June 10, 2025,  8:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-10T20:29:07Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’m testing with using the gross_year_to_date field from the salary slip and it works well for the most part, but I’m seeing some strange behaviour in some cases.</p>
+<p>For example, on the first pay of the year, you’ll notice the gross_year_to_date is $0, you can process a salary slip and all the deductions are correct, hit save and notice the gross_year_to_date now includes the the current amount, now hit Submit, and your deductions will be re-calculated using the new gross_year_to_date which can be problematic if you’re using marginal tax rates like we do in North America.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/volkswagner'><span itemprop='name'>volkswagner</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-10T21:23:26Z' class='post-time'>
+                    June 10, 2025,  9:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-10T21:23:26Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The gross_year_to_date is appended immediately (for Earnings Component) in the salary slip. This is why it’s important to maintain the proper order of the Earnings Components. You shouldn’t use gross_YTD in an earnings component, then later add/subtract in another earnings component.</p>
+<p>The salary slip calculations occur in order (earnings components first, then deduction components).</p>
+<p><a class="mention" href="/u/jroydc">@jroyDC</a> Your findings are expected.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jroyDC'><span itemprop='name'>jroyDC</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-10T22:01:09Z' class='post-time'>
+                    June 10, 2025, 10:01pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-10T22:01:09Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>TY, this is good to know.<br>
+I was using the gross year to date to calculate some tax deductions.<br>
+In Canada we have for example, the Canada Pension Plan deduction, it has 2 components.</p>
+<p>CPP - 5.95% up to $71,300, with the first $3,500 exemption, maximum $4034.10</p>
+<p>CPP2 - 4% from $71,300.01 to $81,200, maximum $396</p>
+<p>Say you reach $80,000 and add your weekly base of $2000, reaching $82,000, Using the gross year to date, you can figure out the deduction of 4% of the remaining  $1,200.<br>
+But I was struggling in my test because when you run payroll entry or salary slip, the gross year to date is one thing, but when you submit the slip, the gross is now included and changed the deduction calculation.</p>
+<p>In this case, what’s the best approach to calculate deductions based on %, maximum, and exemptions such as CPP?</p>
+<p>And this structure is common across most Canadian income taxes.</p>
+<p>And like some previous comments, I have not been able to get the Conditions to work.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/volkswagner'><span itemprop='name'>volkswagner</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-10T23:38:18Z' class='post-time'>
+                    June 10, 2025, 11:38pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-10T23:57:07Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I’ll take a stab at it (using what I’ve learned from <a class="mention" href="/u/trustedcomputer">@trustedcomputer</a>)</p>
+<pre><code class="lang-auto">0 if ((gross_year_to_date - BS) &gt;= 71300 or (gross_year_to_date - BS) &lt;= 3500) else 
+0.0595 * (71300 - (gross_year_to_date - BS)) if gross_year_to_date &gt; 71300 else
+0.0595 * (gross_year_to_date - 3500) if (gross_year_to_date &gt;= 3500 and (gross_year_to_date - BS) &lt;= 3500) else
+0.0595 * BS
+</code></pre>
+<p>The first line should run when they’ve reached the cap of 71300.<br>
+The second line should run when they have a pay period that crests<br>
+over the 71300 (only applies against the difference up to the 71300.<br>
+The thrid line should run when they crest above 3500 in a pay period<br>
+and the last line should run for all other conditions.</p>
+<p>Please note that I’m not an expert and haven’t even tested this formula.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jroyDC'><span itemprop='name'>jroyDC</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/4/8/48d59ed872e1fede97de3172a34f864dcba47025.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-11T15:10:26Z' class='post-time'>
+                    June 11, 2025,  3:10pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-11T15:10:26Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This formula is similar to what I had, and I tested it and I can say it works well, but using Gross Year To Date still causing issues in my Save-&gt; Submit where things are being recalculated.<br>
+In my example, I’m using a single slip for $80k to span CPP and CPP2, the numbers on Salary Slip are bang on, see screen shot Before Save.<br>
+The I save the Form, see Screenshot after Save-&gt; Gross Year To Date changed from $0 to $80k.<br>
+Now see the screen shot on Submit, the Deductible Components are dropped and re-calculated based on the Gross Year To Date after the save Event.<br>
+this is what I’m fighting with right now, and I’m not sure this is normal behaviour.</p>
+<p>Once a save is done, that should be it, Submitting should post the saved values as displayed on the scree otherwise all your GL entries are going to be changed between Save Submit. No More re-calculations after a save!!<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/4/8/48d59ed872e1fede97de3172a34f864dcba47025.png" data-download-href="https://discuss.frappe.io/uploads/default/48d59ed872e1fede97de3172a34f864dcba47025" title="Salary Slip Before Save"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/4/8/48d59ed872e1fede97de3172a34f864dcba47025_2_690x354.png" alt="Salary Slip Before Save" data-base62-sha1="aok3zErq6u99iuqUmC1Xcw2BUIB" width="690" height="354" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/4/8/48d59ed872e1fede97de3172a34f864dcba47025_2_690x354.png, https://discuss.frappe.io/uploads/default/optimized/3X/4/8/48d59ed872e1fede97de3172a34f864dcba47025_2_1035x531.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/4/8/48d59ed872e1fede97de3172a34f864dcba47025.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Salary Slip Before Save</span><span class="informations">1201×617 38.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/c/7/c7f1c1136ed4d065ab7ded32d9ad8d7b950f8469.png" data-download-href="https://discuss.frappe.io/uploads/default/c7f1c1136ed4d065ab7ded32d9ad8d7b950f8469" title="Salary Slip After Save"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/c/7/c7f1c1136ed4d065ab7ded32d9ad8d7b950f8469_2_690x355.png" alt="Salary Slip After Save" data-base62-sha1="swMYiIcnPBzJCVc0WlWQVJI8Fvz" width="690" height="355" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/c/7/c7f1c1136ed4d065ab7ded32d9ad8d7b950f8469_2_690x355.png, https://discuss.frappe.io/uploads/default/original/3X/c/7/c7f1c1136ed4d065ab7ded32d9ad8d7b950f8469.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/c/7/c7f1c1136ed4d065ab7ded32d9ad8d7b950f8469.png 2x" data-dominant-color="F8F9FA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Salary Slip After Save</span><span class="informations">1018×524 45 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/8/2/82ea97354272770ffbc753f0855255a205084c17.png" data-download-href="https://discuss.frappe.io/uploads/default/82ea97354272770ffbc753f0855255a205084c17" title="Salary Slip After Submit"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/8/2/82ea97354272770ffbc753f0855255a205084c17_2_690x299.png" alt="Salary Slip After Submit" data-base62-sha1="iG8G7joFHBmzbkYwZv4JZWfIYxp" width="690" height="299" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/8/2/82ea97354272770ffbc753f0855255a205084c17_2_690x299.png, https://discuss.frappe.io/uploads/default/original/3X/8/2/82ea97354272770ffbc753f0855255a205084c17.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/8/2/82ea97354272770ffbc753f0855255a205084c17.png 2x" data-dominant-color="F9F9FA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Salary Slip After Submit</span><span class="informations">1010×438 37.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/volkswagner'><span itemprop='name'>volkswagner</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-11T16:31:29Z' class='post-time'>
+                    June 11, 2025,  4:31pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-11T16:31:29Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Can you post your formulas?</p>
+<p>The behavior seems to be related to misconfigured calculations.</p>
+<p>Is this a real-world scenario? Will employees receive 80K in one pay period?</p>
+<p>The formula I posted would likely fail in this scenario, because gross and gross_year_to_date are equal.</p>
+<p>In order to cover the scenario you are testing, you would need to add additional lines to capture this specific situation.</p>
+<p>In your test slip the following is true, but not matched in the formula.</p>
+<pre><code class="lang-auto">.0695 * (71300 - 3500) if (gross_year_to_date - gross_pay) &lt; 3500 and gross_pay &gt;= 71300
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jroyDC'><span itemprop='name'>jroyDC</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/7/3/73115640665160944dd889e53de36d2b95355eba.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-11T17:13:00Z' class='post-time'>
+                    June 11, 2025,  5:13pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-11T17:13:00Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>thanks for the help, I appreciate the time spent on your part.<br>
+Maybe I’m not explaining myself well, or maybe I’m simply misunderstanding, but using the formula for CPP</p>
+<p>0 if ((gross_year_to_date - base) &gt;= 71300 or (gross_year_to_date - base) &lt;= 3500) else<br>
+0.0595 * (71300 - (gross_year_to_date - base)) if gross_year_to_date &gt; 71300 else<br>
+0.0595 * (gross_year_to_date - 3500) if (gross_year_to_date &gt;= 3500 and (gross_year_to_date - base) &lt;= 3500) else<br>
+0.0595 * base</p>
+<p>I changed the base salary to $5000, the first pay slip, the deductions are $0 since the first $3,500 are exempt, but we should be taxing the $1500, but that I think I can address in the formula.</p>
+<p>The 2nd pay slip, of another $5,000 gets us an initial Earning and Deductions screen with $0 deductions, and $0 in Gross Year to Date</p>
+<p>Before Save - This looks perfectly fine.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/3/73115640665160944dd889e53de36d2b95355eba.png" data-download-href="https://discuss.frappe.io/uploads/default/73115640665160944dd889e53de36d2b95355eba" title="Salary Slip Before Save"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/3/73115640665160944dd889e53de36d2b95355eba_2_690x276.png" alt="Salary Slip Before Save" data-base62-sha1="gpW3iOxteCKMA5DZV1NHMrXNEZc" width="690" height="276" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/3/73115640665160944dd889e53de36d2b95355eba_2_690x276.png, https://discuss.frappe.io/uploads/default/optimized/3X/7/3/73115640665160944dd889e53de36d2b95355eba_2_1035x414.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/7/3/73115640665160944dd889e53de36d2b95355eba.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Salary Slip Before Save</span><span class="informations">1323×530 37.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Hit Save<br>
+now Gross Year to Date is updated to the correct OK, looks good, no deductions, well odd, but OK, should have a CPP Deduction.<br>
+I expect the ERPNext to calculate the Deductions and update Gross after the save, but it only does the gross.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/8/f8c1af718ff45ed8dc32ebef3c4367ffa79afc34.png" data-download-href="https://discuss.frappe.io/uploads/default/f8c1af718ff45ed8dc32ebef3c4367ffa79afc34" title="Salary Slip After Save"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/f/8/f8c1af718ff45ed8dc32ebef3c4367ffa79afc34_2_690x364.png" alt="Salary Slip After Save" data-base62-sha1="zuBnEKKzYxgPLwzCUtzCT6dy3qs" width="690" height="364" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/f/8/f8c1af718ff45ed8dc32ebef3c4367ffa79afc34_2_690x364.png, https://discuss.frappe.io/uploads/default/optimized/3X/f/8/f8c1af718ff45ed8dc32ebef3c4367ffa79afc34_2_1035x546.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/f/8/f8c1af718ff45ed8dc32ebef3c4367ffa79afc34.png 2x" data-dominant-color="F9FAFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Salary Slip After Save</span><span class="informations">1107×584 40.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Hit Submit<br>
+This is my main issue, why are things being re-calculated on Submit, shouldn’t the salary slip be calculated on SAVE? Submit should essentially just confirm what’s in the screen.</p>
+<p>But Looks what happens here after I submit, deductions calculated. This should have been done prior to submit and during the save.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/0/d040027a248d9fef5d70b30007ed868227380e01.png" data-download-href="https://discuss.frappe.io/uploads/default/d040027a248d9fef5d70b30007ed868227380e01" title="Salary Slip After Submit"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/0/d040027a248d9fef5d70b30007ed868227380e01_2_690x268.png" alt="Salary Slip After Submit" data-base62-sha1="tIgs8ZxwFUFFeaAcoGNdRRSg4Vz" width="690" height="268" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/0/d040027a248d9fef5d70b30007ed868227380e01_2_690x268.png, https://discuss.frappe.io/uploads/default/optimized/3X/d/0/d040027a248d9fef5d70b30007ed868227380e01_2_1035x402.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/d/0/d040027a248d9fef5d70b30007ed868227380e01.png 2x" data-dominant-color="F9F9FB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Salary Slip After Submit</span><span class="informations">1107×430 32.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Again, I appreciate the help, if I’m doing something fundamentally wrong here, please let me know, and I can modify things on my end, but I really don’t think calculations after user hit Submit that can potentially change the Slip should be happening at all.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_21' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/volkswagner'><span itemprop='name'>volkswagner</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-06-11T17:59:45Z' class='post-time'>
+                    June 11, 2025,  5:59pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-06-11T18:06:04Z'>
+              <span itemprop='position'>21</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Do you have other salary slips that are not submitted?</p>
+<p>There is something wrong if you have zero for gross_ytd and 5K for base, then saving changes gross ytd to 10K.</p>
+<p>You are using the variable ‘base’ which comes from the salary structure assignment. What is the value for base in the assignment?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="/t/multiple-problems-with-payroll/147931?page=2">next page →</a></b></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

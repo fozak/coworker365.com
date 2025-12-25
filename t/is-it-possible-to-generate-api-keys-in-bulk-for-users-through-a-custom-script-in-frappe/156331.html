@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Is it possible to generate API keys in bulk for users through a custom script in Frappe? - Custom Script - Frappe Forum</title>
+    <meta name="description" content="Hi everyone, 
+I wanted to confirm something regarding API key generation in Frappe/ERPNext. 
+I already checked with the Frappe support team, and they confirmed that there’s no built-in feature to generate API Keys and AP&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/is-it-possible-to-generate-api-keys-in-bulk-for-users-through-a-custom-script-in-frappe/156331" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Is it possible to generate API keys in bulk for users through a custom script in Frappe?&#39;" href="https://discuss.frappe.io/t/is-it-possible-to-generate-api-keys-in-bulk-for-users-through-a-custom-script-in-frappe/156331.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/is-it-possible-to-generate-api-keys-in-bulk-for-users-through-a-custom-script-in-frappe/156331" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/is-it-possible-to-generate-api-keys-in-bulk-for-users-through-a-custom-script-in-frappe/156331" />
+<meta property="og:title" content="Is it possible to generate API keys in bulk for users through a custom script in Frappe?" />
+<meta name="twitter:title" content="Is it possible to generate API keys in bulk for users through a custom script in Frappe?" />
+<meta property="og:description" content="Hi everyone,  I wanted to confirm something regarding API key generation in Frappe/ERPNext.  I already checked with the Frappe support team, and they confirmed that there’s no built-in feature to generate API Keys and API Secrets in bulk for multiple users.  However, I wanted to know if it’s possible to achieve this through a custom server-side script — for example, by using generate_keys(user) in a loop for multiple users.  If yes, could anyone please share the recommended way or best practice ..." />
+<meta name="twitter:description" content="Hi everyone,  I wanted to confirm something regarding API key generation in Frappe/ERPNext.  I already checked with the Frappe support team, and they confirmed that there’s no built-in feature to generate API Keys and API Secrets in bulk for multiple users.  However, I wanted to know if it’s possible to achieve this through a custom server-side script — for example, by using generate_keys(user) in a loop for multiple users.  If yes, could anyone please share the recommended way or best practice ..." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:section" content="Custom Script" />
+<meta property="og:article:section:color" content="AB9364" />
+<meta property="og:article:tag" content="developer" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="custom_script" />
+<meta property="og:article:tag" content="frappe" />
+<meta property="og:article:tag" content="customization" />
+<meta property="article:published_time" content="2025-11-03T06:49:10+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Is it possible to generate API keys in bulk for users through a custom script in Frappe?","mainEntity":{"@type":"Question","name":"Is it possible to generate API keys in bulk for users through a custom script in Frappe?","text":"Hi everyone,\n\nI wanted to confirm something regarding API key generation in Frappe/ERPNext.\n\nI already checked with the Frappe support team, and they confirmed that there’s no built-in feature to generate API Keys and API Secrets in bulk for multiple users.\n\nHowever, I wanted to know if it’s possibl&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-11-03T06:49:10.567Z","author":{"@type":"Person","name":"inshadsaifi","url":"https://discuss.frappe.io/u/inshadsaifi"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/is-it-possible-to-generate-api-keys-in-bulk-for-users-through-a-custom-script-in-frappe/156331">Is it possible to generate API keys in bulk for users through a custom script in Frappe?</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/custom-script/18" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #AB9364'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Custom Script</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/developer' class='discourse-tag' rel="tag">developer</a>, 
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/custom_script' class='discourse-tag' rel="tag">custom_script</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
+            <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag' rel="tag">customization</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Is it possible to generate API keys in bulk for users through a custom script in Frappe?'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/is-it-possible-to-generate-api-keys-in-bulk-for-users-through-a-custom-script-in-frappe/156331'>
+      <meta itemprop='datePublished' content='2025-11-03T06:49:10Z'>
+        <meta itemprop='articleSection' content='Custom Script'>
+      <meta itemprop='keywords' content='developer, erpnext, custom_script, frappe, customization'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/inshadsaifi'><span itemprop='name'>inshadsaifi</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/is-it-possible-to-generate-api-keys-in-bulk-for-users-through-a-custom-script-in-frappe/156331">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-11-03T06:49:10Z' class='post-time'>
+                    November 3, 2025,  6:49am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-03T06:49:10Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi everyone,</p>
+<p>I wanted to confirm something regarding API key generation in Frappe/ERPNext.</p>
+<p>I already checked with the Frappe support team, and they confirmed that there’s no built-in feature to generate API Keys and API Secrets in bulk for multiple users.</p>
+<p>However, I wanted to know if it’s possible to achieve this through a <strong>custom server-side script</strong> — for example, by using <code>generate_keys(user)</code> in a loop for multiple users.</p>
+<p>If yes, could anyone please share the <strong>recommended way or best practice</strong> to implement this safely?<br>
+(Mainly for internal use, not public API exposure.)</p>
+<p>Thanks in advance,<br>
+<strong>Inshad</strong></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abdeali'><span itemprop='name'>Abdeali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-03T07:17:29Z' class='post-time'>
+                    November 3, 2025,  7:17am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-03T07:17:29Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think you are right.</p>
+<p>But you can’t use import statement in server script.</p>
+<p>So you have to implement by yourself.</p>
+<pre data-code-wrap="python"><code class="lang-python">@frappe.whitelist(methods=["POST"])
+def generate_keys(user: str):
+	"""
+	generate api key and api secret
+
+	:param user: str
+	"""
+	frappe.only_for("System Manager")
+	user_details: User = frappe.get_doc("User", user)
+	api_secret = frappe.generate_hash(length=15)
+	# if api key is not set generate api key
+	if not user_details.api_key:
+		api_key = frappe.generate_hash(length=15)
+		user_details.api_key = api_key
+	user_details.api_secret = api_secret
+	user_details.save()
+
+	return {"api_key": user_details.api_key, "api_secret": api_secret}
+</code></pre>
+<p>you can make changes by accepting user list and using for loop generate at a same time and update response with key as user and value as secret and key.</p>
+<p>and if you have custom app, it would be more better to add this to an App</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/SufyanRehman1'><span itemprop='name'>SufyanRehman1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-03T11:55:40Z' class='post-time'>
+                    November 3, 2025, 11:55am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-03T11:55:40Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>When generating API keys in bulk, just keep it simple. Do it only for internal or trusted users, skip anyone who already has keys, and don’t print or expose the API secret anywhere. Run the script safely from the bench console or a server script, and keep track of who has access so you can revoke or update keys when needed.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

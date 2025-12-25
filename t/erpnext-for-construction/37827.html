@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ERPNext for Construction - Frappe Framework - Frappe Forum</title>
+    <meta name="description" content="Hello everyone, 
+I own a construction firm that has been struggling with keeping systems in order for quite a while now. I have been testing a few ERP systems and for a host of reasons, it seems ERPNext is the most inter&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/erpnext-for-construction/37827" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;ERPNext for Construction&#39;" href="https://discuss.frappe.io/t/erpnext-for-construction/37827.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/erpnext-for-construction/37827" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/erpnext-for-construction/37827" />
+<meta property="og:title" content="ERPNext for Construction" />
+<meta name="twitter:title" content="ERPNext for Construction" />
+<meta property="og:description" content="Hello everyone,  I own a construction firm that has been struggling with keeping systems in order for quite a while now. I have been testing a few ERP systems and for a host of reasons, it seems ERPNext is the most interesting one, albeit being probably the least geared towards contractors. I can see this discussion has been brought up a few times with no apparent results.  Long story short, I’m here to propose a construction-custom ERPNext. I have no development background but I’m willing to co..." />
+<meta name="twitter:description" content="Hello everyone,  I own a construction firm that has been struggling with keeping systems in order for quite a while now. I have been testing a few ERP systems and for a host of reasons, it seems ERPNext is the most interesting one, albeit being probably the least geared towards contractors. I can see this discussion has been brought up a few times with no apparent results.  Long story short, I’m here to propose a construction-custom ERPNext. I have no development background but I’m willing to co..." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="3 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="31 ❤" />
+<meta property="article:published_time" content="2018-06-26T11:13:12+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="/t/erpnext-for-construction/37827?page=2">
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"ERPNext for Construction","mainEntity":{"@type":"Question","name":"ERPNext for Construction","text":"Hello everyone,\n\nI own a construction firm that has been struggling with keeping systems in order for quite a while now. I have been testing a few ERP systems and for a host of reasons, it seems ERPNext is the most interesting one, albeit being probably the least geared towards contractors. I can se&hellip;","upvoteCount":2,"answerCount":0,"datePublished":"2018-06-26T11:13:11.998Z","author":{"@type":"Person","name":"Ahmed_ElGazzar","url":"https://discuss.frappe.io/u/Ahmed_ElGazzar"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/erpnext-for-construction/37827">ERPNext for Construction</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='ERPNext for Construction'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/erpnext-for-construction/37827'>
+      <meta itemprop='datePublished' content='2018-06-26T11:13:11Z'>
+        <meta itemprop='articleSection' content='Frappe Framework'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Ahmed_ElGazzar'><span itemprop='name'>Ahmed_ElGazzar</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/erpnext-for-construction/37827">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2018-06-26T11:13:12Z' class='post-time'>
+                    June 26, 2018, 11:13am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-06-26T11:13:12Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello everyone,</p>
+<p>I own a construction firm that has been struggling with keeping systems in order for quite a while now. I have been testing a few ERP systems and for a host of reasons, it seems ERPNext is the most interesting one, albeit being probably the least geared towards contractors. I can see this discussion has been brought up a few times with no apparent results.</p>
+<p>Long story short, I’m here to propose a construction-custom ERPNext. I have no development background but I’m willing to contribute as much to the construction-specific information required. I have contacted a few businesses to do the job, but I really think its more of an extended information exchange and implementation rather than a project with specific requirements off the bat.</p>
+<p>We are willing to put the time, effort and money into sponsoring this. I do think my approach and what I want in a construction ERP will put ERPNext head and shoulders above the competition. I think if high level traction is gained, we can proceed into something big.</p>
+<p>I do welcome all kinds of input.</p>
+<p>Best Regards,</p>
+<p>Ahmed ElGazzar</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kolate_sambhaji'><span itemprop='name'>kolate_sambhaji</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-06-26T11:18:06Z' class='post-time'>
+                    June 26, 2018, 11:18am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-06-26T11:18:06Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/ahmed_elgazzar">@Ahmed_ElGazzar</a></p>
+<p>Hello,</p>
+<p>Do you have a specs for construction module or what is missing in current ERPNext?</p>
+<p>You have a sales, purchase and stock cycle test run.</p>
+<p><a href="https://erpnext.org/docs/user/manual/en/introduction/implementation-strategy" class="onebox" target="_blank" rel="noopener">https://erpnext.org/docs/user/manual/en/introduction/implementation-strategy</a></p>
+<p>Most of the features are already available in ERPNext. You can use project module to tag all sales, purchase and stock transaction to get details view based on Each Construction Site.</p>
+<p>Thanks,<br>
+Sam</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Ahmed_ElGazzar'><span itemprop='name'>Ahmed_ElGazzar</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-06-26T11:25:51Z' class='post-time'>
+                    June 26, 2018, 11:25am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-06-26T11:25:51Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/kolate_sambhaji">@kolate_sambhaji</a></p>
+<p>Hi Sam,</p>
+<p>I do think ERPNext has all the functionalities required but are really challenging to use out of the box for contractors.</p>
+<p>For example,</p>
+<ul>
+<li>Purchase, stock and sales  are linked in such a way that retail/manufacturers could use. For contractors however, the purchase and stock would optimally be linked to a specific task in a project, with the sales expense going into the project expenses. i.e: no direct sale actually occurs.</li>
+</ul>
+<p>Cheers,<br>
+Ahmed</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Ahmed_ElGazzar'><span itemprop='name'>Ahmed_ElGazzar</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-06-26T11:36:14Z' class='post-time'>
+                    June 26, 2018, 11:36am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-06-26T11:36:14Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think I need to put forth a few ideas to make my concept clearer.</p>
+<p>These will be some random thoughts, just for the sake of discussion.</p>
+<p>1- Optimally, a construction firm with multiple projects would benefit from a daily, automatically-generated work order. This would include the required materials and man power on site.</p>
+<p>2- The site then returns actual material usage and productivity rates. This should reflect in the employee timesheets, material stock, material waste as well as expenses related to both material and human resources.</p>
+<p>3- Each project has its unique requirements and bill of materials, that should be monitored to prevent stock-related delays, as well as to optimize cash flow.</p>
+<p>4- Change orders, forced stops at a site, etc… all are a unique construction-industry expense that could be handled. Also, requests for information and having a common information pool regarding a project is important in this industry.</p>
+<p>5- Subcontractors, equipment rental are simple but effective additions…</p>
+<p>6- Ambitiously, linking fleet and equipment management systems is a huge step forward.</p>
+<p>7- I have always thought about integrating, or even better adding right in, the functionalities of a proper project management system. I think there’s a gap between the ERP and PM that allows for great redundancies.</p>
+<p>Some thoughts off my head, just like to hear you guys’ thoughts. Sorry for putting it in layman business terms rather than anything development specific, its just what I do best.</p>
+<p>Cheers,</p>
+<p>Gazzar</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vimal0777'><span itemprop='name'>vimal0777</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-06-27T07:21:46Z' class='post-time'>
+                    June 27, 2018,  7:21am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-06-27T07:21:46Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Ahmed.<br>
+Please sketch a Flow Process(Block Diagram) of your requirement.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Shankar'><span itemprop='name'>Shankar</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2018-11-20T04:33:33Z' class='post-time'>
+                    November 20, 2018,  4:33am
+                  </time>
+                  <meta itemprop='dateModified' content='2018-11-20T04:33:33Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>For the construction industry, it is quite difficult to track projects using the existing timesheet based project tracking.</p>
+<p>We predominantly work with Estimated BOQ’s and tracking project completion using the different elements in the bill of quantities would really be great feature.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Nirmala_Sivasakthi'><span itemprop='name'>Nirmala_Sivasakthi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-01-25T01:46:18Z' class='post-time'>
+                    January 25, 2022,  1:46am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-01-25T01:46:18Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>There was civil contracting module before in version 9, but developer of that module left industry. That module have every thing required vimal.</p>
+<p>Can you from it back to latest version…?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/anupd'><span itemprop='name'>anupd</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-01-25T05:14:50Z' class='post-time'>
+                    January 25, 2022,  5:14am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-01-25T05:14:50Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Has there been any update on development of construction module ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Tufan_Kaynak2'><span itemprop='name'>Tufan_Kaynak2</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-01-25T09:37:21Z' class='post-time'>
+                    January 25, 2022,  9:37am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-01-25T09:37:21Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Looks like there is none but for execution of the construction project, project templates will do nicely. The bidding process though is another fish to fry.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jorgehrpo'><span itemprop='name'>jorgehrpo</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-05-18T16:19:26Z' class='post-time'>
+                    May 18, 2023,  4:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-05-18T16:19:26Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello<br>
+Any updates on this subject?<br>
+I am interested too.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nomanhaider'><span itemprop='name'>nomanhaider</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-02-16T03:42:52Z' class='post-time'>
+                    February 16, 2024,  3:42am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-02-16T03:42:52Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/ahmed_elgazzar">@Ahmed_ElGazzar</a> <a class="mention" href="/u/anupd">@anupd</a> <a class="mention" href="/u/tufan_kaynak2">@Tufan_Kaynak2</a> <a class="mention" href="/u/jorgehrpo">@jorgehrpo</a> Hey everyone,</p>
+<p>We’ve got some big news to share from 1TeamDigital! We’re thrilled to announce that we’re working on something special: an ERPNext system tailored specifically for construction businesses!</p>
+<p>That’s right – we’re crafting a tool that’s going to revolutionize how construction companies do business, making everything smoother and more efficient than ever.</p>
+<p>Here’s a quick rundown of what our construction-focused ERPNext can do:</p>
+<ol>
+<li><strong>Quotation Ease:</strong> Easily create quotes with all the important details, including your work list and materials needed. Making deals with clients has never been simpler!</li>
+<li><strong>Project Power:</strong> Turn those accepted quotes into full-on projects in a flash. Plan out your budgets based on your work list and keep everything organized with task lists.</li>
+<li><strong>Material Management:</strong> No more stress about getting the right supplies. Request materials, place orders, and handle invoices – all while keeping an eye on your project budget.</li>
+<li><strong>Task Collaboration:</strong> Need a hand? Assign tasks to subcontractors and keep track of who’s doing what. It’s teamwork made easy!</li>
+<li><strong>Subcontractor Billing:</strong> Paying subcontractors is a breeze. Create bills that match your project budget perfectly, keeping your finances in check.</li>
+</ol>
+<p>We truly believe this new ERPNext solution will transform the construction industry, making businesses more efficient, saving costs, and delivering top-notch results.</p>
+<p>We’re all ears for your ideas and feedback. Do you have something to share? Drop us a line at noman@1team.digital.</p>
+<p>Mark your calendars for July 1st, 2024 – that’s when this fantastic new tool is set to launch!</p>
+<p>Get ready to join us in shaking up the construction world with ERPNext!</p>
+<p>Catch you later,</p>
+<p>Noman Haider, CEO<br>
+1Team Digital</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="8" />
+              <span class='post-likes'>8 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/saifmuhtar'><span itemprop='name'>saifmuhtar</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-04-01T01:03:08Z' class='post-time'>
+                    April 1, 2024,  1:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-04-01T01:03:08Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group quote-modified" data-username="saifmuhtar" data-post="13" data-topic="37827">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/saifmuhtar/48/14285_2.png" class="avatar"> saifmuhtar:</div>
+<blockquote>
+<p>I’m looking forward for your new solution. Please remind me on July 1st. Thank you.</p>
+</blockquote>
+</aside>
+<p>I’m looking forward for your new solution. Please remind me on July 1st. Thank you.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Colin_Tan'><span itemprop='name'>Colin_Tan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-25T11:37:12Z' class='post-time'>
+                    May 25, 2024, 11:37am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-25T11:37:12Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, willing to provide input from the structural steel industry and give an indication on how this can be implemented.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/hsrai'><span itemprop='name'>hsrai</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-26T02:27:21Z' class='post-time'>
+                    May 26, 2024,  2:27am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-26T02:27:21Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Nice.</p>
+<p>Can we see it’s preview or what is going on.</p>
+<p>If developed publicly, would like to know code repository.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nomanhaider'><span itemprop='name'>nomanhaider</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-30T07:40:14Z' class='post-time'>
+                    May 30, 2024,  7:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-30T07:40:14Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/colin_tan">@Colin_Tan</a> , How to contact you?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Colin_Tan'><span itemprop='name'>Colin_Tan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-31T07:41:55Z' class='post-time'>
+                    May 31, 2024,  7:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-31T07:41:55Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>My email is <a href="mailto:colintan@gmail.com">colintan@gmail.com</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abai'><span itemprop='name'>Abai</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-07-02T05:22:47Z' class='post-time'>
+                    July 2, 2024,  5:22am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-02T05:22:47Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="nomanhaider" data-post="12" data-topic="37827">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/nomanhaider/48/63361_2.png" class="avatar"> nomanhaider:</div>
+<blockquote>
+<p>1TeamDigital</p>
+</blockquote>
+</aside>
+<p>Is this rolled out and can i have a look at it?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nomanhaider'><span itemprop='name'>nomanhaider</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-07-14T16:23:05Z' class='post-time'>
+                    July 14, 2024,  4:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-14T16:23:05Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you for your message. We need 3 months more to complete it.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_21' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Lukxf'><span itemprop='name'>Lukxf</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-09-10T21:47:33Z' class='post-time'>
+                    September 10, 2024,  9:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-09-10T21:47:33Z'>
+              <span itemprop='position'>21</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello <a class="mention" href="/u/nomanhaider">@nomanhaider</a>, is there somewhere we can see a preview or roadmap of ERPConstruction? We’re curious to see how the above features would work.</p>
+<p>Is the expected timeline still start of November for release?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_22' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jjm200'><span itemprop='name'>jjm200</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-09-10T21:47:39Z' class='post-time'>
+                    September 10, 2024,  9:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-09-10T21:47:39Z'>
+              <span itemprop='position'>22</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello <a class="mention" href="/u/nomanhaider">@nomanhaider</a> , I’m very interested in this. I currently work at a Construction Company. Would love to see where you’re at with this and be involved with the testing if you’re interested.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="/t/erpnext-for-construction/37827?page=2">next page →</a></b></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

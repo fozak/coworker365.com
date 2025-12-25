@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:discourse="http://www.discourse.org/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>App Development - Frappe Forum</title>
+    <link>https://discuss.frappe.io/c/framework/app-development/24</link>
+    <description>Topics in the &#39;App Development&#39; category </description>
+    
+      <lastBuildDate>Tue, 23 Dec 2025 03:33:13 +0000</lastBuildDate>
+      <atom:link href="https://discuss.frappe.io/c/framework/app-development/24.rss" rel="self" type="application/rss+xml" />
+        <item>
+          <title>Overriding Plugin Method</title>
+          <dc:creator><![CDATA[TSping1]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>Hello all!</p>
+<p>I have been trying to create a hook to replace the functionality of an erpnext method, “calculate_taxes_and_totals”, found in “erpnext/erpnext/controllers/taxes_and_totals.calculate_taxes_and_totals”.</p>
+<p>As far as I can see, the hook lists “override_whitelisted_methods” (to replace the method directly) and “override_doctype_class” (to replace the entire class) are only for core DocType classes, not those introduced by plugins.</p>
+<p>I’d prefer to avoid monkey patching, as it seems to be used for a quick fix, not for permanent use.</p>
+<p>Summary: How can I override a method in a plugin?</p>
+            <p><small>6 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/overriding-plugin-method/158245">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/overriding-plugin-method/158245</link>
+          <pubDate>Tue, 23 Dec 2025 03:33:13 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-158245</guid>
+          <source url="https://discuss.frappe.io/t/overriding-plugin-method/158245.rss">Overriding Plugin Method</source>
+        </item>
+        <item>
+          <title>Is it possible to create custom field type for my custom app?</title>
+          <dc:creator><![CDATA[h3lltronik]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>Hello everyone,</p>
+<p>I’m new to Frappe and currently exploring its capabilities. I really like the framework so far, but I’ve noticed that the available field types for DocTypes are somewhat limited for advanced use cases.</p>
+<p>For example, let’s say I want to implement a <strong>Query Builder</strong> as part of a DocType. Ideally, I’d like to define a <strong>custom field type</strong> that can:</p>
+<ul>
+<li>
+<p>Render a completely custom UI (custom JS/HTML/<em>React component*</em>).</p>
+</li>
+<li>
+<p>Interact with the user inside the form.</p>
+</li>
+<li>
+<p>Store and retrieve data like any other built-in field type.</p>
+</li>
+</ul>
+<p>My goal is to be able to create a new DocType, add a field, and select my custom “Query Builder” type from the list, which would then render its own UI and handle serialization automatically.</p>
+<p>Is it possible to extend Frappe to this level? If so, what would be the recommended approach or entry point for implementing a <strong>custom field type</strong> like this?</p>
+<p>Thank you in advance for any guidance or examples.</p>
+            <p><small>3 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/is-it-possible-to-create-custom-field-type-for-my-custom-app/157993">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/is-it-possible-to-create-custom-field-type-for-my-custom-app/157993</link>
+          <pubDate>Sun, 14 Dec 2025 15:59:37 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-157993</guid>
+          <source url="https://discuss.frappe.io/t/is-it-possible-to-create-custom-field-type-for-my-custom-app/157993.rss">Is it possible to create custom field type for my custom app?</source>
+        </item>
+        <item>
+          <title>Small Text field renders HTML after submit – bug or expected behavior?</title>
+          <dc:creator><![CDATA[Kesavan]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>Hi team,</p>
+<p>I am testing Frappe v15 and noticed an issue with Small Text fields.</p>
+<h3><a name="p-488841-steps-to-reproduce-1" class="anchor" href="https://discuss.frappe.io#p-488841-steps-to-reproduce-1"></a>Steps to reproduce</h3>
+<ol>
+<li>Create a submittable DocType</li>
+<li>Add a Small Text field</li>
+<li>Enter <code>&lt;h1&gt;Hello&lt;/h1&gt;</code> in the Small Text field</li>
+<li>Save and submit the document</li>
+</ol>
+<h3><a name="p-488841-actual-behavior-2" class="anchor" href="https://discuss.frappe.io#p-488841-actual-behavior-2"></a>Actual behavior</h3>
+<p>HTML content is rendered after submit.</p>
+<h3><a name="p-488841-expected-behavior-3" class="anchor" href="https://discuss.frappe.io#p-488841-expected-behavior-3"></a>Expected behavior</h3>
+<p>Small Text should always escape HTML and render plain text.<br>
+HTML rendering should be limited to HTML or Text Editor fields.</p>
+<p>Could you please confirm whether this is a bug or expected behavior?</p>
+<p><strong>in Draft</strong></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/e/6/e60c0384cebe12593cd3bfddf382bb7295942fcb.png" data-download-href="https://discuss.frappe.io/uploads/default/e60c0384cebe12593cd3bfddf382bb7295942fcb" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/e/6/e60c0384cebe12593cd3bfddf382bb7295942fcb_2_690x191.png" alt="image" data-base62-sha1="wP5yz9TNPwhGNoy8qb7AsClX2xd" width="690" height="191" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/e/6/e60c0384cebe12593cd3bfddf382bb7295942fcb_2_690x191.png, https://discuss.frappe.io/uploads/default/optimized/3X/e/6/e60c0384cebe12593cd3bfddf382bb7295942fcb_2_1035x286.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/e/6/e60c0384cebe12593cd3bfddf382bb7295942fcb_2_1380x382.png 2x" data-dominant-color="F6F7F7"></a></div><p></p>
+<p><strong>After Submit</strong></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/a/0a9441c79382020f3b01babd40b9e3c7d4a2421e.png" data-download-href="https://discuss.frappe.io/uploads/default/0a9441c79382020f3b01babd40b9e3c7d4a2421e" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/a/0a9441c79382020f3b01babd40b9e3c7d4a2421e_2_690x172.png" alt="image" data-base62-sha1="1vApEuaEKXo0iiV7BJ3cD1nditE" width="690" height="172" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/a/0a9441c79382020f3b01babd40b9e3c7d4a2421e_2_690x172.png, https://discuss.frappe.io/uploads/default/optimized/3X/0/a/0a9441c79382020f3b01babd40b9e3c7d4a2421e_2_1035x258.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/0/a/0a9441c79382020f3b01babd40b9e3c7d4a2421e_2_1380x344.png 2x" data-dominant-color="FAFAFA"></a></div><p></p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/small-text-field-renders-html-after-submit-bug-or-expected-behavior/157990">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/small-text-field-renders-html-after-submit-bug-or-expected-behavior/157990</link>
+          <pubDate>Sun, 14 Dec 2025 15:59:22 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-157990</guid>
+          <source url="https://discuss.frappe.io/t/small-text-field-renders-html-after-submit-bug-or-expected-behavior/157990.rss">Small Text field renders HTML after submit – bug or expected behavior?</source>
+        </item>
+        <item>
+          <title>Does Frappe’s default socket.io server allow external service connections?</title>
+          <dc:creator><![CDATA[SKDragon18]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>Hi everyone,<br>
+I have a question regarding the default <a href="http://socket.io" rel="noopener nofollow ugc">socket.io</a> server that comes with Frappe. By default, does Frappe allow socket connections from external services (not just the browser or the same origin)?  I want to connect socket to listen event push realtime from backend using Flutter App.</p>
+<p>If external connections are supported, what is the correct way to configure and authenticate them?</p>
+<p>Thanks in advance!</p>
+            <p><small>6 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/does-frappe-s-default-socket-io-server-allow-external-service-connections/157794">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/does-frappe-s-default-socket-io-server-allow-external-service-connections/157794</link>
+          <pubDate>Mon, 08 Dec 2025 17:39:15 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-157794</guid>
+          <source url="https://discuss.frappe.io/t/does-frappe-s-default-socket-io-server-allow-external-service-connections/157794.rss">Does Frappe’s default socket.io server allow external service connections?</source>
+        </item>
+        <item>
+          <title>Having some issues while trying several times to set up naming_series and autoname in a DocType</title>
+          <dc:creator><![CDATA[ayito]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>Hi all<br>
+I tell you what happened to me so you may be able to replicate and work something out of it. There are several issues to comment, I’ll try to explain my best what I did (I’m newbie, so take this with a grain of salt)</p>
+<p>So, I installed latest development branch and updated as of 03/12//2025 and it’s working. I’m also following Frappe Framework App Development Bootcamp - Day 2 (Dubai, 2024), but trying a bit of new things, this is my second time following such tutorial, doing things in Spanish, my mother language.</p>
+<p>So I try to set up a field several times in frappe desk Build DocType, getting frustrated and deleting and doing it all over again, trying to get “autoname”: “naming_series:” the right way, after several tries, 1st try was “fieldtype”: “Link” then deleted it and again the 2nd try also “fieldtype”: “Link” and the 3rd try I configure it as “fieldtype”: “Select”, when I go to the editor I got to read the json and found the field like this:<br>
+{<br>
+“default”: “1lvtj3rpd4”,<br>
+“fieldname”: “naming_series”,<br>
+“fieldtype”: “Select”,<br>
+“hidden”: 1,<br>
+“label”: “N\u00famero de Solicitud”,<br>
+“<strong>link_filters</strong>”: “[[“Document Naming Rule”,“name”,“=”,“<strong>1lvtj3rpd4</strong>”]]”,<br>
+“options”: “1lvtj3rpd4”,<br>
+“read_only”: 1,<br>
+“reqd”: 1<br>
+}</p>
+<p>So I can have “autoname”: “naming_series:”. This is good, the problem, I guess is that I didn’t get it right the first time, in fact, I tried to set up for 3 times this to work, creating Document Naming Rules each time and assigning them to my field, first I triead to set it up as “fieldtype”: “Link”, it didn’t work the way I expected, I got frustrated and deleted the Document Naming Rule and created new ones, thinking the problem was there. Then I tried the one it’s copied above with “fieldtype”: “Select”. But I got in the json the “link_filters”: “[[“Document Naming Rule”,“name”,“=”,“1lvtj3rpd4”]]”, and I think this doesn’t make sense for a fieldtype: “Select”.</p>
+<p>So after reading the docs, asking serveral ai’s, etc… finally I think I got a clue:</p>
+<p>In the mariadb console, I describe the database table of the doctype with:</p>
+<p>MariaDB [_a27fa9b18cffdd35]&gt; DESC <code>tabSolicitud de reserva</code>;</p>
+<p>±------------------±-------------±-----±----±-----------±------+<br>
+| Field             | Type         | Null | <strong>Key</strong> | <strong>Default</strong>    | Extra |<br>
+±------------------±-------------±-----±----±-----------±------+<br>
+| name              | varchar(140) | NO   | PRI | NULL       |       |<br>
+| creation          | datetime(6)  | YES  | MUL | NULL       |       |<br>
+| modified          | datetime(6)  | YES  |     | NULL       |       |<br>
+| modified_by       | varchar(140) | YES  |     | NULL       |       |<br>
+| owner             | varchar(140) | YES  |     | NULL       |       |<br>
+| docstatus         | tinyint(4)   | NO   |     | 0          |       |<br>
+| idx               | int(11)      | NO   |     | 0          |       |<br>
+| _user_tags        | text         | YES  |     | NULL       |       |<br>
+| _comments         | text         | YES  |     | NULL       |       |<br>
+| _assign           | text         | YES  |     | NULL       |       |<br>
+| _liked_by         | text         | YES  |     | NULL       |       |<br>
+| nombre_cliente    | varchar(140) | YES  |     | NULL       |       |<br>
+| telefono_contacto | varchar(140) | YES  |     | NULL       |       |<br>
+| fecha_salida      | datetime(6)  | YES  |     | NULL       |       |<br>
+| estado            | varchar(140) | YES  |     | NULL       |       |<br>
+| direccion_inicio  | text         | YES  |     | NULL       |       |<br>
+| <strong>naming_series</strong>     | varchar(140) | YES  |     | <strong>73f33ve6g4</strong> |       |<br>
+| vehiculo          | varchar(140) | YES  |     | NULL       |       |<br>
+| <strong>referencia</strong>        | varchar(140) | YES  | <strong>UNI</strong> | <strong>73f33ve6g4</strong> |       |<br>
+±------------------±-------------±-----±----±-----------±------+</p>
+<p>The Field referencia, was one of my tries that I deleted (I didn’t named it naming_series, but referencia, my bad!), but remained in the table, when I try to create a new “Solicitud de reserva” in the front end, the first time works as I would expect, creating the record with “ID P-2025-12-0003”, but the second time it throws an error “referencia debe ser único” (“referencia has to be unique”), I deleted this field in the front end and I couldn’t understand what was happening at first → got frustrated!, (it was still in the table with Key UNI).</p>
+<p>Also on one of my tries I did name the field “naming_series”, didn’t work, deleted it and on the latest try I also created the Field “naming_series” since everything points that it’s the name it has to be. But the nagging point here is that I couldn’t get read of the default 73f33ve6g4 no matter how many things I tried, deleting the cache with bench --site irfan.cabs clear-cache or bench --site irfan.cabs clear-website-cache, also trying a different browser, just to make sure it was not a browser cache thing. Nothing seems to work. This code 73f33ve6g4 belonged to a previous Document Naming Rule that was also deleted, It was nowhere to be found when I searched the database with SELECT in different tables, like:</p>
+<p>MariaDB [_a27fa9b18cffdd35]&gt; SELECT * FROM <code>tabDocument Naming Rule</code> WHERE <code>name</code> = ‘73f33ve6g4’;</p>
+<p>Makes sense since I’ve deleted that Document Naming Rule.</p>
+<p>So I deleted again the field (in frappe desk Build DocType) and also made sure that those columns where dropped from the table:<br>
+MariaDB [_a27fa9b18cffdd35]&gt; ALTER TABLE <code>tabSolicitud de reserva</code> DROP COLUMN naming_series;<br>
+MariaDB [_a27fa9b18cffdd35]&gt; ALTER TABLE <code>tabSolicitud de reserva</code> DROP COLUMN referencia;</p>
+<p>deleting the field while working in the browser in frappe desk Build DocType is just not enough.</p>
+<p>Now there is no “referencia” nor “naming_series” in the json file of the doctype, neither it is in table DESC. I think it is clean now and I can create the field again with nothing there from past tries to fear.</p>
+<p>Now in the json file I get:<br>
+…<br>
+“autoname”: “naming_series:”<br>
+…</p>
+<p>…</p>
+<p>{<br>
+“default”: “1lvtj3rpd4”,<br>
+“fieldname”: “naming_series”,<br>
+“fieldtype”: “Select”,<br>
+“hidden”: 1,<br>
+“label”: "C\u00f3digo ",<br>
+“options”: “1lvtj3rpd4”,<br>
+“read_only”: 1,<br>
+“reqd”: 1<br>
+}<br>
+…</p>
+<p>But I still get in the DESC of the table this:</p>
+<p>…<br>
+| naming_series     | varchar(140) | YES  |     | 73f33ve6g4 |       |</p>
+<p>…</p>
+<p>The nagging reference to the deleted Document naming rule 73f33ve6g4, while it should be the latest and new created Document naming rule 1lvtj3rpd4.</p>
+<p>Then I executed this code in mariadb:</p>
+<p>MariaDB [_a27fa9b18cffdd35]&gt; ALTER TABLE <code>tabSolicitud de reserva</code><br>
+→ ALTER COLUMN naming_series DROP DEFAULT;<br>
+Query OK, 0 rows affected (0.020 sec)<br>
+Records: 0  Duplicates: 0  Warnings: 0</p>
+<p>MariaDB [_a27fa9b18cffdd35]&gt; UPDATE <code>tabSolicitud de reserva</code> SET naming_series = NULL WHERE naming_series = ‘73f33ve6g4’;<br>
+Query OK, 0 rows affected (0.001 sec)<br>
+Rows matched: 0  Changed: 0  Warnings: 0</p>
+<p>MariaDB [_a27fa9b18cffdd35]&gt; DESC <code>tabSolicitud de reserva</code>;</p>
+<p>And finally got:</p>
+<p>| naming_series     | varchar(140) | YES  |     | NULL    |       |</p>
+<p>went to the front end, check the naming_series field and in options and in default was the right code 1lvtj3rpd4, make a change in the label text just to notice the front end of the changes and saved it.</p>
+<p>went back to mariadb console and there it was!</p>
+<p>| naming_series     | varchar(140) | YES  |     | 73f33ve6g4 |       |</p>
+<p>the 73f33ve6g4 that I can’t get rid off.</p>
+<p>So, I just don’t know what is going on. Time for a bit of brute force I guess.</p>
+<p>(frappe-env) ubuntu@frappe-dev:~/frappe-bench$ mysqldump -u root -p _a27fa9b18cffdd35 tabSolicitud\ de\ reserva &gt; solicitud_reserva_backup.sql</p>
+<p>and modified the line so it reads with the default I want to get:</p>
+<p><code>naming_series</code> varchar(140) DEFAULT ‘1lvtj3rpd4’</p>
+<p>Here’s the full sql:</p>
+<p>DROP TABLE IF EXISTS <code>tabSolicitud de reserva</code>;<br>
+/*!40101 SET <span class="mention">@saved_cs_client</span>     = @<span class="mention">@character_set_client</span> <em>/;<br>
+/</em>!40101 SET character_set_client = utf8mb4 <em>/;<br>
+CREATE TABLE <code>tabSolicitud de reserva</code> (<br>
+<code>name</code> varchar(140) NOT NULL,<br>
+<code>creation</code> datetime(6) DEFAULT NULL,<br>
+<code>modified</code> datetime(6) DEFAULT NULL,<br>
+<code>modified_by</code> varchar(140) DEFAULT NULL,<br>
+<code>owner</code> varchar(140) DEFAULT NULL,<br>
+<code>docstatus</code> tinyint(4) NOT NULL DEFAULT 0,<br>
+<code>idx</code> int(11) NOT NULL DEFAULT 0,<br>
+<code>_user_tags</code> text DEFAULT NULL,<br>
+<code>_comments</code> text DEFAULT NULL,<br>
+<code>_assign</code> text DEFAULT NULL,<br>
+<code>_liked_by</code> text DEFAULT NULL,<br>
+<code>nombre_cliente</code> varchar(140) DEFAULT NULL,<br>
+<code>telefono_contacto</code> varchar(140) DEFAULT NULL,<br>
+<code>fecha_salida</code> datetime(6) DEFAULT NULL,<br>
+<code>estado</code> varchar(140) DEFAULT NULL,<br>
+<code>direccion_inicio</code> text DEFAULT NULL,<br>
+<code>vehiculo</code> varchar(140) DEFAULT NULL,<br>
+<code>naming_series</code> varchar(140) DEFAULT ‘1lvtj3rpd4’,<br>
+PRIMARY KEY (<code>name</code>),<br>
+KEY <code>creation</code> (<code>creation</code>)<br>
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;<br>
+/</em>!40101 SET character_set_client = <span class="mention">@saved_cs_client</span> */;</p>
+<p>and in mariadb console:</p>
+<p>MariaDB [_a27fa9b18cffdd35]&gt; DROP TABLE <code>tabSolicitud de reserva</code>;</p>
+<p>Then I import the modified sql with:</p>
+<p>(frappe-env) ubuntu@frappe-dev:~/frappe-bench$ mysql -u root -p _a27fa9b18cffdd35 &lt; solicitud_reserva_backup.sql</p>
+<p>and finally in mariadb console I can read:</p>
+<p>MariaDB [_a27fa9b18cffdd35]&gt; DESC <code>tabSolicitud de reserva</code>;<br>
+±------------------±-------------±-----±----±-----------±------+<br>
+| Field             | Type         | Null | Key | Default    | Extra |<br>
+±------------------±-------------±-----±----±-----------±------+<br>
+…</p>
+<p>…<br>
+| naming_series     | varchar(140) | YES  |     | 1lvtj3rpd4 |       |<br>
+±------------------±-------------±-----±----±-----------±------+</p>
+<p>This 1lvtj3rpd4 is the reference to the Document naming rule I wanted to use.</p>
+<p>Now is working when I add new records I get: P-2025-12-0004, P-2025-12-0005, P-2025-12-0006,…</p>
+<p>Brute force solution seemed to have worked, or it hasn’t? I mean, not fully happy with this, because if a I change to a different Document naming rule I might get into trouble again? Also, I’m not good at python or frappe, just learning and I feel I just got this out of being stubborn rather than using skill. I don’t know if I could have solved it in a better way, I guess I could.</p>
+<p>So… any feedback will be wellcomed. Hope you can replicate this experience and come out with a better solution or fix.</p>
+<p>Thanxs for the hard work in creating frappe!</p>
+            <p><small>7 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/having-some-issues-while-trying-several-times-to-set-up-naming-series-and-autoname-in-a-doctype/157610">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/having-some-issues-while-trying-several-times-to-set-up-naming-series-and-autoname-in-a-doctype/157610</link>
+          <pubDate>Wed, 03 Dec 2025 13:11:11 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-157610</guid>
+          <source url="https://discuss.frappe.io/t/having-some-issues-while-trying-several-times-to-set-up-naming-series-and-autoname-in-a-doctype/157610.rss">Having some issues while trying several times to set up naming_series and autoname in a DocType</source>
+        </item>
+        <item>
+          <title>Salary Component Formula Base * Attendence days</title>
+          <dc:creator><![CDATA[Ahmedq]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>please Can you help me to create a formula in salary component to assaigne to attendence days as<br>
+Base * Attendence days</p>
+            <p><small>4 posts - 3 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/salary-component-formula-base-attendence-days/157579">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/salary-component-formula-base-attendence-days/157579</link>
+          <pubDate>Tue, 02 Dec 2025 19:58:40 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-157579</guid>
+          <source url="https://discuss.frappe.io/t/salary-component-formula-base-attendence-days/157579.rss">Salary Component Formula Base * Attendence days</source>
+        </item>
+        <item>
+          <title>Bench add-frappe-ui fails to run</title>
+          <dc:creator><![CDATA[hpema108]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>Hi,</p>
+<p>Has anyone else had this issue lately. Im sure its some kind version issues because I did have this working about 2 weeks ago. I have an app, added doppio then ran bench add-frappe-ui to add to my app and then yarn dev —host from my app and then I get below errors - any idea how to resolve this? Any help will be appreciated.</p>
+<p>frappe@2951c1eb167e:/workspace/development/frappe-bench/apps/hemant/frontend$ yarn dev --host<br>
+yarn run v1.22.22<br>
+$ vite --host<br>
+Re-optimizing dependencies because lockfile has changed<br>
+Failed to resolve dependency: showdown, present in ‘optimizeDeps.include’</p>
+<p>VITE v5.4.21  ready in 4862 ms</p>
+<p>➜  Local:   <a href="http://localhost:8080/" rel="noopener nofollow ugc">http://localhost:8080/</a><br>
+➜  Network: <a href="http://172.18.0.5:8080/" rel="noopener nofollow ugc">http://172.18.0.5:8080/</a><br>
+➜  press h + enter to show help<br>
+6:30:54 PM [vite] Pre-transform error: [postcss] Missing “./src/style.css” specifier in “frappe-ui” package<br>
+6:30:54 PM [vite] Internal server error: [postcss] Missing “./src/style.css” specifier in “frappe-ui” package<br>
+Plugin: vite:css<br>
+File: /workspace/development/frappe-bench/apps/hemant/frontend/src/index.css:undefined:NaN<br>
+at e (file:///workspace/development/frappe-bench/apps/hemant/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:46042:25)<br>
+at n (file:///workspace/development/frappe-bench/apps/hemant/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:46042:627)<br>
+at o (file:///workspace/development/frappe-bench/apps/hemant/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:46042:1297)<br>
+at resolveExportsOrImports (file:///workspace/development/frappe-bench/apps/hemant/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:46663:18)<br>
+at resolveDeepImport (file:///workspace/development/frappe-bench/apps/hemant/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:46686:25)<br>
+at tryNodeResolve (file:///workspace/development/frappe-bench/apps/hemant/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:46451:16)<br>
+at ResolveIdContext.resolveId (file:///workspace/development/frappe-bench/apps/hemant/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:46201:19)<br>
+at PluginContainer.resolveId (file:///workspace/development/frappe-bench/apps/hemant/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49018:17)<br>
+at async Object. (file:///workspace/development/frappe-bench/apps/hemant/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:66542:15)<br>
+at async Object.resolve (file:///workspace/development/frappe-bench/apps/hemant/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:36818:28)<br>
+6:31:07 PM [vite] Pre-transform error: [postcss] Package subpath ‘./src/tailwind/preset’ is not defined by “exports” in /workspace/development/frappe-bench/apps/hemant/frontend/node_modules/frappe-ui/package.json</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/bench-add-frappe-ui-fails-to-run/157496">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/bench-add-frappe-ui-fails-to-run/157496</link>
+          <pubDate>Sun, 30 Nov 2025 18:40:34 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-157496</guid>
+          <source url="https://discuss.frappe.io/t/bench-add-frappe-ui-fails-to-run/157496.rss">Bench add-frappe-ui fails to run</source>
+        </item>
+        <item>
+          <title>Fixing Columns In Report v-15</title>
+          <dc:creator><![CDATA[SUDHAN]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>I need to fix the columns in the script report,<br>
+datatable.style.setStyle(‘.dt-cell–col-0, .dt-cell–header-0’, {<br>
+position: ‘sticky’,<br>
+left: ‘0px’<br>
+});</p>
+<p>I used this but unable to fix the header and the search input area.</p>
+<p>Hope any solution is there..</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/fixing-columns-in-report-v-15/157218">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/fixing-columns-in-report-v-15/157218</link>
+          <pubDate>Mon, 24 Nov 2025 09:54:32 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-157218</guid>
+          <source url="https://discuss.frappe.io/t/fixing-columns-in-report-v-15/157218.rss">Fixing Columns In Report v-15</source>
+        </item>
+        <item>
+          <title>Websocket Connection error: Invalid origin</title>
+          <dc:creator><![CDATA[SKDragon18]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>Hi i got Websocket Connection error: Invalid origin in Frappe Messenger, have any of you ever got it?<br>
+import { io } from ‘socket.io-client’</p>
+<p>export function initSocket() {<br>
+let host = window.location.hostname<br>
+let siteName = window.site_name<br>
+let port = window.location.port ? <code>:${socketio_port}</code> : ‘’<br>
+let protocol = port ? ‘http’ : ‘https’<br>
+let url = <code>${protocol}://${host}${port}/${siteName}</code><br>
+// add log<br>
+console.log(‘<img src="https://discuss.frappe.io/images/emoji/twitter/electric_plug.png?v=14" title=":electric_plug:" class="emoji" alt=":electric_plug:" loading="lazy" width="20" height="20"> [Socket] Connecting to:’, url)<br>
+console.log(‘<img src="https://discuss.frappe.io/images/emoji/twitter/electric_plug.png?v=14" title=":electric_plug:" class="emoji" alt=":electric_plug:" loading="lazy" width="20" height="20"> [Socket] Protocol:’, protocol)<br>
+console.log(‘<img src="https://discuss.frappe.io/images/emoji/twitter/electric_plug.png?v=14" title=":electric_plug:" class="emoji" alt=":electric_plug:" loading="lazy" width="20" height="20"> [Socket] Host:’, host)<br>
+console.log(‘<img src="https://discuss.frappe.io/images/emoji/twitter/electric_plug.png?v=14" title=":electric_plug:" class="emoji" alt=":electric_plug:" loading="lazy" width="20" height="20"> [Socket] Port:’, port)<br>
+console.log(‘<img src="https://discuss.frappe.io/images/emoji/twitter/electric_plug.png?v=14" title=":electric_plug:" class="emoji" alt=":electric_plug:" loading="lazy" width="20" height="20"> [Socket] Site Name:’, siteName)<br>
+let socket = io(url, {<br>
+withCredentials: true,<br>
+reconnectionAttempts: 5,<br>
+})<br>
+socket.on(‘connect’, () =&gt; {<br>
+console.log(‘[Socket] Connected successfully! ID:’, socket.id)<br>
+})</p>
+<p>socket.on(‘connect_error’, (error) =&gt; {<br>
+console.error(‘<img src="https://discuss.frappe.io/images/emoji/twitter/cross_mark.png?v=14" title=":cross_mark:" class="emoji" alt=":cross_mark:" loading="lazy" width="20" height="20"> [Socket] Connection error:’, error.message)<br>
+})</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/websocket-connection-error-invalid-origin/157169">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/websocket-connection-error-invalid-origin/157169</link>
+          <pubDate>Sat, 22 Nov 2025 08:59:30 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-157169</guid>
+          <source url="https://discuss.frappe.io/t/websocket-connection-error-invalid-origin/157169.rss">Websocket Connection error: Invalid origin</source>
+        </item>
+        <item>
+          <title>GitHub - yashtilala412/frappe-hr-events: A Frappe HR app to manage employee events....</title>
+          <dc:creator><![CDATA[yashtilala412]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <aside class="onebox githubrepo" data-onebox-src="https://github.com/yashtilala412/frappe-hr-events">
+  <header class="source">
+
+      <a href="https://github.com/yashtilala412/frappe-hr-events" target="_blank" rel="noopener nofollow ugc">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="github-row" data-github-private-repo="false">
+  <img width="690" height="344" src="https://opengraph.githubassets.com/b7abc910810e1fec63c10cc8b0b9ff40/yashtilala412/frappe-hr-events" class="thumbnail">
+
+  <h3><a href="https://github.com/yashtilala412/frappe-hr-events" target="_blank" rel="noopener nofollow ugc">GitHub - yashtilala412/frappe-hr-events: A Frappe HR app to manage employee events....</a></h3>
+
+    <p><span class="github-repo-description">A Frappe HR app to manage employee events. Automatically sends direct messages and wishes on Slack for birthdays and work anniversaries.</span></p>
+</div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Hi everyone,</p>
+<p>I’ve developed a custom Frappe app called Frappe HR Events, which automatically sends Birthday and Work Anniversary greetings for employees directly to Slack.</p>
+<p>The app runs on scheduled jobs, checks employee records daily, and posts personalized messages to a Slack channel or direct message. This helps HR teams improve engagement without any manual effort.</p>
+<p>If anyone has feedback, feature suggestions, or would like to contribute, I’d love to hear your thoughts.</p>
+<p>Feel free to try it out, report issues, or open pull requests on GitHub.</p>
+<p>Thank you!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/github-yashtilala412-frappe-hr-events-a-frappe-hr-app-to-manage-employee-events/156888">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/github-yashtilala412-frappe-hr-events-a-frappe-hr-app-to-manage-employee-events/156888</link>
+          <pubDate>Sat, 15 Nov 2025 22:57:17 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156888</guid>
+          <source url="https://discuss.frappe.io/t/github-yashtilala412-frappe-hr-events-a-frappe-hr-app-to-manage-employee-events/156888.rss">GitHub - yashtilala412/frappe-hr-events: A Frappe HR app to manage employee events....</source>
+        </item>
+        <item>
+          <title>Easily copy and share frappe app&#39;s version</title>
+          <dc:creator><![CDATA[Abdeali]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p><a href="https://drive.google.com/file/d/1PWD2ACeggWxJgAqjJISRsjErAWuYb6m6/view?usp=sharing" rel="noopener nofollow ugc">View Demo to Copy App Version</a></p>
+<p><strong>About Dialog:</strong></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/c/5/c560539c7374ded36039fcab2cf3f57595abc8c2.png" data-download-href="https://discuss.frappe.io/uploads/default/c560539c7374ded36039fcab2cf3f57595abc8c2" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/c/5/c560539c7374ded36039fcab2cf3f57595abc8c2_2_521x500.png" alt="image" data-base62-sha1="sa4rjcIIcx7fkLbEP7CiaO20U26" width="521" height="500" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/c/5/c560539c7374ded36039fcab2cf3f57595abc8c2_2_521x500.png, https://discuss.frappe.io/uploads/default/original/3X/c/5/c560539c7374ded36039fcab2cf3f57595abc8c2.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/c/5/c560539c7374ded36039fcab2cf3f57595abc8c2.png 2x" data-dominant-color="E2E2E2"></a></div><p></p>
+<p><strong>All app’s version copy text:</strong></p>
+<pre data-code-wrap="json"><code class="lang-json">{
+	"frappe": "15.8.1",
+	"erpnext": "15.82.2"
+}
+</code></pre>
+<p><strong>Single app’s version copy text:</strong></p>
+<p><code>erpnext: 15.82.2</code></p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/easily-copy-and-share-frappe-apps-version/156483">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/easily-copy-and-share-frappe-apps-version/156483</link>
+          <pubDate>Thu, 06 Nov 2025 06:12:42 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156483</guid>
+          <source url="https://discuss.frappe.io/t/easily-copy-and-share-frappe-apps-version/156483.rss">Easily copy and share frappe app&#39;s version</source>
+        </item>
+        <item>
+          <title>Clean Way to Display Multiple Documents in UI</title>
+          <dc:creator><![CDATA[Abdeali]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <h2><a name="p-485737-easily-redirect-users-to-filtered-list-view-when-multiple-docs-are-need-to-show-1" class="anchor" href="https://discuss.frappe.io#p-485737-easily-redirect-users-to-filtered-list-view-when-multiple-docs-are-need-to-show-1"></a>Easily Redirect Users to Filtered List View When Multiple Docs Are Need to Show</h2>
+<p>When a workflow or action creates multiple documents, the message dialog usually shows links for each document. This becomes lengthy and hard to read — and once you click any link, the message disappears.</p>
+<p>To solve this, you can now show <strong>one clean link</strong> that redirects the user to a <strong>filtered List View</strong> containing only the newly created documents <img src="https://discuss.frappe.io/images/emoji/twitter/backhand_index_pointing_down.png?v=14" title=":backhand_index_pointing_down:" class="emoji" alt=":backhand_index_pointing_down:" loading="lazy" width="20" height="20"></p>
+<pre data-code-wrap="python"><code class="lang-python">from frappe.utils import get_filtered_list_url, get_filtered_list_link
+
+</code></pre>
+<h3><a name="p-485737-example-2" class="anchor" href="https://discuss.frappe.io#p-485737-example-2"></a>Example</h3>
+<pre data-code-wrap="python"><code class="lang-python">docnames = [
+    "MFG-WO-2025-00027",
+    "MFG-WO-2025-00028",
+    "MFG-WO-2025-00029",
+]
+
+# Get Filtered List URL
+url = get_filtered_list_url("Work Order", docnames)
+
+# Get HTML link (for show_alert, msgprint, etc.)
+link = get_filtered_list_link("Work Order", docnames, label="View Work Orders")
+
+</code></pre>
+<p>This will show <strong>one simple link</strong> like:</p>
+<blockquote>
+<p><strong>View Work Orders</strong></p>
+</blockquote>
+<p>Clicking it opens a List View filtered to only those records <img src="https://discuss.frappe.io/images/emoji/twitter/white_check_mark.png?v=14" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"></p>
+<p>Clean UI, no long messy dialogs.</p>
+<p><strong>Documentation:</strong>  <a href="https://docs.frappe.io/framework/user/en/api/utils#get_filtered_list_url" class="inline-onebox" rel="noopener nofollow ugc">Utility Functions</a></p>
+<p><strong>Note:</strong> Available in <strong>15.88.0</strong> of frappe.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/clean-way-to-display-multiple-documents-in-ui/156479">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/clean-way-to-display-multiple-documents-in-ui/156479</link>
+          <pubDate>Thu, 06 Nov 2025 05:47:31 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156479</guid>
+          <source url="https://discuss.frappe.io/t/clean-way-to-display-multiple-documents-in-ui/156479.rss">Clean Way to Display Multiple Documents in UI</source>
+        </item>
+        <item>
+          <title>S3 file attachment is broken</title>
+          <dc:creator><![CDATA[OsamaTbaileh]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>Im just trying to host frappe lms on my ec2, and I need to link the files with an s3 bucket.</p>
+<p>found this app but its kind corrupted <a href="https://cloud.frappe.io/marketplace/apps/frappe_s3_attachment" rel="noopener nofollow ugc">Frappe S3 Attachment | Frappe Cloud Marketplace</a></p>
+<p>the “delete file from cloud” option is not working, this option delete file from s3 whenever they are deleted by the user from the ui.</p>
+<p>is there any better replacement? or any solution for this?</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/s3-file-attachment-is-broken/156007">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/s3-file-attachment-is-broken/156007</link>
+          <pubDate>Sat, 25 Oct 2025 23:21:37 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-156007</guid>
+          <source url="https://discuss.frappe.io/t/s3-file-attachment-is-broken/156007.rss">S3 file attachment is broken</source>
+        </item>
+        <item>
+          <title>Create new doctype on reciving communication on same thread</title>
+          <dc:creator><![CDATA[dubeyakhil-visit]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>So Basically I parse a Email and whatever file i get in parsed email i append that to a doctype. Let say file have some problem and user again send it in same thread so for that communication my existing doc is linked why i want new linked doc with the reply on that email thread. how to do that. I should retain the existing doc and new doc should be created for me so that existing and new records both maintained.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/create-new-doctype-on-reciving-communication-on-same-thread/155976">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/create-new-doctype-on-reciving-communication-on-same-thread/155976</link>
+          <pubDate>Sat, 25 Oct 2025 02:44:17 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155976</guid>
+          <source url="https://discuss.frappe.io/t/create-new-doctype-on-reciving-communication-on-same-thread/155976.rss">Create new doctype on reciving communication on same thread</source>
+        </item>
+        <item>
+          <title>ANNOUNCEMENT: Launch VS Code Extension for Bench Console</title>
+          <dc:creator><![CDATA[Abdeali]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>Hey everyone,</p>
+<p>I’ve built a new VS Code extension — <strong>Frappe Bench Tools</strong>!</p>
+<p>Earlier, using <em>bench console</em> required copying the import statement, opening the terminal, and pasting it manually.</p>
+<p>Now you can do it all in one line — directly inside VS Code!</p>
+<p><strong>Available Commands:</strong></p>
+<p>• Open Bench Console<br>
+• Paste to Bench Console<br>
+• Paste Clipboard to Bench Console<br>
+• Import in Bench Console<br>
+• Import All in Bench Console<br>
+• Import As in Bench Console<br>
+• Run Function in Bench Console<br>
+• Bench Execute Python Function</p>
+<p>Check it out on the VS Code Marketplace: <a href="https://marketplace.visualstudio.com/items?itemName=abdeali.frappe-bench-tools" class="inline-onebox" rel="noopener nofollow ugc">Frappe Bench Tools - Visual Studio Marketplace</a></p>
+<p>Feedback and suggestions are always welcome!</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/announcement-launch-vs-code-extension-for-bench-console/155925">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/announcement-launch-vs-code-extension-for-bench-console/155925</link>
+          <pubDate>Fri, 24 Oct 2025 04:28:08 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155925</guid>
+          <source url="https://discuss.frappe.io/t/announcement-launch-vs-code-extension-for-bench-console/155925.rss">ANNOUNCEMENT: Launch VS Code Extension for Bench Console</source>
+        </item>
+        <item>
+          <title>A New Church App</title>
+          <dc:creator><![CDATA[meichthys]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p><img src="https://discuss.frappe.io/images/emoji/twitter/waving_hand.png?v=14" title=":waving_hand:" class="emoji" alt=":waving_hand:" loading="lazy" width="20" height="20"> I’m relatively new to the Frappe community and have been diving deep into all whole Frappeverse. As an avid open-source contributor &amp; user, I’m surprised it took me so long to find Frappe.</p>
+<p>Recently I started a new custom app called ‘Church’. I wanted to make the community aware of the app and to seek additional contributors. I intend to keep the app fully open source and to list it on the Frappe marketplace when it reaches a v1.0 state (whenever that is!).</p>
+<p>I would appreciate any suggestions or contributions from anyone interested.</p>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/building_construction.png?v=14" title=":building_construction:" class="emoji" alt=":building_construction:" loading="lazy" width="20" height="20"> Repository: <a href="https://github.com/meichthys/church" class="inline-onebox" rel="noopener nofollow ugc">GitHub - meichthys/church: A church management app based on the Frappe framework.</a><br>
+<img src="https://discuss.frappe.io/images/emoji/twitter/speech_balloon.png?v=14" title=":speech_balloon:" class="emoji" alt=":speech_balloon:" loading="lazy" width="20" height="20"> Matrix: <a href="https://matrix.to/#/#the-church-app:matrix.org" rel="noopener nofollow ugc">https://matrix.to/#/#the-church-app:matrix.org</a><br>
+<img src="https://discuss.frappe.io/images/emoji/twitter/test_tube.png?v=14" title=":test_tube:" class="emoji" alt=":test_tube:" loading="lazy" width="20" height="20"> Demo Instance: <a href="https://church.meichthys.com" rel="noopener nofollow ugc">https://church.meichthys.com</a></p>
+<blockquote>
+<p>Username: <a href="mailto:demo@demo.com">demo@demo.com</a><br>
+Password: Matthew10:8b</p>
+</blockquote>
+<p>Thank you for taking the time to read this post <img src="https://discuss.frappe.io/images/emoji/twitter/melting_face.png?v=14" title=":melting_face:" class="emoji" alt=":melting_face:" loading="lazy" width="20" height="20"></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/4/74f2879a43be7cb4146096d885f71d6faf9ddb4d.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/74f2879a43be7cb4146096d885f71d6faf9ddb4d" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/4/74f2879a43be7cb4146096d885f71d6faf9ddb4d_2_649x500.jpeg" alt="image" data-base62-sha1="gGz0fzU4KhchSIsG2sg4Ptc6R7n" width="649" height="500" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/4/74f2879a43be7cb4146096d885f71d6faf9ddb4d_2_649x500.jpeg, https://discuss.frappe.io/uploads/default/optimized/3X/7/4/74f2879a43be7cb4146096d885f71d6faf9ddb4d_2_973x750.jpeg 1.5x, https://discuss.frappe.io/uploads/default/original/3X/7/4/74f2879a43be7cb4146096d885f71d6faf9ddb4d.jpeg 2x" data-dominant-color="EDEDF0"></a></div><p></p>
+            <p><small>7 posts - 4 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/a-new-church-app/155920">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/a-new-church-app/155920</link>
+          <pubDate>Fri, 24 Oct 2025 02:12:08 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155920</guid>
+          <source url="https://discuss.frappe.io/t/a-new-church-app/155920.rss">A New Church App</source>
+        </item>
+        <item>
+          <title>URY-POS Need some modifications</title>
+          <dc:creator><![CDATA[Smartpos]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>Hi,<br>
+I need modification on URY-POS to adapt to the Norwegian market and meet the government’s requirements. Does anyone have experience with UYR-POS, and can help me with this project?</p>
+            <p><small>4 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/ury-pos-need-some-modifications/155891">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/ury-pos-need-some-modifications/155891</link>
+          <pubDate>Thu, 23 Oct 2025 13:04:12 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155891</guid>
+          <source url="https://discuss.frappe.io/t/ury-pos-need-some-modifications/155891.rss">URY-POS Need some modifications</source>
+        </item>
+        <item>
+          <title>How to Build Single Page Applications Inside Frappe Apps Using Doppio</title>
+          <dc:creator><![CDATA[mohamed-ameer]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <h1><a name="p-484127-build-custom-frappe-app-custom-frontend-vuejs-1" class="anchor" href="https://discuss.frappe.io#p-484127-build-custom-frappe-app-custom-frontend-vuejs-1"></a>Build Custom Frappe App + Custom Frontend (VueJS)</h1>
+<h2><a name="p-484127-what-is-doppio-2" class="anchor" href="https://discuss.frappe.io#p-484127-what-is-doppio-2"></a>What is Doppio?</h2>
+<p><strong>Doppio</strong> is a Frappe app that provides CLI commands to automatically scaffold and set up Single Page Applications (SPAs) inside your custom Frappe apps. It handles all the configuration, file creation, and setup automatically.</p>
+<h2><a name="p-484127-two-approaches-3" class="anchor" href="https://discuss.frappe.io#p-484127-two-approaches-3"></a>Two Approaches</h2>
+<h3><a name="p-484127-h-1-doppio-way-automated-setup-4" class="anchor" href="https://discuss.frappe.io#p-484127-h-1-doppio-way-automated-setup-4"></a>1. Doppio Way (Automated Setup)</h3>
+<ul>
+<li><strong>Doppio handles everything</strong> - scaffolding, configuration, routing</li>
+<li>Frontend lives inside Frappe app automatically</li>
+<li>Built assets go to <code>app/public/frontend/</code></li>
+<li>HTML entry point goes to <code>app/www/</code></li>
+<li>Frappe serves everything</li>
+</ul>
+<h3><a name="p-484127-h-2-raw-way-manual-setup-5" class="anchor" href="https://discuss.frappe.io#p-484127-h-2-raw-way-manual-setup-5"></a>2. Raw Way (Manual Setup)</h3>
+<ul>
+<li><strong>You handle everything</strong> manually</li>
+<li>Frontend is completely separate</li>
+<li>Built assets go anywhere you want</li>
+<li>Frappe only serves API endpoints</li>
+<li>Frontend can be deployed anywhere</li>
+</ul>
+<h2><a name="p-484127-note-6" class="anchor" href="https://discuss.frappe.io#p-484127-note-6"></a>NOTE:</h2>
+<p>Doppio creates SPAs (Vue or React) that live INSIDE your Frappe apps, but here’s something many developers miss =&gt; React and Vue allow CDN connections. This means you can use them for specific parts of your app without needing a full SPA setup.</p>
+<p>When you need a full SPA: Building complete custom dashboards, entire application sections, or when you need full routing and state management.</p>
+<p>When CDN is perfect: Adding interactive components to existing Frappe forms, enhancing specific form fields with modern UI, or quick prototyping without full setup.</p>
+<p>Example: You can add Vue.js to a Frappe form with just a CDN script tag and create interactive components instantly, no build process, no complex setup, just modern UI where you need it.</p>
+<p>This gives you the flexibility to choose the right approach for your specific needs. Sometimes a full SPA is overkill when a simple CDN component does the job perfectly.</p>
+<hr>
+<h2><a name="p-484127-doppio-way-automated-step-by-step-7" class="anchor" href="https://discuss.frappe.io#p-484127-doppio-way-automated-step-by-step-7"></a>Doppio Way (Automated) - Step by Step</h2>
+<h3><a name="p-484127-step-1-install-doppio-8" class="anchor" href="https://discuss.frappe.io#p-484127-step-1-install-doppio-8"></a>Step 1: Install Doppio</h3>
+<pre data-code-wrap="bash"><code class="lang-bash">cd /path/to/frappe-bench
+bench get-app https://github.com/NagariaHussain/doppio
+</code></pre>
+<h3><a name="p-484127-step-2-create-your-custom-frappe-app-9" class="anchor" href="https://discuss.frappe.io#p-484127-step-2-create-your-custom-frappe-app-9"></a>Step 2: Create Your Custom Frappe App</h3>
+<pre data-code-wrap="bash"><code class="lang-bash">bench new-app myapp
+bench --site your-site.com install-app myapp
+</code></pre>
+<h3><a name="p-484127-step-3-use-doppio-to-create-spa-10" class="anchor" href="https://discuss.frappe.io#p-484127-step-3-use-doppio-to-create-spa-10"></a>Step 3: Use Doppio to Create SPA</h3>
+<pre data-code-wrap="bash"><code class="lang-bash"># Interactive mode - answer prompts
+bench add-spa
+
+# Or specify options directly
+bench add-spa --app myapp --tailwindcss --typescript
+
+cd apps/myapp/dashboard  # or whatever name you chose
+
+</code></pre>
+<h3><a name="p-484127-step-4-configure-proxyoptions-11" class="anchor" href="https://discuss.frappe.io#p-484127-step-4-configure-proxyoptions-11"></a>Step 4: Configure proxyOptions</h3>
+<p><strong><code>dashboard/proxyOptions.js</code></strong></p>
+<pre data-code-wrap="javascript"><code class="lang-javascript">// Frappe development server is running on http://127.0.0.1:8000
+const frappeTargetPort = 8000;
+
+// This router function attempts to preserve the hostname from the original request
+// and forwards it to the Frappe backend on the specified frappeTargetPort.
+// This is important if your Frappe bench serves multiple sites or relies on the Host header.
+// For example, if you access your Vite app via http://my-frappe-site.localhost:8080,
+// this will proxy API requests to http://my-frappe-site.localhost:8000.
+// If you access Vite via http://localhost:8080, it proxies to http://localhost:8000.
+const router = (req) =&gt; {
+	const hostHeader = req.headers.host || ''; // e.g., 'my-frappe-site.localhost:8080' or 'localhost:8080'
+	const siteName = hostHeader.split(':')[0]; // e.g., 'my-frappe-site.localhost' or 'localhost'
+
+	const targetUrl = `http://${siteName}:${frappeTargetPort}`;
+	console.log(`[Proxy] Routing API request for host ${req.headers.host} to ${targetUrl}${req.url}`);
+	return targetUrl;
+};
+
+export default {
+	// Proxy requests for paths starting with /app, /api, /assets, /files, /private
+	// This matches common Frappe URL structures.
+	'^/(app|api|assets|files|private)': {
+		// The 'target' here is a base. The 'router' will determine the actual host and port.
+		// For Vite's proxy, providing a base target like 127.0.0.1 and then having the router
+		// return the full path including protocol, hostname and port is a common pattern.
+		target: `http://127.0.0.1:${frappeTargetPort}`, // Base target, router provides specifics
+		ws: true, // Enable WebSocket proxying
+		changeOrigin: true, // Important: changes the origin of the host header to the target URL specified by router
+		router: router,
+	}
+};
+</code></pre>
+<h4><a name="p-484127-what-this-configuration-does-12" class="anchor" href="https://discuss.frappe.io#p-484127-what-this-configuration-does-12"></a>What This Configuration Does:</h4>
+<p><strong>Purpose:</strong> This proxy configuration acts as a “traffic director” between your Vue.js frontend (running on port 8080) and your Frappe backend (running on port 8000).</p>
+<p><strong>How It Works:</strong></p>
+<ol>
+<li><strong>Request Interception:</strong> When your frontend makes API calls to <code>/api/method/something</code>, the proxy catches these requests</li>
+<li><strong>Host Preservation:</strong> It keeps the original hostname (like <code>my-site.localhost</code>) so Frappe knows which site to serve</li>
+<li><strong>Port Forwarding:</strong> It forwards the request to your Frappe server on port 8000</li>
+<li><strong>Response Routing:</strong> It sends the Frappe response back to your frontend</li>
+</ol>
+<p><strong>Multi-Site Support:</strong></p>
+<ul>
+<li>If you access <code>http://site1.localhost:8080</code> → proxies to <code>http://site1.localhost:8000</code></li>
+<li>If you access <code>http://site2.localhost:8080</code> → proxies to <code>http://site2.localhost:8000</code></li>
+<li>This is crucial for Frappe benches with multiple sites</li>
+</ul>
+<p><strong>What Gets Proxied:</strong></p>
+<ul>
+<li><code>/api/*</code> - All API calls to Frappe methods</li>
+<li><code>/app/*</code> - Frappe desk application routes</li>
+<li><code>/assets/*</code> - Static assets (CSS, JS, images)</li>
+<li><code>/files/*</code> - File uploads and downloads</li>
+<li><code>/private/*</code> - Private file access</li>
+</ul>
+<p><strong>Key Settings:</strong></p>
+<ul>
+<li><code>ws: true</code> - Enables WebSocket support for real-time features</li>
+<li><code>changeOrigin: true</code> - Ensures proper host header forwarding</li>
+<li><code>router: router</code> - Uses custom logic to determine target URL</li>
+</ul>
+<h3><a name="p-484127-step-5-configure-vite-13" class="anchor" href="https://discuss.frappe.io#p-484127-step-5-configure-vite-13"></a>Step 5: Configure Vite</h3>
+<p><strong><code>dashboard/vite.config.js</code></strong></p>
+<pre data-code-wrap="javascript"><code class="lang-javascript">import path from 'path';
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import proxyOptions from './proxyOptions';
+
+export default defineConfig({
+  plugins: [vue()],
+  server: {
+    port: 8080,
+    host: '0.0.0.0',
+    proxy: proxyOptions
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src')
+    }
+  },
+  build: {
+    outDir: '../myapp/public/dashboard',  // Replace 'myapp' with your actual app name
+    emptyOutDir: true,
+    target: 'es2015',
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html')
+      }
+    }
+  },
+  // Ensure service worker is available in dev mode
+  publicDir: 'public'
+});
+
+</code></pre>
+<h3><a name="p-484127-step-6-configure-build-scripts-14" class="anchor" href="https://discuss.frappe.io#p-484127-step-6-configure-build-scripts-14"></a>Step 6: Configure Build Scripts</h3>
+<p><strong><code>dashboard/package.json</code></strong></p>
+<pre data-code-wrap="json"><code class="lang-json">{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=/assets/myapp/dashboard/ &amp;&amp; yarn copy-html-entry",  // Replace 'myapp' with your actual app name
+    "preview": "vite preview",
+    "copy-html-entry": "mkdir -p ../myapp/www &amp;&amp; cp ../myapp/public/dashboard/index.html ../myapp/www/dashboard.html"  // Replace 'myapp' with your actual app name
+  },
+}
+</code></pre>
+<h3><a name="p-484127-step-7-configure-frappe-routes-15" class="anchor" href="https://discuss.frappe.io#p-484127-step-7-configure-frappe-routes-15"></a>Step 7: Configure Frappe Routes</h3>
+<p><strong><code>myapp/hooks.py</code></strong></p>
+<pre data-code-wrap="python"><code class="lang-python"># Website Route Rules to bypass Frappe routing for our SPA routes
+website_route_rules = [
+	{"from_route": "/dashboard/login", "to_route": "dashboard"},  # Match your frontend name
+	{"from_route": "/dashboard/&lt;path:app_path&gt;", "to_route": "dashboard"},
+	{"from_route": "/dashboard", "to_route": "dashboard"},
+	{"from_route": "/app", "to_route": "/app"},  # Keep ERPNext desk routing
+]
+</code></pre>
+<blockquote>
+<p>“Replace <code>frontend-name</code> with the name you provided in <code>bench add-spa</code> (e.g., if you used <code>dashboard</code>, then paths become <code>/public/dashboard</code> and <code>/www/dashboard.html</code>).”</p>
+</blockquote>
+<h3><a name="p-484127-step-8-build-for-production-16" class="anchor" href="https://discuss.frappe.io#p-484127-step-8-build-for-production-16"></a>Step 8: Build for Production</h3>
+<pre data-code-wrap="bash"><code class="lang-bash">cd apps/myapp/dashboard  # or whatever name you chose
+yarn build
+</code></pre>
+<p><strong>What happens:</strong></p>
+<ul>
+<li>Assets built to <code>myapp/public/dashboard/</code></li>
+<li>HTML copied to <code>myapp/www/dashboard.html</code></li>
+<li>Frappe serves everything automatically</li>
+</ul>
+<h3><a name="p-484127-step-9-start-development-17" class="anchor" href="https://discuss.frappe.io#p-484127-step-9-start-development-17"></a>Step 9: Start Development</h3>
+<pre data-code-wrap="bash"><code class="lang-bash">cd apps/myapp/frontend  # or whatever name you chose
+yarn dev
+</code></pre>
+<p><strong>Access your app:</strong></p>
+<ul>
+<li>Development: <code>http://your-site:8080</code></li>
+<li>Production: <code>http://your-site.com:8000/dashboard</code></li>
+</ul>
+<hr>
+<p><strong>Project Structure</strong></p>
+<pre><code class="lang-auto">myapp/
+├── frontend/                 # Your SPA
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   ├── vite.config.js
+│   └── proxyOptions.js
+├── public/dashboard/         # Built assets (auto-created)
+└── www/dashboard.html       # HTML entry point (auto-created)
+</code></pre>
+<hr>
+<h3><a name="p-484127-build-custom-frappe-app-custom-frontend-react-18" class="anchor" href="https://discuss.frappe.io#p-484127-build-custom-frappe-app-custom-frontend-react-18"></a>Build Custom Frappe App + Custom Frontend (React):</h3>
+<p><a href="https://www.youtube.com/playlist?list=PLHoO_SHGRUVCLT_PrOnFd9NZaqSLfoxLA" rel="noopener nofollow ugc">Frappe React SDK - The Explainer</a></p>
+<hr>
+<p>if you did build spa inside frappe then,<br>
+please share comment with any notes or improvement that you can add about this topic.</p>
+            <p><small>5 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/how-to-build-single-page-applications-inside-frappe-apps-using-doppio/155593">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/how-to-build-single-page-applications-inside-frappe-apps-using-doppio/155593</link>
+          <pubDate>Thu, 16 Oct 2025 06:35:24 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155593</guid>
+          <source url="https://discuss.frappe.io/t/how-to-build-single-page-applications-inside-frappe-apps-using-doppio/155593.rss">How to Build Single Page Applications Inside Frappe Apps Using Doppio</source>
+        </item>
+        <item>
+          <title>frappe.exceptions.SessionBootFailed</title>
+          <dc:creator><![CDATA[mebratuA]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>Traceback (most recent call last):<br>
+File “apps/frappe/frappe/www/app.py”, line 30, in get_context<br>
+boot = frappe.sessions.get()<br>
+^^^^^^^^^^^^^^^^^^^^^<br>
+File “apps/frappe/frappe/sessions.py”, line 144, in get<br>
+bootinfo = get_bootinfo()<br>
+^^^^^^^^^^^^^^<br>
+File “apps/frappe/frappe/boot.py”, line 57, in get_bootinfo<br>
+load_desktop_data(bootinfo)<br>
+File “apps/frappe/frappe/boot.py”, line 152, in load_desktop_data<br>
+allowed_pages = [d.name for d in bootinfo.sidebar_pages.get(“pages”)]<br>
+^^^^^^<br>
+AttributeError: ‘NoneType’ object has no attribute ‘name’</p>
+<p>The above exception was the direct cause of the following exception:</p>
+<p>Traceback (most recent call last):<br>
+File “apps/frappe/frappe/website/serve.py”, line 20, in get_response<br>
+return renderer_instance.render()<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “apps/frappe/frappe/website/page_renderers/template_page.py”, line 84, in render<br>
+html = self.get_html()<br>
+^^^^^^^^^^^^^^^<br>
+File “apps/frappe/frappe/website/utils.py”, line 536, in cache_html_decorator<br>
+html = func(*args, **kwargs)<br>
+^^^^^^^^^^^^^^^^^^^^^<br>
+File “apps/frappe/frappe/website/page_renderers/template_page.py”, line 95, in get_html<br>
+self.update_context()<br>
+File “apps/frappe/frappe/website/page_renderers/template_page.py”, line 163, in update_context<br>
+data = self.run_pymodule_method(“get_context”)<br>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^<br>
+File “apps/frappe/frappe/website/page_renderers/template_page.py”, line 223, in run_pymodule_method<br>
+return method(self.context)<br>
+^^^^^^^^^^^^^^^^^^^^<br>
+File “apps/frappe/frappe/www/app.py”, line 32, in get_context<br>
+raise frappe.SessionBootFailed from e<br>
+frappe.exceptions.SessionBootFailed</p>
+<pre><code class="lang-auto"></code></pre>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/frappe-exceptions-sessionbootfailed/155362">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/frappe-exceptions-sessionbootfailed/155362</link>
+          <pubDate>Sat, 11 Oct 2025 16:46:40 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-155362</guid>
+          <source url="https://discuss.frappe.io/t/frappe-exceptions-sessionbootfailed/155362.rss">frappe.exceptions.SessionBootFailed</source>
+        </item>
+        <item>
+          <title>Modern Desk UI for Frappe v14 &amp; v15 — Inspired by v16</title>
+          <dc:creator><![CDATA[Sudhanshu]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>Hey everyone <img src="https://discuss.frappe.io/images/emoji/twitter/wave.png?v=12" title=":wave:" class="emoji" alt=":wave:" loading="lazy" width="20" height="20">,</p>
+<p>Recently I attended <strong>Frappeverse 2025</strong> and got a glimpse of the upcoming <strong>Frappe v16</strong> — the new Desk UI looks <em>so clean, modern &amp; exciting!</em></p>
+<p>But when I came back to my day-to-day work on <strong>v14 &amp; v15</strong>, the UI started to feel a bit old &amp; boring <img src="https://discuss.frappe.io/images/emoji/twitter/sweat_smile.png?v=12" title=":sweat_smile:" class="emoji" alt=":sweat_smile:" loading="lazy" width="20" height="20">.</p>
+<p>So, I decided to <strong>build a Modern Desk UI for v14 &amp; v15 users</strong> — using <strong>Frappe UI + Vue.js</strong>.</p>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/point_right.png?v=12" title=":point_right:" class="emoji" alt=":point_right:" loading="lazy" width="20" height="20"> <strong>What I’ve built so far:</strong></p>
+<ul>
+<li><img src="https://discuss.frappe.io/images/emoji/twitter/zap.png?v=12" title=":zap:" class="emoji" alt=":zap:" loading="lazy" width="20" height="20"> <strong>Dynamic List View</strong> — auto shows fields marked <code>In List View</code> as columns</li>
+<li><img src="https://discuss.frappe.io/images/emoji/twitter/mag_right.png?v=12" title=":mag_right:" class="emoji" alt=":mag_right:" loading="lazy" width="20" height="20"> <strong>In-List Filters</strong> — fields marked <code>In List Filter</code> show up as filters automatically</li>
+<li><img src="https://discuss.frappe.io/images/emoji/twitter/compass.png?v=12" title=":compass:" class="emoji" alt=":compass:" loading="lazy" width="20" height="20"> <strong>Global Search (Awesomebar)</strong> — works smoothly</li>
+<li><img src="https://discuss.frappe.io/images/emoji/twitter/bookmark_tabs.png?v=12" title=":bookmark_tabs:" class="emoji" alt=":bookmark_tabs:" loading="lazy" width="20" height="20"> <strong>Proper Pagination</strong> — no heavy reloads</li>
+</ul>
+<p>It’s <strong>work in progress</strong> many features will be added — and best part you will need just install it on your v14/v15 instance and get a much more <strong>modern, dynamic Desk experience</strong> without breaking your existing project.<br>
+Next, I’ll be working on <strong>Form View, Report View, Print Formats</strong> and more.<br>
+please suggest me what more i can add and i can make customise view as per requirement</p>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/movie_camera.png?v=12" title=":movie_camera:" class="emoji" alt=":movie_camera:" loading="lazy" width="20" height="20"> I posted a video demo + more details on LinkedIn — check it out here:<br>
+<img src="https://discuss.frappe.io/images/emoji/twitter/point_right.png?v=12" title=":point_right:" class="emoji" alt=":point_right:" loading="lazy" width="20" height="20"> <a href="https://lnkd.in/p/gdKiJi_b" rel="noopener nofollow ugc">View video &amp; updates on LinkedIn</a></p>
+<p>Would love to hear your thoughts &amp; suggestions <img src="https://discuss.frappe.io/images/emoji/twitter/bulb.png?v=12" title=":bulb:" class="emoji" alt=":bulb:" loading="lazy" width="20" height="20"> — what else would you like to see in a modern Desk for Frappe?</p>
+<hr>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/modern-desk-ui-for-frappe-v14-v15-inspired-by-v16/154335">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/modern-desk-ui-for-frappe-v14-v15-inspired-by-v16/154335</link>
+          <pubDate>Wed, 24 Sep 2025 08:57:33 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-154335</guid>
+          <source url="https://discuss.frappe.io/t/modern-desk-ui-for-frappe-v14-v15-inspired-by-v16/154335.rss">Modern Desk UI for Frappe v14 &amp; v15 — Inspired by v16</source>
+        </item>
+        <item>
+          <title>How to Create Custom Dynamic Sprint Burn Down &amp; Burn Up Charts in Frappe Insights?</title>
+          <dc:creator><![CDATA[Frappe795]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>Hi Frappe Community,</p>
+<p>I’m working on a Scrum project management module in Frappe and want to create dynamic Burn Down and Burn Up charts using Frappe Insights / Dashboard Charts.</p>
+<p>Here’s my situation:</p>
+<ul>
+<li>I have a parent doctype <code>Sprint Management</code> and a child table <code>Sprint Backlog</code>.</li>
+<li>Each backlog row has <code>story_points</code>, <code>task_point</code>, <code>task_status</code>, and <code>task_completion_date</code>.</li>
+<li>I want the chart to dynamically calculate remaining points per day for Burn Down, and completed points for Burn Up, without any static x/y-axis.</li>
+<li>Ideally, the chart should automatically reflect changes whenever tasks are updated or completed.</li>
+</ul>
+<p>I’m unsure how to:</p>
+<ol>
+<li>Connect a Script Report with dynamic datasets to Frappe Insights / Dashboard Chart.</li>
+<li>Configure the custom_option or chart JSON so that it dynamically pulls values for dates and points.</li>
+<li>Make the x-axis (dates) and y-axis (points) fully dynamic based on report data.</li>
+</ol>
+<p>Has anyone implemented something similar? Can you share an example or best practice for creating fully dynamic sprint charts in Frappe Insights?</p>
+<p>Thanks in advance for your guidance!</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/how-to-create-custom-dynamic-sprint-burn-down-burn-up-charts-in-frappe-insights/154109">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/how-to-create-custom-dynamic-sprint-burn-down-burn-up-charts-in-frappe-insights/154109</link>
+          <pubDate>Tue, 23 Sep 2025 07:31:37 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-154109</guid>
+          <source url="https://discuss.frappe.io/t/how-to-create-custom-dynamic-sprint-burn-down-burn-up-charts-in-frappe-insights/154109.rss">How to Create Custom Dynamic Sprint Burn Down &amp; Burn Up Charts in Frappe Insights?</source>
+        </item>
+        <item>
+          <title>Use print dialog for custom PDF</title>
+          <dc:creator><![CDATA[zeeeeeeeero]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>I have a custom app that generates a PDF using the reportlab library. I can download the PDF just fine with a custom button. Is there any way I can pass it to the print dialog that is used by ERPNext print formats? I tried using an iframe and printing the iframe but it doesn’t work. I get a security error in the console</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/use-print-dialog-for-custom-pdf/153716">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/use-print-dialog-for-custom-pdf/153716</link>
+          <pubDate>Thu, 18 Sep 2025 04:22:06 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-153716</guid>
+          <source url="https://discuss.frappe.io/t/use-print-dialog-for-custom-pdf/153716.rss">Use print dialog for custom PDF</source>
+        </item>
+        <item>
+          <title>Made AI that controls ERPNext through chat</title>
+          <dc:creator><![CDATA[CloudSolves]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>Built an AI helper. You talk to it like a person, it does ERPNext stuff for you.</p>
+<p>Examples:</p>
+<ul>
+<li>Make a sales order for ABC Company, 100 widgets → Done</li>
+<li>Show me late invoices → You get a list</li>
+<li>Move my meeting from tomorrow to next week → Done</li>
+<li>How much steel pipe do we have? → It tells you</li>
+<li>Email <a href="mailto:client@company.com">client@company.com</a> → drafts email</li>
+</ul>
+<p>Why?<br>
+I wanted to make the easiest ERP system ever. Ultimate goal is to have a system where AI runs the business 100%. We are not there yet but the direction is good.</p>
+<p>Demo: <a href="https://cloudsolves.com/" rel="noopener nofollow ugc">https://cloudsolves.com/</a> (videos, ask for demo access)</p>
+<p>Thoughts?</p>
+            <p><small>2 posts - 2 participants</small></p>
+            <p><a href="https://discuss.frappe.io/t/made-ai-that-controls-erpnext-through-chat/153477">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/made-ai-that-controls-erpnext-through-chat/153477</link>
+          <pubDate>Fri, 12 Sep 2025 15:12:36 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-153477</guid>
+          <source url="https://discuss.frappe.io/t/made-ai-that-controls-erpnext-through-chat/153477.rss">Made AI that controls ERPNext through chat</source>
+        </item>
+        <item>
+          <title>Want to update doc for &quot;Debugging in VS Code&quot;</title>
+          <dc:creator><![CDATA[nd28]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/e/9/e90a332e70c8408dc4f15a420ee8569bae93df2d.png" data-download-href="https://discuss.frappe.io/uploads/default/e90a332e70c8408dc4f15a420ee8569bae93df2d" title="image"><img src="https://discuss.frappe.io/uploads/default/original/3X/e/9/e90a332e70c8408dc4f15a420ee8569bae93df2d.png" alt="image" data-base62-sha1="xfz6rekmAlzx7t3ExEJWu2l35Yp" width="690" height="405" data-dominant-color="071826"></a></div><p></p>
+<p>VS Code does not support “pythonPath” anymore. Instead use need to use “python”.</p>
+<p>The doc is outdated. I want to know how can I submit my changes regarding documentation for approval.</p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/want-to-update-doc-for-debugging-in-vs-code/153475">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/want-to-update-doc-for-debugging-in-vs-code/153475</link>
+          <pubDate>Fri, 12 Sep 2025 15:07:03 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-153475</guid>
+          <source url="https://discuss.frappe.io/t/want-to-update-doc-for-debugging-in-vs-code/153475.rss">Want to update doc for &quot;Debugging in VS Code&quot;</source>
+        </item>
+        <item>
+          <title>🚀 Exciting Announcement: Our Frappe Gmail Thread App is Now Open Source!</title>
+          <dc:creator><![CDATA[KanchanChauhan]]></dc:creator>
+          <category>App Development</category>
+          <description><![CDATA[
+            <p>We’re thrilled to announce that our <a href="https://github.com/rtCamp/frappe-gmail-thread">Frappe Gmail Thread App</a> is now available as an open-source project on GitHub, brought to you by <strong>rtCamp</strong>!</p>
+<p>This app enables seamless integration of Gmail threads into your Frappe / ERPNext applications, helping you track, manage, and link email conversations directly from your system. Whether it’s for support, sales, or communication tracking, this tool brings email interactions closer to your business workflows.</p>
+<h3><a name="p-480234-key-features-1" class="anchor" href="https://discuss.frappe.io#p-480234-key-features-1"></a><img src="https://discuss.frappe.io/images/emoji/twitter/star2.png?v=12" title=":star2:" class="emoji" alt=":star2:" loading="lazy" width="20" height="20"> Key Features:</h3>
+<ul>
+<li>Fetch Gmail threads and emails</li>
+<li>Link emails to relevant Doctypes in Frappe</li>
+<li>Easy configuration and setup</li>
+<li>Sync emails automatically in the background</li>
+<li>Built with extensibility in mind for your custom use-cases</li>
+</ul>
+<p>At <strong>rtCamp</strong>, we believe in the power of community collaboration, and by open-sourcing this app, we hope to empower developers to customize, improve, and adapt it for a variety of business needs.</p>
+<p><img src="https://discuss.frappe.io/images/emoji/twitter/point_right.png?v=12" title=":point_right:" class="emoji" alt=":point_right:" loading="lazy" width="20" height="20"> Check out the repository here:<br>
+<img src="https://discuss.frappe.io/images/emoji/twitter/link.png?v=12" title=":link:" class="emoji" alt=":link:" loading="lazy" width="20" height="20"> <a href="https://github.com/rtCamp/frappe-gmail-thread" class="inline-onebox">GitHub - rtCamp/frappe-gmail-thread: Gmail thread tracking app</a></p>
+<p>We’d love to hear your feedback, feature suggestions, and contributions. Feel free to star <img src="https://discuss.frappe.io/images/emoji/twitter/star.png?v=12" title=":star:" class="emoji" alt=":star:" loading="lazy" width="20" height="20">, fork, or raise issues on the repo.</p>
+<p>Let’s make Frappe even more powerful together! <img src="https://discuss.frappe.io/images/emoji/twitter/muscle.png?v=12" title=":muscle:" class="emoji" alt=":muscle:" loading="lazy" width="20" height="20"></p>
+            <p><small>1 post - 1 participant</small></p>
+            <p><a href="https://discuss.frappe.io/t/exciting-announcement-our-frappe-gmail-thread-app-is-now-open-source/153301">Read full topic</a></p>
+          ]]></description>
+          <link>https://discuss.frappe.io/t/exciting-announcement-our-frappe-gmail-thread-app-is-now-open-source/153301</link>
+          <pubDate>Tue, 09 Sep 2025 07:05:50 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">discuss.frappe.io-topic-153301</guid>
+          <source url="https://discuss.frappe.io/t/exciting-announcement-our-frappe-gmail-thread-app-is-now-open-source/153301.rss">🚀 Exciting Announcement: Our Frappe Gmail Thread App is Now Open Source!</source>
+        </item>
+  </channel>
+</rss>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Trouble on importing bank-transcations - ERPNext - Frappe Forum</title>
+    <meta name="description" content="Hello there, 
+thanks for erpNext and this beautiful forum. 
+I’m trying to import csv-data of my bank into erpNext (V.15). 
+For this I setup a bank and an account and defined a mapping. 
+However I retrieve a Warning regar&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/trouble-on-importing-bank-transcations/156524" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Trouble on importing bank-transcations&#39;" href="https://discuss.frappe.io/t/trouble-on-importing-bank-transcations/156524.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/trouble-on-importing-bank-transcations/156524" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/trouble-on-importing-bank-transcations/156524" />
+<meta property="og:title" content="Trouble on importing bank-transcations" />
+<meta name="twitter:title" content="Trouble on importing bank-transcations" />
+<meta property="og:description" content="Hello there,  thanks for erpNext and this beautiful forum.  I’m trying to import csv-data of my bank into erpNext (V.15).  For this I setup a bank and an account and defined a mapping.  However I retrieve a Warning regarding column 1 (Client account /my account in IBAN format).  I mapped it to bank_account. The warning is “Bank Account: Value DE0…36 is missing for Bank Account”.  I defined this IBAN on the Account-Settings tweice (Acccount-Nr. and IBAN). Why does this fail?  And if I’m trying to..." />
+<meta name="twitter:description" content="Hello there,  thanks for erpNext and this beautiful forum.  I’m trying to import csv-data of my bank into erpNext (V.15).  For this I setup a bank and an account and defined a mapping.  However I retrieve a Warning regarding column 1 (Client account /my account in IBAN format).  I mapped it to bank_account. The warning is “Bank Account: Value DE0…36 is missing for Bank Account”.  I defined this IBAN on the Account-Settings tweice (Acccount-Nr. and IBAN). Why does this fail?  And if I’m trying to..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:tag" content="accounting" />
+<meta property="og:article:tag" content="import" />
+<meta property="article:published_time" content="2025-11-06T19:04:24+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Trouble on importing bank-transcations","mainEntity":{"@type":"Question","name":"Trouble on importing bank-transcations","text":"Hello there,\n\nthanks for erpNext and this beautiful forum.\n\nI’m trying to import csv-data of my bank into erpNext (V.15).\n\nFor this I setup a bank and an account and defined a mapping.\n\nHowever I retrieve a Warning regarding column 1 (Client account /my account in IBAN format).\n\nI mapped it to bank_&hellip;","upvoteCount":0,"answerCount":1,"datePublished":"2025-11-06T19:04:24.124Z","author":{"@type":"Person","name":"erpbird","url":"https://discuss.frappe.io/u/erpbird"},"acceptedAnswer":{"@type":"Answer","text":"Got it!\n\nThe mapped field bank_account means the value of the field “Account Name“ of doctype “Bank Account”.\n\nIf I process the csv by replacing IBAN by this alphanumeric value I’ve defined on creating the bank account and define the mentioned mapping - the imort runs properly.","upvoteCount":0,"datePublished":"2025-11-14T07:02:42.404Z","url":"https://discuss.frappe.io/t/trouble-on-importing-bank-transcations/156524/4","author":{"@type":"Person","name":"erpbird","url":"https://discuss.frappe.io/u/erpbird"}}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/trouble-on-importing-bank-transcations/156524">Trouble on importing bank-transcations</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/accounting' class='discourse-tag' rel="tag">accounting</a>, 
+            <a href='https://discuss.frappe.io/tag/import' class='discourse-tag' rel="tag">import</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Trouble on importing bank-transcations'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/trouble-on-importing-bank-transcations/156524'>
+      <meta itemprop='datePublished' content='2025-11-06T19:04:24Z'>
+        <meta itemprop='articleSection' content='ERPNext'>
+      <meta itemprop='keywords' content='accounting, import'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/erpbird'><span itemprop='name'>erpbird</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/trouble-on-importing-bank-transcations/156524">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-11-06T19:04:24Z' class='post-time'>
+                    November 6, 2025,  7:04pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-06T19:04:24Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello there,</p>
+<p>thanks for erpNext and this beautiful forum.<br>
+I’m trying to import csv-data of my bank into erpNext (V.15).<br>
+For this I setup a bank and an account and defined a mapping.<br>
+However I retrieve a Warning regarding column 1 (Client account /my account in IBAN format).<br>
+I mapped it to bank_account. The warning is “Bank Account: Value DE0…36 is missing for Bank Account”.<br>
+I defined this IBAN on the Account-Settings tweice (Acccount-Nr. and IBAN). Why does this fail?<br>
+And if I’m trying to skip the column erpNext won’t import by saying “bank_aacount rewuired“.</p>
+<p>Any Ideas?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Void_Moon'><span itemprop='name'>Void_Moon</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-07T06:36:48Z' class='post-time'>
+                    November 7, 2025,  6:36am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-07T06:36:48Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Go to the bank account you created and check the ID of that account. You need to give that account ID in the column 1 header (if I’m guessing correctly).</p>
+<p>The client account / my account field probably is asking for the ledger account ID?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/erpbird'><span itemprop='name'>erpbird</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-10T12:25:46Z' class='post-time'>
+                    November 10, 2025, 12:25pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-10T12:25:46Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello Void_Moon,</p>
+<p>thank you for your reply. I found some new depencies on this and now I’m even more confused <img src="https://discuss.frappe.io/images/emoji/twitter/grinning_face_with_smiling_eyes.png?v=14" title=":grinning_face_with_smiling_eyes:" class="emoji" alt=":grinning_face_with_smiling_eyes:" loading="lazy" width="20" height="20"><br>
+I added two banks in the system and for each bank a giro account (one related to internal banking account 1200 the second one to 1210).<br>
+Now I process the csv on bank statement import and it works properly using account A and throws the error using Account B.<br>
+Currently I compare the settings of bank A&amp;B, banking accounts A&amp;B and accounts 1200&amp;1210. At first it seemed to be the difference that there was an IBAN but no “Bank Account No” for banking account A however neither deleting the “Account No” on account B nor creating a news record of account B doesn’t seem to help. Now I am busy with checking the settings of banks, bank accounts and internal accounts. <img src="https://discuss.frappe.io/images/emoji/twitter/face_with_peeking_eye.png?v=14" title=":face_with_peeking_eye:" class="emoji" alt=":face_with_peeking_eye:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/erpbird'><span itemprop='name'>erpbird</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-14T07:02:42Z' class='post-time'>
+                    November 14, 2025,  7:02am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-14T07:02:42Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Got it!</p>
+<p>The mapped field bank_account means the value of the field “Account Name“ of doctype “Bank Account”.<br>
+If I process the csv by replacing IBAN by this alphanumeric value I’ve defined on creating the bank account and define the mentioned mapping - the imort runs properly.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

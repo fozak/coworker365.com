@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[Announcement] Introducing Frappe Query Builder - Page 2 - Community - Frappe Forum</title>
+    <meta name="description" content="We’ve wanted to add a more Pythonic way to manage queries in Frappe for a while. So, we finally got around and did it this month :smile: . 
+So you want to fetch some data from your database, but you need something more p&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092?page=2" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[Announcement] Introducing Frappe Query Builder&#39;" href="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092?page=2" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092?page=2" />
+<meta property="og:title" content="[Announcement] Introducing Frappe Query Builder" />
+<meta name="twitter:title" content="[Announcement] Introducing Frappe Query Builder" />
+<meta property="og:description" content="I just tried my hand at query building, so let me share an example of the same query in three different styles:  1. frappe.get_all company = &quot;My Company&quot;  frappe.get_all(&quot;Account&quot;, 	fields=[ 		&quot;account_number as &#39;Konto&#39;&quot;, 		&quot;account_name as &#39;Kontenbeschriftung&#39;&quot;, 		&quot;&#39;de-DE&#39; as &#39;Sprach-ID&#39;&quot; 	], 	filters={ 		&quot;company&quot;: company, 		&quot;is_group&quot;: 0, 		&quot;account_number&quot;: (&quot;is&quot;, &quot;set&quot;) 	} )  2. frappe.db.sql company = &quot;My Company&quot;  frappe.db.sql(&quot;&quot;&quot; 	SELECT 		account_number as &#39;Konto&#39;, 		LEFT(account_name..." />
+<meta name="twitter:description" content="I just tried my hand at query building, so let me share an example of the same query in three different styles:  1. frappe.get_all company = &quot;My Company&quot;  frappe.get_all(&quot;Account&quot;, 	fields=[ 		&quot;account_number as &#39;Konto&#39;&quot;, 		&quot;account_name as &#39;Kontenbeschriftung&#39;&quot;, 		&quot;&#39;de-DE&#39; as &#39;Sprach-ID&#39;&quot; 	], 	filters={ 		&quot;company&quot;: company, 		&quot;is_group&quot;: 0, 		&quot;account_number&quot;: (&quot;is&quot;, &quot;set&quot;) 	} )  2. frappe.db.sql company = &quot;My Company&quot;  frappe.db.sql(&quot;&quot;&quot; 	SELECT 		account_number as &#39;Konto&#39;, 		LEFT(account_name..." />
+<meta property="og:article:section" content="Community" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:tag" content="sql" />
+<meta property="og:article:tag" content="developer" />
+<meta property="og:article:tag" content="frappe" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="8 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="106 ❤" />
+<meta property="article:published_time" content="2021-12-07T22:08:30+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="prev" href="/t/announcement-introducing-frappe-query-builder/79092">
+
+    
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/announcement-introducing-frappe-query-builder/79092">[Announcement] Introducing Frappe Query Builder</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/community/37" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Community</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/sql' class='discourse-tag' rel="tag">sql</a>, 
+            <a href='https://discuss.frappe.io/tag/developer' class='discourse-tag' rel="tag">developer</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[Announcement] Introducing Frappe Query Builder'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/announcement-introducing-frappe-query-builder/79092'>
+      <meta itemprop='datePublished' content='2021-08-13T17:17:26Z'>
+        <meta itemprop='articleSection' content='Community'>
+      <meta itemprop='keywords' content='sql, developer, frappe'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+          <span itemprop='author' itemscope itemtype="http://schema.org/Person">
+            <meta itemprop='name' content='gavindsouza'>
+            <link itemprop='url' rel='nofollow' href='https://discuss.frappe.io/u/gavindsouza'>
+          </span>
+        <meta itemprop='text' content='We’ve wanted to add a more Pythonic way to manage queries in Frappe for a while. So, we finally got around and did it this month :smile: . 
+So you want to fetch some data from your database, but you need something more p&amp;hellip;'>
+
+          <div id='post_22' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/rmeyer'><span itemprop='name'>rmeyer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-12-07T22:08:30Z' class='post-time'>
+                    December 7, 2021, 10:08pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-03T08:54:18Z'>
+              <span itemprop='position'>22</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I just tried my hand at query building, so let me share an example of <a href="https://github.com/frappe/erpnext/blob/9a644f645cbf1eb65eb5b9cde4cf16a4077836a1/erpnext/regional/report/datev/datev.py#L518-L530">the same query</a> in three different styles:</p>
+<h3><a name="h-1-frappeget_all-1" class="anchor" href="#h-1-frappeget_all-1"></a>1. <code>frappe.get_all</code></h3>
+<pre data-code-wrap="python"><code class="lang-python">company = "My Company"
+
+frappe.get_all("Account",
+	fields=[
+		"account_number as 'Konto'",
+		"account_name as 'Kontenbeschriftung'",
+		"'de-DE' as 'Sprach-ID'"
+	],
+	filters={
+		"company": company,
+		"is_group": 0,
+		"account_number": ("is", "set")
+	}
+)
+</code></pre>
+<h3><a name="h-2-frappedbsql-2" class="anchor" href="#h-2-frappedbsql-2"></a>2. <code>frappe.db.sql</code></h3>
+<pre data-code-wrap="python"><code class="lang-python">company = "My Company"
+
+frappe.db.sql("""
+	SELECT
+		account_number as 'Konto',
+		LEFT(account_name, 40) as 'Kontenbeschriftung',
+		'de-DE' as 'Sprach-ID'
+	FROM `tabAccount`
+	WHERE company = %(company)s
+	AND is_group = 0
+	AND account_number != ''
+""", {"company": company}, as_dict=1)
+</code></pre>
+<h3><a name="h-3-frappeqb-3" class="anchor" href="#h-3-frappeqb-3"></a>3. <code>frappe.qb</code></h3>
+<pre data-code-wrap="python"><code class="lang-python">from pypika.functions import LiteralValue
+
+company = "My Company"
+account = frappe.qb.DocType("Account")
+
+frappe.qb.from_(account).select(
+	account.account_number.as_("Konto"),
+	account.account_name.as_("Kontenbeschriftung"),
+	LiteralValue("'de-DE'").as_("Sprach-ID")
+).where(
+	(account.company == company)
+	&amp; (account.is_group == 0)
+	&amp; (account.account_number != '')
+).run(as_dict=True)
+</code></pre>
+<hr>
+<p>In this simple example I personally prefer <code>frappe.get_all</code>. What do you think?<br>
+Let me know if I made and error or if the queries are not equivalent.</p>
+<hr>
+<p>Edit: I’ve changed <code>get_list</code> to <code>get_all</code> because it’s closer to the SQL queries (i.e. no permissions applied).</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_23' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/peterg'><span itemprop='name'>peterg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-12-08T02:20:20Z' class='post-time'>
+                    December 8, 2021,  2:20am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-12-08T02:20:20Z'>
+              <span itemprop='position'>23</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>As you’ve framed it here, I agree. I find <code>get_list</code> cleaner and more intuitive than the frappe.qb command. But, I never really saw the query builder as a substitute for <code>get_list</code>. Under many normal circumstances, <code>get_list</code> does the job, and I intend to keep using <code>get_list</code> for all that stuff.</p>
+<p>This looks exciting to me primarily for two use cases:</p>
+<ol>
+<li>Procedurally composed queries, especially for building more interactive reports</li>
+<li>Complex queries, especially those featuring multiple table joins.</li>
+</ol>
+<p>For those, <code>get_list</code> is limited. Likewise, for me, the comparison is not between (3) and (1) but between (3) and (2). I don’t see the query builder changing the way we do normal document transactions necessarily, but I think it has huge potential for things like data analytics.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_24' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/rmeyer'><span itemprop='name'>rmeyer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-12-08T13:43:35Z' class='post-time'>
+                    December 8, 2021,  1:43pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-12-08T13:43:35Z'>
+              <span itemprop='position'>24</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I agree. I started by converting (2) into (3), then noticed that the query is simple enough to use <code>get_list</code> (1).</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_25' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/casesolved-co-uk'><span itemprop='name'>casesolved-co-uk</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-03-14T13:51:26Z' class='post-time'>
+                    March 14, 2022,  1:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-03-14T13:51:26Z'>
+              <span itemprop='position'>25</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Bit late to the party but a few comments:</p>
+<ol>
+<li>Why would you use:</li>
+</ol>
+<p><code>customer = frappe.qb.DocType('Customer')</code><br>
+and not:<br>
+<code>customer = frappe.get_doc('DocType', 'Customer')</code> ?</p>
+<ol start="2">
+<li>
+<p>I’d be interested to learn if there are plans to change the reporting. Script reports could do with improvements, especially defining the filters and columns, which from day 1 I invented some utilities to avoid copying the column info which is already in the database metadata.</p>
+</li>
+<li>
+<p>I hope frappe.db.sql will remain for those who don’t want to learn another technology syntax.</p>
+</li>
+</ol>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_26' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/peterg'><span itemprop='name'>peterg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-03-14T15:22:49Z' class='post-time'>
+                    March 14, 2022,  3:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-03-14T15:22:49Z'>
+              <span itemprop='position'>26</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Good questions!</p>
+<aside class="quote no-group" data-username="casesolved-co-uk" data-post="25" data-topic="79092">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/casesolved-co-uk/48/31171_2.png" class="avatar"> casesolved-co-uk:</div>
+<blockquote>
+<ol>
+<li>Why would you use:</li>
+</ol>
+<p><code>customer = frappe.qb.DocType('Customer')</code><br>
+and not:<br>
+<code>customer = frappe.get_doc('DocType', 'Customer')</code> ?</p>
+</blockquote>
+</aside>
+<p><code>frappe.get_doc('DocType', 'Customer')</code> returns a doctype object whereas <code>frappe.qb.DocType</code> method returns the name of the SQL table the doctype uses as a string. The two methods have very different roles. The query builder is still very low level in most regards, hewing closer to the underlying SQL than the ORM abstraction.</p>
+<aside class="quote no-group" data-username="casesolved-co-uk" data-post="25" data-topic="79092">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/casesolved-co-uk/48/31171_2.png" class="avatar"> casesolved-co-uk:</div>
+<blockquote>
+<p>I hope frappe.db.sql will remain for those who don’t want to learn another technology syntax.</p>
+</blockquote>
+</aside>
+<p>Agreed. The query builder uses <code>frappe.db.sql</code> on the backend, so it would be a strong choice to remove it.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_27' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/casesolved-co-uk'><span itemprop='name'>casesolved-co-uk</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-03-14T16:19:43Z' class='post-time'>
+                    March 14, 2022,  4:19pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-03-14T16:31:54Z'>
+              <span itemprop='position'>27</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Sorry should have been clearer:</p>
+<aside class="quote no-group" data-username="peterg" data-post="26" data-topic="79092">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/peterg/48/55463_2.png" class="avatar"> peterg:</div>
+<blockquote>
+<p><code>frappe.get_doc('DocType', 'Customer')</code> returns a doctype object whereas <code>frappe.qb.DocType</code> method returns the name of the SQL table the doctype uses as a string. The two methods have very different roles. The query builder is still very low level in most regards, hewing closer to the underlying SQL than the ORM abstraction.</p>
+</blockquote>
+</aside>
+<p>Yes I figured that, but it would make more sense if they hid the technicalities in the qb code and made it as familiar to current users as possible. Potentially having two completely different python <code>customer</code> objects isn’t good and all the information is available from the document.</p>
+<p><code>customer_doc.qb.select...</code> could be an interesting architecture for example.</p>
+<aside class="quote no-group" data-username="peterg" data-post="26" data-topic="79092">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/peterg/48/55463_2.png" class="avatar"> peterg:</div>
+<blockquote>
+<p>Agreed. The query builder uses <code>frappe.db.sql</code> on the backend, so it would be a strong choice to remove it.</p>
+</blockquote>
+</aside>
+<p>Am assuming you meant ‘would not’ <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_28' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/peterg'><span itemprop='name'>peterg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-03-14T18:04:03Z' class='post-time'>
+                    March 14, 2022,  6:04pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-03-14T18:04:03Z'>
+              <span itemprop='position'>28</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="casesolved-co-uk" data-post="27" data-topic="79092">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/casesolved-co-uk/48/31171_2.png" class="avatar"> casesolved-co-uk:</div>
+<blockquote>
+<p><code>customer_doc.qb.select...</code> could be an interesting architecture for example.</p>
+</blockquote>
+</aside>
+<p>Hmm…very interesting thought. I’m not sure, though. To my mind, at least half of the use case for frappe.qb involves table joins, and mixing object notation with parameters for tables just doesn’t feel that natural to me. Perhaps I’m too wedded to SQL, though. I might be getting old! <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>In the end, I think it’s designed this way because query builder is a relatively thin wrapper on PyPika. I’m certainly open to the idea that there are better ways out there, but mostly I’m just glad that Frappe didn’t try to reinvent the wheel on this one.</p>
+<aside class="quote no-group" data-username="casesolved-co-uk" data-post="27" data-topic="79092">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/casesolved-co-uk/48/31171_2.png" class="avatar"> casesolved-co-uk:</div>
+<blockquote>
+<p>Am assuming you meant ‘would not’ <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+</blockquote>
+</aside>
+<p>Sorry, my sentence there was not at all clear! By “strong choice”, I don’t mean “good choice” but rather “choice with significant structural implications”. It would not be the path of least resistance to drop frappe.db.sql, but that definitely doesn’t mean it couldn’t happen.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><a rel="prev" itemprop="url" href="/t/announcement-introducing-frappe-query-builder/79092">← previous page</a></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

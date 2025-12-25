@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How to Build Single Page Applications Inside Frappe Apps Using Doppio - App Development - Frappe Forum</title>
+    <meta name="description" content="Build Custom Frappe App + Custom Frontend (VueJS)
+What is Doppio?
+Doppio is a Frappe app that provides CLI commands to automatically scaffold and set up Single Page Applications (SPAs) inside your custom Frappe apps. It &amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/how-to-build-single-page-applications-inside-frappe-apps-using-doppio/155593" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;How to Build Single Page Applications Inside Frappe Apps Using Doppio&#39;" href="https://discuss.frappe.io/t/how-to-build-single-page-applications-inside-frappe-apps-using-doppio/155593.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/how-to-build-single-page-applications-inside-frappe-apps-using-doppio/155593" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/how-to-build-single-page-applications-inside-frappe-apps-using-doppio/155593" />
+<meta property="og:title" content="How to Build Single Page Applications Inside Frappe Apps Using Doppio" />
+<meta name="twitter:title" content="How to Build Single Page Applications Inside Frappe Apps Using Doppio" />
+<meta property="og:description" content="Build Custom Frappe App + Custom Frontend (VueJS) What is Doppio? Doppio is a Frappe app that provides CLI commands to automatically scaffold and set up Single Page Applications (SPAs) inside your custom Frappe apps. It handles all the configuration, file creation, and setup automatically.  Two Approaches 1. Doppio Way (Automated Setup)  Doppio handles everything - scaffolding, configuration, routing Frontend lives inside Frappe app automatically Built assets go to app/public/frontend/ HTML entr..." />
+<meta name="twitter:description" content="Build Custom Frappe App + Custom Frontend (VueJS) What is Doppio? Doppio is a Frappe app that provides CLI commands to automatically scaffold and set up Single Page Applications (SPAs) inside your custom Frappe apps. It handles all the configuration, file creation, and setup automatically.  Two Approaches 1. Doppio Way (Automated Setup)  Doppio handles everything - scaffolding, configuration, routing Frontend lives inside Frappe app automatically Built assets go to app/public/frontend/ HTML entr..." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:section" content="App Development" />
+<meta property="og:article:section:color" content="0E76BD" />
+<meta property="og:article:tag" content="frappe" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="7 ❤" />
+<meta property="article:published_time" content="2025-10-16T06:35:24+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"How to Build Single Page Applications Inside Frappe Apps Using Doppio","mainEntity":{"@type":"Question","name":"How to Build Single Page Applications Inside Frappe Apps Using Doppio","text":"<a name=\"p-484127-build-custom-frappe-app-custom-frontend-vuejs-1\" class=\"anchor\" href=\"#p-484127-build-custom-frappe-app-custom-frontend-vuejs-1\"><\/a>Build Custom Frappe App + Custom Frontend (VueJS)\n\n<a name=\"p-484127-what-is-doppio-2\" class=\"anchor\" href=\"#p-484127-what-is-doppio-2\"><\/a>What is Doppio?\n\nDoppio is a Frappe app that provides CLI commands to automatically scaffold and set up Single Page Applications (SPAs) inside your custom Frappe apps. It handles all the configuration, file creation, and setup automatically.\n\n<a name=\"p-484127-two-approaches-3\" class=\"anchor\" href=\"#p-484127-two-approaches-3\"><\/a>Two Appr&hellip;","upvoteCount":5,"answerCount":0,"datePublished":"2025-10-16T06:35:24.880Z","author":{"@type":"Person","name":"mohamed-ameer","url":"https://discuss.frappe.io/u/mohamed-ameer"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/how-to-build-single-page-applications-inside-frappe-apps-using-doppio/155593">How to Build Single Page Applications Inside Frappe Apps Using Doppio</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/app-development/24" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0E76BD'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>App Development</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='How to Build Single Page Applications Inside Frappe Apps Using Doppio'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/how-to-build-single-page-applications-inside-frappe-apps-using-doppio/155593'>
+      <meta itemprop='datePublished' content='2025-10-16T06:35:24Z'>
+        <meta itemprop='articleSection' content='App Development'>
+      <meta itemprop='keywords' content='frappe'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mohamed-ameer'><span itemprop='name'>mohamed-ameer</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/how-to-build-single-page-applications-inside-frappe-apps-using-doppio/155593">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-10-16T06:35:24Z' class='post-time'>
+                    October 16, 2025,  6:35am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-16T07:08:06Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h1><a name="p-484127-build-custom-frappe-app-custom-frontend-vuejs-1" class="anchor" href="#p-484127-build-custom-frappe-app-custom-frontend-vuejs-1"></a>Build Custom Frappe App + Custom Frontend (VueJS)</h1>
+<h2><a name="p-484127-what-is-doppio-2" class="anchor" href="#p-484127-what-is-doppio-2"></a>What is Doppio?</h2>
+<p><strong>Doppio</strong> is a Frappe app that provides CLI commands to automatically scaffold and set up Single Page Applications (SPAs) inside your custom Frappe apps. It handles all the configuration, file creation, and setup automatically.</p>
+<h2><a name="p-484127-two-approaches-3" class="anchor" href="#p-484127-two-approaches-3"></a>Two Approaches</h2>
+<h3><a name="p-484127-h-1-doppio-way-automated-setup-4" class="anchor" href="#p-484127-h-1-doppio-way-automated-setup-4"></a>1. Doppio Way (Automated Setup)</h3>
+<ul>
+<li><strong>Doppio handles everything</strong> - scaffolding, configuration, routing</li>
+<li>Frontend lives inside Frappe app automatically</li>
+<li>Built assets go to <code>app/public/frontend/</code></li>
+<li>HTML entry point goes to <code>app/www/</code></li>
+<li>Frappe serves everything</li>
+</ul>
+<h3><a name="p-484127-h-2-raw-way-manual-setup-5" class="anchor" href="#p-484127-h-2-raw-way-manual-setup-5"></a>2. Raw Way (Manual Setup)</h3>
+<ul>
+<li><strong>You handle everything</strong> manually</li>
+<li>Frontend is completely separate</li>
+<li>Built assets go anywhere you want</li>
+<li>Frappe only serves API endpoints</li>
+<li>Frontend can be deployed anywhere</li>
+</ul>
+<h2><a name="p-484127-note-6" class="anchor" href="#p-484127-note-6"></a>NOTE:</h2>
+<p>Doppio creates SPAs (Vue or React) that live INSIDE your Frappe apps, but here’s something many developers miss =&gt; React and Vue allow CDN connections. This means you can use them for specific parts of your app without needing a full SPA setup.</p>
+<p>When you need a full SPA: Building complete custom dashboards, entire application sections, or when you need full routing and state management.</p>
+<p>When CDN is perfect: Adding interactive components to existing Frappe forms, enhancing specific form fields with modern UI, or quick prototyping without full setup.</p>
+<p>Example: You can add Vue.js to a Frappe form with just a CDN script tag and create interactive components instantly, no build process, no complex setup, just modern UI where you need it.</p>
+<p>This gives you the flexibility to choose the right approach for your specific needs. Sometimes a full SPA is overkill when a simple CDN component does the job perfectly.</p>
+<hr>
+<h2><a name="p-484127-doppio-way-automated-step-by-step-7" class="anchor" href="#p-484127-doppio-way-automated-step-by-step-7"></a>Doppio Way (Automated) - Step by Step</h2>
+<h3><a name="p-484127-step-1-install-doppio-8" class="anchor" href="#p-484127-step-1-install-doppio-8"></a>Step 1: Install Doppio</h3>
+<pre data-code-wrap="bash"><code class="lang-bash">cd /path/to/frappe-bench
+bench get-app https://github.com/NagariaHussain/doppio
+</code></pre>
+<h3><a name="p-484127-step-2-create-your-custom-frappe-app-9" class="anchor" href="#p-484127-step-2-create-your-custom-frappe-app-9"></a>Step 2: Create Your Custom Frappe App</h3>
+<pre data-code-wrap="bash"><code class="lang-bash">bench new-app myapp
+bench --site your-site.com install-app myapp
+</code></pre>
+<h3><a name="p-484127-step-3-use-doppio-to-create-spa-10" class="anchor" href="#p-484127-step-3-use-doppio-to-create-spa-10"></a>Step 3: Use Doppio to Create SPA</h3>
+<pre data-code-wrap="bash"><code class="lang-bash"># Interactive mode - answer prompts
+bench add-spa
+
+# Or specify options directly
+bench add-spa --app myapp --tailwindcss --typescript
+
+cd apps/myapp/dashboard  # or whatever name you chose
+
+</code></pre>
+<h3><a name="p-484127-step-4-configure-proxyoptions-11" class="anchor" href="#p-484127-step-4-configure-proxyoptions-11"></a>Step 4: Configure proxyOptions</h3>
+<p><strong><code>dashboard/proxyOptions.js</code></strong></p>
+<pre data-code-wrap="javascript"><code class="lang-javascript">// Frappe development server is running on http://127.0.0.1:8000
+const frappeTargetPort = 8000;
+
+// This router function attempts to preserve the hostname from the original request
+// and forwards it to the Frappe backend on the specified frappeTargetPort.
+// This is important if your Frappe bench serves multiple sites or relies on the Host header.
+// For example, if you access your Vite app via http://my-frappe-site.localhost:8080,
+// this will proxy API requests to http://my-frappe-site.localhost:8000.
+// If you access Vite via http://localhost:8080, it proxies to http://localhost:8000.
+const router = (req) =&gt; {
+	const hostHeader = req.headers.host || ''; // e.g., 'my-frappe-site.localhost:8080' or 'localhost:8080'
+	const siteName = hostHeader.split(':')[0]; // e.g., 'my-frappe-site.localhost' or 'localhost'
+
+	const targetUrl = `http://${siteName}:${frappeTargetPort}`;
+	console.log(`[Proxy] Routing API request for host ${req.headers.host} to ${targetUrl}${req.url}`);
+	return targetUrl;
+};
+
+export default {
+	// Proxy requests for paths starting with /app, /api, /assets, /files, /private
+	// This matches common Frappe URL structures.
+	'^/(app|api|assets|files|private)': {
+		// The 'target' here is a base. The 'router' will determine the actual host and port.
+		// For Vite's proxy, providing a base target like 127.0.0.1 and then having the router
+		// return the full path including protocol, hostname and port is a common pattern.
+		target: `http://127.0.0.1:${frappeTargetPort}`, // Base target, router provides specifics
+		ws: true, // Enable WebSocket proxying
+		changeOrigin: true, // Important: changes the origin of the host header to the target URL specified by router
+		router: router,
+	}
+};
+</code></pre>
+<h4><a name="p-484127-what-this-configuration-does-12" class="anchor" href="#p-484127-what-this-configuration-does-12"></a>What This Configuration Does:</h4>
+<p><strong>Purpose:</strong> This proxy configuration acts as a “traffic director” between your Vue.js frontend (running on port 8080) and your Frappe backend (running on port 8000).</p>
+<p><strong>How It Works:</strong></p>
+<ol>
+<li><strong>Request Interception:</strong> When your frontend makes API calls to <code>/api/method/something</code>, the proxy catches these requests</li>
+<li><strong>Host Preservation:</strong> It keeps the original hostname (like <code>my-site.localhost</code>) so Frappe knows which site to serve</li>
+<li><strong>Port Forwarding:</strong> It forwards the request to your Frappe server on port 8000</li>
+<li><strong>Response Routing:</strong> It sends the Frappe response back to your frontend</li>
+</ol>
+<p><strong>Multi-Site Support:</strong></p>
+<ul>
+<li>If you access <code>http://site1.localhost:8080</code> → proxies to <code>http://site1.localhost:8000</code></li>
+<li>If you access <code>http://site2.localhost:8080</code> → proxies to <code>http://site2.localhost:8000</code></li>
+<li>This is crucial for Frappe benches with multiple sites</li>
+</ul>
+<p><strong>What Gets Proxied:</strong></p>
+<ul>
+<li><code>/api/*</code> - All API calls to Frappe methods</li>
+<li><code>/app/*</code> - Frappe desk application routes</li>
+<li><code>/assets/*</code> - Static assets (CSS, JS, images)</li>
+<li><code>/files/*</code> - File uploads and downloads</li>
+<li><code>/private/*</code> - Private file access</li>
+</ul>
+<p><strong>Key Settings:</strong></p>
+<ul>
+<li><code>ws: true</code> - Enables WebSocket support for real-time features</li>
+<li><code>changeOrigin: true</code> - Ensures proper host header forwarding</li>
+<li><code>router: router</code> - Uses custom logic to determine target URL</li>
+</ul>
+<h3><a name="p-484127-step-5-configure-vite-13" class="anchor" href="#p-484127-step-5-configure-vite-13"></a>Step 5: Configure Vite</h3>
+<p><strong><code>dashboard/vite.config.js</code></strong></p>
+<pre data-code-wrap="javascript"><code class="lang-javascript">import path from 'path';
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import proxyOptions from './proxyOptions';
+
+export default defineConfig({
+  plugins: [vue()],
+  server: {
+    port: 8080,
+    host: '0.0.0.0',
+    proxy: proxyOptions
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src')
+    }
+  },
+  build: {
+    outDir: '../myapp/public/dashboard',  // Replace 'myapp' with your actual app name
+    emptyOutDir: true,
+    target: 'es2015',
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html')
+      }
+    }
+  },
+  // Ensure service worker is available in dev mode
+  publicDir: 'public'
+});
+
+</code></pre>
+<h3><a name="p-484127-step-6-configure-build-scripts-14" class="anchor" href="#p-484127-step-6-configure-build-scripts-14"></a>Step 6: Configure Build Scripts</h3>
+<p><strong><code>dashboard/package.json</code></strong></p>
+<pre data-code-wrap="json"><code class="lang-json">{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=/assets/myapp/dashboard/ &amp;&amp; yarn copy-html-entry",  // Replace 'myapp' with your actual app name
+    "preview": "vite preview",
+    "copy-html-entry": "mkdir -p ../myapp/www &amp;&amp; cp ../myapp/public/dashboard/index.html ../myapp/www/dashboard.html"  // Replace 'myapp' with your actual app name
+  },
+}
+</code></pre>
+<h3><a name="p-484127-step-7-configure-frappe-routes-15" class="anchor" href="#p-484127-step-7-configure-frappe-routes-15"></a>Step 7: Configure Frappe Routes</h3>
+<p><strong><code>myapp/hooks.py</code></strong></p>
+<pre data-code-wrap="python"><code class="lang-python"># Website Route Rules to bypass Frappe routing for our SPA routes
+website_route_rules = [
+	{"from_route": "/dashboard/login", "to_route": "dashboard"},  # Match your frontend name
+	{"from_route": "/dashboard/&lt;path:app_path&gt;", "to_route": "dashboard"},
+	{"from_route": "/dashboard", "to_route": "dashboard"},
+	{"from_route": "/app", "to_route": "/app"},  # Keep ERPNext desk routing
+]
+</code></pre>
+<blockquote>
+<p>“Replace <code>frontend-name</code> with the name you provided in <code>bench add-spa</code> (e.g., if you used <code>dashboard</code>, then paths become <code>/public/dashboard</code> and <code>/www/dashboard.html</code>).”</p>
+</blockquote>
+<h3><a name="p-484127-step-8-build-for-production-16" class="anchor" href="#p-484127-step-8-build-for-production-16"></a>Step 8: Build for Production</h3>
+<pre data-code-wrap="bash"><code class="lang-bash">cd apps/myapp/dashboard  # or whatever name you chose
+yarn build
+</code></pre>
+<p><strong>What happens:</strong></p>
+<ul>
+<li>Assets built to <code>myapp/public/dashboard/</code></li>
+<li>HTML copied to <code>myapp/www/dashboard.html</code></li>
+<li>Frappe serves everything automatically</li>
+</ul>
+<h3><a name="p-484127-step-9-start-development-17" class="anchor" href="#p-484127-step-9-start-development-17"></a>Step 9: Start Development</h3>
+<pre data-code-wrap="bash"><code class="lang-bash">cd apps/myapp/frontend  # or whatever name you chose
+yarn dev
+</code></pre>
+<p><strong>Access your app:</strong></p>
+<ul>
+<li>Development: <code>http://your-site:8080</code></li>
+<li>Production: <code>http://your-site.com:8000/dashboard</code></li>
+</ul>
+<hr>
+<p><strong>Project Structure</strong></p>
+<pre><code class="lang-auto">myapp/
+├── frontend/                 # Your SPA
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   ├── vite.config.js
+│   └── proxyOptions.js
+├── public/dashboard/         # Built assets (auto-created)
+└── www/dashboard.html       # HTML entry point (auto-created)
+</code></pre>
+<hr>
+<h3><a name="p-484127-build-custom-frappe-app-custom-frontend-react-18" class="anchor" href="#p-484127-build-custom-frappe-app-custom-frontend-react-18"></a>Build Custom Frappe App + Custom Frontend (React):</h3>
+<p><a href="https://www.youtube.com/playlist?list=PLHoO_SHGRUVCLT_PrOnFd9NZaqSLfoxLA" rel="noopener nofollow ugc">Frappe React SDK - The Explainer</a></p>
+<hr>
+<p>if you did build spa inside frappe then,<br>
+please share comment with any notes or improvement that you can add about this topic.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="5" />
+              <span class='post-likes'>5 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/guimorin'><span itemprop='name'>guimorin</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-16T11:09:52Z' class='post-time'>
+                    October 16, 2025, 11:09am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-16T11:09:52Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Can you explain an example using CDN ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mohamed-ameer'><span itemprop='name'>mohamed-ameer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-16T11:45:34Z' class='post-time'>
+                    October 16, 2025, 11:45am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-16T11:45:34Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>i use vue to build small widget when i need (so rare but it may face you)</p>
+<p>so instead of building entire SPA/ entire separate project/ entire fussy boilerplate, i just want to use the power of vue or react in my very limited scope</p>
+<p>you will think of using react or vue when your frontend starts needing state management, component reuse, dynamic rendering</p>
+<p>for example a small dashboard widget showing live stock updates or dynamic form validation inside an existing frappe page or you want a certain page to act as SPA (serve multiple page in one page), you don’t need a full SPA, you just need a reactive component</p>
+<p>you can use raw js ofc but you would manually manage the dom, which gets messy fast</p>
+<p>react or vue handle dynamic updates and state changes automatically</p>
+<p>in short if you want to use the power of vue or react instead of raw js in your limited screens (pages) instead of building entire app, just use cdn (in documentation you will find examples how to build widget using cdn)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/guimorin'><span itemprop='name'>guimorin</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-16T12:06:17Z' class='post-time'>
+                    October 16, 2025, 12:06pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-16T12:06:17Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks, I also do this myself, injecting a vue app inside html field. I was just wondering what doppio brings in that use case.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mohamed-ameer'><span itemprop='name'>mohamed-ameer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-16T12:23:31Z' class='post-time'>
+                    October 16, 2025, 12:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-16T12:23:31Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>it was just a note, not related to doppio at all</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

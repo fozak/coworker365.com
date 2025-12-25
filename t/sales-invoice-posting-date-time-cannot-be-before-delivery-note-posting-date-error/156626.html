@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>&quot;Sales Invoice Posting Date Time cannot be before Delivery Note Posting Date&quot; Error - User Forum - Frappe Forum</title>
+    <meta name="description" content="Hi, I’m facing a unique problem. I am getting the following error while creating a sales invoice from a delivery note. 
+Sales Invoice Posting Date Time (08/11/2025 14:53:03) cannot be before Delivery Note Posting Date. 
+&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/sales-invoice-posting-date-time-cannot-be-before-delivery-note-posting-date-error/156626" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;&quot;Sales Invoice Posting Date Time cannot be before Delivery Note Posting Date&quot; Error&#39;" href="https://discuss.frappe.io/t/sales-invoice-posting-date-time-cannot-be-before-delivery-note-posting-date-error/156626.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/f/b/fbe3b72c0d06a1283be3a56c30de70b96dd53984.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/f/b/fbe3b72c0d06a1283be3a56c30de70b96dd53984.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/sales-invoice-posting-date-time-cannot-be-before-delivery-note-posting-date-error/156626" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/sales-invoice-posting-date-time-cannot-be-before-delivery-note-posting-date-error/156626" />
+<meta property="og:title" content="&quot;Sales Invoice Posting Date Time cannot be before Delivery Note Posting Date&quot; Error" />
+<meta name="twitter:title" content="&quot;Sales Invoice Posting Date Time cannot be before Delivery Note Posting Date&quot; Error" />
+<meta property="og:description" content="Hi, I’m facing a unique problem. I am getting the following error while creating a sales invoice from a delivery note.  Sales Invoice Posting Date Time (08/11/2025 14:53:03) cannot be before Delivery Note Posting Date.  DN # : DCH/S/2526/00680  DN Posting Date &amp; Time: 08/11/2025 09:41:22     However, as the message shows, the delivery note posting is before the Sales Invoice posting date. (In our instance, the users are not allowed to create backdated invoices.) Hence, technically the issue shou..." />
+<meta name="twitter:description" content="Hi, I’m facing a unique problem. I am getting the following error while creating a sales invoice from a delivery note.  Sales Invoice Posting Date Time (08/11/2025 14:53:03) cannot be before Delivery Note Posting Date.  DN # : DCH/S/2526/00680  DN Posting Date &amp; Time: 08/11/2025 09:41:22     However, as the message shows, the delivery note posting is before the Sales Invoice posting date. (In our instance, the users are not allowed to create backdated invoices.) Hence, technically the issue shou..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:section" content="User Forum" />
+<meta property="og:article:section:color" content="AB9364" />
+<meta property="og:article:tag" content="bug" />
+<meta property="article:published_time" content="2025-11-10T07:03:17+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"\"Sales Invoice Posting Date Time cannot be before Delivery Note Posting Date\" Error","mainEntity":{"@type":"Question","name":"\"Sales Invoice Posting Date Time cannot be before Delivery Note Posting Date\" Error","text":"Hi, I’m facing a unique problem. I am getting the following error while creating a sales invoice from a delivery note.\n\nSales Invoice Posting Date Time (08/11/2025 14:53:03) cannot be before Delivery Note Posting Date.\n\nDN # : DCH/S/2526/00680\n\nDN Posting Date &amp; Time: 08/11/2025 09:41:22\n\n<a class=\"lightbox\" href=\"https://discuss.frappe.io/uploads/default/original/3X/f/b/fbe3b72c0d06a1283be3a56c30de70b96dd53984.png\" data-download-href=\"https://discuss.frappe.io/uploads/default/fbe3b72c0d06a1283be3a56c30de70b96dd53984\" title=\"image\">[image]<\/a>\n\nH&hellip;","upvoteCount":0,"answerCount":1,"datePublished":"2025-11-10T07:03:16.963Z","author":{"@type":"Person","name":"anant.acharya","url":"https://discuss.frappe.io/u/anant.acharya"},"acceptedAnswer":{"@type":"Answer","text":"It did turn out to be an issue with the custom client script. The issue was that the date comparison in js was not working. We replaced with additional code that did explicit conversion of dates before comparing them. That solved the problem.","upvoteCount":0,"datePublished":"2025-11-11T08:15:52.134Z","url":"https://discuss.frappe.io/t/sales-invoice-posting-date-time-cannot-be-before-delivery-note-posting-date-error/156626/8","author":{"@type":"Person","name":"anant.acharya","url":"https://discuss.frappe.io/u/anant.acharya"}}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/sales-invoice-posting-date-time-cannot-be-before-delivery-note-posting-date-error/156626">&quot;Sales Invoice Posting Date Time cannot be before Delivery Note Posting Date&quot; Error</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/user-forum/11" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #AB9364'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>User Forum</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/bug' class='discourse-tag' rel="tag">bug</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='&quot;Sales Invoice Posting Date Time cannot be before Delivery Note Posting Date&quot; Error'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/sales-invoice-posting-date-time-cannot-be-before-delivery-note-posting-date-error/156626'>
+      <meta itemprop='datePublished' content='2025-11-10T07:03:16Z'>
+        <meta itemprop='articleSection' content='User Forum'>
+      <meta itemprop='keywords' content='bug'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/anant.acharya'><span itemprop='name'>anant.acharya</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/sales-invoice-posting-date-time-cannot-be-before-delivery-note-posting-date-error/156626">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/f/b/fbe3b72c0d06a1283be3a56c30de70b96dd53984.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-11-10T07:03:17Z' class='post-time'>
+                    November 10, 2025,  7:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-10T07:03:17Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi, I’m facing a unique problem. I am getting the following error while creating a sales invoice from a delivery note.</p>
+<p><strong>Sales Invoice Posting Date Time (08/11/2025 14:53:03) cannot be before Delivery Note Posting Date.</strong><br>
+DN # : DCH/S/2526/00680<br>
+DN Posting Date &amp; Time: 08/11/2025 09:41:22</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/b/fbe3b72c0d06a1283be3a56c30de70b96dd53984.png" data-download-href="https://discuss.frappe.io/uploads/default/fbe3b72c0d06a1283be3a56c30de70b96dd53984" title="image"><img src="https://discuss.frappe.io/uploads/default/original/3X/f/b/fbe3b72c0d06a1283be3a56c30de70b96dd53984.png" alt="image" data-base62-sha1="zWjIQsIpML9F0m381XBFWR1srY0" width="662" height="260"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">662×260 30.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>However, as the message shows, the delivery note posting is before the Sales Invoice posting date. (In our instance, the users are not allowed to create backdated invoices.) Hence, technically the issue shouldnt come.</p>
+<p>I tried going through the source code but I could not find where this error is coming from.</p>
+<p>We tried this throughout the same day but same error kept coming. Then the next day, we tried again and in the first attempt, the invoice got created without any issues.</p>
+<p>This made me think that while the message shows both date and time, only the date parts are being compared, and the time parts are being ignored.</p>
+<p>Am I bonkers in thinking like this? Has anyone else faced this problem? and if so, Is there a solution for this? I’d really appreciate some help here.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abdeali'><span itemprop='name'>Abdeali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-10T07:24:54Z' class='post-time'>
+                    November 10, 2025,  7:24am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-10T07:24:54Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Open browser console you can see a traceback.</p>
+<p>I think it is from your custom app.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/anant.acharya'><span itemprop='name'>anant.acharya</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-10T08:06:23Z' class='post-time'>
+                    November 10, 2025,  8:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-10T08:06:23Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I don’t think so. There isn’t any custom check on dates. The check is part of the core validations, and it’s a necessary one. My issue is that the dates in the error message itself contradicts the error. The SI posting date is already later than the DN date.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abdeali'><span itemprop='name'>Abdeali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-10T08:47:18Z' class='post-time'>
+                    November 10, 2025,  8:47am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-10T08:47:18Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Did you see the traceback and can you share apps version?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/anant.acharya'><span itemprop='name'>anant.acharya</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-10T09:30:46Z' class='post-time'>
+                    November 10, 2025,  9:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-10T09:30:46Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Versions are:<br>
+ERPNext: v15.78.1 (HEAD)<br>
+Frappe Framework: v15.80.0 (HEAD)<br>
+India Compliance: v15.22.0 (HEAD)<br>
+Email Delivery Service: v0.0.1 (main)</p>
+<p>Since its happening in the live environment, I’m waiting for another such a case to pop up to check the traceback. As soon as I get one, I’ll post the traceback here.</p>
+<p>I thing I missed to add earlier that the issue doesnt happen for every Delivery Notes + Sales Invoice combination. It seems to happen sporadically which is also very puzzling.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abdeali'><span itemprop='name'>Abdeali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-10T10:28:45Z' class='post-time'>
+                    November 10, 2025, 10:28am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-10T10:28:45Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hmm, This error msg not available in source code.</p>
+<p>Do you have client/server script?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/anant.acharya'><span itemprop='name'>anant.acharya</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-10T10:44:09Z' class='post-time'>
+                    November 10, 2025, 10:44am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-10T10:44:09Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think there is.. I noticed that there is an old script that was deployed at the go-live stage. Thanks for pointing me to it. Let me debug it and revert.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/anant.acharya'><span itemprop='name'>anant.acharya</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-11-11T08:15:52Z' class='post-time'>
+                    November 11, 2025,  8:15am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-11-11T08:15:52Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It did turn out to be an issue with the custom client script. The issue was that the date comparison in js was not working. We replaced with additional code that did explicit conversion of dates before comparing them. That solved the problem.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

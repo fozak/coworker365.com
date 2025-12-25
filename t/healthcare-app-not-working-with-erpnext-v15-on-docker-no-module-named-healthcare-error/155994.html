@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Healthcare app not working with ERPNext v15 on Docker — “No module named healthcare” error - Healthcare - Frappe Forum</title>
+    <meta name="description" content="Hey everyone :waving_hand: 
+I’m trying to install the Healthcare app alongside ERPNext v15 (using the official Docker setup), but it’s not working correctly. 
+The setup completes without visible errors, yet when I open t&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/healthcare-app-not-working-with-erpnext-v15-on-docker-no-module-named-healthcare-error/155994" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Healthcare app not working with ERPNext v15 on Docker — “No module named healthcare” error&#39;" href="https://discuss.frappe.io/t/healthcare-app-not-working-with-erpnext-v15-on-docker-no-module-named-healthcare-error/155994.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/healthcare-app-not-working-with-erpnext-v15-on-docker-no-module-named-healthcare-error/155994" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/healthcare-app-not-working-with-erpnext-v15-on-docker-no-module-named-healthcare-error/155994" />
+<meta property="og:title" content="Healthcare app not working with ERPNext v15 on Docker — “No module named healthcare” error" />
+<meta name="twitter:title" content="Healthcare app not working with ERPNext v15 on Docker — “No module named healthcare” error" />
+<meta property="og:description" content="Hey everyone 👋  I’m trying to install the Healthcare app alongside ERPNext v15 (using the official Docker setup), but it’s not working correctly.  The setup completes without visible errors, yet when I open the site or run bench build, I keep getting this error:  ModuleNotFoundError: No module named &#39;healthcare&#39;  Even though the app is cloned correctly under /home/frappe/frappe-bench/apps/healthcare, it doesn’t load and the site breaks.   What I’ve already tried:   Rebuilt custom ima..." />
+<meta name="twitter:description" content="Hey everyone 👋  I’m trying to install the Healthcare app alongside ERPNext v15 (using the official Docker setup), but it’s not working correctly.  The setup completes without visible errors, yet when I open the site or run bench build, I keep getting this error:  ModuleNotFoundError: No module named &#39;healthcare&#39;  Even though the app is cloned correctly under /home/frappe/frappe-bench/apps/healthcare, it doesn’t load and the site breaks.   What I’ve already tried:   Rebuilt custom ima..." />
+<meta property="og:article:section" content="Healthcare" />
+<meta property="og:article:section:color" content="0088CC" />
+<meta property="og:article:tag" content="healthcare" />
+<meta property="og:article:tag" content="installation_problem" />
+<meta property="og:article:tag" content="erpnext" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="2 ❤" />
+<meta property="article:published_time" content="2025-10-25T10:57:07+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Healthcare app not working with ERPNext v15 on Docker — “No module named healthcare” error","mainEntity":{"@type":"Question","name":"Healthcare app not working with ERPNext v15 on Docker — “No module named healthcare” error","text":"Hey everyone :waving_hand:\n\nI’m trying to install the Healthcare app alongside ERPNext v15 (using the official Docker setup), but it’s not working correctly.\n\nThe setup completes without visible errors, yet when I open the site or run bench build, I keep getting this error:\n\nModuleNotFoundError: No &hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-10-25T10:57:07.107Z","author":{"@type":"Person","name":"sureshkhichi","url":"https://discuss.frappe.io/u/sureshkhichi"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/healthcare-app-not-working-with-erpnext-v15-on-docker-no-module-named-healthcare-error/155994">Healthcare app not working with ERPNext v15 on Docker — “No module named healthcare” error</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/healthcare/58" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0088CC'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Healthcare</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/healthcare' class='discourse-tag' rel="tag">healthcare</a>, 
+            <a href='https://discuss.frappe.io/tag/installation_problem' class='discourse-tag' rel="tag">installation_problem</a>, 
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Healthcare app not working with ERPNext v15 on Docker — “No module named healthcare” error'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/healthcare-app-not-working-with-erpnext-v15-on-docker-no-module-named-healthcare-error/155994'>
+      <meta itemprop='datePublished' content='2025-10-25T10:57:07Z'>
+        <meta itemprop='articleSection' content='Healthcare'>
+      <meta itemprop='keywords' content='healthcare, installation_problem, erpnext'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/sureshkhichi'><span itemprop='name'>sureshkhichi</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/healthcare-app-not-working-with-erpnext-v15-on-docker-no-module-named-healthcare-error/155994">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-10-25T10:57:07Z' class='post-time'>
+                    October 25, 2025, 10:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-25T10:57:07Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey everyone <img src="https://discuss.frappe.io/images/emoji/twitter/waving_hand.png?v=14" title=":waving_hand:" class="emoji" alt=":waving_hand:" loading="lazy" width="20" height="20"></p>
+<p>I’m trying to install the <strong>Healthcare app alongside ERPNext v15</strong> (using the official Docker setup), but it’s not working correctly.<br>
+The setup completes without visible errors, yet when I open the site or run <code>bench build</code>, I keep getting this error:</p>
+<pre><code class="lang-auto">ModuleNotFoundError: No module named 'healthcare'
+</code></pre>
+<p>Even though the app is cloned correctly under <code>/home/frappe/frappe-bench/apps/healthcare</code>, it doesn’t load and the site breaks.</p>
+<hr>
+<h3><a name="p-484870-what-ive-already-tried-1" class="anchor" href="#p-484870-what-ive-already-tried-1"></a>What I’ve already tried:</h3>
+<ul>
+<li>
+<p>Rebuilt custom image from <code>frappe/erpnext:v15.84.0</code> with <strong>Node.js 18 + Yarn</strong> preinstalled</p>
+</li>
+<li>
+<p>Verified that ERPNext works fine before adding Healthcare</p>
+</li>
+<li>
+<p>Recreated the site and reinstalled both apps using</p>
+<pre><code class="lang-auto">bench new-site frontend --mariadb-user-host-login-scope='%' --admin-password=admin
+bench --site frontend install-app erpnext
+bench --site frontend install-app healthcare
+</code></pre>
+</li>
+<li>
+<p>Confirmed containers and network are healthy</p>
+</li>
+<li>
+<p>Still getting <code>ModuleNotFoundError</code> during or after setup</p>
+</li>
+</ul>
+<hr>
+<h3><a name="p-484870-expected-2" class="anchor" href="#p-484870-expected-2"></a>Expected:</h3>
+<p>Healthcare should install and work like any other app on ERPNext v15 Docker setup.</p>
+<h3><a name="p-484870-actual-3" class="anchor" href="#p-484870-actual-3"></a>Actual:</h3>
+<p><code>ModuleNotFoundError</code> + broken site, even though the app files exist.</p>
+<hr>
+<p>Any suggestions or known fixes from anyone who successfully ran <strong>Healthcare with ERPNext v15 Docker</strong> would be hugely appreciated <img src="https://discuss.frappe.io/images/emoji/twitter/folded_hands.png?v=14" title=":folded_hands:" class="emoji" alt=":folded_hands:" loading="lazy" width="20" height="20"></p>
+<hr>
+<p><em>(Tags: <code>erpnext</code>, <code>healthcare</code>, <code>installation_problem</code>, <code>docker</code>)</em></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/n002213f'><span itemprop='name'>n002213f</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-25T13:53:21Z' class='post-time'>
+                    October 25, 2025,  1:53pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-25T13:53:21Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Are you manually running the command after the core frappe &amp; erpnext has been loaded or you are adding the application using a docker container?</p>
+<p>Share your docker compose yaml file?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/asieftejani'><span itemprop='name'>asieftejani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-27T06:12:09Z' class='post-time'>
+                    October 27, 2025,  6:12am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-27T06:12:09Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>so first problem is that ERPNext health is now outsourced at <a href="https://github.com/earthians/marley" class="inline-onebox" rel="noopener nofollow ugc">GitHub - earthians/marley: Open Source, Enterprise and Modern Health Information System</a></p>
+<p>second problem you cant use bench build/get-app/install-app in docker you need to create docker multi-site and multi-app please use easy-install.py: -</p>
+<ol>
+<li>
+<p>wget <a href="https://raw.githubusercontent.com/frappe/bench/develop/easy-install.py" rel="noopener nofollow ugc">https://raw.githubusercontent.com/frappe/bench/develop/easy-install.py</a></p>
+</li>
+<li>
+<p>git clone <a href="https://github.com/frappe/frappe_docker" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/frappe_docker: Docker images for production and development setups of the Frappe framework and ERPNext</a></p>
+</li>
+<li>
+<p>In “frappe_docker/development/apps-example.json” edit your apps with their branch: -<br>
+[<br>
+{ “url”: “<a href="https://github.com/frappe/erpnext%E2%80%9D" rel="noopener nofollow ugc">https://github.com/frappe/erpnext”</a>, “branch”: “version-15” },<br>
+{ “url”: “<a href="https://github.com/frappe/hrms%E2%80%9D" rel="noopener nofollow ugc">https://github.com/frappe/hrms”</a>, “branch”: “version-15” },<br>
+{ “url”: “<a href="https://github.com/frappe/education%E2%80%9D" rel="noopener nofollow ugc">https://github.com/frappe/education”</a>, “branch”: “version-15” },<br>
+{ “url”: “<a href="https://github.com/frappe/crm%E2%80%9D" rel="noopener nofollow ugc">https://github.com/frappe/crm”</a>, “branch”: “main” },<br>
+{ “url”: “<a href="https://github.com/frappe/wiki%E2%80%9D" rel="noopener nofollow ugc">https://github.com/frappe/wiki”</a>, “branch”: “master”},<br>
+{ “url”: “<a href="https://github.com/Aakvatech-Limited/CSF_TZ%E2%80%9D" rel="noopener nofollow ugc">https://github.com/Aakvatech-Limited/CSF_TZ”</a>, “branch”: “master”}<br>
+]</p>
+</li>
+<li>
+<p>python3 easy-install.py build</p>
+</li>
+<li>
+<p>python3 easy-install.py deploy --image=custom-apps --version=latest --sitename=<a href="http://bench3site1.duckdns.org" rel="noopener nofollow ugc">bench3site1.duckdns.org</a> --sitename=<a href="http://bench3site2.duckdns.org" rel="noopener nofollow ugc">bench3site2.duckdns.org</a> --sitename=<a href="http://bench3site3.duckdns.org" rel="noopener nofollow ugc">bench3site3.duckdns.org</a> --app=erpnext --app=hrms --app=education --app=crm --app=wiki --app=csf_tz</p>
+</li>
+</ol>
+<p>For step 4 and 5 if you want more options rather than default values please check out <a href="https://github.com/frappe/bench" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/bench: CLI to manage Multi-tenant deployments for Frappe apps</a></p>
+<p>Don’t forget to add the sites to your host file</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/sureshkhichi'><span itemprop='name'>sureshkhichi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-29T02:40:58Z' class='post-time'>
+                    October 29, 2025,  2:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-29T02:40:58Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><strong>Hi <a class="mention" href="/u/asieftejani">@asieftejani</a>,</strong></p>
+<p>Thanks a lot for the detailed response — that really clarified the Docker part <img src="https://discuss.frappe.io/images/emoji/twitter/folded_hands.png?v=14" title=":folded_hands:" class="emoji" alt=":folded_hands:" loading="lazy" width="20" height="20"></p>
+<p>Just wanted to check one thing: since the original <strong>ERPNext Healthcare</strong> module is now discontinued and outsourced to <strong><a href="https://github.com/earthians/marley" rel="noopener nofollow ugc">Marley by Earthians</a></strong>,<br>
+what’s the recommended option now for running healthcare-related use-cases within the Frappe/ERPNext ecosystem?</p>
+<p>For example, if someone needs hospital management, patient records, appointments, or lab modules —<br>
+should we:</p>
+<ol>
+<li>
+<p>Install <strong>Marley</strong> separately (as a standalone system), or</p>
+</li>
+<li>
+<p>Is there any <strong>maintained healthcare app</strong> that still works with <strong>ERPNext v15</strong> (Docker or non-Docker)?</p>
+</li>
+</ol>
+<p>Would appreciate your guidance on how healthcare setups are being handled in the new ERPNext ecosystem <img src="https://discuss.frappe.io/images/emoji/twitter/raising_hands.png?v=14" title=":raising_hands:" class="emoji" alt=":raising_hands:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/akurungadam'><span itemprop='name'>akurungadam</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-29T04:00:34Z' class='post-time'>
+                    October 29, 2025,  4:00am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-29T04:00:34Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/sureshkhichi">@sureshkhichi</a>  I’m from the Marley team, not much has changed regrding deployment since the separation of domains from ERPNext core - you can continue using the healthcare module. To answer you -</p>
+<p>1 - Marley has a dependency on ERPNext and is not a stand alone Frappe app</p>
+<p>2 - There’s no other Healthcare app from Frappe (official). The ownership of maintenance is currently shifted to earthians but I guess its safe to say Marley is the goto app for use in a healthcare setup.</p>
+<p>Hope this clarifies.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/asieftejani'><span itemprop='name'>asieftejani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-29T09:04:45Z' class='post-time'>
+                    October 29, 2025,  9:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-29T09:04:45Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/sureshkhichi">@sureshkhichi</a> - if Marley health is dependent on ERPNext and not just a standalone Frappe app then maybe the github site should not link frappe bench (<a href="https://github.com/frappe/bench#installation" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/bench: CLI to manage Multi-tenant deployments for Frappe apps</a>) rather frappe ERPNext (<a href="https://github.com/frappe/erpnext?tab=readme-ov-file#production-setup" class="inline-onebox" rel="noopener nofollow ugc">GitHub - frappe/erpnext: Free and Open Source Enterprise Resource Planning (ERP)</a>)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

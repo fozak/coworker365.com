@@ -1,0 +1,15 @@
+window.addEventListener("DOMContentLoaded",async()=>{const countdownDiv=document.querySelector(".countdown");countdownDiv.style.display="flex"
+const frappeverseDate=new Date("6 February 2025 09:00:00")
+const timer=setInterval(()=>{const currentTime=new Date()
+const diff=Math.floor((frappeverseDate-currentTime)/1000)
+let days=Math.floor(diff/86400)
+let hours=Math.floor(diff/3600)%24
+let minutes=Math.floor(diff/60)%60
+let seconds=Math.floor(diff)%60
+days<10?days=`0${days}`:days
+hours<10?hours=`0${hours}`:hours
+minutes<10?minutes=`0${minutes}`:minutes
+seconds<10?seconds=`0${seconds}`:seconds
+countdownDiv.textContent=`${days}d ${hours}h ${minutes}m ${seconds}s`
+if(diff<=0){countdownDiv.textContent="Frappeverse is here!"
+clearInterval(timer)}},1000)})

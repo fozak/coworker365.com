@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Auto Repeat task returns OK, but no entries are created (Bug?) - User Forum - Frappe Forum</title>
+    <meta name="description" content="Suddenly, and without any apparent change, all Auto Repeat jobs of all kinds have stopped working. The version of ERPNext has not changed between the successful creation and the unsuccessful creation, and the system has &amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/auto-repeat-task-returns-ok-but-no-entries-are-created-bug/155051" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Auto Repeat task returns OK, but no entries are created (Bug?)&#39;" href="https://discuss.frappe.io/t/auto-repeat-task-returns-ok-but-no-entries-are-created-bug/155051.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/auto-repeat-task-returns-ok-but-no-entries-are-created-bug/155051" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/auto-repeat-task-returns-ok-but-no-entries-are-created-bug/155051" />
+<meta property="og:title" content="Auto Repeat task returns OK, but no entries are created (Bug?)" />
+<meta name="twitter:title" content="Auto Repeat task returns OK, but no entries are created (Bug?)" />
+<meta property="og:description" content="Suddenly, and without any apparent change, all Auto Repeat jobs of all kinds have stopped working. The version of ERPNext has not changed between the successful creation and the unsuccessful creation, and the system has not been updated either. I first noticed it today after September’s month-end invoices did not auto-create.  If I run “Execute” on the frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_repeat_entry job, the “Scheduled Job Log” shows a successful execution, and the log f..." />
+<meta name="twitter:description" content="Suddenly, and without any apparent change, all Auto Repeat jobs of all kinds have stopped working. The version of ERPNext has not changed between the successful creation and the unsuccessful creation, and the system has not been updated either. I first noticed it today after September’s month-end invoices did not auto-create.  If I run “Execute” on the frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_repeat_entry job, the “Scheduled Job Log” shows a successful execution, and the log f..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:section" content="User Forum" />
+<meta property="og:article:section:color" content="AB9364" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="article:published_time" content="2025-10-04T02:50:10+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Auto Repeat task returns OK, but no entries are created (Bug?)","mainEntity":{"@type":"Question","name":"Auto Repeat task returns OK, but no entries are created (Bug?)","text":"Suddenly, and without any apparent change, all Auto Repeat jobs of all kinds have stopped working. The version of ERPNext has not changed between the successful creation and the unsuccessful creation, and the system has not been updated either. I first noticed it today after September’s month-end in&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-10-04T02:50:10.114Z","author":{"@type":"Person","name":"ChipwizBen","url":"https://discuss.frappe.io/u/ChipwizBen"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/auto-repeat-task-returns-ok-but-no-entries-are-created-bug/155051">Auto Repeat task returns OK, but no entries are created (Bug?)</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/user-forum/11" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #AB9364'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>User Forum</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Auto Repeat task returns OK, but no entries are created (Bug?)'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/auto-repeat-task-returns-ok-but-no-entries-are-created-bug/155051'>
+      <meta itemprop='datePublished' content='2025-10-04T02:50:10Z'>
+        <meta itemprop='articleSection' content='User Forum'>
+      <meta itemprop='keywords' content='erpnext'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ChipwizBen'><span itemprop='name'>ChipwizBen</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/auto-repeat-task-returns-ok-but-no-entries-are-created-bug/155051">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-10-04T02:50:10Z' class='post-time'>
+                    October 4, 2025,  2:50am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-04T02:50:10Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Suddenly, and without any apparent change, all Auto Repeat jobs of all kinds have stopped working. The version of ERPNext has not changed between the successful creation and the unsuccessful creation, and the system has not been updated either. I first noticed it today after September’s month-end invoices did not auto-create.</p>
+<p>If I run “Execute” on the frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_repeat_entry job, the “Scheduled Job Log” shows a successful execution, and the log file also has some entries that are relevant to the files that would otherwise get created:</p>
+<pre><code class="lang-auto">2025-10-04 15:45:15,511 home-erp-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_r..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erp', user='me') (erp::scheduled_job::frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_repeat_entry)
+2025-10-04 15:45:15,898 home-erp-frappe-bench:default: Job OK (erp::scheduled_job::frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_repeat_entry)
+2025-10-04 15:45:15,899 Result is kept for 600 seconds
+2025-10-04 15:45:15,903 home-erp-frappe-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.automation.doctype.auto_repeat.auto_repeat.create_repeated_entries', kwargs={'data': [{'name': 'OnCall Transfer'}, {'name': 'Vultr'}, {'name': 'AUT-AR-..., method='frappe.automation.doctype.auto_repeat.auto_repeat.create_repeated_entries', site='erp', user='me') (352a1570-583a-4639-b535-63dba295f32d)
+2025-10-04 15:45:16,220 home-erp-frappe-bench:default: Job OK (352a1570-583a-4639-b535-63dba295f32d)
+2025-10-04 15:45:16,220 Result is kept for 600 seconds
+</code></pre>
+<p>I reverted back to several old backups just to make sure that the system hadn’t been changed, even as far back as April, but oddly no new Auto Repeat entries are created even when I run Execute from a backup job in April. So either I don’t understand what that “Execute” button does, or there’s something else going on.</p>
+<p>Can somebody please tell me how to run an execution task to create missed Auto Repeat tasks?</p>
+<p>And can somebody offer some insight into what the heck is going on and why the system would suddenly stop behaving correctly without any change to it?</p>
+<p>ERPNext: v14.74.7 (version-14)<br>
+Frappe Framework: v14.83.0 (version-14)<br>
+Frappe HR: v14.34.1 (version-14)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ChipwizBen'><span itemprop='name'>ChipwizBen</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-04T03:10:49Z' class='post-time'>
+                    October 4, 2025,  3:10am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-04T03:13:38Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I just upgraded to:</p>
+<p>ERPNext: v15.81.1 (version-15)<br>
+Frappe Framework: v15.84.0 (version-15)<br>
+Frappe HR: v15.50.2 (version-15)</p>
+<p>Same issue. Ran execute, here are the logs:</p>
+<pre><code class="lang-auto">2025-10-04 16:11:51,366 home-erp-frappe-bench:long: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., kwargs={'job_type': 'frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_r..., method='frappe.core.doctype.scheduled_job_type.scheduled_job_type.run_scheduled_jo..., site='erp', user='me') (erp::scheduled_job::frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_repeat_entry)
+2025-10-04 16:11:51,605 home-erp-frappe-bench:long: Job OK (erp::scheduled_job::frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_repeat_entry)
+2025-10-04 16:11:51,605 Result is kept for 600 seconds
+2025-10-04 16:11:51,611 home-erp-frappe-bench:long: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.automation.doctype.auto_repeat.auto_repeat.create_repeated_entries', kwargs={'data': [{'name': 'SupplierX'}, {'name': 'AUT-AR-00725'}, {'name': 'CustomerX..., method='frappe.automation.doctype.auto_repeat.auto_repeat.create_repeated_entries', site='erp', user='me') (erp::ea59304c-5191-4c1d-8ab4-f80ece12a409)
+2025-10-04 16:11:51,744 home-erp-frappe-bench:long: Job OK (erp::ea59304c-5191-4c1d-8ab4-f80ece12a409)
+2025-10-04 16:11:51,744 Result is kept for 600 seconds
+</code></pre>
+<p>Still no auto repeated documents created.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abdeali'><span itemprop='name'>Abdeali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-04T03:24:45Z' class='post-time'>
+                    October 4, 2025,  3:24am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-04T03:24:45Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,</p>
+<p>Can you check is there any <strong>Error Logs</strong>?</p>
+<p>Or in the site go to <code>Schedule Job Type</code> and check this method execution?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ChipwizBen'><span itemprop='name'>ChipwizBen</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/8/9/8946a7ee18ec5efdce7bfc7c6f68e6aaadadcfc9.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-04T04:04:34Z' class='post-time'>
+                    October 4, 2025,  4:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-04T04:04:34Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>No error log except “Failed to remove Exotel Integration.” which occurred as part of the upgrade.</p>
+<p>Schedule job type says complete when I run it for auto repeat entries:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/8/9/8946a7ee18ec5efdce7bfc7c6f68e6aaadadcfc9.png" data-download-href="https://discuss.frappe.io/uploads/default/8946a7ee18ec5efdce7bfc7c6f68e6aaadadcfc9" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/8/9/8946a7ee18ec5efdce7bfc7c6f68e6aaadadcfc9_2_690x415.png" alt="image" data-base62-sha1="jAoNaZT6WuRKSl349bipYV4dcmd" width="690" height="415" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/8/9/8946a7ee18ec5efdce7bfc7c6f68e6aaadadcfc9_2_690x415.png, https://discuss.frappe.io/uploads/default/original/3X/8/9/8946a7ee18ec5efdce7bfc7c6f68e6aaadadcfc9.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/8/9/8946a7ee18ec5efdce7bfc7c6f68e6aaadadcfc9.png 2x" data-dominant-color="1E1E1E"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">782×471 31.3 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ChipwizBen'><span itemprop='name'>ChipwizBen</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/e/0/e07187c18358521a458f6bcb354fa09241a7bcfd.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-04T04:06:58Z' class='post-time'>
+                    October 4, 2025,  4:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-04T04:06:58Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>When I look at the last scheduled log entries, these show as stopping for some reason 6 days ago, and then resuming again after I restored today’s backup and upgrading to v15:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/e/0/e07187c18358521a458f6bcb354fa09241a7bcfd.png" data-download-href="https://discuss.frappe.io/uploads/default/e07187c18358521a458f6bcb354fa09241a7bcfd" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/e/0/e07187c18358521a458f6bcb354fa09241a7bcfd_2_690x139.png" alt="image" data-base62-sha1="w1wbPTmFCGsLrXZPLxRgoevVUnz" width="690" height="139" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/e/0/e07187c18358521a458f6bcb354fa09241a7bcfd_2_690x139.png, https://discuss.frappe.io/uploads/default/optimized/3X/e/0/e07187c18358521a458f6bcb354fa09241a7bcfd_2_1035x208.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/e/0/e07187c18358521a458f6bcb354fa09241a7bcfd.png 2x" data-dominant-color="1F2120"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1042×210 28.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ChipwizBen'><span itemprop='name'>ChipwizBen</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/7/4/746a02242921dd0171d1408f6fd71ecad1c8171e.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-04T04:09:28Z' class='post-time'>
+                    October 4, 2025,  4:09am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-04T04:09:28Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Same with an auto repeat filter - just stopped for no reason six days ago (the VM was not crashed or similar):</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/4/746a02242921dd0171d1408f6fd71ecad1c8171e.png" data-download-href="https://discuss.frappe.io/uploads/default/746a02242921dd0171d1408f6fd71ecad1c8171e" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/4/746a02242921dd0171d1408f6fd71ecad1c8171e_2_690x304.png" alt="image" data-base62-sha1="gBQvwsH2q8doYuQta1viZBydFh4" width="690" height="304" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/4/746a02242921dd0171d1408f6fd71ecad1c8171e_2_690x304.png, https://discuss.frappe.io/uploads/default/original/3X/7/4/746a02242921dd0171d1408f6fd71ecad1c8171e.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/7/4/746a02242921dd0171d1408f6fd71ecad1c8171e.png 2x" data-dominant-color="202121"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1018×449 61.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>All of the latest ones are manual ones I’ve run, but how do I get it to create the entries from end of Sept that it missed? I can try to fudge the clock and see if it works now but it seems hacky and I’m not sure of the consequences.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ChipwizBen'><span itemprop='name'>ChipwizBen</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-04T04:54:14Z' class='post-time'>
+                    October 4, 2025,  4:54am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-04T04:54:14Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I managed to bash it back to life by stopping chronyd, forcing the time back to 29/09 23:55, and rebooting. I thought that it’d create the missing auto repeat jobs itself at the strike of midnight… nope. I had to hit Execute manually and that got it.</p>
+<p>Hopefully I don’t have to do that every month.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abdeali'><span itemprop='name'>Abdeali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-04T11:13:46Z' class='post-time'>
+                    October 4, 2025, 11:13am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-04T11:13:46Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Can you check on your server that your workers are running?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/ChipwizBen'><span itemprop='name'>ChipwizBen</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-04T20:23:16Z' class='post-time'>
+                    October 4, 2025,  8:23pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-04T20:23:16Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>What’s the process to do that?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abdeali'><span itemprop='name'>Abdeali</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/4/9/491cb11b12dcc5c5aa2c6e122dbd8d8383625c40.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-05T05:10:34Z' class='post-time'>
+                    October 5, 2025,  5:10am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-05T05:10:34Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,</p>
+<p>you can check directly from UI.</p>
+<ol>
+<li>Currently is <strong>Inactive</strong></li>
+</ol>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/4/9/491cb11b12dcc5c5aa2c6e122dbd8d8383625c40.png" data-download-href="https://discuss.frappe.io/uploads/default/491cb11b12dcc5c5aa2c6e122dbd8d8383625c40" title="image_2025-10-05_10-30-45"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/4/9/491cb11b12dcc5c5aa2c6e122dbd8d8383625c40_2_690x210.png" alt="image_2025-10-05_10-30-45" data-base62-sha1="aqMki4wBrSC5pXWW3QRur9U5AE8" width="690" height="210" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/4/9/491cb11b12dcc5c5aa2c6e122dbd8d8383625c40_2_690x210.png, https://discuss.frappe.io/uploads/default/optimized/3X/4/9/491cb11b12dcc5c5aa2c6e122dbd8d8383625c40_2_1035x315.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/4/9/491cb11b12dcc5c5aa2c6e122dbd8d8383625c40_2_1380x420.png 2x" data-dominant-color="FBFBFB"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image_2025-10-05_10-30-45</span><span class="informations">1740×530 41 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<ol start="2">
+<li>After running below command</li>
+</ol>
+<pre data-code-wrap="batch"><code class="lang-batch">bench enable-scheduler
+</code></pre>
+<ol start="3">
+<li>it is <strong>Active</strong></li>
+</ol>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/c/5/c5800bba71ee5b6b014310cc3b9096b56190e288.png" data-download-href="https://discuss.frappe.io/uploads/default/c5800bba71ee5b6b014310cc3b9096b56190e288" title="image_2025-10-05_10-31-36"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/c/5/c5800bba71ee5b6b014310cc3b9096b56190e288_2_690x312.png" alt="image_2025-10-05_10-31-36" data-base62-sha1="sbaoI69YXJQQltArZfE1hLmdaiI" width="690" height="312" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/c/5/c5800bba71ee5b6b014310cc3b9096b56190e288_2_690x312.png, https://discuss.frappe.io/uploads/default/optimized/3X/c/5/c5800bba71ee5b6b014310cc3b9096b56190e288_2_1035x468.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/c/5/c5800bba71ee5b6b014310cc3b9096b56190e288_2_1380x624.png 2x" data-dominant-color="F9F8F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image_2025-10-05_10-31-36</span><span class="informations">1762×798 146 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>You can find more details here</p>
+<aside class="quote quote-modified" data-post="10" data-topic="131534">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/avc/48/55078_2.png" class="avatar">
+    <a href="https://discuss.frappe.io/t/job-scheduler-stopped-working/131534/10">Job scheduler stopped working</a> 
+  </div>
+  <blockquote>
+    Hi again <a class="mention" href="/u/gtapias">@gtapias</a>: 
+I think I found the reason for that … 
+If the system detects no interactive activity (mean manual login) in the site for the last x days (defined on system settings) and you are not in developer_mode (since v15.38.0) … jobs will get “dormant” status … and, theorically, it will run just daily. I think something like this is happening. This is the reason why it restarts after logout/login 
+
+
+ <a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/3/23b9ed5cb69eec6abd6e2eee5348a0b4f6e17317.png" data-download-href="https://discuss.frappe.io/uploads/default/23b9ed5cb69eec6abd6e2eee5348a0b4f6e17317" title="image">[image]</a> 
+And finally … check this: 
+
+Maybe bench clear-cache could help too in some ca…
+  </blockquote>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GST not auto-calculating - India Compliance - Frappe Forum</title>
+    <meta name="description" content="GST rate and tax amount not auto-calculating. The respective tax items are getting populated in the tax field on selecting an item/customer. 
+For own state customer CGST and SGST is showing up. For other state customer I&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/gst-not-auto-calculating/93278" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;GST not auto-calculating&#39;" href="https://discuss.frappe.io/t/gst-not-auto-calculating/93278.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/9/2/92a6876c472f54852bc7edc5c37718725b2eec02_2_1024x449.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/9/2/92a6876c472f54852bc7edc5c37718725b2eec02_2_1024x449.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/gst-not-auto-calculating/93278" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/gst-not-auto-calculating/93278" />
+<meta property="og:title" content="GST not auto-calculating" />
+<meta name="twitter:title" content="GST not auto-calculating" />
+<meta property="og:description" content="GST rate and tax amount not auto-calculating. The respective tax items are getting populated in the tax field on selecting an item/customer.  For own state customer CGST and SGST is showing up. For other state customer IGST is showing up. But tax rate and values are not getting populated." />
+<meta name="twitter:description" content="GST rate and tax amount not auto-calculating. The respective tax items are getting populated in the tax field on selecting an item/customer.  For own state customer CGST and SGST is showing up. For other state customer IGST is showing up. But tax rate and values are not getting populated." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:section" content="India Compliance" />
+<meta property="og:article:section:color" content="E45735" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="2 ❤" />
+<meta property="article:published_time" content="2022-08-13T03:51:59+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"GST not auto-calculating","mainEntity":{"@type":"Question","name":"GST not auto-calculating","text":"GST rate and tax amount not auto-calculating. The respective tax items are getting populated in the tax field on selecting an item/customer.\n\nFor own state customer CGST and SGST is showing up. For other state customer IGST is showing up. But tax rate and values are not getting populated.\n\n<a class=\"lightbox\" href=\"https://discuss.frappe.io/uploads/default/original/3X/9/2/92a6876c472f54852bc7edc5c37718725b2eec02.png\" data-download-href=\"https://discuss.frappe.io/uploads/default/92a6876c472f54852bc7edc5c37718725b2eec02\" title=\"GST values not populating\">[GST val&hellip;<\/a>","upvoteCount":1,"answerCount":0,"datePublished":"2022-08-13T03:51:59.436Z","author":{"@type":"Person","name":"roshrnair","url":"https://discuss.frappe.io/u/roshrnair"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/gst-not-auto-calculating/93278">GST not auto-calculating</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/india-compliance/65" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #E45735'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>India Compliance</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='GST not auto-calculating'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/gst-not-auto-calculating/93278'>
+      <meta itemprop='datePublished' content='2022-08-13T03:51:59Z'>
+        <meta itemprop='articleSection' content='India Compliance'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/roshrnair'><span itemprop='name'>roshrnair</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/gst-not-auto-calculating/93278">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/9/2/92a6876c472f54852bc7edc5c37718725b2eec02.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2022-08-13T03:51:59Z' class='post-time'>
+                    August 13, 2022,  3:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-13T03:51:59Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>GST rate and tax amount not auto-calculating. The respective tax items are getting populated in the tax field on selecting an item/customer.</p>
+<p>For own state customer CGST and SGST is showing up. For other state customer IGST is showing up. But tax rate and values are not getting populated.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/2/92a6876c472f54852bc7edc5c37718725b2eec02.png" data-download-href="https://discuss.frappe.io/uploads/default/92a6876c472f54852bc7edc5c37718725b2eec02" title="GST values not populating"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/9/2/92a6876c472f54852bc7edc5c37718725b2eec02_2_690x302.png" alt="GST values not populating" data-base62-sha1="kVkuQ3EHdneUPAgHN0MLPZUtaYq" width="690" height="302" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/9/2/92a6876c472f54852bc7edc5c37718725b2eec02_2_690x302.png, https://discuss.frappe.io/uploads/default/optimized/3X/9/2/92a6876c472f54852bc7edc5c37718725b2eec02_2_1035x453.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/9/2/92a6876c472f54852bc7edc5c37718725b2eec02.png 2x" data-dominant-color="FAFAFB"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">GST values not populating</span><span class="informations">1064×467 32.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/erpnext-version-14-item-tax-template-gst-taxes-not-loading-properly/93389/10">ERPNext Version 14 - Item Tax Template - GST Taxes not loading properly</a>
+                        <meta itemprop='position' content='2'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Smit_Vora'><span itemprop='name'>Smit_Vora</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-13T04:57:34Z' class='post-time'>
+                    August 13, 2022,  4:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-13T04:57:34Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This should work fine. Maybe some configuration is missed out.</p>
+<ul>
+<li>Where have you set your tax rates? Can you share screenshot?</li>
+<li>What are the tax rates setup in your default tax templates.</li>
+<li>If tax rates are set in Item Tax Template, Is you Item Tax Template set in Item Master?</li>
+<li>If taxes are set in Item Tax Template and is set in Item Master, is it getting fetch in the Sales Invoice here? Share the screenshot of the Item Details with Item tax template getting loaded.</li>
+</ul>
+<p>If you ensure above steps are intact, taxes should get loaded.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/roshrnair'><span itemprop='name'>roshrnair</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/2/0/20c812e0ee31e2a63057ba50f1ce714b89c6cafe.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-13T06:25:01Z' class='post-time'>
+                    August 13, 2022,  6:25am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-13T06:25:01Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <ul>
+<li>
+<p>Where have you set your tax rates? Can you share screenshot?<br>
+Accounting → Item Tax Template<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/0/20c812e0ee31e2a63057ba50f1ce714b89c6cafe.png" data-download-href="https://discuss.frappe.io/uploads/default/20c812e0ee31e2a63057ba50f1ce714b89c6cafe" title="GST Rate Setting"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/0/20c812e0ee31e2a63057ba50f1ce714b89c6cafe_2_690x287.png" alt="GST Rate Setting" data-base62-sha1="4FZVYqDX6kHhmUtcxebyZryR3j0" width="690" height="287" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/0/20c812e0ee31e2a63057ba50f1ce714b89c6cafe_2_690x287.png, https://discuss.frappe.io/uploads/default/original/3X/2/0/20c812e0ee31e2a63057ba50f1ce714b89c6cafe.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/2/0/20c812e0ee31e2a63057ba50f1ce714b89c6cafe.png 2x" data-dominant-color="FCFDFD"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">GST Rate Setting</span><span class="informations">1023×426 19.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+</li>
+<li>
+<p>What are the tax rates setup in your default tax templates.<br>
+5%, 12%, 18% and 28% with CGST,SGST and IGST Splits</p>
+</li>
+<li>
+<p>If tax rates are set in Item Tax Template, Is you Item Tax Template set in Item Master?<br>
+Yes, It has been associated with the item.</p>
+</li>
+<li>
+<p>If taxes are set in Item Tax Template and is set in Item Master, is it getting fetch in the Sales Invoice here? Share the screenshot of the Item Details with Item tax template getting loaded.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/9/2/9285ddbfd1d1e456027e54132586b94e0f30bcd9.png" data-download-href="https://discuss.frappe.io/uploads/default/9285ddbfd1d1e456027e54132586b94e0f30bcd9" title="salesinvoice_itemlist1"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/9/2/9285ddbfd1d1e456027e54132586b94e0f30bcd9_2_690x234.png" alt="salesinvoice_itemlist1" data-base62-sha1="kUcw65HV2lZVdGDHGpz8Mo1ojGh" width="690" height="234" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/9/2/9285ddbfd1d1e456027e54132586b94e0f30bcd9_2_690x234.png, https://discuss.frappe.io/uploads/default/optimized/3X/9/2/9285ddbfd1d1e456027e54132586b94e0f30bcd9_2_1035x351.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/9/2/9285ddbfd1d1e456027e54132586b94e0f30bcd9.png 2x" data-dominant-color="FCFCFC"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">salesinvoice_itemlist1</span><span class="informations">1068×363 20.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/5/0/50ac6c70da31f8d7542b6765533e97957181d22e.png" data-download-href="https://discuss.frappe.io/uploads/default/50ac6c70da31f8d7542b6765533e97957181d22e" title="salesinvoice_itemlist2"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/5/0/50ac6c70da31f8d7542b6765533e97957181d22e_2_690x362.png" alt="salesinvoice_itemlist2" data-base62-sha1="bvFC2fxRsswp4BgdeseiJS7WoMe" width="690" height="362" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/5/0/50ac6c70da31f8d7542b6765533e97957181d22e_2_690x362.png, https://discuss.frappe.io/uploads/default/optimized/3X/5/0/50ac6c70da31f8d7542b6765533e97957181d22e_2_1035x543.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/5/0/50ac6c70da31f8d7542b6765533e97957181d22e.png 2x" data-dominant-color="FBFBFB"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">salesinvoice_itemlist2</span><span class="informations">1050×552 30.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/e/deda4858c315461b9041e746a3090359f0d1e17d.png" data-download-href="https://discuss.frappe.io/uploads/default/deda4858c315461b9041e746a3090359f0d1e17d" title="salesinvoice_itemlist3"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/e/deda4858c315461b9041e746a3090359f0d1e17d_2_690x83.png" alt="salesinvoice_itemlist3" data-base62-sha1="vNrFl2ewfw80I6C2YFctwPLuJ2J" width="690" height="83" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/e/deda4858c315461b9041e746a3090359f0d1e17d_2_690x83.png, https://discuss.frappe.io/uploads/default/optimized/3X/d/e/deda4858c315461b9041e746a3090359f0d1e17d_2_1035x124.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/d/e/deda4858c315461b9041e746a3090359f0d1e17d.png 2x" data-dominant-color="FCFCFC"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">salesinvoice_itemlist3</span><span class="informations">1058×128 4.55 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Smit_Vora'><span itemprop='name'>Smit_Vora</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-13T06:30:47Z' class='post-time'>
+                    August 13, 2022,  6:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-13T06:30:47Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Can you please refer to the specific docs here and check it its configured and loading:</p>
+<ol>
+<li>Item tax template set in Item (<a href="https://docs.erpnext.com/docs/v13/user/manual/en/accounts/item-tax-template#2-how-to-create-an-item-tax-template">Docs</a>)</li>
+<li>Item tax template getting loaded for item in Sales Invoice (<a href="https://docs.erpnext.com/docs/v13/user/manual/en/accounts/item-tax-template#2-how-to-create-an-item-tax-template">Docs</a>)</li>
+</ol>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/roshrnair'><span itemprop='name'>roshrnair</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/0/5/05305af9efdf88aa10fc2f2a29c906f711c25ddc.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-13T07:49:07Z' class='post-time'>
+                    August 13, 2022,  7:49am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-13T07:49:07Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="Smit_Vora" data-post="4" data-topic="93278">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/smit_vora/48/55115_2.png" class="avatar"> Smit_Vora:</div>
+<blockquote>
+<ul>
+<li>Item tax template set in Item (<a href="https://docs.erpnext.com/docs/v13/user/manual/en/accounts/item-tax-template#2-how-to-create-an-item-tax-template" rel="noopener nofollow ugc">Docs</a>)</li>
+<li>Item tax template getting loaded for item in Sales Invoice (<a href="https://docs.erpnext.com/docs/v13/user/manual/en/accounts/item-tax-template#2-how-to-create-an-item-tax-template" rel="noopener nofollow ugc">Docs</a>)</li>
+</ul>
+</blockquote>
+</aside>
+<p>Thank You for the response.<br>
+GST Rate setup<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/5/05305af9efdf88aa10fc2f2a29c906f711c25ddc.png" data-download-href="https://discuss.frappe.io/uploads/default/05305af9efdf88aa10fc2f2a29c906f711c25ddc" title="gst5percent"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/5/05305af9efdf88aa10fc2f2a29c906f711c25ddc_2_690x288.png" alt="gst5percent" data-base62-sha1="JTZgTWrSrjAql1GJCo5JSOrjdy" width="690" height="288" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/5/05305af9efdf88aa10fc2f2a29c906f711c25ddc_2_690x288.png, https://discuss.frappe.io/uploads/default/optimized/3X/0/5/05305af9efdf88aa10fc2f2a29c906f711c25ddc_2_1035x432.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/0/5/05305af9efdf88aa10fc2f2a29c906f711c25ddc.png 2x" data-dominant-color="FBFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">gst5percent</span><span class="informations">1295×541 34.3 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Assignment to Item under Item Tax<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/5/152a404295b3fde4fc3ee5f5069a1a503fbdf81c.png" data-download-href="https://discuss.frappe.io/uploads/default/152a404295b3fde4fc3ee5f5069a1a503fbdf81c" title="Item Tax Template for Item"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/1/5/152a404295b3fde4fc3ee5f5069a1a503fbdf81c_2_689x186.png" alt="Item Tax Template for Item" data-base62-sha1="31ey3mVsgp4RxOmZ9T7NTeqGF6Q" width="689" height="186" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/1/5/152a404295b3fde4fc3ee5f5069a1a503fbdf81c_2_689x186.png, https://discuss.frappe.io/uploads/default/optimized/3X/1/5/152a404295b3fde4fc3ee5f5069a1a503fbdf81c_2_1033x279.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/1/5/152a404295b3fde4fc3ee5f5069a1a503fbdf81c.png 2x" data-dominant-color="FAFBFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Item Tax Template for Item</span><span class="informations">1293×350 26.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Still the sales invoice is not auto loading the tax rate.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/snv'><span itemprop='name'>snv</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/0/a/0afb84411373465ca95744ea5298b21064b7f9e4.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-13T08:01:46Z' class='post-time'>
+                    August 13, 2022,  8:01am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-13T08:01:46Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It should get set in the Sales Invoice item:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/a/0afb84411373465ca95744ea5298b21064b7f9e4.png" data-download-href="https://discuss.frappe.io/uploads/default/0afb84411373465ca95744ea5298b21064b7f9e4" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/a/0afb84411373465ca95744ea5298b21064b7f9e4_2_690x369.png" alt="image" data-base62-sha1="1z9E5qvN5vs0ycbbeQ1DPXjqm9u" width="690" height="369" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/a/0afb84411373465ca95744ea5298b21064b7f9e4_2_690x369.png, https://discuss.frappe.io/uploads/default/optimized/3X/0/a/0afb84411373465ca95744ea5298b21064b7f9e4_2_1035x553.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/0/a/0afb84411373465ca95744ea5298b21064b7f9e4.png 2x" data-dominant-color="E5E4E5"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1280×686 54 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>Is that happening when you create a new invoice?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/roshrnair'><span itemprop='name'>roshrnair</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/0/0/008dc9ace06f8c3b8155c801dc9551799300607b.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-13T08:39:26Z' class='post-time'>
+                    August 13, 2022,  8:39am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-13T08:39:26Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Ahh… Yes, If I update the item tax template here, the tax value is appearing. But the problem is non of my existing tax templates are listed here neither the one that has been already assigned to the item. So had to try by creating a new item tax template from the option “Create a new item tax template”.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/0/008dc9ace06f8c3b8155c801dc9551799300607b.png" data-download-href="https://discuss.frappe.io/uploads/default/008dc9ace06f8c3b8155c801dc9551799300607b" title="Edit sales invoice line"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/0/008dc9ace06f8c3b8155c801dc9551799300607b_2_690x457.png" alt="Edit sales invoice line" data-base62-sha1="4TMih6kJPsvJP4fzxr8N54KsHN" width="690" height="457" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/0/008dc9ace06f8c3b8155c801dc9551799300607b_2_690x457.png, https://discuss.frappe.io/uploads/default/original/3X/0/0/008dc9ace06f8c3b8155c801dc9551799300607b.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/0/0/008dc9ace06f8c3b8155c801dc9551799300607b.png 2x" data-dominant-color="F9FAFA"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Edit sales invoice line</span><span class="informations">933×619 44.1 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>Why is the assigned item tax template not appearing here?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Smit_Vora'><span itemprop='name'>Smit_Vora</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-13T08:51:48Z' class='post-time'>
+                    August 13, 2022,  8:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-13T08:51:48Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Item tax templates are required to be created for each company.<br>
+Make sure you have created it for Turqosoft.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/roshrnair'><span itemprop='name'>roshrnair</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-13T11:18:59Z' class='post-time'>
+                    August 13, 2022, 11:18am
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-13T11:18:59Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Yes, I have created it for each company.</p>
+<p>Any other checkpoints that I need to be aware of?<br>
+Thanks</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/roshrnair'><span itemprop='name'>roshrnair</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/2/3/230388f8c3d8e18e1a7abcfd79a70c632bbe1a6b.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-08-13T13:40:22Z' class='post-time'>
+                    August 13, 2022,  1:40pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-08-13T13:40:22Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Updating the item category column either at Item Group Level or Item level seems to be solving the issue. The system is auto-fetching the rates and calculating the gst amount correctly. But, is this this the right method? I haven’t seen this method in any of the documents or training videos.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/3/230388f8c3d8e18e1a7abcfd79a70c632bbe1a6b.png" data-download-href="https://discuss.frappe.io/uploads/default/230388f8c3d8e18e1a7abcfd79a70c632bbe1a6b" title="item_group_tax_with_item_category"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/3/230388f8c3d8e18e1a7abcfd79a70c632bbe1a6b_2_690x194.png" alt="item_group_tax_with_item_category" data-base62-sha1="4ZKhGz03lxmKtIUQeLLRm2bMelJ" width="690" height="194" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/3/230388f8c3d8e18e1a7abcfd79a70c632bbe1a6b_2_690x194.png, https://discuss.frappe.io/uploads/default/optimized/3X/2/3/230388f8c3d8e18e1a7abcfd79a70c632bbe1a6b_2_1035x291.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/2/3/230388f8c3d8e18e1a7abcfd79a70c632bbe1a6b.png 2x" data-dominant-color="FAFAFB"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">item_group_tax_with_item_category</span><span class="informations">1247×351 31.4 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mike.gopal'><span itemprop='name'>mike.gopal</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/1/b/1ba1af02cf621f71c6f7f6841398e6f20627dd1d.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-26T16:55:01Z' class='post-time'>
+                    October 26, 2025,  4:55pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-26T16:55:01Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I had the same issue. My item tax template in Item Master was configured like this earlier:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/b/1ba1af02cf621f71c6f7f6841398e6f20627dd1d.png" data-download-href="https://discuss.frappe.io/uploads/default/1ba1af02cf621f71c6f7f6841398e6f20627dd1d" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/1/b/1ba1af02cf621f71c6f7f6841398e6f20627dd1d_2_690x172.png" alt="image" data-base62-sha1="3WriqNXwuXTy59nqQCYOf5n5Y7j" width="690" height="172" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/1/b/1ba1af02cf621f71c6f7f6841398e6f20627dd1d_2_690x172.png, https://discuss.frappe.io/uploads/default/optimized/3X/1/b/1ba1af02cf621f71c6f7f6841398e6f20627dd1d_2_1035x258.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/1/b/1ba1af02cf621f71c6f7f6841398e6f20627dd1d_2_1380x344.png 2x" data-dominant-color="F9F9F9"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2318×580 59.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>I later removed <code>In-state</code>, minimum and maximum rate from above and then item taxes started getting fetched automatically:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/a/2a4da225db8e338635f0f21461f5e939cd3428fd.png" data-download-href="https://discuss.frappe.io/uploads/default/2a4da225db8e338635f0f21461f5e939cd3428fd" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/a/2a4da225db8e338635f0f21461f5e939cd3428fd_2_690x172.png" alt="image" data-base62-sha1="62enIrEuDxLWoplUd8l7selQIVf" width="690" height="172" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/a/2a4da225db8e338635f0f21461f5e939cd3428fd_2_690x172.png, https://discuss.frappe.io/uploads/default/optimized/3X/2/a/2a4da225db8e338635f0f21461f5e939cd3428fd_2_1035x258.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/2/a/2a4da225db8e338635f0f21461f5e939cd3428fd_2_1380x344.png 2x" data-dominant-color="F9F9F9"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2318×580 59 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

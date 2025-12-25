@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Can I create tab breaks within a child table? - Frappe Framework - Frappe Forum</title>
+    <meta name="description" content="I noticed that Tab Breaks cannot be added directly inside a Child Table Doctype. In the parent form, Tab Breaks work fine. But when designing a child table, adding a Tab Break has no effect — all fields are displayed in &amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/can-i-create-tab-breaks-within-a-child-table/155145" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Can I create tab breaks within a child table?&#39;" href="https://discuss.frappe.io/t/can-i-create-tab-breaks-within-a-child-table/155145.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/c/a/caadf1a38dfe1aa4ad929d63be02afbfa5cf0909_2_1024x691.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/c/a/caadf1a38dfe1aa4ad929d63be02afbfa5cf0909_2_1024x691.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/can-i-create-tab-breaks-within-a-child-table/155145" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/can-i-create-tab-breaks-within-a-child-table/155145" />
+<meta property="og:title" content="Can I create tab breaks within a child table?" />
+<meta name="twitter:title" content="Can I create tab breaks within a child table?" />
+<meta property="og:description" content="I noticed that Tab Breaks cannot be added directly inside a Child Table Doctype. In the parent form, Tab Breaks work fine. But when designing a child table, adding a Tab Break has no effect — all fields are displayed in a single layout.  Interestingly, I found that if a Doctype is created as a regular (non-child) Doctype and then later converted to a Child Table, Tab Breaks can be added. However, this approach causes rendering issues: for example, when opening the form, there is no tab selected ..." />
+<meta name="twitter:description" content="I noticed that Tab Breaks cannot be added directly inside a Child Table Doctype. In the parent form, Tab Breaks work fine. But when designing a child table, adding a Tab Break has no effect — all fields are displayed in a single layout.  Interestingly, I found that if a Doctype is created as a regular (non-child) Doctype and then later converted to a Child Table, Tab Breaks can be added. However, this approach causes rendering issues: for example, when opening the form, there is no tab selected ..." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:tag" content="frappe" />
+<meta property="og:article:tag" content="bug" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="3 ❤" />
+<meta property="article:published_time" content="2025-10-07T04:20:22+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Can I create tab breaks within a child table?","mainEntity":{"@type":"Question","name":"Can I create tab breaks within a child table?","text":"I noticed that Tab Breaks cannot be added directly inside a Child Table Doctype. In the parent form, Tab Breaks work fine. But when designing a child table, adding a Tab Break has no effect — all fields are displayed in a single layout.\n\nInterestingly, I found that if a Doctype is created as a regul&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-10-07T04:20:22.853Z","author":{"@type":"Person","name":"channarong","url":"https://discuss.frappe.io/u/channarong"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/can-i-create-tab-breaks-within-a-child-table/155145">Can I create tab breaks within a child table?</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>, 
+            <a href='https://discuss.frappe.io/tag/bug' class='discourse-tag' rel="tag">bug</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Can I create tab breaks within a child table?'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/can-i-create-tab-breaks-within-a-child-table/155145'>
+      <meta itemprop='datePublished' content='2025-10-07T04:20:22Z'>
+        <meta itemprop='articleSection' content='Frappe Framework'>
+      <meta itemprop='keywords' content='frappe, bug'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/channarong'><span itemprop='name'>channarong</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/can-i-create-tab-breaks-within-a-child-table/155145">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/c/a/caadf1a38dfe1aa4ad929d63be02afbfa5cf0909.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-10-07T04:20:22Z' class='post-time'>
+                    October 7, 2025,  4:20am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-07T04:20:22Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I noticed that Tab Breaks cannot be added directly inside a Child Table Doctype. In the parent form, Tab Breaks work fine. But when designing a child table, adding a Tab Break has no effect — all fields are displayed in a single layout.</p>
+<p>Interestingly, I found that if a Doctype is created as a regular (non-child) Doctype and then later converted to a Child Table, Tab Breaks can be added. However, this approach causes rendering issues: for example, when opening the form, there is no tab selected by default, making the layout confusing.</p>
+<p>My questions:</p>
+<ul>
+<li>
+<p>Is it a known limitation in Frappe that Tab Breaks are not fully supported in child tables?</p>
+</li>
+<li>
+<p>Are there any recommended workarounds to organize fields visually inside a child table without causing rendering issues?</p>
+</li>
+<li>
+<p>Test Child – created as a child table from the beginning</p>
+</li>
+<li>
+<p>Test Tab Child – created as a regular Doctype first, then converted to a child table later<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/c/a/caadf1a38dfe1aa4ad929d63be02afbfa5cf0909.png" data-download-href="https://discuss.frappe.io/uploads/default/caadf1a38dfe1aa4ad929d63be02afbfa5cf0909" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/c/a/caadf1a38dfe1aa4ad929d63be02afbfa5cf0909_2_690x465.png" alt="image" data-base62-sha1="sUZ7zr2jZqFAITP0Xw5RxuKbBsB" width="690" height="465" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/c/a/caadf1a38dfe1aa4ad929d63be02afbfa5cf0909_2_690x465.png, https://discuss.frappe.io/uploads/default/optimized/3X/c/a/caadf1a38dfe1aa4ad929d63be02afbfa5cf0909_2_1035x697.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/c/a/caadf1a38dfe1aa4ad929d63be02afbfa5cf0909.png 2x" data-dominant-color="F9F8F6"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1275×861 30.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/4/0/408558ca82e73fef0ca770e71ef07023aaab5ea6.png" data-download-href="https://discuss.frappe.io/uploads/default/408558ca82e73fef0ca770e71ef07023aaab5ea6" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/4/0/408558ca82e73fef0ca770e71ef07023aaab5ea6_2_690x344.png" alt="image" data-base62-sha1="9cMfEd24Edf9xesF7ZWVGyKebu6" width="690" height="344" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/4/0/408558ca82e73fef0ca770e71ef07023aaab5ea6_2_690x344.png, https://discuss.frappe.io/uploads/default/optimized/3X/4/0/408558ca82e73fef0ca770e71ef07023aaab5ea6_2_1035x516.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/4/0/408558ca82e73fef0ca770e71ef07023aaab5ea6.png 2x" data-dominant-color="FAF9F6"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1247×622 27.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/c/1cc066a2eba53b2b2a6e76f9285275ba362a17b4.png" data-download-href="https://discuss.frappe.io/uploads/default/1cc066a2eba53b2b2a6e76f9285275ba362a17b4" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/1/c/1cc066a2eba53b2b2a6e76f9285275ba362a17b4_2_690x475.png" alt="image" data-base62-sha1="46lAlxMIavsKMoHqLyxn41UCDuA" width="690" height="475" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/1/c/1cc066a2eba53b2b2a6e76f9285275ba362a17b4_2_690x475.png, https://discuss.frappe.io/uploads/default/optimized/3X/1/c/1cc066a2eba53b2b2a6e76f9285275ba362a17b4_2_1035x712.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/1/c/1cc066a2eba53b2b2a6e76f9285275ba362a17b4.png 2x" data-dominant-color="F4F4F4"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1300×896 35.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abdeali'><span itemprop='name'>Abdeali</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-07T05:06:54Z' class='post-time'>
+                    October 7, 2025,  5:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-07T05:06:54Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think user generally prefer section break in child table.</p>
+<p>But your suggestion is also very good cause sometimes child table have many fields.</p>
+<p>Tabs can organize well.</p>
+<p>You can raise this issue on <a href="http://github.com" rel="noopener nofollow ugc">github.com</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/avc'><span itemprop='name'>avc</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-09T21:16:15Z' class='post-time'>
+                    December 9, 2025,  9:16pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-09T21:16:15Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/channarong">@channarong</a> <a class="mention" href="/u/abdeali">@Abdeali</a></p>
+<p>PR raised here</p><aside class="onebox githubpullrequest" data-onebox-src="https://github.com/frappe/frappe/pull/34962">
+  <header class="source">
+
+      <a href="https://github.com/frappe/frappe/pull/34962" target="_blank" rel="noopener">github.com/frappe/frappe</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="github-row" data-github-private-repo="false">
+
+
+
+    <div class="github-icon-container" title="Pull Request">
+      <svg width="60" height="60" class="github-icon" viewBox="0 0 12 16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+    </div>
+
+  <div class="github-info-container">
+
+
+
+      <h4>
+        <a href="https://github.com/frappe/frappe/pull/34962" target="_blank" rel="noopener">feat: let's use tabs on grid row form</a>
+      </h4>
+
+    <div class="branches">
+      <code>develop</code> ← <code>git-avc:tabs_on_grid_row_form</code>
+    </div>
+
+      <div class="github-info">
+        <div class="date">
+          opened <span class="discourse-local-date" data-format="ll" data-date="2025-11-29" data-time="18:27:26" data-timezone="UTC">06:27PM - 29 Nov 25 UTC</span>
+        </div>
+
+        <div class="user">
+          <a href="https://github.com/git-avc" target="_blank" rel="noopener">
+            <img alt="" src="https://avatars.githubusercontent.com/u/94137451?v=4" class="onebox-avatar-inline" width="20" height="20">
+            git-avc
+          </a>
+        </div>
+
+        <div class="lines" title="14 commits changed 5 files with 123 additions and 14 deletions">
+          <a href="https://github.com/frappe/frappe/pull/34962/files" target="_blank" rel="noopener">
+            <span class="added">+123</span>
+            <span class="removed">-14</span>
+          </a>
+        </div>
+      </div>
+  </div>
+</div>
+
+  <div class="github-row">
+    <p class="github-body-container">Right now, we can't use tabs layout into grid form.
+Sometimes, showing all data<span class="show-more-container"><a href="https://github.com/frappe/frappe/pull/34962" target="_blank" rel="noopener" class="show-more">…</a></span><span class="excerpt hidden"> from child tables needs better UI
+
+https://github.com/user-attachments/assets/a1bc4479-7157-47f3-8bf9-777d90c73921
+
+
+Solving:
+
+https://github.com/frappe/frappe/issues/20850
+https://github.com/frappe/frappe/issues/25938
+https://github.com/frappe/frappe/issues/34292
+
+`no-docs`</span></p>
+  </div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

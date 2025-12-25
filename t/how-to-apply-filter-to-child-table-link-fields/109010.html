@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How to apply filter to child table link fields - ERPNext - Frappe Forum</title>
+    <meta name="description" content="I have a long list of Items, some of them are service lists and some are equipments. Whenever we prepare a quotation the quotation items child table fetches from all the item lists. In our case we only use service items &amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/how-to-apply-filter-to-child-table-link-fields/109010" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;How to apply filter to child table link fields&#39;" href="https://discuss.frappe.io/t/how-to-apply-filter-to-child-table-link-fields/109010.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/8/b/8b8fbef226061899ddd61bd17a050e1769a8c9b5.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/8/b/8b8fbef226061899ddd61bd17a050e1769a8c9b5.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/how-to-apply-filter-to-child-table-link-fields/109010" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/how-to-apply-filter-to-child-table-link-fields/109010" />
+<meta property="og:title" content="How to apply filter to child table link fields" />
+<meta name="twitter:title" content="How to apply filter to child table link fields" />
+<meta property="og:description" content="I have a long list of Items, some of them are service lists and some are equipments. Whenever we prepare a quotation the quotation items child table fetches from all the item lists. In our case we only use service items for quotation, If there’s a way to apply a custom filter to show only service items from servies item group in quotation form it’ll be great     Thanks," />
+<meta name="twitter:description" content="I have a long list of Items, some of them are service lists and some are equipments. Whenever we prepare a quotation the quotation items child table fetches from all the item lists. In our case we only use service items for quotation, If there’s a way to apply a custom filter to show only service items from servies item group in quotation form it’ll be great     Thanks," />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:tag" content="quotation" />
+<meta property="og:article:tag" content="custom_script" />
+<meta property="og:article:tag" content="customization" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="8 ❤" />
+<meta property="article:published_time" content="2023-08-25T09:20:25+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"How to apply filter to child table link fields","mainEntity":{"@type":"Question","name":"How to apply filter to child table link fields","text":"I have a long list of Items, some of them are service lists and some are equipments. Whenever we prepare a quotation the quotation items child table fetches from all the item lists. In our case we only use service items for quotation, If there’s a way to apply a custom filter to show only service it&hellip;","upvoteCount":2,"answerCount":1,"datePublished":"2023-08-25T09:20:25.507Z","author":{"@type":"Person","name":"girumtibebu","url":"https://discuss.frappe.io/u/girumtibebu"},"acceptedAnswer":{"@type":"Answer","text":"Hi <a class=\"mention\" href=\"/u/girumtibebu\">@girumtibebu<\/a>,\n\nThat for, please apply the client script for Quotation.\n\nfrappe.ui.form.on(&#39;Quotation&#39;,  {\n\nrefresh: function(frm) {\n\nfrm.set_query(&quot;item_code&quot;, &quot;items&quot;, function (doc, cdt, cdn) {\n\nreturn {\n\n&quot;filters&quot;: {\n\n&quot;item_group&quot;: &quot;Services&quot;\n\n&hellip;","upvoteCount":4,"datePublished":"2023-08-25T11:53:26.302Z","url":"https://discuss.frappe.io/t/how-to-apply-filter-to-child-table-link-fields/109010/2","author":{"@type":"Person","name":"NCP","url":"https://discuss.frappe.io/u/NCP"}}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/how-to-apply-filter-to-child-table-link-fields/109010">How to apply filter to child table link fields</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/quotation' class='discourse-tag' rel="tag">quotation</a>, 
+            <a href='https://discuss.frappe.io/tag/custom_script' class='discourse-tag' rel="tag">custom_script</a>, 
+            <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag' rel="tag">customization</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='How to apply filter to child table link fields'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/how-to-apply-filter-to-child-table-link-fields/109010'>
+      <meta itemprop='datePublished' content='2023-08-25T09:20:25Z'>
+        <meta itemprop='articleSection' content='ERPNext'>
+      <meta itemprop='keywords' content='quotation, custom_script, customization'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/girumtibebu'><span itemprop='name'>girumtibebu</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/how-to-apply-filter-to-child-table-link-fields/109010">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/8/b/8b8fbef226061899ddd61bd17a050e1769a8c9b5.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2023-08-25T09:20:25Z' class='post-time'>
+                    August 25, 2023,  9:20am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-08-25T09:20:25Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have a long list of Items, some of them are service lists and some are equipments. Whenever we prepare a quotation the quotation items child table fetches from all the item lists. In our case we only use service items for quotation, If there’s a way to apply a custom filter to show only service items from servies item group in quotation form it’ll be great<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/8/b/8b8fbef226061899ddd61bd17a050e1769a8c9b5.png" data-download-href="https://discuss.frappe.io/uploads/default/8b8fbef226061899ddd61bd17a050e1769a8c9b5" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/8/b/8b8fbef226061899ddd61bd17a050e1769a8c9b5_2_626x500.png" alt="image" data-base62-sha1="jUCleFjJP1ZQWy69zayQqlbQJcF" width="626" height="500" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/8/b/8b8fbef226061899ddd61bd17a050e1769a8c9b5_2_626x500.png, https://discuss.frappe.io/uploads/default/original/3X/8/b/8b8fbef226061899ddd61bd17a050e1769a8c9b5.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/8/b/8b8fbef226061899ddd61bd17a050e1769a8c9b5.png 2x" data-dominant-color="F7F8F8"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">673×537 33.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>Thanks,</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/NCP'><span itemprop='name'>NCP</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/0/d/0de17987cde7813baa7b40c3a73880c75e303319.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-08-25T11:53:26Z' class='post-time'>
+                    August 25, 2023, 11:53am
+                  </time>
+                  <meta itemprop='dateModified' content='2023-08-25T11:53:26Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/girumtibebu">@girumtibebu</a>,</p>
+<p>That for, please apply the client script for Quotation.</p>
+<pre><code class="lang-auto">frappe.ui.form.on('Quotation',  {
+    refresh: function(frm) {
+        frm.set_query("item_code", "items", function (doc, cdt, cdn) {
+          return {
+            "filters": {
+              "item_group": "Services"
+            },
+          };
+        });
+    }
+});
+</code></pre>
+<p><strong>Output:</strong></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/d/0de17987cde7813baa7b40c3a73880c75e303319.png" data-download-href="https://discuss.frappe.io/uploads/default/0de17987cde7813baa7b40c3a73880c75e303319" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/d/0de17987cde7813baa7b40c3a73880c75e303319_2_690x280.png" alt="image" data-base62-sha1="1YNhDANvDsNoeJ4VVegZuUcAJ7j" width="690" height="280" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/d/0de17987cde7813baa7b40c3a73880c75e303319_2_690x280.png, https://discuss.frappe.io/uploads/default/optimized/3X/0/d/0de17987cde7813baa7b40c3a73880c75e303319_2_1035x420.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/0/d/0de17987cde7813baa7b40c3a73880c75e303319_2_1380x560.png 2x" data-dominant-color="F9F9F9"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1825×742 84.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>Thank You!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/filtered-dropdown-in-link-field/125312/3">Filtered dropdown in Link Field</a>
+                        <meta itemprop='position' content='2'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/item-group-based-on-items-filter-in-sales-invoice-doctype/121442/2">Item group based on items filter in sales invoice doctype</a>
+                        <meta itemprop='position' content='3'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/how-can-i-filter-two-links/121212/15">How can I filter two links</a>
+                        <meta itemprop='position' content='4'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/girumtibebu'><span itemprop='name'>girumtibebu</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-08-25T12:51:47Z' class='post-time'>
+                    August 25, 2023, 12:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-08-25T12:51:47Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/ncp">@NCP</a> Thank you!.<br>
+Just curious on how the filtering works performance wise, does it cache all the items first and do filtering locally? How many requests does it make to the database?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/NCP'><span itemprop='name'>NCP</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-08-25T16:08:14Z' class='post-time'>
+                    August 25, 2023,  4:08pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-08-25T16:08:14Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/girumtibebu">@girumtibebu</a>,</p>
+<p>Please check the documentation of <a href="https://frappeframework.com/docs/user/en/guides/app-development/overriding-link-query-by-custom-script">Overriding Link Query By Custom Script</a>.</p>
+<p>I hope this helps.</p>
+<p>Thank You!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/girumtibebu'><span itemprop='name'>girumtibebu</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2023-08-25T16:29:13Z' class='post-time'>
+                    August 25, 2023,  4:29pm
+                  </time>
+                  <meta itemprop='dateModified' content='2023-08-25T16:29:13Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Great. That cleared it out for me.<br>
+Thanks.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

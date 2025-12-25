@@ -1,0 +1,6 @@
+window.addEventListener("DOMContentLoaded",async()=>{const talk_form_wrapper=document.querySelector(".talk-form")
+const talk_form=talk_form_wrapper.querySelector("iframe")
+function iframeLoaded(iframe,callback){let state=iframe.contentDocument.readyState;let checkLoad=setInterval(()=>{if(state!==iframe.contentDocument.readyState){if(iframe.contentDocument.readyState==='complete'){clearInterval(checkLoad);callback();}
+state=iframe.contentDocument.readyState;}},200)}
+iframeLoaded(talk_form,function(){const number_of_speakers=talk_form.contentWindow.document.querySelector('[data-fieldname="number_of_speaker"]')
+number_of_speakers.addEventListener("change",(e)=>{talk_form_wrapper.style.height=(parseInt(getComputedStyle(talk_form.contentWindow.document.body.querySelector(".web-form-container")).height,10)+80)+"px";})})})

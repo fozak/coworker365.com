@@ -1,0 +1,6 @@
+document.addEventListener('DOMContentLoaded',function(){const ratingPie=document.querySelector('.rating-pie');if(ratingPie){ratingPie.style.setProperty('--progress',(page_data.ratings_summary.avg_rating/5)*360+'deg')
+const Star5Bar=document.querySelector('.rating-5-count-bar');const Star4Bar=document.querySelector('.rating-4-count-bar');const Star3Bar=document.querySelector('.rating-3-count-bar');const Star2Bar=document.querySelector('.rating-2-count-bar');const Star1Bar=document.querySelector('.rating-1-count-bar');Star5Bar.style.width=`${page_data.ratings_summary.rating_percentages[5]}%`
+Star4Bar.style.width=`${page_data.ratings_summary.rating_percentages[4]}%`
+Star3Bar.style.width=`${page_data.ratings_summary.rating_percentages[3]}%`
+Star2Bar.style.width=`${page_data.ratings_summary.rating_percentages[2]}%`
+Star1Bar.style.width=`${page_data.ratings_summary.rating_percentages[1]}%`}})

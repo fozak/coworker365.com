@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[Release Notes] ERPNext v12.4.0 and Frappe v12.2.0 - Announcements - Frappe Forum</title>
+    <meta name="description" content="ERPNext Version 12.4.0
+
+Accounts
+
+Validity of item tax. #20135
+
+Dynamic filters for dimensions in the budget variance report. #19973
+
+Purchase Receipt and Purchase Invoice is not mandatory for an existing asset. 19980
+
+A&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/release-notes-erpnext-v12-4-0-and-frappe-v12-2-0/57003" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[Release Notes] ERPNext v12.4.0 and Frappe v12.2.0&#39;" href="https://discuss.frappe.io/t/release-notes-erpnext-v12-4-0-and-frappe-v12-2-0/57003.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/release-notes-erpnext-v12-4-0-and-frappe-v12-2-0/57003" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/release-notes-erpnext-v12-4-0-and-frappe-v12-2-0/57003" />
+<meta property="og:title" content="[Release Notes] ERPNext v12.4.0 and Frappe v12.2.0" />
+<meta name="twitter:title" content="[Release Notes] ERPNext v12.4.0 and Frappe v12.2.0" />
+<meta property="og:description" content="ERPNext Version 12.4.0  Accounts  Validity of item tax. #20135  Dynamic filters for dimensions in the budget variance report. #19973  Purchase Receipt and Purchase Invoice is not mandatory for an existing asset. 19980  Allowed multiple Landed Cost Vouchers against a Purchase Receipt / Purchase Invoice. #20058  Rounding adjustment while both inclusive tax and additional discount amount are applied. #20078  Fixed an error while doing payment reconciliation for party type Employee. #20088  Show Cl..." />
+<meta name="twitter:description" content="ERPNext Version 12.4.0  Accounts  Validity of item tax. #20135  Dynamic filters for dimensions in the budget variance report. #19973  Purchase Receipt and Purchase Invoice is not mandatory for an existing asset. 19980  Allowed multiple Landed Cost Vouchers against a Purchase Receipt / Purchase Invoice. #20058  Rounding adjustment while both inclusive tax and additional discount amount are applied. #20078  Fixed an error while doing payment reconciliation for party type Employee. #20088  Show Cl..." />
+<meta property="og:article:section" content="Announcements" />
+<meta property="og:article:section:color" content="283890" />
+<meta property="og:article:tag" content="release" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="35 ❤" />
+<meta property="article:published_time" content="2020-01-16T09:27:33+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"[Release Notes] ERPNext v12.4.0 and Frappe v12.2.0","mainEntity":{"@type":"Question","name":"[Release Notes] ERPNext v12.4.0 and Frappe v12.2.0","text":"<a name=\"erpnext-version-1240-1\" class=\"anchor\" href=\"#erpnext-version-1240-1\"><\/a>ERPNext Version 12.4.0\n\n<a name=\"accounts-2\" class=\"anchor\" href=\"#accounts-2\"><\/a>Accounts\n\nValidity of item tax. <a href=\"https://github.com/frappe/erpnext/pull/20135\">#20135<\/a>\n\nDynamic filters for dimensions in the budget variance report. <a href=\"https://github.com/frappe/erpnext/pull/19973\">#19973<\/a>\n\nPurchase Receipt and Purchase Invoice is not mandatory for an existing asset. <a href=\"https://github.com/frappe/erpnext/pull/19980\">19980<\/a>\n\nAllowed multiple Landed Cost Vouchers against a Purchase Receipt / Purchase Invo&hellip;","upvoteCount":28,"answerCount":0,"datePublished":"2020-01-16T09:27:33.255Z","author":{"@type":"Person","name":"nabinhait","url":"https://discuss.frappe.io/u/nabinhait"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/release-notes-erpnext-v12-4-0-and-frappe-v12-2-0/57003">[Release Notes] ERPNext v12.4.0 and Frappe v12.2.0</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/announcement/20" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #283890'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Announcements</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/release' class='discourse-tag' rel="tag">release</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[Release Notes] ERPNext v12.4.0 and Frappe v12.2.0'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/release-notes-erpnext-v12-4-0-and-frappe-v12-2-0/57003'>
+      <meta itemprop='datePublished' content='2020-01-16T09:27:33Z'>
+        <meta itemprop='articleSection' content='Announcements'>
+      <meta itemprop='keywords' content='release'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nabinhait'><span itemprop='name'>nabinhait</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/release-notes-erpnext-v12-4-0-and-frappe-v12-2-0/57003">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2020-01-16T09:27:33Z' class='post-time'>
+                    January 16, 2020,  9:27am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-16T12:32:55Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h3>
+<a name="erpnext-version-1240-1" class="anchor" href="#erpnext-version-1240-1"></a>ERPNext Version 12.4.0</h3>
+<h4>
+<a name="accounts-2" class="anchor" href="#accounts-2"></a>Accounts</h4>
+<ul>
+<li>Validity of item tax. <a href="https://github.com/frappe/erpnext/pull/20135">#20135</a>
+</li>
+<li>Dynamic filters for dimensions in the budget variance report. <a href="https://github.com/frappe/erpnext/pull/19973">#19973</a>
+</li>
+<li>Purchase Receipt and Purchase Invoice is not mandatory for an existing asset. <a href="https://github.com/frappe/erpnext/pull/19980">19980</a>
+</li>
+<li>Allowed multiple Landed Cost Vouchers against a Purchase Receipt / Purchase Invoice. <a href="https://github.com/frappe/erpnext/pull/20058">#20058</a>
+</li>
+<li>Rounding adjustment while both inclusive tax and additional discount amount are applied. <a href="https://github.com/frappe/erpnext/pull/20078">#20078</a>
+</li>
+<li>Fixed an error while doing payment reconciliation for party type Employee. <a href="https://github.com/frappe/erpnext/pull/20088">#20088</a>
+</li>
+<li>Show Closing row in General Ledger print. <a href="https://github.com/frappe/erpnext/pull/20161">#20161</a>
+</li>
+<li>New report - Stock and Account Balance Comparison. <a href="https://github.com/frappe/erpnext/pull/20226">#20226</a>
+</li>
+<li>Paid amount should not be over-written on clicking “Get Outstanding Invoices” button in Payment Entry. <a href="https://github.com/frappe/erpnext/pull/20050">#20050</a>
+</li>
+<li>Currency symbol in Sales / Purchase Register report</li>
+<li>Currency symbol in “Bank and Cash Payment Voucher” print format.</li>
+</ul>
+<h4>
+<a name="human-resource-3" class="anchor" href="#human-resource-3"></a>Human Resource</h4>
+<ul>
+<li>Fixed leave allocation on the compensatory leave request submission. <a href="https://github.com/frappe/erpnext/pull/19961">#19961</a>
+</li>
+<li>Create Payment Entry against Employee Advance to return any unclaimed amount and update returned amount in Employee Advance. <a href="https://github.com/frappe/erpnext/pull/19955">#19955</a>
+</li>
+<li>Set Party against loan accounts in an accrual journal entry for salary. <a href="https://github.com/frappe/erpnext/pull/20022">#20022</a>
+</li>
+<li>Editable loan repayment schedule after submission <a href="https://github.com/frappe/erpnext/pull/20112">#20122</a>
+</li>
+<li>Update the paid amount and status of a loan after processing salary slip against it. <a href="https://github.com/frappe/erpnext/pull/20023">#20023</a>
+</li>
+<li>Settings to disable rounded total in salary slip via HR Settings. <a href="https://github.com/frappe/erpnext/pull/20150">#20150</a>
+</li>
+<li>Submit Salary button was not showing after creating salary slip in payroll entry. <a href="https://github.com/frappe/erpnext/pull/19753">#19753</a>
+</li>
+<li>Payment Entry against payroll entry should deduct loan amount (if there are any loan deductions in salary slip). <a href="https://github.com/frappe/erpnext/pull/20194">#20194</a>
+</li>
+<li>Show only relevant “Job Offer” in Employee Onboarding based on Job Applicant</li>
+<li>Added dashboard in Employee Advance</li>
+</ul>
+<h4>
+<a name="manufacturing-4" class="anchor" href="#manufacturing-4"></a>Manufacturing</h4>
+<ul>
+<li>Fixed backflushed qty for partial receipt against a subcontracted purchase order. <a href="https://github.com/frappe/erpnext/pull/20026">#20026</a>
+</li>
+<li>Added “Set Reserve Warehouse” field in sub-contracted Purchase Order. <a href="https://github.com/frappe/erpnext/pull/19992">19992</a>
+</li>
+<li>Only shows if the supplied items table is not empty</li>
+<li>On entering a warehouse in the field, it sets / overwrites reserve warehouse in Supplied Raw Materials table.</li>
+<li>In Backflush Stock Entry against Work Order, additional cost for service items (defined in BOM) should come proportionately based on finished goods qty. <a href="https://github.com/frappe/erpnext/pull/20105">#20105</a>
+</li>
+<li>Hide transfer button in a subcontracted PO if full qty is already transferred. <a href="https://github.com/frappe/erpnext/pull/20155">#20155</a>
+</li>
+<li>Set correct valuation rate of finished goods item in case of multiple material consumptions. <a href="https://github.com/frappe/erpnext/pull/20165">#20165</a>
+</li>
+<li>Job Card creation from Work Order dashboard</li>
+</ul>
+<h4>
+<a name="stock-5" class="anchor" href="#stock-5"></a>Stock</h4>
+<ul>
+<li>Fixed ambiguous column name in the Batch query. Test by searching in any Batch link field.</li>
+<li>Fixed incorrect reorder level in Stock balance report</li>
+<li>Validate Batch for serialized items</li>
+<li>Get the outgoing rate of serial no from SLE if serial no already transferred to another company. <a href="https://github.com/frappe/erpnext/pull/20171">#20171</a>
+</li>
+<li>Deliver Note creation from Sales Order dashboard. <a href="https://github.com/frappe/erpnext/pull/20199">#20199</a>
+</li>
+</ul>
+<h4>
+<a name="others-6" class="anchor" href="#others-6"></a>Others</h4>
+<ul>
+<li>Addition and deletion of items in submitted Sales Order / Purchase Order. <a href="https://github.com/frappe/erpnext/pull/19911">#19911</a>
+</li>
+<li>Get item price based on price list considering minimum qty. <a href="https://github.com/frappe/erpnext/pull/20206">#20206</a>
+</li>
+<li>Product Bundle item should not appear in dialog on click of “Create Material Request” button. <a href="https://github.com/frappe/erpnext/pull/20216">#20216</a>
+</li>
+<li>Delete linked communications on the deletion of company transactions. <a href="https://github.com/frappe/erpnext/pull/19928">#19928</a>
+</li>
+</ul>
+<hr>
+<h3>
+<a name="frappe-framework-version-1220-httpsgithubcomfrappefrappereleasestagv1220-7" class="anchor" href="#frappe-framework-version-1220-httpsgithubcomfrappefrappereleasestagv1220-7"></a><a href="https://github.com/frappe/frappe/releases/tag/v12.2.0"> <strong>Frappe Framework Version 12.2.0</strong> </a>
+</h3>
+<h4>
+<a name="featuresenhancements-8" class="anchor" href="#featuresenhancements-8"></a>Features/Enhancements</h4>
+<ul>
+<li>Performance improvements for module view (<a href="https://github.com/frappe/frappe/pull/9258">#9258</a>)</li>
+<li>Allowed multiple webhooks for identical doctype triggers (<a href="https://github.com/frappe/frappe/pull/9208">#9208</a>)</li>
+<li>Allow Kanban creation with column data in list view (<a href="https://github.com/frappe/frappe/pull/9211">#9211</a>)</li>
+<li>Ability to add fields to quick entry through customize form(<a href="https://github.com/frappe/frappe/pull/9146">#9146</a>)</li>
+<li>Allowed tables to be sent with dates in webhook (<a href="https://github.com/frappe/frappe/pull/9171">#9171</a>)</li>
+</ul>
+<h4>
+<a name="uiux-9" class="anchor" href="#uiux-9"></a>UI/UX</h4>
+<ul>
+<li>Whitelist <a href="http://schema.org/">schema.org</a> attributes (<a href="https://github.com/frappe/frappe/pull/9125">#9125</a>)</li>
+<li>Fixed grid empty row validation (<a href="https://github.com/frappe/frappe/pull/9045">#9045</a>)</li>
+<li>Treat HTML editor as a data field in the standard filter (<a href="https://github.com/frappe/frappe/pull/9123">#9123</a>)</li>
+<li>Fixed bug in show/hide global cards (<a href="https://github.com/frappe/frappe/pull/9165">#9165</a>))</li>
+<li>Fixed validation for an email in standard filters (<a href="https://github.com/frappe/frappe/pull/9048">#9048</a>)</li>
+<li>Ignored Tag Link validation in Report (<a href="https://github.com/frappe/frappe/pull/8928">#8928</a>)</li>
+<li>Persist scope search in search page (<a href="https://github.com/frappe/frappe/pull/9207">#9207</a>)</li>
+<li>Load latest custom report instead of the latest reference report (<a href="https://github.com/frappe/frappe/pull/9192">#9192</a>)</li>
+<li>Fixed custom report load (<a href="https://github.com/frappe/frappe/pull/9221">#9221</a>)</li>
+<li>Formatting for “check” in print view (<a href="https://github.com/frappe/frappe/pull/9147">#9147</a>)</li>
+</ul>
+<h4>
+<a name="other-fixes-10" class="anchor" href="#other-fixes-10"></a>Other Fixes</h4>
+<ul>
+<li>(Re)allowed custom filters/methods to be used with jinja (<a href="https://github.com/frappe/frappe/pull/9156">#9156</a>)</li>
+<li>Fixed file duplicate check (<a href="https://github.com/frappe/frappe/pull/9162">#9162</a>)</li>
+<li>Fixed Auto Repeat. Derive next date from the start date and offset (<a href="https://github.com/frappe/frappe/pull/9178">#9178</a>)</li>
+<li>Child Table Update in New Data Import (<a href="https://github.com/frappe/frappe/pull/9131">#9131</a>)</li>
+<li>Fixed error while trying to print PDFs (<a href="https://github.com/frappe/frappe/pull/9134">#9134</a>)</li>
+<li>Made email parsing rfc5322 compliant for python3 (<a href="https://github.com/frappe/frappe/pull/9056">#9056</a>)</li>
+<li>Fixed email sending &amp; receiving issues (<a href="https://github.com/frappe/frappe/pull/9202">#9202</a>), (<a href="https://github.com/frappe/frappe/pull/9158">#9158</a>), (<a href="https://github.com/frappe/frappe/pull/9155">#9155</a>), (<a href="https://github.com/frappe/frappe/pull/9190">#9190</a>)</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="28" />
+              <span class='post-likes'>28 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/moving-average-cost-on-company-level/57763/12">Moving Average cost on company level</a>
+                        <meta itemprop='position' content='56'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jannis'><span itemprop='name'>jannis</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-16T14:55:40Z' class='post-time'>
+                    January 16, 2020,  2:55pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-16T14:55:40Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello, i use</p>
+<pre><code>#### Installed Apps
+
+**ERPNext:** v12.3.1 (version-12)
+
+**Frappe Framework:** v12.1.0 (version-12)
+</code></pre>
+<p>Which is the best way to get ERPNext v12.4.0 and Frappe v12.2.0 ?</p>
+<p>jannis</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Shan_Ruan'><span itemprop='name'>Shan_Ruan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-16T17:53:02Z' class='post-time'>
+                    January 16, 2020,  5:53pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-16T17:53:02Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Congratulations</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/suraj.jahagirdar'><span itemprop='name'>suraj.jahagirdar</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-16T17:56:03Z' class='post-time'>
+                    January 16, 2020,  5:56pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-16T17:56:03Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi Jannis you have to pull those changes.<br>
+You can use this command :<br>
+bench switch-to-branch version-12 frappe erpnext --upgrade<br>
+It will take to v12.4.0 and v12.2.0<br>
+It worked for me in my local instance</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Muzzy'><span itemprop='name'>Muzzy</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-16T18:17:33Z' class='post-time'>
+                    January 16, 2020,  6:17pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-16T18:17:33Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>If you are already on V12 then do bench update --reset from frappe-bench folder.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/jannis'><span itemprop='name'>jannis</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-17T06:08:24Z' class='post-time'>
+                    January 17, 2020,  6:08am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-17T06:17:44Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <blockquote>
+<p>jannis@ubu: cd frappe-bench</p>
+<p><code>jannis@ubu: bench switch-to-branch version-12 frappe erpnext --upgrade</code></p>
+</blockquote>
+<pre><code> jannis@ubu:~/frappe-bench$ bench update --reset from frappe-bench 
+        Usage: bench update [OPTIONS]
+        Try "bench update --help" for help.
+
+jannis@ubu:~/frappe-bench$ bench update --reset
+</code></pre>
+<p>It is a very big download.</p>
+<p>Where we have a documentation for the upgrade input?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/rmeyer'><span itemprop='name'>rmeyer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-17T21:41:04Z' class='post-time'>
+                    January 17, 2020,  9:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-17T21:41:04Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="jannis" data-post="7" data-topic="57003">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/letter_avatar_proxy/v4/letter/j/977dab/48.png" class="avatar"> jannis:</div>
+<blockquote>
+<p>bench update --reset</p>
+</blockquote>
+</aside>
+<p>That’s the correct command to reset all local changes to the code and get the newest version.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/clarkej'><span itemprop='name'>clarkej</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-18T00:35:26Z' class='post-time'>
+                    January 18, 2020, 12:35am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-18T00:44:48Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="jannis" data-post="7" data-topic="57003">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/letter_avatar_proxy/v4/letter/j/977dab/48.png" class="avatar"> jannis:</div>
+<blockquote>
+<p>bench switch-to-branch version-12 frappe erpnext --upgrade</p>
+</blockquote>
+</aside>
+<p>That --upgrade option switch applied to direct a bench update to upgrade from say v8 to v9 for eg <code>bench update --upgrade</code>.  But that --upgrade switch seems to have been deprecated a version or so ago (I think)</p>
+<p>edit: Yes that’s the case, refer to here <a href="https://discuss.frappe.io/t/upgrade-error-going-from-v8-to-v9-erpnext/28738/23" class="inline-onebox">Upgrade Error going from v8 to v9 ERPNext - #23 by abhinavjain</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/suraj.jahagirdar'><span itemprop='name'>suraj.jahagirdar</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-01-18T06:10:09Z' class='post-time'>
+                    January 18, 2020,  6:10am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-01-18T06:10:09Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/clarkej">@clarkej</a> <a class="mention" href="/u/rmeyer">@rmeyer</a> <a class="mention" href="/u/muzzy">@Muzzy</a></p>
+<p>Its true as  the members said <code> bench switch-to-branch version-12 frappe erpnext --upgrade</code> it will take to new version.<br>
+Sorry for my wrong command.<br>
+Below command is right &amp; works</p>
+<p>bench update --reset<br>
+frappe-bench$bench version<br>
+erpnext 12.4.0<br>
+frappe 12.2.0</p>
+<p>Thanks</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

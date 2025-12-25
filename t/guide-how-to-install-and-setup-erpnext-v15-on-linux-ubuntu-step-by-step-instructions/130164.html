@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[Guide] How to Install and Setup ERPNext V15 on Linux Ubuntu (step-by-step instructions) - Setup - Frappe Forum</title>
+    <meta name="description" content="Guide-to-Install-Frappe-ERPNext-in-Ubuntu-22.04-LTS
+A complete Guide to Install Frappe Bench in Ubuntu 22.04 LTS and install Frappe/ERPNext Application 
+Pre-requisites
+Python 3.10+
+Node.js 18
+Redis                       &amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/guide-how-to-install-and-setup-erpnext-v15-on-linux-ubuntu-step-by-step-instructions/130164" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[Guide] How to Install and Setup ERPNext V15 on Linux Ubuntu (step-by-step instructions)&#39;" href="https://discuss.frappe.io/t/guide-how-to-install-and-setup-erpnext-v15-on-linux-ubuntu-step-by-step-instructions/130164.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/guide-how-to-install-and-setup-erpnext-v15-on-linux-ubuntu-step-by-step-instructions/130164" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/guide-how-to-install-and-setup-erpnext-v15-on-linux-ubuntu-step-by-step-instructions/130164" />
+<meta property="og:title" content="[Guide] How to Install and Setup ERPNext V15 on Linux Ubuntu (step-by-step instructions)" />
+<meta name="twitter:title" content="[Guide] How to Install and Setup ERPNext V15 on Linux Ubuntu (step-by-step instructions)" />
+<meta property="og:description" content="Guide-to-Install-Frappe-ERPNext-in-Ubuntu-22.04-LTS A complete Guide to Install Frappe Bench in Ubuntu 22.04 LTS and install Frappe/ERPNext Application  Pre-requisites Python 3.10+ Node.js 18 Redis                                         (caching and real time updates) MariaDB 10.6.x                                (to run database driven apps) yarn 1.12+                                    (js dependency manager) pip 22+                                       (py dependency manager) wkhtmltopdf (v..." />
+<meta name="twitter:description" content="Guide-to-Install-Frappe-ERPNext-in-Ubuntu-22.04-LTS A complete Guide to Install Frappe Bench in Ubuntu 22.04 LTS and install Frappe/ERPNext Application  Pre-requisites Python 3.10+ Node.js 18 Redis                                         (caching and real time updates) MariaDB 10.6.x                                (to run database driven apps) yarn 1.12+                                    (js dependency manager) pip 22+                                       (py dependency manager) wkhtmltopdf (v..." />
+<meta property="og:article:section" content="Install / Update" />
+<meta property="og:article:section:color" content="B3B5B4" />
+<meta property="og:article:section" content="Setup" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:tag" content="installation" />
+<meta property="og:article:tag" content="erpnext" />
+<meta property="og:article:tag" content="frappe" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="5 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="9 ❤" />
+<meta property="article:published_time" content="2024-08-03T07:03:42+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"[Guide] How to Install and Setup ERPNext V15 on Linux Ubuntu (step-by-step instructions)","mainEntity":{"@type":"Question","name":"[Guide] How to Install and Setup ERPNext V15 on Linux Ubuntu (step-by-step instructions)","text":"<a name=\"guide-to-install-frappe-erpnext-in-ubuntu-2204-lts-1\" class=\"anchor\" href=\"#guide-to-install-frappe-erpnext-in-ubuntu-2204-lts-1\"><\/a>Guide-to-Install-Frappe-ERPNext-in-Ubuntu-22.04-LTS\n\nA complete Guide to Install Frappe Bench in Ubuntu 22.04 LTS and install Frappe/ERPNext Application\n\n<a name=\"pre-requisites-2\" class=\"anchor\" href=\"#pre-requisites-2\"><\/a>Pre-requisites\n\nPython 3.10+\n\nNode.js 18\n\nRedis                                         (caching and real time updates)\n\nMariaDB 10.6.x                &hellip;","upvoteCount":8,"answerCount":1,"datePublished":"2024-08-03T07:03:42.751Z","author":{"@type":"Person","name":"Abhishek_Chougule","url":"https://discuss.frappe.io/u/Abhishek_Chougule"},"acceptedAnswer":{"@type":"Answer","text":"if got any enviroment error here:\n\nsudo -H pip install frappe-bench\n\nuse this command instead : ( Clean Installation But Use it on your Own Risk )\n\nsudo -H pip install frappe-bench --break-system-packages","upvoteCount":1,"datePublished":"2025-07-04T12:45:46.115Z","url":"https://discuss.frappe.io/t/guide-how-to-install-and-setup-erpnext-v15-on-linux-ubuntu-step-by-step-instructions/130164/2","author":{"@type":"Person","name":"Abhishek_Chougule","url":"https://discuss.frappe.io/u/Abhishek_Chougule"}}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/guide-how-to-install-and-setup-erpnext-v15-on-linux-ubuntu-step-by-step-instructions/130164">[Guide] How to Install and Setup ERPNext V15 on Linux Ubuntu (step-by-step instructions)</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/bench/13" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #B3B5B4'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Install / Update</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/bench/setup/33" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Setup</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/installation' class='discourse-tag' rel="tag">installation</a>, 
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>, 
+            <a href='https://discuss.frappe.io/tag/frappe' class='discourse-tag' rel="tag">frappe</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[Guide] How to Install and Setup ERPNext V15 on Linux Ubuntu (step-by-step instructions)'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/guide-how-to-install-and-setup-erpnext-v15-on-linux-ubuntu-step-by-step-instructions/130164'>
+      <meta itemprop='datePublished' content='2024-08-03T07:03:42Z'>
+        <meta itemprop='articleSection' content='Setup'>
+      <meta itemprop='keywords' content='installation, erpnext, frappe'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abhishek_Chougule'><span itemprop='name'>Abhishek_Chougule</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/guide-how-to-install-and-setup-erpnext-v15-on-linux-ubuntu-step-by-step-instructions/130164">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2024-08-03T07:03:42Z' class='post-time'>
+                    August 3, 2024,  7:03am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-03T07:03:42Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <h1><a name="guide-to-install-frappe-erpnext-in-ubuntu-2204-lts-1" class="anchor" href="#guide-to-install-frappe-erpnext-in-ubuntu-2204-lts-1"></a>Guide-to-Install-Frappe-ERPNext-in-Ubuntu-22.04-LTS</h1>
+<p>A complete Guide to Install Frappe Bench in Ubuntu 22.04 LTS and install Frappe/ERPNext Application</p>
+<h3><a name="pre-requisites-2" class="anchor" href="#pre-requisites-2"></a>Pre-requisites</h3>
+<pre><code class="lang-auto">Python 3.10+
+Node.js 18
+Redis                                         (caching and real time updates)
+MariaDB 10.6.x                                (to run database driven apps)
+yarn 1.12+                                    (js dependency manager)
+pip 22+                                       (py dependency manager)
+wkhtmltopdf (version 0.12.6 with patched qt)  (for pdf generation)
+cron                                          (bench's scheduled jobs: automated certificate renewal, scheduled backups)
+NGINX                                         (proxying multitenant sites in production)
+</code></pre>
+<h3><a name="step-1-update-server-3" class="anchor" href="#step-1-update-server-3"></a>STEP 1 Update Server</h3>
+<p>It is always a good idea to upgrade the Ubuntu package if anything is available, run the below command to upgrade and update.</p>
+<pre><code class="lang-auto">sudo apt update &amp;&amp; sudo apt upgrade -y
+</code></pre>
+<p>Check the server’s current timezone</p>
+<pre><code class="lang-auto">date
+</code></pre>
+<p>Set correct timezone as per your region</p>
+<pre><code class="lang-auto">sudo timedatectl set-timezone "Asia/Kolkata"
+</code></pre>
+<p>You can run the following command to select your timezone.</p>
+<pre><code class="lang-auto">timedatectl list-timezones
+</code></pre>
+<p>It is always recommended to reboot the server once the upgrade is done.</p>
+<pre><code class="lang-auto">sudo reboot
+</code></pre>
+<h3><a name="step-2-create-a-new-user-4" class="anchor" href="#step-2-create-a-new-user-4"></a>STEP 2  Create a new user</h3>
+<p>I am using <strong>erpnext</strong> as frappe-user</p>
+<h4><a name="you-should-not-use-_frappe_-or-_erpnext_-as-a-frappe-user-on-your-production-server-5" class="anchor" href="#you-should-not-use-_frappe_-or-_erpnext_-as-a-frappe-user-on-your-production-server-5"></a>you should not use <em>frappe</em> or <em>erpnext</em> as a frappe-user on your production server.</h4>
+<pre><code class="lang-auto">sudo adduser erpnext
+sudo usermod -aG sudo erpnext
+su - erpnext
+</code></pre>
+<h3><a name="step-3-install-git-6" class="anchor" href="#step-3-install-git-6"></a>STEP 3 Install git</h3>
+<p>Git is the most commonly used version control system. Git tracks the changes you make to files, so you have a record of what has been done, and you can revert to specific versions should you ever need to. Git also makes collaboration easier, allowing changes by multiple people to all be merged into one source.</p>
+<pre><code class="lang-auto">sudo apt install git -y
+</code></pre>
+<h3><a name="step-4-install-software-properties-common-7" class="anchor" href="#step-4-install-software-properties-common-7"></a>STEP 4 Install software-properties-common</h3>
+<p>Now install the below package to manage the repository, usually, Ubuntu 22.04 has already installed it, but for the safe side, we will run this command.</p>
+<pre><code class="lang-auto">sudo apt install software-properties-common -y
+</code></pre>
+<p>If prompt for “Override local changes to /etc/pam.d/common-*?” on PAM Configuration, then safely choose “No”.</p>
+<h4><a name="add-deadsnakes-ppa-for-newer-python-versions-optional-8" class="anchor" href="#add-deadsnakes-ppa-for-newer-python-versions-optional-8"></a>Add deadsnakes PPA for newer Python versions (Optional)</h4>
+<pre><code class="lang-auto">sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt update
+</code></pre>
+<h3><a name="step-5-install-python3-dev-and-python3-venv-9" class="anchor" href="#step-5-install-python3-dev-and-python3-venv-9"></a>STEP 5 Install python3-dev and python3-venv</h3>
+<p>Python-dev is the package that contains the header files for the Python C API, which is used by lxml because it includes Python C extensions for high performance.</p>
+<pre><code class="lang-auto">sudo apt install python3-dev python3-venv -y
+</code></pre>
+<h3><a name="step-6-install-setuptools-pip-and-etc-pythons-package-manager-10" class="anchor" href="#step-6-install-setuptools-pip-and-etc-pythons-package-manager-10"></a>STEP 6 Install setuptools, pip and etc. (Python’s Package Manager).</h3>
+<p>Setuptools is a collection of enhancements to the Python distutils, allowing developers to more easily build and distribute Python packages, especially those that have dependencies on other packages. Packages built and distributed using setuptools appear to the user as ordinary Python packages based on the distutils.</p>
+<p>Pip is a package manager for Python. It’s a tool that allows you to install and manage additional libraries and dependencies that are not distributed as part of the standard library.</p>
+
+<pre><code class="lang-auto">sudo apt install python3-setuptools python3-pip -y
+</code></pre>
+
+<h3><a name="step-7-install-redis-server-11" class="anchor" href="#step-7-install-redis-server-11"></a>STEP 7 Install Redis server</h3>
+<p>Redis can be used to process and analyze data in memory, this is prerequisite for ERPNext.</p>
+<pre><code class="lang-auto">sudo apt install redis-server -y
+</code></pre>
+<h3><a name="step-8-install-wkhtmltopdf-12" class="anchor" href="#step-8-install-wkhtmltopdf-12"></a>STEP 8 install wkhtmltopdf</h3>
+<p>Wkhtmltopdf is an open source simple and much effective command-line shell utility that enables user to convert any given HTML (Web Page) to PDF document or an image (jpg, png, etc).</p>
+<pre><code class="lang-auto">sudo apt install xvfb libfontconfig1 fontconfig libxrender1 xfonts-base xfonts-75dpi -y
+</code></pre>
+<h4><a name="for-amd64-13" class="anchor" href="#for-amd64-13"></a>for amd64</h4>
+<pre><code class="lang-auto">wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-3/wkhtmltox_0.12.6.1-3.jammy_amd64.deb &amp;&amp; \
+sudo dpkg -i wkhtmltox_0.12.6.1-3.jammy_amd64.deb &amp;&amp; \
+sudo cp /usr/local/bin/wkhtmlto* /usr/bin/ &amp;&amp; \
+sudo chmod a+x /usr/bin/wk*
+sudo rm wk* &amp;&amp; \
+sudo apt --fix-broken install -y
+</code></pre>
+
+
+<h3><a name="step-9-install-mariadb-14" class="anchor" href="#step-9-install-mariadb-14"></a>STEP 9 Install MariaDB</h3>
+<pre><code class="lang-auto">sudo apt install mariadb-server mariadb-client -y
+</code></pre>
+
+<pre><code class="lang-auto">sudo mysql_secure_installation
+</code></pre>
+<h4><a name="prompt-15" class="anchor" href="#prompt-15"></a>Prompt</h4>
+<pre><code class="lang-auto">Enter current password for root (enter for none):   (safely press Enter)
+Switch to unix_socket authentication [Y/n]          (Press "Y")
+Change the root password? [Y/n]                     (Press "Y")
+New password:                                       ("Enter new Password")
+Re-enter new password:                              ("Re-enter new Password")
+Remove anonymous users? [Y/n]                       (Press "Y")
+Disallow root login remotely? [Y/n]                 (Press "Y") //If Press "N" then You want to access the database from a remote server for using business analytics software like Metabase / PowerBI / Tableau, etc.
+Remove test database and access to it? [Y/n]        (Press "Y")
+Reload privilege tables now? [Y/n]                  (Press "Y")
+</code></pre>
+<h3><a name="step-10-mysql-database-development-files-16" class="anchor" href="#step-10-mysql-database-development-files-16"></a>STEP 10  MySQL database development files</h3>
+<pre><code class="lang-auto">sudo apt install libmysqlclient-dev -y
+</code></pre>
+<h3><a name="step-11-edit-the-mariadb-configuration-unicode-character-encoding-17" class="anchor" href="#step-11-edit-the-mariadb-configuration-unicode-character-encoding-17"></a>STEP 11 Edit the mariadb configuration (unicode character encoding)</h3>
+<p>You need to ensure to change the default character set of MySQL or MariaDB to Unicode instead of general. To do this you will need to edit the maria DB configuration file which is in this version located at /etc/mysql/mariadb.conf.d directory so you can directly edit this or locate the folder and then edit the file by typing the below command.</p>
+<pre><code class="lang-auto">sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
+</code></pre>
+<p>Once the file opens you need to locate the line where collation-server says general and you need to modify it to Unicode as below,</p>
+<pre><code class="lang-auto">collation-server = utf8mb4_general_ci
+</code></pre>
+<p>Modify above as below.</p>
+<pre><code class="lang-auto">collation-server = utf8mb4_unicode_ci
+</code></pre>
+<p>Now press (Ctrl-X) and Save then exit.</p>
+<p>And also locate my.cnf and edit the below configuration.</p>
+<pre><code class="lang-auto">sudo nano /etc/mysql/my.cnf
+</code></pre>
+<p>Make sure your configuration has the below lines in the file.</p>
+<pre><code class="lang-auto">[mysqld]
+character-set-client-handshake = FALSE
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+bind-address = 127.0.0.1
+
+[mysql]
+default-character-set = utf8mb4
+</code></pre>
+<p>Now press (Ctrl-X) and Save then exit.</p>
+<p>Now MySQL or MariaDB setup is now ready, let us now restart this service. You can alternatively reboot as well.</p>
+<pre><code class="lang-auto">sudo service mysql restart
+</code></pre>
+<h3><a name="step-12-install-nodejs-package-18" class="anchor" href="#step-12-install-nodejs-package-18"></a>STEP 12 install Node.js package</h3>
+<pre><code class="lang-auto">sudo apt install curl &amp;&amp; \
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash &amp;&amp; \
+source ~/.profile &amp;&amp; \
+nvm install 18
+</code></pre>
+
+<p>Now it has been installed, you can now check the version by typing the below command.</p>
+<pre><code class="lang-auto">node -v
+</code></pre>
+<h3><a name="step-13-install-npm-and-yarn-19" class="anchor" href="#step-13-install-npm-and-yarn-19"></a>STEP 13 Install NPM and Yarn</h3>
+<p>Now we will install Yarn which is a software packaging system developed by Facebook for Node.js, this is open source, so we will install it using npm.</p>
+<pre><code class="lang-auto">sudo apt install npm
+sudo npm install -g yarn
+</code></pre>
+<p>Now our server is ready for the installation of the frappe environment, let us now dive into the frappe environment installation.</p>
+<h3><a name="step-15-bench-installation-20" class="anchor" href="#step-15-bench-installation-20"></a>STEP 15 Bench Installation</h3>
+<p>The bench is a Command-line tool to manage Frappe Deployments, this tool has various commands, the frappe uses the bench for the command-line tool as well as for the bench directory, so don’t confuse yourself. We will first install the bench package which will be used to set up a frappe environment, create a site, do backup, change the setup, and so on. In short, Bench provides a user-friendly interface to set up and manage multiple frappe-based applications and sites where erpnext is one of the applications.</p>
+<p>Now let us install the bench</p>
+<pre><code class="lang-auto">sudo -H pip install frappe-bench
+</code></pre>
+<p>It will install a bench and will give you a message that the bench is installed successfully, now you can use various bench commands. Starting with the command “bench”.</p>
+<h3><a name="step-15-install-frappe-bench-environment-using-bench-cli-21" class="anchor" href="#step-15-install-frappe-bench-environment-using-bench-cli-21"></a>STEP 15 Install Frappe-Bench Environment using bench CLI</h3>
+<p>Let us now create the frappe-bench environment. Here you have to decide the purpose for which you are installing ERPNext, it is just for test or training then you can use the latest version, which will be developing and may not be stable. However you can also use a stable version by choosing a specific version, You can search and learn which is the stable version today.</p>
+<p>To choose a specific stable version (for Production) you can use the branch version. I will be using branch version 15 in this installation. You can look for the latest stable release of the frappe environment.</p>
+<pre><code class="lang-auto">bench init frappe-bench --verbose --frappe-branch version-15
+</code></pre>
+
+<p>Now frappe bench environment is installed using bench CLI.</p>
+<p>Now you can use various bench commands by changing the directory. So you can need to change the directory.</p>
+<pre><code class="lang-auto">cd frappe-bench
+</code></pre>
+<p>Once you type “bench” you will see the various commands that bench cli has. Don’t worry, we will not be using all the commands, we just need to install EPRNext but have a quick look at these commands.</p>
+<h3><a name="step-16-erpnext-installation-on-frappe-environment-22" class="anchor" href="#step-16-erpnext-installation-on-frappe-environment-22"></a>STEP 16 ERPNext Installation on Frappe Environment</h3>
+<p>make sure that your working directory is frappe-bench.</p>
+<p>Now you need to get the app from the frappe repository, have two options, either clone the latest development package, which is not stable currently, or install the stable package. I have given both options for you to choose from.</p>
+
+<p>Frappe and ERPNext version would be same for a proper installation. We will be installing ERPNext Version 15, for that, We will be using the below command.</p>
+<pre><code class="lang-auto">bench get-app erpnext --branch version-15
+</code></pre>
+<p>Payments app is mandatory from ERPNext version-15.</p>
+<pre><code class="lang-auto">bench get-app payments --branch version-15
+</code></pre>
+<p>From any of the options, it will clone the next application into the app’s directory of the frappe-bench directory. You don’t need to do anything with the directories. Just ensure that erpnext is available in the directory.</p>
+<p>Now you have the application installed in your environment. The next step is to install the application on-site, but before that, we need to create a new site.</p>
+<h5><a name="run-bench-start-then-open-another-terminal-window-then-go-to-the-frappe-bench-directory-and-start-from-there-23" class="anchor" href="#run-bench-start-then-open-another-terminal-window-then-go-to-the-frappe-bench-directory-and-start-from-there-23"></a>Run <code>bench start</code> then open another terminal window, then go to the “frappe-bench” directory and start from there</h5>
+ 
+<p>To create a site, we will use the bench command as below</p>
+<pre><code class="lang-auto">bench new-site erp.YOURDOMAIN.COM
+</code></pre>
+<p>Now site is deployed, by default frappe application will be installed at site. Don’t open the site yet, because we need to install ERPNext to the site.</p>
+<h4><a name="make-sure-your-sub-domain-properly-configured-to-access-this-server-where-you-hosted-your-domain-24" class="anchor" href="#make-sure-your-sub-domain-properly-configured-to-access-this-server-where-you-hosted-your-domain-24"></a>Make sure your sub-domain properly configured to access this server, where you hosted your domain.</h4>
+<p>If you have not created subdomain, then create a subdomain (preferred) <a href="http://erp.YOURDOMAIN.COM" rel="noopener nofollow ugc">erp.YOURDOMAIN.COM</a>. Then Change DNS records as below:</p>
+<pre><code class="lang-auto">Hostname                Type    Value               TTL
+erp.YOURDOMAIN.COM      A       ERPNext-Server-IP   1800
+www.erp.YOURDOMAIN.COM  A       ERPNext-Server-IP   1800
+</code></pre>
+<p>Run the below command to install ERPNext to the site that you have recently created</p>
+<pre><code class="lang-auto">bench --site erp.YOURDOMAIN.COM install-app erpnext
+</code></pre>
+<p>it will take a few moments to install the erpnext application on your site.</p>
+<p>Now as we created a new site, we need to make sure this is our default site, so we have to tell bench to use this site as default by using the below command</p>
+<pre><code class="lang-auto">bench use erp.YOURDOMAIN.COM
+bench start
+</code></pre>
+<p>Now ERPNext is installed on your server and you are ready to configure it. But before configuring there are few more steps in case you want to use this for production.</p>
+
+<h3><a name="step-17-production-deployment-25" class="anchor" href="#step-17-production-deployment-25"></a>STEP 17 Production Deployment</h3>
+<p>We will use an automatic bench set up for production by using the below command.</p>
+<h4><a name="automatic-method-26" class="anchor" href="#automatic-method-26"></a>Automatic Method:</h4>
+<p>run <strong>two</strong> times</p>
+<pre><code class="lang-auto">sudo bench setup production $USER
+</code></pre>
+<h4><a name="manual-method-27" class="anchor" href="#manual-method-27"></a>Manual Method:</h4>
+<h5><a name="setup-bench-supervisor-28" class="anchor" href="#setup-bench-supervisor-28"></a>Setup Bench Supervisor</h5>
+<p>In case the supervisor is not installed you can use the below command</p>
+<pre><code class="lang-auto">sudo apt -y install supervisor
+bench setup supervisor
+sudo ln -s `pwd`/config/supervisor.conf /etc/supervisor/conf.d/frappe-bench.conf
+</code></pre>
+<h5><a name="setup-bench-nginx-29" class="anchor" href="#setup-bench-nginx-29"></a>Setup Bench NginX</h5>
+<pre><code class="lang-auto">bench setup nginx
+sudo ln -s `pwd`/config/nginx.conf /etc/nginx/conf.d/frappe-bench.conf
+</code></pre>
+<p>Now you will get a message saying that <a href="http://erp.YOURDOMAIN.COM" rel="noopener nofollow ugc">erp.YOURDOMAIN.COM</a> is on port 80</p>
+<p>You can simply open <a href="http://erp.YOURDOMAIN.COM" rel="noopener nofollow ugc">erp.YOURDOMAIN.COM</a> in your web browser and check it will work fine.</p>
+<h3><a name="step-18-erpnext-ssl-installation-nginx-30" class="anchor" href="#step-18-erpnext-ssl-installation-nginx-30"></a>STEP 18 ERPNext SSL Installation NginX</h3>
+<p>Now your site is ready, you must configure the SSL certificate, I have explained that in simple steps.</p>
+<p>First, we will install spanny package as below</p>
+<pre><code class="lang-auto">bench config dns_multitenant on
+sudo pip install -U pyOpenSSL cryptography
+sudo pip install certbot
+sudo bench setup lets-encrypt erp.YOURDOMAIN.COM
+</code></pre>
+<h4><a name="if-getting-error-like-some-challenges-have-failed-then-open-port-80-and-443-or-try-below-commands-31" class="anchor" href="#if-getting-error-like-some-challenges-have-failed-then-open-port-80-and-443-or-try-below-commands-31"></a>if getting error like “Some challenges have failed.”, then open port 80 and 443 or try below commands</h4>
+<pre><code class="lang-auto">sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 80 -j ACCEPT
+sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 443 -j ACCEPT
+sudo netfilter-persistent save
+sudo systemctl restart nginx
+</code></pre>
+<h3><a name="step-19-if-getting-error-13-on-bench-restart-optional-32" class="anchor" href="#step-19-if-getting-error-13-on-bench-restart-optional-32"></a>STEP 19 If getting [Error 13] on bench restart (Optional)</h3>
+<h4><a name="error-class-permissionerror-errno-13-permission-denied-file-usrlibpython3dist-packagessupervisorxmlrpcpy-line-560-33" class="anchor" href="#error-class-permissionerror-errno-13-permission-denied-file-usrlibpython3dist-packagessupervisorxmlrpcpy-line-560-33"></a>error: &lt;class ‘PermissionError’&gt;, [Errno 13] Permission denied: file: /usr/lib/python3/dist-packages/supervisor/xmlrpc.py line: 560</h4>
+<pre><code class="lang-auto">sudo addgroup supervisor
+sudo usermod -aG supervisor erpnext
+</code></pre>
+<p>After logging-out/logging-in (so that the new group membership takes effect), edit the supervisord configuration file (/etc/supervisor/supervisord.conf) to make the unix_http_server section look as follows</p>
+<pre><code class="lang-auto">sudo nano /etc/supervisor/supervisord.conf
+</code></pre>
+<p><em>[unix_http_server] <br>
+file=/var/run/supervisor.sock ; (the path to the socket file) <br>
+<strong>chmod=0760</strong> ; socket file mode (default 0700) <br>
+<strong>chown=erpnext:erpnext</strong></em></p>
+<pre><code class="lang-auto">sudo service supervisor restart
+sudo supervisorctl stop all
+sudo bench setup production erpnext
+</code></pre>
+<h3><a name="step-20-if-_js_-and-_css_-files-are-not-loading-on-login-window-run-the-following-command-optional-34" class="anchor" href="#step-20-if-_js_-and-_css_-files-are-not-loading-on-login-window-run-the-following-command-optional-34"></a>STEP 20 If <em>js</em> and <em>css</em> files are not loading on login window, run the following command (Optional)</h3>
+<pre><code class="lang-auto">sudo chmod o+x /home/$USER
+</code></pre>
+<h3><a name="if-getting-spawn-error-on-bench-restart-35" class="anchor" href="#if-getting-spawn-error-on-bench-restart-35"></a>if getting spawn error on <code>bench restart</code></h3>
+<pre><code class="lang-auto">bench setup socketio &amp;&amp; \
+bench setup supervisor &amp;&amp; \
+bench setup redis &amp;&amp; \
+sudo supervisorctl reload
+</code></pre>
+<h4><a name="optional-modules-open-new-terminal-36" class="anchor" href="#optional-modules-open-new-terminal-36"></a>Optional Modules (open new terminal):</h4>
+<pre><code class="lang-auto">bench get-app --branch version-15 india_compliance https://github.com/resilient-tech/india-compliance
+bench --site erp.YOURDOMAIN.COM install-app india_compliance
+
+bench get-app hrms --branch version-15
+bench --site erp.YOURDOMAIN.COM install-app hrms
+
+bench get-app chat
+bench --site erp.YOURDOMAIN.COM install-app chat
+
+bench get-app desk_navbar_extended https://github.com/gavindsouza/desk-navbar-extended
+bench --site erp.YOURDOMAIN.COM install-app desk_navbar_extended
+
+bench get-app persona https://github.com/iptelephony/persona
+bench --site erp.YOURDOMAIN.COM install-app persona
+
+bench get-app print_designer
+bench --site erp.YOURDOMAIN.COM install-app print_designer
+
+bench get-app builder
+bench --site erp.YOURDOMAIN.COM install-app builder
+
+bench get-app --branch version-15 it_management https://github.com/phamos-eu/it_management
+bench --site erp.YOURDOMAIN.COM install-app it_management
+
+bench get-app raven https://github.com/The-Commit-Company/Raven
+bench --site erp.YOURDOMAIN.COM install-app raven
+
+bench get-app helpdesk
+bench --site erp.YOURDOMAIN.COM install-app frappedesk #(Not recommended on same site)
+
+bench get-app insights
+bench --site erp.YOURDOMAIN.COM install-app insights #(Not recommended on same site)
+
+bench get-app drive
+bench --site erp.YOURDOMAIN.COM install-app drive #(Not recommended on same site)
+</code></pre>
+<p>
+  <b>Thank You!🙏</b>
+</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="8" />
+              <span class='post-likes'>8 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/erpnext-wont-get-installed/131095/4">ERPNext wont get installed</a>
+                        <meta itemprop='position' content='2'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/visit-helpdesk-leads-to-blank-page/138028/5">Visit HelpDesk leads to blank page</a>
+                        <meta itemprop='position' content='3'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abhishek_Chougule'><span itemprop='name'>Abhishek_Chougule</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-07-04T12:45:46Z' class='post-time'>
+                    July 4, 2025, 12:45pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-07-04T12:45:46Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>if got any <strong>enviroment error</strong> here:</p>
+<pre><code>sudo -H pip install frappe-bench
+</code></pre>
+<blockquote>
+<p>use this command instead : ( Clean Installation But Use it on your Own Risk )</p>
+</blockquote>
+<pre><code>sudo -H pip install frappe-bench --break-system-packages
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

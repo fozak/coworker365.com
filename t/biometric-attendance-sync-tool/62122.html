@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Biometric Attendance Sync Tool - Announcements - Frappe Forum</title>
+    <meta name="description" content="We have made the first release of our tool that syncs data from your Biometric Attendance System to your ERPNext instance. 
+This system needs to be set up separately from your ERPNext instance; Hopefully, you find the RE&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/biometric-attendance-sync-tool/62122" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Biometric Attendance Sync Tool&#39;" href="https://discuss.frappe.io/t/biometric-attendance-sync-tool/62122.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/biometric-attendance-sync-tool/62122" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/biometric-attendance-sync-tool/62122" />
+<meta property="og:title" content="Biometric Attendance Sync Tool" />
+<meta name="twitter:title" content="Biometric Attendance Sync Tool" />
+<meta property="og:description" content="We have made the first release of our tool that syncs data from your Biometric Attendance System to your ERPNext instance.  This system needs to be set up separately from your ERPNext instance; Hopefully, you find the README and the Wiki adequate.  Contributions welcome 🙂    The release has two attached assets which consist of Windows binaries for 32 and 64 bit respectively. For *nix systems we recommend running directly from source*.  * Follow the README for more information" />
+<meta name="twitter:description" content="We have made the first release of our tool that syncs data from your Biometric Attendance System to your ERPNext instance.  This system needs to be set up separately from your ERPNext instance; Hopefully, you find the README and the Wiki adequate.  Contributions welcome 🙂    The release has two attached assets which consist of Windows binaries for 32 and 64 bit respectively. For *nix systems we recommend running directly from source*.  * Follow the README for more information" />
+<meta property="og:article:section" content="Announcements" />
+<meta property="og:article:section:color" content="283890" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="31 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="72 ❤" />
+<meta property="article:published_time" content="2020-05-29T08:06:40+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="/t/biometric-attendance-sync-tool/62122?page=2">
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Biometric Attendance Sync Tool","mainEntity":{"@type":"Question","name":"Biometric Attendance Sync Tool","text":"We have made the first release of our tool that syncs data from your Biometric Attendance System to your ERPNext instance.\n\nThis system needs to be set up separately from your ERPNext instance; Hopefully, you find the README and the Wiki adequate.\n\nContributions welcome :slight_smile:\n\n[imag&hellip;","upvoteCount":23,"answerCount":0,"datePublished":"2020-05-29T08:06:40.068Z","author":{"@type":"Person","name":"gavindsouza","url":"https://discuss.frappe.io/u/gavindsouza"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/biometric-attendance-sync-tool/62122">Biometric Attendance Sync Tool</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/announcement/20" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #283890'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Announcements</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Biometric Attendance Sync Tool'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/biometric-attendance-sync-tool/62122'>
+      <meta itemprop='datePublished' content='2020-05-29T08:06:40Z'>
+        <meta itemprop='articleSection' content='Announcements'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/gavindsouza'><span itemprop='name'>gavindsouza</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/biometric-attendance-sync-tool/62122">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2020-05-29T08:06:40Z' class='post-time'>
+                    May 29, 2020,  8:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-29T08:16:04Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We have made the first release of our tool that syncs data from your Biometric Attendance System to your ERPNext instance.</p>
+<p>This system needs to be set up separately from your ERPNext instance; Hopefully, you find the README and the Wiki adequate.</p>
+<p>Contributions welcome <img src="https://discuss.frappe.io/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/frappe/biometric-attendance-sync-tool/releases/tag/v1.0">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/frappe/biometric-attendance-sync-tool/releases/tag/v1.0" target="_blank" rel="noopener">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/345;"><img src="https://opengraph.githubassets.com/8c03ec05aeafd3342a50b0c84431673f4b7a3da78f909451e8325e15121679c1/frappe/biometric-attendance-sync-tool/releases/tag/v1.0" class="thumbnail" width="690" height="345"></div>
+
+<h3><a href="https://github.com/frappe/biometric-attendance-sync-tool/releases/tag/v1.0" target="_blank" rel="noopener">Release v1.0 · frappe/biometric-attendance-sync-tool</a></h3>
+
+  <p>This is the first release of our Biometric Attendance Sync Tool 🎉
+What this project maintains?
+
+Sync tool which updates directly from the set config file
+GUI which interfaces over that
+
+What does t...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>The release has two attached assets which consist of Windows binaries for 32 and 64 bit respectively. For *nix systems we recommend running directly from source*.</p>
+<p>* <em>Follow the README for more information</em></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="23" />
+              <span class='post-likes'>23 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/olamide_shodunke'><span itemprop='name'>olamide_shodunke</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-29T08:25:04Z' class='post-time'>
+                    May 29, 2020,  8:25am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-29T08:25:04Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Good Job <a class="mention" href="/u/gavindsouza">@gavindsouza</a></p>
+<p>In your Wiki it says this only works over LAN</p>
+<p>If my ERPNext is on AWS how will this work ?</p>
+<p>Once again good job</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/wale'><span itemprop='name'>wale</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-29T14:41:27Z' class='post-time'>
+                    May 29, 2020,  2:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-29T14:41:27Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/olamide_shodunke">@olamide_shodunke</a></p>
+<p>Trust you’re cool. I believe the LAN part refers to the local connection between your biometric device and your machine (computer). I would expect that once the tool is installed on the relevant machine, it should sync the logs to your remote ERPNext instance - regardless of where it’s hosted</p>
+<p>In any case, I’ll also be looking forward to a confirmation from <a class="mention" href="/u/gavindsouza">@gavindsouza</a> on this</p>
+<p>Cheers!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/karthikeyan5'><span itemprop='name'>karthikeyan5</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-29T15:36:03Z' class='post-time'>
+                    May 29, 2020,  3:36pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-29T15:36:03Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/olamide_shodunke">@olamide_shodunke</a>, what <a class="mention" href="/u/wale">@wale</a> says is accurate. The tool needs to be able to communicate with your biometric device via TCP/IP. So, it is usually the case that it needs to run on the same LAN Network as the biometric device.</p>
+<p>To sync these fetched logs to your ERPNext instance it uses API access, so if you are able to access your ERPNext instance on your browser, the tool too can access the APIs from a similar location/network.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/olamide_shodunke'><span itemprop='name'>olamide_shodunke</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-29T16:40:06Z' class='post-time'>
+                    May 29, 2020,  4:40pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-29T16:40:06Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks guys, will let you know what is up after I test it</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/yashodhan'><span itemprop='name'>yashodhan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-29T21:51:03Z' class='post-time'>
+                    May 29, 2020,  9:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-29T21:51:03Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>SSH tunnel would easily help you get job done, no matter where your device and server is hosted.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/EnSeal'><span itemprop='name'>EnSeal</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-06-03T19:33:37Z' class='post-time'>
+                    June 3, 2020,  7:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-06-03T19:33:37Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/gavindsouza">@gavindsouza</a> nice one here</p>
+<p>However, i am trying to set this up on my Windows environment, i have launched and loaded the GUI and Config file but nothing is happening</p>
+<p>How can i tell the Clock is actually communicating with the GUI and also how do i tell the App is communicating with my ERPnext site</p>
+<p>Will appreciate a little guide on this</p>
+<p>Warm regards</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Vivek_Champ'><span itemprop='name'>Vivek_Champ</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-06-04T02:56:10Z' class='post-time'>
+                    June 4, 2020,  2:56am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-06-04T02:56:10Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>HAI All.,</p>
+<p>I am also strucked here. That windows service is started  and existing record are synced from device to my ERPNEXT instance(Previous month record from device for the particular date which is mention in shift type  and attendance status absent too) but employee check-in is not getting created . Live punch record also not created.Kindly help to solve this issues.</p>
+<p>Thanks in advance.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/EnSeal'><span itemprop='name'>EnSeal</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-06-04T04:20:00Z' class='post-time'>
+                    June 4, 2020,  4:20am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-06-04T04:20:00Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey <a class="mention" href="/u/vivek_champ">@Vivek_Champ</a></p>
+<p>How were you able to make it sync in the first place.?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Vivek_Champ'><span itemprop='name'>Vivek_Champ</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-06-04T04:26:37Z' class='post-time'>
+                    June 4, 2020,  4:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-06-04T04:26:37Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/enseal">@EnSeal</a> In shift doctype i put value for  Process Attendance After and  Last Sync of Checkin.  So from the device it takes the attendance from date to Last Sync of Checkin date.</p>
+<p>Eg:  Attendance From Date :  01.05.2020<br>
+Last Sync of Checkin     :   30.05.2020</p>
+<p>For mentioned date for all employees attdendance is marked as absent without creating Employee checkin</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Vivek_Champ'><span itemprop='name'>Vivek_Champ</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-06-04T10:17:24Z' class='post-time'>
+                    June 4, 2020, 10:17am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-06-04T10:17:24Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/karthikeyan5">@karthikeyan5</a>   <a class="mention" href="/u/gavindsouza">@gavindsouza</a></p>
+<p>Please guide for further.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Mahendra_Rohit'><span itemprop='name'>Mahendra_Rohit</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-06-29T12:34:29Z' class='post-time'>
+                    June 29, 2020, 12:34pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-10-06T22:42:26Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <pre><code class="lang-auto">2020-06-29 17:51:12,336	ERROR	Error during ERPNext API Call.	31498	1593430026.0	test_1	None	Traceback (most recent call last):
+  File "/home/yumsum/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.api.handle()
+  File "/home/yumsum/frappe-bench/apps/frappe/frappe/api.py", line 55, in handle
+    return frappe.handler.handle()
+  File "/home/yumsum/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/yumsum/frappe-bench/apps/frappe/frappe/handler.py", line 61, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/yumsum/frappe-bench/apps/frappe/frappe/__init__.py", line 1054, in call
+    return fn(*args, **newargs)
+  File "/home/yumsum/frappe-bench/apps/erpnext/erpnext/hr/doctype/employee_checkin/employee_checkin.py", line 70, in add_log_based_on_employee_field
+    doc.insert()
+  File "/home/yumsum/frappe-bench/apps/frappe/frappe/model/document.py", line 231, in insert
+    self._validate()
+  File "/home/yumsum/frappe-bench/apps/frappe/frappe/model/document.py", line 461, in _validate
+    self._validate_mandatory()
+  File "/home/yumsum/frappe-bench/apps/frappe/frappe/model/document.py", line 747, in _validate_mandatory
+    name=self.name))
+frappe.exceptions.MandatoryError: [Employee Checkin, EMP-CKIN-06-2020-000001]: log_type
+
+2020-06-29 17:51:12,337	ERROR	exception when calling pull_process_and_push_data function for device{"device_id": "test_1", "ip": "192.168.13.101", "punch_direction": null, "clear_from_device_on_fetch": false}
+Traceback (most recent call last):
+  File "erpnext_sync.py", line 51, in main
+    pull_process_and_push_data(device, device_attendance_logs)
+  File "erpnext_sync.py", line 129, in pull_process_and_push_data
+    raise Exception('API Call to ERPNext Failed.')
+Exception: API Call to ERPNext Failed.
+</code></pre>
+<p>Please any one help !<br>
+<strong>ERPNext:</strong> v12.6.0 (version-12)<br>
+<strong>Frappe Framework:</strong> v12.4.1 (version-12)</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/flexy2ky'><span itemprop='name'>flexy2ky</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/3/4/34e81a6501765e53f93ada9d31414c7bf01d5980.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-03-10T19:46:27Z' class='post-time'>
+                    March 10, 2021,  7:46pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-03-10T19:46:27Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>After almost exactly a year to the day, I have finally been able to setup the biometric attendance using this sync tool! this is really easy to use. However, I noticed that to close the tool (for windows) you need to stop the service and when you do that you lose the configuration already set. How do you persist the existing configuration on the tool so all that is needed is to restart the service once the tool is launched?</p>
+<p>I am also having an issue where the checkin records created have wrong dates:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/3/4/34e81a6501765e53f93ada9d31414c7bf01d5980.png" data-download-href="https://discuss.frappe.io/uploads/default/34e81a6501765e53f93ada9d31414c7bf01d5980" title="14%20PM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/3/4/34e81a6501765e53f93ada9d31414c7bf01d5980_2_690x159.png" alt="14%20PM" data-base62-sha1="7y26DzHe295XgSUKoUtFgwiiBZm" width="690" height="159" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/3/4/34e81a6501765e53f93ada9d31414c7bf01d5980_2_690x159.png, https://discuss.frappe.io/uploads/default/optimized/3X/3/4/34e81a6501765e53f93ada9d31414c7bf01d5980_2_1035x238.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/3/4/34e81a6501765e53f93ada9d31414c7bf01d5980_2_1380x318.png 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">14%20PM</span><span class="informations">1692×392 31.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+Even when the logs have the correct date:<br>
+2021-03-10 15:29:06,969	INFO	Processing Device: 192.168.105.44</p>
+<blockquote>
+<p>2021-03-10 15:29:07,095	INFO	192.168.105.44	Device Disable Attempted. Result:	True</p>
+<blockquote>
+<p>2021-03-10 15:29:07,095	INFO	192.168.105.44	Attendances Fetched:	13<br>
+2021-03-10 15:29:07,331	INFO	192.168.105.44	Device Enable Attempted. Result:	True<br>
+2021-03-10 15:29:07,378	INFO	Successfully processed Device: 192.168.105.44<br>
+2021-03-10 15:29:08,290	INFO	Shift Type last_sync_of_checkin Updated	Shift1	1615386547.110526<br>
+2021-03-10 15:29:08,305	INFO	Mission Accomplished!</p>
+</blockquote>
+</blockquote>
+<p>How can I resolve this?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/flexy2ky'><span itemprop='name'>flexy2ky</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-03-21T13:28:53Z' class='post-time'>
+                    March 21, 2021,  1:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-03-21T13:28:53Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/gavindsouza">@gavindsouza</a> Hi. One quick question about this tool. How do you handle an employee who works in multiple locations on same shift at different days and must checkin and checkout in all locations. However, employee is registered with different IDs in each location’s biometric device?</p>
+<p>Currently each employee is only allowed to register one biometric ID so how does one capture checkin/checkout data for such employee?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/JayRam'><span itemprop='name'>JayRam</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-03-22T10:26:31Z' class='post-time'>
+                    March 22, 2021, 10:26am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-03-22T10:26:31Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I think you can redo your configuration and just have One ID for your users and they can signin on any of the supported devices.</p>
+<p>I don’t think that with the current configuration you can support multiple Biometric IDs for the same underlying employee.</p>
+<p><a class="mention" href="/u/karthikeyan5">@karthikeyan5</a> maybe able to help you make those modifications if absolutely required and you have a budget for it.</p>
+<p>Hops this helps.</p>
+<p>Thanks</p>
+<p>Jay</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/winter_wolf'><span itemprop='name'>winter_wolf</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/0/c/0c2170e7e60c7ce5e2df54ef0125b94b70374922.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-03-22T13:31:13Z' class='post-time'>
+                    March 22, 2021,  1:31pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-03-22T13:37:01Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/flexy2ky">@flexy2ky</a> <a class="mention" href="/u/jayram">@JayRam</a> Yeah, you can also handle multiple biometric devices. But The tool needs to be able to communicate with your biometric device via TCP/IP. we also have a roadmap task to refactor the code. will look for enhancements and will fix the bugs regarding this. There is file local_config.py which stores the data entered through UI. the local config file looks like…<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/c/0c2170e7e60c7ce5e2df54ef0125b94b70374922.png" data-download-href="https://discuss.frappe.io/uploads/default/0c2170e7e60c7ce5e2df54ef0125b94b70374922" title="image"><img src="https://discuss.frappe.io/uploads/default/original/3X/0/c/0c2170e7e60c7ce5e2df54ef0125b94b70374922.png" alt="image" data-base62-sha1="1JjnmbFIO0S5DEZJAagVAQY3VHI" width="690" height="396" data-dominant-color="F7F7F7"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">905×520 27.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div><br>
+<a class="mention" href="/u/flexy2ky">@flexy2ky</a>  Hope your Wrong dates issue is fixed now.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/flexy2ky'><span itemprop='name'>flexy2ky</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-03-23T05:59:59Z' class='post-time'>
+                    March 23, 2021,  5:59am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-03-23T05:59:59Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="JayRam" data-post="15" data-topic="62122">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/jayram/48/6872_2.png" class="avatar"> JayRam:</div>
+<blockquote>
+<p>I think you can redo your configuration and just have One ID for your users and they can signin on any of the supported devices.</p>
+</blockquote>
+</aside>
+<p>Thanks for the tip. I think this just might work. I’ll have so sync the registration ID for each employee to maintain the same data. Both locations use the same biometric device so this shouldn’t be much of a problem (I hope).</p>
+<aside class="quote no-group" data-username="winter_wolf" data-post="16" data-topic="62122">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/winter_wolf/48/26492_2.png" class="avatar"> winter_wolf:</div>
+<blockquote>
+<p>Hope your Wrong dates issue is fixed now.</p>
+</blockquote>
+</aside>
+<p>No it wasn’t fixed. I got a different model (K40) instead of the MA300 and it worked without any of the errors faced. Even though the MA300 outputs the right date in the software I just could not get it to export same to ERPNext via the biometric tool so that device has been abandoned.</p>
+<aside class="quote no-group" data-username="winter_wolf" data-post="16" data-topic="62122">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/winter_wolf/48/26492_2.png" class="avatar"> winter_wolf:</div>
+<blockquote>
+<p>will look for enhancements and will fix the bugs regarding this.</p>
+</blockquote>
+</aside>
+<p>Thanks for your work. It is much appreciated.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/flexy2ky'><span itemprop='name'>flexy2ky</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/e/d/edeb5ac588b18b9338793206c15a097811fa6159.jpeg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-04-19T07:49:43Z' class='post-time'>
+                    April 19, 2021,  7:49am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-04-19T07:49:43Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="winter_wolf" data-post="16" data-topic="62122">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/winter_wolf/48/26492_2.png" class="avatar"> winter_wolf:</div>
+<blockquote>
+<p><a class="mention" href="/u/flexy2ky">@flexy2ky</a> <a class="mention" href="/u/jayram">@JayRam</a> Yeah, you can also handle multiple biometric devices. But The tool needs to be able to communicate with your biometric device via TCP/IP.</p>
+</blockquote>
+</aside>
+<p><strong>Update</strong>: I am able to handle multiple biometric devices checkin using the same ID for employees as suggested by <a class="mention" href="/u/jayram">@JayRam</a> and it’s working seamlessly. However, I am having issues pulling data from Zkteco WL10. It connects and pings device successfully but always returns zero records and there’s no error in the log to show why zero records are returned. I tried both the windows gui sync tool and installed the tool via command line and getting the same result.</p>
+<p>Also, I am having this error when I run the windows service:<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/e/d/edeb5ac588b18b9338793206c15a097811fa6159.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/edeb5ac588b18b9338793206c15a097811fa6159" title="Screenshot"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/e/d/edeb5ac588b18b9338793206c15a097811fa6159_2_690x395.jpeg" alt="Screenshot" data-base62-sha1="xWJp8az1ecZrHE3INE7mEaaKgtz" width="690" height="395" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/e/d/edeb5ac588b18b9338793206c15a097811fa6159_2_690x395.jpeg, https://discuss.frappe.io/uploads/default/optimized/3X/e/d/edeb5ac588b18b9338793206c15a097811fa6159_2_1035x592.jpeg 1.5x, https://discuss.frappe.io/uploads/default/original/3X/e/d/edeb5ac588b18b9338793206c15a097811fa6159.jpeg 2x" data-dominant-color="EFF0F1"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot</span><span class="informations">1220×699 207 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+Any tip on how I can fix this?</p>
+<p>Thanks.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Amitmehta'><span itemprop='name'>Amitmehta</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-07T08:30:17Z' class='post-time'>
+                    June 7, 2021,  8:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-10-06T22:42:55Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am Having essl X990 Model and i am trying to use the biometric sync tool<br>
+but there are list of challenges I am facing can somebody pls guide with stepwise method of how to use this tool , its quiet on urgent basis.<br>
+Stuff I ahve already done:<br>
+1: Created employee added biometric id as same as provided in biometric<br>
+2: Created Auto attendance marking Shift<br>
+3:Connected Biometric Machine in Local network to script running PC<br>
+4: Added information in the GUI<br>
+5: logs are also getting created but getting following errors as well</p>
+<pre><code class="lang-auto">File "C:\Users\Amit K Mehta\Downloads\biometric-attendance-sync-tool-master\erpnext_sync.py", line 51, in main
+    pull_process_and_push_data(device, device_attendance_logs)
+  File "C:\Users\Amit K Mehta\Downloads\biometric-attendance-sync-tool-master\erpnext_sync.py", line 117, in pull_process_and_push_data
+    erpnext_status_code, erpnext_message = send_to_erpnext(device_attendance_log['user_id'], device_attendance_log['timestamp'], device['device_id'], punch_direction)
+  File "C:\Users\Amit K Mehta\Downloads\biometric-attendance-sync-tool-master\erpnext_sync.py", line 181, in send_to_erpnext
+    response = requests.request("POST", url, headers=headers, data=data)
+  File "C:\Users\Amit K Mehta\AppData\Local\Programs\Python\Python38-32\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Amit K Mehta\AppData\Local\Programs\Python\Python38-32\lib\site-packages\requests\sessions.py", line 528, in request
+    prep = self.prepare_request(req)
+  File "C:\Users\Amit K Mehta\AppData\Local\Programs\Python\Python38-32\lib\site-packages\requests\sessions.py", line 456, in prepare_request
+    p.prepare(
+  File "C:\Users\Amit K Mehta\AppData\Local\Programs\Python\Python38-32\lib\site-packages\requests\models.py", line 316, in prepare
+    self.prepare_url(url, params)
+  File "C:\Users\Amit K Mehta\AppData\Local\Programs\Python\Python38-32\lib\site-packages\requests\models.py", line 390, in prepare_url
+    raise MissingSchema(error)
+</code></pre>
+<p>Pls guide where i am getting this wrong</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Aamir_Khan'><span itemprop='name'>Aamir_Khan</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-06-07T14:42:08Z' class='post-time'>
+                    June 7, 2021,  2:42pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-06-07T14:42:08Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The Biometric Device IP you are using in the local_config.py file, is it right? Double-check that as it may be the reason. Also, if you can, please share content from your <code>local_config.py</code> file here.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="/t/biometric-attendance-sync-tool/62122?page=2">next page →</a></b></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

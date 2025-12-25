@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[Proposal]: Add a New Field Property to Prevent Any Client-Side Write (Stronger Than Read Only) - Permissions - Frappe Forum</title>
+    <meta name="description" content="In many Frappe/ERPNext implementations, developers rely on the “Read Only” field property expecting it to guarantee that the value cannot be modified by the user. However, this assumption is not accurate. The current Rea&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/proposal-add-a-new-field-property-to-prevent-any-client-side-write-stronger-than-read-only/157728" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[Proposal]: Add a New Field Property to Prevent Any Client-Side Write (Stronger Than Read Only)&#39;" href="https://discuss.frappe.io/t/proposal-add-a-new-field-property-to-prevent-any-client-side-write-stronger-than-read-only/157728.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/f/0f1f07f1a25a94f8e78633c3bf44844a5efc836f.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/f/0f1f07f1a25a94f8e78633c3bf44844a5efc836f.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/proposal-add-a-new-field-property-to-prevent-any-client-side-write-stronger-than-read-only/157728" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/proposal-add-a-new-field-property-to-prevent-any-client-side-write-stronger-than-read-only/157728" />
+<meta property="og:title" content="[Proposal]: Add a New Field Property to Prevent Any Client-Side Write (Stronger Than Read Only)" />
+<meta name="twitter:title" content="[Proposal]: Add a New Field Property to Prevent Any Client-Side Write (Stronger Than Read Only)" />
+<meta property="og:description" content="In many Frappe/ERPNext implementations, developers rely on the “Read Only” field property expecting it to guarantee that the value cannot be modified by the user. However, this assumption is not accurate. The current Read Only behavior only affects the Form UI and can be completely bypassed from the client side.  This post aims to open a discussion on adding a new field-level property that enforces server-controlled write access, ensuring that field values cannot be changed by the client under a..." />
+<meta name="twitter:description" content="In many Frappe/ERPNext implementations, developers rely on the “Read Only” field property expecting it to guarantee that the value cannot be modified by the user. However, this assumption is not accurate. The current Read Only behavior only affects the Form UI and can be completely bypassed from the client side.  This post aims to open a discussion on adding a new field-level property that enforces server-controlled write access, ensuring that field values cannot be changed by the client under a..." />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:section" content="Permissions" />
+<meta property="og:article:section:color" content="AB9364" />
+<meta property="og:article:tag" content="feature" />
+<meta property="og:article:tag" content="proposal" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="4 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="3 ❤" />
+<meta property="article:published_time" content="2025-12-07T12:08:06+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"[Proposal]: Add a New Field Property to Prevent Any Client-Side Write (Stronger Than Read Only)","mainEntity":{"@type":"Question","name":"[Proposal]: Add a New Field Property to Prevent Any Client-Side Write (Stronger Than Read Only)","text":"In many Frappe/ERPNext implementations, developers rely on the “Read Only” field property expecting it to guarantee that the value cannot be modified by the user. However, this assumption is not accurate. The current Read Only behavior only affects the Form UI and can be completely bypassed from the&hellip;","upvoteCount":1,"answerCount":0,"datePublished":"2025-12-07T12:08:05.867Z","author":{"@type":"Person","name":"Hassan_Hussein","url":"https://discuss.frappe.io/u/Hassan_Hussein"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/proposal-add-a-new-field-property-to-prevent-any-client-side-write-stronger-than-read-only/157728">[Proposal]: Add a New Field Property to Prevent Any Client-Side Write (Stronger Than Read Only)</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/permissions/30" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #AB9364'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Permissions</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/feature' class='discourse-tag' rel="tag">feature</a>, 
+            <a href='https://discuss.frappe.io/tag/proposal' class='discourse-tag' rel="tag">proposal</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[Proposal]: Add a New Field Property to Prevent Any Client-Side Write (Stronger Than Read Only)'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/proposal-add-a-new-field-property-to-prevent-any-client-side-write-stronger-than-read-only/157728'>
+      <meta itemprop='datePublished' content='2025-12-07T12:08:05Z'>
+        <meta itemprop='articleSection' content='Permissions'>
+      <meta itemprop='keywords' content='feature, proposal'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Hassan_Hussein'><span itemprop='name'>Hassan_Hussein</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/proposal-add-a-new-field-property-to-prevent-any-client-side-write-stronger-than-read-only/157728">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/0/f/0f1f07f1a25a94f8e78633c3bf44844a5efc836f.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-12-07T12:08:06Z' class='post-time'>
+                    December 7, 2025, 12:08pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-07T13:25:10Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In many Frappe/ERPNext implementations, developers rely on the “<strong>Read Only</strong>” field property expecting it to guarantee that the value cannot be modified by the user. However, this assumption is not accurate. The current <strong>Read Only</strong> behavior only affects the Form <strong>UI</strong> and can be completely bypassed from the <strong>client side</strong>.</p>
+<p>This post aims to open a discussion on adding a new field-level property that enforces server-controlled write access, ensuring that field values cannot be changed by the client under any circumstance.</p>
+<h1><a name="p-488311-the-problem-1" class="anchor" href="#p-488311-the-problem-1"></a>The Problem</h1>
+<h3><a name="p-488311-h-1-misconception-about-read-only-2" class="anchor" href="#p-488311-h-1-misconception-about-read-only-2"></a>1. Misconception About “Read Only”</h3>
+<p>Many developers assume that setting a field as <strong>Read Only</strong> makes it immutable.</p>
+<p>But in the Frappe Framework, <strong>Read Only</strong> only prevents visual editing in the <strong>form</strong> it does not <strong>protect</strong> the field from programmatic modification on the client.</p>
+<h3><a name="p-488311-h-2-client-can-easily-modify-values-3" class="anchor" href="#p-488311-h-2-client-can-easily-modify-values-3"></a>2. Client Can Easily Modify Values</h3>
+<p>Even if a field is <strong>Read Only</strong>, the client can still modify it using:</p>
+<ul>
+<li>Browser Console</li>
+<li>JavaScript injections</li>
+<li>Client scripts</li>
+</ul>
+<h4><a name="p-488311-example-using-console-4" class="anchor" href="#p-488311-example-using-console-4"></a>Example using Console:</h4>
+<pre data-code-wrap="javascript"><code class="lang-javascript">cur_frm.set_value(“read_only_field”, “new value”)
+</code></pre>
+<p>The <strong>server</strong> accepts this change because Frappe currently <strong>trusts</strong> incoming field values unless additional validation is implemented.</p>
+<h3><a name="p-488311-h-3-real-example-employee-advance-doctype-5" class="anchor" href="#p-488311-h-3-real-example-employee-advance-doctype-5"></a>3. Real Example: Employee Advance DocType</h3>
+<p>A clear real-world example is the <strong>Employee Advance</strong> DocType.</p>
+<p>It contains several fields that are meant to be computed only by <strong>server-side</strong> logic, such as:</p>
+<ul>
+<li><strong>Paid Amount</strong> – updated only when a Payment Entry is submitted</li>
+<li><strong>Returned Amount</strong> – updated only when a Journal Entry is submitted</li>
+<li><strong>Claimed Amount</strong> – updated only when an Expense Claim is submitted</li>
+</ul>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/f/0f1f07f1a25a94f8e78633c3bf44844a5efc836f.png" data-download-href="https://discuss.frappe.io/uploads/default/0f1f07f1a25a94f8e78633c3bf44844a5efc836f" title="Employee Advance fields"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/f/0f1f07f1a25a94f8e78633c3bf44844a5efc836f_2_690x440.png" alt="Employee Advance fields" data-base62-sha1="29LE2cozbYhTneyqnLqADV109vp" width="690" height="440" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/f/0f1f07f1a25a94f8e78633c3bf44844a5efc836f_2_690x440.png, https://discuss.frappe.io/uploads/default/original/3X/0/f/0f1f07f1a25a94f8e78633c3bf44844a5efc836f.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/0/f/0f1f07f1a25a94f8e78633c3bf44844a5efc836f.png 2x" data-dominant-color="FAFAFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Employee Advance fields</span><span class="informations">906×578 26.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>These fields are marked as <strong>Read Only</strong> because they should never be manually edited by the user.</p>
+<p>However, due to the current behavior of <strong>Read Only</strong>:</p>
+<p>The <strong>client</strong> can still modify these values through the browser console before submission.</p>
+<p>The server accepts the modified values since it does not block <strong>client-side</strong> writes.</p>
+<p>This means a user can submit an Employee Advance with incorrect financial values, for example, a manually set <strong>Paid Amount</strong> even though no <strong>Payment Entry</strong> exists.</p>
+<p><strong>This results in:</strong></p>
+<ul>
+<li>incorrect financial data</li>
+<li>inconsistent reporting</li>
+<li>behavior that contradicts the intended server-controlled logic</li>
+</ul>
+<p><a href="https://youtu.be/F7FH_eSnfvE" rel="noopener nofollow ugc">See the example</a></p>
+<h3><a name="p-488311-h-4-existing-workarounds-are-not-practical-6" class="anchor" href="#p-488311-h-4-existing-workarounds-are-not-practical-6"></a>4. Existing Workarounds Are Not Practical</h3>
+<p>Developers currently rely on workarounds such as:</p>
+<ul>
+<li>resetting values manually inside <strong>validate()</strong></li>
+<li>custom <strong>hooks</strong> to enforce restrictions</li>
+<li>using <strong>db_set()</strong> (which bypasses validation entirely)</li>
+<li><strong>Change the field level (permlevel)</strong></li>
+</ul>
+<h3><a name="p-488311-h-5-limitations-of-using-field-permission-level-permlevel-as-a-workaround-7" class="anchor" href="#p-488311-h-5-limitations-of-using-field-permission-level-permlevel-as-a-workaround-7"></a>5. Limitations of Using Field Permission Level (permlevel) as a Workaround</h3>
+<p>Some developers attempt to restrict client-side modifications by increasing a field’s <strong>Permission Level (permlevel)</strong>. However, this approach introduces behavior that is unexpected and inconsistent, and it does <strong>not</strong> provide a reliable mechanism for “server-only write”.</p>
+<h4><a name="p-488311-a-server-can-modify-the-field-only-inside-document-hooks-8" class="anchor" href="#p-488311-a-server-can-modify-the-field-only-inside-document-hooks-8"></a><strong>a. Server Can Modify the Field Only Inside Document Hooks</strong></h4>
+<p>When a field is assigned a high permlevel (e.g., permlevel = 1) and the current user has only <em>Read</em> permission for that level:</p>
+<ul>
+<li>Directly updating the field from a standard save operation <strong>does not work</strong>:</li>
+</ul>
+<pre data-code-wrap="python"><code class="lang-python">doc.field_with_high_permlevel = "new value"
+doc.save()   # Frappe will reset the value to the database version
+</code></pre>
+<p>This happens because Frappe <strong>first clears</strong> the incoming client values for fields the user cannot write to, and <strong>then</strong> reloads the original database values before running the save process.</p>
+<h4><a name="p-488311-b-updating-the-field-inside-hooks-works-correctly-9" class="anchor" href="#p-488311-b-updating-the-field-inside-hooks-works-correctly-9"></a><strong>b. Updating the Field <em>Inside</em> Hooks Works Correctly</strong></h4>
+<p>If the modification happens <strong>inside one of the server-side document hooks</strong> such as:</p>
+<ul>
+<li>
+<p><code>validate()</code></p>
+</li>
+<li>
+<p><code>before_save()</code></p>
+</li>
+<li>
+<p><code>on_submit()</code></p>
+</li>
+</ul>
+<p>then the update will succeed:</p>
+<pre data-code-wrap="python"><code class="lang-python">def validate(self):
+    self.field_with_high_permlevel = "new value"
+</code></pre>
+<h4><a name="p-488311-c-why-this-is-a-problem-10" class="anchor" href="#p-488311-c-why-this-is-a-problem-10"></a><strong>c. Why This Is a Problem</strong></h4>
+<p>This inconsistent behavior produces several issues:</p>
+<ul>
+<li>
+<p><strong>server-side</strong> updates only work <em>inside hooks</em>, not outside normal code paths</p>
+</li>
+<li>
+<p>Background jobs, integration scripts, and API-based updates often need to update the field outside hooks</p>
+</li>
+<li>
+<p>Developers cannot use <code>doc.save()</code> reliably to update controlled fields</p>
+</li>
+<li>
+<p>Logic becomes fragmented because some updates must be forced into hooks unnecessarily</p>
+</li>
+</ul>
+<h2><a name="p-488311-summary-11" class="anchor" href="#p-488311-summary-11"></a><strong>Summary</strong></h2>
+<p>Using <strong>permlevel</strong> as a workaround to block client-side writes introduces several practical and technical limitations:</p>
+<ul>
+<li>
+<p>It behaves inconsistently (server updates work only inside hooks, but fail when using <code>doc.save()</code> outside them).</p>
+</li>
+<li>
+<p>It complicates server-side logic and forces developers to restructure updates unnaturally just to bypass permission restrictions.</p>
+</li>
+<li>
+<p>It requires granting unnecessary <em>Read</em> permissions for users just to make the field visible.</p>
+</li>
+</ul>
+<h4><a name="p-488311-it-becomes-increasingly-unmaintainable-when-12" class="anchor" href="#p-488311-it-becomes-increasingly-unmaintainable-when-12"></a>It becomes increasingly unmaintainable when:</h4>
+<ol>
+<li>The DocType contains many sensitive or computed fields,</li>
+<li>Multiple developers contribute to the same module,</li>
+<li>or long-term maintenance and reliability are required.</li>
+</ol>
+<h4><a name="p-488311-proposed-solution-add-a-new-field-property-13" class="anchor" href="#p-488311-proposed-solution-add-a-new-field-property-13"></a>Proposed Solution: Add a New Field Property</h4>
+<p>These limitations highlight the need for a dedicated field property named for example, Ignore Client Write, Server Only Write or Disallow Client Write</p>
+<h4><a name="p-488311-which-would-14" class="anchor" href="#p-488311-which-would-14"></a>which would:</h4>
+<ul>
+<li>
+<p>block all client-side attempts to modify the field (UI, JS, Console, etc.),</p>
+</li>
+<li>
+<p>allow unrestricted server-side updates from any context (hooks, controllers, background jobs, API scripts, or whitelisted methods),</p>
+</li>
+<li>
+<p>and eliminate the need to adjust permission levels or implement custom validation workarounds.</p>
+</li>
+</ul>
+<blockquote>
+<p>A framework-level solution would provide a clean, predictable, and scalable way to ensure “server-only write” behavior across all DocTypes.</p>
+</blockquote>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/peterg'><span itemprop='name'>peterg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-08T02:29:48Z' class='post-time'>
+                    December 8, 2025,  2:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-08T02:29:48Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi there,</p>
+<p>If there’s a bug/inconsistency with permlevels, I think the right way forward is to fix that.</p>
+<p>From a technical standpoint, I’m not sure how what you’re proposing would be possible. You want to be able to block “UI, JS, Console, etc.” but allow “hooks, controllers, background jobs, API scripts, or whitelisted methods”. The problem is that this distinction doesn’t really exist. The JS api, for example, is just a convenience interface for whitelisted methods. Everything that happens happens on the server. How would the document data model know what ultimately initiated the change?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Hassan_Hussein'><span itemprop='name'>Hassan_Hussein</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-09T12:41:13Z' class='post-time'>
+                    December 9, 2025, 12:41pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-09T12:41:13Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for your reply — let me clarify two important points.</p>
+<h4><a name="p-488471-h-1-regarding-permlevel-1" class="anchor" href="#p-488471-h-1-regarding-permlevel-1"></a><strong>1. Regarding permlevel</strong></h4>
+<p>There is no bug in permlevels.</p>
+<p>Permlevel simply does not cover this use case.</p>
+<p>If a user only has <strong>Read</strong> access for a field with a higher permlevel, then:</p>
+<ol>
+<li>The client cannot modify it (which is correct),</li>
+<li>But the <strong>server itself</strong> also cannot update the field <em>except</em> inside document hooks (<code>validate</code>, <code>before_save</code>, etc.).</li>
+<li>If the server code tries to modify the field outside hooks like:</li>
+</ol>
+<pre data-code-wrap="python"><code class="lang-python">doc.field_with_high_permlevel = "new value"
+doc.save()   # Frappe will reset the value to the database version
+</code></pre>
+<p>Frappe resets the value to the database value, because permission checks are applied before running hooks.</p>
+<p>So permlevel does not have a bug — it just does not work for cases where the <strong>server must always be allowed to write</strong>, while the <strong>client must never be allowed</strong>.</p>
+<p>We have a requirement that differs from PermLevel’s design.</p>
+<h4><a name="p-488471-h-2-regarding-the-technical-feasibility-2" class="anchor" href="#p-488471-h-2-regarding-the-technical-feasibility-2"></a><strong>2. Regarding the technical feasibility</strong></h4>
+<p>You mentioned that the framework cannot distinguish between changes coming from UI/JS/API versus changes coming from server hooks/controllers.</p>
+<p>This is true <strong>only at the level of the document model itself</strong>, but not at the level of the request pipeline.</p>
+<p>Separation exists at the request layer, not within the Document model:</p>
+<ul>
+<li>
+<p><strong>Requests coming from the client</strong>, and</p>
+</li>
+<li>
+<p><strong>Internal server execution</strong></p>
+</li>
+</ul>
+<h4><a name="p-488471-how-do-we-know-this-3" class="anchor" href="#p-488471-how-do-we-know-this-3"></a>How do we know this:</h4>
+<p>Every external client request goes through the full request pipeline (e.g., <code>application(request)</code>)</p>
+<p>During this initialization:</p>
+<ul>
+<li>
+<p><code>frappe.local</code> is reset</p>
+</li>
+<li>
+<p>All unsafe flags from the client are <strong>wiped or rewritten</strong></p>
+</li>
+<li>
+<p>Client-provided values are sanitized before any whitelisted method or controller runs</p>
+</li>
+</ul>
+<p>This is exactly why, if the client injects something like:</p>
+<pre data-code-wrap="javascript"><code class="lang-javascript">cur_frm.doc.flags.ignore_permissions = true
+</code></pre>
+<p>Frappe <strong>removes</strong> that flag before running the whitelisted method.</p>
+<p>This indicates that the request layer enforces a clear contextual boundary:</p>
+<ul>
+<li>
+<p>This data came from an external client request</p>
+</li>
+<li>
+<p>This data was produced internally by server code</p>
+</li>
+</ul>
+<p><strong>Server-side calls do not go through this pipeline</strong></p>
+<p>If server logic calls a whitelisted method directly:</p>
+<pre data-code-wrap="python"><code class="lang-python">from myapp.api import method_whitelist
+method_whitelist(data)
+</code></pre>
+<p>or runs background jobs, hooks, or controllers,<br>
+<strong>The request initialization pipeline does not run</strong>.<br>
+meaning:</p>
+<ul>
+<li>
+<p><code>frappe.local</code> is empty</p>
+</li>
+<li>
+<p>No client payload exists</p>
+</li>
+<li>
+<p>No flag sanitation happens</p>
+</li>
+<li>
+<p>Execution is clearly internal</p>
+</li>
+</ul>
+<h4><a name="p-488471-how-this-applies-to-the-proposed-feature-4" class="anchor" href="#p-488471-how-this-applies-to-the-proposed-feature-4"></a><strong>How this applies to the proposed feature</strong></h4>
+<p>Because Frappe already sanitizes and rewrites <strong>flags</strong> based on the context (client vs server), it is possible to apply the <em>same mechanism</em> to field values.</p>
+<p>The framework can:</p>
+<ol>
+<li>
+<p>At request initialization, record which fields came from the client payload.</p>
+</li>
+<li>
+<p>Before the document enters validate/save, reset these values for fields marked with the new property (e.g., <strong>Ignore Client Write</strong>).</p>
+</li>
+<li>
+<p>Allow any server-side changes that occur after this stage (hooks, controllers, background jobs, whitelisted methods executed internally).</p>
+</li>
+</ol>
+<p>This logic must happen <strong>before</strong> reaching the Document Data Model — exactly like flag sanitization.</p>
+<p>So the Document model does not need to “know what initiated the change.”<br>
+The request handler already knows that, because:</p>
+<ul>
+<li>
+<p>Client requests go through the full HTTP request lifecycle</p>
+</li>
+<li>
+<p>Server-internal calls do not</p>
+</li>
+</ul>
+<p>This separation already exists inside Frappe.</p>
+<h4><a name="p-488471-conclusion-5" class="anchor" href="#p-488471-conclusion-5"></a><strong>Conclusion</strong></h4>
+<ul>
+<li>
+<p><strong>Permlevel is not broken</strong>, but it does not solve this requirement.</p>
+</li>
+<li>
+<p><strong>The request lifecycle naturally separates external calls from internal server execution</strong>, because only client requests pass through <code>application(request)</code> and have their data sanitized.</p>
+</li>
+</ul>
+<p>I hope this clarifies the reasoning behind the proposal. Happy to discuss further.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/peterg'><span itemprop='name'>peterg</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-09T14:55:52Z' class='post-time'>
+                    December 9, 2025,  2:55pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-09T14:55:52Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks for your reply. I think my previous concern wasn’t quite clear. Specifically:</p>
+<aside class="quote no-group" data-username="Hassan_Hussein" data-post="3" data-topic="157728">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/hassan_hussein/48/92260_2.png" class="avatar"> Hassan_Hussein:</div>
+<blockquote>
+<p>At request initialization, record which fields came from the client payload.</p>
+</blockquote>
+</aside>
+<p>How would we do that?</p>
+<p>There are several whitelisted methods that allow updating arbitrary fields, like <code>frappe.client.set_value</code>, <code>frappe.client.update</code>, and <code>frappe.client.insert</code>. They all take different syntaxes, and some allow multiple syntaxes. There are also an arbitrarily large number of document-specific whitelisted methods that enact field changes.</p>
+<p>Are you suggesting that the http request handler should know how to parse all of these different calls to understand what fields are being triggered?</p>
+<h4><a name="p-488477-h-1" class="anchor" href="#p-488477-h-1"></a></h4>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Hassan_Hussein'><span itemprop='name'>Hassan_Hussein</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-13T13:28:27Z' class='post-time'>
+                    December 13, 2025,  1:28pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-13T13:28:27Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Let me explain the proposal more concretely by outlining the three execution paths for invoking whitelisted methods in Frappe. This helps clarify where it is technically feasible to intercept client-submitted field values, and where it is not.</p>
+<p>This is not a final solution, but a technical direction based on how the framework currently routes requests.</p>
+<h3><a name="p-488806-h-1-first-path-core-whitelisted-methods-saveupdate-pipeline-1" class="anchor" href="#p-488806-h-1-first-path-core-whitelisted-methods-saveupdate-pipeline-1"></a>1. First Path: Core Whitelisted Methods (save/update pipeline)</h3>
+<p>Examples: <code>savedocs</code>, <code>set_value</code>, and the internal <code>save/update</code> functions used by the Desk.</p>
+<p>This is the main, stable pipeline that every DocType save follows when the user clicks Save or Update.</p>
+<p>It is also the path used by most client calls, such as:</p>
+<p><code>method: "frappe.desk.form.save.savedocs"</code></p>
+<p><code>method: "frappe.client.set_value"</code></p>
+<p>Because these methods are part of <strong>Frappe’s</strong> <strong>core</strong> and do not change <em>frequently</em>, we can reliably intercept their <em>input</em> before a Document instance is constructed.</p>
+<h4><a name="p-488806-what-can-be-done-here-2" class="anchor" href="#p-488806-what-can-be-done-here-2"></a>What can be done here:</h4>
+<p>At the point where Frappe deserializes the incoming request payload and calls (e.g., <code>savedocs</code>), the framework can:</p>
+<p>Inspect the incoming field values</p>
+<p>For fields marked with a new property (e.g., “<strong>Ignore Client Write</strong>”)</p>
+<p>Replace the client-supplied value with the <strong>database</strong> value before permission checks and before document hooks</p>
+<p>This approach does not require parsing every whitelisted method — it only requires hooking into the stable, central <code>save/update</code> pipeline.</p>
+<h3><a name="p-488806-h-2-second-path-whitelisted-methods-inside-doctype-classes-3" class="anchor" href="#p-488806-h-2-second-path-whitelisted-methods-inside-doctype-classes-3"></a>2. Second Path: Whitelisted Methods Inside DocType Classes</h3>
+<p>These methods require receiving the self from the client. On the client, they must be invoked with:</p>
+<p><code>doc: frm.doc</code></p>
+<p>because otherwise the method would not work. This makes the call signature predictable.</p>
+<p>The <code>call stack</code> for these methods is also consistent:</p>
+<pre data-code-wrap="bash"><code class="lang-bash">StaticDataMiddleware
+application
+handle_rpc_call
+execute_cmd
+call
+run_method
+run_doc_method
+composer
+compose
+run_method
+validate_argument_types
+</code></pre>
+<p>Because this stack is stable, the framework can intercept execution before (e.g., <code>run_doc_method</code>), at a point where the framework already has:</p>
+<p>the incoming request payload<br>
+the deserialized doc dict<br>
+and the DocType metadata</p>
+<p><strong>Feasible intervention:</strong></p>
+<p>The same client-value scrubbing (resetting disallowed fields) can be applied here just before constructing the document instance used by the whitelisted method.</p>
+<p>Thus, Paths 1 and 2 both share locations in the request pipeline where the field scrubbing can safely occur.</p>
+<h3><a name="p-488806-h-3-third-path-whitelisted-methods-outside-doctype-classes-4" class="anchor" href="#p-488806-h-3-third-path-whitelisted-methods-outside-doctype-classes-4"></a>3. Third Path: Whitelisted Methods Outside DocType Classes</h3>
+<p>These are API functions defined anywhere in the codebase, with arbitrary arguments and arbitrary shapes of input data.</p>
+<p>Here, the framework does not know:</p>
+<p>Which parameters represent a document</p>
+<p>which fields the function intends to modify</p>
+<p>or whether the arguments even belong to a DocType</p>
+<p>Because of this variability, it is not technically feasible to scrub incoming field values universally and reliably for this execution path.</p>
+<p>Therefore, the proposal limits the “<strong>Ignore Client Write</strong>” behavior to Paths 1 and 2, which cover:</p>
+<ul>
+<li>all normal form saves</li>
+<li>all client-side doc updates</li>
+<li>all core CRUD whitelisted APIs</li>
+<li>all DocType-bound whitelisted methods</li>
+</ul>
+<p>This already covers the vast majority of <em>field-modification</em> mechanisms used by the client.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/kolate_sambhaji'><span itemprop='name'>kolate_sambhaji</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-15T06:33:13Z' class='post-time'>
+                    December 15, 2025,  6:33am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-15T06:33:13Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="Hassan_Hussein" data-post="1" data-topic="157728">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/hassan_hussein/48/92260_2.png" class="avatar"> Hassan_Hussein:</div>
+<blockquote>
+<p>It contains several fields that are meant to be computed only by <strong>server-side</strong> logic, such as:</p>
+<ul>
+<li><strong>Paid Amount</strong> – updated only when a Payment Entry is submitted</li>
+<li><strong>Returned Amount</strong> – updated only when a Journal Entry is submitted</li>
+<li><strong>Claimed Amount</strong> – updated only when an Expense Claim is submitted</li>
+</ul>
+</blockquote>
+</aside>
+<p>This read-only field should recalculate on every save, preventing manual or API changes. The calculation logic if present in UI, should also be present in server script.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Hassan_Hussein'><span itemprop='name'>Hassan_Hussein</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-17T11:25:08Z' class='post-time'>
+                    December 17, 2025, 11:25am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-17T11:25:08Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>The “recalculate on every save” approach does not address the underlying issue for several reasons:</p>
+<ul>
+<li>
+<p><strong>Many server-controlled fields are not calculated fields</strong><br>
+Some fields are flags or state controls (e.g. <code>party_not_required</code> in <strong>Journal Entry</strong>) and have no calculation logic to re-run.</p>
+</li>
+<li>
+<p><strong>Values often originate outside the current document</strong><br>
+Many fields are updated by other DocTypes, background jobs, or server workflows, not by the document’s own save event.</p>
+</li>
+<li>
+<p><strong>Recalculating on save can overwrite valid server-written data</strong><br>
+Forcing recalculation may unintentionally destroy values that were correctly set by server logic elsewhere.</p>
+</li>
+<li>
+<p><strong>This is a framework-level write-authority problem, not a DocType-specific issue</strong><br>
+The Employee Advance example is provided for illustrative purposes only. Similar server-controlled fields exist across many DocTypes (e.g. <code>party_not_required</code> in <strong>Journal Entry</strong>), where values must be set by server logic and must never be modified by the client.</p>
+</li>
+</ul>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

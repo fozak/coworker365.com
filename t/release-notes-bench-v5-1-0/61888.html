@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[Release Notes] bench v5.1.0 - Announcements - Frappe Forum</title>
+    <meta name="description" content="Our default branch, develop has had a few changes since v5.0. We’ve decided to push only bug fixes to master and all other updates will continue to be pushed to develop and branch v5.x will be maintained as Bench Version&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/release-notes-bench-v5-1-0/61888" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;[Release Notes] bench v5.1.0&#39;" href="https://discuss.frappe.io/t/release-notes-bench-v5-1-0/61888.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/release-notes-bench-v5-1-0/61888" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/release-notes-bench-v5-1-0/61888" />
+<meta property="og:title" content="[Release Notes] bench v5.1.0" />
+<meta name="twitter:title" content="[Release Notes] bench v5.1.0" />
+<meta property="og:description" content="Our default branch, develop has had a few changes since v5.0. We’ve decided to push only bug fixes to master and all other updates will continue to be pushed to develop and branch v5.x will be maintained as Bench Version 5 [stable]   Major Updates:  bench removed from frappe_sudoers  now commands prefixed with sudo bench will require passwords. The current frappe_sudoers file will only contain NOPASSWD setup for Nginx related commands.   supervisor runs as frappe_user by default  From being run ..." />
+<meta name="twitter:description" content="Our default branch, develop has had a few changes since v5.0. We’ve decided to push only bug fixes to master and all other updates will continue to be pushed to develop and branch v5.x will be maintained as Bench Version 5 [stable]   Major Updates:  bench removed from frappe_sudoers  now commands prefixed with sudo bench will require passwords. The current frappe_sudoers file will only contain NOPASSWD setup for Nginx related commands.   supervisor runs as frappe_user by default  From being run ..." />
+<meta property="og:article:section" content="Announcements" />
+<meta property="og:article:section:color" content="283890" />
+<meta property="og:article:tag" content="release" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="28 ❤" />
+<meta property="article:published_time" content="2020-05-22T12:58:05+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"[Release Notes] bench v5.1.0","mainEntity":{"@type":"Question","name":"[Release Notes] bench v5.1.0","text":"Our default branch, develop has had a few changes since v5.0. We’ve decided to push only bug fixes to master and all other updates will continue to be pushed to develop and branch v5.x will be maintained as Bench Version 5 [stable]\n\n<a name=\"major-updates-1\" class=\"anchor\" href=\"#major-updates-1\"><\/a>Major Updates:\n\nbench removed from frappe_sudoers\n\nnow commands pr&hellip;","upvoteCount":23,"answerCount":0,"datePublished":"2020-05-22T12:58:05.165Z","author":{"@type":"Person","name":"gavindsouza","url":"https://discuss.frappe.io/u/gavindsouza"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/release-notes-bench-v5-1-0/61888">[Release Notes] bench v5.1.0</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/announcement/20" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #283890'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Announcements</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/release' class='discourse-tag' rel="tag">release</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='[Release Notes] bench v5.1.0'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/release-notes-bench-v5-1-0/61888'>
+      <meta itemprop='datePublished' content='2020-05-22T12:58:05Z'>
+        <meta itemprop='articleSection' content='Announcements'>
+      <meta itemprop='keywords' content='release'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/gavindsouza'><span itemprop='name'>gavindsouza</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/release-notes-bench-v5-1-0/61888">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2020-05-22T12:58:05Z' class='post-time'>
+                    May 22, 2020, 12:58pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-22T13:30:01Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Our default branch, <code>develop</code> has had a few changes since v5.0. We’ve decided to push only bug fixes to <code>master</code> and all other updates will continue to be pushed to <code>develop</code> and branch <code>v5.x</code> will be maintained as <strong>Bench Version 5 [stable]</strong></p>
+<h3>
+<a name="major-updates-1" class="anchor" href="#major-updates-1"></a>Major Updates:</h3>
+<ul>
+<li>bench removed from frappe_sudoers</li>
+</ul>
+<p>now commands prefixed with <code>sudo bench</code> will require passwords. The current frappe_sudoers file will only contain <code>NOPASSWD</code> setup for Nginx related commands.</p>
+<ul>
+<li>supervisor runs as <code>frappe_user</code> by default</li>
+</ul>
+<p>From being run as a root user, with this update your existing benches will update your <code>supervisord.conf</code> and will attempt to restart it. If you face any problems, like “<a href="http://localhost:9001">http://localhost:9001</a> refused connection”, restarting supervisord should fix the issue.</p>
+<p><em>Here, <code>frappe_user</code> refers to the user under which the current Frappe environment is setup.</em></p>
+<h3>
+<a name="change-log-2" class="anchor" href="#change-log-2"></a>Change Log:</h3>
+<ul>
+<li>chore(tests): drop PY2 testing for frappe &gt; v12 (<a href="https://github.com/frappe/bench/pull/992">#992</a>)</li>
+<li>chore: changed bench.utils.log API prefix  (<a href="https://github.com/frappe/bench/pull/964">#964</a>)</li>
+<li>chore: drop dead code (<a href="https://github.com/frappe/bench/pull/998">#998</a>)</li>
+<li>chore: renamed project to match with PyPI (<a href="https://github.com/frappe/bench/pull/961">#961</a>)</li>
+<li>chore: set apps to None by default (<a href="https://github.com/frappe/bench/pull/973">#973</a>)</li>
+<li>chore: skip restart on bench setup requirements (<a href="https://github.com/frappe/bench/pull/975">#975</a>)</li>
+<li>docs: fix readme docker section (<a href="https://github.com/frappe/bench/pull/990">#990</a>)</li>
+<li>docs: fixed typo on running update (<a href="https://github.com/frappe/bench/pull/968">#968</a>)</li>
+<li>feat(bench update): allow pull-only update on specified apps (<a href="https://github.com/frappe/bench/pull/921">#921</a>)</li>
+<li>feat: check for newer versions on PyPI (<a href="https://github.com/frappe/bench/pull/960">#960</a>)</li>
+<li>feat: faster bench (<a href="https://github.com/frappe/bench/pull/967">#967</a>)</li>
+<li>fix(backups): setup backups for bench sites (<a href="https://github.com/frappe/bench/pull/972">#972</a>)</li>
+<li>fix(get-app): allow ssh urls (<a href="https://github.com/frappe/bench/pull/995">#995</a>)</li>
+<li>fix(get-app): update node requirements (<a href="https://github.com/frappe/bench/pull/983">#983</a>)</li>
+<li>fix(logging): cleaner bench logs (<a href="https://github.com/frappe/bench/pull/999">#999</a>)</li>
+<li>fix(playbooks): pre v5.1 compatibility for playbooks folder (<a href="https://github.com/frappe/bench/pull/988">#988</a>)</li>
+<li>fix(playbooks): wkhtmltopdf checksum string for debian 9 (<a href="https://github.com/frappe/bench/pull/969">#969</a>)</li>
+<li>fix: IUS release repo (<a href="https://github.com/frappe/bench/pull/1004">#1004</a>)</li>
+<li>fix: Message per app when installing node deps (<a href="https://github.com/frappe/bench/pull/959">#959</a>)</li>
+<li>fix: add playbooks in the python package (<a href="https://github.com/frappe/bench/pull/980">#980</a>)</li>
+<li>fix: don’t run yarn install while setting up py requirements (<a href="https://github.com/frappe/bench/pull/1001">#1001</a>)</li>
+<li>fix: exit with appropriate return code (<a href="https://github.com/frappe/bench/pull/1006">#1006</a>)</li>
+<li>fix: install node modules only if package.json exists (<a href="https://github.com/frappe/bench/pull/985">#985</a>)</li>
+<li>fix: remove bench and supervisor from sudoers (<a href="https://github.com/frappe/bench/pull/955">#955</a>)</li>
+<li>fix: restart supervisord process after change in conf (<a href="https://github.com/frappe/bench/pull/991">#991</a>)</li>
+<li>fix: show warning if bench is not installed via PYPI (<a href="https://github.com/frappe/bench/pull/934">#934</a>)</li>
+<li>refactor: bench readme and rename license file (<a href="https://github.com/frappe/bench/pull/958">#958</a>)</li>
+</ul>
+<h3>
+<a name="release-link-3" class="anchor" href="#release-link-3"></a>Release Link:</h3>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/frappe/bench/releases/tag/v5.1">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/frappe/bench/releases/tag/v5.1" target="_blank" rel="noopener">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/345;"><img src="https://opengraph.githubassets.com/29a3133eef04c9ee0f3d5f427f897127ccafcb5cc8a2b0ba470ada6f5f81fe15/frappe/bench/releases/tag/v5.1" class="thumbnail" width="690" height="345"></div>
+
+<h3><a href="https://github.com/frappe/bench/releases/tag/v5.1" target="_blank" rel="noopener">Release v5.1 · frappe/bench</a></h3>
+
+  <p>Our default branch, develop has had a few changes since v5.0. We've decided to push only bug fixes to master and all other updates will continue to be pushed to develop and branch v5.x will be main...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="23" />
+              <span class='post-likes'>23 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/what-branch-for-pull-requests/64279/2">What branch for pull requests?</a>
+                        <meta itemprop='position' content='30'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vrms'><span itemprop='name'>vrms</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-27T08:40:44Z' class='post-time'>
+                    May 27, 2020,  8:40am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-27T08:40:44Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>for my understanding.</p>
+<ol>
+<li>will the Easy Install script pull this new bench version then from now on?</li>
+<li>will v5.1.0 be any cure to the many unsuccessful installation attempts via the Easy Install script?</li>
+<li>will existing instance be getting 5.1.0 on a <code>bench update</code> operation?</li>
+</ol>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/gavindsouza'><span itemprop='name'>gavindsouza</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-28T15:09:27Z' class='post-time'>
+                    May 28, 2020,  3:09pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-28T15:09:27Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="vrms" data-post="5" data-topic="61888">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/vrms/48/8666_2.png" class="avatar"> vrms:</div>
+<blockquote>
+<ol>
+<li>will the Easy Install script pull this new bench version then from now on?</li>
+</ol>
+</blockquote>
+</aside>
+<p>The Easy Install Script hasn’t been updated for a while and thus still clones the ‘master’ branch by default which is v5.0 but you can change the branch you want it to clone with <code>--bench-branch</code> I believe. Any changes in the playbooks are ported to this branch as well.</p>
+<aside class="quote no-group" data-username="vrms" data-post="5" data-topic="61888">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/vrms/48/8666_2.png" class="avatar"> vrms:</div>
+<blockquote>
+<ol start="2">
+<li>will v5.1.0 be any cure to the many unsuccessful installation attempts via the Easy Install script?</li>
+</ol>
+</blockquote>
+</aside>
+<p>The script seems to work well on tested distributions. Although what’s tested is only tracked in the README as major releases, which is far from ideal. The playbooks don’t work for any of the newer distributions due to various changes. We currently don’t have a maintainer for playbooks and the project would really benefit if someone so bothered by its failures takes it up <img src="https://discuss.frappe.io/images/emoji/twitter/grin.png?v=12" title=":grin:" class="emoji" alt=":grin:" loading="lazy" width="20" height="20">. For everyone else, there’s always <a href="https://github.com/frappe/frappe_docker">Frappe Docker</a>.</p>
+<aside class="quote no-group" data-username="vrms" data-post="5" data-topic="61888">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/vrms/48/8666_2.png" class="avatar"> vrms:</div>
+<blockquote>
+<ol start="3">
+<li>will existing instance be getting 5.1.0 on a <code>bench update</code> operation?</li>
+</ol>
+</blockquote>
+</aside>
+<p><code>bench update</code> has stopped updating bench since <a href="https://github.com/frappe/bench/releases/tag/v5.0">v5.0</a>.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/zerodiscount'><span itemprop='name'>zerodiscount</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-28T15:51:01Z' class='post-time'>
+                    May 28, 2020,  3:51pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-28T15:51:01Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Will appreciate instructions how to switch bench to branch v5.x so future updates are applied - also since bench update no longer updates bench - how to update bench?</p>
+<p>I am currently on v5.0 which was installed using  <code>pip3 install frappe-bench</code></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mujeerhashmi'><span itemprop='name'>mujeerhashmi</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-28T15:54:53Z' class='post-time'>
+                    May 28, 2020,  3:54pm
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-28T15:54:53Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Just like you upgrade any other python package.</p>
+<pre><code class="lang-auto">pip3 install --upgrade frappe-bench
+</code></pre>
+<p>for a specific version</p>
+<pre><code class="lang-auto">pip3 install frappe-bench==v5.0.0
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vrms'><span itemprop='name'>vrms</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-05-29T10:18:53Z' class='post-time'>
+                    May 29, 2020, 10:18am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-05-29T10:18:53Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group quote-modified" data-username="gavindsouza" data-post="6" data-topic="61888">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/gavindsouza/48/55161_2.png" class="avatar"> gavindsouza:</div>
+<blockquote>
+<blockquote>
+<ol start="3">
+<li>will existing instance be getting 5.1.0 on a <code>bench update</code> operation?</li>
+</ol>
+</blockquote>
+<p><code>bench update</code> has stopped updating bench since <a href="https://github.com/frappe/bench/releases/tag/v5.0">v5.0 </a>.</p>
+</blockquote>
+</aside>
+<p>do you mean that bench has to be update separately (because it is not included in a <code>bench update</code> operation any longer)?</p>
+<p>Can you share the steps to do this?</p>
+<p>is it maybe …</p>
+<ul>
+<li><code>pip3 install frappe-bench==[v5.x.x]</code> or</li>
+<li><code>pip3 install --upgrade frappe-bench</code></li>
+</ul>
+<p>… on top of an existing bench?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/gavindsouza'><span itemprop='name'>gavindsouza</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2020-06-01T06:45:43Z' class='post-time'>
+                    June 1, 2020,  6:45am
+                  </time>
+                  <meta itemprop='dateModified' content='2020-06-01T06:45:43Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>the bench CLI tool is different from your bench directories. It is just as good as any other Python package installed globally and managed by pip. You’ll find <a class="mention" href="/u/mujeerhashmi">@mujeerhashmi</a>’s answer helpful:</p>
+<aside class="quote" data-post="8" data-topic="61888">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/mujeerhashmi/48/27999_2.png" class="avatar">
+    <a href="https://discuss.frappe.io/t/release-notes-bench-v5-1-0/61888/8">[Release Notes] bench v5.1.0</a> <a class="badge-category__wrapper " href="/c/announcement/20"><span data-category-id="20" style="--category-badge-color: #283890; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category "><span class="badge-category__name">Announcements</span></span></a>
+  </div>
+  <blockquote>
+    Just like you upgrade any other python package. 
+pip3 install --upgrade frappe-bench
+
+for a specific version 
+pip3 install frappe-bench==v5.0.0
+  </blockquote>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

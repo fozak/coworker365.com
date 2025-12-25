@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Filter by “item_group” in child table “item” - ERPNext - Frappe Forum</title>
+    <meta name="description" content="I am trying to do some customisation in ERP Next Quotation Module, 
+Wherein Once the user select an Item Group only those items should be displayed which are under that Item group. 
+I have changed the Quotation Item doc &amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/filter-by-item-group-in-child-table-item/69970" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Filter by “item_group” in child table “item”&#39;" href="https://discuss.frappe.io/t/filter-by-item-group-in-child-table-item/69970.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/filter-by-item-group-in-child-table-item/69970" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/filter-by-item-group-in-child-table-item/69970" />
+<meta property="og:title" content="Filter by “item_group” in child table “item”" />
+<meta name="twitter:title" content="Filter by “item_group” in child table “item”" />
+<meta property="og:description" content="I am trying to do some customisation in ERP Next Quotation Module,  Wherein Once the user select an Item Group only those items should be displayed which are under that Item group.  I have changed the Quotation Item doc type to Show Item group 1st and made it mandatory, and show in list view, grid view also i have umarked it as hidden and read only and then saved it.  In quoation item doctype I also have changed the Item code to be fetched from “item_group:item_code”  I have also added a custom ..." />
+<meta name="twitter:description" content="I am trying to do some customisation in ERP Next Quotation Module,  Wherein Once the user select an Item Group only those items should be displayed which are under that Item group.  I have changed the Quotation Item doc type to Show Item group 1st and made it mandatory, and show in list view, grid view also i have umarked it as hidden and read only and then saved it.  In quoation item doctype I also have changed the Item code to be fetched from “item_group:item_code”  I have also added a custom ..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:tag" content="quotation" />
+<meta property="og:article:tag" content="item" />
+<meta property="article:published_time" content="2021-01-12T10:24:43+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Filter by “item_group” in child table “item”","mainEntity":{"@type":"Question","name":"Filter by “item_group” in child table “item”","text":"I am trying to do some customisation in ERP Next Quotation Module,\n\nWherein Once the user select an Item Group only those items should be displayed which are under that Item group.\n\nI have changed the Quotation Item doc type to Show Item group 1st and made it mandatory, and show in list view, grid v&hellip;","upvoteCount":0,"answerCount":1,"datePublished":"2021-01-12T10:24:43.193Z","author":{"@type":"Person","name":"mohitchechani","url":"https://discuss.frappe.io/u/mohitchechani"},"acceptedAnswer":{"@type":"Answer","text":"solved via\n\nfrappe.ui.form.on(&quot;Quotation&quot;, &quot;refresh&quot;, function(frm) {\n\nfrm.fields_dict[&#39;items&#39;].grid.get_field(&#39;item_code&#39;).get_query = function(doc, cdt, cdn) {\n\nvar child = locals[cdt][cdn];\n\n//console.log(child);\n\nreturn {\n\nfilters:[\n\n[&#39;Item&#39;, &#39;item_group&#39;, &#39;=&#39;, chil&hellip;","upvoteCount":0,"datePublished":"2021-10-26T09:53:13.583Z","url":"https://discuss.frappe.io/t/filter-by-item-group-in-child-table-item/69970/4","author":{"@type":"Person","name":"mohitchechani","url":"https://discuss.frappe.io/u/mohitchechani"}}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/filter-by-item-group-in-child-table-item/69970">Filter by “item_group” in child table “item”</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/quotation' class='discourse-tag' rel="tag">quotation</a>, 
+            <a href='https://discuss.frappe.io/tag/item' class='discourse-tag' rel="tag">item</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Filter by “item_group” in child table “item”'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/filter-by-item-group-in-child-table-item/69970'>
+      <meta itemprop='datePublished' content='2021-01-12T10:24:43Z'>
+        <meta itemprop='articleSection' content='ERPNext'>
+      <meta itemprop='keywords' content='quotation, item'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mohitchechani'><span itemprop='name'>mohitchechani</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/filter-by-item-group-in-child-table-item/69970">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2021-01-12T10:24:43Z' class='post-time'>
+                    January 12, 2021, 10:24am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-01-13T05:18:23Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am trying to do some customisation in ERP Next Quotation Module,<br>
+Wherein Once the user select an Item Group only those items should be displayed which are under that Item group.</p>
+<p>I have changed the Quotation Item doc type to Show Item group 1st and made it mandatory, and show in list view, grid view also i have umarked it as hidden and read only and then saved it.</p>
+<p>In quoation item doctype I also have changed the Item code to be fetched from “item_group:item_code”</p>
+<p>I have also added a custom script in quoation-item doc type as below<br>
+“frappe.ui.form.on(‘Quotation Item’, {<br>
+refresh(frm) {<br>
+cur_frm.add_fetch(‘item_group’,‘item’,‘item’);<br>
+}<br>
+})”</p>
+<p>Now, When I select the item group, it still shows me all the items, not the items under that particular item group.</p>
+<p>Any help on this will be highly appreciated.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/CA_B.C_Chechani'><span itemprop='name'>CA_B.C_Chechani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-01-13T05:19:58Z' class='post-time'>
+                    January 13, 2021,  5:19am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-01-13T05:19:58Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>You should try to apply custom script for child table, and you need to use filter and not fetch</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/mohitchechani'><span itemprop='name'>mohitchechani</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-10-26T09:53:13Z' class='post-time'>
+                    October 26, 2021,  9:53am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-10-26T09:53:13Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>solved via</p>
+<pre><code>frappe.ui.form.on("Quotation", "refresh", function(frm) {
+frm.fields_dict['items'].grid.get_field('item_code').get_query = function(doc, cdt, cdn) {
+    var child = locals[cdt][cdn];
+    //console.log(child);
+    return {    
+        filters:[
+            ['Item', 'item_group', '=', child.item_groups]
+        ]
+    };
+};
+</code></pre>
+<p>});</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/rohit_pai'><span itemprop='name'>rohit_pai</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-05-24T10:22:54Z' class='post-time'>
+                    May 24, 2024, 10:22am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-05-24T11:08:27Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am using ERPNext version 15, and I was not able to deselect the Read Only option of Item Group field in Quotation Item doctype. So I had to create a new field called Custom Item Group, and then showed that field in Item table in Quotation</p>
+<p>Also, In the filters statement in your answer, it should be child.item_group instead of child.item_groups.</p>
+<p>And since I made a custom field, I had to write child.custom_item_group. And it works now.</p>
+<p>// Event Trigger: The script listens for the refresh event<br>
+frappe.ui.form.on(“Quotation”, “refresh”, function(frm) {</p>
+<pre><code>// Select the 'items' field, which is a child table of Quotation Doctype
+frm.fields_dict['items'] 
+
+// Get a reference to the grid component of this child table
+.grid 
+
+// Get the Item Code field from this grid
+.get_field('item_code') 
+
+// Modify the query for fetching data for the item code field
+.get_query = function(doc, cdt, cdn) { 
+    
+    // Get the current row's document
+    var item_row = locals[cdt][cdn];
+    
+    // return only those items whose group matches the custom item 
+    return {    
+        filters:[
+            ['Item', 'item_group', '=', item_row.custom_item_group]
+        ]
+    };
+};
+</code></pre>
+<p>});</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

@@ -1,0 +1,12 @@
+function createSwitch(form,id,label){let def=true;if(typeof label!=='string'){[label,def]=label}
+document.getElementById(form).innerHTML=document.getElementById(form).innerHTML+`
+        <div class="input-switch">
+            <label for="${id}">${label}</label>
+            <label class="switch">
+              <input type="checkbox" id="${id}" ${def ? 'checked' : ''}>
+              <span class="slider round"></span>
+            </label>
+        </div>
+    `}
+let today=new Date();today.setHours(0,0,0,0);today=today.valueOf();function random(begin=10,end=90,multiple=10){let k;do{k=Math.floor(Math.random()*100);}while(k<begin||k>end||k%multiple!==0);return k;}
+const daysSince=(dx)=>new Date(today+dx*86400000);

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>S3 file attachment is broken - App Development - Frappe Forum</title>
+    <meta name="description" content="Im just trying to host frappe lms on my ec2, and I need to link the files with an s3 bucket. 
+found this app but its kind corrupted Frappe S3 Attachment | Frappe Cloud Marketplace 
+the “delete file from cloud” option is &amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/s3-file-attachment-is-broken/156007" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;S3 file attachment is broken&#39;" href="https://discuss.frappe.io/t/s3-file-attachment-is-broken/156007.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/s3-file-attachment-is-broken/156007" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/s3-file-attachment-is-broken/156007" />
+<meta property="og:title" content="S3 file attachment is broken" />
+<meta name="twitter:title" content="S3 file attachment is broken" />
+<meta property="og:description" content="Im just trying to host frappe lms on my ec2, and I need to link the files with an s3 bucket.  found this app but its kind corrupted Frappe S3 Attachment | Frappe Cloud Marketplace  the “delete file from cloud” option is not working, this option delete file from s3 whenever they are deleted by the user from the ui.  is there any better replacement? or any solution for this?" />
+<meta name="twitter:description" content="Im just trying to host frappe lms on my ec2, and I need to link the files with an s3 bucket.  found this app but its kind corrupted Frappe S3 Attachment | Frappe Cloud Marketplace  the “delete file from cloud” option is not working, this option delete file from s3 whenever they are deleted by the user from the ui.  is there any better replacement? or any solution for this?" />
+<meta property="og:article:section" content="Frappe Framework" />
+<meta property="og:article:section:color" content="F7941D" />
+<meta property="og:article:section" content="App Development" />
+<meta property="og:article:section:color" content="0E76BD" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="1 ❤" />
+<meta property="article:published_time" content="2025-10-25T23:21:37+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"S3 file attachment is broken","mainEntity":{"@type":"Question","name":"S3 file attachment is broken","text":"Im just trying to host frappe lms on my ec2, and I need to link the files with an s3 bucket.\n\nfound this app but its kind corrupted <a href=\"https://cloud.frappe.io/marketplace/apps/frappe_s3_attachment\" rel=\"noopener nofollow ugc\">Frappe S3 Attachment | Frappe Cloud Marketplace<\/a>\n\nthe “delete file from cloud” option is not working, this option delete file from s3 whenever they are deleted by the us&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2025-10-25T23:21:37.338Z","author":{"@type":"Person","name":"OsamaTbaileh","url":"https://discuss.frappe.io/u/OsamaTbaileh"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/s3-file-attachment-is-broken/156007">S3 file attachment is broken</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/5" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #F7941D'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe Framework</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/framework/app-development/24" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #0E76BD'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>App Development</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='S3 file attachment is broken'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/s3-file-attachment-is-broken/156007'>
+      <meta itemprop='datePublished' content='2025-10-25T23:21:37Z'>
+        <meta itemprop='articleSection' content='App Development'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/OsamaTbaileh'><span itemprop='name'>OsamaTbaileh</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/s3-file-attachment-is-broken/156007">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-10-25T23:21:37Z' class='post-time'>
+                    October 25, 2025, 11:21pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-25T23:21:37Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Im just trying to host frappe lms on my ec2, and I need to link the files with an s3 bucket.</p>
+<p>found this app but its kind corrupted <a href="https://cloud.frappe.io/marketplace/apps/frappe_s3_attachment" rel="noopener nofollow ugc">Frappe S3 Attachment | Frappe Cloud Marketplace</a></p>
+<p>the “delete file from cloud” option is not working, this option delete file from s3 whenever they are deleted by the user from the ui.</p>
+<p>is there any better replacement? or any solution for this?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/abhirock74'><span itemprop='name'>abhirock74</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-31T02:19:41Z' class='post-time'>
+                    October 31, 2025,  2:19am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-31T02:19:41Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey <a class="mention" href="/u/osamatbaileh">@OsamaTbaileh</a><br>
+you can try this app for managing cloud asset like AWS S3 and azure blob storage<br>
+Cloud asset DocType handel this features.</p>
+<aside class="onebox githubpullrequest" data-onebox-src="https://github.com/Suvaidyam/frappe_theme/pull/205">
+  <header class="source">
+
+      <a href="https://github.com/Suvaidyam/frappe_theme/pull/205" target="_blank" rel="noopener nofollow ugc">github.com/Suvaidyam/frappe_theme</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="github-row" data-github-private-repo="false">
+
+
+
+    <div class="github-icon-container" title="Pull Request">
+      <svg width="60" height="60" class="github-icon" viewBox="0 0 12 16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>
+    </div>
+
+  <div class="github-info-container">
+
+
+
+      <h4>
+        <a href="https://github.com/Suvaidyam/frappe_theme/pull/205" target="_blank" rel="noopener nofollow ugc">Add New Cloud Assets Integration: AWS S3 and Azure Blob Storage</a>
+      </h4>
+
+    <div class="branches">
+      <code>development</code> ← <code>feat-sva-integrations</code>
+    </div>
+
+      <div class="github-info">
+        <div class="date">
+          opened <span class="discourse-local-date" data-format="ll" data-date="2025-10-03" data-time="11:24:59" data-timezone="UTC">11:24AM - 03 Oct 25 UTC</span>
+        </div>
+
+        <div class="user">
+          <a href="https://github.com/abhirock74" target="_blank" rel="noopener nofollow ugc">
+            <img alt="" src="https://avatars.githubusercontent.com/u/90375329?v=4" class="onebox-avatar-inline" width="20" height="20">
+            abhirock74
+          </a>
+        </div>
+
+        <div class="lines" title="31 commits changed 20 files with 1187 additions and 46 deletions">
+          <a href="https://github.com/Suvaidyam/frappe_theme/pull/205/files" target="_blank" rel="noopener nofollow ugc">
+            <span class="added">+1187</span>
+            <span class="removed">-46</span>
+          </a>
+        </div>
+      </div>
+  </div>
+</div>
+
+  <div class="github-row">
+    <p class="github-body-container">## Description
+
+This PR introduces a **brand-new Cloud Assets integration** th<span class="show-more-container"><a href="https://github.com/Suvaidyam/frappe_theme/pull/205" target="_blank" rel="noopener nofollow ugc" class="show-more">…</a></span><span class="excerpt hidden">at enables the application to store and manage files in **AWS S3** and **Azure Blob Storage**. It provides full support for file operations, key generation, URL access, and includes comprehensive integration tests.
+
+### Features
+
+1. **S3Operations Class (AWS S3)**
+   - Upload files to S3 with **private or public access**.
+   - Generate unique S3 keys based on **date, doctype, and random strings**.
+   - Sanitize file names by stripping **special characters**.
+   - Read files from S3 and generate **signed URLs**.
+   - Delete files from S3 safely.
+   - Supports credentials from:
+     - Environment variables (`access_key`, `secret_key`)  
+     - Cloud Assets doctype fields
+
+2. **AzureBlobOperations Class (Azure Blob Storage)**
+   - Upload files to Azure Blob with **private or public access**.
+   - Generate unique keys using **date, doctype, and random strings**.
+   - Sanitize file names by removing **special characters**.
+   - Read files and generate **signed URLs**.
+   - Delete files safely from Azure Blob Storage.
+   - Supports connection via **Azure credentials** stored in Cloud Assets doctype.
+
+3. **Integration &amp; Unit Tests**
+   - **Positive tests**:
+     - File name sanitization (`strip_special_chars`)
+     - Key generation (`key_generator`)
+     - Upload, read, and delete operations
+     - Signed URL and public URL generation
+   - **Negative tests**:
+     - Uploading non-existent files
+     - Reading or deleting invalid keys
+     - Invalid credentials handling
+   - Tests log a **console message** when skipped due to integration being disabled or incorrect provider.
+
+4. **Error Handling**
+   - Proper handling of `ClientError`, `FileNotFoundError`, and Azure-specific exceptions.
+   - Logs failures from **custom key generator hooks**.
+
+---
+&lt;img width="1913" height="1034" alt="image" src="https://github.com/user-attachments/assets/67a66103-85cf-45c8-bb07-f41267fe1a45" /&gt;
+
+&lt;img width="1913" height="1034" alt="image" src="https://github.com/user-attachments/assets/a8a488ce-859f-4222-9b64-1fe63c29ae98" /&gt;
+
+## Testing Instructions
+
+1. Configure **Cloud Assets** doctype for either **AWS S3** or **Azure Blob Storage**.
+2. Run integration tests:
+
+```bash
+bench run-tests --app frappe_theme tests/test_s3_operations.py
+bench run-tests --app frappe_theme tests/test_azure_blob_operations.py</span></p>
+  </div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

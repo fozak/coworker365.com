@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How to automatically fetch data in quotation item child table from item custom feilds? - Selling/CRM - Frappe Forum</title>
+    <meta name="description" content="I have three custom fields in item doc-type - size, material and finish 
+when i generated a quotation, i customized the item child table and added these three fields al well because i want them for each item in the quota&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/how-to-automatically-fetch-data-in-quotation-item-child-table-from-item-custom-feilds/128596" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;How to automatically fetch data in quotation item child table from item custom feilds?&#39;" href="https://discuss.frappe.io/t/how-to-automatically-fetch-data-in-quotation-item-child-table-from-item-custom-feilds/128596.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/1/e/1e61463b8f7c18dc9cf25d7b8908f17db54bda29_2_1024x151.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/1/e/1e61463b8f7c18dc9cf25d7b8908f17db54bda29_2_1024x151.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/how-to-automatically-fetch-data-in-quotation-item-child-table-from-item-custom-feilds/128596" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/how-to-automatically-fetch-data-in-quotation-item-child-table-from-item-custom-feilds/128596" />
+<meta property="og:title" content="How to automatically fetch data in quotation item child table from item custom feilds?" />
+<meta name="twitter:title" content="How to automatically fetch data in quotation item child table from item custom feilds?" />
+<meta property="og:description" content="I have three custom fields in item doc-type - size, material and finish  when i generated a quotation, i customized the item child table and added these three fields al well because i want them for each item in the quotation.  But unfortunately, the column can not fetch value from the item doc-type similarly as i enter item code name so it automatically fetches the item name, item rate and item description.  Kindly assist on the same that what changes i can do so that after adding item code, alo..." />
+<meta name="twitter:description" content="I have three custom fields in item doc-type - size, material and finish  when i generated a quotation, i customized the item child table and added these three fields al well because i want them for each item in the quotation.  But unfortunately, the column can not fetch value from the item doc-type similarly as i enter item code name so it automatically fetches the item name, item rate and item description.  Kindly assist on the same that what changes i can do so that after adding item code, alo..." />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:section" content="Selling/CRM" />
+<meta property="og:article:section:color" content="9EB83B" />
+<meta property="og:article:tag" content="quotation" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="2 ❤" />
+<meta property="article:published_time" content="2024-07-12T08:35:42+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"How to automatically fetch data in quotation item child table from item custom feilds?","mainEntity":{"@type":"Question","name":"How to automatically fetch data in quotation item child table from item custom feilds?","text":"I have three custom fields in item doc-type - size, material and finish\n\nwhen i generated a quotation, i customized the item child table and added these three fields al well because i want them for each item in the quotation.\n\nBut unfortunately, the column can not fetch value from the item doc-type &hellip;","upvoteCount":0,"answerCount":1,"datePublished":"2024-07-12T08:35:42.681Z","author":{"@type":"Person","name":"Anjalijangid","url":"https://discuss.frappe.io/u/Anjalijangid"},"acceptedAnswer":{"@type":"Answer","text":"size, material, and finish are set in the Item master then you can easily use with default feature of Fetch From without the code. default feature video starts with 55 seconds in youtube that i provided.","upvoteCount":1,"datePublished":"2024-07-12T09:57:00.072Z","url":"https://discuss.frappe.io/t/how-to-automatically-fetch-data-in-quotation-item-child-table-from-item-custom-feilds/128596/4","author":{"@type":"Person","name":"NCP","url":"https://discuss.frappe.io/u/NCP"}}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/how-to-automatically-fetch-data-in-quotation-item-child-table-from-item-custom-feilds/128596">How to automatically fetch data in quotation item child table from item custom feilds?</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/selling/8" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #9EB83B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Selling/CRM</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/quotation' class='discourse-tag' rel="tag">quotation</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='How to automatically fetch data in quotation item child table from item custom feilds?'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/how-to-automatically-fetch-data-in-quotation-item-child-table-from-item-custom-feilds/128596'>
+      <meta itemprop='datePublished' content='2024-07-12T08:35:42Z'>
+        <meta itemprop='articleSection' content='Selling/CRM'>
+      <meta itemprop='keywords' content='quotation'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Anjalijangid'><span itemprop='name'>Anjalijangid</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/how-to-automatically-fetch-data-in-quotation-item-child-table-from-item-custom-feilds/128596">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/1/e/1e61463b8f7c18dc9cf25d7b8908f17db54bda29.png">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2024-07-12T08:35:42Z' class='post-time'>
+                    July 12, 2024,  8:35am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-12T08:35:42Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have three custom fields in item doc-type - size, material and finish<br>
+when i generated a quotation, i customized the item child table and added these three fields al well because i want them for each item in the quotation.</p>
+<p>But unfortunately, the column can not fetch value from the item doc-type similarly as i enter item code name so it automatically fetches the item name, item rate and item description.<br>
+Kindly assist on the same that what changes i can do so that after adding item code, along with rate, name and description, it can fetch size, material and finish too.</p>
+<p>This is the view after customization -</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/e/1e61463b8f7c18dc9cf25d7b8908f17db54bda29.png" data-download-href="https://discuss.frappe.io/uploads/default/1e61463b8f7c18dc9cf25d7b8908f17db54bda29" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/1/e/1e61463b8f7c18dc9cf25d7b8908f17db54bda29_2_690x102.png" alt="image" data-base62-sha1="4kKJtl7ordaHXGXR9jrbk7veNKx" width="690" height="102" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/1/e/1e61463b8f7c18dc9cf25d7b8908f17db54bda29_2_690x102.png, https://discuss.frappe.io/uploads/default/optimized/3X/1/e/1e61463b8f7c18dc9cf25d7b8908f17db54bda29_2_1035x153.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/1/e/1e61463b8f7c18dc9cf25d7b8908f17db54bda29.png 2x" data-dominant-color="F8F8F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1260×187 18 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Now, after adding one item code, only name, rate and description has been<br>
+automatically filled, i want other three to filled in the same way -</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/7/b/7b4bc510827273f44ca4819775643897d12318e8.png" data-download-href="https://discuss.frappe.io/uploads/default/7b4bc510827273f44ca4819775643897d12318e8" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/7/b/7b4bc510827273f44ca4819775643897d12318e8_2_690x78.png" alt="image" data-base62-sha1="hAJ41o0466PCY3imncww44svCNG" width="690" height="78" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/7/b/7b4bc510827273f44ca4819775643897d12318e8_2_690x78.png, https://discuss.frappe.io/uploads/default/optimized/3X/7/b/7b4bc510827273f44ca4819775643897d12318e8_2_1035x117.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/7/b/7b4bc510827273f44ca4819775643897d12318e8.png 2x" data-dominant-color="F7F7F7"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1254×142 13.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/NCP'><span itemprop='name'>NCP</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-07-12T08:39:07Z' class='post-time'>
+                    July 12, 2024,  8:39am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-12T08:39:07Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Please check the video (Fetch From - Default Feature: start with 0:55)</p><aside class="quote quote-modified" data-post="6" data-topic="122893">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/ncp/48/66573_2.png" class="avatar">
+    <a href="https://discuss.frappe.io/t/fetch-child-table-form-one-doctype-to-other-doctype/122893/6">Fetch Child table form one doctype to other doctype</a> <a class="badge-category__wrapper " href="/c/erpnext/6"><span data-category-id="6" style="--category-badge-color: #BF1E2E; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category "><span class="badge-category__name">ERPNext</span></span></a>
+  </div>
+  <blockquote>
+    I have given the reference of the video here, maybe it will help someone. 
+
+  <a href="https://www.youtube.com/watch?v=iBRWSDRDqK4" target="_blank" rel="noopener">
+    [Fetch Data From One DocType To Another | Frappe | ERPNext]
+  </a>
+  </blockquote>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Anjalijangid'><span itemprop='name'>Anjalijangid</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/c/a/ca16afd7b82891d8b6c496d0df1225081debd63f.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-07-12T09:54:01Z' class='post-time'>
+                    July 12, 2024,  9:54am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-12T09:54:01Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Is this code fine?<br>
+because error in client script is showing!</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/c/a/ca16afd7b82891d8b6c496d0df1225081debd63f.png" data-download-href="https://discuss.frappe.io/uploads/default/ca16afd7b82891d8b6c496d0df1225081debd63f" title="image"><img src="https://discuss.frappe.io/uploads/default/original/3X/c/a/ca16afd7b82891d8b6c496d0df1225081debd63f.png" alt="image" data-base62-sha1="sPL3rbitHyif04T5nqn61hJGBRR" width="620" height="500" data-dominant-color="F4F4F3"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">664×535 14.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/NCP'><span itemprop='name'>NCP</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-07-12T09:57:00Z' class='post-time'>
+                    July 12, 2024,  9:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-12T09:57:00Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>size, material, and finish are set in the Item master then you can easily use with default feature of Fetch From without the code. default feature video starts with 55 seconds in youtube that i provided.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Anjalijangid'><span itemprop='name'>Anjalijangid</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/5/0/50384b9229c746b69af48050fdbd87327bed5052.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-07-12T10:39:32Z' class='post-time'>
+                    July 12, 2024, 10:39am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-12T10:39:32Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I cant see related doctype here</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/5/0/50384b9229c746b69af48050fdbd87327bed5052.png" data-download-href="https://discuss.frappe.io/uploads/default/50384b9229c746b69af48050fdbd87327bed5052" title="image"><img src="https://discuss.frappe.io/uploads/default/original/3X/5/0/50384b9229c746b69af48050fdbd87327bed5052.png" alt="image" data-base62-sha1="brEObSTSD2BhKXzdYvn1b2eBtd0" width="690" height="460" data-dominant-color="F5F5F3"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">790×527 23.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/NCP'><span itemprop='name'>NCP</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-07-12T10:42:57Z' class='post-time'>
+                    July 12, 2024, 10:42am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-12T10:42:57Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Select the Item (item_code) and then select your Size field from the Item master. you have to play with feature and how it works. Then you will know, otherwise nothing will be known</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Anjalijangid'><span itemprop='name'>Anjalijangid</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-07-12T10:56:22Z' class='post-time'>
+                    July 12, 2024, 10:56am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-12T10:56:22Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks your so much.<br>
+It worked !!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Anjalijangid'><span itemprop='name'>Anjalijangid</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/6/5/65046512bf5874a2b6f32e638f474507f8fe101d.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-07-16T11:09:16Z' class='post-time'>
+                    July 16, 2024, 11:09am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-16T11:09:16Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hello,<br>
+I tried this, the data is fetched successfully but when i am submitting it, the following error is showing.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/6/5/65046512bf5874a2b6f32e638f474507f8fe101d.png" data-download-href="https://discuss.frappe.io/uploads/default/65046512bf5874a2b6f32e638f474507f8fe101d" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/6/5/65046512bf5874a2b6f32e638f474507f8fe101d_2_690x146.png" alt="image" data-base62-sha1="epDDHzD44vvcmFGC69cDxotsLUx" width="690" height="146" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/6/5/65046512bf5874a2b6f32e638f474507f8fe101d_2_690x146.png, https://discuss.frappe.io/uploads/default/optimized/3X/6/5/65046512bf5874a2b6f32e638f474507f8fe101d_2_1035x219.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/6/5/65046512bf5874a2b6f32e638f474507f8fe101d.png 2x" data-dominant-color="808080"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1259×267 23.9 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/NCP'><span itemprop='name'>NCP</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/6/1/61e7b1222d0b59d7ff092dfc1130138ab7f235ce.jpeg">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-07-16T11:18:59Z' class='post-time'>
+                    July 16, 2024, 11:18am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-16T11:18:59Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Please check item has a size/material or not.</p>
+<p>This is the only way to manage.</p>
+<p>Otherwise, apply the “Fetch on Save if Empty”.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/6/1/61e7b1222d0b59d7ff092dfc1130138ab7f235ce.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/61e7b1222d0b59d7ff092dfc1130138ab7f235ce" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/6/1/61e7b1222d0b59d7ff092dfc1130138ab7f235ce_2_690x332.jpeg" alt="image" data-base62-sha1="dY6Ia4SLtamIylYJOyDsmq6daCW" width="690" height="332" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/6/1/61e7b1222d0b59d7ff092dfc1130138ab7f235ce_2_690x332.jpeg, https://discuss.frappe.io/uploads/default/optimized/3X/6/1/61e7b1222d0b59d7ff092dfc1130138ab7f235ce_2_1035x498.jpeg 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/6/1/61e7b1222d0b59d7ff092dfc1130138ab7f235ce_2_1380x664.jpeg 2x" data-dominant-color="F8F8F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1920×924 64 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Anjalijangid'><span itemprop='name'>Anjalijangid</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/d/3/d390fc757fb26915a2f0892dd2c21cd7c8cdae79.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-07-16T11:22:59Z' class='post-time'>
+                    July 16, 2024, 11:22am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-16T11:22:59Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>yes, the item has all there data but still not working.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/3/d390fc757fb26915a2f0892dd2c21cd7c8cdae79.png" data-download-href="https://discuss.frappe.io/uploads/default/d390fc757fb26915a2f0892dd2c21cd7c8cdae79" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/3/d390fc757fb26915a2f0892dd2c21cd7c8cdae79_2_682x500.png" alt="image" data-base62-sha1="ubBnpRJmRnNk5rAv9RCJhLxeO0N" width="682" height="500" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/3/d390fc757fb26915a2f0892dd2c21cd7c8cdae79_2_682x500.png, https://discuss.frappe.io/uploads/default/original/3X/d/3/d390fc757fb26915a2f0892dd2c21cd7c8cdae79.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/d/3/d390fc757fb26915a2f0892dd2c21cd7c8cdae79.png 2x" data-dominant-color="F8F8F8"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">721×528 24.2 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/NCP'><span itemprop='name'>NCP</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-07-16T11:24:27Z' class='post-time'>
+                    July 16, 2024, 11:24am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-16T11:24:27Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Try it yourself and learn it. i provided the all references.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Anjalijangid'><span itemprop='name'>Anjalijangid</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-07-16T11:24:56Z' class='post-time'>
+                    July 16, 2024, 11:24am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-16T11:32:28Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thanks, its working now, I deleted the fields and recreated them.<br>
+The field now is data instead of LINK.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Anjalijangid'><span itemprop='name'>Anjalijangid</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/2/6/262a3b08bdbd66a53801a8dc14aa8e601a9035eb.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-09T08:32:50Z' class='post-time'>
+                    August 9, 2024,  8:32am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-09T08:33:57Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>In this case, the material is a table multi-select field in item.</p>
+<p>This is quotation&lt;child-table customization material field (data type).</p>
+<p>I cant see the ‘material’ option here in item_code.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/6/262a3b08bdbd66a53801a8dc14aa8e601a9035eb.png" data-download-href="https://discuss.frappe.io/uploads/default/262a3b08bdbd66a53801a8dc14aa8e601a9035eb" title="image"><img src="https://discuss.frappe.io/uploads/default/original/3X/2/6/262a3b08bdbd66a53801a8dc14aa8e601a9035eb.png" alt="image" data-base62-sha1="5rCCAZ6g9WGSkUYIyv6dYbsK0z1" width="690" height="397" data-dominant-color="F7F6F2"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">926×534 24.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>Even when, material has value in item doctype.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/6/a/6a964bb081be8dad8cd19b51c228f89d58e41cbc.png" data-download-href="https://discuss.frappe.io/uploads/default/6a964bb081be8dad8cd19b51c228f89d58e41cbc" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/6/a/6a964bb081be8dad8cd19b51c228f89d58e41cbc_2_690x428.png" alt="image" data-base62-sha1="fcUCmOwpvZ8wEUWTCFkFCGuljmA" width="690" height="428" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/6/a/6a964bb081be8dad8cd19b51c228f89d58e41cbc_2_690x428.png, https://discuss.frappe.io/uploads/default/original/3X/6/a/6a964bb081be8dad8cd19b51c228f89d58e41cbc.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/6/a/6a964bb081be8dad8cd19b51c228f89d58e41cbc.png 2x" data-dominant-color="F7F7F7"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">737×458 19.7 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p><strong>In my previous quotation, it fetched all details but now in other new quotations, its not fetching material and finish.</strong></p>
+<p>Please help !!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/NCP'><span itemprop='name'>NCP</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-09T08:35:23Z' class='post-time'>
+                    August 9, 2024,  8:35am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-09T08:35:23Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Fetch from feature and multi-select feature are different, so they cannot be compared.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Anjalijangid'><span itemprop='name'>Anjalijangid</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-09T08:36:49Z' class='post-time'>
+                    August 9, 2024,  8:36am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-09T08:36:49Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>But in my previous quotation, they got fetched from the same method.<br>
+Now its not working.<br>
+Is there any other way, to fetch multiselect fields?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/NCP'><span itemprop='name'>NCP</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-09T08:37:47Z' class='post-time'>
+                    August 9, 2024,  8:37am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-09T08:37:47Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="Anjalijangid" data-post="15" data-topic="128596">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/letter_avatar_proxy/v4/letter/a/3ec8ea/48.png" class="avatar"> Anjalijangid:</div>
+<blockquote>
+<p>s there any other way, to fetch multiselect fields?</p>
+</blockquote>
+</aside>
+<p>maybe possible from the script (not sure about the script), not the UI side.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Anjalijangid'><span itemprop='name'>Anjalijangid</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-09T08:39:37Z' class='post-time'>
+                    August 9, 2024,  8:39am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-09T08:39:37Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>okay ! <img src="https://discuss.frappe.io/images/emoji/twitter/smiling_face_with_tear.png?v=12" title=":smiling_face_with_tear:" class="emoji" alt=":smiling_face_with_tear:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

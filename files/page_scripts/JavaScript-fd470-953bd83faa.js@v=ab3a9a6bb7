@@ -1,0 +1,11 @@
+window.addEventListener("DOMContentLoaded",async()=>{const filterArea=document.querySelector(".filter-area");filterArea.appendChild(createSearchInput("Title or Blogger"));filterArea.appendChild(createFilter("category","Category",["All Categories",...page_data.blog_categories,]));function createFilter(name,label,options){const filter=document.createElement("div");filter.classList.add("filter");const params=new URLSearchParams(window.location.search);const value=params.get(name);filter.innerHTML=`
+        	<select name="${name}" id="${name}">
+        		<option value="" disabled>${label}</option>
+        		${options.map(
+              (option) => `<option value="${typeof option === "object" ? option.value : option}"
+${value==(typeof option==="object"?option.value:option)?"selected":""}>${typeof option==="object"?option.label:option}</option>`
+            )}
+        	</select>
+        `;filter.querySelector("select").addEventListener("change",function(){const params=new URLSearchParams(window.location.search);params.set(this.name,this.value);params.delete("page");window.location.search=params.toString();});return filter;}
+function createSearchInput(placeholder="Search"){const searchInput=document.createElement("input");searchInput.type="text";searchInput.placeholder=placeholder;searchInput.autofocus=true;searchInput.value=new URLSearchParams(window.location.search).get("search");searchInput.addEventListener("keypress",function(event){if(event.key==="Enter"){const params=new URLSearchParams(window.location.search);if(this.value===""){params.delete("search");}else{params.set("search",this.value);}
+params.delete("page");window.location.search=params.toString();}});return searchInput;}});

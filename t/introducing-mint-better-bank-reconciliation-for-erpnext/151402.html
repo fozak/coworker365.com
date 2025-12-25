@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Introducing Mint - Better Bank Reconciliation for ERPNext - Announcements - Frappe Forum</title>
+    <meta name="description" content="Today I’m happy to announce the launch of Mint, a new open-source app that we created to improve the bank reconciliation experience in ERPNext. 
+  
+It’s built using React and is a single page app (/mint). It literally ju&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/introducing-mint-better-bank-reconciliation-for-erpnext/151402" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Introducing Mint - Better Bank Reconciliation for ERPNext&#39;" href="https://discuss.frappe.io/t/introducing-mint-better-bank-reconciliation-for-erpnext/151402.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/5/9/593ae749f0a5c397c57df50d3fa52879fdb68e32_2_1024x560.jpeg" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/optimized/3X/5/9/593ae749f0a5c397c57df50d3fa52879fdb68e32_2_1024x560.jpeg" />
+<meta property="og:url" content="https://discuss.frappe.io/t/introducing-mint-better-bank-reconciliation-for-erpnext/151402" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/introducing-mint-better-bank-reconciliation-for-erpnext/151402" />
+<meta property="og:title" content="Introducing Mint - Better Bank Reconciliation for ERPNext" />
+<meta name="twitter:title" content="Introducing Mint - Better Bank Reconciliation for ERPNext" />
+<meta property="og:description" content="Today I’m happy to announce the launch of Mint, a new open-source app that we created to improve the bank reconciliation experience in ERPNext.     It’s built using React and is a single page app (/mint). It literally just has one page by the way.  Mint helps you reconcile transactions with ease. It highlights potential matches, autofills relevant information and even allows bulk reconciliation. If you make a mistake, you can easily “Undo” a reconciliation.  When recording inter-bank transfers, ..." />
+<meta name="twitter:description" content="Today I’m happy to announce the launch of Mint, a new open-source app that we created to improve the bank reconciliation experience in ERPNext.     It’s built using React and is a single page app (/mint). It literally just has one page by the way.  Mint helps you reconcile transactions with ease. It highlights potential matches, autofills relevant information and even allows bulk reconciliation. If you make a mistake, you can easily “Undo” a reconciliation.  When recording inter-bank transfers, ..." />
+<meta property="og:article:section" content="Announcements" />
+<meta property="og:article:section:color" content="283890" />
+<meta property="og:article:tag" content="erpnext" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="2 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="45 ❤" />
+<meta property="article:published_time" content="2025-08-08T13:44:39+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="/t/introducing-mint-better-bank-reconciliation-for-erpnext/151402?page=2">
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Introducing Mint - Better Bank Reconciliation for ERPNext","mainEntity":{"@type":"Question","name":"Introducing Mint - Better Bank Reconciliation for ERPNext","text":"Today I’m happy to announce the launch of Mint, a new open-source app that we created to improve the bank reconciliation experience in ERPNext.\n\n<a class=\"lightbox\" href=\"https://discuss.frappe.io/uploads/default/original/3X/5/9/593ae749f0a5c397c57df50d3fa52879fdb68e32.jpeg\" data-download-href=\"https://discuss.frappe.io/uploads/default/593ae749f0a5c397c57df50d3fa52879fdb68e32\" title=\"Mint Hero\">[Mint Hero]<\/a>\n\nIt’s built using React and is a single page app (/mint). It literally just has one page by the way.\n\nMint helps you reconcile transactions wi&hellip;","upvoteCount":32,"answerCount":0,"datePublished":"2025-08-08T13:44:39.423Z","author":{"@type":"Person","name":"nikkothari22","url":"https://discuss.frappe.io/u/nikkothari22"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/introducing-mint-better-bank-reconciliation-for-erpnext/151402">Introducing Mint - Better Bank Reconciliation for ERPNext</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/announcement/20" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #283890'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Announcements</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/erpnext' class='discourse-tag' rel="tag">erpnext</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Introducing Mint - Better Bank Reconciliation for ERPNext'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/introducing-mint-better-bank-reconciliation-for-erpnext/151402'>
+      <meta itemprop='datePublished' content='2025-08-08T13:44:39Z'>
+        <meta itemprop='articleSection' content='Announcements'>
+      <meta itemprop='keywords' content='erpnext'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nikkothari22'><span itemprop='name'>nikkothari22</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/introducing-mint-better-bank-reconciliation-for-erpnext/151402">
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/5/9/593ae749f0a5c397c57df50d3fa52879fdb68e32.jpeg">
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2025-08-08T13:44:39Z' class='post-time'>
+                    August 8, 2025,  1:44pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-08T13:44:39Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Today I’m happy to announce the launch of Mint, a new open-source app that we created to improve the bank reconciliation experience in ERPNext.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/5/9/593ae749f0a5c397c57df50d3fa52879fdb68e32.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/593ae749f0a5c397c57df50d3fa52879fdb68e32" title="Mint Hero"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/5/9/593ae749f0a5c397c57df50d3fa52879fdb68e32_2_690x377.jpeg" alt="Mint Hero" data-base62-sha1="cJmH5uoIOMtqcZhli4ZDkw8tDLs" width="690" height="377" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/5/9/593ae749f0a5c397c57df50d3fa52879fdb68e32_2_690x377.jpeg, https://discuss.frappe.io/uploads/default/optimized/3X/5/9/593ae749f0a5c397c57df50d3fa52879fdb68e32_2_1035x565.jpeg 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/5/9/593ae749f0a5c397c57df50d3fa52879fdb68e32_2_1380x754.jpeg 2x" data-dominant-color="EAF0EE"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Mint Hero</span><span class="informations">1920×1051 142 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+<p>It’s built using React and is a single page app (/mint). It literally just has one page by the way.</p>
+<p>Mint helps you reconcile transactions with ease. It highlights potential matches, autofills relevant information and even allows bulk reconciliation. If you make a mistake, you can easily “Undo” a reconciliation.</p>
+<p>When recording inter-bank transfers, Mint will look for “mirror” transactions and suggest that as well.</p>
+<p>You can also set up rules to automatically classify transactions -  and this helps users by autofilling accounts and parties.</p>
+<p>A lot of effort has gone into refining the experience - the little details - like date pickers can accept natural language input (“2 days ago” or “Apr 21”), there’s fuzzy search on the transactions list, date popups do not jump around when switching between months, account dropdowns show accounts in groups and also offer fuzzy searching.</p>
+<p>I have added a lot of documentation and screenshots on the <a href="https://github.com/The-Commit-Company/mint" rel="noopener nofollow ugc">Github repository</a> and a YouTube video (50+ minute long!) is being uploaded now.</p>
+<p>Mint is available on <a href="https://cloud.frappe.io/marketplace/apps/mint" rel="noopener nofollow ugc">Frappe Cloud</a> on private benches.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="32" />
+              <span class='post-likes'>32 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nikkothari22'><span itemprop='name'>nikkothari22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-08T14:36:57Z' class='post-time'>
+                    August 8, 2025,  2:36pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-08T14:36:57Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>YouTube video: <a href="https://www.youtube.com/watch?v=nX9igS980MA" rel="noopener nofollow ugc">https://www.youtube.com/watch?v=nX9igS980MA</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="6" />
+              <span class='post-likes'>6 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/asoral'><span itemprop='name'>asoral</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-08T16:03:11Z' class='post-time'>
+                    August 8, 2025,  4:03pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-08T16:03:11Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I maybe missed the part in the video where you explain uploading the bank statement. How do you upload the bank statement from mint screen, or do you still do it from the data import in erpnext like we used to?<br>
+Also, what is the purpose of the mint settings page? Google AI?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nikkothari22'><span itemprop='name'>nikkothari22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-08T16:21:51Z' class='post-time'>
+                    August 8, 2025,  4:21pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-08T16:21:51Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>So I wanted to provide a better upload experience, and tried Google Cloud, but it wasn’t very reliable. For now you should use the standard “Bank Statement Import”</p>
+<p>I did however create a Doctype called “Mint Bank Statement Import” - and I used that to import my credit card statements - since they have “Cr” and “Dr” instead of separate columns for withdrawal and deposit. It’s a very simple Doctype and can be used to import statements.</p>
+<p>The documentation for this is on the README under the section “Bank Statement Importer”.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/asoral'><span itemprop='name'>asoral</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-08T18:38:37Z' class='post-time'>
+                    August 8, 2025,  6:38pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-08T18:38:37Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I must congratulate you. It is a meticulously designed screen. Keep it up! A true value addition to the already powerful app.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/OmelMedina'><span itemprop='name'>OmelMedina</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-08T19:44:28Z' class='post-time'>
+                    August 8, 2025,  7:44pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-08T19:44:28Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/nikkothari22">@nikkothari22</a></p>
+<p>This looks awesome. Will this only be available on Frappe Cloud?</p>
+<p>A question on the credit cards, are you treating your credit cards as an Asset account? Then you create a bank account with that account and mark it as “Is Credit Card” so you can then use it?</p>
+<p>We are struggling on how deal with credit cards that we use to purchase goods in the system. Currently we set it up as a payable but that doesn’t seem to work well. I’ve read a couple topics on this, but this app at least makes the asset route more appealing.</p>
+<p>Thanks!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nikkothari22'><span itemprop='name'>nikkothari22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-08T20:22:11Z' class='post-time'>
+                    August 8, 2025,  8:22pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-08T20:22:11Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It’s an open source Frappe app so you can install it on your server. Not restricted to just Frappe Cloud.</p>
+<p>For credit cards: the account is a liability account (root type is Liability (not asset) - so it’s on the balance sheet), but the “account type” is set to “Bank”. This allows you to pick the account when creating a “Bank Account” - the bank account should be a company bank account.</p>
+<p>So if you had an expense on the credit card, you would credit the account (your liability increases) and debit the expense account. If you made a payment, you would debit the account (your liability decreases).</p>
+<p>The “is_credit_card” checkbox is only for Mint to know which type of Journal Entry to create - “Credit Card Entry” vs “Bank Entry” - it has no impact on accounting - it just looks better when viewing the general ledger.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/OmelMedina'><span itemprop='name'>OmelMedina</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-08T20:47:31Z' class='post-time'>
+                    August 8, 2025,  8:47pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-08T20:47:31Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/nikkothari22">@nikkothari22</a></p>
+<p>Thanks for the reply. We will definitely gives this a shot and use this app as well with it. I just installed the app with no problems, it looks slick!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Viv_Choudhary'><span itemprop='name'>Viv_Choudhary</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/1/e/1eab048427378e2ab4a1ad945090016ac53c88c7.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-09T06:57:50Z' class='post-time'>
+                    August 9, 2025,  6:57am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-09T06:57:50Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/e/1eab048427378e2ab4a1ad945090016ac53c88c7.png" data-download-href="https://discuss.frappe.io/uploads/default/1eab048427378e2ab4a1ad945090016ac53c88c7" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/1/e/1eab048427378e2ab4a1ad945090016ac53c88c7_2_690x244.png" alt="image" data-base62-sha1="4niJ7mbhQ2DWyOhEhJm9wn1eQUD" width="690" height="244" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/1/e/1eab048427378e2ab4a1ad945090016ac53c88c7_2_690x244.png, https://discuss.frappe.io/uploads/default/optimized/3X/1/e/1eab048427378e2ab4a1ad945090016ac53c88c7_2_1035x366.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/1/e/1eab048427378e2ab4a1ad945090016ac53c88c7.png 2x" data-dominant-color="EEEEEE"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1190×422 27.5 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+how to fix node error</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Viv_Choudhary'><span itemprop='name'>Viv_Choudhary</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-09T06:58:33Z' class='post-time'>
+                    August 9, 2025,  6:58am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-09T06:58:33Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Node Version for mint</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nikkothari22'><span itemprop='name'>nikkothari22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-09T08:51:53Z' class='post-time'>
+                    August 9, 2025,  8:51am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-09T08:51:53Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Set it to 18.18 or higher</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Viv_Choudhary'><span itemprop='name'>Viv_Choudhary</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-09T09:14:29Z' class='post-time'>
+                    August 9, 2025,  9:14am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-09T09:14:29Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>maybe other app will effect dependancy<br>
+if chnage node version</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nikkothari22'><span itemprop='name'>nikkothari22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-09T09:36:58Z' class='post-time'>
+                    August 9, 2025,  9:36am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-09T09:36:58Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>No it won’t. I have multiple sites on 18.18 - some even on 20+. You’re just changing from 18.16 to 18.18</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Viv_Choudhary'><span itemprop='name'>Viv_Choudhary</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-11T04:33:12Z' class='post-time'>
+                    August 11, 2025,  4:33am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-11T04:33:12Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Nice work, can i request<br>
+can you same UI Design make for Erpnext it is look premium Design</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/darthink'><span itemprop='name'>darthink</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-22T18:56:20Z' class='post-time'>
+                    August 22, 2025,  6:56pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-22T18:56:20Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>It looks like an amazing tool!</p>
+<p>If I can get it to work how I’d like, this tool will greatly speed up my reconciliation process which is extremely, extremely painful and manual in ERPNext right now. I’m also a n00b with accounting, so all this is learning.</p>
+<p>But the issue I’m running in to is I click “Bank Entry” for an item that was incoming money (or anything, just to get the Journey Entry). I assign the <strong>Account</strong> and <strong>Cost Center</strong> in the given row in the Mint interface (of the Bank Entry) and submit. It makes a doubly-entry Journal Entry (yay!) BUT the two Accounting Entries (inside the Journal Entry) do not have the right Cost Centers assigned, and this is really important for me to have so I can track everything for specific events we run.</p>
+<p>I feel like maybe they could just inherit the assigned Cost Center, but they’re not. Maybe a bug or improvement? Or maybe I’m not using it properly. Thanks for any help!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nikkothari22'><span itemprop='name'>nikkothari22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-22T20:06:06Z' class='post-time'>
+                    August 22, 2025,  8:06pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-22T20:06:06Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Oh you mean the cost center on the bank side of the JE? I guess it just uses the default cost center set in the company. You can configure the cost center on each row for the expenses/income.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/darthink'><span itemprop='name'>darthink</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-08-22T20:50:38Z' class='post-time'>
+                    August 22, 2025,  8:50pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-08-22T20:50:38Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Oh cool, I didn’t realize I could set a default Cost Center for the Company. Thanks for that!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Aakanksha1'><span itemprop='name'>Aakanksha1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-06T17:27:14Z' class='post-time'>
+                    October 6, 2025,  5:27pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-06T17:27:14Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Sir, I tried it, but actually I’m only getting this type of window, and apart from one Mint Bank Reconciliation Rule &amp; Mint Bank reconciliation Import, nothing else is visible. Could you please guide me on how to use it?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/nikkothari22'><span itemprop='name'>nikkothari22</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-06T22:39:07Z' class='post-time'>
+                    October 6, 2025, 10:39pm
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-06T22:39:07Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hey, go to /mint on your site instead of /app</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Abubakar_Falah'><span itemprop='name'>Abubakar_Falah</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/1/b/1b239027997d5eed142a7a701b169496a8daca1e.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-10-15T07:20:44Z' class='post-time'>
+                    October 15, 2025,  7:20am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-10-15T07:20:44Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi , Its a great app you have made,<br>
+I’m having difficulties in doing reconciliation for 3 transaction of bank statement to one payment entry.</p>
+<p>Like i have 3 bank transaction of 1k,2k &amp; 2k received from the customer, but in my payment entries (Erpnext ) its a 5k one time entry, as we have created them as single entry.  How to reconcile them properply?<br>
+I tried with Record Payment but its making new entries for them.?</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/b/1b239027997d5eed142a7a701b169496a8daca1e.png" data-download-href="https://discuss.frappe.io/uploads/default/1b239027997d5eed142a7a701b169496a8daca1e" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/1/b/1b239027997d5eed142a7a701b169496a8daca1e_2_690x114.png" alt="image" data-base62-sha1="3S55hTKwm6est8p7tyxawXdybr8" width="690" height="114" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/1/b/1b239027997d5eed142a7a701b169496a8daca1e_2_690x114.png, https://discuss.frappe.io/uploads/default/original/3X/1/b/1b239027997d5eed142a7a701b169496a8daca1e.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/1/b/1b239027997d5eed142a7a701b169496a8daca1e.png 2x" data-dominant-color="EFF1F5"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1009×167 26.6 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="/t/introducing-mint-better-bank-reconciliation-for-erpnext/151402?page=2">next page →</a></b></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

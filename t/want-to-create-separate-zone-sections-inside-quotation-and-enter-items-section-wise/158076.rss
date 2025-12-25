@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Want To Create Separate Zone/Sections inside Quotation and enter Items Section Wise</title>
+    <link>https://discuss.frappe.io/t/want-to-create-separate-zone-sections-inside-quotation-and-enter-items-section-wise/158076</link>
+    <description>I’m creating Item Quotation for customers And I want section wise entry in item child table under Quotation i have multiple n number of Zones such as  Zone A (for kitchen), Zone B (for Wardrobes) &amp; C (for etc ) , in each Zone there are separate item entries and i want separate subtotal for each Zone and a total of all Zone A+B+C … = Total Costin the Summary at the bottom of the quotation. 
+
+I Should be Able to add n number of items in each Zone and Also Increase or decrease the Zone.
+
+These are some Zones and there Sub total. 
+
+![image|689x234](upload://8F9cNRhPr45fWjsuJ24xyAdBKso.png)
+
+Final All Zone Total :- 
+
+![image|291x97](upload://zrdtM4KNyBJ2Ef7KKKekn4IB7J1.png)</description>
+    
+    <lastBuildDate>Wed, 24 Dec 2025 09:08:09 +0000</lastBuildDate>
+    <category>Accounting</category>
+    <atom:link href="https://discuss.frappe.io/t/want-to-create-separate-zone-sections-inside-quotation-and-enter-items-section-wise/158076.rss" rel="self" type="application/rss+xml" />
+      <item>
+        <title>Want To Create Separate Zone/Sections inside Quotation and enter Items Section Wise</title>
+        <dc:creator><![CDATA[ahsantareen]]></dc:creator>
+        <description><![CDATA[
+            <p>Hi <a class="mention" href="https://discuss.frappe.io/u/abubakar_falah">@Abubakar_Falah</a></p>
+<p>The form itself can not record based on item grouping;</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/8/f827c4688c0803751dfe70f98b084cf720eb23b3.png" data-download-href="https://discuss.frappe.io/uploads/default/f827c4688c0803751dfe70f98b084cf720eb23b3" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/f/8/f827c4688c0803751dfe70f98b084cf720eb23b3_2_690x327.png" alt="image" data-base62-sha1="zphC2tCU8I445zpamW2ESWdo6Cn" width="690" height="327" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/f/8/f827c4688c0803751dfe70f98b084cf720eb23b3_2_690x327.png, https://discuss.frappe.io/uploads/default/optimized/3X/f/8/f827c4688c0803751dfe70f98b084cf720eb23b3_2_1035x490.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/f/8/f827c4688c0803751dfe70f98b084cf720eb23b3_2_1380x654.png 2x" data-dominant-color="FBF9EC"></a></div><p></p>
+<p>But print format can group items to present the quotation the way you want it.</p>
+<p>It can be easily achieved by grouping based on item group within print format as following;</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/f/a/fa25564e70eccea447bc2d219f1c23fe97e6a116.png" data-download-href="https://discuss.frappe.io/uploads/default/fa25564e70eccea447bc2d219f1c23fe97e6a116" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/f/a/fa25564e70eccea447bc2d219f1c23fe97e6a116_2_570x500.png" alt="image" data-base62-sha1="zGTmrJyTprhbaABcPUFoS7wPCLk" width="570" height="500" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/f/a/fa25564e70eccea447bc2d219f1c23fe97e6a116_2_570x500.png, https://discuss.frappe.io/uploads/default/original/3X/f/a/fa25564e70eccea447bc2d219f1c23fe97e6a116.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/f/a/fa25564e70eccea447bc2d219f1c23fe97e6a116.png 2x" data-dominant-color="EFEDE5"></a></div><p></p>
+          <p><a href="https://discuss.frappe.io/t/want-to-create-separate-zone-sections-inside-quotation-and-enter-items-section-wise/158076/2">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/want-to-create-separate-zone-sections-inside-quotation-and-enter-items-section-wise/158076/2</link>
+        <pubDate>Wed, 24 Dec 2025 09:08:09 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158076-2</guid>
+        <source url="https://discuss.frappe.io/t/want-to-create-separate-zone-sections-inside-quotation-and-enter-items-section-wise/158076.rss">Want To Create Separate Zone/Sections inside Quotation and enter Items Section Wise</source>
+      </item>
+      <item>
+        <title>Want To Create Separate Zone/Sections inside Quotation and enter Items Section Wise</title>
+        <dc:creator><![CDATA[Abubakar_Falah]]></dc:creator>
+        <description><![CDATA[
+            <p>I’m creating Item Quotation for customers And I want section wise entry in item child table under Quotation i have multiple n number of Zones such as  Zone A (for kitchen), Zone B (for Wardrobes) &amp; C (for etc ) , in each Zone there are separate item entries and i want separate subtotal for each Zone and a total of all Zone A+B+C … = Total Costin the Summary at the bottom of the quotation.</p>
+<p>I Should be Able to add n number of items in each Zone and Also Increase or decrease the Zone.</p>
+<p>These are some Zones and there Sub total.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/3/c/3cb828a388935d516c218b55b5f0d290b0d3d7c0.png" data-download-href="https://discuss.frappe.io/uploads/default/3cb828a388935d516c218b55b5f0d290b0d3d7c0" title="image"><img src="https://discuss.frappe.io/uploads/default/original/3X/3/c/3cb828a388935d516c218b55b5f0d290b0d3d7c0.png" alt="image" data-base62-sha1="8F9cNRhPr45fWjsuJ24xyAdBKso" width="689" height="234" data-dominant-color="E2E4E3"></a></div><p></p>
+<p>Final All Zone Total :-</p>
+<p><img src="https://discuss.frappe.io/uploads/default/original/3X/f/8/f85fb6efcdfadfbfc92de498e5d53a93918469db.png" alt="image" data-base62-sha1="zrdtM4KNyBJ2Ef7KKKekn4IB7J1" width="291" height="97"></p>
+          <p><a href="https://discuss.frappe.io/t/want-to-create-separate-zone-sections-inside-quotation-and-enter-items-section-wise/158076/1">Read full topic</a></p>
+        ]]></description>
+        <link>https://discuss.frappe.io/t/want-to-create-separate-zone-sections-inside-quotation-and-enter-items-section-wise/158076/1</link>
+        <pubDate>Wed, 17 Dec 2025 07:28:51 +0000</pubDate>
+        <guid isPermaLink="false">discuss.frappe.io-post-158076-1</guid>
+        <source url="https://discuss.frappe.io/t/want-to-create-separate-zone-sections-inside-quotation-and-enter-items-section-wise/158076.rss">Want To Create Separate Zone/Sections inside Quotation and enter Items Section Wise</source>
+      </item>
+  </channel>
+</rss>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Fetch Doctype List included childtable by rest API - ERPNext - Frappe Forum</title>
+    <meta name="description" content="Hi everyone, I wonder to fetch list of doctype including their childtable using REST API, is that possible ? 
+I found core frappe function to retrieves doctype list with childtable, but cors-origin occurs, the method is a&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/fetch-doctype-list-included-childtable-by-rest-api/83588" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Fetch Doctype List included childtable by rest API&#39;" href="https://discuss.frappe.io/t/fetch-doctype-list-included-childtable-by-rest-api/83588.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/fetch-doctype-list-included-childtable-by-rest-api/83588" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/fetch-doctype-list-included-childtable-by-rest-api/83588" />
+<meta property="og:title" content="Fetch Doctype List included childtable by rest API" />
+<meta name="twitter:title" content="Fetch Doctype List included childtable by rest API" />
+<meta property="og:description" content="Hi everyone, I wonder to fetch list of doctype including their childtable using REST API, is that possible ?  I found core frappe function to retrieves doctype list with childtable, but cors-origin occurs, the method is api/method/frappe.desk.reportview.get?doctype=...but working properly with postman.  Thanks in advance for each suggestions,  cc: @rmeyer" />
+<meta name="twitter:description" content="Hi everyone, I wonder to fetch list of doctype including their childtable using REST API, is that possible ?  I found core frappe function to retrieves doctype list with childtable, but cors-origin occurs, the method is api/method/frappe.desk.reportview.get?doctype=...but working properly with postman.  Thanks in advance for each suggestions,  cc: @rmeyer" />
+<meta property="og:article:section" content="ERPNext" />
+<meta property="og:article:section:color" content="BF1E2E" />
+<meta property="og:article:tag" content="customization" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="1 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="10 ❤" />
+<meta property="article:published_time" content="2021-12-13T14:18:34+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Fetch Doctype List included childtable by rest API","mainEntity":{"@type":"Question","name":"Fetch Doctype List included childtable by rest API","text":"Hi everyone, I wonder to fetch list of doctype including their childtable using REST API, is that possible ?\n\nI found core frappe function to retrieves doctype list with childtable, but cors-origin occurs, the method is api/method/frappe.desk.reportview.get?doctype=...but working properly with postm&hellip;","upvoteCount":0,"answerCount":1,"datePublished":"2021-12-13T14:18:34.058Z","author":{"@type":"Person","name":"Ade_Suhada","url":"https://discuss.frappe.io/u/Ade_Suhada"},"acceptedAnswer":{"@type":"Answer","text":"Hi,\n\nChild table rows are stored in a separate table. To fetch them, you need to know the name of the Database table. You can find the DocType name via customize form. Search for the Table field and check the “Options”.\n\nFor example, let’s get the UOMs and conversion details of an Item. The child ta&hellip;","upvoteCount":9,"datePublished":"2021-12-13T22:00:18.455Z","url":"https://discuss.frappe.io/t/fetch-doctype-list-included-childtable-by-rest-api/83588/2","author":{"@type":"Person","name":"rmeyer","url":"https://discuss.frappe.io/u/rmeyer"}}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/fetch-doctype-list-included-childtable-by-rest-api/83588">Fetch Doctype List included childtable by rest API</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/erpnext/6" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #BF1E2E'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>ERPNext</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+      </div>
+
+      <div class="topic-category">
+        <div class='discourse-tags list-tags'>
+            <a href='https://discuss.frappe.io/tag/customization' class='discourse-tag' rel="tag">customization</a>
+        </div>
+      </div>
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Fetch Doctype List included childtable by rest API'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/fetch-doctype-list-included-childtable-by-rest-api/83588'>
+      <meta itemprop='datePublished' content='2021-12-13T14:18:34Z'>
+        <meta itemprop='articleSection' content='ERPNext'>
+      <meta itemprop='keywords' content='customization'>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Ade_Suhada'><span itemprop='name'>Ade_Suhada</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/fetch-doctype-list-included-childtable-by-rest-api/83588">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2021-12-13T14:18:34Z' class='post-time'>
+                    December 13, 2021,  2:18pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-12-13T14:18:34Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi everyone, I wonder to fetch list of doctype including their childtable using REST API, is that possible ?<br>
+I found core frappe function to retrieves doctype list with childtable, but cors-origin occurs, the method is <code>api/method/frappe.desk.reportview.get?doctype=...</code>but working properly with postman.</p>
+<p>Thanks in advance for each suggestions,<br>
+cc: <a class="mention" href="/u/rmeyer">@rmeyer</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/rmeyer'><span itemprop='name'>rmeyer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-12-13T22:00:18Z' class='post-time'>
+                    December 13, 2021, 10:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-12-13T22:00:18Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi,</p>
+<p>Child table rows are stored in a separate table. To fetch them, you need to know the name of the Database table. You can find the DocType name via customize form. Search for the Table field and check the “Options”.</p>
+<p>For example, let’s get the UOMs and conversion details of an <strong>Item</strong>. The child table DocType is called <strong>UOM Conversion Detail</strong>. To get the database table name, just prepend “tab”: <code>"tabUOM Conversion Detail"</code>. Now we can construct our query like this:</p>
+<pre><code class="lang-auto">GET /api/resource/Item?fields=["name","`tabUOM Conversion Detail`.uom","`tabUOM Conversion Detail`.conversion_factor"]
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="9" />
+              <span class='post-likes'>9 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/dj12djdjs'><span itemprop='name'>dj12djdjs</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-12-13T22:02:10Z' class='post-time'>
+                    December 13, 2021, 10:02pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-12-13T22:02:10Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Wow! That is awesome! For the past year I’ve been using ERPNext, I’ve been loading the whole resource just to get some data in a child table.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Ade_Suhada'><span itemprop='name'>Ade_Suhada</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-12-14T00:10:48Z' class='post-time'>
+                    December 14, 2021, 12:10am
+                  </time>
+                  <meta itemprop='dateModified' content='2021-12-14T00:10:48Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Thank you very much, you save my day, this is awesome !!!</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/Okechukwu_Eze'><span itemprop='name'>Okechukwu_Eze</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/a/7/a740f766a364ed570108959332ed1bdb397d4b57.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-12-14T15:20:28Z' class='post-time'>
+                    December 14, 2021,  3:20pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-12-14T15:20:28Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I tried implementing your code on my end but its output is quite different from what i was expecting.</p>
+<p>The present output forces a duplicate record with the childtable field specified in each of the duplicate as seen in the picture bellow.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/a/7/a740f766a364ed570108959332ed1bdb397d4b57.png" data-download-href="https://discuss.frappe.io/uploads/default/a740f766a364ed570108959332ed1bdb397d4b57" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/a/7/a740f766a364ed570108959332ed1bdb397d4b57_2_576x500.png" alt="image" data-base62-sha1="nRAVv8MWRiD7fpZtanJSuXtww7R" width="576" height="500" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/a/7/a740f766a364ed570108959332ed1bdb397d4b57_2_576x500.png, https://discuss.frappe.io/uploads/default/optimized/3X/a/7/a740f766a364ed570108959332ed1bdb397d4b57_2_864x750.png 1.5x, https://discuss.frappe.io/uploads/default/original/3X/a/7/a740f766a364ed570108959332ed1bdb397d4b57.png 2x" data-dominant-color="FAF9F9"><div class="meta">
+<svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1006×872 55.8 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>What i was expecting is the value of the childTable to be added to each record as an array.</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://prnt.sc/22z0cnw">
+  <header class="source">
+      <img src="https://prntscr.com/favicon.ico" class="site-icon" width="32" height="32">
+
+      <a href="https://prnt.sc/22z0cnw" target="_blank" rel="noopener nofollow ugc">Lightshot</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:562/500;"><img src="https://image.prntscr.com/image/MFtjV5yrQYeW6l_nfnsFiw.png" class="thumbnail" width="562" height="500"></div>
+
+<h3><a href="https://prnt.sc/22z0cnw" target="_blank" rel="noopener nofollow ugc">Screenshot</a></h3>
+
+  <p>Captured with Lightshot</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>The way i do it now is to</p>
+<ul>
+<li>First Load all records using get_list from one end point</li>
+<li>Then hit another endpoint with the needed docname to get the childTable record</li>
+</ul>
+<p>So i am looking for how i would get this two records in one Endpoint JSON output</p>
+<p>I humbly await your response.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/rmeyer'><span itemprop='name'>rmeyer</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2021-12-14T19:20:35Z' class='post-time'>
+                    December 14, 2021,  7:20pm
+                  </time>
+                  <meta itemprop='dateModified' content='2021-12-14T19:20:35Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I don’t know how to achieve what you want.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/VinodKumarkolli'><span itemprop='name'>VinodKumarkolli</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2022-11-07T14:27:06Z' class='post-time'>
+                    November 7, 2022,  2:27pm
+                  </time>
+                  <meta itemprop='dateModified' content='2022-11-07T14:27:06Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Simply, Amazing Hack that worked like a charm. <img src="https://discuss.frappe.io/images/emoji/twitter/grinning.png?v=12" title=":grinning:" class="emoji" alt=":grinning:" loading="lazy" width="20" height="20"> <img src="https://discuss.frappe.io/images/emoji/twitter/grinning.png?v=12" title=":grinning:" class="emoji" alt=":grinning:" loading="lazy" width="20" height="20"></p>
+<p>Thanks &amp; Regards,<br>
+Vinod</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/basil'><span itemprop='name'>basil</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-13T09:39:05Z' class='post-time'>
+                    December 13, 2025,  9:39am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-13T09:39:05Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Hi <a class="mention" href="/u/rmeyer">@rmeyer</a> Thanks for the solution, Is it possiblt to get all field along the child table ?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ERPNext integration with Frappe CRM - Frappe CRM - Frappe Forum</title>
+    <meta name="description" content="Could I kindly ask for someone to confirm that my understanding is correct: Frappe CRM is currently in no way integrated with ERPNext. A lead in CRM is something entirely different from a lead in ERPNext and there is no &amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/erpnext-integration-with-frappe-crm/120346" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;ERPNext integration with Frappe CRM&#39;" href="https://discuss.frappe.io/t/erpnext-integration-with-frappe-crm/120346.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/erpnext-integration-with-frappe-crm/120346" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/erpnext-integration-with-frappe-crm/120346" />
+<meta property="og:title" content="ERPNext integration with Frappe CRM" />
+<meta name="twitter:title" content="ERPNext integration with Frappe CRM" />
+<meta property="og:description" content="Could I kindly ask for someone to confirm that my understanding is correct: Frappe CRM is currently in no way integrated with ERPNext. A lead in CRM is something entirely different from a lead in ERPNext and there is no way of converting a CRM lead into an ERPNext customer.  If it can be confirmed that no integration is available today, is this anywhere on the roadmap for CRM?  By the way, while CRM looks really interesting, personally, I would have much preferred if ERPNext would have been exte..." />
+<meta name="twitter:description" content="Could I kindly ask for someone to confirm that my understanding is correct: Frappe CRM is currently in no way integrated with ERPNext. A lead in CRM is something entirely different from a lead in ERPNext and there is no way of converting a CRM lead into an ERPNext customer.  If it can be confirmed that no integration is available today, is this anywhere on the roadmap for CRM?  By the way, while CRM looks really interesting, personally, I would have much preferred if ERPNext would have been exte..." />
+<meta property="og:article:section" content="Business Apps" />
+<meta property="og:article:section:color" content="3AB54A" />
+<meta property="og:article:section" content="Frappe CRM" />
+<meta property="og:article:section:color" content="ED207B" />
+<meta name="twitter:label1" value="Reading time" />
+<meta name="twitter:data1" value="5 mins 🕑" />
+<meta name="twitter:label2" value="Likes" />
+<meta name="twitter:data2" value="54 ❤" />
+<meta property="article:published_time" content="2024-04-02T15:33:58+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+        <link rel="next" href="/t/erpnext-integration-with-frappe-crm/120346?page=2">
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"ERPNext integration with Frappe CRM","mainEntity":{"@type":"Question","name":"ERPNext integration with Frappe CRM","text":"Could I kindly ask for someone to confirm that my understanding is correct: Frappe CRM is currently in no way integrated with ERPNext. A lead in CRM is something entirely different from a lead in ERPNext and there is no way of converting a CRM lead into an ERPNext customer.\n\nIf it can be confirmed t&hellip;","upvoteCount":2,"answerCount":0,"datePublished":"2024-04-02T15:33:58.760Z","author":{"@type":"Person","name":"vic-t","url":"https://discuss.frappe.io/u/vic-t"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/erpnext-integration-with-frappe-crm/120346">ERPNext integration with Frappe CRM</a>
+    </h1>
+
+      <div class="topic-category" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/business-apps/89" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #3AB54A'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Business Apps</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </span>
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/c/business-apps/frappe-crm/82" class="badge-wrapper bullet" itemprop="item">
+              <span class='badge-category-bg' style='background-color: #ED207B'></span>
+              <span class='badge-category clear-badge'>
+                <span class='category-name' itemprop='name'>Frappe CRM</span>
+              </span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </span>
+      </div>
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='ERPNext integration with Frappe CRM'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/erpnext-integration-with-frappe-crm/120346'>
+      <meta itemprop='datePublished' content='2024-04-02T15:33:58Z'>
+        <meta itemprop='articleSection' content='Frappe CRM'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vic-t'><span itemprop='name'>vic-t</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/erpnext-integration-with-frappe-crm/120346">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2024-04-02T15:33:58Z' class='post-time'>
+                    April 2, 2024,  3:33pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-09-16T11:50:53Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Could I kindly ask for someone to confirm that my understanding is correct: Frappe CRM is currently in no way integrated with ERPNext. A lead in CRM is something entirely different from a lead in ERPNext and there is no way of converting a CRM lead into an ERPNext customer.</p>
+<p>If it can be confirmed that no integration is available today, is this anywhere on the roadmap for CRM?</p>
+<p>By the way, while CRM looks really interesting, personally, I would have much preferred if ERPNext would have been extended with the functionality provided by CRM instead of creating a separate app.</p>
+<p>Notwithstanding the possibility that the app will be properly integrated with ERPNext, the difference in CRM licensing (AGPL) compared to Frappe (MIT) and ERPNext (GPL) is still tricky. Even if CRM is used internally, as soon as the server can be contacted through a public IP, AGPL requires that any changes to the source code are made public. It’s not always straightforward what counts as a change to the source and for many companies, sharing their changes which may offer a closer look into their workflows and tools, is simply not an option.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/query-on-the-purpose-of-separate-apps-vs-frappe-erpnext-integration/121404/44">Query on the Purpose of Separate Apps vs. Frappe/ERPNext Integration</a>
+                        <meta itemprop='position' content='1'>
+                      </div>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/frappe-crm-live-launch-release/119555/30">Frappe CRM Live Launch &amp; Release</a>
+                        <meta itemprop='position' content='2'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_3' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/DCRob'><span itemprop='name'>DCRob</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-04-02T21:54:15Z' class='post-time'>
+                    April 2, 2024,  9:54pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-04-02T21:54:15Z'>
+              <span itemprop='position'>3</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Regarding the AGPL license change: I don’t think that a public IP itself triggers the distribution requirement, I think it’s user access across a network. So if your CRM implementation is still only used internally (company employees only, even if it’s across a WAN), I don’t think you need to distribute your source code to any another company. Unless you’re giving that other company access to your CRM as well.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_4' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/anhlevfx'><span itemprop='name'>anhlevfx</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-04-03T07:41:21Z' class='post-time'>
+                    April 3, 2024,  7:41am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-04-03T07:41:21Z'>
+              <span itemprop='position'>4</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have just founded CRM app and it look great. Same question with topic author.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_5' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/vic-t'><span itemprop='name'>vic-t</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-04-03T08:20:11Z' class='post-time'>
+                    April 3, 2024,  8:20am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-04-03T08:20:11Z'>
+              <span itemprop='position'>5</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I found at least a partial answer here: <a href="https://discuss.frappe.io/t/frappe-crm-live-launch-release/119555/4" class="inline-onebox">Frappe CRM Live Launch &amp; Release - #4 by shariquerik</a></p>
+<aside class="quote no-group" data-username="shariquerik" data-post="4" data-topic="119555">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/shariquerik/48/55595_2.png" class="avatar"><a href="https://discuss.frappe.io/t/frappe-crm-live-launch-release/119555/4">Frappe CRM Live Launch &amp; Release</a></div>
+<blockquote>
+<p>In v16 we will remove CRM module from ERPNext</p>
+</blockquote>
+</aside>
+<p>So, CRM will not only be integrated with ERPNext, it will replace the CRM module currently available there. According to the same person, a migration path will be provided.</p>
+<p>At least in the longer term, this settles the question how ERPNext and CRM are meant to coexist.</p>
+<p>In my view, this makes the question of licensing even more pressing. Because this move basically means that ERPNext users, who wish to keep using the newest version, will be forced to accept the AGPL going forward.</p>
+<p>As mentioned, I believe this could lead to an exodus of certain corporate users, or the formation of forks, internal and external. Which IMO is not good for the long term success of ERPNext.</p>
+<p>If there is a need for really new, purely independent apps, then license them AGPL for all I care. But something that is so closely related to the functionality in ERPNext should be on the same license IMO.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_6' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/shariquerik'><span itemprop='name'>shariquerik</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-07-04T08:06:24Z' class='post-time'>
+                    July 4, 2024,  8:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-04T08:06:24Z'>
+              <span itemprop='position'>6</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>ERPNext Integration for Frappe CRM is WIP. Will update once launched</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="3" />
+              <span class='post-likes'>3 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_7' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/olamide_shodunke'><span itemprop='name'>olamide_shodunke</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-07-04T08:30:56Z' class='post-time'>
+                    July 4, 2024,  8:30am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-04T09:11:05Z'>
+              <span itemprop='position'>7</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I have refused to even look at the CRM because of this limitation.</p>
+<p>While it may work for others as a standalone, it has no use case for me in its current iteration.</p>
+<p>Good job</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_8' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/michelle'><span itemprop='name'>michelle</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-07-04T09:06:51Z' class='post-time'>
+                    July 4, 2024,  9:06am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-04T09:06:51Z'>
+              <span itemprop='position'>8</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Within a month’s time the CRM &lt;&gt; ERPNext integration should be ready. You will then be able to create quotes within CRM and handle the rest of the accounting in ERPNext.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="5" />
+              <span class='post-likes'>5 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_9' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/thefox'><span itemprop='name'>thefox</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-07-09T10:04:12Z' class='post-time'>
+                    July 9, 2024, 10:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-09T10:04:12Z'>
+              <span itemprop='position'>9</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Could you be a bit more specific, does this mean we will then be able to fully utilize existing ERPNext data like contacts and customers inside Frappe CRM and vice versa?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_10' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/EugeneP'><span itemprop='name'>EugeneP</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-07-09T11:27:45Z' class='post-time'>
+                    July 9, 2024, 11:27am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-07-09T11:27:45Z'>
+              <span itemprop='position'>10</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote quote-modified" data-post="12" data-topic="114429">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/eugenep/48/55852_2.png" class="avatar">
+    <a href="https://discuss.frappe.io/t/contact-management-and-crm/114429/12">Contact Management and CRM</a> <a class="badge-category__wrapper " href="/c/erpnext/6"><span data-category-id="6" style="--category-badge-color: #BF1E2E; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category "><span class="badge-category__name">ERPNext</span></span></a>
+  </div>
+  <blockquote>
+    May I add my “two-cents” worth of understanding CRM and related aspects. 
+I completely agree with the proliferation of terms and the confusion brought about by it.  However, I do feel that should we take a step back and objectively reassess what it is we’re talking about, then these terms will fall into place. 
+For me CRM can mean essentially 2 things 
+
+CUSTOMER Relationship Management: where the R is for the relationships within the Sales process
+CONTACT Relationship Management: where the R is …
+  </blockquote>
+</aside>
+
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_11' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/robinvolz96'><span itemprop='name'>robinvolz96</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-12T16:36:36Z' class='post-time'>
+                    August 12, 2024,  4:36pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-12T16:36:36Z'>
+              <span itemprop='position'>11</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Any updates on this topic?<br>
+Thank you in advance</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_12' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/samy4sam'><span itemprop='name'>samy4sam</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-21T13:31:54Z' class='post-time'>
+                    August 21, 2024,  1:31pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-21T13:31:54Z'>
+              <span itemprop='position'>12</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/michelle">@michelle</a> do you have any updates for us?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_13' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/michelle'><span itemprop='name'>michelle</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-21T14:34:54Z' class='post-time'>
+                    August 21, 2024,  2:34pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-21T14:34:54Z'>
+              <span itemprop='position'>13</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>This is still WIP, will post once it’s done.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_14' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/thefox'><span itemprop='name'>thefox</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-08-22T09:38:09Z' class='post-time'>
+                    August 22, 2024,  9:38am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-08-22T09:38:09Z'>
+              <span itemprop='position'>14</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>hopefully in time for Frappeverse <img src="https://discuss.frappe.io/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_15' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/michelle'><span itemprop='name'>michelle</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-09-16T11:49:25Z' class='post-time'>
+                    September 16, 2024, 11:49am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-09-16T11:49:25Z'>
+              <span itemprop='position'>15</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Frappe CRM &lt;&gt; ERPNext Integration is now live!</p>
+<p>Now, whether both apps are installed on the same site or across different sites, you can link Frappe CRM directly to your ERPNext instance.</p>
+<p>Here’s how it works:</p>
+<ol>
+<li>When working on a deal in Frappe CRM, you’ll now see a “Create Quotation” button that takes you to ERPNext to continue the process.</li>
+<li>Once a deal is marked as “Won” or “Lost”, a customer is automatically created in ERPNext.</li>
+</ol>
+<p>Check the video <a href="https://www.linkedin.com/posts/frappe-technologies_frappe-crm-erpnext-activity-7241376724729417729-ZNA_?utm_source=share&amp;utm_medium=member_desktop">here.</a></p>
+<p>References:</p>
+<ul>
+<li><a href="https://github.com/frappe/crm/pull/346" class="inline-onebox">feat: Create Quotation, Contact and Customer in ERPNext from Deal by nabinhait · Pull Request #346 · frappe/crm · GitHub</a></li>
+<li><a href="https://github.com/frappe/erpnext/pull/43198" class="inline-onebox">feat: API for crm integration by nabinhait · Pull Request #43198 · frappe/erpnext · GitHub</a></li>
+</ul>
+<p>Feedback/suggestion and contributions welcome.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="11" />
+              <span class='post-likes'>11 Likes</span>
+            </div>
+
+                <div class='crawler-linkback-list' itemscope itemtype='http://schema.org/ItemList'>
+                      <div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                        <a itemprop='url' href="https://discuss.frappe.io/t/hot-take-frappe-should-never-release-apps-without-documented-day-one-intergrations-to-erpnext/133396/4">Hot Take: Frappe should never release apps without documented, day-one intergrations to ERPNext</a>
+                        <meta itemprop='position' content='4'>
+                      </div>
+                </div>
+          </div>
+          <div id='post_16' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/krnkris'><span itemprop='name'>krnkris</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-09-16T12:00:26Z' class='post-time'>
+                    September 16, 2024, 12:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-09-16T12:00:26Z'>
+              <span itemprop='position'>16</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p><a class="mention" href="/u/michelle">@michelle</a><br>
+Great news, thanks for your support!<br>
+How can we translate the Feappe CMR to Hungarian to stay all translation after updating.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="1" />
+              <span class='post-likes'>1 Like</span>
+            </div>
+
+          </div>
+          <div id='post_17' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/thefox'><span itemprop='name'>thefox</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-09-17T09:02:54Z' class='post-time'>
+                    September 17, 2024,  9:02am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-09-17T09:02:54Z'>
+              <span itemprop='position'>17</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>Great news!</p>
+<p>I try to understand the future relationship between ERPNext and Frappe CRM and its usecase.</p>
+<p>If I understand it correctly, the current integration is a one-way street?<br>
+Frappe CRM → ERPNext</p>
+<p>What are the plans for ERPNext → Frappe CRM integration, since both work with their dedicated doctypes for (contacts, leads…). What is your plan for working with preexisting data from the ERPNext Database inside Frappe CRM?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="2" />
+              <span class='post-likes'>2 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_18' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/michelle'><span itemprop='name'>michelle</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-09-17T09:33:44Z' class='post-time'>
+                    September 17, 2024,  9:33am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-09-17T09:33:44Z'>
+              <span itemprop='position'>18</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="thefox" data-post="17" data-topic="120346">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/thefox/48/65552_2.png" class="avatar"> thefox:</div>
+<blockquote>
+<p>What are the plans for ERPNext → Frappe CRM integration,</p>
+</blockquote>
+</aside>
+<p>Right now, no. Ideally, you should pick the CRM (Frappe CRM or ERPNext CRM module), and then continue using it.</p>
+<p>If you plan to use Frappe CRM and are already using ERPNext CRM, then it’s going to be a one time migration. They’ll continue remaining separate doctypes.</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_19' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/michelle'><span itemprop='name'>michelle</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-09-17T10:34:46Z' class='post-time'>
+                    September 17, 2024, 10:34am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-09-17T10:34:46Z'>
+              <span itemprop='position'>19</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <aside class="quote no-group" data-username="krnkris" data-post="16" data-topic="120346">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://discuss.frappe.io/user_avatar/discuss.frappe.io/krnkris/48/21735_2.png" class="avatar"> krnkris:</div>
+<blockquote>
+<p>How can we translate the Feappe CMR to Hungarian to stay all translation after updating.</p>
+</blockquote>
+</aside>
+<p>We use Crowdin to manage translations now.</p>
+<p>You can contribute to the translations here: <a href="https://crowdin.com/project/frappe" class="inline-onebox">Frappe dashboard in Crowdin</a></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_20' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/thefox'><span itemprop='name'>thefox</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-09-17T12:00:50Z' class='post-time'>
+                    September 17, 2024, 12:00pm
+                  </time>
+                  <meta itemprop='dateModified' content='2024-09-17T12:00:50Z'>
+              <span itemprop='position'>20</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>extracted from the linkedin comments, hope this is helpful to some asking the same question.</p>
+<blockquote>
+<p>Is Frappe CRM different to the CRM module in ERPNext? Is there a benefit in installing a separate CRM app and then linking it to ERPNext, compared to using the inbuilt CRM?</p>
+</blockquote>
+<blockquote>
+<p>Our plan is to continue extensive development in the new CRM now. The idea is to keep ERPNext lean, so maybe in future versions, we might completely separate out the existing CRM or stop active development in the module (which it already is).<br>
+If you just need a CRM tool, you should try Frappe CRM. If you are already using ERPNext CRM, then it will be a one-time migration for you if you plan to switch to Frappe CRM. Going forward, as more features will be added in Frappe CRM, there will be significant difference between the two.</p>
+</blockquote>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="4" />
+              <span class='post-likes'>4 Likes</span>
+            </div>
+
+          </div>
+          <div id='post_21' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/chetan'><span itemprop='name'>chetan</span></a>
+                
+              </span>
+
+
+                <link itemprop="image" href="https://discuss.frappe.io/uploads/default/original/3X/d/2/d2d7a5ae78b672fbff23f0153af7c34a4ed5ff93.png">
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2024-09-22T04:29:01Z' class='post-time'>
+                    September 22, 2024,  4:29am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-09-22T04:29:01Z'>
+              <span itemprop='position'>21</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>We have a Site on Frappe Cloud &amp; have installed the Frappe CRM<br>
+Both are on latest version<br>
+The ERPNext Integration is enabled  - unable to see the create quotation Button<br>
+Not sure if we are missing any other settings</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/d/2/d2d7a5ae78b672fbff23f0153af7c34a4ed5ff93.png" data-download-href="https://discuss.frappe.io/uploads/default/d2d7a5ae78b672fbff23f0153af7c34a4ed5ff93" title="Screenshot 2024-09-22 at 9.04.51 AM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/d/2/d2d7a5ae78b672fbff23f0153af7c34a4ed5ff93_2_690x308.png" alt="Screenshot 2024-09-22 at 9.04.51 AM" data-base62-sha1="u5ci1JWrRCfqi6dGZgyblFzfLaj" width="690" height="308" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/d/2/d2d7a5ae78b672fbff23f0153af7c34a4ed5ff93_2_690x308.png, https://discuss.frappe.io/uploads/default/optimized/3X/d/2/d2d7a5ae78b672fbff23f0153af7c34a4ed5ff93_2_1035x462.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/d/2/d2d7a5ae78b672fbff23f0153af7c34a4ed5ff93_2_1380x616.png 2x" data-dominant-color="FBFBFA"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot 2024-09-22 at 9.04.51 AM</span><span class="informations">2056×918 40.3 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/3/e/3e1f21879a8874ed3c474c1acd1d8161c22bd4e7.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/3e1f21879a8874ed3c474c1acd1d8161c22bd4e7" title="Screenshot 2024-09-22 at 9.14.37 AM"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/3/e/3e1f21879a8874ed3c474c1acd1d8161c22bd4e7_2_690x245.jpeg" alt="Screenshot 2024-09-22 at 9.14.37 AM" data-base62-sha1="8RyiEWM4p5BsM4fo9lh9UG8BLU3" width="690" height="245" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/3/e/3e1f21879a8874ed3c474c1acd1d8161c22bd4e7_2_690x245.jpeg, https://discuss.frappe.io/uploads/default/optimized/3X/3/e/3e1f21879a8874ed3c474c1acd1d8161c22bd4e7_2_1035x367.jpeg 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/3/e/3e1f21879a8874ed3c474c1acd1d8161c22bd4e7_2_1380x490.jpeg 2x" data-dominant-color="FCFCFC"><div class="meta"><svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true"><use href="#far-image"></use></svg><span class="filename">Screenshot 2024-09-22 at 9.14.37 AM</span><span class="informations">4076×1452 193 KB</span><svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true"><use href="#discourse-expand"></use></svg></div></a></div><br>
+<img src="https://discuss.frappe.io/uploads/default/original/3X/f/e/fe1df77be50115bbb5d47d260e3c7c44a548b400.png" alt="Screenshot 2024-09-22 at 9.45.52 AM" data-base62-sha1="Ag1tOG8Qk4es2axcc08FjIDYUMM" width="550" height="436"></p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+      <div role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement' class="topic-body crawler-post">
+            <span itemprop='name'><b><a rel="next" itemprop="url" href="/t/erpnext-integration-with-frappe-crm/120346?page=2">next page →</a></b></span>
+      </div>
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>

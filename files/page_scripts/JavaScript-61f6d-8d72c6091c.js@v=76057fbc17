@@ -1,0 +1,1 @@
+window.addEventListener("DOMContentLoaded",()=>{const tables=document.querySelectorAll('.table.table-bordered');tables.forEach(function(table){const wrapper=document.createElement('div');wrapper.classList.add('table-overflow');table.parentNode.insertBefore(wrapper,table);wrapper.appendChild(table);});});

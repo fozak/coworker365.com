@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Import error (Doctype) - Frappe Forum</title>
+    <meta name="description" content="I am trying to  create a new doctype (in Developer mode) but I am getting “Import error” when saving the doctype. 
+App Versions
+{
+	&amp;quot;erpnext&amp;quot;: &amp;quot;15.20.6&amp;quot;,
+	&amp;quot;frappe&amp;quot;: &amp;quot;15.23.0&amp;quot;,
+	&amp;quot;insights&amp;quot;: &amp;quot;1.1.3&amp;quot;,
+	&amp;quot;wiki&amp;quot;: &amp;quot;2.0.0&amp;quot;
+}
+
+Rou&amp;hellip;">
+    <meta name="generator" content="Discourse 3.5.2 - https://github.com/discourse/discourse version 44986e4c0c3acf127ce03216227dd11cc78f4466">
+<link rel="icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://discuss.frappe.io/uploads/default/optimized/3X/a/5/a5e946e67fbe05a61d1c33d08894876d4d9dea7a_2_180x180.png">
+<meta name="theme-color" media="all" content="#fff">
+
+<meta name="color-scheme" content="light">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://discuss.frappe.io/t/import-error-doctype/121830" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://discuss.frappe.io/opensearch.xml" title="Frappe Forum Search">
+
+    <link href="/stylesheets/color_definitions_light_8_12_296e8563dbd3c739bd4eafc35307bea3d2a15178.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" class="light-scheme" data-scheme-id="8"/>
+
+<link href="/stylesheets/common_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/checklist_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-details_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-solved_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_eec39e19a85cf59c80446f577a88d854b2ec7e58.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="poll_desktop"  />
+
+  <link href="/stylesheets/common_theme_12_608350f9691b80d810a6d8eaf4a08f6acc589e94.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="common_theme" data-theme-id="12" data-theme-name="erpnext"/>
+    <link href="/stylesheets/desktop_theme_12_1843eada91b7bd1c5a6c17799765c3af197a4c6e.css?__ws=discuss.frappe.io" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="12" data-theme-name="erpnext"/>
+
+    
+    
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of &#39;Import error (Doctype)&#39;" href="https://discuss.frappe.io/t/import-error-doctype/121830.rss" />
+    <meta property="og:site_name" content="Frappe Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:image" content="https://discuss.frappe.io/uploads/default/original/3X/0/b/0b28794440eb26973e11119effb9e80dcb726e09.png" />
+<meta property="og:url" content="https://discuss.frappe.io/t/import-error-doctype/121830" />
+<meta name="twitter:url" content="https://discuss.frappe.io/t/import-error-doctype/121830" />
+<meta property="og:title" content="Import error (Doctype)" />
+<meta name="twitter:title" content="Import error (Doctype)" />
+<meta property="og:description" content="I am trying to  create a new doctype (in Developer mode) but I am getting “Import error” when saving the doctype.  App Versions { 	&quot;erpnext&quot;: &quot;15.20.6&quot;, 	&quot;frappe&quot;: &quot;15.23.0&quot;, 	&quot;insights&quot;: &quot;1.1.3&quot;, 	&quot;wiki&quot;: &quot;2.0.0&quot; }  Route Form/DocType/Design  Traceback Traceback (most recent call last):   File &quot;apps/frappe/frappe/app.py&quot;, line 110, in application     response = frappe.api.handle(request)   File &quot;apps/frappe/frappe/api/__init__.py&quot;, line 49, in handle     data = endpoint(**arguments)   File &quot;app..." />
+<meta name="twitter:description" content="I am trying to  create a new doctype (in Developer mode) but I am getting “Import error” when saving the doctype.  App Versions { 	&quot;erpnext&quot;: &quot;15.20.6&quot;, 	&quot;frappe&quot;: &quot;15.23.0&quot;, 	&quot;insights&quot;: &quot;1.1.3&quot;, 	&quot;wiki&quot;: &quot;2.0.0&quot; }  Route Form/DocType/Design  Traceback Traceback (most recent call last):   File &quot;apps/frappe/frappe/app.py&quot;, line 110, in application     response = frappe.api.handle(request)   File &quot;apps/frappe/frappe/api/__init__.py&quot;, line 49, in handle     data = endpoint(**arguments)   File &quot;app..." />
+<meta property="article:published_time" content="2024-04-25T07:04:26+00:00" />
+<meta property="og:ignore_canonical" content="true" />
+
+
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"QAPage","name":"Import error (Doctype)","mainEntity":{"@type":"Question","name":"Import error (Doctype)","text":"I am trying to  create a new doctype (in Developer mode) but I am getting “Import error” when saving the doctype.\n\n<a name=\"app-versions-1\" class=\"anchor\" href=\"#app-versions-1\"><\/a>App Versions\n\n{\n\n&quot;erpnext&quot;: &quot;15.20.6&quot;,\n\n&quot;frappe&quot;: &quot;15.23.0&quot;,\n\n&quot;insights&quot;: &quot;1.1.3&quot;,\n\n&quot;wiki&quot;: &quot;2.0.0&quot;\n\n}\n\n<a name=\"route-2\" class=\"anchor\" href=\"#route-2\"><\/a>Route\n\nForm/DocType/Design\n\n<a name=\"traceback-3\" class=\"anchor\" href=\"#traceback-3\"><\/a>Traceback\n\nTraceback (most recent call last):\n\nFile &quot;app&hellip;","upvoteCount":0,"answerCount":0,"datePublished":"2024-04-25T07:04:25.903Z","author":{"@type":"Person","name":"anupd","url":"https://discuss.frappe.io/u/anupd"}}}</script>
+  </head>
+  <body class="crawler ">
+    <div class="erpnext-header">
+    <a href="https://frappe.io" target="_blank">Frappe.io</a>
+    <a href="https://frappecloud.com" target="_blank">Frappe Cloud</a>
+    <a href="https://docs.frappe.io/" target="_blank">Documentation</a>
+    <a href="https://frappe.io/partners" target="_blank">Partners</a>
+    <a href="https://frappe.school" target="_blank">Frappe School</a>
+    <a href="https://frappecloud.com/marketplace" target="_blank">Marketplace</a>
+    <a href="https://t.me/erpnext_public" target="_blank">Public Chat</a>
+</div>
+
+    <header>
+  <a href="/">Frappe Forum</a>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+        <div id="topic-title">
+    <h1>
+      <a href="/t/import-error-doctype/121830">Import error (Doctype)</a>
+    </h1>
+
+
+  </div>
+
+  
+
+    <div itemscope itemtype='http://schema.org/DiscussionForumPosting'>
+      <meta itemprop='headline' content='Import error (Doctype)'>
+      <link itemprop='url' href='https://discuss.frappe.io/t/import-error-doctype/121830'>
+      <meta itemprop='datePublished' content='2024-04-25T07:04:25Z'>
+        <meta itemprop='articleSection' content='Uncategorized'>
+      <meta itemprop='keywords' content=''>
+      <div itemprop='publisher' itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop='name' content='Frappe'>
+          <div itemprop='logo' itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop='url' content='https://discuss.frappe.io/uploads/default/original/3X/e/1/e1295d1f76ba489dd58f8c9b55eee88286fc9a31.png'>
+          </div>
+      </div>
+
+
+          <div id='post_1'  class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/anupd'><span itemprop='name'>anupd</span></a>
+                
+              </span>
+
+                <link itemprop="mainEntityOfPage" href="https://discuss.frappe.io/t/import-error-doctype/121830">
+
+
+              <span class="crawler-post-infos">
+                  <time  datetime='2024-04-25T07:04:26Z' class='post-time'>
+                    April 25, 2024,  7:04am
+                  </time>
+                  <meta itemprop='dateModified' content='2024-04-25T07:04:26Z'>
+              <span itemprop='position'>1</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am trying to  create a new doctype (in Developer mode) but I am getting “Import error” when saving the doctype.</p>
+<h3><a name="app-versions-1" class="anchor" href="#app-versions-1"></a>App Versions</h3>
+<pre><code class="lang-auto">{
+	"erpnext": "15.20.6",
+	"frappe": "15.23.0",
+	"insights": "1.1.3",
+	"wiki": "2.0.0"
+}
+</code></pre>
+<h3><a name="route-2" class="anchor" href="#route-2"></a>Route</h3>
+<pre><code class="lang-auto">Form/DocType/Design
+</code></pre>
+<h3><a name="traceback-3" class="anchor" href="#traceback-3"></a>Traceback</h3>
+<pre><code class="lang-auto">Traceback (most recent call last):
+  File "apps/frappe/frappe/app.py", line 110, in application
+    response = frappe.api.handle(request)
+  File "apps/frappe/frappe/api/__init__.py", line 49, in handle
+    data = endpoint(**arguments)
+  File "apps/frappe/frappe/api/v1.py", line 36, in handle_rpc_call
+    return frappe.handler.handle()
+  File "apps/frappe/frappe/handler.py", line 49, in handle
+    data = execute_cmd(cmd)
+  File "apps/frappe/frappe/handler.py", line 85, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "apps/frappe/frappe/__init__.py", line 1718, in call
+    return fn(*args, **newargs)
+  File "apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "apps/frappe/frappe/desk/form/save.py", line 39, in savedocs
+    doc.save()
+  File "apps/frappe/frappe/model/document.py", line 337, in save
+    return self._save(*args, **kwargs)
+  File "apps/frappe/frappe/model/document.py", line 390, in _save
+    self.run_post_save_methods()
+  File "apps/frappe/frappe/model/document.py", line 1128, in run_post_save_methods
+    self.run_method("on_update")
+  File "apps/frappe/frappe/model/document.py", line 962, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "apps/frappe/frappe/model/document.py", line 1322, in composer
+    return composed(self, method, *args, **kwargs)
+  File "apps/frappe/frappe/model/document.py", line 1304, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "apps/frappe/frappe/model/document.py", line 959, in fn
+    return method_object(*args, **kwargs)
+  File "apps/frappe/frappe/core/doctype/doctype/doctype.py", line 526, in on_update
+    self.export_types_to_controller()
+  File "apps/frappe/frappe/core/doctype/doctype/doctype.py", line 860, in export_types_to_controller
+    TypeExporter(self).export_types()
+  File "apps/frappe/frappe/types/exporter.py", line 62, in __init__
+    self.controller_path = Path(inspect.getfile(get_controller(self.doctype)))
+  File "apps/frappe/frappe/model/base_document.py", line 70, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "apps/frappe/frappe/model/base_document.py", line 100, in import_controller
+    raise ImportError(
+ImportError: Design
+
+</code></pre>
+<h3><a name="request-data-4" class="anchor" href="#request-data-4"></a>Request Data</h3>
+<pre><code class="lang-auto">{
+	"type": "POST",
+	"args": {
+		"doc": "{\"name\":\"Design\",\"creation\":\"2024-04-25 12:21:56.815500\",\"modified\":\"2024-04-25 12:33:48.227034\",\"modified_by\":\"Administrator\",\"owner\":\"Administrator\",\"docstatus\":0,\"idx\":0,\"issingle\":0,\"is_tree\":0,\"istable\":0,\"editable_grid\":0,\"track_changes\":0,\"module\":\"Designs\",\"naming_rule\":\"\",\"sort_field\":\"modified\",\"sort_order\":\"DESC\",\"read_only\":0,\"in_create\":0,\"allow_copy\":0,\"allow_rename\":1,\"allow_import\":0,\"hide_toolbar\":0,\"track_seen\":0,\"max_attachments\":0,\"document_type\":\"\",\"engine\":\"InnoDB\",\"is_submittable\":1,\"show_name_in_global_search\":0,\"custom\":0,\"beta\":0,\"has_web_view\":0,\"allow_guest_to_view\":0,\"email_append_to\":0,\"show_title_field_in_link\":0,\"translated_doctype\":0,\"is_calendar_and_gantt\":0,\"quick_entry\":0,\"track_views\":0,\"is_virtual\":0,\"queue_in_background\":0,\"allow_events_in_timeline\":0,\"allow_auto_repeat\":0,\"make_attachments_public\":0,\"force_re_route_to_default_view\":0,\"show_preview_popup\":0,\"index_web_pages_for_search\":1,\"doctype\":\"DocType\",\"permissions\":[{\"name\":\"a36e28bd05\",\"creation\":\"2024-04-25 12:21:56.815500\",\"modified\":\"2024-04-25 12:33:48.227034\",\"modified_by\":\"Administrator\",\"owner\":\"Administrator\",\"docstatus\":0,\"parent\":\"Design\",\"parentfield\":\"permissions\",\"parenttype\":\"DocType\",\"idx\":1,\"permlevel\":0,\"role\":\"System Manager\",\"read\":1,\"write\":1,\"create\":1,\"submit\":1,\"cancel\":0,\"delete\":1,\"amend\":0,\"report\":1,\"export\":1,\"import\":0,\"share\":1,\"print\":1,\"email\":1,\"if_owner\":0,\"select\":0,\"doctype\":\"DocPerm\"}],\"fields\":[{\"docstatus\":0,\"doctype\":\"DocField\",\"name\":\"new-docfield-tjbjaxwcgf\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"fieldtype\":\"Section Break\",\"precision\":\"\",\"non_negative\":0,\"hide_days\":0,\"hide_seconds\":0,\"reqd\":0,\"is_virtual\":0,\"search_index\":0,\"sort_options\":0,\"show_dashboard\":0,\"fetch_if_empty\":0,\"hidden\":0,\"bold\":0,\"allow_in_quick_entry\":0,\"translatable\":0,\"print_hide\":0,\"print_hide_if_no_value\":0,\"report_hide\":0,\"collapsible\":0,\"hide_border\":0,\"in_list_view\":0,\"in_standard_filter\":0,\"in_preview\":0,\"in_filter\":0,\"in_global_search\":0,\"read_only\":0,\"allow_on_submit\":0,\"ignore_user_permissions\":0,\"allow_bulk_edit\":0,\"permlevel\":0,\"ignore_xss_filter\":0,\"unique\":0,\"no_copy\":0,\"set_only_once\":0,\"remember_last_selected_value\":0,\"parent\":\"Design\",\"parentfield\":\"fields\",\"parenttype\":\"DocType\",\"idx\":1,\"fieldname\":\"section_break_kjnh\",\"show_preview_popup\":0,\"columns\":0,\"length\":0},{\"docstatus\":0,\"doctype\":\"DocField\",\"name\":\"new-docfield-dcnmburfnc\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"fieldtype\":\"Select\",\"precision\":\"\",\"non_negative\":0,\"hide_days\":0,\"hide_seconds\":0,\"reqd\":0,\"is_virtual\":0,\"search_index\":0,\"sort_options\":0,\"show_dashboard\":0,\"fetch_if_empty\":0,\"hidden\":0,\"bold\":0,\"allow_in_quick_entry\":0,\"translatable\":0,\"print_hide\":0,\"print_hide_if_no_value\":0,\"report_hide\":0,\"collapsible\":0,\"hide_border\":0,\"in_list_view\":0,\"in_standard_filter\":0,\"in_preview\":0,\"in_filter\":0,\"in_global_search\":0,\"read_only\":0,\"allow_on_submit\":0,\"ignore_user_permissions\":0,\"allow_bulk_edit\":0,\"permlevel\":0,\"ignore_xss_filter\":0,\"unique\":0,\"no_copy\":0,\"set_only_once\":0,\"remember_last_selected_value\":0,\"parent\":\"Design\",\"parentfield\":\"fields\",\"parenttype\":\"DocType\",\"idx\":2,\"__run_link_triggers\":1,\"fieldname\":\"series\",\"label\":\"Series\",\"options\":\"DE-.YY.###\"},{\"docstatus\":0,\"doctype\":\"DocField\",\"name\":\"new-docfield-rsthwwtsie\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"fieldtype\":\"Section Break\",\"precision\":\"\",\"non_negative\":0,\"hide_days\":0,\"hide_seconds\":0,\"reqd\":0,\"is_virtual\":0,\"search_index\":0,\"sort_options\":0,\"show_dashboard\":0,\"fetch_if_empty\":0,\"hidden\":0,\"bold\":0,\"allow_in_quick_entry\":0,\"translatable\":0,\"print_hide\":0,\"print_hide_if_no_value\":0,\"report_hide\":0,\"collapsible\":0,\"hide_border\":0,\"in_list_view\":0,\"in_standard_filter\":0,\"in_preview\":0,\"in_filter\":0,\"in_global_search\":0,\"read_only\":0,\"allow_on_submit\":0,\"ignore_user_permissions\":0,\"allow_bulk_edit\":0,\"permlevel\":0,\"ignore_xss_filter\":0,\"unique\":0,\"no_copy\":0,\"set_only_once\":0,\"remember_last_selected_value\":0,\"parent\":\"Design\",\"parentfield\":\"fields\",\"parenttype\":\"DocType\",\"idx\":3,\"__run_link_triggers\":1,\"fieldname\":\"section_break_emvt\",\"label\":\"\"},{\"docstatus\":0,\"doctype\":\"DocField\",\"name\":\"new-docfield-xvntfipagv\",\"__islocal\":1,\"__unsaved\":1,\"owner\":\"Administrator\",\"fieldtype\":\"Link\",\"precision\":\"\",\"non_negative\":0,\"hide_days\":0,\"hide_seconds\":0,\"reqd\":0,\"is_virtual\":0,\"search_index\":1,\"sort_options\":0,\"show_dashboard\":0,\"fetch_if_empty\":0,\"hidden\":0,\"bold\":0,\"allow_in_quick_entry\":0,\"translatable\":0,\"print_hide\":1,\"print_hide_if_no_value\":0,\"report_hide\":0,\"collapsible\":0,\"hide_border\":0,\"in_list_view\":0,\"in_standard_filter\":0,\"in_preview\":0,\"in_filter\":0,\"in_global_search\":0,\"read_only\":1,\"allow_on_submit\":0,\"ignore_user_permissions\":0,\"allow_bulk_edit\":0,\"permlevel\":0,\"ignore_xss_filter\":0,\"unique\":0,\"no_copy\":1,\"set_only_once\":0,\"remember_last_selected_value\":0,\"parent\":\"Design\",\"parentfield\":\"fields\",\"parenttype\":\"DocType\",\"idx\":4,\"fieldname\":\"amended_from\",\"label\":\"Amended From\",\"options\":\"Design\",\"show_preview_popup\":0,\"columns\":0,\"length\":0}],\"actions\":[],\"states\":[],\"links\":[],\"__unsaved\":1}",
+		"action": "Save"
+	},
+	"btn": {
+		"jQuery370096819266448346531": {
+			"events": {
+				"click": [
+					{
+						"type": "click",
+						"origType": "click",
+						"guid": 837,
+						"namespace": ""
+					}
+				]
+			}
+		}
+	},
+	"freeze": true,
+	"headers": {},
+	"error_handlers": {},
+	"url": "/api/method/frappe.desk.form.save.savedocs",
+	"request_id": null
+}
+</code></pre>
+<h3><a name="response-data-5" class="anchor" href="#response-data-5"></a>Response Data</h3>
+<pre><code class="lang-auto">{
+	"exception": "ImportError: Design",
+	"exc_type": "ImportError"
+}
+</code></pre>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+          <div id='post_2' itemprop='comment' itemscope itemtype='http://schema.org/Comment' class='topic-body crawler-post'>
+            <div class='crawler-post-meta'>
+              <span class="creator" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <a itemprop="url" rel='nofollow' href='https://discuss.frappe.io/u/TSping1'><span itemprop='name'>TSping1</span></a>
+                
+              </span>
+
+
+
+              <span class="crawler-post-infos">
+                  <time itemprop='datePublished' datetime='2025-12-24T04:09:07Z' class='post-time'>
+                    December 24, 2025,  4:09am
+                  </time>
+                  <meta itemprop='dateModified' content='2025-12-24T04:09:07Z'>
+              <span itemprop='position'>2</span>
+              </span>
+            </div>
+            <div class='post' itemprop='text'>
+              <p>I am also experiencing the same trouble - did you end up resolving this?</p>
+            </div>
+
+            <div itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+              <meta itemprop="interactionType" content="http://schema.org/LikeAction"/>
+              <meta itemprop="userInteractionCount" content="0" />
+              <span class='post-likes'></span>
+            </div>
+
+          </div>
+    </div>
+
+
+    
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/tos' itemprop="url">Terms of Service </a>
+          </span>
+        </li>
+        <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+          <span itemprop='name'>
+            <a href='/privacy' itemprop="url">Privacy Policy </a>
+          </span>
+        </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    <div class="erpnext-footer">
+    <a href="https://frappe.io">Frappe</a>
+</div>
+    
+  </body>
+  
+</html>
