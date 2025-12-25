@@ -18,7 +18,7 @@
 		type="image/x-icon">
 	
 
-	<link rel="canonical" href="https://docs.frappe.io/hr/payroll-setup"><script defer data-domain="docs.frappe.io" src="https://analytics.frappe.cloud/js/plausible.js"></script>
+	<link rel="canonical" href="https://docs.coworker365.com/hr/payroll-setup"><script defer data-domain="docs.coworker365.com" src="https://analytics.frappe.cloud/js/plausible.js"></script>
 <link type="text/css" rel="stylesheet" href="/assets/frappe/dist/css/website.bundle.255OFQ2A.css">
 
 <link rel="stylesheet" href="/assets/frappe/css/hljs-night-owl.css">
@@ -1241,7 +1241,7 @@ Tip: use lucide.svg in /icons for all downloaded icons
         </a>
         
         <a href="/cloud" class="space-link">
-          <img src="https://frappe.io/files/cloud.png" alt="Cloud logo" />
+          <img src="https://coworker365.com/files/cloud.png" alt="Cloud logo" />
           <span>
             Cloud
           </span>
@@ -1386,7 +1386,7 @@ Tip: use lucide.svg in /icons for all downloaded icons
 
 
 <li class="nav-item">
-	<a class="navbar-link" href="https://frappe.io/hr" >
+	<a class="navbar-link" href="https://coworker365.com/hr" >
 		Website
 	</a>
 </li>
@@ -4985,17 +4985,17 @@ Tip: use lucide.svg in /icons for all downloaded icons
 <p>To process Payroll in Frappe HR,</p>
 
 <ol>
-<li>Define <a href="https://docs.frappe.io/hr/payroll-period.html">Payroll Period</a> (optional)</li>
-<li>Define <a href="https://docs.frappe.io/hr/income-tax-slab.html">Income Tax Slab</a> (optional)</li>
+<li>Define <a href="https://docs.coworker365.com/hr/payroll-period.html">Payroll Period</a> (optional)</li>
+<li>Define <a href="https://docs.coworker365.com/hr/income-tax-slab.html">Income Tax Slab</a> (optional)</li>
 <li>Create Salary Structure with Salary Components (Earnings and Deductions)</li>
 <li>Assign Salary Structures to each Employee via Salary Structure Assignment</li>
-<li>Generate Salary Slips via <a href="https://docs.frappe.io/hr/payroll-entry.html">Payroll Entry</a>.</li>
+<li>Generate Salary Slips via <a href="https://docs.coworker365.com/hr/payroll-entry.html">Payroll Entry</a>.</li>
 <li>Book the Salary in your Accounts.</li>
 </ol>
 
 <h2 id="payroll-period"><strong>Payroll Period</strong></h2>
 
-<p><a href="https://docs.frappe.io/hr/payroll-period.html">Payroll Period</a>, in Frappe HR, is a period for which Employees get paid for their occupation with the Company. Payroll period helps you define Tax slabs applicable for the period, making it easier to manage changing laws.</p>
+<p><a href="https://docs.coworker365.com/hr/payroll-period.html">Payroll Period</a>, in Frappe HR, is a period for which Employees get paid for their occupation with the Company. Payroll period helps you define Tax slabs applicable for the period, making it easier to manage changing laws.</p>
 
 <blockquote>
   <p>Note: Configuring Payroll Period is optional if you do not intend to use Flexible Benefits or Tax Slabs</p>
@@ -5022,14 +5022,14 @@ Tip: use lucide.svg in /icons for all downloaded icons
 <li>Is Additional Component: This option specify that the component can only be paid as Additional Salary. Examples of this component could be Performance Bonus or pay received for on-site deputation etc. Such components are not considered to be part of normal Salary Structure. Instead, Additional Salary with these components can be submitted as required which will be added to the Salary Slip automatically.</li>
 <li>Is Tax Applicable: If a component needs to be considered for Tax calculations specified as per the Payroll Period you may want to enable this option. It would be required that you have a Payroll Period and Income Tax Slab configured with valid Tax Slabs for payroll processing.</li>
 <li>Is Payable: Such components can be booked against separate payable accounts and the Accounts shall be configured in the Accounts table</li>
-<li>Flexible Benefits: Flexible Benefits are earning components which Employees can choose to receive on a pro-rata basis or annually when they claim for. These are mostly tax exempted, unless the Employee fail to file the claim with adequate bills / documents. If turned on, you can specify the maximum benefit allowed for an employee in a year. Employees can create <a href="https://docs.frappe.io/hr/employee-benefit-application">Employee Benefit Application</a> with the ones they opt for.</li>
+<li>Flexible Benefits: Flexible Benefits are earning components which Employees can choose to receive on a pro-rata basis or annually when they claim for. These are mostly tax exempted, unless the Employee fail to file the claim with adequate bills / documents. If turned on, you can specify the maximum benefit allowed for an employee in a year. Employees can create <a href="https://docs.coworker365.com/hr/employee-benefit-application">Employee Benefit Application</a> with the ones they opt for.</li>
 </ul>
 
 <blockquote>
   <p>Note: Employee Benefit Application will only allow Employees to only choose from the flexible components which are present in the Salary Structure assigned to the Employee</p>
 </blockquote>
 
-<pre><code>+ Pay Against Benefit Claim: Employees can opt to receive flexible benefits annually via Employee Benefit Claim or along with their salary every month. If you enable this, the amount allocated for the component will be paid as the Employee submits an [Employee Benefit Claim](https://docs.frappe.io/hr/employee-benefit-claim.html). Else the amount will be dispersed as part of the Employee's salary on a pro-rata basis.
+<pre><code>+ Pay Against Benefit Claim: Employees can opt to receive flexible benefits annually via Employee Benefit Claim or along with their salary every month. If you enable this, the amount allocated for the component will be paid as the Employee submits an [Employee Benefit Claim](https://docs.coworker365.com/hr/employee-benefit-claim.html). Else the amount will be dispersed as part of the Employee's salary on a pro-rata basis.
 
 
     - Only Tax Impact (Cannot Claim But Part of Taxable Income): Such components are those which the company has already paid to the Employee in cash or by some other means, for example a car purchased for the Employee's use. The Employee cannot claim but is liable to pay tax. The amount allocated for this component will be considered while calculating the taxable income of the Employee.
@@ -5178,7 +5178,7 @@ Tip: use lucide.svg in /icons for all downloaded icons
 <li>Click on "Get Employee Details" to get a list of Employees for which the Salary Slips will be created based on the selected criteria.</li>
 <li>Enter the Start and End dates for the payroll period.</li>
 <li>You can check <em>Deduct Tax For Unclaimed Employee Benefits</em> if you want to deduct taxes for all benefits (Salary Components which are <em>Is Flexible Benefit</em>) paid to employees till the current payroll</li>
-<li>Similarly, <em>Deduct Tax For Unsubmitted Tax Exemption Proof</em> allows you to deduct taxes for the earnings which were exempted in the previous payrolls as declared in <a href="https://docs.frappe.io/hr/employee-tax-exemption-declaration">Employee Tax Exemption Declaration</a> but the Employee has not submitted sufficient proof <a href="https://docs.frappe.io/hr/employee-tax-exemption-proof-submission">Employee Tax Exemption Proof Submission</a></li>
+<li>Similarly, <em>Deduct Tax For Unsubmitted Tax Exemption Proof</em> allows you to deduct taxes for the earnings which were exempted in the previous payrolls as declared in <a href="https://docs.coworker365.com/hr/employee-tax-exemption-declaration">Employee Tax Exemption Declaration</a> but the Employee has not submitted sufficient proof <a href="https://docs.coworker365.com/hr/employee-tax-exemption-proof-submission">Employee Tax Exemption Proof Submission</a></li>
 <li>Select the Cost Center and Payment Account.</li>
 <li>Save the form and Submit it to create Salary Slip records for each active Employee for the time period selected. If the Salary Slips are already created, the system will not create any more Salary Slips. You can also just save the form as Draft and create the Salary Slips later.</li>
 </ol>

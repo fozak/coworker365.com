@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:discourse="http://www.discourse.org/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Frappe CRM - Frappe Forum</title>
-    <link>https://discuss.frappe.io/c/business-apps/frappe-crm/82</link>
+    <link>https://discuss.coworker365.com/c/business-apps/frappe-crm/82</link>
     <description>Topics in the &#39;Frappe CRM&#39; category </description>
     
       <lastBuildDate>Wed, 24 Dec 2025 06:40:47 +0000</lastBuildDate>
-      <atom:link href="https://discuss.frappe.io/c/business-apps/frappe-crm/82.rss" rel="self" type="application/rss+xml" />
+      <atom:link href="https://discuss.coworker365.com/c/business-apps/frappe-crm/82.rss" rel="self" type="application/rss+xml" />
         <item>
           <title>Integrating FCRM and Lending and getting a unique error bug</title>
           <dc:creator><![CDATA[Heshan_Karunaratne]]></dc:creator>
@@ -22,7 +22,7 @@ a configuration issue on my side, or<br>
 a known bug on the Frappe/Lending side.</strong></em></p>
 <p>Any guidance on how to properly handle app switching in this setup, or how to resolve this error, would be greatly appreciated.</p>
 <p>Error Message:</p>
-<h3><a name="p-489460-app-versions-1" class="anchor" href="https://discuss.frappe.io#p-489460-app-versions-1"></a>App Versions</h3>
+<h3><a name="p-489460-app-versions-1" class="anchor" href="https://discuss.coworker365.com#p-489460-app-versions-1"></a>App Versions</h3>
 <pre><code class="lang-auto">{
 	"frappe": "16.0.0-dev",
 	"crm": "2.0.0-dev",
@@ -31,10 +31,10 @@ a known bug on the Frappe/Lending side.</strong></em></p>
 	"dreamlink": "0.0.1"
 }
 </code></pre>
-<h3><a name="p-489460-route-2" class="anchor" href="https://discuss.frappe.io#p-489460-route-2"></a>Route</h3>
+<h3><a name="p-489460-route-2" class="anchor" href="https://discuss.coworker365.com#p-489460-route-2"></a>Route</h3>
 <pre><code class="lang-auto">Workspaces/Lending
 </code></pre>
-<h3><a name="p-489460-traceback-3" class="anchor" href="https://discuss.frappe.io#p-489460-traceback-3"></a>Traceback</h3>
+<h3><a name="p-489460-traceback-3" class="anchor" href="https://discuss.coworker365.com#p-489460-traceback-3"></a>Traceback</h3>
 <pre><code class="lang-auto">Traceback (most recent call last):
   File "apps/frappe/frappe/app.py", line 121, in application
     response = frappe.api.handle(request)
@@ -72,7 +72,7 @@ a known bug on the Frappe/Lending side.</strong></em></p>
     raise ValueError(f"Unknown filter format: {filter}")
 ValueError: Unknown filter format: ['Loan', 'docstatus', '=', '1', False]
 </code></pre>
-<h3><a name="p-489460-request-data-4" class="anchor" href="https://discuss.frappe.io#p-489460-request-data-4"></a>Request Data</h3>
+<h3><a name="p-489460-request-data-4" class="anchor" href="https://discuss.coworker365.com#p-489460-request-data-4"></a>Request Data</h3>
 <pre><code class="lang-auto">{
 	"type": "POST",
 	"args": {
@@ -90,26 +90,26 @@ ValueError: Unknown filter format: ['Loan', 'docstatus', '=', '1', False]
 	"request_id": null
 }
 </code></pre>
-<h3><a name="p-489460-response-data-5" class="anchor" href="https://discuss.frappe.io#p-489460-response-data-5"></a>Response Data</h3>
+<h3><a name="p-489460-response-data-5" class="anchor" href="https://discuss.coworker365.com#p-489460-response-data-5"></a>Response Data</h3>
 <pre><code class="lang-auto">{
 	"exception": "ValueError: Unknown filter format: ['Loan', 'docstatus', '=', '1', False]",
 	"exc_type": "ValueError"
 }
 </code></pre>
-<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88.png" data-download-href="https://discuss.frappe.io/uploads/default/e755448edd84ac3af562aa65822c9db778495d88" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_690x388.png" alt="image" data-base62-sha1="x0sYPmo4aKmwAUaSdd89W2pMpGE" width="690" height="388" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_690x388.png, https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_1035x582.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_1380x776.png 2x" data-dominant-color="121212"></a></div><p></p>
-<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d.png" data-download-href="https://discuss.frappe.io/uploads/default/2d39c77dde336fa6de681d082dd83916e268da3d" title="image (1)"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_690x388.png" alt="image (1)" data-base62-sha1="6s5hdnhDBQOg3ReGESdEq32AcNf" width="690" height="388" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_690x388.png, https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_1035x582.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_1380x776.png 2x" data-dominant-color="222222"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88.png" data-download-href="https://discuss.coworker365.com/uploads/default/e755448edd84ac3af562aa65822c9db778495d88" title="image"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_690x388.png" alt="image" data-base62-sha1="x0sYPmo4aKmwAUaSdd89W2pMpGE" width="690" height="388" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_690x388.png, https://discuss.coworker365.com/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_1035x582.png 1.5x, https://discuss.coworker365.com/uploads/default/optimized/3X/e/7/e755448edd84ac3af562aa65822c9db778495d88_2_1380x776.png 2x" data-dominant-color="121212"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d.png" data-download-href="https://discuss.coworker365.com/uploads/default/2d39c77dde336fa6de681d082dd83916e268da3d" title="image (1)"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_690x388.png" alt="image (1)" data-base62-sha1="6s5hdnhDBQOg3ReGESdEq32AcNf" width="690" height="388" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_690x388.png, https://discuss.coworker365.com/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_1035x582.png 1.5x, https://discuss.coworker365.com/uploads/default/optimized/3X/2/d/2d39c77dde336fa6de681d082dd83916e268da3d_2_1380x776.png 2x" data-dominant-color="222222"></a></div><p></p>
 <p>Thank you</p>
 <p>Heshan K</p>
             <p><small>1 post - 1 participant</small></p>
-            <p><a href="https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282</link>
+          <link>https://discuss.coworker365.com/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282</link>
           <pubDate>Wed, 24 Dec 2025 06:40:47 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-158282</guid>
-          <source url="https://discuss.frappe.io/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282.rss">Integrating FCRM and Lending and getting a unique error bug</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-158282</guid>
+          <source url="https://discuss.coworker365.com/t/integrating-fcrm-and-lending-and-getting-a-unique-error-bug/158282.rss">Integrating FCRM and Lending and getting a unique error bug</source>
         </item>
         <item>
           <title>How to customize CRM UI and add sidebar options without modifying core CRM app</title>
@@ -133,15 +133,15 @@ etc.</p>
 <p><strong>What is the recommended way to add a custom sidebar option in the CRM app without modifying core code?</strong></p>
 <p>If anyone has implemented custom CRM UI extensions (sidebar, custom screens, workflows), please share examples or references.</p>
             <p><small>1 post - 1 participant</small></p>
-            <p><a href="https://discuss.frappe.io/t/how-to-customize-crm-ui-and-add-sidebar-options-without-modifying-core-crm-app/158136">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/how-to-customize-crm-ui-and-add-sidebar-options-without-modifying-core-crm-app/158136">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/how-to-customize-crm-ui-and-add-sidebar-options-without-modifying-core-crm-app/158136</link>
+          <link>https://discuss.coworker365.com/t/how-to-customize-crm-ui-and-add-sidebar-options-without-modifying-core-crm-app/158136</link>
           <pubDate>Fri, 19 Dec 2025 07:27:01 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-158136</guid>
-          <source url="https://discuss.frappe.io/t/how-to-customize-crm-ui-and-add-sidebar-options-without-modifying-core-crm-app/158136.rss">How to customize CRM UI and add sidebar options without modifying core CRM app</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-158136</guid>
+          <source url="https://discuss.coworker365.com/t/how-to-customize-crm-ui-and-add-sidebar-options-without-modifying-core-crm-app/158136.rss">How to customize CRM UI and add sidebar options without modifying core CRM app</source>
         </item>
         <item>
           <title>Frappe CRM , Appointments Scheduling and Viewing</title>
@@ -152,15 +152,15 @@ etc.</p>
 <p>The Frappe CRM has the journey from Lead to Deal to Quotation.</p>
 <p>Is there a way to Schedule Appointments, View All Scheduled Appointments within Frappe CRM?</p>
             <p><small>2 posts - 2 participants</small></p>
-            <p><a href="https://discuss.frappe.io/t/frappe-crm-appointments-scheduling-and-viewing/157956">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/frappe-crm-appointments-scheduling-and-viewing/157956">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/frappe-crm-appointments-scheduling-and-viewing/157956</link>
+          <link>https://discuss.coworker365.com/t/frappe-crm-appointments-scheduling-and-viewing/157956</link>
           <pubDate>Fri, 12 Dec 2025 11:45:42 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-157956</guid>
-          <source url="https://discuss.frappe.io/t/frappe-crm-appointments-scheduling-and-viewing/157956.rss">Frappe CRM , Appointments Scheduling and Viewing</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-157956</guid>
+          <source url="https://discuss.coworker365.com/t/frappe-crm-appointments-scheduling-and-viewing/157956.rss">Frappe CRM , Appointments Scheduling and Viewing</source>
         </item>
         <item>
           <title>Frappe CRM customize Doctypes</title>
@@ -178,33 +178,33 @@ etc.</p>
 <p>Thank you<br>
 Heshan Karunaratne</p>
             <p><small>1 post - 1 participant</small></p>
-            <p><a href="https://discuss.frappe.io/t/frappe-crm-customize-doctypes/157806">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/frappe-crm-customize-doctypes/157806">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/frappe-crm-customize-doctypes/157806</link>
+          <link>https://discuss.coworker365.com/t/frappe-crm-customize-doctypes/157806</link>
           <pubDate>Tue, 09 Dec 2025 05:40:49 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-157806</guid>
-          <source url="https://discuss.frappe.io/t/frappe-crm-customize-doctypes/157806.rss">Frappe CRM customize Doctypes</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-157806</guid>
+          <source url="https://discuss.coworker365.com/t/frappe-crm-customize-doctypes/157806.rss">Frappe CRM customize Doctypes</source>
         </item>
         <item>
           <title>How to change currency on Frappe CRM</title>
           <dc:creator><![CDATA[Tri_Agung1]]></dc:creator>
           <category>Frappe CRM</category>
           <description><![CDATA[
-            <p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/b/1b360f3ca0744dfc9e1950f939992d68a4b0a2ab.jpeg" data-download-href="https://discuss.frappe.io/uploads/default/1b360f3ca0744dfc9e1950f939992d68a4b0a2ab" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/1/b/1b360f3ca0744dfc9e1950f939992d68a4b0a2ab_2_690x364.jpeg" alt="image" data-base62-sha1="3SIIfpC2qIri7mWzXWHLaBpE57R" width="690" height="364" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/1/b/1b360f3ca0744dfc9e1950f939992d68a4b0a2ab_2_690x364.jpeg, https://discuss.frappe.io/uploads/default/optimized/3X/1/b/1b360f3ca0744dfc9e1950f939992d68a4b0a2ab_2_1035x546.jpeg 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/1/b/1b360f3ca0744dfc9e1950f939992d68a4b0a2ab_2_1380x728.jpeg 2x" data-dominant-color="E8E8E8"></a></div><p></p>
+            <p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/1/b/1b360f3ca0744dfc9e1950f939992d68a4b0a2ab.jpeg" data-download-href="https://discuss.coworker365.com/uploads/default/1b360f3ca0744dfc9e1950f939992d68a4b0a2ab" title="image"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/1/b/1b360f3ca0744dfc9e1950f939992d68a4b0a2ab_2_690x364.jpeg" alt="image" data-base62-sha1="3SIIfpC2qIri7mWzXWHLaBpE57R" width="690" height="364" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/1/b/1b360f3ca0744dfc9e1950f939992d68a4b0a2ab_2_690x364.jpeg, https://discuss.coworker365.com/uploads/default/optimized/3X/1/b/1b360f3ca0744dfc9e1950f939992d68a4b0a2ab_2_1035x546.jpeg 1.5x, https://discuss.coworker365.com/uploads/default/optimized/3X/1/b/1b360f3ca0744dfc9e1950f939992d68a4b0a2ab_2_1380x728.jpeg 2x" data-dominant-color="E8E8E8"></a></div><p></p>
 <p>Anyone can help me for this?</p>
             <p><small>1 post - 1 participant</small></p>
-            <p><a href="https://discuss.frappe.io/t/how-to-change-currency-on-frappe-crm/157160">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/how-to-change-currency-on-frappe-crm/157160">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/how-to-change-currency-on-frappe-crm/157160</link>
+          <link>https://discuss.coworker365.com/t/how-to-change-currency-on-frappe-crm/157160</link>
           <pubDate>Sat, 22 Nov 2025 05:21:54 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-157160</guid>
-          <source url="https://discuss.frappe.io/t/how-to-change-currency-on-frappe-crm/157160.rss">How to change currency on Frappe CRM</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-157160</guid>
+          <source url="https://discuss.coworker365.com/t/how-to-change-currency-on-frappe-crm/157160.rss">How to change currency on Frappe CRM</source>
         </item>
         <item>
           <title>FCRM UI - Existing Contacts</title>
@@ -213,15 +213,15 @@ Heshan Karunaratne</p>
           <description><![CDATA[
             <p>On FCRM UI, one can use existing contact to create Deals, but is it possible to use existing contacts for creating Leads.</p>
             <p><small>1 post - 1 participant</small></p>
-            <p><a href="https://discuss.frappe.io/t/fcrm-ui-existing-contacts/156755">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/fcrm-ui-existing-contacts/156755">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/fcrm-ui-existing-contacts/156755</link>
+          <link>https://discuss.coworker365.com/t/fcrm-ui-existing-contacts/156755</link>
           <pubDate>Wed, 12 Nov 2025 13:15:58 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-156755</guid>
-          <source url="https://discuss.frappe.io/t/fcrm-ui-existing-contacts/156755.rss">FCRM UI - Existing Contacts</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-156755</guid>
+          <source url="https://discuss.coworker365.com/t/fcrm-ui-existing-contacts/156755.rss">FCRM UI - Existing Contacts</source>
         </item>
         <item>
           <title>Is there Table Multiselect support for CRM?</title>
@@ -230,17 +230,17 @@ Heshan Karunaratne</p>
           <description><![CDATA[
             <p>I am running a trial on frappe.cloud and I can’t find any documentation or a tutorial on how to add a new, custom “Table MultiSelect” field to Frappe CRM.</p>
 <p>There’s a link here for ERPNext</p>
-<aside class="onebox allowlistedgeneric" data-onebox-src="https://docs.frappe.io/erpnext/user/manual/en/table-multiselect-field">
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://docs.coworker365.com/erpnext/user/manual/en/table-multiselect-field">
   <header class="source">
-      <img src="https://docs.frappe.io/assets/frappe/images/frappe-favicon.svg" class="site-icon" alt="" width="400" height="400">
+      <img src="https://docs.coworker365.com/assets/frappe/images/frappe-favicon.svg" class="site-icon" alt="" width="400" height="400">
 
-      <a href="https://docs.frappe.io/erpnext/user/manual/en/table-multiselect-field" target="_blank" rel="noopener nofollow ugc">docs.frappe.io</a>
+      <a href="https://docs.coworker365.com/erpnext/user/manual/en/table-multiselect-field" target="_blank" rel="noopener nofollow ugc">docs.coworker365.com</a>
   </header>
 
   <article class="onebox-body">
     
 
-<h3><a href="https://docs.frappe.io/erpnext/user/manual/en/table-multiselect-field" target="_blank" rel="noopener nofollow ugc">Table MultiSelect Field</a></h3>
+<h3><a href="https://docs.coworker365.com/erpnext/user/manual/en/table-multiselect-field" target="_blank" rel="noopener nofollow ugc">Table MultiSelect Field</a></h3>
 
 
 
@@ -255,17 +255,17 @@ Heshan Karunaratne</p>
 </aside>
 
 <p>But I can’t find anything in the CRM docs other than this fairly generic link that doesn’t mention Table MultiSelect at all</p>
-<aside class="onebox allowlistedgeneric" data-onebox-src="https://docs.frappe.io/crm/custom-fields">
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://docs.coworker365.com/crm/custom-fields">
   <header class="source">
-      <img src="https://docs.frappe.io/assets/frappe/images/frappe-favicon.svg" class="site-icon" alt="" width="400" height="400">
+      <img src="https://docs.coworker365.com/assets/frappe/images/frappe-favicon.svg" class="site-icon" alt="" width="400" height="400">
 
-      <a href="https://docs.frappe.io/crm/custom-fields" target="_blank" rel="noopener nofollow ugc">docs.frappe.io</a>
+      <a href="https://docs.coworker365.com/crm/custom-fields" target="_blank" rel="noopener nofollow ugc">docs.coworker365.com</a>
   </header>
 
   <article class="onebox-body">
     
 
-<h3><a href="https://docs.frappe.io/crm/custom-fields" target="_blank" rel="noopener nofollow ugc">Custom Fields</a></h3>
+<h3><a href="https://docs.coworker365.com/crm/custom-fields" target="_blank" rel="noopener nofollow ugc">Custom Fields</a></h3>
 
 
 
@@ -280,17 +280,17 @@ Heshan Karunaratne</p>
 </aside>
 
 <p>Finally, this update from Feb 2025 talks about adding Table Multiselect but I can’t seem to get it work…</p>
-<aside class="onebox allowlistedgeneric" data-onebox-src="https://frappe.io/blog/product-updates/product-updates-for-february-2025#crm">
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://coworker365.com/blog/product-updates/product-updates-for-february-2025#crm">
   <header class="source">
-      <img src="https://frappe.io/files/frappeio82a788.ico" class="site-icon" alt="" width="256" height="256">
+      <img src="https://coworker365.com/files/frappeio82a788.ico" class="site-icon" alt="" width="256" height="256">
 
-      <a href="https://frappe.io/blog/product-updates/product-updates-for-february-2025#crm" target="_blank" rel="noopener nofollow ugc">frappe.io</a>
+      <a href="https://coworker365.com/blog/product-updates/product-updates-for-february-2025#crm" target="_blank" rel="noopener nofollow ugc">coworker365.com</a>
   </header>
 
   <article class="onebox-body">
-    <div class="aspect-image" style="--aspect-ratio:690/336;"><img src="https://frappe.io/files/Frame%20(2).png" class="thumbnail" alt="" width="690" height="336"></div>
+    <div class="aspect-image" style="--aspect-ratio:690/336;"><img src="https://coworker365.com/files/Frame%20(2).png" class="thumbnail" alt="" width="690" height="336"></div>
 
-<h3><a href="https://frappe.io/blog/product-updates/product-updates-for-february-2025#crm" target="_blank" rel="noopener nofollow ugc">Product Updates for February 2025 | Frappe Blog</a></h3>
+<h3><a href="https://coworker365.com/blog/product-updates/product-updates-for-february-2025#crm" target="_blank" rel="noopener nofollow ugc">Product Updates for February 2025 | Frappe Blog</a></h3>
 
   <p>Short month, big events.</p>
 
@@ -307,15 +307,15 @@ Heshan Karunaratne</p>
 
 <p>Does anyone have any ideas or is there a page in the documentation I can follow?</p>
             <p><small>1 post - 1 participant</small></p>
-            <p><a href="https://discuss.frappe.io/t/is-there-table-multiselect-support-for-crm/156522">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/is-there-table-multiselect-support-for-crm/156522">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/is-there-table-multiselect-support-for-crm/156522</link>
+          <link>https://discuss.coworker365.com/t/is-there-table-multiselect-support-for-crm/156522</link>
           <pubDate>Thu, 06 Nov 2025 19:04:13 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-156522</guid>
-          <source url="https://discuss.frappe.io/t/is-there-table-multiselect-support-for-crm/156522.rss">Is there Table Multiselect support for CRM?</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-156522</guid>
+          <source url="https://discuss.coworker365.com/t/is-there-table-multiselect-support-for-crm/156522.rss">Is there Table Multiselect support for CRM?</source>
         </item>
         <item>
           <title>Not receiving Twilio response callback when making outbound call from FrappeCRM</title>
@@ -325,7 +325,7 @@ Heshan Karunaratne</p>
             <p>Hi Team,</p>
 <p>I’ve set up Twilio integration with FrappeCRM to make outbound calls directly from the Leads page. The call initiation works fine — the call connects successfully — but the Frappe side does not receive any callback or TwiML response from Twilio after the call is connected.</p>
 <p>In the error logs, a <code>TypeError ('NoneType' object is not iterable)</code> is recorded, which suggests that Frappe might be receiving an empty or improperly formatted payload from Twilio’s callback URL. Additionally, Twilio’s console shows an error related to response size being greater than 64KB, which could indicate that the TwiML or response body being returned from Frappe exceeds the allowed limit.</p>
-<h4><a name="p-483848-what-ive-verified-1" class="anchor" href="https://discuss.frappe.io#p-483848-what-ive-verified-1"></a><strong>What I’ve Verified</strong></h4>
+<h4><a name="p-483848-what-ive-verified-1" class="anchor" href="https://discuss.coworker365.com#p-483848-what-ive-verified-1"></a><strong>What I’ve Verified</strong></h4>
 <ul>
 <li>Outbound call requests are being triggered correctly from Frappe.</li>
 <li>The callback URL is accessible publicly.</li>
@@ -333,13 +333,13 @@ Heshan Karunaratne</p>
 <li>No permission or network-level issue observed.</li>
 </ul>
 <p>Frappe should receive a valid callback or TwiML response from Twilio once the call connects, and process the response without error.</p>
-<h4><a name="p-483848-actual-behavior-2" class="anchor" href="https://discuss.frappe.io#p-483848-actual-behavior-2"></a><strong>Actual Behavior</strong></h4>
+<h4><a name="p-483848-actual-behavior-2" class="anchor" href="https://discuss.coworker365.com#p-483848-actual-behavior-2"></a><strong>Actual Behavior</strong></h4>
 <ul>
 <li>The call connects successfully, but no valid response is returned to Frappe.</li>
 <li>A <code>TypeError</code> appears in the Frappe error log.</li>
 <li>Twilio logs an error indicating the response size is too large.</li>
 </ul>
-<h4><a name="p-483848-requesting-for-input-3" class="anchor" href="https://discuss.frappe.io#p-483848-requesting-for-input-3"></a><strong>Requesting for Input</strong></h4>
+<h4><a name="p-483848-requesting-for-input-3" class="anchor" href="https://discuss.coworker365.com#p-483848-requesting-for-input-3"></a><strong>Requesting for Input</strong></h4>
 <ol>
 <li>Could this be related to how Frappe handles external webhook callbacks or larger TwiML responses?</li>
 <li>Would adding validation or truncation to the response help ensure compatibility with Twilio’s 64KB response limit?</li>
@@ -347,22 +347,22 @@ Heshan Karunaratne</p>
 <p>Any insights or suggestions on handling this scenario in a Frappe-integrated setup would be greatly appreciated.</p>
 <p>Thanks!</p>
             <p><small>1 post - 1 participant</small></p>
-            <p><a href="https://discuss.frappe.io/t/not-receiving-twilio-response-callback-when-making-outbound-call-from-frappecrm/155437">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/not-receiving-twilio-response-callback-when-making-outbound-call-from-frappecrm/155437">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/not-receiving-twilio-response-callback-when-making-outbound-call-from-frappecrm/155437</link>
+          <link>https://discuss.coworker365.com/t/not-receiving-twilio-response-callback-when-making-outbound-call-from-frappecrm/155437</link>
           <pubDate>Mon, 13 Oct 2025 14:51:45 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-155437</guid>
-          <source url="https://discuss.frappe.io/t/not-receiving-twilio-response-callback-when-making-outbound-call-from-frappecrm/155437.rss">Not receiving Twilio response callback when making outbound call from FrappeCRM</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-155437</guid>
+          <source url="https://discuss.coworker365.com/t/not-receiving-twilio-response-callback-when-making-outbound-call-from-frappecrm/155437.rss">Not receiving Twilio response callback when making outbound call from FrappeCRM</source>
         </item>
         <item>
           <title>There is a bug in the Frappe CRM Territory where is_group colum is duplicate</title>
           <dc:creator><![CDATA[NoMi]]></dc:creator>
           <category>Frappe CRM</category>
           <description><![CDATA[
-            <h3><a name="p-483774-bug-description-1" class="anchor" href="https://discuss.frappe.io#p-483774-bug-description-1"></a>Bug Description</h3>
+            <h3><a name="p-483774-bug-description-1" class="anchor" href="https://discuss.coworker365.com#p-483774-bug-description-1"></a>Bug Description</h3>
 <p>The Territory DocType contains a duplicate definition for the <strong>is_group</strong> field in its core JSON file (CRM territory.json). This causes a validation error (Duplicate name ‘is_group’) when a user attempts to save any customizations to this DocType, effectively blocking any modifications.</p>
 <aside class="onebox githubissue" data-onebox-src="https://github.com/frappe/crm/issues/1263#issue-3432933290">
   <header class="source">
@@ -436,15 +436,15 @@ This seems to be my first bug report, and I'm happy to provide any more informat
   <div style="clear: both"></div>
 </aside>
 
-<h3><a name="p-483774-steps-to-reproduce-2" class="anchor" href="https://discuss.frappe.io#p-483774-steps-to-reproduce-2"></a>Steps to Reproduce</h3>
+<h3><a name="p-483774-steps-to-reproduce-2" class="anchor" href="https://discuss.coworker365.com#p-483774-steps-to-reproduce-2"></a>Steps to Reproduce</h3>
 <p>-Go to ‘Customize Form’.<br>
 -Select the Territory DocType.<br>
 -Make any change (e.g., add a new field, change a property).<br>
 -Click ‘Save’.</p>
-<h3><a name="p-483774-behavior-3" class="anchor" href="https://discuss.frappe.io#p-483774-behavior-3"></a>Behavior</h3>
+<h3><a name="p-483774-behavior-3" class="anchor" href="https://discuss.coworker365.com#p-483774-behavior-3"></a>Behavior</h3>
 <p><strong>Expected Behavior:</strong> The customizations should be saved successfully.<br>
 <strong>Actual Behavior:</strong> The system throws a Duplicate name ‘is_group’ error and the changes are not saved.</p>
-<h3><a name="p-483774-evidence-4" class="anchor" href="https://discuss.frappe.io#p-483774-evidence-4"></a>Evidence</h3>
+<h3><a name="p-483774-evidence-4" class="anchor" href="https://discuss.coworker365.com#p-483774-evidence-4"></a>Evidence</h3>
 <ol>
 <li>Error in UI:<br>
 The following error appears when trying to save the form.</li>
@@ -457,15 +457,15 @@ The crm_territory.json file on the develop branch clearly shows the is_group fie
 <p><a href="https://private-user-images.githubusercontent.com/191856196/491411246-158840f3-6bec-4a90-8e2b-b2fd7274fc3b.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjAyODczNTEsIm5iZiI6MTc2MDI4NzA1MSwicGF0aCI6Ii8xOTE4NTYxOTYvNDkxNDExMjQ2LTE1ODg0MGYzLTZiZWMtNGE5MC04ZTJiLWIyZmQ3Mjc0ZmMzYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAxMlQxNjM3MzFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03NmYxMDJjZDA4NjA2NGU1Y2ZlNmFjNTA5MzAyNjY3MGU3OTAzNmMyYjFkNmIzMGI4MjYwODJiNWIxYjc2NzIzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.1NxLCwgUWvH1qGl-evK6I1uR3zNV6ZNP3YDbL1C-MDE" rel="noopener nofollow ugc"><img src="https://private-user-images.githubusercontent.com/191856196/491411246-158840f3-6bec-4a90-8e2b-b2fd7274fc3b.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjAyODczNTEsIm5iZiI6MTc2MDI4NzA1MSwicGF0aCI6Ii8xOTE4NTYxOTYvNDkxNDExMjQ2LTE1ODg0MGYzLTZiZWMtNGE5MC04ZTJiLWIyZmQ3Mjc0ZmMzYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAxMlQxNjM3MzFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03NmYxMDJjZDA4NjA2NGU1Y2ZlNmFjNTA5MzAyNjY3MGU3OTAzNmMyYjFkNmIzMGI4MjYwODJiNWIxYjc2NzIzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.1NxLCwgUWvH1qGl-evK6I1uR3zNV6ZNP3YDbL1C-MDE" alt="Image" width="690" height="397"></a></p>
 <p>This seems to be my first bug report, and I’m happy to provide any more information needed to get this fixed. Thank you!</p>
             <p><small>1 post - 1 participant</small></p>
-            <p><a href="https://discuss.frappe.io/t/there-is-a-bug-in-the-frappe-crm-territory-where-is-group-colum-is-duplicate/155397">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/there-is-a-bug-in-the-frappe-crm-territory-where-is-group-colum-is-duplicate/155397">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/there-is-a-bug-in-the-frappe-crm-territory-where-is-group-colum-is-duplicate/155397</link>
+          <link>https://discuss.coworker365.com/t/there-is-a-bug-in-the-frappe-crm-territory-where-is-group-colum-is-duplicate/155397</link>
           <pubDate>Sun, 12 Oct 2025 19:05:38 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-155397</guid>
-          <source url="https://discuss.frappe.io/t/there-is-a-bug-in-the-frappe-crm-territory-where-is-group-colum-is-duplicate/155397.rss">There is a bug in the Frappe CRM Territory where is_group colum is duplicate</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-155397</guid>
+          <source url="https://discuss.coworker365.com/t/there-is-a-bug-in-the-frappe-crm-territory-where-is-group-colum-is-duplicate/155397.rss">There is a bug in the Frappe CRM Territory where is_group colum is duplicate</source>
         </item>
         <item>
           <title>Add a custom doctype to the crm</title>
@@ -474,15 +474,15 @@ The crm_territory.json file on the develop branch clearly shows the is_group fie
           <description><![CDATA[
             <p>Hi, I have two apps—one called <strong>Project</strong> and the other <strong>CRM</strong>. In the CRM portal, can I add a custom DocType from the Project app so users don’t have to switch between Desk and the CRM portal?</p>
             <p><small>3 posts - 2 participants</small></p>
-            <p><a href="https://discuss.frappe.io/t/add-a-custom-doctype-to-the-crm/155381">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/add-a-custom-doctype-to-the-crm/155381">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/add-a-custom-doctype-to-the-crm/155381</link>
+          <link>https://discuss.coworker365.com/t/add-a-custom-doctype-to-the-crm/155381</link>
           <pubDate>Sun, 12 Oct 2025 07:24:09 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-155381</guid>
-          <source url="https://discuss.frappe.io/t/add-a-custom-doctype-to-the-crm/155381.rss">Add a custom doctype to the crm</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-155381</guid>
+          <source url="https://discuss.coworker365.com/t/add-a-custom-doctype-to-the-crm/155381.rss">Add a custom doctype to the crm</source>
         </item>
         <item>
           <title>Doesnt frappe crm support standard IMAP and SMTP</title>
@@ -493,15 +493,15 @@ The crm_territory.json file on the develop branch clearly shows the is_group fie
 The option to configure standard SMTP for other providers, like zoho, or even selfhosted email is not supported</p>
 <p>Am i missing something?</p>
             <p><small>2 posts - 2 participants</small></p>
-            <p><a href="https://discuss.frappe.io/t/doesnt-frappe-crm-support-standard-imap-and-smtp/155363">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/doesnt-frappe-crm-support-standard-imap-and-smtp/155363">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/doesnt-frappe-crm-support-standard-imap-and-smtp/155363</link>
+          <link>https://discuss.coworker365.com/t/doesnt-frappe-crm-support-standard-imap-and-smtp/155363</link>
           <pubDate>Sat, 11 Oct 2025 16:58:40 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-155363</guid>
-          <source url="https://discuss.frappe.io/t/doesnt-frappe-crm-support-standard-imap-and-smtp/155363.rss">Doesnt frappe crm support standard IMAP and SMTP</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-155363</guid>
+          <source url="https://discuss.coworker365.com/t/doesnt-frappe-crm-support-standard-imap-and-smtp/155363.rss">Doesnt frappe crm support standard IMAP and SMTP</source>
         </item>
         <item>
           <title>Customising Frappe CRM where leads are individual and never and organisation</title>
@@ -513,15 +513,15 @@ Frappe CRM is designed towards non individual leads. Does anyone have any custom
 <p>Or a way to modify the app for sich a use case.</p>
 <p>Any help would be appreciated</p>
             <p><small>1 post - 1 participant</small></p>
-            <p><a href="https://discuss.frappe.io/t/customising-frappe-crm-where-leads-are-individual-and-never-and-organisation/155319">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/customising-frappe-crm-where-leads-are-individual-and-never-and-organisation/155319">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/customising-frappe-crm-where-leads-are-individual-and-never-and-organisation/155319</link>
+          <link>https://discuss.coworker365.com/t/customising-frappe-crm-where-leads-are-individual-and-never-and-organisation/155319</link>
           <pubDate>Fri, 10 Oct 2025 09:35:46 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-155319</guid>
-          <source url="https://discuss.frappe.io/t/customising-frappe-crm-where-leads-are-individual-and-never-and-organisation/155319.rss">Customising Frappe CRM where leads are individual and never and organisation</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-155319</guid>
+          <source url="https://discuss.coworker365.com/t/customising-frappe-crm-where-leads-are-individual-and-never-and-organisation/155319.rss">Customising Frappe CRM where leads are individual and never and organisation</source>
         </item>
         <item>
           <title>Calling Problem from CRM exotel integration</title>
@@ -530,15 +530,15 @@ Frappe CRM is designed towards non individual leads. Does anyone have any custom
           <description><![CDATA[
             <p>i have created an exotel account and verified i get token of 200 i when i call from frappe crm i get error this Exotel Number 09513886363 is Not valid</p>
             <p><small>2 posts - 2 participants</small></p>
-            <p><a href="https://discuss.frappe.io/t/calling-problem-from-crm-exotel-integration/155283">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/calling-problem-from-crm-exotel-integration/155283">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/calling-problem-from-crm-exotel-integration/155283</link>
+          <link>https://discuss.coworker365.com/t/calling-problem-from-crm-exotel-integration/155283</link>
           <pubDate>Thu, 09 Oct 2025 11:06:50 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-155283</guid>
-          <source url="https://discuss.frappe.io/t/calling-problem-from-crm-exotel-integration/155283.rss">Calling Problem from CRM exotel integration</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-155283</guid>
+          <source url="https://discuss.coworker365.com/t/calling-problem-from-crm-exotel-integration/155283.rss">Calling Problem from CRM exotel integration</source>
         </item>
         <item>
           <title>Frappe CRM Create Customer Status Change</title>
@@ -546,24 +546,24 @@ Frappe CRM is designed towards non individual leads. Does anyone have any custom
           <category>Frappe CRM</category>
           <description><![CDATA[
             <p>Create customer on status change is enabled.<br>
-</p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/2/2/22f88aa3cf40439a4c2c4f8a5a5ac7ed425ce8da.png" data-download-href="https://discuss.frappe.io/uploads/default/22f88aa3cf40439a4c2c4f8a5a5ac7ed425ce8da" title="2025-10-02 15.44.59"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/2/2/22f88aa3cf40439a4c2c4f8a5a5ac7ed425ce8da_2_690x104.png" alt="2025-10-02 15.44.59" data-base62-sha1="4ZmJnb1KzSJnv9GhLdpO4AzxFY6" width="690" height="104" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/2/2/22f88aa3cf40439a4c2c4f8a5a5ac7ed425ce8da_2_690x104.png, https://discuss.frappe.io/uploads/default/optimized/3X/2/2/22f88aa3cf40439a4c2c4f8a5a5ac7ed425ce8da_2_1035x156.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/2/2/22f88aa3cf40439a4c2c4f8a5a5ac7ed425ce8da_2_1380x208.png 2x" data-dominant-color="FBFBFB"></a></div><br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/2/2/22f88aa3cf40439a4c2c4f8a5a5ac7ed425ce8da.png" data-download-href="https://discuss.coworker365.com/uploads/default/22f88aa3cf40439a4c2c4f8a5a5ac7ed425ce8da" title="2025-10-02 15.44.59"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/2/2/22f88aa3cf40439a4c2c4f8a5a5ac7ed425ce8da_2_690x104.png" alt="2025-10-02 15.44.59" data-base62-sha1="4ZmJnb1KzSJnv9GhLdpO4AzxFY6" width="690" height="104" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/2/2/22f88aa3cf40439a4c2c4f8a5a5ac7ed425ce8da_2_690x104.png, https://discuss.coworker365.com/uploads/default/optimized/3X/2/2/22f88aa3cf40439a4c2c4f8a5a5ac7ed425ce8da_2_1035x156.png 1.5x, https://discuss.coworker365.com/uploads/default/optimized/3X/2/2/22f88aa3cf40439a4c2c4f8a5a5ac7ed425ce8da_2_1380x208.png 2x" data-dominant-color="FBFBFB"></a></div><br>
 and when I change a deal from other status to won, I get this notification:<br>
-<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/3/9/396506135589a4d981abb665035bd8021bc3e649.png" data-download-href="https://discuss.frappe.io/uploads/default/396506135589a4d981abb665035bd8021bc3e649" title="2025-10-02 15.44.36"><img src="https://discuss.frappe.io/uploads/default/original/3X/3/9/396506135589a4d981abb665035bd8021bc3e649.png" alt="2025-10-02 15.44.36" data-base62-sha1="8bJENYYFWkWPjoRBzYPYzeWkr7H" width="640" height="238"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/3/9/396506135589a4d981abb665035bd8021bc3e649.png" data-download-href="https://discuss.coworker365.com/uploads/default/396506135589a4d981abb665035bd8021bc3e649" title="2025-10-02 15.44.36"><img src="https://discuss.coworker365.com/uploads/default/original/3X/3/9/396506135589a4d981abb665035bd8021bc3e649.png" alt="2025-10-02 15.44.36" data-base62-sha1="8bJENYYFWkWPjoRBzYPYzeWkr7H" width="640" height="238"></a></div><br>
 BUT, the customer is not created in ERPNEXT.<br>
-<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/4/3/43507648fc4b0f2e415d2748520697378434a8ee.png" data-download-href="https://discuss.frappe.io/uploads/default/43507648fc4b0f2e415d2748520697378434a8ee" title="2025-10-02 15.49.38"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/4/3/43507648fc4b0f2e415d2748520697378434a8ee_2_690x357.png" alt="2025-10-02 15.49.38" data-base62-sha1="9BunxrUBv2mj8mKporGhzOcmmXY" width="690" height="357" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/4/3/43507648fc4b0f2e415d2748520697378434a8ee_2_690x357.png, https://discuss.frappe.io/uploads/default/optimized/3X/4/3/43507648fc4b0f2e415d2748520697378434a8ee_2_1035x535.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/4/3/43507648fc4b0f2e415d2748520697378434a8ee_2_1380x714.png 2x" data-dominant-color="FDFDFD"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/4/3/43507648fc4b0f2e415d2748520697378434a8ee.png" data-download-href="https://discuss.coworker365.com/uploads/default/43507648fc4b0f2e415d2748520697378434a8ee" title="2025-10-02 15.49.38"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/4/3/43507648fc4b0f2e415d2748520697378434a8ee_2_690x357.png" alt="2025-10-02 15.49.38" data-base62-sha1="9BunxrUBv2mj8mKporGhzOcmmXY" width="690" height="357" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/4/3/43507648fc4b0f2e415d2748520697378434a8ee_2_690x357.png, https://discuss.coworker365.com/uploads/default/optimized/3X/4/3/43507648fc4b0f2e415d2748520697378434a8ee_2_1035x535.png 1.5x, https://discuss.coworker365.com/uploads/default/optimized/3X/4/3/43507648fc4b0f2e415d2748520697378434a8ee_2_1380x714.png 2x" data-dominant-color="FDFDFD"></a></div><br>
 Selfhosted, version of Frappe and FRAPPE CRM:<br>
-<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/1/2/12c874de6a569f7053a0ca60fbdc86ae4336d7fd.png" data-download-href="https://discuss.frappe.io/uploads/default/12c874de6a569f7053a0ca60fbdc86ae4336d7fd" title="2025-10-02 15.50.22"><img src="https://discuss.frappe.io/uploads/default/original/3X/1/2/12c874de6a569f7053a0ca60fbdc86ae4336d7fd.png" alt="2025-10-02 15.50.22" data-base62-sha1="2Ga4niV34lKaagIL42qOxmT9HDT" width="674" height="272"></a></div><p></p>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/1/2/12c874de6a569f7053a0ca60fbdc86ae4336d7fd.png" data-download-href="https://discuss.coworker365.com/uploads/default/12c874de6a569f7053a0ca60fbdc86ae4336d7fd" title="2025-10-02 15.50.22"><img src="https://discuss.coworker365.com/uploads/default/original/3X/1/2/12c874de6a569f7053a0ca60fbdc86ae4336d7fd.png" alt="2025-10-02 15.50.22" data-base62-sha1="2Ga4niV34lKaagIL42qOxmT9HDT" width="674" height="272"></a></div><p></p>
 <p>Anyone can help?</p>
             <p><small>1 post - 1 participant</small></p>
-            <p><a href="https://discuss.frappe.io/t/frappe-crm-create-customer-status-change/154980">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/frappe-crm-create-customer-status-change/154980">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/frappe-crm-create-customer-status-change/154980</link>
+          <link>https://discuss.coworker365.com/t/frappe-crm-create-customer-status-change/154980</link>
           <pubDate>Thu, 02 Oct 2025 07:52:05 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-154980</guid>
-          <source url="https://discuss.frappe.io/t/frappe-crm-create-customer-status-change/154980.rss">Frappe CRM Create Customer Status Change</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-154980</guid>
+          <source url="https://discuss.coworker365.com/t/frappe-crm-create-customer-status-change/154980.rss">Frappe CRM Create Customer Status Change</source>
         </item>
         <item>
           <title>Want to add an email option to sidebar</title>
@@ -572,15 +572,15 @@ Selfhosted, version of Frappe and FRAPPE CRM:<br>
           <description><![CDATA[
             <p>Is there anyway I can add an emails options in my appsidebar? I want a fully functional working mailbox which act exactly like a mailbox? I could only add the option in frontend, but could not make changes in backend.</p>
             <p><small>1 post - 1 participant</small></p>
-            <p><a href="https://discuss.frappe.io/t/want-to-add-an-email-option-to-sidebar/153462">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/want-to-add-an-email-option-to-sidebar/153462">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/want-to-add-an-email-option-to-sidebar/153462</link>
+          <link>https://discuss.coworker365.com/t/want-to-add-an-email-option-to-sidebar/153462</link>
           <pubDate>Fri, 12 Sep 2025 11:28:44 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-153462</guid>
-          <source url="https://discuss.frappe.io/t/want-to-add-an-email-option-to-sidebar/153462.rss">Want to add an email option to sidebar</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-153462</guid>
+          <source url="https://discuss.coworker365.com/t/want-to-add-an-email-option-to-sidebar/153462.rss">Want to add an email option to sidebar</source>
         </item>
         <item>
           <title>Emails are not syncing in communication doctype, frappe CRM</title>
@@ -589,15 +589,15 @@ Selfhosted, version of Frappe and FRAPPE CRM:<br>
           <description><![CDATA[
             <p>When I send emails through leads in frappe CRM, only the sent emails will be synced in communication doctype, but it is not acting as live mailbox, I don’t see emails even after selecting pull emails option. Is there anyway I can fix this? Your guidance will be appreciated. Thank you.</p>
             <p><small>1 post - 1 participant</small></p>
-            <p><a href="https://discuss.frappe.io/t/emails-are-not-syncing-in-communication-doctype-frappe-crm/153461">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/emails-are-not-syncing-in-communication-doctype-frappe-crm/153461">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/emails-are-not-syncing-in-communication-doctype-frappe-crm/153461</link>
+          <link>https://discuss.coworker365.com/t/emails-are-not-syncing-in-communication-doctype-frappe-crm/153461</link>
           <pubDate>Fri, 12 Sep 2025 11:27:38 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-153461</guid>
-          <source url="https://discuss.frappe.io/t/emails-are-not-syncing-in-communication-doctype-frappe-crm/153461.rss">Emails are not syncing in communication doctype, frappe CRM</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-153461</guid>
+          <source url="https://discuss.coworker365.com/t/emails-are-not-syncing-in-communication-doctype-frappe-crm/153461.rss">Emails are not syncing in communication doctype, frappe CRM</source>
         </item>
         <item>
           <title>CSRF Token Error for Custom Frontend API Calls in Frappe CRM After Switching Pages (Development &amp; Cl</title>
@@ -627,22 +627,22 @@ Selfhosted, version of Frappe and FRAPPE CRM:<br>
 <li>Ensuring the token is set with <code>frappe.csrf_token</code> – but it still doesn’t get sent for custom pages.</li>
 <li>Attempting to use a <strong>fresh login</strong> flow, but the issue persists when switching between URLs.</li>
 </ol>
-<h3><a name="p-480120-what-i-need-help-with-1" class="anchor" href="https://discuss.frappe.io#p-480120-what-i-need-help-with-1"></a><strong>What I need help with</strong>:</h3>
+<h3><a name="p-480120-what-i-need-help-with-1" class="anchor" href="https://discuss.coworker365.com#p-480120-what-i-need-help-with-1"></a><strong>What I need help with</strong>:</h3>
 <ul>
 <li>Understanding <strong>why CSRF tokens aren’t being sent</strong> for custom frontend pages.</li>
 <li>Ensuring <strong>proper CSRF protection</strong> for these custom pages while maintaining session integrity when switching between app pages.</li>
 <li>Any suggestions on <strong>workarounds</strong> or best practices for dealing with CSRF token issues in custom-built pages or apps.</li>
 </ul>
             <p><small>3 posts - 2 participants</small></p>
-            <p><a href="https://discuss.frappe.io/t/csrf-token-error-for-custom-frontend-api-calls-in-frappe-crm-after-switching-pages-development-cl/153239">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/csrf-token-error-for-custom-frontend-api-calls-in-frappe-crm-after-switching-pages-development-cl/153239">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/csrf-token-error-for-custom-frontend-api-calls-in-frappe-crm-after-switching-pages-development-cl/153239</link>
+          <link>https://discuss.coworker365.com/t/csrf-token-error-for-custom-frontend-api-calls-in-frappe-crm-after-switching-pages-development-cl/153239</link>
           <pubDate>Mon, 08 Sep 2025 05:12:55 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-153239</guid>
-          <source url="https://discuss.frappe.io/t/csrf-token-error-for-custom-frontend-api-calls-in-frappe-crm-after-switching-pages-development-cl/153239.rss">CSRF Token Error for Custom Frontend API Calls in Frappe CRM After Switching Pages (Development &amp; Cl</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-153239</guid>
+          <source url="https://discuss.coworker365.com/t/csrf-token-error-for-custom-frontend-api-calls-in-frappe-crm-after-switching-pages-development-cl/153239.rss">CSRF Token Error for Custom Frontend API Calls in Frappe CRM After Switching Pages (Development &amp; Cl</source>
         </item>
         <item>
           <title>[Self Promotion] AI Voice Agent: Calling Automation</title>
@@ -685,15 +685,15 @@ Selfhosted, version of Frappe and FRAPPE CRM:<br>
 <p>Hope you find this useful. Until next time,<br>
 <strong>Sneh Mehta</strong></p>
             <p><small>2 posts - 1 participant</small></p>
-            <p><a href="https://discuss.frappe.io/t/self-promotion-ai-voice-agent-calling-automation/153121">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/self-promotion-ai-voice-agent-calling-automation/153121">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/self-promotion-ai-voice-agent-calling-automation/153121</link>
+          <link>https://discuss.coworker365.com/t/self-promotion-ai-voice-agent-calling-automation/153121</link>
           <pubDate>Thu, 04 Sep 2025 06:54:38 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-153121</guid>
-          <source url="https://discuss.frappe.io/t/self-promotion-ai-voice-agent-calling-automation/153121.rss">[Self Promotion] AI Voice Agent: Calling Automation</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-153121</guid>
+          <source url="https://discuss.coworker365.com/t/self-promotion-ai-voice-agent-calling-automation/153121.rss">[Self Promotion] AI Voice Agent: Calling Automation</source>
         </item>
         <item>
           <title>Office 365 email account</title>
@@ -706,15 +706,15 @@ Selfhosted, version of Frappe and FRAPPE CRM:<br>
 <p>Has anyone successfully connected Office 365 with Frappe CRM, and if so, what’s the correct approach (IMAP/SMTP with app password, OAuth2, or another method)?</p>
 <p>Thanks in advance!</p>
             <p><small>1 post - 1 participant</small></p>
-            <p><a href="https://discuss.frappe.io/t/office-365-email-account/152864">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/office-365-email-account/152864">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/office-365-email-account/152864</link>
+          <link>https://discuss.coworker365.com/t/office-365-email-account/152864</link>
           <pubDate>Thu, 28 Aug 2025 17:15:07 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-152864</guid>
-          <source url="https://discuss.frappe.io/t/office-365-email-account/152864.rss">Office 365 email account</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-152864</guid>
+          <source url="https://discuss.coworker365.com/t/office-365-email-account/152864.rss">Office 365 email account</source>
         </item>
         <item>
           <title>How to design UI like CRM app?</title>
@@ -723,15 +723,15 @@ Selfhosted, version of Frappe and FRAPPE CRM:<br>
           <description><![CDATA[
             <p>I want to customize my default frappe application like CRM UI .</p>
             <p><small>2 posts - 2 participants</small></p>
-            <p><a href="https://discuss.frappe.io/t/how-to-design-ui-like-crm-app/152835">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/how-to-design-ui-like-crm-app/152835">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/how-to-design-ui-like-crm-app/152835</link>
+          <link>https://discuss.coworker365.com/t/how-to-design-ui-like-crm-app/152835</link>
           <pubDate>Thu, 28 Aug 2025 09:46:52 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-152835</guid>
-          <source url="https://discuss.frappe.io/t/how-to-design-ui-like-crm-app/152835.rss">How to design UI like CRM app?</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-152835</guid>
+          <source url="https://discuss.coworker365.com/t/how-to-design-ui-like-crm-app/152835.rss">How to design UI like CRM app?</source>
         </item>
         <item>
           <title>Custom DocType support in UI</title>
@@ -742,15 +742,15 @@ Selfhosted, version of Frappe and FRAPPE CRM:<br>
 <p>Is there any way to add support of custom DocType in Frappe CRM UI ?<br>
 For example, I have created custom DocType “Attendees” in Desk view, added some fields and want this module be available in the frontend - to link it with Contacts, Deals and also new left bar menu item.</p>
             <p><small>1 post - 1 participant</small></p>
-            <p><a href="https://discuss.frappe.io/t/custom-doctype-support-in-ui/152741">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/custom-doctype-support-in-ui/152741">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/custom-doctype-support-in-ui/152741</link>
+          <link>https://discuss.coworker365.com/t/custom-doctype-support-in-ui/152741</link>
           <pubDate>Tue, 26 Aug 2025 19:56:39 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-152741</guid>
-          <source url="https://discuss.frappe.io/t/custom-doctype-support-in-ui/152741.rss">Custom DocType support in UI</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-152741</guid>
+          <source url="https://discuss.coworker365.com/t/custom-doctype-support-in-ui/152741.rss">Custom DocType support in UI</source>
         </item>
         <item>
           <title>Frappe CRM Archive deals feature</title>
@@ -761,15 +761,15 @@ For example, I have created custom DocType “Attendees” in Desk view, added s
 <p>Atleast the Won and Lost deals can have the option to be archived.</p>
 <p>Is there any solution to do this already?</p>
             <p><small>2 posts - 2 participants</small></p>
-            <p><a href="https://discuss.frappe.io/t/frappe-crm-archive-deals-feature/152548">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/frappe-crm-archive-deals-feature/152548">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/frappe-crm-archive-deals-feature/152548</link>
+          <link>https://discuss.coworker365.com/t/frappe-crm-archive-deals-feature/152548</link>
           <pubDate>Sat, 23 Aug 2025 06:37:49 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-152548</guid>
-          <source url="https://discuss.frappe.io/t/frappe-crm-archive-deals-feature/152548.rss">Frappe CRM Archive deals feature</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-152548</guid>
+          <source url="https://discuss.coworker365.com/t/frappe-crm-archive-deals-feature/152548.rss">Frappe CRM Archive deals feature</source>
         </item>
         <item>
           <title>Importing CSV files into Leads</title>
@@ -781,15 +781,15 @@ For example, I have created custom DocType “Attendees” in Desk view, added s
 <p>What do I need to do to unable import into these individual categories?</p>
 <p>Thanking you in anticipation for your responses.</p>
             <p><small>1 post - 1 participant</small></p>
-            <p><a href="https://discuss.frappe.io/t/importing-csv-files-into-leads/152078">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/importing-csv-files-into-leads/152078">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/importing-csv-files-into-leads/152078</link>
+          <link>https://discuss.coworker365.com/t/importing-csv-files-into-leads/152078</link>
           <pubDate>Tue, 19 Aug 2025 05:49:33 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-152078</guid>
-          <source url="https://discuss.frappe.io/t/importing-csv-files-into-leads/152078.rss">Importing CSV files into Leads</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-152078</guid>
+          <source url="https://discuss.coworker365.com/t/importing-csv-files-into-leads/152078.rss">Importing CSV files into Leads</source>
         </item>
         <item>
           <title>Can not connect email in CRM Frappe</title>
@@ -797,17 +797,17 @@ For example, I have created custom DocType “Attendees” in Desk view, added s
           <category>Frappe CRM</category>
           <description><![CDATA[
             <p>I do not manage to setup email in CRM Frappe. I definatly have set up and app password and for the email ID i used my M365 address. Why does it not work and sais invalid credentials? Any idea?</p>
-<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.frappe.io/uploads/default/original/3X/0/3/0338c5b7c095e3cf906f24b01fd023afcacc1a12.png" data-download-href="https://discuss.frappe.io/uploads/default/0338c5b7c095e3cf906f24b01fd023afcacc1a12" title="image"><img src="https://discuss.frappe.io/uploads/default/optimized/3X/0/3/0338c5b7c095e3cf906f24b01fd023afcacc1a12_2_632x500.png" alt="image" data-base62-sha1="sv47Vtlz5tPi5LnnWMML4UWlMK" width="632" height="500" srcset="https://discuss.frappe.io/uploads/default/optimized/3X/0/3/0338c5b7c095e3cf906f24b01fd023afcacc1a12_2_632x500.png, https://discuss.frappe.io/uploads/default/optimized/3X/0/3/0338c5b7c095e3cf906f24b01fd023afcacc1a12_2_948x750.png 1.5x, https://discuss.frappe.io/uploads/default/optimized/3X/0/3/0338c5b7c095e3cf906f24b01fd023afcacc1a12_2_1264x1000.png 2x" data-dominant-color="F8F8F8"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://discuss.coworker365.com/uploads/default/original/3X/0/3/0338c5b7c095e3cf906f24b01fd023afcacc1a12.png" data-download-href="https://discuss.coworker365.com/uploads/default/0338c5b7c095e3cf906f24b01fd023afcacc1a12" title="image"><img src="https://discuss.coworker365.com/uploads/default/optimized/3X/0/3/0338c5b7c095e3cf906f24b01fd023afcacc1a12_2_632x500.png" alt="image" data-base62-sha1="sv47Vtlz5tPi5LnnWMML4UWlMK" width="632" height="500" srcset="https://discuss.coworker365.com/uploads/default/optimized/3X/0/3/0338c5b7c095e3cf906f24b01fd023afcacc1a12_2_632x500.png, https://discuss.coworker365.com/uploads/default/optimized/3X/0/3/0338c5b7c095e3cf906f24b01fd023afcacc1a12_2_948x750.png 1.5x, https://discuss.coworker365.com/uploads/default/optimized/3X/0/3/0338c5b7c095e3cf906f24b01fd023afcacc1a12_2_1264x1000.png 2x" data-dominant-color="F8F8F8"></a></div><p></p>
             <p><small>3 posts - 2 participants</small></p>
-            <p><a href="https://discuss.frappe.io/t/can-not-connect-email-in-crm-frappe/151787">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/can-not-connect-email-in-crm-frappe/151787">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/can-not-connect-email-in-crm-frappe/151787</link>
+          <link>https://discuss.coworker365.com/t/can-not-connect-email-in-crm-frappe/151787</link>
           <pubDate>Wed, 13 Aug 2025 18:40:55 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-151787</guid>
-          <source url="https://discuss.frappe.io/t/can-not-connect-email-in-crm-frappe/151787.rss">Can not connect email in CRM Frappe</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-151787</guid>
+          <source url="https://discuss.coworker365.com/t/can-not-connect-email-in-crm-frappe/151787.rss">Can not connect email in CRM Frappe</source>
         </item>
         <item>
           <title>Permissions settings</title>
@@ -824,15 +824,16 @@ For example, I have created custom DocType “Attendees” in Desk view, added s
 </li>
 </ol>
             <p><small>6 posts - 3 participants</small></p>
-            <p><a href="https://discuss.frappe.io/t/permissions-settings/151503">Read full topic</a></p>
+            <p><a href="https://discuss.coworker365.com/t/permissions-settings/151503">Read full topic</a></p>
           ]]></description>
-          <link>https://discuss.frappe.io/t/permissions-settings/151503</link>
+          <link>https://discuss.coworker365.com/t/permissions-settings/151503</link>
           <pubDate>Mon, 11 Aug 2025 07:27:50 +0000</pubDate>
           <discourse:topicPinned>No</discourse:topicPinned>
           <discourse:topicClosed>No</discourse:topicClosed>
           <discourse:topicArchived>No</discourse:topicArchived>
-          <guid isPermaLink="false">discuss.frappe.io-topic-151503</guid>
-          <source url="https://discuss.frappe.io/t/permissions-settings/151503.rss">Permissions settings</source>
+          <guid isPermaLink="false">discuss.coworker365.com-topic-151503</guid>
+          <source url="https://discuss.coworker365.com/t/permissions-settings/151503.rss">Permissions settings</source>
         </item>
   </channel>
 </rss>
+

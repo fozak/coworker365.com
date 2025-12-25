@@ -18,7 +18,7 @@
 		type="image/x-icon">
 	
 
-	<link rel="canonical" href="https://docs.frappe.io/crm/custom-list-actions"><script defer data-domain="docs.frappe.io" src="https://analytics.frappe.cloud/js/plausible.js"></script>
+	<link rel="canonical" href="https://docs.coworker365.com/crm/custom-list-actions"><script defer data-domain="docs.coworker365.com" src="https://analytics.frappe.cloud/js/plausible.js"></script>
 <link type="text/css" rel="stylesheet" href="/assets/frappe/dist/css/website.bundle.255OFQ2A.css">
 
 <link rel="stylesheet" href="/assets/frappe/css/hljs-night-owl.css">
@@ -1241,7 +1241,7 @@ Tip: use lucide.svg in /icons for all downloaded icons
         </a>
         
         <a href="/cloud" class="space-link">
-          <img src="https://frappe.io/files/cloud.png" alt="Cloud logo" />
+          <img src="https://coworker365.com/files/cloud.png" alt="Cloud logo" />
           <span>
             Cloud
           </span>
@@ -1386,7 +1386,7 @@ Tip: use lucide.svg in /icons for all downloaded icons
 
 
 <li class="nav-item">
-	<a class="navbar-link" href="https://frappe.io/products/crm" >
+	<a class="navbar-link" href="https://coworker365.com/products/crm" >
 		Website
 	</a>
 </li>
@@ -2818,12 +2818,12 @@ You can create all types of actions (Normal Button, Grouped Actions, Grouped Act
 <li><strong>Select Doctype and Apply To:</strong> Choose the Doctype (e.g., Customer) for which you want to create the list actions. In the "Apply To" field, select "List" and save the configuration. This will generate a boilerplate code snippet.</li>
 <li><strong>Define Actions:</strong> The boilerplate code provides two options:
 <ul>
-<li><strong>actions:</strong> Here, you can specify a list of action buttons similar to custom actions on individual record pages (refer to the documentation for custom actions for detailed guidance on defining button functionality <a href="https://docs.frappe.io/crm/custom-actions">link</a>). These buttons will be visible in the list view header.</li>
+<li><strong>actions:</strong> Here, you can specify a list of action buttons similar to custom actions on individual record pages (refer to the documentation for custom actions for detailed guidance on defining button functionality <a href="https://docs.coworker365.com/crm/custom-actions">link</a>). These buttons will be visible in the list view header.</li>
 <li><strong>bulk_actions:</strong> This section allows you to define action buttons specifically designed for bulk operations on selected rows.</li>
 </ul></li>
 <li><p><strong>List Context:</strong> Both action types utilize JavaScript code to perform the desired functionalities. You'll have access to a <code>list</code> object as a parameter on <code>setupList</code> and also on <code>onClick</code> event, which provides valuable context about the list view. This object offers functionalities like reloading the list (<code>list.reload()</code>) and accessing additional information.</p>
 
-<p>Other than <code>list</code> other contexts are also passed like <code>$dialog</code>, <code>router</code>, <code>createToast</code>, and <code>call</code>. (for more details check                 <a href="https://docs.frappe.io/crm/custom-actions#using-context-and-actions">here</a>)</p></li>
+<p>Other than <code>list</code> other contexts are also passed like <code>$dialog</code>, <code>router</code>, <code>createToast</code>, and <code>call</code>. (for more details check                 <a href="https://docs.coworker365.com/crm/custom-actions#using-context-and-actions">here</a>)</p></li>
 <li><strong>Bulk Action Context:</strong> When defining bulk actions, the <code>onClick</code> event receives additional context besides the standard parameters. This context includes:
 <ul>
 <li><strong>selections:</strong> This is a Set object containing the names of all currently selected rows in the list view.</li>
@@ -2921,13 +2921,13 @@ You can create all types of actions (Normal Button, Grouped Actions, Grouped Act
 <li><strong>Select Doctype and Apply To:</strong> Choose the Doctype (e.g., Customer) for which you want to create the list actions. In the "Apply To" field, select "List" and save the configuration. This will generate a boilerplate code snippet.</li>
 <li><strong>Define Actions:</strong> The boilerplate code provides two options:
 <ul>
-<li><strong>actions:</strong> Here, you can specify a list of action buttons similar to custom actions on individual record pages (refer to the documentation for custom actions for detailed guidance on defining button functionality <a href="https://docs.frappe.io/crm/custom-actions">link</a>). These buttons will be visible in the list view header.</li>
+<li><strong>actions:</strong> Here, you can specify a list of action buttons similar to custom actions on individual record pages (refer to the documentation for custom actions for detailed guidance on defining button functionality <a href="https://docs.coworker365.com/crm/custom-actions">link</a>). These buttons will be visible in the list view header.</li>
 <li><strong>bulk_actions:</strong> This section allows you to define action buttons specifically designed for bulk operations on selected rows.</li>
 </ul></li>
 <li><strong>List Context:</strong> Both action types utilize JavaScript code to perform the desired functionalities. You'll have access to a &#96;list&#96; object as a parameter on &#96;setupList&#96; and also on &#96;onClick&#96; event, which provides valuable context about the list view. This object offers functionalities like reloading the list (&#96;list.reload()&#96;) and accessing additional information.</li>
 </ol>
 
-<p>Other than &#96;list&#96; other contexts are also passed like &#96;$dialog&#96;, &#96;router&#96;, &#96;createToast&#96;, and &#96;call&#96;. (for more details check                 <a href="https://docs.frappe.io/crm/custom-actions#using-context-and-actions">here</a>)
+<p>Other than &#96;list&#96; other contexts are also passed like &#96;$dialog&#96;, &#96;router&#96;, &#96;createToast&#96;, and &#96;call&#96;. (for more details check                 <a href="https://docs.coworker365.com/crm/custom-actions#using-context-and-actions">here</a>)
 5. <strong>Bulk Action Context:</strong> When defining bulk actions, the &#96;onClick&#96; event receives additional context besides the standard parameters. This context includes:
     * <strong>selections:</strong> This is a Set object containing the names of all currently selected rows in the list view.
     * <strong>unselectAll:</strong> This is a function that allows you to deselect all currently chosen rows.</p>

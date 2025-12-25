@@ -18,7 +18,7 @@
 		type="image/x-icon">
 	
 
-	<link rel="canonical" href="https://docs.frappe.io/framework/user/en/guides/integration/openid_connect_and_frappe_social_login"><script defer data-domain="docs.frappe.io" src="https://analytics.frappe.cloud/js/plausible.js"></script>
+	<link rel="canonical" href="https://docs.coworker365.com/framework/user/en/guides/integration/openid_connect_and_frappe_social_login"><script defer data-domain="docs.coworker365.com" src="https://analytics.frappe.cloud/js/plausible.js"></script>
 <link type="text/css" rel="stylesheet" href="/assets/frappe/dist/css/website.bundle.255OFQ2A.css">
 
 <link rel="stylesheet" href="/assets/frappe/css/hljs-night-owl.css">
@@ -1241,7 +1241,7 @@ Tip: use lucide.svg in /icons for all downloaded icons
         </a>
         
         <a href="/cloud" class="space-link">
-          <img src="https://frappe.io/files/cloud.png" alt="Cloud logo" />
+          <img src="https://coworker365.com/files/cloud.png" alt="Cloud logo" />
           <span>
             Cloud
           </span>
@@ -1386,7 +1386,7 @@ Tip: use lucide.svg in /icons for all downloaded icons
 
 
 <li class="nav-item">
-	<a class="navbar-link" href="https://frappe.io/testimonials?product=Frappe+Framework" >
+	<a class="navbar-link" href="https://coworker365.com/testimonials?product=Frappe+Framework" >
 		Reviews
 	</a>
 </li>
@@ -8063,15 +8063,15 @@ Tip: use lucide.svg in /icons for all downloaded icons
 
 <h3 id="primary-server">Primary Server</h3>
 
-<p>This is the main server hosting all the users. e.g. <code>https://frappe.io</code>. To setup this as the main server, go to <em>Setup</em> &gt; <em>Integrations</em> &gt; <em>Social Login Keys</em> and enter <code>https://frappe.io</code> in the field <code>Frappe Server URL</code>. This URL repeats in all other Frappe servers who connect to this server to authenticate. Effectively, this is the main Identity Provider (IDP).</p>
+<p>This is the main server hosting all the users. e.g. <code>https://coworker365.com</code>. To setup this as the main server, go to <em>Setup</em> &gt; <em>Integrations</em> &gt; <em>Social Login Keys</em> and enter <code>https://coworker365.com</code> in the field <code>Frappe Server URL</code>. This URL repeats in all other Frappe servers who connect to this server to authenticate. Effectively, this is the main Identity Provider (IDP).</p>
 
 <p>Under this server add as many <code>OAuth Client</code>(s) as required. Because we are setting up one app server, add only one <code>OAuth Client</code></p>
 
 <h3 id="frappe-app-server">Frappe App Server</h3>
 
-<p>This is the client connecting to the IDP. Go to <em>Setup</em> &gt; <em>Integrations</em> &gt; <em>Social Login Keys</em> on this server and add appropriate values to <code>Frappe Client ID</code> and <code>Frappe Client Secret</code> (refer to client added in primary server). As mentioned before keep the <code>Frappe Server URL</code> as <code>https://frappe.io</code></p>
+<p>This is the client connecting to the IDP. Go to <em>Setup</em> &gt; <em>Integrations</em> &gt; <em>Social Login Keys</em> on this server and add appropriate values to <code>Frappe Client ID</code> and <code>Frappe Client Secret</code> (refer to client added in primary server). As mentioned before keep the <code>Frappe Server URL</code> as <code>https://coworker365.com</code></p>
 
-<p>Now you will see Frappe icon on the login page. Click on this icon to login with account created in primary server (IDP) <code>https://frappe.io</code></p>
+<p>Now you will see Frappe icon on the login page. Click on this icon to login with account created in primary server (IDP) <code>https://coworker365.com</code></p>
 
 <p><strong>Note</strong>: If <code>Skip Authorization</code> is checked while registering a client, page to allow or deny the granting access to resource is not shown. This can be used if the apps are internal to one organization and seamless user experience is needed.</p>
 

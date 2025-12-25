@@ -18,7 +18,7 @@
 		type="image/x-icon">
 	
 
-	<link rel="canonical" href="https://docs.frappe.io/cloud/performance-error-debugging"><script defer data-domain="docs.frappe.io" src="https://analytics.frappe.cloud/js/plausible.js"></script>
+	<link rel="canonical" href="https://docs.coworker365.com/cloud/performance-error-debugging"><script defer data-domain="docs.coworker365.com" src="https://analytics.frappe.cloud/js/plausible.js"></script>
 <link type="text/css" rel="stylesheet" href="/assets/frappe/dist/css/website.bundle.255OFQ2A.css">
 
 <link rel="stylesheet" href="/assets/frappe/css/hljs-night-owl.css">
@@ -1241,7 +1241,7 @@ Tip: use lucide.svg in /icons for all downloaded icons
         </a>
         
         <a href="/cloud" class="space-link">
-          <img src="https://frappe.io/files/cloud.png" alt="Cloud logo" />
+          <img src="https://coworker365.com/files/cloud.png" alt="Cloud logo" />
           <span>
             Cloud
           </span>
@@ -4828,7 +4828,7 @@ Tip: use lucide.svg in /icons for all downloaded icons
 
 <h3 id="site-slow-504-gateway-timeout">Site Slow: 504 Gateway timeout</h3>
 
-<p>This can happen when <a href="https://frappecloud.com/docs/servers/guidelines-for-choosing-a-server-plan#gunicorn-workers">web workers</a> on your site are all busy with previous requests. This can even cause a <a href="https://docs.frappe.io/cloud/servers/guidelines-for-choosing-a-server-plan#gunicorn-workers">bench to go down</a>! This is caused by slow apis. Most of the time these are reports which take too long to run. You can confirm the same from your analytics page by looking at <strong>Slowest Requests</strong> chart as shown above.</p>
+<p>This can happen when <a href="https://frappecloud.com/docs/servers/guidelines-for-choosing-a-server-plan#gunicorn-workers">web workers</a> on your site are all busy with previous requests. This can even cause a <a href="https://docs.coworker365.com/cloud/servers/guidelines-for-choosing-a-server-plan#gunicorn-workers">bench to go down</a>! This is caused by slow apis. Most of the time these are reports which take too long to run. You can confirm the same from your analytics page by looking at <strong>Slowest Requests</strong> chart as shown above.</p>
 
 <p>Some common endpoints and their meanings are given below</p>
 
@@ -4891,7 +4891,7 @@ Tip: use lucide.svg in /icons for all downloaded icons
 
 <h3 id="request-timeout-server-was-too-busy-to-process-this-request">Request Timeout: Server was too busy to process this request</h3>
 
-<p>This happens when a SQL query times out due to not getting a lock. This indicates a bug in the application. Some other job may also be acquiring a lock on a related table, causing the issue. Any recent <a href="https://docs.frappe.io/framework/user/en/basics/doctypes/controllers#controller-hooks">controller hook</a> or <a href="https://docs.frappe.io/framework/user/en/api/background_jobs">scheduled job</a> added should be reviewed.</p>
+<p>This happens when a SQL query times out due to not getting a lock. This indicates a bug in the application. Some other job may also be acquiring a lock on a related table, causing the issue. Any recent <a href="https://docs.coworker365.com/framework/user/en/basics/doctypes/controllers#controller-hooks">controller hook</a> or <a href="https://docs.coworker365.com/framework/user/en/api/background_jobs">scheduled job</a> added should be reviewed.</p>
 
 <p>One easy way to debug this is to perform the action that triggers it and while it is happening, check the <a href="https://frappecloud.com/docs/site-process-list">processlist</a> of your site to see which queries are running.</p>
 
@@ -5007,7 +5007,7 @@ Tip: use lucide.svg in /icons for all downloaded icons
 
 <h3 id="request-timeout-server-was-too-busy-to-process-this-request">Request Timeout: Server was too busy to process this request</h3>
 
-<p>This happens when a SQL query times out due to not getting a lock. This indicates a bug in the application. Some other job may also be acquiring a lock on a related table, causing the issue. Any recent <a href="https://docs.frappe.io/framework/user/en/basics/doctypes/controllers#controller-hooks">controller hook</a> or <a href="https://docs.frappe.io/framework/user/en/api/background_jobs">scheduled job</a> added should be reviewed.</p>
+<p>This happens when a SQL query times out due to not getting a lock. This indicates a bug in the application. Some other job may also be acquiring a lock on a related table, causing the issue. Any recent <a href="https://docs.coworker365.com/framework/user/en/basics/doctypes/controllers#controller-hooks">controller hook</a> or <a href="https://docs.coworker365.com/framework/user/en/api/background_jobs">scheduled job</a> added should be reviewed.</p>
 
 <p>One easy way to debug this is to perform the action that triggers it and while it is happening, check the <a href="https://frappecloud.com/docs/site-process-list">processlist</a> of your site to see which queries are running.</p>
 

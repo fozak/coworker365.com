@@ -1,22 +1,22 @@
 
 
-// --- START https://frappe.io/files/page_scripts/JavaScript-f90c8-5620968ae7.js?v=d6616b96f1 ---
+// --- START https://coworker365.com/files/page_scripts/JavaScript-f90c8-5620968ae7.js?v=d6616b96f1 ---
 document.addEventListener("DOMContentLoaded",function(){const videos=document.querySelectorAll("video");videos.forEach(function(video){const toggle_video_control=function(e){if(video.paused){video.setAttribute("controls","")
 video.removeEventListener("click",toggle_video_control);video.play();e.preventDefault();}}
 video.addEventListener("click",toggle_video_control);});});
-// --- END https://frappe.io/files/page_scripts/JavaScript-f90c8-5620968ae7.js?v=d6616b96f1 ---
+// --- END https://coworker365.com/files/page_scripts/JavaScript-f90c8-5620968ae7.js?v=d6616b96f1 ---
 
 
-// --- START https://frappe.io/files/page_scripts/JavaScript-f991c-1980f7b50e.js?v=8c30295f34 ---
+// --- START https://coworker365.com/files/page_scripts/JavaScript-f991c-1980f7b50e.js?v=8c30295f34 ---
 setup_sidebar_toggle();console.log("loaded")
 window.addEventListener("DOMContentLoaded",async()=>{if(isMobile()||isTablet())return;document.querySelectorAll(".nav-item-title").forEach(function(el){el.style.display="none";});const sidebar=document.querySelector(".hr-sidebar");sidebar.style.transition="width .2s";sidebar.onmouseover=function(){sidebar.style.width="250px";sidebar.querySelectorAll(".nav-item-title").forEach(function(el){el.style.display="flex";});};sidebar.onmouseout=function(){document.querySelectorAll(".nav-item-title").forEach(function(el){el.style.display="none";});sidebar.style.width="50px";};});function setup_sidebar_toggle(){window.addEventListener("DOMContentLoaded",function(){console.log(document.querySelector(".frappe-sidebar-toggle"))
 document.querySelector(".frappe-sidebar-toggle").addEventListener("click",()=>{document.querySelector(".hr-sidebar").style.left="0px";document.querySelector(".sidebar-backdrop").style.display="block";});document.querySelector(".sidebar-backdrop").addEventListener("click",()=>{document.querySelector(".hr-sidebar").style.left="-250px";document.querySelector(".sidebar-backdrop").style.display="none";});});}
 function isMobile(){return window.matchMedia("(max-width: 767px)").matches;}
 function isTablet(){return window.matchMedia("(max-width: 1024px) and (min-width: 768px)").matches;}
-// --- END https://frappe.io/files/page_scripts/JavaScript-f991c-1980f7b50e.js?v=8c30295f34 ---
+// --- END https://coworker365.com/files/page_scripts/JavaScript-f991c-1980f7b50e.js?v=8c30295f34 ---
 
 
-// --- START https://frappe.io/files/page_scripts/builder-asset-script.js?v=20fae7dd77 ---
+// --- START https://coworker365.com/files/page_scripts/builder-asset-script.js?v=20fae7dd77 ---
 setup_navbar_tooltip();
 setup_sidebar_toggle();
 setup_scroll_position_restore();
@@ -178,7 +178,7 @@ function setup_plausible() {
 	const script = document.createElement("script");
 	script.defer = true;
 	script.dataset.api = "https://frappecloud.com/api/event";
-	script.dataset.domain = "frappe.io";
+	script.dataset.domain = "coworker365.com";
 	script.src = "https://frappecloud.com/js/script.js";
 	document.head.appendChild(script);
 }
@@ -242,7 +242,7 @@ function setup_posthog() {
         })
         posthog.set_config({disable_session_recording: true})
 }
-// --- END https://frappe.io/files/page_scripts/builder-asset-script.js?v=20fae7dd77 ---
+// --- END https://coworker365.com/files/page_scripts/builder-asset-script.js?v=20fae7dd77 ---
 
 
 // --- addded end scripts
@@ -324,3 +324,4 @@ if (window.matchMedia("(min-width:768px)").matches &&
 	a.addEventListener("mouseover", () => a.style.opacity = "1");
 	a.addEventListener("mouseout", () => a.style.opacity = ".1");
 }
+

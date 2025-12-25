@@ -18,7 +18,7 @@
 		type="image/x-icon">
 	
 
-	<link rel="canonical" href="https://docs.frappe.io/hr/integrating-frappe-hr-with-biometric-attendance-devices"><script defer data-domain="docs.frappe.io" src="https://analytics.frappe.cloud/js/plausible.js"></script>
+	<link rel="canonical" href="https://docs.coworker365.com/hr/integrating-frappe-hr-with-biometric-attendance-devices"><script defer data-domain="docs.coworker365.com" src="https://analytics.frappe.cloud/js/plausible.js"></script>
 <link type="text/css" rel="stylesheet" href="/assets/frappe/dist/css/website.bundle.255OFQ2A.css">
 
 <link rel="stylesheet" href="/assets/frappe/css/hljs-night-owl.css">
@@ -1241,7 +1241,7 @@ Tip: use lucide.svg in /icons for all downloaded icons
         </a>
         
         <a href="/cloud" class="space-link">
-          <img src="https://frappe.io/files/cloud.png" alt="Cloud logo" />
+          <img src="https://coworker365.com/files/cloud.png" alt="Cloud logo" />
           <span>
             Cloud
           </span>
@@ -1386,7 +1386,7 @@ Tip: use lucide.svg in /icons for all downloaded icons
 
 
 <li class="nav-item">
-	<a class="navbar-link" href="https://frappe.io/hr" >
+	<a class="navbar-link" href="https://coworker365.com/hr" >
 		Website
 	</a>
 </li>
@@ -4982,7 +4982,7 @@ Tip: use lucide.svg in /icons for all downloaded icons
 
 <p>The Attendance punch logs from the biometric device are check-in and check-out logs of an employee. Frappe HR has a provision to store these logs in a document called Employee Checkin.</p>
 
-<p>Attendance can then be marked based on the <a href="https://docs.frappe.io/hr/employee-checkin">Employee Checkin</a> records and the <a href="https://docs.frappe.io/hr/shift-type">Shift Type</a> of the employee by using <a href="https://docs.frappe.io/hr/auto-attendance">Auto Attendance</a></p>
+<p>Attendance can then be marked based on the <a href="https://docs.coworker365.com/hr/employee-checkin">Employee Checkin</a> records and the <a href="https://docs.coworker365.com/hr/shift-type">Shift Type</a> of the employee by using <a href="https://docs.coworker365.com/hr/auto-attendance">Auto Attendance</a></p>
 
 <p>Hence, integrating your Biometric Device (<em>or any access control system that collects IN/OUT logs</em>), can be done using the following steps:</p>
 
@@ -4990,7 +4990,7 @@ Tip: use lucide.svg in /icons for all downloaded icons
 
 <p>Before you import/sync employees' Check-in and Check-out logs into your Frappe HR system, you will have to set up the employees and their shifts to be able to generate attendance using the Auto Attendance feature in Frappe HR.</p>
 
-<p>Please refer to the following link to set up Auto Attendance: <a href="https://docs.frappe.io/hr/auto-attendance">Set up Auto Attendance</a></p>
+<p>Please refer to the following link to set up Auto Attendance: <a href="https://docs.coworker365.com/hr/auto-attendance">Set up Auto Attendance</a></p>
 
 <p>Once you have set up the employee master and assigned shifts to the employees, you are now ready to proceed to the next step.</p>
 
@@ -5015,7 +5015,7 @@ Tip: use lucide.svg in /icons for all downloaded icons
 <ol>
 <li>You will first need to create a <a href="https://docs.erpnext.com/docs/v14/user/manual/en/setting-up/users-and-permissions/adding-users">user</a> in your Frappe HR instance that would be used for creating logs since this API method requires login. Make sure this user has all the required permissions to create Employee Checkin.</li>
 <li><a href="https://docs.erpnext.com/docs/v14/user/manual/en/setting-up/users-and-permissions/adding-users#210-api-access">Generate API Key and API Secret</a> for the user which will be used for authentication.</li>
-<li>Make sure you have set the <a href="https://docs.frappe.io/hr/auto-attendance#3-setup-attendance-device-id-field-in-employee">Attendance Device ID (Biometric/RF tag ID)</a> for the employees based on your Biometric Device.</li>
+<li>Make sure you have set the <a href="https://docs.coworker365.com/hr/auto-attendance#3-setup-attendance-device-id-field-in-employee">Attendance Device ID (Biometric/RF tag ID)</a> for the employees based on your Biometric Device.</li>
 <li>The API implementation details can be found <a href="https://github.com/frappe/hrms/blob/d2529e03f92bf50efb65d3163bfcfdacbcf0b8f5/hrms/hr/doctype/employee_checkin/employee_checkin.py#L63-L109">here</a> and the API can be accessed at: <code>/api/method/hrms.hr.doctype.employee_checkin.employee_checkin.add_log_based_on_employee_field</code>.</li>
 <li><p>You can write a script to send a POST request to the API. This endpoint finds the relevant Employee using the employee field value and creates an Employee Checkin. Details of the API endpoint:</p>
 
@@ -5089,7 +5089,7 @@ Tip: use lucide.svg in /icons for all downloaded icons
 
 <p>The Attendance punch logs from the biometric device are check-in and check-out logs of an employee. Frappe HR has a provision to store these logs in a document called Employee Checkin.</p>
 
-<p>Attendance can then be marked based on the <a href="https://docs.frappe.io/hr/employee-checkin">Employee Checkin</a> records and the <a href="https://docs.frappe.io/hr/shift-type">Shift Type</a> of the employee by using <a href="https://docs.frappe.io/hr/auto-attendance">Auto Attendance</a></p>
+<p>Attendance can then be marked based on the <a href="https://docs.coworker365.com/hr/employee-checkin">Employee Checkin</a> records and the <a href="https://docs.coworker365.com/hr/shift-type">Shift Type</a> of the employee by using <a href="https://docs.coworker365.com/hr/auto-attendance">Auto Attendance</a></p>
 
 <p>Hence, integrating your Biometric Device (<em>or any access control system that collects IN/OUT logs</em>), can be done using the following steps:</p>
 
@@ -5097,7 +5097,7 @@ Tip: use lucide.svg in /icons for all downloaded icons
 
 <p>Before you import/sync employees' Check-in and Check-out logs into your Frappe HR system, you will have to set up the employees and their shifts to be able to generate attendance using the Auto Attendance feature in Frappe HR.</p>
 
-<p>Please refer to the following link to set up Auto Attendance: <a href="https://docs.frappe.io/hr/auto-attendance">Set up Auto Attendance</a></p>
+<p>Please refer to the following link to set up Auto Attendance: <a href="https://docs.coworker365.com/hr/auto-attendance">Set up Auto Attendance</a></p>
 
 <p>Once you have set up the employee master and assigned shifts to the employees, you are now ready to proceed to the next step.</p>
 
@@ -5122,7 +5122,7 @@ Tip: use lucide.svg in /icons for all downloaded icons
 <ol>
 <li>You will first need to create a <a href="https://docs.erpnext.com/docs/v14/user/manual/en/setting-up/users-and-permissions/adding-users">user</a> in your Frappe HR instance that would be used for creating logs since this API method requires login. Make sure this user has all the required permissions to create Employee Checkin.</li>
 <li><a href="https://docs.erpnext.com/docs/v14/user/manual/en/setting-up/users-and-permissions/adding-users#210-api-access">Generate API Key and API Secret</a> for the user which will be used for authentication.</li>
-<li>Make sure you have set the <a href="https://docs.frappe.io/hr/auto-attendance#3-setup-attendance-device-id-field-in-employee">Attendance Device ID (Biometric/RF tag ID)</a> for the employees based on your Biometric Device.</li>
+<li>Make sure you have set the <a href="https://docs.coworker365.com/hr/auto-attendance#3-setup-attendance-device-id-field-in-employee">Attendance Device ID (Biometric/RF tag ID)</a> for the employees based on your Biometric Device.</li>
 <li>The API implementation details can be found <a href="https://github.com/frappe/hrms/blob/d2529e03f92bf50efb65d3163bfcfdacbcf0b8f5/hrms/hr/doctype/employee_checkin/employee_checkin.py#L63-L109">here</a> and the API can be accessed at: <code>/api/method/hrms.hr.doctype.employee_checkin.employee_checkin.add_log_based_on_employee_field</code>.</li>
 <li><p>You can write a script to send a POST request to the API. This endpoint finds the relevant Employee using the employee field value and creates an Employee Checkin. Details of the API endpoint:</p>
 

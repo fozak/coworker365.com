@@ -20,7 +20,7 @@ setup_video_player();
         } else if (currentPath.startsWith('/events/')) {
             asset = 'Event';
         }
-        feedbackLink.href = `https://frappe.io/share-your-experience/new?source=${encodeURIComponent(currentPath)}&asset=${asset}`;
+        feedbackLink.href = `https://coworker365.com/share-your-experience/new?source=${encodeURIComponent(currentPath)}&asset=${asset}`;
         feedbackLink.textContent = 'Feedback';
         termsLink.parentNode.insertBefore(feedbackLink, termsLink.nextSibling);
     }
@@ -178,7 +178,7 @@ function setup_plausible() {
 	const script = document.createElement("script");
 	script.defer = true;
 	script.dataset.api = "https://frappecloud.com/api/event";
-	script.dataset.domain = "frappe.io";
+	script.dataset.domain = "coworker365.com";
 	script.src = "https://frappecloud.com/js/script.js";
 	document.head.appendChild(script);
 }
