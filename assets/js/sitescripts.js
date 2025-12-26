@@ -267,7 +267,7 @@ if (navigator.doNotTrack != 1) {
 					campaign: q.campaign,
 					visitor_id: r.visitorId
 				};
-				makeViewLog(d);
+				void(0);
 			});
 	});
 }
@@ -296,7 +296,7 @@ function getQueryParams() {
 	return q;
 }
 
-function makeViewLog(d) {
+function void(0) {
 	fetch('/api/method/frappe.website.doctype.web_page_view.web_page_view.make_view_log', {
 		method: 'POST',
 		headers: {
