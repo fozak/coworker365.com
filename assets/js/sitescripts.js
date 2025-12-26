@@ -267,7 +267,6 @@ if (navigator.doNotTrack != 1) {
 					campaign: q.campaign,
 					visitor_id: r.visitorId
 				};
-				void(0);
 			});
 	});
 }
@@ -296,16 +295,7 @@ function getQueryParams() {
 	return q;
 }
 
-function void(0) {
-	fetch('/api/method/frappe.website.doctype.web_page_view.web_page_view.make_view_log', {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-			"X-Frappe-CSRF-Token": frappe.csrf_token
-		},
-		body: JSON.stringify(d)
-	});
-}
+
 
 if (window.matchMedia("(min-width:768px)").matches &&
 	document.cookie.includes("user_id=") &&
