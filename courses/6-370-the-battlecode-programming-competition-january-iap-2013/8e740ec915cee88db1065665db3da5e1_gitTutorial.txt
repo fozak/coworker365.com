@@ -1,0 +1,46 @@
+git init #initialize a repo
+git add #all the robot players
+#this is the same command to add at all times
+git status #always!
+git commit -am "Initial Commit"
+git status
+git log
+emacs .gitignore
+git add .gitignore #optional
+git status
+git status
+git commit -am "Added git ignore"
+git log
+git remote add origin https://aepstein824@bitbucket.org/aepstein824/battlecode-example.git
+git remote -v
+
+//things not to share
+Platform-Specific
+Not everybody wants to update
+Git handles binaries inefficiently (every copy of every binary)
+Project settings are personal
+examplefuncsplayer
+
+//things to share
+I recommend sharing only text documents that you have created
+maps
+text-based planning documents
+readme
+documentation
+scripts
+
+
+//helpful commands
+git checkout
+git branch
+git reset --hard
+git stash
+git stash pop
+gitk
+git diff
+git revert
+git bisect
+git blame
+
+//successful branching model
+http://nvie.com/posts/a-successful-git-branching-model/

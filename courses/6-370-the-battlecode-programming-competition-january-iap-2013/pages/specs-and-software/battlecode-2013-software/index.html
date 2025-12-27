@@ -1,0 +1,2164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NMQZ25T');</script>
+    
+  
+  
+
+
+    
+    <link href="../../../../../static_shared/css/course_v2.ba051.css" rel="stylesheet">
+    
+
+    
+    <link href="../../../../../static_shared/css/common.ba051.css" rel="stylesheet">
+    
+
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="This section provides a detailed description of the Battlecode software, the installation process, configuration, and guidelines on getting started.">
+  <meta name="keywords" content="opencourseware,MIT OCW,courseware,MIT opencourseware,Free Courses,class notes,class syllabus,class materials,tutorials,online courses,MIT courses">
+  
+  <meta property="og:site_name" content="MIT OpenCourseWare">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ocw.mit.edu/courses/6-370-the-battlecode-programming-competition-january-iap-2013/pages/specs-and-software/battlecode-2013-software/" />
+  <meta property="og:title" content="Battlecode 2013 Software | The Battlecode Programming Competition | Electrical Engineering and Computer Science | MIT OpenCourseWare" />
+  <meta property="og:description" content="This section provides a detailed description of the Battlecode software, the installation process, configuration, and guidelines on getting started." />
+
+  
+
+<meta property="og:image" content="https://ocw.mit.edu/courses/6-370-the-battlecode-programming-competition-january-iap-2013/7a9458fa1205ca527ba893f8188b6933_6-370iap13.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@mitocw" />
+<meta name="twitter:image:src" content="https://ocw.mit.edu/courses/6-370-the-battlecode-programming-competition-january-iap-2013/7a9458fa1205ca527ba893f8188b6933_6-370iap13.jpg" />
+
+  <link rel="canonical" href="index.html" />
+
+  <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type" : "WebPage",
+        "name": "MIT OpenCourseWare",
+        "description": "This section provides a detailed description of the Battlecode software, the installation process, configuration, and guidelines on getting started.",
+        "license": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
+        "publisher": {
+          "@type": "CollegeOrUniversity",
+          "name": "MIT OpenCourseWare"
+        }
+      }
+  </script>
+
+  <title>Battlecode 2013 Software | The Battlecode Programming Competition | Electrical Engineering and Computer Science | MIT OpenCourseWare</title>
+  <style>
+  @font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(../../../../../static_shared/fonts/MaterialIcons-Regular.subset.504c7f0c308e930e9255.woff2) format('woff2'),
+      url(../../../../../static_shared/fonts/MaterialIcons-Regular.subset.1f8f08f2bf0d6e078379.woff) format('woff'),
+      url(../../../../../static_shared/fonts/MaterialIcons-Regular.subset.aa271372671db14b34f2.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Material Icons Round';
+    font-style: normal;
+    font-weight: 400;
+    src: local("MaterialIcons-Round"),
+    url(../../../../../static_shared/fonts/MaterialIconsRound-Regular.subset.7154eae1d0e60e0dabe4.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'Cardo Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Cardo'),
+      local('Cardo-Bold'),
+      url(../../../../../static_shared/fonts/Cardo-Bold.d7bf1aa6f322a64b2fc3.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Cardo Italic';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Cardo'),
+      local('Cardo-Italic'),
+      url(../../../../../static_shared/fonts/Cardo-Italic.0935d2ebbc05be3559b1.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Helvetica Light';
+    font-style: normal`;
+    font-weight: 400;
+    src: local('Helvetica Light'),
+      local('Helvetica-Light'),
+      url(../../../../../static_shared/fonts/Helvetica-Light.70359849afb40079a1c8.ttf) format('truetype');
+  }
+  .external-link.nav-link::after {
+    background-image: url('../../../../../static_shared/images/external_link.58bbdd86c00a2c146c36.svg'); 
+  }
+  </style>
+</head>
+
+
+<body class="course-home-page">
+  
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMQZ25T"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+  
+  <div class="overflow-auto">
+    <span class="course-header">
+    <div
+  id="mobile-course-nav"
+  class="navbar-offcanvas offcanvas-toggle offcanvas-toggle-close medium-and-below-only drawer">
+  <h3 class="my-4 d-flex align-items-center justify-content-between">
+    Browse Course Material
+    <button
+      class="btn"
+      type="button"
+      aria-label="Close Course Menu"
+      onclick="$('#mobile-course-nav-toggle').click();"
+      id="close-mobile-course-menu-button"
+      >
+      <img
+        src="../../../../../static_shared/images/close_small.b0a2684ccc0da6407a56.svg"
+        alt=""
+        width="12px"
+      />
+    </button>
+  </h3>
+  
+
+<nav class="course-nav" aria-label="Course materials">
+  <ul class="w-100 m-auto list-unstyled">
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="ef70d0e2-f93b-69e0-6a08-03076cbe1538"
+           href="../../syllabus/index.html" >
+          Syllabus
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_ef70d0e2-f93b-69e0-6a08-03076cbe1538"
+    aria-labelledby="nav-button_mobile_ef70d0e2-f93b-69e0-6a08-03076cbe1538"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="15a91d1a-c942-74ed-0464-0d8b835f1229"
+           href="../../calendar/index.html" >
+          Calendar
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_15a91d1a-c942-74ed-0464-0d8b835f1229"
+    aria-labelledby="nav-button_mobile_15a91d1a-c942-74ed-0464-0d8b835f1229"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="2b6e95b3-f695-35a9-0008-da93ff6d1668"
+           href="../../../video_galleries/lecture-videos/index.html" >
+          Lecture Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_2b6e95b3-f695-35a9-0008-da93ff6d1668"
+    aria-labelledby="nav-button_mobile_2b6e95b3-f695-35a9-0008-da93ff6d1668"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+           href="../specs-and-software/index.html" >
+          Specs and Software
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+      data-uuid="b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+      aria-controls="nav-container_mobile_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+      aria-expanded="false"
+      aria-label="Subsections for Specs and Software"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+    aria-labelledby="nav-button_mobile_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="ae7def09-6e67-e243-144a-c62c695bd09f"
+           href="../battlecode-2013-gameplay-specs/index.html" >
+          Gameplay Specs
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_ae7def09-6e67-e243-144a-c62c695bd09f"
+    aria-labelledby="nav-button_mobile_ae7def09-6e67-e243-144a-c62c695bd09f"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="5c284dcb-09b7-b8e2-b704-cf0a29e6f23a"
+           href="index.html" >
+          Software
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_5c284dcb-09b7-b8e2-b704-cf0a29e6f23a"
+    aria-labelledby="nav-button_mobile_5c284dcb-09b7-b8e2-b704-cf0a29e6f23a"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</nav>
+
+</div>
+
+    <div
+  id="course-info-drawer"
+  class="bg-faded pt-3 bg-light navbar-offcanvas navbar-offcanvas-right medium-and-below-only drawer"
+>
+  <div class="col-12">
+    <button
+      class="btn close-mobile-course-info"
+      type="button"
+      aria-label="Close Course Info"
+      onclick="$('#mobile-course-info-toggle').click();"
+      id="close-mobile-course-info-button"
+      >
+      <img
+        class=""
+        src="../../../../../static_shared/images/close_small.b0a2684ccc0da6407a56.svg"
+        alt=""
+        width="12px"
+      />
+    </button>
+  </div>
+    
+
+<div class="course-info">
+  <div class="course-detail-title bg-light-gray">
+    <h2 class="font-black py-1 pl-3 m-0">
+      Course Info
+    </h2>
+  </div>
+  <div class="px-3 mt-4">
+    <div class="row">
+      <div class="col-12 ">
+        
+        <div class="">
+          
+          <h5 class="panel-course-info-title ">
+            Instructor
+            </h5>
+          <div class="course-info-content panel-course-info-text">
+            
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-instructor strip-link-offline"    href="https://ocw.mit.edu/search/?q=Maxwell+Mann"  >Maxwell Mann</a>
+  </li>
+  
+</ul>
+
+
+          </div>
+        </div>
+        
+        
+          
+          
+            <div class="mt-4">
+              <h5 class="panel-course-info-title ">
+                Departments
+              </h5>
+              <div class="course-info-content panel-course-info-text">
+                
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-department strip-link-offline"    href="https://ocw.mit.edu/search/?d=Electrical+Engineering+and+Computer+Science"  >Electrical Engineering and Computer Science</a>
+  </li>
+  
+</ul>
+
+
+              </div>
+            </div>
+          
+         
+        
+        <div class="mt-4">
+          <h5 class="panel-course-info-title ">
+            As Taught In
+          </h5>
+          <div class="course-info-content panel-course-info-text">
+            January IAP
+            
+              2013
+            
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <h5 class="panel-course-info-title ">
+            Level
+          </h5>
+          <div class="course-info-content panel-course-info-text">
+            
+              
+                <a   class=" strip-link-offline"    href="https://ocw.mit.edu/search/?l=Undergraduate"  >Undergraduate</a><br />
+              
+            
+          </div>
+        </div>
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+  
+
+
+
+
+
+<div class=" mt-4">
+  <h5 class="panel-course-info-title ">
+    Topics
+  </h5>
+  <ul class="list-unstyled pb-2 m-0 panel-course-info-text">
+      <li>
+
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_mobile_0"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_mobile_0"
+    aria-expanded="true"
+    aria-label="Engineering subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Engineering"  >Engineering</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse show list-unstyled"
+  id="subtopic-container_mobile_0"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-4 ">
+      
+      <button
+        class="topic-toggle border-0 bg-transparent pl-0"
+        data-target="#speciality-container_mobile_0_0"
+        data-toggle="collapse"
+        aria-controls="speciality-container_mobile_0_0"
+        aria-expanded="true"
+        aria-label="Computer Science specialties"
+      >
+        <i aria-hidden="true" class="material-icons"></i>
+      </button>
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Computer+Science"  >Computer Science</a></span>
+    </div>
+    <ul
+      class="collapse show list-unstyled"
+      id="speciality-container_mobile_0_0"
+      aria-label="Specialties"
+    >
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Artificial+Intelligence"  >Artificial Intelligence</a></span>
+      </li>
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Programming+Languages"  >Programming Languages</a></span>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+</ul>
+
+</li>
+      <li>
+
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_mobile_1"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_mobile_1"
+    aria-expanded="false"
+    aria-label="Fine Arts subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Fine+Arts"  >Fine Arts</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse list-unstyled"
+  id="subtopic-container_mobile_1"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Game+Design"  >Game Design</a></span>
+    </div>
+    <ul
+      class="collapse list-unstyled"
+      id="speciality-container_mobile_1_0"
+      aria-label="Specialties"
+    >
+      
+    </ul>
+    
+  </li>
+  
+</ul>
+
+</li>
+      
+  </ul>
+</div>
+
+  
+
+
+
+<div class="">
+  <h5 class="course-detail-title panel-course-info-title mt-3">
+    Learning Resource Types
+  </h5>
+  <div>
+    <div class="row d-inline m-0">
+      
+        <div class="panel-course-info-text my-2">
+          
+
+<div class="">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">theaters</i>
+    <span>Lecture Videos</span>
+  </div>
+</div>
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+  <hr>
+<div class="pb-3">
+  <a class="download-course-link-button btn btn-outline-primary btn-link link-button text-decoration-none px-4 py-2"
+    role="button"
+    href="https://ocw.mit.edu/courses/6-370-the-battlecode-programming-competition-january-iap-2013/download">
+    <div class="text-center w-100">Download Course</div>
+  </a>
+</div>
+</div>
+
+    
+
+
+
+
+
+<div id="mobile-header" class="position-relative bg-black medium-and-below-only">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black d-flex">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="material-icons display-4 text-white align-bottom">menu</i>
+    </button>
+    <div class="mx-auto">
+      <a href="https://ocw.mit.edu/">
+        <img width="200" src="../../../../../static_shared/images/ocw_logo_white.cabdc9a745b03db3dad4.svg" alt="MIT OpenCourseWare"/>
+      </a>
+    </div>
+    <div class="user-menu-container"></div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto pl-2 pt-2">
+        <li class="nav-item">
+  
+  
+    <a class="nav-link search-icon text-white pr-6" href="https://ocw.mit.edu/search/">
+      <i class="material-icons">search</i>
+    </a>
+  
+</li>
+        <li class="nav-item">
+          <a   class="nav-link"    href="https://giving.mit.edu/give/to/ocw/?utm_source=ocw&amp;utm_medium=homepage_banner&amp;utm_campaign=nextgen_home"  >Give Now</a>
+        </li>
+        <li class="nav-item">
+          <a   class="nav-link"    href="https://ocw.mit.edu/about"  >About OCW</a>
+        </li>
+        <li class="nav-item">
+          <a   class="nav-link"   target="_blank"   href="https://mitocw.zendesk.com/hc/en-us"  >Help &amp; Faqs</a>
+        </li>
+        <li class="nav-item">
+          <a   class="nav-link"    href="https://ocw.mit.edu/contact"  >Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+<div id="desktop-header">
+  <div class="contents">
+    <div class="left">
+      <div class="ocw-logo">
+        <a href="https://ocw.mit.edu/">
+          <img src="../../../../../static_shared/images/ocw_logo_white.cabdc9a745b03db3dad4.svg" alt="MIT OpenCourseWare" />
+        </a>
+      </div>
+    </div>
+    <div class="right">
+      
+  
+  
+    <a class="nav-link search-icon text-white pr-6" href="https://ocw.mit.edu/search/">
+      <i class="material-icons">search</i>
+    </a>
+  
+
+      <a class="give-button text-white text-decoration-none font-weight-bold small-link d-flex align-items-center" aria-label="Give Now - Donate to MIT OpenCourseWare" href="https://giving.mit.edu/give/to/ocw/?utm_source=ocw&amp;utm_medium=homepage_banner&amp;utm_campaign=nextgen_home">
+        <span class="m-0 pr-2">GIVE NOW</span>
+        <img src="../../../../../static_shared/images/heart_burgundy.e7c8635e8cc6538b89fa.svg" class="heart-burgundy" alt="" />
+      </a>
+      <a   class="text-white text-decoration-none font-weight-bold pl-5 pr-3 py-2"    href="https://ocw.mit.edu/about"  >about ocw</a>
+      <a   class="text-white text-decoration-none font-weight-bold px-3 py-2"   target="_blank"   href="https://mitocw.zendesk.com/hc/en-us"  >help &amp; faqs</a>
+      <a   class="text-white text-decoration-none font-weight-bold px-3 py-2"    href="https://ocw.mit.edu/contact"  >contact us</a>
+      <div class="user-menu-container"></div>
+    </div>
+  </div>
+</div>
+
+<div id="user-list-modal-container"></div>
+<div id="create-user-list-modal-container"></div>
+    </span>
+    
+    
+
+<div id="course-banner" class="p-0">
+  <div class="max-content-width course-banner-content m-auto py-3">
+    <div class="row">
+    <div class="col-11">
+      
+      <span class="course-number-term-detail">6.370 | January IAP 2013 | Undergraduate</span>
+      <br>
+      <br>
+      <h1>
+        <a
+          class="text-capitalize m-0 text-white"
+          href="../../../index.html"
+        >The Battlecode Programming Competition</a>
+      </h1>
+    </div>
+    <div class="col-1"><div class="bookmark-button-container" data-resourcereadableid="6.370&#43;january iap_2013"></div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+    <div id="course-main-content">
+      <div class="row">
+        <div class="col-12 course-home-grid">
+          <div class="medium-and-below-only">
+            <div class="d-flex align-items-center mb-3">
+              <div class="col-6 px-0">
+                <div>
+  <button
+    id="mobile-course-nav-toggle"
+    class="mobile-course-nav-toggle-btn d-inline-flex align-items-center offcanvas-toggle"
+    data-toggle="offcanvas"
+    data-target="#mobile-course-nav"
+  >
+    <img src="../../../../../static_shared/images/expand.a062b1c47b121e3c7e03.svg" alt=""/>
+    <span class="pl-1">Menu</span>
+  </button>
+</div>
+
+              </div>
+              <div class="col-6 px-0">
+                
+
+
+  <button 
+    class="btn btn-link float-right mobile-course-info-toggle-btn toggle navbar-toggle offcanvas-toggle"
+    id="mobile-course-info-toggle"
+    data-toggle="offcanvas" 
+    data-target="#course-info-drawer">
+    More Info
+  </button>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row course-cards">
+        <div class="col-2 course-home-grid large-and-above-only">  
+          <div class="card">
+  <div class="card-body pr-2">
+    
+
+<nav class="course-nav" aria-label="Course materials">
+  <ul class="w-100 m-auto list-unstyled">
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="ef70d0e2-f93b-69e0-6a08-03076cbe1538"
+           href="../../syllabus/index.html" >
+          Syllabus
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_ef70d0e2-f93b-69e0-6a08-03076cbe1538"
+    aria-labelledby="nav-button_desktop_ef70d0e2-f93b-69e0-6a08-03076cbe1538"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="15a91d1a-c942-74ed-0464-0d8b835f1229"
+           href="../../calendar/index.html" >
+          Calendar
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_15a91d1a-c942-74ed-0464-0d8b835f1229"
+    aria-labelledby="nav-button_desktop_15a91d1a-c942-74ed-0464-0d8b835f1229"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="2b6e95b3-f695-35a9-0008-da93ff6d1668"
+           href="../../../video_galleries/lecture-videos/index.html" >
+          Lecture Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_2b6e95b3-f695-35a9-0008-da93ff6d1668"
+    aria-labelledby="nav-button_desktop_2b6e95b3-f695-35a9-0008-da93ff6d1668"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+           href="../specs-and-software/index.html" >
+          Specs and Software
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+      data-uuid="b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+      aria-controls="nav-container_desktop_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+      aria-expanded="false"
+      aria-label="Subsections for Specs and Software"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+    aria-labelledby="nav-button_desktop_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="ae7def09-6e67-e243-144a-c62c695bd09f"
+           href="../battlecode-2013-gameplay-specs/index.html" >
+          Gameplay Specs
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_ae7def09-6e67-e243-144a-c62c695bd09f"
+    aria-labelledby="nav-button_desktop_ae7def09-6e67-e243-144a-c62c695bd09f"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="5c284dcb-09b7-b8e2-b704-cf0a29e6f23a"
+           href="index.html" >
+          Software
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_5c284dcb-09b7-b8e2-b704-cf0a29e6f23a"
+    aria-labelledby="nav-button_desktop_5c284dcb-09b7-b8e2-b704-cf0a29e6f23a"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</nav>
+
+  </div>
+</div>
+
+        </div>
+        <div class="col-sm-12 col-lg-10 course-home-grid">
+          <div class="">
+            <div class="card">
+              <div class="d-flex justify-content-between">
+                <div class="p-0 col-lg-9" id="main-course-section">
+                  <div class="card-body">
+                    
+<div class="mb-2">
+  <header>
+  <div class="course-section-title-container">
+    <div id="course-title">
+      
+      <div class="course-content-parent-title">Specs and Software</div>
+      
+      <h2 class="pb-1 mb-1">Battlecode 2013 Software</h2>
+    </div>
+  </div>
+</header>
+
+  <article class="content pt-3 mt-1">
+    <main id="course-content-section"><p>« <a href="../specs-and-software/index.html">Return to Specs and Software</a></p>
+<p>Instruction and information are provided on the following: <a   class="external-link-warning external-link "   target="_blank"   href="https://ocw-studio.odl.mit.edu/sites/6-370-the-battlecode-programming-competition-january-iap-2013/type/page/edit/5c284dcb-09b7-b8e2-b704-cf0a29e6f23a/#overview"  aria-label="Overview (opens in a new tab)"   onclick="event.preventDefault()" >Overview</a>, <a   class="external-link-warning external-link "   target="_blank"   href="https://ocw-studio.odl.mit.edu/sites/6-370-the-battlecode-programming-competition-january-iap-2013/type/page/edit/5c284dcb-09b7-b8e2-b704-cf0a29e6f23a/#system-requirements"  aria-label="System Requirements (opens in a new tab)"   onclick="event.preventDefault()" >System Requirements</a>, <a   class="external-link-warning external-link "   target="_blank"   href="https://ocw-studio.odl.mit.edu/sites/6-370-the-battlecode-programming-competition-january-iap-2013/type/page/edit/5c284dcb-09b7-b8e2-b704-cf0a29e6f23a/#installation"  aria-label="Installation (opens in a new tab)"   onclick="event.preventDefault()" >Installation</a>, <a   class="external-link-warning external-link "   target="_blank"   href="https://ocw-studio.odl.mit.edu/sites/6-370-the-battlecode-programming-competition-january-iap-2013/type/page/edit/5c284dcb-09b7-b8e2-b704-cf0a29e6f23a/#running-matches"  aria-label="Running Matches (opens in a new tab)"   onclick="event.preventDefault()" >Running Matches</a>, <a   class="external-link-warning external-link "   target="_blank"   href="https://ocw-studio.odl.mit.edu/sites/6-370-the-battlecode-programming-competition-january-iap-2013/type/page/edit/5c284dcb-09b7-b8e2-b704-cf0a29e6f23a/#debugging-your-player"  aria-label="Debugging your Player (opens in a new tab)"   onclick="event.preventDefault()" >Debugging your Player</a>, <a   class="external-link-warning external-link "   target="_blank"   href="https://ocw-studio.odl.mit.edu/sites/6-370-the-battlecode-programming-competition-january-iap-2013/type/page/edit/5c284dcb-09b7-b8e2-b704-cf0a29e6f23a/#uploading-your-player"  aria-label="Uploading your Player (opens in a new tab)"   onclick="event.preventDefault()" >Uploading your Player</a>, <a   class="external-link-warning external-link "   target="_blank"   href="https://ocw-studio.odl.mit.edu/sites/6-370-the-battlecode-programming-competition-january-iap-2013/type/page/edit/5c284dcb-09b7-b8e2-b704-cf0a29e6f23a/#advanced-configuration"  aria-label="Advanced Configuration (opens in a new tab)"   onclick="event.preventDefault()" >Advanced Configuration</a>, <a   class="external-link-warning external-link "   target="_blank"   href="https://ocw-studio.odl.mit.edu/sites/6-370-the-battlecode-programming-competition-january-iap-2013/type/page/edit/5c284dcb-09b7-b8e2-b704-cf0a29e6f23a/#appendix"  aria-label="Appendix: Configuration Properties and Command-line Arguments (opens in a new tab)"   onclick="event.preventDefault()" >Appendix: Configuration Properties and Command-line Arguments</a>, <a   class="external-link-warning external-link "   target="_blank"   href="https://ocw-studio.odl.mit.edu/sites/6-370-the-battlecode-programming-competition-january-iap-2013/type/page/edit/5c284dcb-09b7-b8e2-b704-cf0a29e6f23a/#scala"  aria-label="Scala (opens in a new tab)"   onclick="event.preventDefault()" >Scala</a></p>
+
+    <h3 id="hahahugoshortcode25s10hbhboverview">
+
+<a name="overview"></a>Overview</h3>
+
+<p>The Battlecode software consists of three major components:</p>
+<ul>
+<li><strong>The player library / API</strong>: These are the classes that you will import and build against when writing a player.</li>
+<li><strong>The server</strong>: This is the software that computes Battlecode matches. For most users, the server will run transparently, so you don&rsquo;t have to worry about it. However, advanced server setups are possible, allowing you to compute matches on one machine and view them on another.</li>
+<li><strong>The client</strong>: This is the software that displays Battlecode matches. For most users, the client will automatically create a server for running a match and display that match as it computes. The client also plays match files like those from scrimmage matches and the tournaments.</li>
+</ul>
+
+    <h3 id="hahahugoshortcode25s11hbhbsystem-requirements">
+
+<a name="system-requirements"></a>System Requirements</h3>
+
+<p>The Battlecode software requires:</p>
+<ul>
+<li><a   class="external-link-warning external-link "   target="_blank"   href="https://www.oracle.com/java/technologies/javase-java-archive-javase6-downloads.html"  aria-label="JDK 6.0 (opens in a new tab)"   onclick="event.preventDefault()" >JDK 6.0</a> or higher</li>
+</ul>
+<p>The following hardware is recommended for best performance:</p>
+<ul>
+<li>At least 512 MB of RAM</li>
+</ul>
+<p>Ensure that you are using the correct version of Java. You are using Java 5 if you receive errors such as the following:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>  [javac] class file has wrong version 50.0, should be 49.0
+</span></span><span style="display:flex;"><span>  [javac] Please remove or make sure it appears in the correct subdirectory of the classpath.
+</span></span></code></pre></div><p>We recommend that you install either <a   class="external-link-warning external-link "   target="_blank"   href="http://ant.apache.org/"  aria-label="Apache Ant (opens in a new tab)"   onclick="event.preventDefault()" >Apache Ant</a>, <a   class="external-link-warning external-link "   target="_blank"   href="https://www.eclipse.org/"  aria-label="Eclipse (opens in a new tab)"   onclick="event.preventDefault()" >Eclipse</a>, or <a   class="external-link-warning external-link "   target="_blank"   href="https://netbeans.org/"  aria-label="Netbeans (opens in a new tab)"   onclick="event.preventDefault()" >Netbeans</a>.</p>
+<p>Battlecode will run on Java 7. Please be aware, however, that the scrimmage server runs Java 6, and it will not be able to compile your code if you use Java 7 specific language features.</p>
+
+    <h3 id="hahahugoshortcode25s16hbhbinstallation">
+
+<a name="installation"></a>Installation</h3>
+
+
+    <h4 id="first-installation">First Installation</h4>
+
+<p>To install the Battlecode software, download the installer and execute it. On Windows systems, this is usually accomplished by double-clicking the downloaded jar file. On other systems, you can run <code>java -jar battlecode-[version].jar</code> at a prompt. The installer will guide you through the software setup.</p>
+<p>Since you&rsquo;ll probably be working in installation directory, you should install Battlecode to a user-writable location (i.e. <code>~/Battlecode</code> or in <code>/My Documents</code>, but not in <code>/usr/local</code>).</p>
+
+    <h4 id="upgrading-the-software">Upgrading the Software</h4>
+
+<p>The installer is also capable of updating an existing Battlecode installation to a newer version. To perform an update, run the installer, choose the directory of the existing installation, and confirm that you&rsquo;d like to overwrite the target directory.</p>
+<p>Note that if you have an active Internet connection when running the Battlecode software, it will automatically notify you when a newer version of the software is available. The first time it detects a new version, a pop-up dialog appears when the software is started; each subsequent start shows an exclamation icon in the lower-left hand corner of the match dialog.</p>
+
+    <h4 id="building-a-player">Building a Player</h4>
+
+<p>The included <code>build.xml</code> file allows you to compile your player and prepare it for submission without having to worry about the Java classpath and other settings. To take advantage of this, simply place the source code for your player(s) in a subdirectory of <code>teams</code> folder in your Battlecode installation directory.</p>
+<p>For instance, if you are team #1, you&rsquo;d have a folder called <code>team001</code> in your <code>teams</code> folder, and in <code>team001</code> you&rsquo;d have <code>RobotPlayer.java</code>, etc.</p>
+<p>After you&rsquo;ve placed your source code there, navigate to the installation directory and run:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>ant build
+</span></span></code></pre></div><p>This command will invoke the Java compiler on all source code in the <code>teams</code> folder.</p>
+
+    <h4 id="using-apache-ant">Using Apache Ant</h4>
+
+<p>Apache Ant is a Java-based build system similar in theory to UNIX <code>make</code>.</p>
+<p>On every system you will need to set the JAVA_HOME environment variable to point to the installation path of your JDK.</p>
+<p>You may also need the ANT_HOME environment variable in some cases. Just set this to be the path to your ant installation and you should be good to go.</p>
+<p>You are not required to use the Ant build script, though it&rsquo;s been designed so that you can get up and running quickly and easily.</p>
+<p>You can check which version of Java Ant is using with the command:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>ant –diagnostics
+</span></span></code></pre></div>
+    <h4 id="using-the-eclipse-ide">Using the Eclipse IDE</h4>
+
+<p>Update to Eclipse 3.5 or higher if you have not done so already. After you have installed the software, open Eclipse and choose &ldquo;File&rdquo; -&gt; &ldquo;New&rdquo; -&gt; &ldquo;Project…&rdquo; and choose &ldquo;Java Project from Existing Ant Buildfile&rdquo;. Navigate to the build.xml in your install folder and use this one. Name your project, or leave it as the default and click &lsquo;Link to build file in the filesystem&rsquo; and click &lsquo;Finish&rsquo;. Alternatively, you can use &ldquo;Java Project from Existing Source&rdquo; and then in the import screen click the (+) next to teams.</p>
+<p>When it finishes, Eclipse will add the &ldquo;teams&rdquo; folder as a source folder and add the included jar files to your build path. (If you installed Ant, you&rsquo;ll see a lots of files beginning with &ldquo;ant-&rdquo; on your build path. You can safely remove them from your build path, but don&rsquo;t delete them!) You can begin developing a player.</p>
+<p>When you&rsquo;re ready to run a match, right click the <code>build.xml</code> file in your project root directory and choose &ldquo;Run As&rdquo; -&gt; &ldquo;Ant Build&rdquo;. You can re-run the match software by choosing the external tools runner in the Eclipse toolbar (the green-and-white run icon with a small bag beneath it).</p>
+
+    <h3 id="hahahugoshortcode25s17hbhbrunning-matches">
+
+<a name="running-matches"></a>Running Matches</h3>
+
+
+    <h4 id="local-matches">Local Matches</h4>
+
+<p>Local matches are the most common way to run a match—they are computed and rendered simultaneously on the same machine. To run a &ldquo;local&rdquo; match, use the ant run command from your installation directory. (If you&rsquo;re not using Ant, you can run the <code>battlecode.client.Main</code> class from the command line or an IDE.)</p>
+<p>When running a local match, you also have the option of saving the match to a file so that you can play it back without having to recompute it. To do this, check the &ldquo;Save match to file&rdquo; box on the main dialog and choose the location of the file. Note that the file will be overwritten if it already exists.</p>
+
+    <h4 id="remote-matches">Remote Matches</h4>
+
+<p>It is also possible to compute and view matches on two separate machines via TCP / IP. Let&rsquo;s say you have two machines—A, which has the players you&rsquo;ve written, will be the machine that computes the match; B will be the machine that views the match.</p>
+<p>First, on machine A, use <code>ant serve</code> to run a match server. Then, on machine B, use <code>ant run</code> to run the main dialog. Choose &ldquo;Connect to remote match server&rdquo; on the dialog and enter the host or IP address of machine A. When you&rsquo;ve entered the address, the dialog on machine B will ask machine A for the teams and maps it knows about, so you can choose them from the dropdown list.</p>
+
+    <h4 id="playing-back-from-a-file">Playing Back from a File</h4>
+
+<p>If you have a match file that you&rsquo;d like to play back (i.e., from saving one previously) you can choose &ldquo;Play back from match file&rdquo; and choose the match file to play back. The remainder of the dialog settings will be ignored.</p>
+
+    <h4 id="match-parameters">Match Parameters</h4>
+
+<p>A dialog box will appear that allows you to choose the teams and maps to run. The teams and maps that appear in the dropdown boxes are those that the software knows about at runtime. If the team or map you&rsquo;re trying to run does not appear in the dropdown box, it isn&rsquo;t on your classpath or map path.</p>
+
+    <h4 id="match-sets">Match Sets</h4>
+
+<p>This year, each match between two teams consists of a set of games. To run multiple games in a match, use the add and remove buttons below the map dropdown box to add maps to the list. A game will be played on each map in the list, in order. If you don&rsquo;t add any maps, the match will consist of one game, on the map selected in the dropdown box.</p>
+
+    <h3 id="hahahugoshortcode25s18hbhbdebugging-your-player">
+
+<a name="debugging-your-player"></a>Debugging your Player</h3>
+
+<p>Normally, the software computes the match well ahead of what is being currently viewed. However, selecting &ldquo;compute and view match synchronously&rdquo; from the match dialog puts the software in &ldquo;lockstep mode&rdquo;, where the computation and viewing move in lockstep. This is generally slower than running them independently, but it allows for some interesting debugging features.</p>
+<p>While in lockstep mode, right-clicking on an open square in the map brings up a menu that lets you add new units to the map. Right-clicking on an existing unit allows you to set its control bits, which the robot&rsquo;s player can query and react to. You can also drag-and-drop units on the map.</p>
+<p>These debugging features are intended to help you test your robots in situations that might otherwise be hard to get them into (e.g., what happens if one of my archons gets cut off from the rest…?). However, if the players are not written defensively, these unexpected manual changes can interfere with their control logic. Keep this in mind when using the debugging features.</p>
+<p>Also, during the tournament and scrimmages, you will not be able to manually affect the game in this way.</p>
+
+    <h3 id="hahahugoshortcode25s19hbhbuploading-your-player">
+
+<a name="uploading-your-player"></a>Uploading your Player</h3>
+
+<p>You should upload a zip or jar file containing your team&rsquo;s source code. You should use the package name <code>teamXXX</code> where XXX is your team number. You can build this jar automatically using the command.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>ant -Dteam=teamXXX jar
+</span></span></code></pre></div><p>Alternatively, creating a zip file of the <code>teamXXX</code> directory should work.</p>
+
+    <h3 id="hahahugoshortcode25s20hbhbadvanced-configuration">
+
+<a name="advanced-configuration"></a>Advanced Configuration</h3>
+
+<p>The Battlecode distribution includes a configuration file, <code>bc.conf</code>, which allows you to tweak some of the software&rsquo;s settings. Appendix A contains a listing of configurable properties.</p>
+<p>The properties can also be set in any way that Java properties are set. This includes using &ldquo;-D[property]=[value]&rdquo; on the <code>java</code> or <code>ant</code> command line.</p>
+
+    <h3 id="hahahugoshortcode25s21hbhbappendix-configuration-properties-and-command-line-arguments">
+
+<a name="appendix"></a>Appendix: Configuration Properties and Command-line Arguments</h3>
+
+
+    <h4 id="computation-throttling">Computation Throttling</h4>
+
+<p>When running a local match, the game engine attempts to periodically delay to prevent starving the match viewer of CPU time. Altering the following two settings may yield better local match performance:</p>
+<ul>
+<li><code>bc.server.throttle</code>: determines how to delay match computation; can be set to either &ldquo;yield&rdquo; or &ldquo;sleep&rdquo;.</li>
+<li><code>bc.server.throttle-count</code>: the number of rounds between sleep / yield.</li>
+</ul>
+
+    <h4 id="engine-settings">Engine Settings</h4>
+
+<p>The following settings can be used to enable or disable certain aspects of the engine.</p>
+<ul>
+<li><code>bc.engine.debug-methods</code>: &ldquo;true&rdquo; or &ldquo;false&rdquo;; whether or not the engine will run debug methods.</li>
+<li><code>bc.engine.silence-a</code> and <code>bc.engine.silence-b</code>: &ldquo;true&rdquo; or &ldquo;false&rdquo;; whether or not the engine will suppress printouts for the appropriate team.</li>
+<li><code>bc.engine.gc</code>: &ldquo;true&rdquo; or &ldquo;false&rdquo;; whether or not to periodically force garbage collection in the game engine—this option causes decreased performance but may help if the virtual machine runs out of memory during computation.</li>
+<li><code>bc.engine.gc-rounds</code>: how many rounds between forced invocation of the garbage collector; the default is 50.</li>
+<li><code>bc.engine.upkeep</code>: &ldquo;true&rdquo; or &ldquo;false&rdquo;; if &ldquo;false&rdquo;, the engine will not charge units their energon upkeep each round.</li>
+<li><code>bc.engine.breakpoints</code>: &ldquo;true&rdquo; or &ldquo;false&rdquo;; if &ldquo;false&rdquo; the engine will skip breakpoints in player code.</li>
+</ul>
+
+    <h4 id="headless-mode-settings">&ldquo;Headless&rdquo; Mode Settings</h4>
+
+<p>&ldquo;Headless&rdquo; mode runs matches without displaying them in a client. This mode can be run via &ldquo;ant file&rdquo; in the installation, or with a &ldquo;-h&rdquo; argument when calling the Main class directly.</p>
+
+    <h4 id="client-settings">Client Settings</h4>
+
+<ul>
+<li><code>bc.game.renderprefs2d</code>: preferences for the 2d client. For example, if you wanted to turn off the rendering of broadcasts and gridlines, you could set this property to &ldquo;bg&rdquo;. See the &ldquo;Shortcut Keys&rdquo; section for a complete listing of toggles.</li>
+</ul>
+
+    <h4 id="miscellaneous-settings">Miscellaneous Settings</h4>
+
+<ul>
+<li><code>bc.game.map-path</code>: the folder in which to look for map files.</li>
+<li><code>bc.dialog.skip</code>: &ldquo;true&rdquo; or &ldquo;false&rdquo;; whether or not to show the setup dialog when the software is started. If &ldquo;true&rdquo; the parameters most recently entered into the dialog will be used.</li>
+</ul>
+
+    <h4 id="command-line-arguments">Command-line Arguments</h4>
+
+<ul>
+<li><code>-c (config file name)</code>: use the specified config file when running the match; defaults to <code>bc.conf</code> in ant.</li>
+<li><code>-h</code>: use &ldquo;headless&rdquo; mode (see above); equivalent to &ldquo;ant file&rdquo;.</li>
+<li><code>-s</code>: use &ldquo;server&rdquo; mode—listen for a connection from a remote client and send match data via TCP; equivalent to &ldquo;ant serve&rdquo;.</li>
+<li><code>-n</code>: skip the match dialog; equivalent to <code>bc.dialog.skip=true</code> config file option (see above).</li>
+</ul>
+
+    <h4 id="client-settings-1">Client Settings</h4>
+
+<ul>
+<li><code>bc.client.renderprefs2d</code>: A list of toggles to set in the 2D client. (See Shortcut Keys below.) For example, if you want to turn off broadcasts, grid lines, and transfers, you would set <code>bc.client.renderprefs2d=bgt</code>.</li>
+<li><code>bc.client.sound-on</code>: &ldquo;true&rdquo; or &ldquo;false&rdquo;; whether or not to play sound effects.</li>
+</ul>
+
+    <h4 id="shortcut-keys">Shortcut Keys</h4>
+
+<p><table>
+<thead>
+<tr>
+<th>
+
+KEYS
+</th>
+<th>
+
+EFFECTS
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+A
+</td>
+<td>
+
+Toggle unit sensor and attack ranges
+</td>
+</tr>
+<tr>
+<td>
+
+B
+</td>
+<td>
+
+Toggle unit broadcasts
+</td>
+</tr>
+<tr>
+<td>
+
+D
+</td>
+<td>
+
+Toggle discrete movement mode
+</td>
+</tr>
+<tr>
+<td>
+
+E
+</td>
+<td>
+
+Toggle HP bars
+</td>
+</tr>
+<tr>
+<td>
+
+F
+</td>
+<td>
+
+Toggle fast forward
+</td>
+</tr>
+<tr>
+<td>
+
+G
+</td>
+<td>
+
+Toggle grid lines
+</td>
+</tr>
+<tr>
+<td>
+
+I
+</td>
+<td>
+
+Toggle action lines
+</td>
+</tr>
+<tr>
+<td>
+
+J
+</td>
+<td>
+
+Toggle slow-motion
+</td>
+</tr>
+<tr>
+<td>
+
+K
+</td>
+<td>
+
+Toggle attack circles
+</td>
+</tr>
+<tr>
+<td>
+
+L
+</td>
+<td>
+
+Toggle flux bars
+</td>
+</tr>
+<tr>
+<td>
+
+R
+</td>
+<td>
+
+Toggle regeneration
+</td>
+</tr>
+<tr>
+<td>
+
+S
+</td>
+<td>
+
+Skip 100 rounds
+</td>
+</tr>
+<tr>
+<td>
+
+T
+</td>
+<td>
+
+Toggle transfers
+</td>
+</tr>
+<tr>
+<td>
+
+X
+</td>
+<td>
+
+Toggle unit explosions
+</td>
+</tr>
+<tr>
+<td>
+
+/
+</td>
+<td>
+
+Find unit by ID
+</td>
+</tr>
+<tr>
+<td>
+</p>
+<p>&lt;</p>
+<p>Pause</p>
+<p> </p>
+<p></td>
+<td>
+
+ 
+</td>
+</tr>
+<tr>
+<td>
+
+\&gt;
+</td>
+<td>
+
+Pause
+</td>
+</tr>
+<tr>
+<td>
+
+Escape
+</td>
+<td>
+
+Quit
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+
+    <h3 id="hahahugoshortcode25s142hbhbscala">
+
+<a name="scala"></a>Scala</h3>
+
+<p>Most contestants choose to write their players in Java, but we also support Scala (or a mix of Java and Scala). If you want to use Scala, you should download the <a href="../../../resources/scala-compiler-291_jar/index.html">Scala compiler (JAR - 10.8MB)</a>, <a href="../../../resources/scala-library-291_jar/index.html">Scala library (JAR - 8.4MB)</a>, and <a href="../../../resources/jline-2-9-1/index.html">jline (JAR)</a>, and place them in your <code>lib</code> directory. You can also download a simple <a href="../../../resources/robotplayer/index.html">example player (SCALA)</a> written in Scala.</p>
+<p>« <a href="../specs-and-software/index.html">Return to Specs and Software</a></p>
+</main>
+  </article>
+</div>
+
+
+                  </div>
+                </div>
+                
+                  <button 
+  type="button" 
+  class="btn course-info-button large-and-above-only"
+  id="desktop-course-drawer-button"
+  data-target="#desktop-course-drawer"
+  data-toggle="collapse"
+  aria-label="Course Info"
+  aria-controls="desktop-course-drawer"
+  aria-expanded="false"
+>
+  <img
+    class="expand-drawer-img drawer-icon-img"
+    src="../../../../../static_shared/images/left_arrow.3c482a1f6223bff3f0e6.svg"
+    alt=""
+  />
+  <img
+    class="collapse-drawer-img drawer-icon-img"
+    src="../../../../../static_shared/images/close_small.b0a2684ccc0da6407a56.svg"
+    alt=""
+  />
+</button>
+
+<div class="collapse border-left p-0 large-and-above-only col-3" id="desktop-course-drawer">
+    
+
+<div class="course-info">
+  <div class="course-detail-title bg-light-gray">
+    <h2 class="font-black py-1 pl-3 m-0">
+      Course Info
+    </h2>
+  </div>
+  <div class="px-3 mt-4">
+    <div class="row">
+      <div class="col-12 ">
+        
+        <div class="">
+          
+          <h5 class="panel-course-info-title ">
+            Instructor
+            </h5>
+          <div class="course-info-content panel-course-info-text">
+            
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-instructor strip-link-offline"    href="https://ocw.mit.edu/search/?q=Maxwell+Mann"  >Maxwell Mann</a>
+  </li>
+  
+</ul>
+
+
+          </div>
+        </div>
+        
+        
+          
+          
+            <div class="mt-4">
+              <h5 class="panel-course-info-title ">
+                Departments
+              </h5>
+              <div class="course-info-content panel-course-info-text">
+                
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-department strip-link-offline"    href="https://ocw.mit.edu/search/?d=Electrical+Engineering+and+Computer+Science"  >Electrical Engineering and Computer Science</a>
+  </li>
+  
+</ul>
+
+
+              </div>
+            </div>
+          
+         
+        
+        <div class="mt-4">
+          <h5 class="panel-course-info-title ">
+            As Taught In
+          </h5>
+          <div class="course-info-content panel-course-info-text">
+            January IAP
+            
+              2013
+            
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <h5 class="panel-course-info-title ">
+            Level
+          </h5>
+          <div class="course-info-content panel-course-info-text">
+            
+              
+                <a   class=" strip-link-offline"    href="https://ocw.mit.edu/search/?l=Undergraduate"  >Undergraduate</a><br />
+              
+            
+          </div>
+        </div>
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+  <div class="px-3">
+    
+
+
+
+
+
+<div class=" mt-4">
+  <h5 class="panel-course-info-title ">
+    Topics
+  </h5>
+  <ul class="list-unstyled pb-2 m-0 panel-course-info-text">
+      <li>
+
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_desktop_0"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_desktop_0"
+    aria-expanded="true"
+    aria-label="Engineering subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Engineering"  >Engineering</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse show list-unstyled"
+  id="subtopic-container_desktop_0"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-4 ">
+      
+      <button
+        class="topic-toggle border-0 bg-transparent pl-0"
+        data-target="#speciality-container_desktop_0_0"
+        data-toggle="collapse"
+        aria-controls="speciality-container_desktop_0_0"
+        aria-expanded="true"
+        aria-label="Computer Science specialties"
+      >
+        <i aria-hidden="true" class="material-icons"></i>
+      </button>
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Computer+Science"  >Computer Science</a></span>
+    </div>
+    <ul
+      class="collapse show list-unstyled"
+      id="speciality-container_desktop_0_0"
+      aria-label="Specialties"
+    >
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Artificial+Intelligence"  >Artificial Intelligence</a></span>
+      </li>
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Programming+Languages"  >Programming Languages</a></span>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+</ul>
+
+</li>
+      <li>
+
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_desktop_1"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_desktop_1"
+    aria-expanded="false"
+    aria-label="Fine Arts subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Fine+Arts"  >Fine Arts</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse list-unstyled"
+  id="subtopic-container_desktop_1"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Game+Design"  >Game Design</a></span>
+    </div>
+    <ul
+      class="collapse list-unstyled"
+      id="speciality-container_desktop_1_0"
+      aria-label="Specialties"
+    >
+      
+    </ul>
+    
+  </li>
+  
+</ul>
+
+</li>
+      
+  </ul>
+</div>
+
+    
+
+
+
+<div class="">
+  <h5 class="course-detail-title panel-course-info-title mt-3">
+    Learning Resource Types
+  </h5>
+  <div>
+    <div class="row d-inline m-0">
+      
+        <div class="panel-course-info-text my-2">
+          
+
+<div class="">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">theaters</i>
+    <span>Lecture Videos</span>
+  </div>
+</div>
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+    <hr>
+<div class="pb-3">
+  <a class="download-course-link-button btn btn-outline-primary btn-link link-button text-decoration-none px-4 py-2"
+    role="button"
+    href="https://ocw.mit.edu/courses/6-370-the-battlecode-programming-competition-january-iap-2013/download">
+    <div class="text-center w-100">Download Course</div>
+  </a>
+</div>
+  </div>
+</div>
+
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+<div class="footer">
+    <div class="footer-main-content mx-auto">
+    	<div class="col-12 px-0">
+        	<div class="row align-items-center mx-0">
+            	<div class="col-12 col-md-8 px-0">
+					<div class="d-md-flex align-items-center">
+						<a href="https://openlearning.mit.edu/" target="_blank">
+							<img width="117px" src="../../../../../static_shared/images/mit_ol.4165342f87abb1da46fd.svg" alt="MIT Open Learning" />
+						</a>
+						<div class="ml-md-3 mt-4 mt-md-0">
+							<div class="font-weight-bold">
+								Over 2,500 courses & materials
+							</div>
+							<div>
+								Freely sharing knowledge with learners and educators around the world. <a href='https://ocw.mit.edu/about'>Learn more</a>
+							</div>
+						</div>
+					</div>
+            	</div>
+				<div class="col-12 col-md-4 px-0 d-none d-md-block">
+					<div class="d-flex justify-content-md-end">
+	<div>
+		<a href="https://www.facebook.com/MITOCW" target="_blank">
+			<img class="footer-social-icon ml-0" src="../../../../../static_shared/images/Facebook.d1f5caeb73d7d12505a2.png" alt="facebook"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.instagram.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/Instagram.4df41828ffee4ff33d8a.png" alt="instagram"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://twitter.com/MITOCW" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/x-formerly-twitter-black.f8c75ad9f42902726d25.png" alt="x (formerly twitter)"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.youtube.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/Youtube.7c9f62c4f1dc9515ebb4.png" alt="youtube"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.linkedin.com/company/mit-opencourseware/" target="_blank">
+			<img class="footer-social-icon nudge-up" src="../../../../../static_shared/images/linkedin-black.2f7f8a6a3899f5d1e1d6.png" alt="linkedin"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://bsky.app/profile/mitocw.bsky.social" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/bluesky-black.9f4523fcefa9b6f25be7.png" alt="bluesky"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://mastodon.social/@mitocw" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/mastodon-black.9e2de31a28415c123800.png" alt="mastodon"/>
+		</a>
+	</div>
+</div>
+
+				</div>
+        	</div>
+    	</div>
+		
+		<div class="col-12 mt-3 mt-md-4 px-0">
+			<div class="row align-items-center mx-0">
+            	<div class="col-12 col-md-8 px-0">
+					<div class="d-lg-flex">
+						<div class="pr-md-2 mt-2 mt-lg-0 d-none d-lg-block">
+							© 2001–2025 Massachusetts Institute of Technology
+						</div>
+						<div class="px-lg-2 mt-2 mt-lg-0">
+							<a href="https://accessibility.mit.edu" target="_blank">Accessibility</a>
+						</div>
+						<div class="px-lg-2 mt-2 mt-lg-0">
+							<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons License</a>
+						</div>
+						<div class="px-lg-2 mt-2 mt-lg-0">
+							<a class="hide-offline" href='https://ocw.mit.edu/pages/privacy-and-terms-of-use/'>Terms and Conditions</a>
+						</div>
+					</div>
+            	</div>
+				<div class="col-12 col-md-4 px-0">
+					<div class="d-flex justify-content-md-end mt-4 mt-lg-0">
+						<div>
+						Proud member of: 
+						<a href="https://www.oeglobal.org/" target="_blank">
+							<img class="oeg-logo" src="../../../../../static_shared/images/oeg_logo.8a31f7b87f30df2d0169.png" alt="Open Education Global"/>
+						</a>
+						</div>
+					</div>
+				</div>
+        	</div>
+		</div>
+
+		<div class="col-12 mt-5 px-0 d-md-none">
+			<div class="d-flex justify-content-md-end">
+	<div>
+		<a href="https://www.facebook.com/MITOCW" target="_blank">
+			<img class="footer-social-icon ml-0" src="../../../../../static_shared/images/Facebook.d1f5caeb73d7d12505a2.png" alt="facebook"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.instagram.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/Instagram.4df41828ffee4ff33d8a.png" alt="instagram"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://twitter.com/MITOCW" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/x-formerly-twitter-black.f8c75ad9f42902726d25.png" alt="x (formerly twitter)"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.youtube.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/Youtube.7c9f62c4f1dc9515ebb4.png" alt="youtube"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.linkedin.com/company/mit-opencourseware/" target="_blank">
+			<img class="footer-social-icon nudge-up" src="../../../../../static_shared/images/linkedin-black.2f7f8a6a3899f5d1e1d6.png" alt="linkedin"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://bsky.app/profile/mitocw.bsky.social" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/bluesky-black.9f4523fcefa9b6f25be7.png" alt="bluesky"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://mastodon.social/@mitocw" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/mastodon-black.9e2de31a28415c123800.png" alt="mastodon"/>
+		</a>
+	</div>
+</div>
+
+		</div>
+
+		<div class="col-12 mt-4 px-0 d-lg-none">
+			© 2001–2025 Massachusetts Institute of Technology
+		</div>
+    
+
+
+    
+    <script src="../../../../../static_shared/js/common.ba051.js"></script>
+    
+
+    
+    <script src="../../../../../static_shared/js/course_v2.ba051.js"></script>
+    
+
+
+
+
+
+    
+<script async src="https://w.appzi.io/w.js?token=Tgs1d"></script>
+
+	</div>
+</div>
+
+  </div>
+  <script>
+function hideLinksOffline(){
+  if (!window.navigator.onLine) {
+    const stripLinks = document.querySelectorAll(".strip-link-offline")
+    const hideOffline = document.querySelectorAll(".hide-offline")
+    const showOffline = document.querySelectorAll(".show-offline")
+    Array.prototype.forEach.call(stripLinks, function(link) {
+      link.outerHTML = link.innerHTML
+    })
+    Array.prototype.forEach.call(hideOffline, function(link) {
+      link.classList.add("d-none")
+    })
+    Array.prototype.forEach.call(showOffline, function(link) {
+      link.classList.remove("d-none")
+    })
+  }
+}
+hideLinksOffline()
+</script>
+
+  
+
+<div
+  class="modal"
+  id="external-link-modal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="external-link-modal-title"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content p-3">
+      <div class="modal-header d-flex align-items-center">
+        <div class="d-flex align-items-center">
+          <img
+            class="modal-header-icon-img mr-3 align-baseline"
+            src="../../../../../static_shared/images/external_link.58bbdd86c00a2c146c36.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <h1 class="modal-title" id="external-link-modal-title">
+            You are leaving MIT OpenCourseWare
+          </h1>
+        </div>
+        <button type="button" class="border-0 p-0 bg-transparent d-flex" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="material-icons modal-header-icon">close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Please be advised that external sites may have terms and conditions, 
+        including license rights, that differ from ours. MIT OCW is not responsible 
+        for any content on third party sites, nor does a link suggest an endorsement 
+        of those sites and/or their content.
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-outline-primary btn-link link-button"
+          data-dismiss="modal"
+          >
+            Stay Here
+        </button>
+        <a
+          role="button"
+          class="btn btn-primary btn-continue"
+          target="_blank"
+          href="index.html#"
+        >
+          Continue
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script>
+    
+    
+    
+    
+    
+    
+    'use strict';
+    const COURSE_DRAWER_LOCAL_STORAGE_KEY = "desktopCourseDrawerState"
+    const COURSE_DRAWER_OPENED = "opened"
+    const COURSE_DRAWER_CLOSED = "closed"
+    
+    const DESKTOP_COURSE_DRAWER_ID = "desktop-course-drawer"
+    const COURSE_DRAWER_BTN_ID = "desktop-course-drawer-button"
+    const MAIN_COURSE_SECTION_ID = "main-course-section"
+
+    try{
+
+      
+
+      function initializeDesktopCourseDrawerState() {
+        const state = getLocalStorageItem(COURSE_DRAWER_LOCAL_STORAGE_KEY)
+        if (state === null) {
+          
+          setLocalStorageItem(COURSE_DRAWER_LOCAL_STORAGE_KEY, COURSE_DRAWER_OPENED)
+          showOrHideDesktopCourseDrawer(COURSE_DRAWER_OPENED)
+        } else {
+          showOrHideDesktopCourseDrawer(state)
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+          const drawer = $(`#${DESKTOP_COURSE_DRAWER_ID}`)
+          const mainSection = $(`#${MAIN_COURSE_SECTION_ID}`)
+
+          drawer.on("shown.bs.collapse", (event) => {
+            if (event.target.id !== DESKTOP_COURSE_DRAWER_ID) {
+              return;
+            }
+            mainSection.addClass("col-lg-9")
+            mainSection.removeClass("col-12")
+            setLocalStorageItem(COURSE_DRAWER_LOCAL_STORAGE_KEY, COURSE_DRAWER_OPENED)
+          })
+      
+          drawer.on("hidden.bs.collapse", (event) => {
+            if (event.target.id !== DESKTOP_COURSE_DRAWER_ID) {
+              return;
+            }
+            mainSection.addClass("col-12")
+            mainSection.removeClass("col-lg-9")
+            setLocalStorageItem(COURSE_DRAWER_LOCAL_STORAGE_KEY, COURSE_DRAWER_CLOSED)
+          })
+        })
+      }
+
+      function showOrHideDesktopCourseDrawer(state) {
+        const drawer = document.getElementById(DESKTOP_COURSE_DRAWER_ID)
+        const button = document.getElementById(COURSE_DRAWER_BTN_ID)
+        const mainSection = document.getElementById(MAIN_COURSE_SECTION_ID)
+
+        if (state === COURSE_DRAWER_OPENED) {
+          drawer.classList.add("show")
+          button.setAttribute("aria-expanded", "true")
+        } else {
+          drawer.classList.remove("show")
+          button.setAttribute("aria-expanded", "false")
+          mainSection.classList.remove("col-lg-9")
+          mainSection.classList.add("col-12")
+        }
+      }
+
+      function setOrGetLocalStorageItem(action,key,value) {
+        try {
+          
+          if (typeof Storage !== "undefined") {
+            if (action === "set") {
+              localStorage.setItem(key, value)
+              return true
+            } else {
+              return localStorage.getItem(key)
+            }
+          }
+          console.error("This browser has no web storage support.")
+          return null
+        } catch (e) {
+          console.error("An exception occurred while storing/fetching data in/from localstorage: ", e)
+          return null
+        }
+      }
+
+      function setLocalStorageItem(key, value) {
+        return setOrGetLocalStorageItem("set", key, value)
+      }
+      
+      function getLocalStorageItem(key){
+        return setOrGetLocalStorageItem("get", key)
+      }
+
+      initializeDesktopCourseDrawerState();
+    }
+    catch(e){
+      console.error("Something went wrong in maintaining/toggling course drawer state", e)
+    }
+  </script>
+
+  
+
+<script>
+function expandNav(e,t){t.classList.add("show"),e.querySelector(".course-nav-section-toggle, video-tab-toggle-section").setAttribute("aria-expanded","true")}function courseNav(){document.querySelectorAll(".course-nav, .transcript-header").forEach(e=>{e.querySelectorAll(".nav-link").forEach(e=>{const t=e.getAttribute("href")?e.getAttribute("href"):"";if(t.replace(/\/$/,"")===window.location.pathname.replace(/\/$/,"")){e.classList.add("active");const s=e.dataset.uuid,t=e.closest(".course-nav-list-item"),n=t?.querySelector(".collapse"),o=Array.prototype.filter.call(document.querySelectorAll(".course-nav-section-toggle"),e=>e.dataset.uuid===s);t&&n&&o.length>0&&expandNav(t,n)}});const t=e.querySelector("a.nav-link.active");e.querySelectorAll(".course-nav-list-item").forEach(e=>{const n=e.querySelector(".collapse");n&&n.contains(t)&&expandNav(e,n)})})}courseNav()
+</script>
+
+  
+
+<script>
+(()=>{var e=()=>document.querySelectorAll("#course-content-section table"),t=()=>document.getElementById("course-content-section");function n(){const o=e(),n=t();if(!n)return;if(!window.ResizeObserver)return;const i=new ResizeObserver(()=>s());i.observe(n),o.forEach(e=>{const t=e.getElementsByTagName("th"),n=e.querySelectorAll("table tr");n.forEach(e=>{const n=e.querySelectorAll("td");n.forEach((e,s)=>{t.length>=s+1&&(n[s].dataset.title=t[s].innerText.trim().concat(": "))})})})}function s(){const s=e(),n=t();if(!n)return;s.forEach(e=>{const t=n.getBoundingClientRect(),o=+(e.dataset.minWidth??0);t.width>o&&e.classList.remove("mobile-table");const s=e.getBoundingClientRect();s.right>t.right&&(e.dataset.minWidth=`${s.width}`,e.classList.add("mobile-table"))})}n()})()
+</script>
+
+</body>
+
+</html>

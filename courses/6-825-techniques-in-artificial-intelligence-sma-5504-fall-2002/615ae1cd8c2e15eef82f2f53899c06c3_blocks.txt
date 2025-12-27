@@ -1,0 +1,32 @@
+~Equals(a,b)
+~Equals(a,c)
+~Equals(b,a)
+~Equals(b,c)
+~Equals(c,a)
+~Equals(c,b)
+~Equals(a,table)
+~Equals(b,table)
+~Equals(c,table)	
+
+all x all y all z all s on(x,y,s) ^ on(x,z,s) -> Equals(y,z)
+all x all y all z all s on(x,z,s) ^ on(y,z,s) -> Equals(x,y) v Equals(z, table)
+
+all s all x clear(x,s) <-> (~ exists y block(x) ^ on(y,x,s) v Equals(x,table))
+
+all s all x all y all z clear(x,s) ^ clear(y,s) ^ on (x,z,s) -> 
+    on(x,y,result(move(x,y),s)) ^ clear(z,result(move(x,y),s))
+
+all s all x all y all z all w
+         on(x,y,s) ^ ~Equals(x,z) -> on(x,y,result(move(z,w),s))
+
+all s all x all y all z
+         clear(x,s) ^ ~Equals(x,z) -> clear(x,result(move(y,z),s))
+
+on(a,table,s0)
+on(c,a,s0)
+on(b,table,s0)
+clear(c,s0)
+clear(b,s0)
+all s clear(table,s)
+
+~exists s on(b,c,s) ^ ~answer(s)

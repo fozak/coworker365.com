@@ -1,0 +1,8 @@
++coref, -coref.
+NumberAgreement:    +num, -num.
+SentenceMatch:      +same, -same.
+Distance:           continuous.
+AntecedentPosition: continuous.
+PronounPosition:    continuous.
+RelativePosition:   +before, -before.
+EmbeddingLevel:     continuous.

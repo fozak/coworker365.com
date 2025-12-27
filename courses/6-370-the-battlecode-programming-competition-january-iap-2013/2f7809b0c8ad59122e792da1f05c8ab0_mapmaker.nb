@@ -1,0 +1,507 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     19788,        498]
+NotebookOptionsPosition[     19117,        472]
+NotebookOutlinePosition[     19495,        488]
+CellTagsIndexPosition[     19452,        485]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Source", "Subsubtitle",
+ CellChangeTimes->{{3.565892041403386*^9, 3.56589204200042*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"grid", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", ",", "1"}], "}"}], "20"}]}], ";"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"valToGrid", "[", 
+     RowBox[{"val_", ",", "max_"}], "]"}], ":=", " ", 
+    RowBox[{"Ceiling", "[", 
+     RowBox[{
+      RowBox[{"Clip", "[", 
+       RowBox[{"val", ",", 
+        RowBox[{"{", 
+         RowBox[{"0.0001", ",", "max"}], "}"}]}], "]"}], ",", "1"}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ptToGrid", "[", 
+     RowBox[{"pt_", ",", "grid_"}], "]"}], ":=", " ", 
+    RowBox[{"MapThread", "[", 
+     RowBox[{"valToGrid", ",", 
+      RowBox[{"{", 
+       RowBox[{"pt", ",", "grid"}], "}"}]}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"buildMap", "[", "map_", "]"}], ":=", " ", 
+     RowBox[{"Graphics", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Table", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Text", "[", 
+          RowBox[{
+           RowBox[{"map", "[", 
+            RowBox[{"[", 
+             RowBox[{"j", ",", "i"}], "]"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", "j"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+         ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "1", ",", 
+           RowBox[{"grid", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"j", ",", "1", ",", 
+           RowBox[{"grid", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], "}"}]}], "]"}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"ImageSize", "\[Rule]", " ", 
+        RowBox[{"{", 
+         RowBox[{"Automatic", ",", "400"}], "}"}]}], ",", 
+       RowBox[{"PlotRangePadding", "\[Rule]", " ", "0"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", " ", "All"}]}], "]"}]}], 
+    "*)"}]}]}]], "Input",
+ CellChangeTimes->{{3.5603507500166583`*^9, 3.560350764706499*^9}, {
+   3.5603507951252384`*^9, 3.560350799039462*^9}, {3.56035524960002*^9, 
+   3.560355251785145*^9}, {3.5603561674955206`*^9, 3.5603561675985265`*^9}, {
+   3.5603578482206526`*^9, 3.560357849997754*^9}, {3.5603578903200607`*^9, 
+   3.560357892441182*^9}, 3.5603581437215543`*^9, {3.5603581829958005`*^9, 
+   3.5603582109844017`*^9}, 3.5603582931451006`*^9, {3.560358441596592*^9, 
+   3.5603584463078613`*^9}, {3.5603589097863703`*^9, 
+   3.5603589521637945`*^9}, {3.5658881482000313`*^9, 3.565888166545663*^9}, {
+   3.5658883688000183`*^9, 3.565888385991249*^9}, {3.565888789095957*^9, 
+   3.565888792839963*^9}, {3.565889993325242*^9, 3.565889993757267*^9}, {
+   3.5666601319322505`*^9, 3.566660134495397*^9}, {3.566660181854106*^9, 
+   3.5666601836682096`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"mapmaker", "[", "]"}], ":=", " ", 
+  RowBox[{"Deploy", "@", 
+   RowBox[{"DynamicModule", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"grid", ",", "map", ",", 
+       RowBox[{"pt", "=", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1"}], "}"}], "/", "2"}]}], ",", "prev", ",", 
+       RowBox[{"visual", "=", "\"\<\>\""}], ",", 
+       RowBox[{"(*", 
+        RowBox[{"indicator", ","}], "*)"}], 
+       RowBox[{"clickLoc", " ", "=", " ", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "1"}], "}"}]}], ",", 
+       RowBox[{"selector", " ", "=", " ", "\"\<#\>\""}], ",", "outmap", ",", 
+       "traffic", ",", "allPaths", ",", 
+       RowBox[{"sym1", " ", "=", " ", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", "1"}], "}"}]}], ",", 
+       RowBox[{"sym2", " ", "=", " ", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", "1"}], "}"}]}], ",", 
+       RowBox[{"fnameOut", "=", "\"\<test\>\""}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"grid", "=", 
+       RowBox[{"3", 
+        RowBox[{"{", 
+         RowBox[{"20", ",", "20"}], "}"}]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"map", "=", 
+       RowBox[{"ConstantArray", "[", 
+        RowBox[{"\"\<.\>\"", ",", "grid"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"prev", " ", "=", " ", "pt"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"indicator", " ", "=", " ", "\"\<\>\""}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Column", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"LocatorPane", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "[", "pt", "]"}], "\[IndentingNewLine]", ",", 
+           RowBox[{"Dynamic", "[", "\[IndentingNewLine]", 
+            RowBox[{"(*", 
+             RowBox[{"value", " ", "painting"}], "*)"}], 
+            "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"visual", " ", "=", "  ", 
+               RowBox[{"(*", 
+                RowBox[{"Dynamic", "@", 
+                 RowBox[{"buildMap", "@", 
+                  RowBox[{"Transpose", "@", "map"}]}]}], "*)"}], " ", 
+               RowBox[{"TableForm", "[", 
+                RowBox[{
+                 RowBox[{"Reverse", "@", 
+                  RowBox[{"Transpose", "@", "map"}]}], ",", 
+                 RowBox[{"TableSpacing", "\[Rule]", " ", 
+                  RowBox[{"{", 
+                   RowBox[{"1", ",", "1"}], "}"}]}]}], "]"}]}], ";", 
+              "\[IndentingNewLine]", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"pt", "\[NotEqual]", " ", "prev"}], ",", 
+                RowBox[{
+                 RowBox[{"prev", "=", "pt"}], ";", "\[IndentingNewLine]", 
+                 RowBox[{"(*", 
+                  RowBox[{"new", " ", "click"}], "*)"}], 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"clickLoc", " ", "=", " ", 
+                  RowBox[{"ptToGrid", "[", 
+                   RowBox[{
+                    RowBox[{"pt", "*", "grid"}], ",", "grid"}], "]"}]}], ";", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{"map", "[", 
+                   RowBox[{"[", 
+                    RowBox[{
+                    RowBox[{"clickLoc", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ",", 
+                    RowBox[{"clickLoc", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "]"}], "=", 
+                  "selector"}], ";", "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{"map", "[", 
+                   RowBox[{"[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"clickLoc", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "*", 
+                    RowBox[{"sym1", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+                    RowBox[{
+                    RowBox[{"clickLoc", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "*", 
+                    RowBox[{"sym1", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}]}], "]"}], "]"}], "=", 
+                  "selector"}], ";", "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{"map", "[", 
+                   RowBox[{"[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"clickLoc", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "*", 
+                    RowBox[{"sym2", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+                    RowBox[{
+                    RowBox[{"clickLoc", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "*", 
+                    RowBox[{"sym2", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}]}], "]"}], "]"}], "=", 
+                  "selector"}], ";", "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{"map", "[", 
+                   RowBox[{"[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"clickLoc", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "*", "sym1", "*", 
+                    RowBox[{"sym2", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+                    RowBox[{
+                    RowBox[{"clickLoc", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "*", "sym1", "*", 
+                    RowBox[{"sym2", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}]}], "]"}], "]"}], "=", 
+                  "selector"}], ";"}]}], "\[IndentingNewLine]", "]"}], ";", 
+              "\[IndentingNewLine]", 
+              RowBox[{"Dynamic", "@", "visual"}]}], "\[IndentingNewLine]", 
+             ",", 
+             RowBox[{"SynchronousUpdating", "\[Rule]", " ", "False"}]}], 
+            "\[IndentingNewLine]", "]"}], ",", 
+           RowBox[{"Appearance", "\[Rule]", " ", "None"}]}], 
+          "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+         RowBox[{"Button", "[", 
+          RowBox[{"\"\<Clear Map\>\"", ",", 
+           RowBox[{"map", "=", 
+            RowBox[{"ConstantArray", "[", 
+             RowBox[{"\"\<.\>\"", ",", "grid"}], "]"}]}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", " ", 
+            RowBox[{"{", 
+             RowBox[{"100", ",", "Automatic"}], "}"}]}]}], "]"}], 
+         "\[IndentingNewLine]", ",", 
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Paint character \>\"", ",", 
+            RowBox[{"InputField", "[", 
+             RowBox[{
+              RowBox[{"Dynamic", "@", "selector"}], ",", "String", ",", 
+              RowBox[{"ImageSize", "\[Rule]", " ", 
+               RowBox[{"{", 
+                RowBox[{"100", ",", "Automatic"}], "}"}]}]}], "]"}]}], "}"}], 
+          "]"}], "\[IndentingNewLine]", ",", 
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Symmetry 1\>\"", ",", 
+            RowBox[{"InputField", "[", 
+             RowBox[{
+              RowBox[{"Dynamic", "@", "sym1"}], ",", 
+              RowBox[{"ImageSize", "\[Rule]", " ", 
+               RowBox[{"{", 
+                RowBox[{"100", ",", "Automatic"}], "}"}]}]}], "]"}]}], "}"}], 
+          "]"}], "\[IndentingNewLine]", ",", 
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Symmetry 2\>\"", ",", 
+            RowBox[{"InputField", "[", 
+             RowBox[{
+              RowBox[{"Dynamic", "@", "sym2"}], ",", 
+              RowBox[{"ImageSize", "\[Rule]", " ", 
+               RowBox[{"{", 
+                RowBox[{"100", ",", "Automatic"}], "}"}]}]}], "]"}]}], "}"}], 
+          "]"}], "\[IndentingNewLine]", ",", 
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Output Filename\>\"", ",", 
+            RowBox[{"InputField", "[", 
+             RowBox[{
+              RowBox[{"Dynamic", "@", "fnameOut"}], ",", "String", ",", 
+              RowBox[{"ImageSize", "\[Rule]", " ", 
+               RowBox[{"{", 
+                RowBox[{"100", ",", "Automatic"}], "}"}]}]}], "]"}]}], "}"}], 
+          "]"}], "\[IndentingNewLine]", ",", 
+         RowBox[{"Button", "[", 
+          RowBox[{"\"\<Export Map\>\"", ",", 
+           RowBox[{"exportMap", "[", 
+            RowBox[{"map", ",", "grid", ",", "fnameOut"}], "]"}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", " ", 
+            RowBox[{"{", 
+             RowBox[{"100", ",", "Automatic"}], "}"}]}]}], "]"}]}], 
+        "\[IndentingNewLine]", "}"}], "]"}]}]}], "\[IndentingNewLine]", 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.5658875902950344`*^9, 3.5658876100134687`*^9}, {
+   3.5658876724915786`*^9, 3.565887737528093*^9}, {3.5658878860624976`*^9, 
+   3.5658879673542404`*^9}, 3.565888089169527*^9, {3.565888202878127*^9, 
+   3.5658883579423995`*^9}, {3.565888419297307*^9, 3.5658884196249075`*^9}, {
+   3.5658884532117667`*^9, 3.565888530665903*^9}, {3.565888649662912*^9, 
+   3.565888675558957*^9}, {3.565888743762277*^9, 3.5658887466638823`*^9}, {
+   3.56588879634997*^9, 3.565888797379571*^9}, {3.565888830108429*^9, 
+   3.5658889682320123`*^9}, {3.5658898301559095`*^9, 
+   3.5658900141544337`*^9}, {3.56589004976447*^9, 3.5658900503375034`*^9}, {
+   3.5658900828643637`*^9, 3.565890083397394*^9}, {3.5658910421652327`*^9, 
+   3.5658910553679876`*^9}, 3.565891100633577*^9, {3.5658913650537004`*^9, 
+   3.5658914190267878`*^9}, {3.5658920324578743`*^9, 3.565892036562109*^9}, {
+   3.5666601856943254`*^9, 3.56666018577133*^9}, {3.567281983497497*^9, 
+   3.5672819848175726`*^9}, {3.567282217252867*^9, 3.5672822174468784`*^9}, 
+   3.567282836548289*^9, {3.5672832140228786`*^9, 3.567283214321896*^9}, 
+   3.5672851914849834`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"tableToString", "[", "map_", "]"}], ":=", " ", 
+  RowBox[{"StringJoin", "@", 
+   RowBox[{"Flatten", "@", 
+    RowBox[{"Riffle", "[", 
+     RowBox[{
+      RowBox[{"Transpose", "@", "map"}], ",", "\"\<\\n\>\""}], 
+     "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.565891104839817*^9, 3.5658911549136815`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"exportMap", "[", 
+   RowBox[{"map_", ",", "grid_", ",", 
+    RowBox[{"fnameOut_:", "\"\<test\>\""}]}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"rawtext", ",", "dimText"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"rawtext", " ", "=", " ", 
+      RowBox[{"Import", "[", 
+       RowBox[{
+        RowBox[{"FileNameJoin", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+           "\"\<simple.xml\>\""}], "}"}], "]"}], ",", "\"\<Text\>\""}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dimText", "=", 
+      RowBox[{"StringReplace", "[", 
+       RowBox[{"rawtext", ",", 
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"\"\<heightspec\>\"", "\[Rule]", " ", 
+           RowBox[{"ToString", "@", 
+            RowBox[{"grid", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], "\[IndentingNewLine]", ",", 
+          RowBox[{"\"\<widthspec\>\"", "\[Rule]", " ", 
+           RowBox[{"ToString", "@", 
+            RowBox[{"grid", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], "\[IndentingNewLine]", ",", 
+          RowBox[{"\"\<cdatspec\>\"", " ", "\[Rule]", " ", 
+           RowBox[{"tableToString", "@", "map"}]}], "\[IndentingNewLine]", 
+          ",", 
+          RowBox[{"\"\<hdatspec\>\"", "\[Rule]", " ", 
+           RowBox[{"tableToString", "@", 
+            RowBox[{"ConstantArray", "[", 
+             RowBox[{"\"\<G\>\"", ",", "grid"}], "]"}]}]}]}], 
+         "\[IndentingNewLine]", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+     "SetDirectory", "[", 
+      "\"\<C:\\\\Users\\\\Max\\\\Desktop\\\\Battlecode2013\\\\maps\>\"", 
+      "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{"fnameOut", "<>", "\"\<.xml\>\""}], ",", "dimText", ",", 
+       "\"\<Text\>\""}], "]"}], ";"}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.565890621799189*^9, 3.5658907206768446`*^9}, {
+   3.56589119475296*^9, 3.5658913550231276`*^9}, {3.565891690687326*^9, 
+   3.5658916920414033`*^9}, {3.565892008981531*^9, 3.565892013408785*^9}, 
+   3.566657019963982*^9, 3.566657204091381*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Use", "Subsubtitle",
+ CellChangeTimes->{{3.565892046569681*^9, 3.5658920467456913`*^9}}],
+
+Cell["\<\
+LEGEND
+open space: .
+void space: #
+encampment: @
+player A: a
+player A\[CloseCurlyQuote]s mine: 1
+player B: b
+player B\[CloseCurlyQuote]s mine: 2
+neutral mine (anti-rush): 3\
+\>", "Text",
+ CellChangeTimes->{{3.565892057825325*^9, 3.5658920834937935`*^9}, {
+  3.5662343752178383`*^9, 3.566234386886659*^9}, {3.5663287959109526`*^9, 
+  3.566328814852552*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Quiet", "@", 
+  RowBox[{"mapmaker", "[", "]"}]}]], "Input",
+ CellChangeTimes->{{3.5658920508609266`*^9, 3.5658920526260276`*^9}, {
+  3.565892219500572*^9, 3.565892220129608*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"rangeDiagram", "[", "range_", "]"}], ":=", " ", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"\"\<Range \>\"", "<>", 
+        RowBox[{"ToString", "@", "range"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"TableForm", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"r", "=", 
+           RowBox[{"Table", "[", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"i", "^", "2"}], "+", 
+                  RowBox[{"j", "^", "2"}]}], ")"}], "\[LessEqual]", " ", 
+                "range"}], ",", "\"\<#\>\"", ",", "\"\<.\>\""}], "]"}], 
+             "\[IndentingNewLine]", ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", 
+               RowBox[{"-", "size"}], ",", "size"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"j", ",", 
+               RowBox[{"-", "size"}], ",", "size"}], "}"}]}], "]"}]}], ";", 
+          RowBox[{
+           RowBox[{"r", "[", 
+            RowBox[{"[", 
+             RowBox[{
+              RowBox[{"size", "+", "1"}], ",", 
+              RowBox[{"size", "+", "1"}]}], "]"}], "]"}], "=", "\"\<O\>\""}], 
+          ";", "r"}], ",", 
+         RowBox[{"TableSpacing", "\[Rule]", " ", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0"}], "}"}]}]}], "]"}]}], "\[IndentingNewLine]",
+       "}"}]}], "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"size", " ", "=", " ", "10"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"rangeList", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"63", ",", "32", ",", "14", ",", "8"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ranges", " ", "=", " ", 
+  RowBox[{"Rasterize", "[", 
+   RowBox[{
+    RowBox[{"TableForm", "[", 
+     RowBox[{"Transpose", "[", 
+      RowBox[{"rangeDiagram", "/@", "rangeList"}], "]"}], "]"}], ",", 
+    RowBox[{"ImageSize", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{"Automatic", ",", 
+       RowBox[{"50", "*", 
+        RowBox[{"Length", "@", "rangeList"}]}]}], "}"}]}], ",", 
+    RowBox[{"AspectRatio", "\[Rule]", " ", 
+     RowBox[{"1", "/", 
+      RowBox[{"Length", "@", "rangeList"}]}]}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.5666692575270343`*^9, 3.566669299104412*^9}, {
+  3.566669411058816*^9, 3.5666694112998295`*^9}, {3.5667438476941614`*^9, 
+  3.5667439152000227`*^9}}]
+}, Open  ]]
+},
+WindowSize->{1500, 810},
+WindowMargins->{{189, Automatic}, {Automatic, 3}},
+Magnification->1.100000023841858,
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 94, 1, 32, "Subsubtitle"],
+Cell[676, 25, 2777, 68, 173, "Input"],
+Cell[3456, 95, 9731, 214, 633, "Input"],
+Cell[13190, 311, 342, 9, 32, "Input"],
+Cell[13535, 322, 2273, 52, 233, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15845, 379, 94, 1, 32, "Subsubtitle"],
+Cell[15942, 382, 366, 13, 177, "Text"],
+Cell[16311, 397, 202, 4, 32, "Input"],
+Cell[16516, 403, 2585, 66, 213, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

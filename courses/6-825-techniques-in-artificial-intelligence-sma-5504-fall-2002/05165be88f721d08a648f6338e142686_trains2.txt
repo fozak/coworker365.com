@@ -1,0 +1,67 @@
+rail(R1) ^ rail(R2) ^ rail(R3) ^ rail(R4) 
+all x rail(x) -> Equals(x,R1) v Equals(x,R2) v Equals(x,R3) v Equals(x,R4)
+
+~Equals(R1,R2)
+~Equals(R1,R3)
+~Equals(R1,R4)
+~Equals(R2,R1)
+~Equals(R2,R3)
+~Equals(R2,R4)
+~Equals(R3,R1)
+~Equals(R3,R2)
+~Equals(R3,R4)
+~Equals(R4,R1)
+~Equals(R4,R2)
+~Equals(R4,R3)
+
+situation(S1) ^ situation(S2) 
+~Equals(S1,S2) ^ ~Equals(S2, S1)
+
+train(T1) ^ train(T2)
+~Equals(T1,T2) ^ ~Equals(T2, T1)
+all t train(t) -> Equals(t,T1) v Equals(t,T2)
+
+connects(R1,R2) ^ connects(R3,R2) ^ connects(R1,R4) ^ connects(R3,R4) 
+connects(R2,R1) ^ connects(R4,R3) 
+~connects(R1, R3) ^ connects(R1,R1)
+~connects(R2, R3) ^ ~connects(R2, R4) ^ connects(R2, R2) 
+~connects(R3, R1) ^ connects(R3, R3) 
+~connects(R4, R2) ^ ~connects(R4, R1) ^ connects(R4, R4) 
+
+all t all r1 all r2 on(t, r1, S1) ^ on(t, r2, S1) -> Equals(r1, r2)
+
+all s all t exists r rail(r) ^ on(t, r, s)
+
+all s 
+    (safe(s) <-> 
+     all r all t1 all t2 on(t1,r,s) ^ on(t2,r,s) -> Equals(t1,t2))
+
+all t all r2 
+    on(t,r2,S2) <->
+       exists r1 on(t,r1,S1) ^ connects(r1,r2) ^ legal(t,r1,r2)
+
+all t1 all r1 all r2
+    legal(t1,r1,r2) <-> 
+     (Equals(r1,r2) v (~ exists t2 train(t2) ^ on(t2,r2,S1)))
+
+safe(S1)
+
+~(on(T1,R1,S1) ^ on(T2,R3,S1) -> ~safe(S2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,430 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf510
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww19440\viewh14760\viewkind1\viewscale150
+\deftab720
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\ri0
+
+\f0\fs24 \cf0 ;; Church programming examples presented in the Church tutorial by\
+;; Tomer Ullman in the Brains, Minds, and Machines summer course\
+\
+;; ============\
+;; ** 1. Syntax ** \
+;; ============\
+\
+;; Try typing in each of the following expressions\
+\
+; Simple math, notice the Polish notation!\
+(display (+ 2 2))\
+(display (* 2 3))\
+\
+; Simple logic\
+(display (equal? 2 2))\
+(display (equal? 2 3))\
+(display (equal? #t #f))\
+\
+; Defining variables\
+(define x 3)\
+(display x)\
+\
+; Lists\
+(define x (list 1 2 3))\
+(display x)\
+\
+; Conditional\
+(define socrates "drunk")\
+\
+(if (equal? socrates "drunk")\
+    (display "true")\
+    (display "false"))\
+\
+;; ==============\
+;; ** 2. Functions **\
+;; ==============\
+\
+;; Use either lambda:\
+(define square \
+    (lambda (x)\
+          (* x x)))\
+\
+(display (square 5))\
+\
+;; ...Or the following:\
+(define (square x)\
+    (* x x))\
+\
+(display (square 6))\
+\
+;; Useful concepts:\
+\
+; (map function argument-list)\
+(display (map square (list 1 2 3 4 5)))\
+\
+; Recursion\
+(define (range n)\
+    (if (equal? n 0)\
+        '()\
+        (append (range (- n 1)) (list n))))\
+\
+(map square (range 100))\
+\
+;; =======================================\
+;; ** 3. Forward Sampling and Random Primitives ** \
+;; =======================================\
+\
+;; 3.1 A basic random primitive, the coin-flip\
+\
+(display (flip))          ; <- Run me several times!\
+\
+;; ... When you get bored, run this:\
+(hist (repeat 1000 flip) "1000 flips")\
+\
+;; 3.2 A biased coin-flip\
+\
+(display (flip 0.9))\
+\
+(define (flip-biased-coin)\
+    (flip 0.7))\
+\
+(hist (repeat 100 flip-biased-coin) "1000 biased-coin flips")\
+\
+;; 3.3 A simple experiment\
+\
+;; Take a biased coin, flip it 100 times, count the number of 'heads'\
+(define (coin-flip-experiment)\
+    (sum (map (lambda (x) (if x 1 0)) (repeat 1000 flip-biased-coin))))\
+\
+(hist (repeat 1000 coin-flip-experiment) "experiment")\
+\
+;; Other primitives: uniform-draw, multinomial, uniform, random_integer, \
+;;                   gaussian, gamma, beta, dirichlet\
+\
+;; 3.4 Build your own distribution! (bonus: recursion)\
+\
+;; Keep flipping a coin until you get heads\
+(define (countsTillHeads coin-weight)\
+    (if (flip coin-weight)\
+        0\
+        (+ 1 (countsTillHeads coin-weight))))\
+\
+(define my-coin-weight 0.6)\
+(display (countsTillHeads my-coin-weight))\
+\
+;; Try it many times\
+(hist (repeat 1000 (lambda () (countsTillHeads my-coin-weight))) "Number of tails before heads")\
+\
+;; 3.5 Gaussian samples\
+\
+;; Sample around a center\
+(define (twod-gaussian center)\
+    (list (gaussian (first center) 1.0) (gaussian (second center) 1.0)))\
+\
+;; Visualize for one, pre-defined Gaussian \
+(define my-gaussian-center (list 3.0 2.0))\
+(scatter (repeat 100 (lambda () (twod-gaussian my-gaussian-center))))\
+\
+;; Randomly draw center from 10x10 box - two approaches\
+\
+;(define sample-gaussian-center\
+;  (mem (lambda (gaussian-id)\
+;       (list (uniform 0 10) (uniform 0 10)))))\
+\
+(define (sample-gaussian-center)\
+       (list (uniform 0 10) (uniform 0 10)))\
+\
+(define new-center (sample-gaussian-center))\
+\
+;; Sample a random number of possible Gaussians \
+(define number-of-gaussians (+ 1 (random-integer 10)))\
+\
+;; Sample the Gaussian centers\
+(define centers (repeat number-of-gaussians sample-gaussian-center))\
+\
+;; Sample the Gaussian data\
+(define points (map (lambda (center) (repeat 10 (lambda () (twod-gaussian center)))) centers))\
+\
+;; Visualize\
+(scatter (fold append '() points))\
+\
+;; 3.5.1 London Blitz example\
+\
+;; 'random' bombing\
+(define (uniform-bombing num-bomb)\
+    (repeat 100 (lambda () (list (uniform 0 10) (uniform 0 10)))))\
+\
+;; 'cluster' bombing\
+(define (target-bombing num-bomb)\
+    (let ((number-of-gaussians (+ 3 (random-integer 5)))\
+           (centers (repeat number-of-gaussians sample-gaussian-center))\
+           (points (map (lambda (center) (repeat (floor (/ num-bomb number-of-gaussians))\
+                                              (lambda () (twod-gaussian center)))) centers)))\
+           (fold append '() points)))\
+\
+(define num-bombs 20)\
+(if (flip 0.5)\
+    (scatter (uniform-bombing num-bombs))\
+    (scatter (target-bombing num-bombs)))\
+\
+;; 3.6 mem    \
+\
+;; Suppose we don't know the alignment of different creatures in D&D\
+(define alignment\
+    (lambda (creature) (uniform-draw '(good neutral evil))))\
+\
+;; Let's sample some creatures\
+(display (list\
+    (alignment 'orc)\
+    (alignment 'elf)\
+    (alignment 'bob)))\
+\
+;; Let's sample them again\
+(display (list\
+    (alignment 'orc)\
+    (alignment 'elf)\
+    (alignment 'bob)))\
+\
+;; That seems wrong!\
+\
+;; When we want to be random but persistent, we can use mem(oization)\
+\
+(define malignment\
+    (mem (lambda (creature) (uniform-draw '(good neutral evil)))))\
+\
+;; Let's sample some creatures with memoization \
+(display (list\
+    (malignment 'orc)\
+    (malignment 'elf)\
+    (malignment 'bob)))\
+\
+;; Let's sample them with memoization again\
+(display (list\
+    (malignment 'orc)\
+    (malignment 'elf)\
+    (malignment 'bob)))\
+\
+;; ===========\
+;; ** 4. Query ** \
+;; ===========\
+\
+;; 4.1 A Particular Rejection Query\
+\
+;; Suppose a-priori you assume Legolas, Gimli and Eowyn each took out \
+;; somewhere between 0 and 20 orcs\
+\
+;; Suppose someone tells you that together, they took out *at least* 45 orcs\
+;; How many orcs did Gimli take out?\
+\
+;; Function for sampling a world in which the following condition is satisfied:\
+;; \'93Legolas, Gimli and Eowyn together all took out at least 45 orcs\'94\
+\
+(define (take-sample)\
+    (define Legolas (random-integer 21))\
+    (define Gimli (random-integer 21))\
+    (define Eowyn (random-integer  21))\
+    (define total-orcs (+ Legolas Gimli Eowyn))\
+    (if (>= total-orcs 45) Gimli (take-sample)))\
+\
+(hist (repeat 1000 take-sample) "Number of Orcs Gimli Took Out, Given That Everyone Took Out More Than 45")\
+\
+;; 4.2 Why is Rejection Query a Bad Idea? Difficult to satisfy, waste samples\
+\
+;; PROBABLY DON\'92T RUN THE FOLLOWING \
+(define (take-sample)\
+    (rejection-query\
+        (define Legolas (random-integer 21))\
+        (define Gimli (random-integer 21))\
+        (define Eowyn (random-integer  21))\
+        (define total-orcs (+ Legolas Gimli Eowyn))\
+        Gimli\
+             (>= total-orcs 59)))\
+   \
+(hist (repeat 10 take-sample) "Value of A, given D >= 2, using rejection")\
+\
+;; 4.3 Why is Sampling a Bad Idea? Precision \
+\
+;; Function to estimate Pi\
+\
+(define (take-sample)\
+    (define x (uniform 0 1))\
+    (define y (uniform 0 1))\
+    (define dist (sqrt (+ (pow x 2) (pow y 2))))\
+    (if (< dist 1) 1 0))\
+ \
+(define num-samples 100)\
+\
+(* 4 (/ (sum (repeat num-samples take-sample)) num-samples))\
+\
+;; ================================================\
+;; ** 5. Updating Hypotheses and Learning from Conditioning ** \
+;; ================================================\
+\
+;; 5.1 The trick coin\
+\
+(define observed-data '(h h h h h h h))\
+(define num-flips (length observed-data))\
+\
+(define samples\
+    (mh-query\
+        1000 10\
+\
+        (define fair-prior 0.999)\
+        (define fair-coin? (flip fair-prior))\
+\
+        (define make-coin (lambda (weight) (lambda () (if (flip weight) 'h 't))))\
+        (define coin (if fair-coin?\
+                      (make-coin 0.5)\
+                      (make-coin 0.95)))\
+                     ;(make-coin (if fair-coin? 0.5 0.95)))\
+        (define sampled-data (repeat num-flips coin))\
+        fair-coin?\
+\
+        (equal? observed-data sampled-data)))\
+\
+(hist samples "Fair coin?")\
+\
+5.2 Continuous weight\
+\
+(define observed-data '(h h h h h))\
+(define num-flips (length observed-data))\
+(define num-samples 1000)\
+(define prior-samples (repeat num-samples (lambda () (uniform 0 1))))\
+\
+(define samples\
+    (mh-query\
+         num-samples 10\
+   \
+         (define coin-weight (uniform 0 1))\
+   \
+         (define make-coin (lambda (weight) (lambda () (if (flip weight) 'h 't))))\
+         (define coin (make-coin coin-weight))\
+   \
+         coin-weight\
+\
+         (equal? observed-data (repeat num-flips coin))))\
+\
+(density prior-samples "Coin weight, prior to observing data" #t )\
+(density samples "Coin weight, conditioned on observed data" #t)\
+\
+;; ======================\
+;; ** 6. Intuitive Psychology **\
+;; ======================\
+\
+;; 6.1 Planning as inference\
+\
+;; A function for planning\
+(define (choose-action goal? transition state)\
+    (rejection-query\
+         (define action (action-prior))\
+         ;; what action to take?\
+         action\
+         ;; conditioned on achieving the goal\
+         (goal? (transition state action))))\
+\
+;; Without any specific goal, choose a uniform prior\
+(define (action-prior) (uniform-draw '(left right)))\
+\
+;; A simple world, apple on the left, banana on the right\
+(define (transition-function state action)\
+    (case action\
+         (('left) 'apple)\
+         (('right) 'banana)\
+         (else 'nothing)))\
+\
+; A simple goal\
+(define (got-apple? state) \
+    (equal? state 'apple))\
+\
+(choose-action got-apple? transition-function 'start)\
+\
+;; 6.2 Reasoning about goals \
+\
+(define observed-action 'right)\
+\
+(define (infer-goal)\
+   (rejection-query\
+       (define goal-food (uniform-draw '(banana apple)))\
+       (define goal? (lambda (outcome) (equal? outcome goal-food)))\
+  \
+       goal-food\
+  \
+       (equal? (choose-action goal? transition-function 'start) observed-action)))\
+\
+(infer-goal)\
+\
+;; 6.3 Belief inference \
+\
+;; A function for planning\
+(define (choose-action goal? transition state world)\
+    (rejection-query\
+        (define action (action-prior))\
+        ;; what action to take?\
+        action\
+        ;; conditioned on achieving the goal\
+        (goal? (transition state action world))))\
+\
+;; Without any specific goal, choose a uniform prior\
+(define (action-prior) (uniform-draw '(left right)))\
+\
+;; A simple world, but we don\'92t know where the food is\
+(define worldA '(apple banana))\
+(define worldB '(banana apple))\
+;(define world (if (flip) worldA worldB))\
+\
+(define (transition-function state action world)\
+    (case action\
+         (('left) (first world))\
+         (('right) (second world))\
+         (else 'nothing)))\
+\
+(define observed-action 'left)\
+(define (infer-belief)\
+    (mh-query \
+           10 1\
+            (define goal? (lambda (state) (equal? state 'apple)))\
+            (define world (if (flip) worldA worldB))\
+            \
+            ; query on what world the agent thinks we're in\
+            world\
+            ; conditioned on their action\
+            (equal? (choose-action goal? transition-function 'start world) observed-action)))\
+(infer-belief)\
+\
+;; 6.4 Communication and social reasoning\
+;; (Implicature) \
+\
+;; Imagine a blitz on London, in which bombs can fall inside and outside London\
+;; Inside London is the Big Ben\
+;; A staff sergeant has just reported that 'a bomb fell inside London'\
+;; Did it hit the Big Ben?\
+\
+;; Background\
+(define (state-prior) (list (uniform 0 2) (uniform 0 2)))\
+(define (dist p1 p2) \
+       (sqrt (+ (pow (- (first p1) (first p2)) 2) (pow (- (second p1) (second p2)) 2))))\
+\
+(define (sentence-prior) (uniform-draw (list hit-london hit-ben hit-outside)))\
+\
+(define (hit-london state) (and (> 1 (first state)) (> 1 (second state))))\
+(define (hit-ben state) (and (> .3 (first state)) (> .3 (second state))))\
+(define (hit-outside state) (or (< 1 (first state)) (< 1 (second state))))\
+\
+;; Speaker and Listener models\
+(define (speaker state depth)\
+    (rejection-query\
+         (define words (sentence-prior))\
+         words\
+         (< (dist state (listener words depth)) 0.1)))\
+\
+(define (listener words depth)\
+    (rejection-query\
+        (define state (state-prior))\
+        state\
+        (if (= depth 0)\
+            (words state)\
+            (equal? words (speaker state (- depth 1))))))\
+\
+(define depth 1)\
+(scatter (repeat 10 (lambda () (listener hit-london depth))))\
+\
+\
+}

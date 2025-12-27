@@ -1,0 +1,134 @@
+DataA: uses the book example as a test method for your program.
+(See Nilsson Chapter 20).
+
+For parts 1 & 2, please use this structure (also in the book):
+G [Parent: B]
+B [Parent: None]
+M [Parent: B, L]
+L [Parent: None]
+
+
+Your solutions for part 1 & 2 should be similar to the book's:
+The score for this network should be: 216.13 bits
+[the book has a slightly different answer].
+
+The CPT's look like this:
+G [Parents: B]
+1.0    0.0         when B is -
+0.0532 0.9468      when B is +
+
+M [Parents: B L]
+1.0    0.0         when B is -, L is -
+0.9667 0.03333     when B is +, L is -
+1.0    0.0         when B is -, L is + 
+0.1093 0.89063     when B is +, L is +
+
+B [Parents:]
+0.0600 0.94
+
+L [Parents:]
+0.32   0.68
+
+
+G	M	B	L
+100 samples
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	0
+1	0	1	1
+1	0	1	1
+1	0	1	1
+1	0	1	1
+1	0	1	1
+1	0	1	1
+1	0	1	1
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+1	0	1	0
+0	1	1	1
+0	1	1	1
+0	1	1	1
+0	0	1	0
+0	0	1	0
+0	0	0	1
+0	0	0	1
+0	0	0	1
+0	0	0	1
+0	0	0	0
+0	0	0	0

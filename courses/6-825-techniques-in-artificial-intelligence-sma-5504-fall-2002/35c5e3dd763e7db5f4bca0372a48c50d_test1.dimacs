@@ -1,0 +1,6 @@
+c Example SAT sentence for: A ^ ~A
+c p cnf #var #cl
+c 
+p cnf 1 2
+1 0
+-1 0

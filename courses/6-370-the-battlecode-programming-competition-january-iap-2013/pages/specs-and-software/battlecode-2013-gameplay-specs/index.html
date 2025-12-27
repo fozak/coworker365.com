@@ -1,0 +1,2260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NMQZ25T');</script>
+    
+  
+  
+
+
+    
+    <link href="../../../../../static_shared/css/course_v2.ba051.css" rel="stylesheet">
+    
+
+    
+    <link href="../../../../../static_shared/css/common.ba051.css" rel="stylesheet">
+    
+
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="This page includes a detailed description of the gameplay specifications for the Battlecode 2013 competition.">
+  <meta name="keywords" content="opencourseware,MIT OCW,courseware,MIT opencourseware,Free Courses,class notes,class syllabus,class materials,tutorials,online courses,MIT courses">
+  
+  <meta property="og:site_name" content="MIT OpenCourseWare">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ocw.mit.edu/courses/6-370-the-battlecode-programming-competition-january-iap-2013/pages/specs-and-software/battlecode-2013-gameplay-specs/" />
+  <meta property="og:title" content="Battlecode 2013 Gameplay Specs | The Battlecode Programming Competition | Electrical Engineering and Computer Science | MIT OpenCourseWare" />
+  <meta property="og:description" content="This page includes a detailed description of the gameplay specifications for the Battlecode 2013 competition." />
+
+  
+
+<meta property="og:image" content="https://ocw.mit.edu/courses/6-370-the-battlecode-programming-competition-january-iap-2013/7a9458fa1205ca527ba893f8188b6933_6-370iap13.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@mitocw" />
+<meta name="twitter:image:src" content="https://ocw.mit.edu/courses/6-370-the-battlecode-programming-competition-january-iap-2013/7a9458fa1205ca527ba893f8188b6933_6-370iap13.jpg" />
+
+  <link rel="canonical" href="index.html" />
+
+  <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type" : "WebPage",
+        "name": "MIT OpenCourseWare",
+        "description": "This page includes a detailed description of the gameplay specifications for the Battlecode 2013 competition.",
+        "license": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
+        "publisher": {
+          "@type": "CollegeOrUniversity",
+          "name": "MIT OpenCourseWare"
+        }
+      }
+  </script>
+
+  <title>Battlecode 2013 Gameplay Specs | The Battlecode Programming Competition | Electrical Engineering and Computer Science | MIT OpenCourseWare</title>
+  <style>
+  @font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(../../../../../static_shared/fonts/MaterialIcons-Regular.subset.504c7f0c308e930e9255.woff2) format('woff2'),
+      url(../../../../../static_shared/fonts/MaterialIcons-Regular.subset.1f8f08f2bf0d6e078379.woff) format('woff'),
+      url(../../../../../static_shared/fonts/MaterialIcons-Regular.subset.aa271372671db14b34f2.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Material Icons Round';
+    font-style: normal;
+    font-weight: 400;
+    src: local("MaterialIcons-Round"),
+    url(../../../../../static_shared/fonts/MaterialIconsRound-Regular.subset.7154eae1d0e60e0dabe4.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'Cardo Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Cardo'),
+      local('Cardo-Bold'),
+      url(../../../../../static_shared/fonts/Cardo-Bold.d7bf1aa6f322a64b2fc3.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Cardo Italic';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Cardo'),
+      local('Cardo-Italic'),
+      url(../../../../../static_shared/fonts/Cardo-Italic.0935d2ebbc05be3559b1.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Helvetica Light';
+    font-style: normal`;
+    font-weight: 400;
+    src: local('Helvetica Light'),
+      local('Helvetica-Light'),
+      url(../../../../../static_shared/fonts/Helvetica-Light.70359849afb40079a1c8.ttf) format('truetype');
+  }
+  .external-link.nav-link::after {
+    background-image: url('../../../../../static_shared/images/external_link.58bbdd86c00a2c146c36.svg'); 
+  }
+  </style>
+</head>
+
+
+<body class="course-home-page">
+  
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMQZ25T"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+  
+  <div class="overflow-auto">
+    <span class="course-header">
+    <div
+  id="mobile-course-nav"
+  class="navbar-offcanvas offcanvas-toggle offcanvas-toggle-close medium-and-below-only drawer">
+  <h3 class="my-4 d-flex align-items-center justify-content-between">
+    Browse Course Material
+    <button
+      class="btn"
+      type="button"
+      aria-label="Close Course Menu"
+      onclick="$('#mobile-course-nav-toggle').click();"
+      id="close-mobile-course-menu-button"
+      >
+      <img
+        src="../../../../../static_shared/images/close_small.b0a2684ccc0da6407a56.svg"
+        alt=""
+        width="12px"
+      />
+    </button>
+  </h3>
+  
+
+<nav class="course-nav" aria-label="Course materials">
+  <ul class="w-100 m-auto list-unstyled">
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="ef70d0e2-f93b-69e0-6a08-03076cbe1538"
+           href="../../syllabus/index.html" >
+          Syllabus
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_ef70d0e2-f93b-69e0-6a08-03076cbe1538"
+    aria-labelledby="nav-button_mobile_ef70d0e2-f93b-69e0-6a08-03076cbe1538"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="15a91d1a-c942-74ed-0464-0d8b835f1229"
+           href="../../calendar/index.html" >
+          Calendar
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_15a91d1a-c942-74ed-0464-0d8b835f1229"
+    aria-labelledby="nav-button_mobile_15a91d1a-c942-74ed-0464-0d8b835f1229"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="2b6e95b3-f695-35a9-0008-da93ff6d1668"
+           href="../../../video_galleries/lecture-videos/index.html" >
+          Lecture Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_2b6e95b3-f695-35a9-0008-da93ff6d1668"
+    aria-labelledby="nav-button_mobile_2b6e95b3-f695-35a9-0008-da93ff6d1668"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+           href="../specs-and-software/index.html" >
+          Specs and Software
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_mobile_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+      data-toggle="collapse"
+      data-target="#nav-container_mobile_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+      data-uuid="b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+      aria-controls="nav-container_mobile_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+      aria-expanded="false"
+      aria-label="Subsections for Specs and Software"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+    aria-labelledby="nav-button_mobile_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="ae7def09-6e67-e243-144a-c62c695bd09f"
+           href="index.html" >
+          Gameplay Specs
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_ae7def09-6e67-e243-144a-c62c695bd09f"
+    aria-labelledby="nav-button_mobile_ae7def09-6e67-e243-144a-c62c695bd09f"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="5c284dcb-09b7-b8e2-b704-cf0a29e6f23a"
+           href="../battlecode-2013-software/index.html" >
+          Software
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_mobile_5c284dcb-09b7-b8e2-b704-cf0a29e6f23a"
+    aria-labelledby="nav-button_mobile_5c284dcb-09b7-b8e2-b704-cf0a29e6f23a"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</nav>
+
+</div>
+
+    <div
+  id="course-info-drawer"
+  class="bg-faded pt-3 bg-light navbar-offcanvas navbar-offcanvas-right medium-and-below-only drawer"
+>
+  <div class="col-12">
+    <button
+      class="btn close-mobile-course-info"
+      type="button"
+      aria-label="Close Course Info"
+      onclick="$('#mobile-course-info-toggle').click();"
+      id="close-mobile-course-info-button"
+      >
+      <img
+        class=""
+        src="../../../../../static_shared/images/close_small.b0a2684ccc0da6407a56.svg"
+        alt=""
+        width="12px"
+      />
+    </button>
+  </div>
+    
+
+<div class="course-info">
+  <div class="course-detail-title bg-light-gray">
+    <h2 class="font-black py-1 pl-3 m-0">
+      Course Info
+    </h2>
+  </div>
+  <div class="px-3 mt-4">
+    <div class="row">
+      <div class="col-12 ">
+        
+        <div class="">
+          
+          <h5 class="panel-course-info-title ">
+            Instructor
+            </h5>
+          <div class="course-info-content panel-course-info-text">
+            
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-instructor strip-link-offline"    href="https://ocw.mit.edu/search/?q=Maxwell+Mann"  >Maxwell Mann</a>
+  </li>
+  
+</ul>
+
+
+          </div>
+        </div>
+        
+        
+          
+          
+            <div class="mt-4">
+              <h5 class="panel-course-info-title ">
+                Departments
+              </h5>
+              <div class="course-info-content panel-course-info-text">
+                
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-department strip-link-offline"    href="https://ocw.mit.edu/search/?d=Electrical+Engineering+and+Computer+Science"  >Electrical Engineering and Computer Science</a>
+  </li>
+  
+</ul>
+
+
+              </div>
+            </div>
+          
+         
+        
+        <div class="mt-4">
+          <h5 class="panel-course-info-title ">
+            As Taught In
+          </h5>
+          <div class="course-info-content panel-course-info-text">
+            January IAP
+            
+              2013
+            
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <h5 class="panel-course-info-title ">
+            Level
+          </h5>
+          <div class="course-info-content panel-course-info-text">
+            
+              
+                <a   class=" strip-link-offline"    href="https://ocw.mit.edu/search/?l=Undergraduate"  >Undergraduate</a><br />
+              
+            
+          </div>
+        </div>
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+  
+
+
+
+
+
+<div class=" mt-4">
+  <h5 class="panel-course-info-title ">
+    Topics
+  </h5>
+  <ul class="list-unstyled pb-2 m-0 panel-course-info-text">
+      <li>
+
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_mobile_0"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_mobile_0"
+    aria-expanded="true"
+    aria-label="Engineering subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Engineering"  >Engineering</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse show list-unstyled"
+  id="subtopic-container_mobile_0"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-4 ">
+      
+      <button
+        class="topic-toggle border-0 bg-transparent pl-0"
+        data-target="#speciality-container_mobile_0_0"
+        data-toggle="collapse"
+        aria-controls="speciality-container_mobile_0_0"
+        aria-expanded="true"
+        aria-label="Computer Science specialties"
+      >
+        <i aria-hidden="true" class="material-icons"></i>
+      </button>
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Computer+Science"  >Computer Science</a></span>
+    </div>
+    <ul
+      class="collapse show list-unstyled"
+      id="speciality-container_mobile_0_0"
+      aria-label="Specialties"
+    >
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Artificial+Intelligence"  >Artificial Intelligence</a></span>
+      </li>
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Programming+Languages"  >Programming Languages</a></span>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+</ul>
+
+</li>
+      <li>
+
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_mobile_1"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_mobile_1"
+    aria-expanded="false"
+    aria-label="Fine Arts subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Fine+Arts"  >Fine Arts</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse list-unstyled"
+  id="subtopic-container_mobile_1"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Game+Design"  >Game Design</a></span>
+    </div>
+    <ul
+      class="collapse list-unstyled"
+      id="speciality-container_mobile_1_0"
+      aria-label="Specialties"
+    >
+      
+    </ul>
+    
+  </li>
+  
+</ul>
+
+</li>
+      
+  </ul>
+</div>
+
+  
+
+
+
+<div class="">
+  <h5 class="course-detail-title panel-course-info-title mt-3">
+    Learning Resource Types
+  </h5>
+  <div>
+    <div class="row d-inline m-0">
+      
+        <div class="panel-course-info-text my-2">
+          
+
+<div class="">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">theaters</i>
+    <span>Lecture Videos</span>
+  </div>
+</div>
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+  <hr>
+<div class="pb-3">
+  <a class="download-course-link-button btn btn-outline-primary btn-link link-button text-decoration-none px-4 py-2"
+    role="button"
+    href="https://ocw.mit.edu/courses/6-370-the-battlecode-programming-competition-january-iap-2013/download">
+    <div class="text-center w-100">Download Course</div>
+  </a>
+</div>
+</div>
+
+    
+
+
+
+
+
+<div id="mobile-header" class="position-relative bg-black medium-and-below-only">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black d-flex">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="material-icons display-4 text-white align-bottom">menu</i>
+    </button>
+    <div class="mx-auto">
+      <a href="https://ocw.mit.edu/">
+        <img width="200" src="../../../../../static_shared/images/ocw_logo_white.cabdc9a745b03db3dad4.svg" alt="MIT OpenCourseWare"/>
+      </a>
+    </div>
+    <div class="user-menu-container"></div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto pl-2 pt-2">
+        <li class="nav-item">
+  
+  
+    <a class="nav-link search-icon text-white pr-6" href="https://ocw.mit.edu/search/">
+      <i class="material-icons">search</i>
+    </a>
+  
+</li>
+        <li class="nav-item">
+          <a   class="nav-link"    href="https://giving.mit.edu/give/to/ocw/?utm_source=ocw&amp;utm_medium=homepage_banner&amp;utm_campaign=nextgen_home"  >Give Now</a>
+        </li>
+        <li class="nav-item">
+          <a   class="nav-link"    href="https://ocw.mit.edu/about"  >About OCW</a>
+        </li>
+        <li class="nav-item">
+          <a   class="nav-link"   target="_blank"   href="https://mitocw.zendesk.com/hc/en-us"  >Help &amp; Faqs</a>
+        </li>
+        <li class="nav-item">
+          <a   class="nav-link"    href="https://ocw.mit.edu/contact"  >Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+<div id="desktop-header">
+  <div class="contents">
+    <div class="left">
+      <div class="ocw-logo">
+        <a href="https://ocw.mit.edu/">
+          <img src="../../../../../static_shared/images/ocw_logo_white.cabdc9a745b03db3dad4.svg" alt="MIT OpenCourseWare" />
+        </a>
+      </div>
+    </div>
+    <div class="right">
+      
+  
+  
+    <a class="nav-link search-icon text-white pr-6" href="https://ocw.mit.edu/search/">
+      <i class="material-icons">search</i>
+    </a>
+  
+
+      <a class="give-button text-white text-decoration-none font-weight-bold small-link d-flex align-items-center" aria-label="Give Now - Donate to MIT OpenCourseWare" href="https://giving.mit.edu/give/to/ocw/?utm_source=ocw&amp;utm_medium=homepage_banner&amp;utm_campaign=nextgen_home">
+        <span class="m-0 pr-2">GIVE NOW</span>
+        <img src="../../../../../static_shared/images/heart_burgundy.e7c8635e8cc6538b89fa.svg" class="heart-burgundy" alt="" />
+      </a>
+      <a   class="text-white text-decoration-none font-weight-bold pl-5 pr-3 py-2"    href="https://ocw.mit.edu/about"  >about ocw</a>
+      <a   class="text-white text-decoration-none font-weight-bold px-3 py-2"   target="_blank"   href="https://mitocw.zendesk.com/hc/en-us"  >help &amp; faqs</a>
+      <a   class="text-white text-decoration-none font-weight-bold px-3 py-2"    href="https://ocw.mit.edu/contact"  >contact us</a>
+      <div class="user-menu-container"></div>
+    </div>
+  </div>
+</div>
+
+<div id="user-list-modal-container"></div>
+<div id="create-user-list-modal-container"></div>
+    </span>
+    
+    
+
+<div id="course-banner" class="p-0">
+  <div class="max-content-width course-banner-content m-auto py-3">
+    <div class="row">
+    <div class="col-11">
+      
+      <span class="course-number-term-detail">6.370 | January IAP 2013 | Undergraduate</span>
+      <br>
+      <br>
+      <h1>
+        <a
+          class="text-capitalize m-0 text-white"
+          href="../../../index.html"
+        >The Battlecode Programming Competition</a>
+      </h1>
+    </div>
+    <div class="col-1"><div class="bookmark-button-container" data-resourcereadableid="6.370&#43;january iap_2013"></div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+    <div id="course-main-content">
+      <div class="row">
+        <div class="col-12 course-home-grid">
+          <div class="medium-and-below-only">
+            <div class="d-flex align-items-center mb-3">
+              <div class="col-6 px-0">
+                <div>
+  <button
+    id="mobile-course-nav-toggle"
+    class="mobile-course-nav-toggle-btn d-inline-flex align-items-center offcanvas-toggle"
+    data-toggle="offcanvas"
+    data-target="#mobile-course-nav"
+  >
+    <img src="../../../../../static_shared/images/expand.a062b1c47b121e3c7e03.svg" alt=""/>
+    <span class="pl-1">Menu</span>
+  </button>
+</div>
+
+              </div>
+              <div class="col-6 px-0">
+                
+
+
+  <button 
+    class="btn btn-link float-right mobile-course-info-toggle-btn toggle navbar-toggle offcanvas-toggle"
+    id="mobile-course-info-toggle"
+    data-toggle="offcanvas" 
+    data-target="#course-info-drawer">
+    More Info
+  </button>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row course-cards">
+        <div class="col-2 course-home-grid large-and-above-only">  
+          <div class="card">
+  <div class="card-body pr-2">
+    
+
+<nav class="course-nav" aria-label="Course materials">
+  <ul class="w-100 m-auto list-unstyled">
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="ef70d0e2-f93b-69e0-6a08-03076cbe1538"
+           href="../../syllabus/index.html" >
+          Syllabus
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_ef70d0e2-f93b-69e0-6a08-03076cbe1538"
+    aria-labelledby="nav-button_desktop_ef70d0e2-f93b-69e0-6a08-03076cbe1538"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="15a91d1a-c942-74ed-0464-0d8b835f1229"
+           href="../../calendar/index.html" >
+          Calendar
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_15a91d1a-c942-74ed-0464-0d8b835f1229"
+    aria-labelledby="nav-button_desktop_15a91d1a-c942-74ed-0464-0d8b835f1229"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="2b6e95b3-f695-35a9-0008-da93ff6d1668"
+           href="../../../video_galleries/lecture-videos/index.html" >
+          Lecture Videos
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_2b6e95b3-f695-35a9-0008-da93ff6d1668"
+    aria-labelledby="nav-button_desktop_2b6e95b3-f695-35a9-0008-da93ff6d1668"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+           href="../specs-and-software/index.html" >
+          Specs and Software
+        </a>
+      
+    </span>
+    
+    <button
+      class="course-nav-section-toggle"
+      type="button"
+      id="nav-button_desktop_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+      data-toggle="collapse"
+      data-target="#nav-container_desktop_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+      data-uuid="b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+      aria-controls="nav-container_desktop_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+      aria-expanded="false"
+      aria-label="Subsections for Specs and Software"
+    >
+      <i class="material-icons md-18" aria-hidden="true"></i>
+    </button>
+    
+  </div>
+  
+  <span class="medium-and-below-only"><hr/></span>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+    aria-labelledby="nav-button_desktop_b953ba9d-34cd-a7ba-c5ff-0952e4179b9a"
+  >
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="ae7def09-6e67-e243-144a-c62c695bd09f"
+           href="index.html" >
+          Gameplay Specs
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_ae7def09-6e67-e243-144a-c62c695bd09f"
+    aria-labelledby="nav-button_desktop_ae7def09-6e67-e243-144a-c62c695bd09f"
+  >
+    
+  </ul>
+</li>
+
+    
+      
+
+
+
+
+
+
+
+
+
+<li class="course-nav-list-item">
+  <div class="course-nav-parent d-flex flex-direction-row align-items-center justify-content-between">
+    <span class="course-nav-text-wrapper">
+      
+        <a class="text-dark nav-link"
+          data-uuid="5c284dcb-09b7-b8e2-b704-cf0a29e6f23a"
+           href="../battlecode-2013-software/index.html" >
+          Software
+        </a>
+      
+    </span>
+    
+  </div>
+  
+  <ul
+    class="course-nav-child-nav m-auto collapse"
+    id="nav-container_desktop_5c284dcb-09b7-b8e2-b704-cf0a29e6f23a"
+    aria-labelledby="nav-button_desktop_5c284dcb-09b7-b8e2-b704-cf0a29e6f23a"
+  >
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</li>
+
+    
+  </ul>
+</nav>
+
+  </div>
+</div>
+
+        </div>
+        <div class="col-sm-12 col-lg-10 course-home-grid">
+          <div class="">
+            <div class="card">
+              <div class="d-flex justify-content-between">
+                <div class="p-0 col-lg-9" id="main-course-section">
+                  <div class="card-body">
+                    
+<div class="mb-2">
+  <header>
+  <div class="course-section-title-container">
+    <div id="course-title">
+      
+      <div class="course-content-parent-title">Specs and Software</div>
+      
+      <h2 class="pb-1 mb-1">Battlecode 2013 Gameplay Specs</h2>
+    </div>
+  </div>
+</header>
+
+  <article class="content pt-3 mt-1">
+    <main id="course-content-section"><p>« <a href="../specs-and-software/index.html">Return to Specs and Software</a></p>
+<p>Below are the full gameplay specs for the 2013 competition. You can also download a copy of the <a href="https://ocw.mit.edu/courses/6-370-the-battlecode-programming-competition-january-iap-2013/pages/specs-and-software/battlecode-2013-gameplay-specs/resolveuid/8118226e0c04cdd25997656a67094cb4">Gameplay Specs</a>.</p>
+<p>The specs cover the following: <a href="index.html#plot">Plot</a>, <a href="index.html#objective">Objective</a>, <a href="index.html#changes-from-2012">Changes from 2012</a>, <a href="index.html#robot-overview">Robot Overview</a>, <a href="index.html#encampments">Encampments</a>, <a href="index.html#robot-resources">Robot Resources</a>, <a href="index.html#mines">Mines</a>, <a href="index.html#upgrades">Upgrades</a>, <a href="index.html#victory-conditions">Victory Conditions</a>, <a href="index.html#robot-actions">Robot Actions</a>, <a href="index.html#maps">Maps</a>, <a href="index.html#writing-a-player">Writing a Player</a>, <a href="index.html#execution-order">Execution Order</a>, <a href="index.html#timing">Timing</a>, <a href="index.html#mechanics">Mechanics</a>, <a href="index.html#debugging">Debugging</a>, <a href="index.html#disclaimers">Disclaimers</a>, <a href="index.html#changelog">Changelog</a>, <a href="index.html#appendices">Appendices</a></p>
+
+    <h3 id="hahahugoshortcode24s1hbhbplot">
+
+<a name="plot"></a>Plot</h3>
+
+<p>After being foiled yet another year by the power of fun gamers, the evil Professor Mordemort was captured and placed in the most secured cell in the Galactic Hold. Now, it is one year after those terrible events, and peace reigns supreme in the galaxy, new and faster methods of reaching far off planets being provided by Vanqeri Technologies, and the Interuniverse Defense League is stronger than ever. However, there are rumors of an unknown force that is attacking planets on the outer rim of the galaxy, an enemy that is rumored to be using ancient technology and trench warfare to gain the upper hand. The IDL is calling on Coders throughout the galaxy to help combat this unknown enemy before the devastation they are causing reaches the more populated worlds.</p>
+
+    <h3 id="hahahugoshortcode24s2hbhbobjective">
+
+<a name="objective"></a>Objective</h3>
+
+<p>The objective this year is simple. Violently eliminate the opponent&rsquo;s HQ through a constant barrage of soldiers. There are many encampments across the map that may aid in this endeavor, allowing you to fortify positions and take map control. Should you need them, you may also research a number of upgrades that provide you with a large tactical advantage on the battlefield.</p>
+<p>Good luck!</p>
+
+    <h3 id="hahahugoshortcode24s3hbhbchanges-from-2012">
+
+<a name="changes-from-2012"></a>Changes from 2012</h3>
+
+<p>There are a number of large changes from previous Battlecode years, so veterans should bear these in mind:</p>
+<ul>
+<li>Archons are out. There is one HQ that acts as the archon replacement.</li>
+<li>Robots no longer face a direction. There is no turning, and no concept of forwards and backwards. Instead, robots can just move to any adjacent square.</li>
+<li>There are no longer voids on the map. Every square on the map is traversable, and there is no longer any distinction between ground and air units.</li>
+<li>Both teams start off knowing exactly what the map looks like. They know where all the map edges are and know where the enemy spawns.</li>
+<li>There are no movement or attack delays (though some actions do still incur a cooldown). Soldiers move and attack once every turn.</li>
+<li>Units always have shared vision and can sense anything within the vision radius of any allied unit.</li>
+<li>Flux has been renamed to power; now it is globally shared among all of a team&rsquo;s units, so flux transfer has been removed.</li>
+<li>Broadcasting has been completely altered. Both teams now write to a global array of integers. Broadcasting no longer relies on robots being within a broadcast radius.</li>
+</ul>
+<p>NOTE: Numbers in these specs are provided mainly for readability and are subject to change in future patches. Check the API for details.</p>
+
+    <h3 id="hahahugoshortcode24s4hbhbrobot-overview">
+
+<a name="robot-overview"></a>Robot Overview</h3>
+
+<p>Robots are the central part of the Battlecode world. There are two types of basic robots. Note that we use the terms &ldquo;robot&rdquo; and &ldquo;unit&rdquo; interchangeably.</p>
+
+    <h4 id="hq">HQ</h4>
+
+<p>The HQ is your main base, and by far the most important unit you have. Each team starts the game off with one HQ. You lose the game if your HQ is destroyed. The HQ can spawn SOLDIERs and research TECH upgrades. If the game reaches the round limit, the HQs will also begin taking end-of-round damage to break ties. The HQ can never regain energon, and there is no way to build additional HQs.</p>
+
+    <h4 id="soldier">Soldier</h4>
+
+<p>SOLDIERs form the core of your army. They are the only mobile unit, and are created by the HQ. They allow you to expand your map control by capturing additional encampments. They can also lay mines and defuse mines. They automatically attack enemies adjacent to them every turn.</p>
+
+    <h3 id="hahahugoshortcode24s5hbhbencampments">
+
+<a name="encampments"></a>Encampments</h3>
+
+<p>In addition to the two basic units, there are units called ENCAMPMENTS that soldiers can create on top of unoccupied encampment squares.</p>
+<p>If a soldier is located on an encampment square, it has the option to capture the square. If it does so, it sits still for <code>GameConstants.CAPTURE_DELAY</code> turns and then turns into one of the following encampments (it must choose which encampment to create before the delay):</p>
+<ol>
+<li><strong>Medbay</strong>: Heals itself and all adjacent allied units for 2 <code>(MEDBAY.attackPower)</code> health per turn. It cannot heal the HQ.</li>
+<li><strong>Shields</strong>: The shield encampment gives 5 <code>(SHIELDS.attackPower)</code> shields per turn to itself and all adjacent allied units. This shield absorbs damage from artillery fire.</li>
+<li><strong>Artillery</strong>: The artillery encampment allows a unit to attack any location within its attack range <code>ARTILLERY.attackRadiusMaxSquared,</code> causing 40 <code>(ARTILLERY.attackPower)</code> damage to the attacked square, and 20 <code>(ARTILLERY.attackPower*GameConstants.ARTILLERY_SPLASH_RATIO)</code> splash damage to the adjacent squares. The artillery can damage friendly units, so watch where you fire. It can fire once every 20 <code>(ARTILLERY.attackDelay)</code> turns.</li>
+<li><strong>Generator</strong>: Each generator provides the team with 10 <code>(GameConstants.GENERATOR_RESOURCE_PRODUCTION)</code> extra power per turn.</li>
+<li><strong>Supplier</strong>: Each supplier allows the HQ to spawn soldiers at a faster rate. See the spawning section for details.</li>
+</ol>
+<p>The other team may retake an encampment square if the existing encampment on it is destroyed. Capturing has a cost, however. The first capture costs <code>GameConstants.CAPTURE_POWER_COST</code> to start, and each new capture costs <code>GameConstants.CAPTURE_POWER_COST</code> per encampment owned or in the process of capturing. Starting a capture costs <code>GameConstants.CAPTURE_POWER_COST*( 1 + ENCAMPMENTS_OWNED + ENCAMPMENTS_BEING_CAPTURED)</code>.</p>
+
+    <h3 id="hahahugoshortcode24s6hbhbrobot-resources">
+
+<a name="robot-resources"></a>Robot Resources</h3>
+
+<p>There are three types of resources, POWER and ENERGON, and SHIELDS.</p>
+
+    <h4 id="power">Power</h4>
+
+<p>Power is shared globally across the team and is generated by the HQ at 40 power per round <code>(GameConstants.HQ_RESOURCE_PRODUCTION)</code>. 10 additional power can be generated by <code>GENERATOR encampments (GENERATOR_RESOURCE_PRODUCTION)</code>.</p>
+<p>Units pay 2 power every turn for upkeep. If enough power is not available, the unit must pay its upkeep using 5 <code>(GameConstants.UNIT_ENERGON_UPKEEP)</code> energon. If it doesn&rsquo;t have this much energon, it dies instantly.</p>
+<p>At the end of a robot&rsquo;s turn, if the bot did not use its full bytecode allocation, a fraction of the power is refunded based on bytecodes used, according to the formula <code>POWER_REFUND = (GameConstants.POWER_COST_PER_BYTECODE)*(GameConstants.BYTECODE_LIMIT-BYTECODES_SPENT)</code>. If the robot uses no bytecodes, it will only spend 1 power in upkeep this turn. If it uses 2000 bytecodes, it will spend 1.2 power in upkeep. If it uses 7500 bytecodes, it will spend 1.75 power in upkeep.</p>
+<p>Unused power is stockpiled and carried over into future rounds. However, at the end of each round, 20% (or 1% if fusion has been upgraded) of each team&rsquo;s power stockpile is removed due to power decay.</p>
+
+    <h4 id="energon">Energon</h4>
+
+<p>Energon is a robot&rsquo;s health. When a robot&rsquo;s energon hits zero, it is immediately removed from the game. Energon can only be regained by healing at a MEDBAY.</p>
+
+    <h4 id="shields">Shields</h4>
+
+<p>Shields are generated from the SHIELD encampment. They protect soldiers from artillery shots and mine damage. One shield point blocks one damage from an artillery shot, either direct damage or splash damage. Shields also block up to 75% <code>(GameConstants.MINE_DAMAGE_RATIO_ABSORBED_BY_SHIELD)</code> of mine damage. When a soldier takes mine damage, up to 75% of the damage taken will be reduced from shields, and the remaining mine damage will be reduced from energon.</p>
+<p>Shields decay at a constant rate of 0.5 <code>(GameConstants.SHIELD_DECAY_RATE)</code> per turn. A soldier&rsquo;s shield pool is bound between 0 and 100000000 <code>(GameConstants.SHIELD_CAP)</code>.</p>
+
+    <h3 id="hahahugoshortcode24s7hbhbmines">
+
+<a name="mines"></a>Mines</h3>
+
+<p>Soldiers can lay mines throughout the map to help defend territory and catch enemy robots off guard. All soldiers have the ability to lay a mine on their current square, taking 25 <code>(GameConstants.MINE_LAY_DELAY)</code> turns to do so. During this time, it cannot perform any other actions (defuse, capture, move) and does not auto-attack. If it is killed during this time, the mine does not get planted. Mines belong to a team, and will not damage robots of that team.</p>
+<p>Once a mine is planted, they stay there until they are defused. Mines do not &ldquo;blow up&rdquo; when they do damage. Enemy robots on the mined square will take 10 <code>(GameConstants.MINE_DAMAGE)</code> damage per turn, every turn they end on the mine. Only one mine can be in one square at a time; they cannot be stacked. You can try to mine squares that are already mined (either by you or the enemy), but it will just be a waste. Encampment squares can be mined, and the HQ squares can be mined also. However, only soldiers take damage from mines.</p>
+<p>Enemy mines are not visible until they are stepped on. If you try to sense a mine your opponent just laid, they will sense that there is no mine there. Once you enter the square with any soldier, all your soldiers will be able to sense that an enemy mine is there. Allied mines are always visible. Mines do not provide any sight, but you always know which squares you have mines on, and you can tell when they get defused by repeatedly sensing that square for mines.</p>
+<p>With the PICKAXE upgrade, mining is upgraded to simultaneously mining on the soldier&rsquo;s current square as well as the four squares orthogonally adjacent to it. This can even allow you to mine squares containing enemy robots (even their HQ).</p>
+
+    <h4 id="defusion">Defusion</h4>
+
+<p>A mine must be defused to be removed from the map. To defuse a mine, a soldier must be adjacent to the mine. It must take 12 <code>(GameConstants.MINE_DEFUSE_DELAY)</code> turns to defuse the mine, during which it cannot perform other actions and cannot auto-attack. If the soldier is killed during this time, the mine is not defused. Soldiers can only defuse one mine at a time, and two soldiers trying to defuse the same mine won&rsquo;t defuse it any faster. Once the defusion upgrade is researched, the time it takes to defuse the mine is reduced to 5 <code>(GameConstants.MINE_DEFUSE_DEFUSION_DELAY)</code>, and the soldier can defuse any mine within its sensor range.</p>
+<p>How defusion actually works is that soldiers target a square to defuse. They do not have to know there is a mine there to defuse. After the defusion time, any mine in that location will be removed, even if they aren&rsquo;t able to sense it, and even if the mine was not there when the soldier started defusing. You can accidentally defuse your own mines. If you defuse any mine, your opponent will be able to sense that there is no longer any mine there.</p>
+
+    <h4 id="neutral-mines">Neutral Mines</h4>
+
+<p>The map often starts off with lots of neutral mines. These belong to the neutral team. These are just like mines planted by either team in terms of damaging robots that move across. They can be defused just like any other mine. Both teams start off knowing the locations of all neutral mines on the map, and do not need to enter the square to be able to sense them.</p>
+<p>Note that you can sense exactly where the neutral mines on the map are. This means when the enemy defuses neutral mines, you can tell, although this is fairly expensive in bytecodes.</p>
+
+    <h3 id="hahahugoshortcode24s8hbhbupgrades">
+
+<a name="upgrades"></a>Upgrades</h3>
+
+<p>Upgrades are researchable from your HQ. The following upgrades are available:</p>
+<ol>
+<li><strong>Pickaxe</strong>: When a soldier mines, in addition to mining the square it is on, it also mines each of the four orthogonally adjacent squares.</li>
+<li><strong>Defusion</strong>: Soldiers can defuse mines not only in adjacent squares, but in all squares in its personal sight radius. They also defuse mines significantly faster. They still must defuse one mine at a time.</li>
+<li><strong>Vision</strong>: Increases the personal sensor radius on all robots from 14 to 33 units squared.</li>
+<li><strong>Fusion</strong>: The team&rsquo;s power decay rate is adjusted from 20% <code>RESOURCE_DECAY_RATE</code> to 1% <code>RESOURCE_DECAY_RATE_FUSION</code>.</li>
+<li><strong>Nuke</strong>: You immediately win.</li>
+</ol>
+<p>An upgrade must be fully researched before its abilities kick in. The HQ can put one point into an upgrade per turn (unless it is spawning soldiers), and the upgrade is considered completed when <code>numRounds</code> of points have been put into it.</p>
+
+    <h3 id="hahahugoshortcode24s9hbhbvictory-conditions">
+
+<a name="victory-conditions"></a>Victory Conditions</h3>
+
+<p>A team wins by destroying the enemy&rsquo;s HQ, or by researching the nuke upgrade. We expect most games to end by HQ destruction. The nuke upgrade is intended to be used in extreme stalemate situations. After exactly 2000 rounds <code>(GameConstants.ROUND_LIMIT)</code>, the HQ starts taking damage at a rate of 1 <code>(GameConstants.TIME_LIMIT_DAMAGE)</code> energon per turn. This means the game must be over after 2500 rounds. If both teams lose their HQs from end of round damage on the same turn, then the following tiebreakers are applied in order to determine the winner:</p>
+<ul>
+<li>Total # Encampments</li>
+<li>Total # Energon across all robots</li>
+<li>Total # Mines</li>
+<li>Total Team Power</li>
+<li>Lowest ID</li>
+</ul>
+
+    <h3 id="hahahugoshortcode24s10hbhbrobot-actions">
+
+<a name="robot-actions"></a>Robot Actions</h3>
+
+<p>Robots are equipped with a variety of high tech equipments and can perform the following actions during their turn.</p>
+
+    <h4 id="sensors">Sensors</h4>
+
+<p>All robots are equipped with personal sensors. These sensors have a sensor range of 14 units squared, which is the same for all robots, and which can be upgraded with the VISION upgrade to 33 units squared. Other than hidden enemy mines, robots can sense everything in their personal sensor range, as well the personal sensor range of every other robot on its team.</p>
+<ul>
+<li>The info on all allied robots can be sensed.</li>
+<li>The info on visible enemy robots can be sensed.</li>
+<li>The positions of detected enemy mines can be sensed. Mines are detected after an allied unit has stepped on it. These mines do not have to be in sensing range after they have been detected.</li>
+<li>The positions of all neutral mines on the map are automatically known at game start, and can be accurately sensed at any time, even if they are out of the range of all of the sensor range of all allied robots.</li>
+<li>The positions of allied mines can be accurately sensed, even if they are out of the range of all of the sensor range of all allied robots.</li>
+<li>The locations of the both HQs can be sensed.</li>
+<li>Your own team&rsquo;s upgrade progress can be sensed, but only by the HQ.</li>
+<li>The HQ can sense whether the enemy&rsquo;s nuke progress has reached the halfway mark.</li>
+</ul>
+
+    <h4 id="messaging">Messaging</h4>
+
+<p>In Battlecode, robots do not have the ability to access each other&rsquo;s internal memory. Each robot runs on its own thread and cannot access the other robot objects directly. How different robots on a team communicate is by messaging.</p>
+<p>This year, there is a global message board accessible to all robots that supports read/write operations. It works as follows:</p>
+<ul>
+<li>The message board is essentially an array of <code>int</code>s. Each position in this array is called a &ldquo;channel.&rdquo; The channels are numbered from 0 to 65535 <code>(GameConstants.BROADCAST_MAX_CHANNELS)</code>, inclusive. Robots can &ldquo;broadcast&rdquo; to these channels, which is essentially just storing an <code>int</code> in a specified position of this array.</li>
+<li>There is only <em>one</em> global message board and all robots from both teams access the same one.</li>
+<li>During each robot&rsquo;s turn, it may write to any channel via <code>rc.broadcast(channel)</code> and read what has last been broadcasted on any channel via <code>rc.readBroadcast(channel)</code>.</li>
+<li>There is a power cost associated with both reading<br>
+<code>(GameConstants.BROADCAST_SEND_COST)</code> and writing <code>(GameConstants.BROADCAST_READ_COST)</code> to the board. A robot can read and write to the message board as many times as it wants in one turn, as long as the team can pay this power cost.</li>
+<li>Once a message is written to the board, it persists until it is overwritten, or until the end of the game.</li>
+<li>At the beginning of a game, all channels are initialized to 0.</li>
+</ul>
+<p>This message board is globally accessible by <em>any</em> robot and is used for communicating whatever the AIs wish to communicate. It can be used to coordinate your army, distribute computation, or call for reinforcements. Since both teams use the same message board, robots&rsquo; broadcasts may interfere with each other, either by accident or on purpose. Because of this, it is not guaranteed that a broadcast will be able to reach other robots, as the data in a channel may be overwritten before the intended recipient robot gets a turn to read the channel.</p>
+
+    <h4 id="autoattack">Autoattack</h4>
+
+<p>SOLDIERs, SHIELDs, and MEDBAYs autoattack. This attacking cannot be disabled by the player; it will happen at the end of the turn if a robot is still alive and not in the middle of performing an action (mining, defusing, capturing).</p>
+<p>SOLDIERs will deal 6 <code>(SOLDIER.attackPower)</code> damage to enemies per turn automatically, if it ends the turn adjacent to any enemies. This damage is split evenly between all the adjacent enemies, so if it is adjacent to four enemies, it will deal 1.5 damage to each. Any enemies whose energon gets reduced to 0 or below after this are immediately removed from the game. Overkill damage is wasted, so if a soldier is adjacent to two enemy robots with 1 energon and 40 energon left, one robot will die and the other will be reduced to 37 energon.</p>
+<p>SHIELDs automatically add 5 <code>(SHIELD.attackPower)</code> shields to adjacent allies and itself every turn. This is 5 per robot, so it can potentially shield multiple robots for a total of 45 shields added. Shield decay still happens while a robot is next to a SHIELD, so a SHIELD will add 5 shields to itself and then lose 1 <code>(GameConstants.SHIELD_DECAY_RATE)</code> shield to decay every turn, ending with a net gain of 4. SHIELDs can shield each other, and multiple SHIELDs can add shields to the same robot on the same round.</p>
+<p>MEDBAYs automatically replenish 2 <code>(MEDBAY.attackPower)</code> energon to adjacent allies and itself every turn. This is 2 energon per robot, so it can potentially heal multiple robots for a total of 18 energon healed. This healing does not affect the HQ. Energon cannot exceed maximum energon. MEDBAYs can heal each other, and multiple MEDBAYs can heal the same robot on the same round.</p>
+
+    <h4 id="movement">Movement</h4>
+
+<p>Only the SOLDIER has the ability to move. Moving has no power cost.</p>
+<p>Every turn, SOLDIERs may move to any unoccupied adjacent square, provided they are not in delay from performing any other action (mining, defusing, capturing). Soldiers can auto-attack on the same turn they move. They cannot mine, defuse, or capture on the same turn they move.</p>
+<p>SOLDIERs can move diagonally at the same speed as they can move orthogonally.</p>
+
+    <h4 id="spawning">Spawning</h4>
+
+<p>The HQ has the ability to continuously spawn SOLDIERs. The action of spawning soldiers does not cost power by itself, but the spawned soldiers will start to consume power via upkeep. After the HQ spawns a SOLDIER, the HQ is unable to do any other actions (spawning or researching) for a brief time, determined by how many SUPPLIERs the team currently has alive.</p>
+<p>SOLDIERs can be spawned in any adjacent square that does not already have a robot on it. In the beginning, the HQ may spawn one SOLDIER per 10 <code>(GameConstants.HQ_SPAWN_DELAY)</code> rounds. This spawn rate is reduced by SUPPLIERS according to the formula <code>a=r(GameConstants.HQ_SPAWN_DELAY*GameConstants.HQ_SPAWN_DELAY_CONSTANT/(GameConstants.HQ_SPAWN_DELAY_CONSTANT+b))</code>, where a is the number of turns it takes to spawn one unit, b is the number of suppliers you have alive, and r() rounds a number to the nearest positive integer. Units that are spawned are immediately placed on the field and may perform actions like any other robot. The HQ cannot spawn or research while it is in spawning cool-down.</p>
+
+    <h4 id="suicide">Suicide</h4>
+
+<p>Calling <code>suicide()</code> immediately kills the robot and removes it from the game. It will no longer consume upkeep in future rounds. If an encampment suicides, then the square is freed up for a potentially different encampment to be created there. If a robot suicides, no power is refunded to the team.</p>
+
+    <h4 id="team-memory">Team Memory</h4>
+
+<p>Official matches will usually be sets of multiple games. Each team can save a small amount of information <code>(GameConstants.TEAM_MEMORY_LENGTH longs)</code> for the next game using the function <code>setTeamMemory()</code>. This information may be retrieved using <code>getTeamMemory()</code>. If there was no previous game in the match, or no information was saved, then the memory will be filled with zeros.</p>
+
+    <h4 id="control-bits-indicator-strings-and-breakpoints">Control Bits, Indicator Strings, and Breakpoints</h4>
+
+<p>There are several ways that the user can interact with robots. First, any robot can use <code>setIndicatorString(int,String)</code> to set a <code>String</code> that is visible to the user when selecting the robot. Second, the user can manually set a <code>long</code> for each robot, which the robot can query using <code>getControlBits()</code>. Finally, a robot can call <code>breakpoint()</code>, which flags the game engine to pause computation at the end of the round. These methods are for debug purposes only. During tournaments and scrimmages, the user will not be able to interact with the robots. For more information on these debugging interfaces, check out Debugging below.</p>
+
+    <h4 id="ending-turn">Ending Turn</h4>
+
+<p>Calling <code>yield()</code> and <code>suicide()</code> instantly ends the turn of a robot. Otherwise a turn ends naturally when the bytecode limit is hit. Every turn a robot gets 10000 bytecodes to run code. At the end of a robot&rsquo;s turn, if the robot yielded, unused bytecodes will return power back into the team&rsquo;s global power pool.</p>
+
+    <h3 id="hahahugoshortcode24s11hbhbmaps">
+
+<a name="maps"></a>Maps</h3>
+
+<p>Battlecode maps consist of a grid of squares, each with a pair of integer coordinates. Locations on the map are represented as instances of <code>MapLocation</code> objects.</p>
+<p>Maps are always rectangular. All of the squares in the map have the same terrain type, while squares out of bounds will have a different terrain type. Map coordinates are represented similarly to the pixels on a computer screen: x-coordinates increase moving to the right (East), and y-coordinates increase moving down (South). The most NORTHWEST square of the map is guaranteed to be coordinate (0,0), and the most SOUTHEAST square will be (WIDTH-1, HEIGHT-1).</p>
+<p>Maps specify the spawn points of both teams, as well as where all the encampment squares are. They also specify the locations of all the neutral mines.</p>
+
+    <h4 id="map-files">Map Files</h4>
+
+<p>Maps are specified by XML files, and can be found in the maps folder of the release archive. The schema for the files should be fairly intuitive, so if you&rsquo;d like to add your own maps you can use the provided maps as a basis. Each map has an associated random number seed, which the RNG uses to generate random numbers in games played on that map.</p>
+
+    <h4 id="map-constraints">Map Constraints</h4>
+
+<p>Official maps used in scrimmages and tournaments must all satisfy the following conditions.</p>
+<ul>
+<li>Maps are completely symmetric either by reflection or 180 degree rotation.</li>
+<li>The width and height of the map are guaranteed to be between 20 and 70, inclusive.</li>
+<li>The map cannot have neutral mines on the 4 squares orthogonally adjacent to either HQ.</li>
+<li>There will be a minimum of 5 encampment squares on the map.</li>
+<li>It will be possible for a soldier to get adjacent to the enemy HQ by turn 200, even if you only make one soldier and research / capture nothing, and the opposing team does nothing.</li>
+<li>The distance between the spawn points will be at least 10 units (Euclidean distance).</li>
+</ul>
+
+    <h3 id="hahahugoshortcode24s12hbhbwriting-a-player">
+
+<a name="writing-a-player"></a>Writing a Player</h3>
+
+
+    <h4 id="introduction">Introduction</h4>
+
+<p>Your player program must reside in a Java package named <code>teamXXX</code>, where XXX is your three-digit team number, with leading zeros included. You may have whatever sub-packages you like. You must define <code>teamXXX.RobotPlayer</code>, which must have a public static run method that takes one argument of type <code>battlecode.common.RobotController</code>. Whenever a new robot is created, the game calls the run method with the robots RobotController as its argument. If this method ever finishes, either because it returned or because of an uncaught exception, the robot dies and is removed from the game. You are encouraged to wrap your code in loops and exception handlers so that this does not happen.</p>
+
+    <h4 id="robotcontroller">RobotController</h4>
+
+<p>The RobotController argument to the RobotPlayer constructor is very important—this is how you will control your robot. RobotController has methods for sensing (e.g. <code>senseRobotInfo(Robot)</code>) and performing actions (e.g., <code>move()</code>). If you&rsquo;re not sure how to get your robot to do something, the Javadocs for RobotController are a good place to start.</p>
+
+    <h4 id="example-examplefuncsplayer">Example: examplefuncsplayer</h4>
+
+<pre tabindex="0"><code>import battlecode.common.Direction;
+import battlecode.common.GameConstants;
+import battlecode.common.RobotController;
+import battlecode.common.RobotType;
+
+/** The example funcs player is a player meant to demonstrate basic usage of the most common commands.
+ * Robots will move around randomly, occasionally mining and writing useless messages.
+ * The HQ will spawn soldiers continuously. 
+ */
+public class RobotPlayer {
+    public static void run(RobotController rc) {
+    while (true) {
+      try {
+        if (rc.getType() == RobotType.HQ) {
+          if (rc.isActive()) {
+            // Spawn a soldier
+            Direction dir = rc.getLocation().directionTo(rc.senseEnemyHQLocation());
+            if (rc.canMove(dir))
+              rc.spawn(dir);
+          }
+        } else if (rc.getType() == RobotType.SOLDIER) {
+          if (rc.isActive()) {
+            if (Math.random()&lt;0.005) {
+              // Lay a mine 
+              if(rc.senseMine(rc.getLocation())==null)
+                rc.layMine();
+            } else {
+              // Choose a random direction, and move that way if possible
+              Direction dir = Direction.values()[(int)(Math.random()*8)];
+              if(rc.canMove(dir)) {
+                rc.move(dir);
+                rc.setIndicatorString(0, &#34;Last direction moved: &#34;+dir.toString());
+              }
+            }
+          }
+
+          if (Math.random()&lt;0.01 &amp;&amp; rc.getTeamPower()&gt;5) {
+            // Write the number 5 to a position on the message board corresponding to the robot&#39;s ID
+            rc.broadcast(rc.getRobot().getID()%GameConstants.BROADCAST_MAX_CHANNELS, 5);
+          }
+        }
+
+        // End turn
+        rc.yield();
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+    }
+  }
+}
+</code></pre><p>Notice the <code>while(true)</code> loop, which prevents the run method from returning. While the robot is alive, it will be continually cycling through this loop. The try/catch block inside the loop prevents the robot from throwing an uncaught exception and dying.</p>
+
+    <h3 id="hahahugoshortcode24s13hbhbexecution-order">
+
+<a name="execution-order"></a>Execution Order</h3>
+
+<p>The game is comprised of a number of rounds. During each round, all robots get a turn in order of their IDs. Robots that were created earlier have lower IDs. Newly spawned robots will have a turn on the same round they were created.</p>
+<p>The following is a detailed list of a robot&rsquo;s execution order within a single turn. If it dies halfway through, the remainder of the list does not get executed. In particular, note that changes to a robot&rsquo;s state do not happen while player code is being executed. All actions instead get sent to an action queue, and they are executed after the player code is run. For example, if a SOLDIER calls <code>move()</code> and then <code>getLocation()</code>, it will not reflect the location of the robot yet.</p>
+<ol>
+<li>Robot&rsquo;s upkeep cost, is subtracted from the power pool, or if there is insufficient power in the pool, &lsquo;<code>GameConstants.UNIT_ENERGON_UPKEEP</code>&rsquo; is paid in energon (if robot dies, it does not get a turn, and no power is refunded).</li>
+<li>Robot executes up to <code>GameConstants.BYTECODE_LIMIT</code> of player code. Power costs for action calls in the player code are checked based on the available power at this point.</li>
+<li>Power is refunded based on remaining bytecodes by a factor of <code>GameConstants.POWER_COST_PER_BYTECODE</code>, even if it paid its upkeep with energon.</li>
+<li>Channels are updated with new broadcasts.</li>
+<li>Actions are performed
+<ol>
+<li>If the robot is on the last turn of mining, the mines are placed on the map (SOLIDER Only).</li>
+<li>If the robot is on the last turn of defusing, the mines are removed from the map (SOLIDER Only).</li>
+<li>If the robot is on the last turn of capturing, then the encampment is created, and the robot is destroyed (SOLIDER Only).</li>
+<li>The robot moves (SOLIDER Only).</li>
+<li>Targeted attacks happen (ARTILLERY Only).</li>
+<li>Research is updated OR a unit is spawned (HQ Only).</li>
+</ol>
+</li>
+<li>Mine damage is applied (SOLDIER Only).</li>
+<li>Automatic attacks are performed
+<ol>
+<li>Robot auto-attacks adjacent enemies (SOLIDER Only).</li>
+<li>Robot heals itself and adjacent allies (MEDBAY Only).</li>
+<li>Robot adds shields to itself and adjacent allies (SHIELDS Only).</li>
+</ol>
+</li>
+<li>Shield decay is applied.</li>
+</ol>
+
+    <h3 id="hahahugoshortcode24s14hbhbtiming">
+
+<a name="timing"></a>Timing</h3>
+
+<p>Each robot is allowed a certain amount of computation each round. Computation is measured in terms of Java bytecodes, the atomic instructions of compiled Java code. Individual bytecodes are simple instructions such as &ldquo;subtract&rdquo; or &ldquo;get field&rdquo;, and a single line of code generally contains several bytecodes. (For details see <a   class="external-link-warning external-link "   target="_blank"   href="http://en.wikipedia.org/wiki/Java_bytecode"  aria-label="http://en.wikipedia.org/wiki/Java_bytecode (opens in a new tab)"   onclick="event.preventDefault()" >http://en.wikipedia.org/wiki/Java_bytecode</a>) Each round, every player runs a number of bytecodes determined by <code>GameConstants.BYTECODE_LIMIT</code>. When a robot hits the bytecode limit, its computation is paused while other robots get to do their computation for the same round or the next round. On the next round, the robot&rsquo;s computation is resumed exactly where it left off. Thus, to the robot&rsquo;s code, the round change is invisible. Nothing will jump out and shout at you when a round ends.</p>
+<p>Because the round can change at the end of any bytecode, unexpected things can happen. For instance, consider the following example:</p>
+<pre tabindex="0"><code>Robot[] nearbyRobots = myRC.senseNearbyGameObjects(Robot.class);
+MapLocation loc = myRC.senseRobotInfo(nearbyRobots[0]);
+</code></pre><p>In the first line, the robot gets a list of all other robots in its sensor range. In the second line, the robot senses the RobotInfo of the first robot in the list. However, what happens if the round changes between the first and second line? A robot that was in sensor range when line 1 was executed might be out of sensor range when line 2 is executed, resulting in an exception. Because of this, your code should be written defensively. Think of this as a &ldquo;real-world&rdquo; robot, where things can fail at any time, and you have to be prepared to handle it.</p>
+<p>However, there are ways of dealing with this, as we&rsquo;ll see in the next section.</p>
+
+    <h4 id="yielding">Yielding</h4>
+
+<p>One way to deal with timing complexities is to use <code>yield()</code> judiciously. Calling <code>RobotController.yield()</code> ends the robot&rsquo;s computation for the current round. This has two advantages.</p>
+<p>First, robots consume power based on how many bytecodes they use every turn. A player that uses fewer bytecodes in a turn will be able to support more robots.</p>
+<p>Second, after a call to <code>RobotController.yield()</code>, subsequent code is executed at the beginning of a new round. Then, you have the full amount of bytecodes for your robot to do computations before the round changes. For instance, let&rsquo;s modify the example above to be:</p>
+<pre tabindex="0"><code>myRC.yield();
+Robot[] nearbyRobots = myRC.senseNearbyGameObjects(Robot.class);
+MapLocation loc = myRC.senseRobotInfo(nearbyRobots[0]);
+</code></pre><p>Since yield is called in line 1, line 2 will be executed at the beginning of a new round. Since <code>senseNearbyGameObjects()</code> does not take very many bytecodes, it is pretty much guaranteed that there won&rsquo;t be a round change between lines 2 and 3.</p>
+<p>A common paradigm is to have a main loop, with a <code>yield()</code> at the bottom of the loop. Thus, the top of the loop is always executed at the beginning of the round. If all the robot&rsquo;s computation for one iteration of the loop can fit in one round, then there should be minimal problems with unexpected round changes. Note that team000 above does this.</p>
+
+    <h4 id="monitoring">Monitoring</h4>
+
+<p>The Clock class provides a way to identify the current round (<code>Clock.getRoundNum()</code>), and how many bytecodes have been executed during the current round (<code>Clock.getBytecodeNum()</code>).</p>
+
+    <h4 id="gameactionexceptions">GameActionExceptions</h4>
+
+<p><code>GameActionExceptions</code> are thrown when an ability cannot be performed. It is often the result of uncertainty about the game world, or an unexpected round change in your code. Thus, you must write your player defensively and handle <code>GameActionExceptions</code> judiciously. Each <code>GameActionException</code> has a <code>GameActionExceptionType</code>, which tells roughly what went wrong. You should also be prepared for any ability to fail and make sure that this has as little effect as possible on the control flow of your program.</p>
+<p>Exceptions cause a bytecode penalty of <code>GameConstants.EXCEPTION_BYTECODE_PENALTY</code>.</p>
+
+    <h3 id="hahahugoshortcode24s16hbhbmechanics">
+
+<a name="mechanics"></a>Mechanics</h3>
+
+<p>This section deals with some of the mechanics of how your players are run in the game engine, including bytecode-counting, library restrictions, etc.</p>
+
+    <h4 id="java-language-usage">Java Language Usage</h4>
+
+<p>Players may use classes from any of the packages listed in <code>AllowedPackages.txt</code>, except for classes listed in <code>DisallowedPackages.txt</code>.</p>
+<p>Furthermore, the following restrictions apply:</p>
+<p><code>Object.wait</code>, <code>Object.notify</code>, <code>Object.notifyAll</code>, <code>Class.forName</code>, and <code>String.intern</code> are not allowed. <code>java.lang.System</code> only supports out, <code>arraycopy</code>, and <code>getProperty</code>. Furthermore, <code>getProperty</code> can only be used to get properties with names beginning with &ldquo;bc.testing.&rdquo; <code>java.io.PrintStream</code> may not be used to open files. Scala functions such as <code>scala.Console.readByte()</code> that attempt to read from standard input will always throw an <code>EOFException</code>.</p>
+<p>Note that violating any of the above restrictions will cause the robots to self-destruct when run, even if the source files compile without problems.</p>
+
+    <h4 id="bytecode-costs">Bytecode Costs</h4>
+
+<p>Classes in <code>java.util</code>, <code>java.math</code>, and scala and their subpackages are bytecode counted as if they were your own code. The following functions in java.lang are also bytecode counted as if they were your own code:</p>
+<pre tabindex="0"><code>Math.random StrictMath.random String.matches String.replaceAll String.replaceFirst String.split
+</code></pre><p>The function <code>System.arraycopy</code> costs one bytecode for each element copied. All other functions have a fixed bytecode cost. These costs are listed in the MethodCosts.txt file. Functions not listed in <code>MethodCosts.txt</code> are free. The bytecode costs of <code>battlecode.common</code> functions are also listed in the javadoc.</p>
+
+    <h4 id="memory-usage">Memory Usage</h4>
+
+<p>Robots must keep their memory usage reasonable. If a robot uses more than 8 Mb of heap space during a tournament or scrimmage match, the robot may be killed.</p>
+
+    <h4 id="exceptions">Exceptions</h4>
+
+<p>Throwing exceptions of any kind incurs a bytecode penalty given by <code>GameConstants.EXCEPTION_BYTECODE_PENALTY</code>, so unnecessary throwing of exceptions should be avoided.</p>
+
+    <h4 id="virtual-machine-errors">Virtual Machine Errors</h4>
+
+<p>Your player cannot catch virtual machine errors such as <code>StackOverflowError</code> and <code>OutOfMemoryError</code>. If your robot throws one of these exceptions, it will die.</p>
+
+    <h4 id="java-version">Java Version</h4>
+
+<p>Our scrimmage and tournament servers will be running Java 6 and Scala 2.9. The Battlecode software should run on Java 7, but please be aware that our compile server will not recognize Java 7 specific language features.</p>
+
+    <h3 id="hahahugoshortcode24s17hbhbdebugging">
+
+<a name="debugging"></a>Debugging</h3>
+
+<p>This section describes some of the features of the game engine intended to make debugging somewhat less painful. Debug mode reveals valuable information about robots at development time but will be turned off for scrimmages and real tournaments.</p>
+
+    <h4 id="systemout">System.out</h4>
+
+<p>Any output that your robots print to <code>System.out</code> is directed to the output stream of the Battlecode engine, prefixed with information about the robot.</p>
+
+    <h4 id="setting-indicator-strings">Setting Indicator Strings</h4>
+
+<p>You&rsquo;ll find that your primary source of debugging is setting one of 3 indicator strings that are viewable in the client. Unlike <code>System.out</code> which is not synchronized to match execution (as the engine precomputes the game faster than the client views it), Indicator strings are synchronized to the round number and can be used for debugging complex robot behaviors.</p>
+<p>Use <code>setIndicatorString(int,String)</code> to change a robot&rsquo;s indicator string. They are viewable in the top right corner of the client when the robot is selected. Indicator strings maintain value until they are changed.</p>
+
+    <h4 id="debug-methods">Debug Methods</h4>
+
+<p>The game engine has a feature that allows you to separate out debugging code that is unimportant to your player&rsquo;s performance in the tournament. Methods that have names beginning with debug_ and that have a void return type are given special status. By default, these methods are skipped during execution of the player. When the System property <code>debugMethodsEnabled</code> is set to true, however, the methods are executed normally except that they do not count against your robot&rsquo;s bytecode limit. Code that prepares the arguments to such a method may consume bytecodes, but the body of the method and any methods that it invokes are not counted.</p>
+
+    <h4 id="system-properties">System Properties</h4>
+
+<p>Your robot can read system properties whose names begin with &ldquo;bc.testing.&rdquo; You can set a property by adding a line to bc.conf like this:</p>
+<pre tabindex="0"><code>bc.testing.team-a-strategy=experimental
+</code></pre><p>You can check the value of the property like this:</p>
+<pre tabindex="0"><code>String strategy = System.getProperty(&#34;bc.testing.team-a-strategy&#34;);
+</code></pre>
+    <h4 id="breakpoints">Breakpoints</h4>
+
+<p>Breakpoints allow you to pause the game engine&rsquo;s calculations. If breakpoints are enabled (see the software page), and a robot calls <code>RobotController.breakpoint()</code>, the game engine will stop computing at the end of the round. This gives you a chance to see exactly what&rsquo;s going on in the game when your robot hits a certain point in its code. You can resume the game engine&rsquo;s computation in the client, by hitting the &ldquo;resume&rdquo; button. If the match is being dumped straight to a file (i.e., there is no client to resume the game), breakpoints are ignored.</p>
+<p>Note that when a robot calls <code>breakpoint()</code>, computation will be stopped at the end of the round, not immediately when <code>breakpoint()</code> is called. Depending on the circumstances, you might want to use <code>breakpoint()</code>; <code>yield()</code>; instead.</p>
+
+    <h3 id="hahahugoshortcode24s18hbhbdisclaimers">
+
+<a name="disclaimers"></a>Disclaimers</h3>
+
+<p>We have done our best to test and balance the properties of the Battlecode world. Inevitably, however, we will need to make adjustments in the interest of having a fair competition that allows a variety of creative strategies. We will endeavor to keep these changes to a minimum, and release them as early as possible. All changes will be carefully documented in the Changelog.</p>
+<p>Despite our best efforts, there may be bugs or exploits that allow players to operate outside the spirit of the competition. Using such exploits for the tournament or scrimmage will result in immediate disqualification, at the discretion of the directors. Such exploits might include, but are not limited to, robot communication without messages, bypassing the bytecode limit, or terminating the game engine. If you are not sure what qualifies as &ldquo;in the spirit of the competition&rdquo;, ask the devs before submitting your code.</p>
+
+    <h3 id="hahahugoshortcode24s19hbhbchangelog">
+
+<a name="changelog"></a>Changelog</h3>
+
+<ul>
+<li><strong>1.0.0</strong> (1/7/2013) – Initial specs released.</li>
+<li><strong>1.0.1</strong> (1/7/2013) – Bug hotfix. Example players no longer throw exceptions, encampment capture cost is made obvious in the spec. Misc. spec typos fixed.</li>
+<li><strong>1.1.0</strong> (1/8/2013) – Note Backwards Incompatible <strong>API CHANGES.</strong>
+<ul>
+<li>Most RobotLevel stuff removed.</li>
+<li>Capture cost calculation made robust.</li>
+<li>Sensing of mines, robots, encampments made easier, API refactored and intentionally broken to make this obvious.</li>
+<li>Map max size reduced to 70, and constraints made tighter (200 max rush distance). Lots of new maps added.</li>
+<li>Nuke sensing rebalanced, only 50% detectable.</li>
+<li>Spec document mostly rewritten to include detailed information regarding mines, broadcasting, etc.</li>
+</ul>
+</li>
+<li><strong>1.1.1</strong> (1/8/2013) – Fixing typos.</li>
+<li><strong>1.1.2</strong> (1/9/2013) – Fixing bug in mine sensing. Tiebreaker conditions fixed. Specs updated to describe autoattacks better.</li>
+<li><strong>1.1.3</strong> (1/9/2013) – Fixed neutral mine detection.</li>
+<li><strong>1.1.4</strong> (1/10/2013) – Added runmatch to automate replays.</li>
+<li><strong>1.1.5</strong> (1/11/2013) – Broadcast read cost reduced. Correct ranges displayed. Shields improved. Fixed specs. Increased number of channels.</li>
+<li><strong>1.2.0</strong> (1/17/2013) – Post-sprint release. Updates to the sprites. Added new maps. Additional Client options.</li>
+<li><strong>1.3.0</strong> (1/25/2013) – Final Release Candidate. Added new maps. Additional client fixes. Balance changes:
+<ul>
+<li>Artillery base damage increased to 60 (from 40).</li>
+<li>Artillery splash ratio decreased to 0.25 (splash damage dropped from 20 to 15).</li>
+<li>Shield charge rate increased to 10 / turn.</li>
+<li>Shield decay increased to 1 / turn.</li>
+<li>Shields mine damage absorption increased to 90% (from 75%).</li>
+<li>Broadcast send power cost reduced to 0.03.</li>
+<li>Robot IDs more randomized.</li>
+<li>Hats DLC expansion pack added—now accepting orders.</li>
+</ul>
+</li>
+<li><strong>1.3.1</strong> (1/25/2013) – Bug Hotfix.
+<ul>
+<li>Hotfix for HUD crashes on case-sensitive filesystems.</li>
+<li>Nuke research time increased to 404 rounds (from 400).</li>
+</ul>
+</li>
+</ul>
+
+    <h3 id="hahahugoshortcode24s20hbhbappendices">
+
+<a name="appendices"></a>Appendices</h3>
+
+
+    <h4 id="appendix-a-javadocs-and-game-constants">Appendix A: Javadocs and Game Constants</h4>
+
+<p><a href="https://ocw.mit.edu/ans7870/6/6.370/iap13/">Javadocs</a> are provided, and they are also included in the software distribution. The javadocs include the values of the game constants and robot attributes.</p>
+
+    <h4 id="appendix-b-energon-health-warning">Appendix B: Energon Health Warning</h4>
+
+<p>Energon intake is not for everyone. Please consult a physician before use. 6.370 Battlecode Corporation is not responsible in the event of injury due to energon use. Energon&rsquo;s side-effects include loss of limb, death, unbearable pain, tendencies to procrastinate and an unnatural senseless rage. Handle with care. Energon consumption has not been approved by any health agency and you USE IT AT YOUR OWN RISK. For this reason, please be careful when scrimmaging. Energon is the same thing as health.</p>
+<p>« <a href="../specs-and-software/index.html">Return to Specs and Software</a></p>
+</main>
+  </article>
+</div>
+
+
+                  </div>
+                </div>
+                
+                  <button 
+  type="button" 
+  class="btn course-info-button large-and-above-only"
+  id="desktop-course-drawer-button"
+  data-target="#desktop-course-drawer"
+  data-toggle="collapse"
+  aria-label="Course Info"
+  aria-controls="desktop-course-drawer"
+  aria-expanded="false"
+>
+  <img
+    class="expand-drawer-img drawer-icon-img"
+    src="../../../../../static_shared/images/left_arrow.3c482a1f6223bff3f0e6.svg"
+    alt=""
+  />
+  <img
+    class="collapse-drawer-img drawer-icon-img"
+    src="../../../../../static_shared/images/close_small.b0a2684ccc0da6407a56.svg"
+    alt=""
+  />
+</button>
+
+<div class="collapse border-left p-0 large-and-above-only col-3" id="desktop-course-drawer">
+    
+
+<div class="course-info">
+  <div class="course-detail-title bg-light-gray">
+    <h2 class="font-black py-1 pl-3 m-0">
+      Course Info
+    </h2>
+  </div>
+  <div class="px-3 mt-4">
+    <div class="row">
+      <div class="col-12 ">
+        
+        <div class="">
+          
+          <h5 class="panel-course-info-title ">
+            Instructor
+            </h5>
+          <div class="course-info-content panel-course-info-text">
+            
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-instructor strip-link-offline"    href="https://ocw.mit.edu/search/?q=Maxwell+Mann"  >Maxwell Mann</a>
+  </li>
+  
+</ul>
+
+
+          </div>
+        </div>
+        
+        
+          
+          
+            <div class="mt-4">
+              <h5 class="panel-course-info-title ">
+                Departments
+              </h5>
+              <div class="course-info-content panel-course-info-text">
+                
+
+
+
+
+<ul class="list-unstyled m-0">
+  
+  
+  
+    
+  
+  <li>
+    <a   class="course-info-department strip-link-offline"    href="https://ocw.mit.edu/search/?d=Electrical+Engineering+and+Computer+Science"  >Electrical Engineering and Computer Science</a>
+  </li>
+  
+</ul>
+
+
+              </div>
+            </div>
+          
+         
+        
+        <div class="mt-4">
+          <h5 class="panel-course-info-title ">
+            As Taught In
+          </h5>
+          <div class="course-info-content panel-course-info-text">
+            January IAP
+            
+              2013
+            
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <h5 class="panel-course-info-title ">
+            Level
+          </h5>
+          <div class="course-info-content panel-course-info-text">
+            
+              
+                <a   class=" strip-link-offline"    href="https://ocw.mit.edu/search/?l=Undergraduate"  >Undergraduate</a><br />
+              
+            
+          </div>
+        </div>
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+  <div class="px-3">
+    
+
+
+
+
+
+<div class=" mt-4">
+  <h5 class="panel-course-info-title ">
+    Topics
+  </h5>
+  <ul class="list-unstyled pb-2 m-0 panel-course-info-text">
+      <li>
+
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_desktop_0"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_desktop_0"
+    aria-expanded="true"
+    aria-label="Engineering subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Engineering"  >Engineering</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse show list-unstyled"
+  id="subtopic-container_desktop_0"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-4 ">
+      
+      <button
+        class="topic-toggle border-0 bg-transparent pl-0"
+        data-target="#speciality-container_desktop_0_0"
+        data-toggle="collapse"
+        aria-controls="speciality-container_desktop_0_0"
+        aria-expanded="true"
+        aria-label="Computer Science specialties"
+      >
+        <i aria-hidden="true" class="material-icons"></i>
+      </button>
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Computer+Science"  >Computer Science</a></span>
+    </div>
+    <ul
+      class="collapse show list-unstyled"
+      id="speciality-container_desktop_0_0"
+      aria-label="Specialties"
+    >
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Artificial+Intelligence"  >Artificial Intelligence</a></span>
+      </li>
+      
+      <li class="pt-1 pb-1 pl-5">
+        <span class="topic-text-wrapper">
+          
+          <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Programming+Languages"  >Programming Languages</a></span>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+</ul>
+
+</li>
+      <li>
+
+
+
+
+
+
+
+
+<div class="position-relative pt-1 pb-1 pl-4 ml-n2 ">
+  
+  <button
+    type="button"
+    class="topic-toggle border-0 bg-transparent pl-0"
+    data-target="#subtopic-container_desktop_1"
+    data-toggle="collapse"
+    aria-controls="subtopic-container_desktop_1"
+    aria-expanded="false"
+    aria-label="Fine Arts subtopics"
+  >
+    <i aria-hidden="true" class="material-icons"></i>
+  </button>
+  
+  <span class="topic-text-wrapper">
+    <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Fine+Arts"  >Fine Arts</a></span>
+</div>
+
+<ul
+  class="pl-4 subtopic-container collapse list-unstyled"
+  id="subtopic-container_desktop_1"
+  aria-label="Subtopics"
+>
+  
+  
+  
+  <li>
+    <div class="position-relative pt-1 pb-1  pl-2 ">
+      
+      <span class="topic-text-wrapper">
+        
+        <a   class="text-black course-info-topic strip-link-offline"    href="https://ocw.mit.edu/search/?t=Game+Design"  >Game Design</a></span>
+    </div>
+    <ul
+      class="collapse list-unstyled"
+      id="speciality-container_desktop_1_0"
+      aria-label="Specialties"
+    >
+      
+    </ul>
+    
+  </li>
+  
+</ul>
+
+</li>
+      
+  </ul>
+</div>
+
+    
+
+
+
+<div class="">
+  <h5 class="course-detail-title panel-course-info-title mt-3">
+    Learning Resource Types
+  </h5>
+  <div>
+    <div class="row d-inline m-0">
+      
+        <div class="panel-course-info-text my-2">
+          
+
+<div class="">
+  <div class="d-flex">
+    <i aria-hidden="true" class="material-icons pr-1">theaters</i>
+    <span>Lecture Videos</span>
+  </div>
+</div>
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+    <hr>
+<div class="pb-3">
+  <a class="download-course-link-button btn btn-outline-primary btn-link link-button text-decoration-none px-4 py-2"
+    role="button"
+    href="https://ocw.mit.edu/courses/6-370-the-battlecode-programming-competition-january-iap-2013/download">
+    <div class="text-center w-100">Download Course</div>
+  </a>
+</div>
+  </div>
+</div>
+
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+<div class="footer">
+    <div class="footer-main-content mx-auto">
+    	<div class="col-12 px-0">
+        	<div class="row align-items-center mx-0">
+            	<div class="col-12 col-md-8 px-0">
+					<div class="d-md-flex align-items-center">
+						<a href="https://openlearning.mit.edu/" target="_blank">
+							<img width="117px" src="../../../../../static_shared/images/mit_ol.4165342f87abb1da46fd.svg" alt="MIT Open Learning" />
+						</a>
+						<div class="ml-md-3 mt-4 mt-md-0">
+							<div class="font-weight-bold">
+								Over 2,500 courses & materials
+							</div>
+							<div>
+								Freely sharing knowledge with learners and educators around the world. <a href='https://ocw.mit.edu/about'>Learn more</a>
+							</div>
+						</div>
+					</div>
+            	</div>
+				<div class="col-12 col-md-4 px-0 d-none d-md-block">
+					<div class="d-flex justify-content-md-end">
+	<div>
+		<a href="https://www.facebook.com/MITOCW" target="_blank">
+			<img class="footer-social-icon ml-0" src="../../../../../static_shared/images/Facebook.d1f5caeb73d7d12505a2.png" alt="facebook"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.instagram.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/Instagram.4df41828ffee4ff33d8a.png" alt="instagram"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://twitter.com/MITOCW" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/x-formerly-twitter-black.f8c75ad9f42902726d25.png" alt="x (formerly twitter)"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.youtube.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/Youtube.7c9f62c4f1dc9515ebb4.png" alt="youtube"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.linkedin.com/company/mit-opencourseware/" target="_blank">
+			<img class="footer-social-icon nudge-up" src="../../../../../static_shared/images/linkedin-black.2f7f8a6a3899f5d1e1d6.png" alt="linkedin"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://bsky.app/profile/mitocw.bsky.social" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/bluesky-black.9f4523fcefa9b6f25be7.png" alt="bluesky"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://mastodon.social/@mitocw" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/mastodon-black.9e2de31a28415c123800.png" alt="mastodon"/>
+		</a>
+	</div>
+</div>
+
+				</div>
+        	</div>
+    	</div>
+		
+		<div class="col-12 mt-3 mt-md-4 px-0">
+			<div class="row align-items-center mx-0">
+            	<div class="col-12 col-md-8 px-0">
+					<div class="d-lg-flex">
+						<div class="pr-md-2 mt-2 mt-lg-0 d-none d-lg-block">
+							© 2001–2025 Massachusetts Institute of Technology
+						</div>
+						<div class="px-lg-2 mt-2 mt-lg-0">
+							<a href="https://accessibility.mit.edu" target="_blank">Accessibility</a>
+						</div>
+						<div class="px-lg-2 mt-2 mt-lg-0">
+							<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons License</a>
+						</div>
+						<div class="px-lg-2 mt-2 mt-lg-0">
+							<a class="hide-offline" href='https://ocw.mit.edu/pages/privacy-and-terms-of-use/'>Terms and Conditions</a>
+						</div>
+					</div>
+            	</div>
+				<div class="col-12 col-md-4 px-0">
+					<div class="d-flex justify-content-md-end mt-4 mt-lg-0">
+						<div>
+						Proud member of: 
+						<a href="https://www.oeglobal.org/" target="_blank">
+							<img class="oeg-logo" src="../../../../../static_shared/images/oeg_logo.8a31f7b87f30df2d0169.png" alt="Open Education Global"/>
+						</a>
+						</div>
+					</div>
+				</div>
+        	</div>
+		</div>
+
+		<div class="col-12 mt-5 px-0 d-md-none">
+			<div class="d-flex justify-content-md-end">
+	<div>
+		<a href="https://www.facebook.com/MITOCW" target="_blank">
+			<img class="footer-social-icon ml-0" src="../../../../../static_shared/images/Facebook.d1f5caeb73d7d12505a2.png" alt="facebook"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.instagram.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/Instagram.4df41828ffee4ff33d8a.png" alt="instagram"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://twitter.com/MITOCW" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/x-formerly-twitter-black.f8c75ad9f42902726d25.png" alt="x (formerly twitter)"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.youtube.com/mitocw" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/Youtube.7c9f62c4f1dc9515ebb4.png" alt="youtube"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://www.linkedin.com/company/mit-opencourseware/" target="_blank">
+			<img class="footer-social-icon nudge-up" src="../../../../../static_shared/images/linkedin-black.2f7f8a6a3899f5d1e1d6.png" alt="linkedin"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://bsky.app/profile/mitocw.bsky.social" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/bluesky-black.9f4523fcefa9b6f25be7.png" alt="bluesky"/>
+		</a>
+	</div>
+	<div>
+		<a href="https://mastodon.social/@mitocw" target="_blank">
+			<img class="footer-social-icon" src="../../../../../static_shared/images/mastodon-black.9e2de31a28415c123800.png" alt="mastodon"/>
+		</a>
+	</div>
+</div>
+
+		</div>
+
+		<div class="col-12 mt-4 px-0 d-lg-none">
+			© 2001–2025 Massachusetts Institute of Technology
+		</div>
+    
+
+
+    
+    <script src="../../../../../static_shared/js/common.ba051.js"></script>
+    
+
+    
+    <script src="../../../../../static_shared/js/course_v2.ba051.js"></script>
+    
+
+
+
+
+
+    
+<script async src="https://w.appzi.io/w.js?token=Tgs1d"></script>
+
+	</div>
+</div>
+
+  </div>
+  <script>
+function hideLinksOffline(){
+  if (!window.navigator.onLine) {
+    const stripLinks = document.querySelectorAll(".strip-link-offline")
+    const hideOffline = document.querySelectorAll(".hide-offline")
+    const showOffline = document.querySelectorAll(".show-offline")
+    Array.prototype.forEach.call(stripLinks, function(link) {
+      link.outerHTML = link.innerHTML
+    })
+    Array.prototype.forEach.call(hideOffline, function(link) {
+      link.classList.add("d-none")
+    })
+    Array.prototype.forEach.call(showOffline, function(link) {
+      link.classList.remove("d-none")
+    })
+  }
+}
+hideLinksOffline()
+</script>
+
+  
+
+<div
+  class="modal"
+  id="external-link-modal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="external-link-modal-title"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content p-3">
+      <div class="modal-header d-flex align-items-center">
+        <div class="d-flex align-items-center">
+          <img
+            class="modal-header-icon-img mr-3 align-baseline"
+            src="../../../../../static_shared/images/external_link.58bbdd86c00a2c146c36.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <h1 class="modal-title" id="external-link-modal-title">
+            You are leaving MIT OpenCourseWare
+          </h1>
+        </div>
+        <button type="button" class="border-0 p-0 bg-transparent d-flex" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="material-icons modal-header-icon">close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Please be advised that external sites may have terms and conditions, 
+        including license rights, that differ from ours. MIT OCW is not responsible 
+        for any content on third party sites, nor does a link suggest an endorsement 
+        of those sites and/or their content.
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-outline-primary btn-link link-button"
+          data-dismiss="modal"
+          >
+            Stay Here
+        </button>
+        <a
+          role="button"
+          class="btn btn-primary btn-continue"
+          target="_blank"
+          href="index.html#"
+        >
+          Continue
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script>
+    
+    
+    
+    
+    
+    
+    'use strict';
+    const COURSE_DRAWER_LOCAL_STORAGE_KEY = "desktopCourseDrawerState"
+    const COURSE_DRAWER_OPENED = "opened"
+    const COURSE_DRAWER_CLOSED = "closed"
+    
+    const DESKTOP_COURSE_DRAWER_ID = "desktop-course-drawer"
+    const COURSE_DRAWER_BTN_ID = "desktop-course-drawer-button"
+    const MAIN_COURSE_SECTION_ID = "main-course-section"
+
+    try{
+
+      
+
+      function initializeDesktopCourseDrawerState() {
+        const state = getLocalStorageItem(COURSE_DRAWER_LOCAL_STORAGE_KEY)
+        if (state === null) {
+          
+          setLocalStorageItem(COURSE_DRAWER_LOCAL_STORAGE_KEY, COURSE_DRAWER_OPENED)
+          showOrHideDesktopCourseDrawer(COURSE_DRAWER_OPENED)
+        } else {
+          showOrHideDesktopCourseDrawer(state)
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+          const drawer = $(`#${DESKTOP_COURSE_DRAWER_ID}`)
+          const mainSection = $(`#${MAIN_COURSE_SECTION_ID}`)
+
+          drawer.on("shown.bs.collapse", (event) => {
+            if (event.target.id !== DESKTOP_COURSE_DRAWER_ID) {
+              return;
+            }
+            mainSection.addClass("col-lg-9")
+            mainSection.removeClass("col-12")
+            setLocalStorageItem(COURSE_DRAWER_LOCAL_STORAGE_KEY, COURSE_DRAWER_OPENED)
+          })
+      
+          drawer.on("hidden.bs.collapse", (event) => {
+            if (event.target.id !== DESKTOP_COURSE_DRAWER_ID) {
+              return;
+            }
+            mainSection.addClass("col-12")
+            mainSection.removeClass("col-lg-9")
+            setLocalStorageItem(COURSE_DRAWER_LOCAL_STORAGE_KEY, COURSE_DRAWER_CLOSED)
+          })
+        })
+      }
+
+      function showOrHideDesktopCourseDrawer(state) {
+        const drawer = document.getElementById(DESKTOP_COURSE_DRAWER_ID)
+        const button = document.getElementById(COURSE_DRAWER_BTN_ID)
+        const mainSection = document.getElementById(MAIN_COURSE_SECTION_ID)
+
+        if (state === COURSE_DRAWER_OPENED) {
+          drawer.classList.add("show")
+          button.setAttribute("aria-expanded", "true")
+        } else {
+          drawer.classList.remove("show")
+          button.setAttribute("aria-expanded", "false")
+          mainSection.classList.remove("col-lg-9")
+          mainSection.classList.add("col-12")
+        }
+      }
+
+      function setOrGetLocalStorageItem(action,key,value) {
+        try {
+          
+          if (typeof Storage !== "undefined") {
+            if (action === "set") {
+              localStorage.setItem(key, value)
+              return true
+            } else {
+              return localStorage.getItem(key)
+            }
+          }
+          console.error("This browser has no web storage support.")
+          return null
+        } catch (e) {
+          console.error("An exception occurred while storing/fetching data in/from localstorage: ", e)
+          return null
+        }
+      }
+
+      function setLocalStorageItem(key, value) {
+        return setOrGetLocalStorageItem("set", key, value)
+      }
+      
+      function getLocalStorageItem(key){
+        return setOrGetLocalStorageItem("get", key)
+      }
+
+      initializeDesktopCourseDrawerState();
+    }
+    catch(e){
+      console.error("Something went wrong in maintaining/toggling course drawer state", e)
+    }
+  </script>
+
+  
+
+<script>
+function expandNav(e,t){t.classList.add("show"),e.querySelector(".course-nav-section-toggle, video-tab-toggle-section").setAttribute("aria-expanded","true")}function courseNav(){document.querySelectorAll(".course-nav, .transcript-header").forEach(e=>{e.querySelectorAll(".nav-link").forEach(e=>{const t=e.getAttribute("href")?e.getAttribute("href"):"";if(t.replace(/\/$/,"")===window.location.pathname.replace(/\/$/,"")){e.classList.add("active");const s=e.dataset.uuid,t=e.closest(".course-nav-list-item"),n=t?.querySelector(".collapse"),o=Array.prototype.filter.call(document.querySelectorAll(".course-nav-section-toggle"),e=>e.dataset.uuid===s);t&&n&&o.length>0&&expandNav(t,n)}});const t=e.querySelector("a.nav-link.active");e.querySelectorAll(".course-nav-list-item").forEach(e=>{const n=e.querySelector(".collapse");n&&n.contains(t)&&expandNav(e,n)})})}courseNav()
+</script>
+
+  
+
+<script>
+(()=>{var e=()=>document.querySelectorAll("#course-content-section table"),t=()=>document.getElementById("course-content-section");function n(){const o=e(),n=t();if(!n)return;if(!window.ResizeObserver)return;const i=new ResizeObserver(()=>s());i.observe(n),o.forEach(e=>{const t=e.getElementsByTagName("th"),n=e.querySelectorAll("table tr");n.forEach(e=>{const n=e.querySelectorAll("td");n.forEach((e,s)=>{t.length>=s+1&&(n[s].dataset.title=t[s].innerText.trim().concat(": "))})})})}function s(){const s=e(),n=t();if(!n)return;s.forEach(e=>{const t=n.getBoundingClientRect(),o=+(e.dataset.minWidth??0);t.width>o&&e.classList.remove("mobile-table");const s=e.getBoundingClientRect();s.right>t.right&&(e.dataset.minWidth=`${s.width}`,e.classList.add("mobile-table"))})}n()})()
+</script>
+
+</body>
+
+</html>

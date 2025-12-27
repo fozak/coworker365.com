@@ -1,0 +1,6 @@
+son(Father(A),Father(Me))
+all x ~sib(x,Me)
+all x all y sib(x,y) <-> (Equals(Father(x),Father(y)) ^ ~Equals(x,y))
+all x all y son(x,y) <-> Equals(Father(x), y)
+~son(A, Me)
+
