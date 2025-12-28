@@ -1,6 +1,8 @@
-/* stopped on some icons change */
+<!--stopped on some icons change -->
 
-/*https://chatgpt.com/c/6951b3ee-5980-832e-92a0-8b38c51496e3 */
+<!--*https://claude.ai/chat/95638e13-8e80-4b8a-8f83-31328f2e8605*-->
+<!--TODO finilize colors and shapes-->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -60,9 +62,10 @@
       flex-shrink: 0;
     }
 
-    .icon i {
-      font-size: var(--icon-size);
-    }
+   .icon i {
+  font-size: 24px; /* slightly smaller size */
+  transform: scale(1.25);       
+}
 
     .content {
       line-height: 1.2;
@@ -88,6 +91,8 @@
     .pink { background: #d946ef; }
     .orange { background: #f59e0b; }
     .cyan { background: #06b6d4; }
+
+
   </style>
 </head>
 
@@ -100,7 +105,7 @@
     <!-- ERP -->
     <div class="item">
       <div class="icon blue">
-        <i class="ph ph-buildings"></i>
+        <i class="ph-bold ph-buildings" ></i>
       </div>
       <div class="content">
         <div class="title">ERP</div>
@@ -111,7 +116,7 @@
     <!-- Framework -->
     <div class="item">
       <div class="icon gray">
-        <i class="ph ph-cube"></i>
+        <i class="ph-bold ph-cube" ></i>
       </div>
       <div class="content">
         <div class="title">Framework</div>
@@ -122,7 +127,7 @@
     <!-- HR -->
     <div class="item">
       <div class="icon green">
-        <i class="ph ph-users"></i>
+        <i class="ph-bold ph-users" data-weight="bold"></i>
       </div>
       <div class="content">
         <div class="title">HR</div>
@@ -133,7 +138,7 @@
     <!-- Learning -->
     <div class="item">
       <div class="icon teal">
-        <i class="ph ph-book-open"></i>
+        <i class="ph-bold ph-book-open"></i>
       </div>
       <div class="content">
         <div class="title">Learning</div>
@@ -144,7 +149,7 @@
     <!-- Insights -->
     <div class="item">
       <div class="icon cyan">
-        <i class="ph ph-chart-line"></i>
+        <i class="ph-bold ph-chart-line"></i>
       </div>
       <div class="content">
         <div class="title">Insights</div>
@@ -155,7 +160,7 @@
     <!-- CRM -->
     <div class="item">
       <div class="icon pink">
-        <i class="ph ph-funnel"></i>
+        <i class="ph-bold ph-funnel"></i>
       </div>
       <div class="content">
         <div class="title">CRM</div>
@@ -166,7 +171,7 @@
     <!-- Builder -->
     <div class="item">
       <div class="icon blue">
-        <i class="ph ph-pen-tool"></i>
+        <i class="ph-bold ph-pen-tool"></i>
       </div>
       <div class="content">
         <div class="title">Builder</div>
@@ -177,7 +182,7 @@
     <!-- Lending -->
     <div class="item">
       <div class="icon green">
-        <i class="ph ph-bank"></i>
+        <i class="ph-bold ph-bank"></i>
       </div>
       <div class="content">
         <div class="title">Lending</div>
@@ -188,7 +193,7 @@
     <!-- Gameplan -->
     <div class="item">
       <div class="icon orange">
-        <i class="ph ph-chat-circle"></i>
+        <i class="ph-bold ph-chat-circle"></i>
       </div>
       <div class="content">
         <div class="title">Gameplan</div>
@@ -199,7 +204,7 @@
     <!-- Books -->
     <div class="item">
       <div class="icon green">
-        <i class="ph ph-book"></i>
+        <i class="ph-bold ph-book"></i>
       </div>
       <div class="content">
         <div class="title">Books</div>
@@ -210,7 +215,7 @@
     <!-- Helpdesk -->
     <div class="item">
       <div class="icon purple">
-        <i class="ph ph-lifebuoy"></i>
+        <i class="ph-bold ph-lifebuoy"></i>
       </div>
       <div class="content">
         <div class="title">Helpdesk</div>
@@ -221,13 +226,46 @@
     <!-- Cloud -->
     <div class="item">
       <div class="icon cyan">
-        <i class="ph ph-cloud"></i>
+        <i class="ph-bold ph-cloud-arrow-up"></i>
       </div>
       <div class="content">
         <div class="title">Cloud</div>
         <div class="subtitle">cloud · cloud-arrow-up</div>
       </div>
     </div>
+
+    <!-- Sales -->
+<div class="item">
+  <div class="icon blue">
+    <i class="ph-bold ph-chart-line-up"></i>
+  </div>
+  <div class="content">
+    <div class="title">Sales</div>
+    <div class="subtitle">chart-line-up · trend-up</div>
+  </div>
+</div>
+
+<!-- Marketing -->
+<div class="item">
+  <div class="icon orange">
+    <i class="ph-bold ph-megaphone"></i>
+  </div>
+  <div class="content">
+    <div class="title">Marketing</div>
+    <div class="subtitle">megaphone · broadcast</div>
+  </div>
+</div>
+
+<!-- Support -->
+<div class="item">
+  <div class="icon green">
+    <i class="ph-bold ph-chats-circle"></i>
+  </div>
+  <div class="content">
+    <div class="title">Support</div>
+    <div class="subtitle">chats-circle · chat-text</div>
+  </div>
+</div>
 
   </div>
 
