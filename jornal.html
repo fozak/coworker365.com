@@ -1,0 +1,236 @@
+/* stopped on some icons change */
+
+/*https://chatgpt.com/c/6951b3ee-5980-832e-92a0-8b38c51496e3 */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product Grid – Phosphor Icons</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Phosphor Icons CDN -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <style>
+    :root {
+      --radius: 14px;
+      --icon-size: 28px;
+      --tile-size: 52px;
+      --gap: 28px;
+      --text-dark: #111827;
+      --text-muted: #6b7280;
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: #ffffff;
+      color: var(--text-dark);
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 32px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: var(--gap);
+    }
+
+    .item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .icon {
+      width: var(--tile-size);
+      height: var(--tile-size);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .icon i {
+      font-size: var(--icon-size);
+    }
+
+    .content {
+      line-height: 1.2;
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* Colors (match SaaS vibe) */
+    .blue { background: #2563eb; }
+    .gray { background: #6b7280; }
+    .green { background: #16a34a; }
+    .teal { background: #0d9488; }
+    .purple { background: #7c3aed; }
+    .pink { background: #d946ef; }
+    .orange { background: #f59e0b; }
+    .cyan { background: #06b6d4; }
+  </style>
+</head>
+
+<body>
+
+  <h1>Products & Integrations</h1>
+
+  <div class="grid">
+
+    <!-- ERP -->
+    <div class="item">
+      <div class="icon blue">
+        <i class="ph ph-buildings"></i>
+      </div>
+      <div class="content">
+        <div class="title">ERP</div>
+        <div class="subtitle">buildings · factory</div>
+      </div>
+    </div>
+
+    <!-- Framework -->
+    <div class="item">
+      <div class="icon gray">
+        <i class="ph ph-cube"></i>
+      </div>
+      <div class="content">
+        <div class="title">Framework</div>
+        <div class="subtitle">cube · stack</div>
+      </div>
+    </div>
+
+    <!-- HR -->
+    <div class="item">
+      <div class="icon green">
+        <i class="ph ph-users"></i>
+      </div>
+      <div class="content">
+        <div class="title">HR</div>
+        <div class="subtitle">users · user-circle</div>
+      </div>
+    </div>
+
+    <!-- Learning -->
+    <div class="item">
+      <div class="icon teal">
+        <i class="ph ph-book-open"></i>
+      </div>
+      <div class="content">
+        <div class="title">Learning</div>
+        <div class="subtitle">book-open · graduation-cap</div>
+      </div>
+    </div>
+
+    <!-- Insights -->
+    <div class="item">
+      <div class="icon cyan">
+        <i class="ph ph-chart-line"></i>
+      </div>
+      <div class="content">
+        <div class="title">Insights</div>
+        <div class="subtitle">chart-line · chart-bar</div>
+      </div>
+    </div>
+
+    <!-- CRM -->
+    <div class="item">
+      <div class="icon pink">
+        <i class="ph ph-funnel"></i>
+      </div>
+      <div class="content">
+        <div class="title">CRM</div>
+        <div class="subtitle">funnel · users-three</div>
+      </div>
+    </div>
+
+    <!-- Builder -->
+    <div class="item">
+      <div class="icon blue">
+        <i class="ph ph-pen-tool"></i>
+      </div>
+      <div class="content">
+        <div class="title">Builder</div>
+        <div class="subtitle">pen-tool · layout</div>
+      </div>
+    </div>
+
+    <!-- Lending -->
+    <div class="item">
+      <div class="icon green">
+        <i class="ph ph-bank"></i>
+      </div>
+      <div class="content">
+        <div class="title">Lending</div>
+        <div class="subtitle">bank · hand-coins</div>
+      </div>
+    </div>
+
+    <!-- Gameplan -->
+    <div class="item">
+      <div class="icon orange">
+        <i class="ph ph-chat-circle"></i>
+      </div>
+      <div class="content">
+        <div class="title">Gameplan</div>
+        <div class="subtitle">chat-circle · kanban</div>
+      </div>
+    </div>
+
+    <!-- Books -->
+    <div class="item">
+      <div class="icon green">
+        <i class="ph ph-book"></i>
+      </div>
+      <div class="content">
+        <div class="title">Books</div>
+        <div class="subtitle">book · receipt</div>
+      </div>
+    </div>
+
+    <!-- Helpdesk -->
+    <div class="item">
+      <div class="icon purple">
+        <i class="ph ph-lifebuoy"></i>
+      </div>
+      <div class="content">
+        <div class="title">Helpdesk</div>
+        <div class="subtitle">lifebuoy · headset</div>
+      </div>
+    </div>
+
+    <!-- Cloud -->
+    <div class="item">
+      <div class="icon cyan">
+        <i class="ph ph-cloud"></i>
+      </div>
+      <div class="content">
+        <div class="title">Cloud</div>
+        <div class="subtitle">cloud · cloud-arrow-up</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+
