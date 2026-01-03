@@ -2,7 +2,7 @@
 // ============================================================
   // BRAND & DESIGN SYSTEM
   // ============================================================
-  brand: {
+  brand = {
     productName: "Coworker365",
     brandSystem: {
       name: "Coworker365 Brandbook",
